@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?><!-- ESTO ES EL DISEÑO DEL LIST DE FOTOS  DE PERFILES  QUE UTILIZAMOS MEDIANTE UN RECYCLERVIEW -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:clickable="true"
+    android:focusable="true"
+    android:clipToPadding="false">
+
+    <androidx.cardview.widget.CardView
+        android:id="@id/Layout_un_perfil_LinearLayout_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        app:cardElevation="@dimen/elevation_perfiles"
+        card_view:cardUseCompatPadding="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@id/Cardview_list_persona_ImageView_usuario"
+                android:layout_width="@dimen/tamanyo_foto_perfiles"
+                android:layout_height="@dimen/tamanyo_foto_perfiles"
+                android:scaleType="centerCrop"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@id/Cardview_list_persona_ImageView_online"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:layout_marginEnd="7dp"
+                android:contentDescription="@string/Content_description_foto"
+                app:layout_constraintEnd_toEndOf="@+id/Cardview_list_persona_ImageView_usuario"
+                app:layout_constraintTop_toTopOf="parent" />
+            <!-- ******************************************************************************************-->
+            <!-- ******************************************************************************************-->
+            <TextView
+                android:id="@id/Cardview_list_persona_TextView_nombre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:textIsSelectable="true"
+                android:textSize="@dimen/tamanyo_letra_l"
+                android:textStyle="bold"
+                android:textColor="@color/gris"
+                app:layout_constraintStart_toEndOf="@id/Cardview_list_persona_ImageView_usuario"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!-- ******************************************************************************************-->
+            <TextView
+                android:id="@id/Cardview_list_persona_TextView_edad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginTop="8dp"
+                android:gravity="end"
+                android:textColor="@color/gris"
+                android:textIsSelectable="true"
+                android:textSize="@dimen/tamanyo_letra_s_plus"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_chainStyle="spread_inside"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@id/Cardview_list_persona_TextView_altura"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/gris"
+                android:textIsSelectable="true"
+                android:textSize="@dimen/tamanyo_letra_s_plus"
+                app:layout_constraintStart_toEndOf="@+id/Cardview_list_persona_ImageView_usuario"
+                app:layout_constraintTop_toBottomOf="@+id/Cardview_list_persona_TextView_nombre" />
+
+            <TextView
+                android:id="@id/Cardview_list_persona_TextView_peso"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/gris"
+                android:textIsSelectable="true"
+                android:textSize="@dimen/tamanyo_letra_s_plus"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Cardview_list_persona_TextView_edad" />
+            <!-- ******************************************************************************************-->
+            <TextView
+                android:id="@id/Cardview_list_persona_TextView_raza"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/gris"
+
+                android:textIsSelectable="true"
+                android:textSize="@dimen/tamanyo_letra_s_plus"
+                app:layout_constraintStart_toEndOf="@+id/Cardview_list_persona_ImageView_usuario"
+                app:layout_constraintTop_toBottomOf="@+id/Cardview_list_persona_TextView_altura" />
+
+            <TextView
+                android:id="@id/Cardview_list_persona_TextView_distancia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/gris"
+                android:textIsSelectable="true"
+                android:textSize="@dimen/tamanyo_letra_s_plus"
+                android:layout_marginEnd="8dp"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/Cardview_list_persona_TextView_altura" />
+            <!-- ******************************************************************************************-->
+
+            <TextView
+                android:id="@id/Cardview_list_pareja_TextView_rango_edades"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/gris"
+                android:textIsSelectable="true"
+                android:layout_marginStart="8dp"
+                android:textSize="@dimen/tamanyo_letra_s_plus"
+                app:layout_constraintStart_toEndOf="@id/Cardview_list_persona_ImageView_usuario"
+                app:layout_constraintTop_toBottomOf="@id/Cardview_list_persona_TextView_nombre" />
+
+            <TextView
+                android:id="@id/Cardview_list_pareja_TextView_distancia"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/gris"
+                android:textIsSelectable="true"
+                android:textSize="@dimen/tamanyo_letra_s_plus"
+                android:layout_marginEnd="8dp"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/Cardview_list_persona_TextView_nombre" />
+            <!-- ******************************************************************************************-->
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@id/Cardview_list_persona_ImageView_sexualidad"
+                android:layout_width="@dimen/Tam_Normal_icons"
+                android:layout_height="@dimen/Tam_Normal_icons"
+
+                android:layout_marginBottom="2dp"
+                android:contentDescription="@string/Content_description_boton"
+                android:tint="@color/accent"
+                app:layout_constraintBottom_toTopOf="@id/Cardview_list_persona_TextView_quiero_dejar_claro"
+                app:layout_constraintStart_toEndOf="@+id/Cardview_list_pareja_TextView_rango_edades"
+                app:layout_constraintTop_toBottomOf="@id/Cardview_list_persona_TextView_raza" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@id/Cardview_list_persona_ImageView_casa"
+                android:layout_width="@dimen/Tam_Normal_icons"
+                android:layout_height="@dimen/Tam_Normal_icons"
+
+                android:contentDescription="@string/Content_description_boton"
+                app:layout_constraintEnd_toStartOf="@id/Cardview_list_persona_ImageView_coche"
+                app:layout_constraintStart_toEndOf="@id/Cardview_list_persona_ImageView_sexualidad"
+                app:layout_constraintTop_toTopOf="@+id/Cardview_list_persona_ImageView_sexualidad" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@id/Cardview_list_persona_ImageView_coche"
+                android:layout_width="@dimen/Tam_Normal_icons"
+                android:layout_height="@dimen/Tam_Normal_icons"
+
+                android:layout_marginBottom="2dp"
+                android:contentDescription="@string/Content_description_boton"
+                app:layout_constraintBottom_toTopOf="@id/Cardview_list_persona_TextView_quiero_dejar_claro"
+                app:layout_constraintEnd_toStartOf="@id/Cardview_list_persona_ImageView_moto"
+                app:layout_constraintStart_toEndOf="@id/Cardview_list_persona_ImageView_casa"
+                app:layout_constraintTop_toBottomOf="@id/Cardview_list_persona_TextView_raza" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@id/Cardview_list_persona_ImageView_moto"
+                android:layout_width="@dimen/Tam_Normal_icons"
+                android:layout_height="@dimen/Tam_Normal_icons"
+
+                android:layout_marginBottom="2dp"
+                android:contentDescription="@string/Content_description_boton"
+                app:layout_constraintBottom_toTopOf="@id/Cardview_list_persona_TextView_quiero_dejar_claro"
+                app:layout_constraintEnd_toStartOf="@id/Cardview_list_persona_TextView_estrellas"
+                app:layout_constraintStart_toEndOf="@id/Cardview_list_persona_ImageView_coche"
+                app:layout_constraintTop_toBottomOf="@id/Cardview_list_persona_TextView_raza" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@id/Cardview_list_persona_TextView_estrellas"
+                android:layout_width="@dimen/Tam_Normal_icons"
+                android:layout_height="@dimen/Tam_Normal_icons"
+                android:textSize="@dimen/tamanyo_letra_l"
+                android:layout_marginBottom="2dp"
+                android:textColor="@color/gris"
+                android:gravity="end"
+                app:layout_constraintBottom_toTopOf="@id/Cardview_list_persona_TextView_quiero_dejar_claro"
+                app:layout_constraintEnd_toStartOf="@id/Cardview_list_persona_ImageView_estrella"
+                app:layout_constraintTop_toBottomOf="@id/Cardview_list_persona_TextView_raza" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@id/Cardview_list_persona_ImageView_estrella"
+                android:layout_width="@dimen/Tam_Normal_icons"
+                android:layout_height="@dimen/Tam_Normal_icons"
+                android:layout_marginEnd="8dp"
+
+                android:layout_marginBottom="2dp"
+
+                android:contentDescription="@string/Content_description_boton"
+                app:layout_constraintBottom_toTopOf="@id/Cardview_list_persona_TextView_quiero_dejar_claro"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/Cardview_list_persona_TextView_raza" />
+            <!-- ******************************************************************************************-->
+            <View
+                android:id="@id/Cardview_list_persona_view"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gris_semi_transparente"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/Cardview_list_persona_ImageView_usuario" />
+
+            <TextView
+                android:id="@id/Cardview_list_persona_TextView_quiero_dejar_claro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="top"
+                android:paddingBottom="2dp"
+                android:paddingEnd="5dp"
+                android:paddingStart="5dp"
+                android:paddingTop="2dp"
+                android:textColor="@color/gris"
+                android:textIsSelectable="true"
+                android:textSize="@dimen/tamanyo_letra_s_plus"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/Cardview_list_persona_ImageView_usuario" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

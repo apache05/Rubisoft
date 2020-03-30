@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- *********************** SETTING OPTIONS y*********************************** -->
+    <string name="title_activity_condiciones_uso">Termes d\'us</string>
+    <string name="title_activity_politica_privacidad">Privacitat</string>
+
+    <!-- UNIDADES DE MEDIDA -->
+    <string name="Mi">%1$s Mi</string>
+    <string name="kg">%1$d Kg</string>
+    <string name="km">%1$.2f Km</string>
+    <string name="m">%1$.2f m</string>
+
+    <!-- ****************************  VARIOS ****************************-->
+    <string name="no">No</string>
+    <string name="si">Si</string>
+    <string name="y">i</string>
+    <string name="Cancelar">Cancel·lar</string>
+    <string name="ok">Ok</string>
+    <string name="app_name">Men finder</string>
+    <string name="anyos"> %1$d anys</string>
+    <string name="foto_inapropiada">Aquesta foto es considera inadequada</string>
+    <string name="SOLO_PREMIUM">Sols per a usuaris premium</string>
+    <string name="LOCATION_NOT_READY">Si us plau, activa el mode Ubicació per a trobar i/o actualitzar la teva posició.</string>
+
+    <!--  MENSAJES DEL GOOGLE CLOUD MESSAGING -->
+    <string name="MENSAJE_DE">%1$s t\'ha enviat un missatge </string>
+    <string name="NUEVO_MENSAJE">%1$s ha escrit al chat </string>
+    <string name="DEFAULT_NOTIFICATION_TITLE" >Nou missatge</string>
+    <string name="DEFAULT_NOTIFICATION_TEXT" >Tens un missatge nou sense llegir. Anem a llegir-ho!</string>
+
+    <!--************************ MENU_CAMBIAR_FOTO ************************  -->
+    <string name="change_pic">Canviar foto</string>
+
+    <!-- *********************** TEXTO QUE APARECE CUANDO NO HAY INTERNET y*********************************** -->
+    <string name="ACTIVITY_SIN_CONEXION_NO_HAY_CONEXION">NO N\'HI HA CONEXIÓ</string>
+
+    <!-- *********************** Activity_Mensajes*********************************** -->
+    <string name="ACTIVITY_MI_PERFIL_TAB_TUS_FOTOS">Les teves fotos</string>
+    <string name="ACTIVITY_MI_PERFIL_TAB_TUS_DATOS">Les teves dades</string>
+    <string name="ACTIVITY_MI_PERFIL_TAB_TUS_ESTRELLAS">Les teves estreles</string>
+
+    <!--************************ ACTIVITY_CHAT_GENERAL ************************ -->
+    <string name="ACTIVITY_CHAT_GENERAL_CUANTOS_HAY">Hi ha %d persones online</string>
+
+    <!-- *********************** ACTIVITY_MENSAJES*********************************** -->
+    <string name="ACTIVITY_MENSAJES_NO_HAY_MENSAJES">No tens missatges encara</string><!--*******-->
+
+    <!--************************ ACTIVITY_CHAT ************************ -->
+    <string name="ACTIVITY_CHAT_AMISTAD_TERMINADA">L\'usuari ja no accepta més missatges o l\'usuari s\'ha esborrat de la app</string>
+    <string name="ACTIVITY_CHAT_ESTRELLAS_GRATIS">Obteniu estreles gratis</string>
+
+    <!--************************  ACTIVITY_CONFIGURA_RADAR  ************************ -->
+    <string name="ACTIVITY_CONFIGURA_RADAR_EDAD_ENTRE">Rang d\'edat </string>
+    <string name="ACTIVITY_CONFIGURA_RADAR_ALTURA_ENTRE">Rang d\'alçada </string>
+    <string name="ACTIVITY_CONFIGURA_RADAR_PESO_ENTRE">Rang de pes </string>
+    <string name="ACTIVITY_CONFIGURA_RADAR_QUE_TENGA_CASA">Sols els/les que tinguen casa </string>
+    <string name="ACTIVITY_CONFIGURA_RADAR_QUE_TENGA_COCHE">Sols els/les que tingen cotxe </string>
+    <string name="ACTIVITY_CONFIGURA_RADAR_QUE_TENGA_MOTO">Sols els/les que tinguen moto</string>
+    <string name="ACTIVITY_CONFIGURA_RADAR_RAZA_">Raça: </string>
+    <string name="ACTIVITY_CONFIGURA_RADAR_DISTANCIA_MI">Dins d\'un radi de %1$s Mi</string>
+    <string name="ACTIVITY_CONFIGURA_RADAR_DISTANCIA_KM">Dins d\'un radi de %1$d Km</string>
+    <string name="ACTIVITY_CONFIGURA_RADAR_CUALQUIER_RAZA">Qualsevol raça</string>
+    <string name="ACTIVITY_CONFIGURA_RADAR_AL_MENOS_1_RAZA">Has de seleccionar al menys una raça</string>
+    <string name="ACTIVITY_CONFIGURA_RADAR_NEW">Nous</string>
+    <string name="ACTIVITY_CONFIGURA_RADAR_ONLINE">OnLine</string>
+
+    <!--************************ ACTIVITY_CONFIGURACION ************************  -->
+    <string name="ACTIVITY_CONFIGURACION_UNIDADES">Unitats: </string>
+    <string name="ACTIVITY_CONFIGURACION_CHAT_ACTIVADO">Chat activat</string>
+    <string name="ACTIVITY_CONFIGURACION_SONIDO_CHAT_DESACTIVADO">Chat desactivat</string>
+
+    <!-- ***********************  ACTIVITY_UNINSTALL *********************************** -->
+    <string name="ACTIVITY_UNINSTALL_UNINSTALL">Esborrar compte</string>
+
+    <!-- ***********************  ACTIVITY_INICIO *********************************** -->
+    <string name="ACTIVITY_INICIO_ERROR_LOGGIN">Error a l\'autenticar-se. Per favor, proba un altra vegada</string>
+    <string name="ACTIVITY_INICIO_HINT_EMAIL">Email</string>
+    <string name="ACTIVITY_INICIO_HINT_PASSWORD">Contrasenya</string>
+    <string name="ACTIVITY_INICIO_HINT_REPEAT_PASSWORD">Repeteix contrasenya</string>
+    <string name="ACTIVITY_INICIO_SIGNIN">Entrar-hi</string>
+    <string name="ACTIVITY_INICIO_SIGNUP">Registrar-se</string>
+    <string name="ACTIVITY_INICIO_BAD_EMAIL">Email no vàlid</string>
+    <string name="ACTIVITY_INICIO_FORGOT_PASSWORD">Has oblidat la teva contrasenya?</string>
+    <string name="ACTIVITY_INICIO_FORGOT_RESET_PASSWORD">Restablir contrasenya</string>
+    <string name="ACTIVITY_INICIO_FORGOT_RESET">Restablir</string>
+    <string name="ACTIVITY_INICIO_EMAIL_SENT">Has rebut un email amb les instruccions per a restablir la teva contrasenya</string>
+    <string name="ACTIVITY_INICIO_PASSWORDS_DOESNT_MATCH">Les contrasenyes no coincideixen</string>
+    <string name="ACTIVITY_INICIO_NOTA_PRIVACIDAD">No s\'utilitzarà cap dada del teu compte ni enviarem cap missatge</string>
+
+    <!-- ***********************  ACTIVITY_REGISTRO_PERSONA *********************************** -->
+    <string name="ACTIVITY_REGISTRO_DATOS_FISICOS" >Cóm ets</string>
+    <string name="ACTIVITY_REGISTRO_SEXUALIDAD" >Sexualitat</string>
+    <string name="ACTIVITY_REGISTRO_TITULO">Registre</string>
+    <string name="ACTIVITY_REGISTRO_CHECKBOX_I_AGREE">Accepte els</string>
+    <string name="ACTIVITY_REGISTRO_TEXTVIEW_TERMS_AND_CONDITIONS">Termes i Condicions d\'us</string>
+    <string name="ACTIVITY_REGISTRO_ALTURA_">Alçada: </string>
+    <string name="ACTIVITY_REGISTRO_PESO_">Pes: </string>
+    <string name="ACTIVITY_REGISTRO_RAZA_">Raça: </string>
+    <string name="ACTIVITY_REGISTRO_NICK_">Nom </string>
+    <string name="ACTIVITY_REGISTRO_QUIERO_DEJAR_CLARO">Vull deixar clar que\u002a  </string>
+    <string name="ACTIVITY_REGISTRO_OPCIONAL">\u002a Opcional </string>
+    <string name="ACTIVITY_REGISTRO_BIRTH_">Data naixement </string>
+    <string name="ACTIVITY_REGISTRO_ERROR_FALTA_NICK">Error: Falta el teu nom</string>
+    <string name="ACTIVITY_REGISTRO_ERROR_FALTA_SEXUALIDAD">Error: Has de seleccionar el teu sexe i la teva orientació</string>
+    <string name="ACTIVITY_REGISTRO_ERROR_UNDERAGE">Error: Has de ser estrictament major de %1$d anys</string>
+    <string name="ACTIVITY_REGISTRO_ERROR_TERMS"> Has de acceptar els Termes i Condicions d\'us</string>
+    <string name="ACTIVITY_REGISTRO_ERROR_INCONGRUENCIA_SEXUAL">Error: El teu sexe i orientació no són congruents</string>
+
+    <!-- *********************** ACTIVITY_PRIMERAS_FOTOS y*********************************** -->
+    <string name="ACTIVITY_PRIMERAS_FOTOS_INSERTA_FOTOS">Opcionalment, puja una foto de perfil teva</string>
+    <string name="ADVERTENCIA">Atenció: No es permet pujar fotos obscenes o pornogràfiques. Els administradors esborraran qualsevol foto no apropiada sense cap avís.</string>
+
+    <!-- ***********************  ACTIVITY_PRINCIPAL *********************************** -->
+    <string name="ACTIVITY_PRINCIPAL_NINGUN_PERFIL_ENCONTRADO">Cap perfil trobat amb els ajustos actuals del teu radar</string>
+
+    <!-- ***********************  FRAGMENT_BORRAR *********************************** -->
+    <string name="ACTIVITY_CONFIGURACION_ELIMINAR_CUENTA">Esborrar compte</string>
+    <!-- ***********************  ACTIVITY_ESTRELLAS_GRATIS *********************************** -->
+    <string name="ACTIVITY_ESTRELLAS_POR_ANUNCIO">Obtingueu %1$d estrela veient un anunci</string>
+
+    <!-- ***********************  ACTIVITY_COMPRAS *********************************** -->
+    <string name="ACTIVITY_MEJORAR_COMPRA_X_ESTRELLAS">%1$d estreles per %2$s</string>
+    <string name="ACTIVITY_MEJORAR_SUSCRIBE_6_MESES">Subscriure 6 mesos per %1$s</string>
+    <string name="ACTIVITY_MEJORAR_SUSCRIBE_1_AÑO">Subscriure 1 any per %1$s</string>
+    <string name="ACTIVITY_MEJORAR_TITULO_SUSCRIBIR"> Subscriure premium</string>
+    <string name="ACTIVITY_MEJORAR_TITULO_COMPRAR"> Comprar estreles</string>
+    <string name="ACTIVITY_MEJORAR_ERROR_COMPRA_ESTRELLAS">Error: Compra no efectuada</string>
+    <string name="ACTIVITY_MEJORAR_EXITO_COMPRA">Compra efectuada</string>
+    <string name="ACTIVITY_MEJORAR_ERROR_SUSCRIPCION">Error: Suscripció no efectuada</string>
+    <string name="ACTIVITY_MEJORAR_EXITO_SUSCRIPCION">Suscripció efectuada</string>
+    <string name="ACTIVITY_MEJORAR_CANCELADO">Cancel·lat</string>
+    <string name="ACTIVITY_MEJORAR_YA_ES_PREMIUM">Ja tens un compte premium</string>
+
+    <!-- ***********************  ACTIVITY_FEEDBACK *********************************** -->
+    <string name="ACTIVITY_FEEDBACK_TITULO">T\'agrada aquesta app?</string>
+    <string name="ACTIVITY_FEEDBACK_PLEASE_FEEDBACK">Si us plau, diga\'ns les coses que no t\'agraden o milloraries.</string>
+    <string name="ACTIVITY_FEEDBACK_SEND_FEEDBACK">Enviar</string>
+    <string name="ACTIVITY_FEEDBACK_RATE_APP"> Si us plau, vota\'ns al Play Store</string>
+    <string name="ACTIVITY_FEEDBACK_RATE"> Puntuar </string>
+    <string name="ACTIVITY_FEEDBACK_SENT"> Informació enviada </string>
+    <string name="ACTIVITY_FEEDBACK_HINT_YOUR_FEEDBACK"> Escriu el teu comentari</string><string name="ACTIVITY_FEEDBACK_APP_LENTA"> Aplicació lenta</string>
+    <string name="ACTIVITY_FEEDBACK_MAL_DISENO">Diseny horrible</string>
+    <string name="ACTIVITY_FEEDBACK_MAL_TRADUCIDA">Mal traduïda </string>
+    <string name="ACTIVITY_FEEDBACK_NO_SE_COMO_VA">No entenc com funciona (Per favor, llegiu l\'ajuda primer)</string>
+    <string name="ACTIVITY_FEEDBACK_NO_FUNCIONA_BIEN">Funciona malament </string>
+    <string name="ACTIVITY_FEEDBACK_POCOS_USUARIOS">Hi ha pocs usuaris </string>
+    <string name="ACTIVITY_FEEDBACK_OTROS">Altres motius </string>
+
+    <!-- ***********************  FRAGMENT_FOTO *********************************** -->
+    <string name="FRAGMENT_FOTO_ERROR_FOTO_NO_CARGADA">Error: No se ha pogut carregar la foto</string>
+    <string name="FRAGMENT_FOTO_ERROR_FOTO_MUY_PESADA">Error: Mida de la foto excessiva</string>
+    <string name="FRAGMENT_FOTO_EROR_FORMAT_NOT_SUPPORTED">Error: format del fixer no suportat</string>
+    <string name="FRAGMENT_FOTO_WAIT">Espereu mentre es carregui la imatge</string>
+
+    <!-- ***********************  FRAGMENT_LOCALIZACION *********************************** -->
+    <string name="ACTIVITY_PRINCIPAL_NO_VA_EL_GPS">Impossible buscar gent correctament mentre la teva localització sigui desconeguda. Prova passats uns segons</string>
+
+    <!-- ***********************  FRAGMENT_DATOS_PERSONALES *********************************** -->
+    <string name="FRAGMENT_DATOS_PERSONALES_NICK_">Nom: </string>
+    <string name="FRAGMENT_DATOS_PERSONALES_EDAD_">Edat: </string>
+    <string name="FRAGMENT_DATOS_PERSONALES_ALTURA_">Alçada:</string>
+    <string name="FRAGMENT_DATOS_PERSONALES_PESO_">Pes: </string>
+    <string name="FRAGMENT_DATOS_PERSONALES_RAZA_">Raça:</string>
+    <string name="FRAGMENT_DATOS_PERSONALES_SEXUALIDAD">Sexualitat</string>
+    <string name="FRAGMENT_DATOS_PERSONALES_TUS_DATOS">Les teves dades</string>
+    <string name="FRAGMENT_DATOS_PERSONALES_OTROS_DATOS">Altres dades</string>
+    <string name="FRAGMENT_DATOS_PERSONALES_QUIERO_DEJAR_CLARO">Vull deixar clar que</string>
+
+    <!-- *******************  Dialogo interactuar ************************** -->
+    <string name="DIALOGO_INTERACTUAR_TITULO">Seleccioneu una acció</string>
+
+    <!-- *******************  Dialogo borrar cuenta ************************** -->
+    <string name="DIALOGO_BORRAR_CUENTA_TITULO">Esborrar compte</string>
+    <string name="DIALOGO_BORRAR_CUENTA_ADVERTENCIA">Perdràs totes les teves estreles e inclús la teva suscripció si la tingueres</string>
+
+    <!--************************  dialogo denuncia ************************-->
+    <string name="DIALOGO_DENUNCIAR_PREGUNTA_MOTIVO">Quin es el motiu de la denúncia?</string>
+    <string name="DIALOGO_DENUNCIAR_DENUNCIAR">Denunciar</string>
+    <string name="DIALOGO_DENUNCIAR_DENUNCIADO">Usuari denunciat</string>
+
+    <!--************************  dialogo ayuda ************************-->
+    <string name="DIALOGO_CONSEJO_TITULO">Ajuda</string>
+    <string name="DIALOGO_CONSEJO_MENSAJE">Polsa sobre els perfils per a realitzar qualsevol acció.</string>
+    <string name="DIALOGO_CONSEJO_MENSAJE_CHAT_GENERAL">Xarra amb gent del teu païs. Per a xarrar en privat, prem sobre la seva foto i polsa el botó de missatge</string>
+    <string name="DIALOGO_CONSEJO_YA_NO_MAS">No mostrar més</string>
+    <string name="DIALOGO_CONSEJO_FOTO_MANAGER">Prem sobre una foto per canviar-la.</string>
+
+    <!--************************  dialogo se te va a cobrar ************************-->
+    <string name="DIALOGO_AVISO_MENSAJE_SE_TE_VA_A_COBRAR">Aquesta acció té un cost de %1$d estreles per als usuaris que no son premium.</string>
+    <string name="DIALOGO_AVISO_MENSAJE_NO_TIENES_ESTRELLAS">Aquesta acció té un cost de %1$d estreles per als usuaris que no son premium. No tens suficients estreles para sol·licitar-la.</string>
+    <string name="DIALOGO_COMPRAR_ESTRELLAS">Comprar estreles</string>
+
+    <!--************************  MOTIVOS PARA DAR ESTRELLAS ************************-->
+
+    <string name="MOTIVO_SIGNED_UP">Registre</string>
+    <string name="MOTIVO_COBRO_SEMANAL">Quota setmanal</string>
+    <string name="MOTIVO_COMPRA_ESTRELLAS">Compra</string>
+    <string name="MOTIVO_COBRO_PETICION_CHAT_GENERAL">Envia un fitxer adjunt mitjançant xat</string>
+
+    <!-- Ventajas premium -->
+    <string name="ventajas_de_suscribir">
+        \n\t- Apareixeràs en les primeres posicions.\n
+        \n\t- No et cobren estreles setmanalment.\n
+        \n\t- Podràs pujar fins a %1$d  fotos al teu perfil.\n
+        \n\t- Podràs utilitzar més filtres de recerca.\n
+        \n\t- Doble radi de recerca.\n
+        \n\t- Els resultats de les recerques es mostren ordenats per distància.\n
+        \n\t- No hi ha publicitat.\n
+        \n\t- Podràs enviar fotos als teus missatges il·limitadament
+        \n
+    </string>
+    <string name="ventajas_de_comprar">
+        \n\t- Augmenta la teva visibilitat\n
+        \n\t- Multiplica les teves peticions de amistat\n
+        \n\t- Podràs enviar fotos als teus missatges
+        \n
+    </string>
+
+    <!-- HELP -->
+    <string name="help_info_title">
+       Qué és %1$s?
+    </string>
+    <string name="help_info">
+        %1$s és una app on pots trobar nous amics prop de tú. és gratuït encara que pots pagar per gaudir de la versió premium. Configura el teu radar y fes recerques sovint. \n\nGuanya estreles per a aparèixer en les primeres posicions enviant missatges als altres usuaris. La compra de estreles també és possible.
+    </string>
+    <string name="help_ganar_estrellas">aconsegueix estrelles i apareixeràs en les primeres posicions de les recerques.  %1$destreles seràn cobrades setmanalment si no ets usuari premium.</string>
+    <string name="help_como_funciona">
+        Cóm funciona?
+    </string>
+    <string name="help_principal" >Açí es mostrarà el resultat de la teua recerca. Polsa sobre els perfils per a realitzar qualsevol acció.if you are not a premium user. Els perfils aparèixen ordenats per estreles si no ets usuari premium i ordenats per distància si ets usuari premium. </string>
+    <string name="help_configura_radar" >Configura el teu radar per trobar la gent que més te agrade. Els usuaris premium tenen un radi de recerca doble de gran així com altres característiques. </string>
+    <string name="help_mensajes">Llegiu tots els missatges que heu enviat o rebut. </string>
+    <string name="help_mi_perfil" >Puja fotos, actualitza el teu perfil i revisa les teues estreles açí. Els usuaris premium poden pujar fins a %1$d fotos.</string>
+    <string name="help_compras" >Converteix-te en un usuari premium o compra estreles açí. Gaudeix dels beneficis!</string>
+    <string name="help_ajustes" >Ajusta algunes opcións com ara les notificacions o les unitats de mida. També pots esborrar el teu compte.</string>
+    <string name="help_chat_general">Xarla amb gent del teu país i de la mateixa orientació sexual que tú.</string>
+    <string name="help_feedback" >Contans la teva opinió sobre aquesta app. Puntuans o digues que coses no t\'agraden.</string>
+    <string name="help_como_contactar" >Com puc posar-me en contacte amb l\'administrador de %1$s ?</string>
+    <string name="help_para_cualquier_consulta">Pots contactar amb nosaltres mitjançant la següents adreces:</string>
+    <string name="MOTIVO_ANUNCIO_BONIFICADO">Anunci visualitzat</string>
+    <string name="estrellas">+%1$d estreles</string>
+</resources>

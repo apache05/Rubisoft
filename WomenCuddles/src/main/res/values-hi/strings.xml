@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+    <!-- ****************************  UNIDADES DE MEDIDA ****************************-->
+    <string name="Mi">%1$s Mi</string>
+    <string name="m">%1$.2f मी</string>
+    <string name="kg">%1$d किलो</string>
+    <string name="km">%1$.2fकिमी</string>
+
+
+    <!--************************ MENU_CAMBIAR_FOTO ************************  -->
+    <string name="change_pic">तस्वीर बदलिए</string>
+
+
+    <string name="title_activity_condiciones_uso">उपयोग की शर्तें</string>
+    <string name="title_activity_politica_privacidad">गोपनीयता नीति</string>
+
+    <!-- ****************************  VARIOS ****************************-->
+    <string name="app_name">महिला खोजक</string>
+    <string name="no">नहीं</string>
+    <string name="si">हाँ</string>
+    <string name="y">तथा</string>
+    <string name="Cancelar">रद्द करें</string>
+    <string name="ok">ठीक है</string>
+    <string name="estrellas">+%1$d सितारे</string>
+    <string name="anyos"> %1$d वर्ष</string>
+    <string name="foto_inapropiada">यह तस्वीर अनुपयुक्त मानी जाती है</string>
+
+    <string name="SOLO_PREMIUM">केवल प्रीमियम उपयोगकर्ताओं के लिए</string>
+    <string name="LOCATION_NOT_READY">कृपया अपना स्थान प्राप्त करने और अद्यतन करने के लिए स्थान मोड चालू करें।</string>
+
+    <!-- ****************************  navigation drawer ****************************-->
+
+    <!--  MENSAJES DEL GOOGLE CLOUD MESSAGING -->
+    <string name="MENSAJE_DE">%1$s ने आपको संदेश भेजा है</string>
+    <string name="NUEVO_MENSAJE">%1$s ने चैट में लिखा है</string>
+
+    <!--  MENSAJES POR DEFECTO CUANDO LLEGA UN MENSAJE Y LA APP ESTÁ EN BACKGROUND -->
+    <string name="DEFAULT_NOTIFICATION_TITLE" >नया संदेश</string>
+    <string name="DEFAULT_NOTIFICATION_TEXT" >आपके पास एक नया अपठित संदेश है। इसे पढ़ने दो!</string>
+
+    <!-- *********************** ACTIVITY_MENSAJES*********************************** -->
+    <string name="ACTIVITY_MENSAJES_NO_HAY_MENSAJES">अभी कोई संदेश नहीं है</string>
+
+    <!-- *********************** ACTIVITY_SIN_CONEXION y*********************************** -->
+    <string name="ACTIVITY_SIN_CONEXION_NO_HAY_CONEXION">कोई संबंध नहीं</string>
+
+    <!-- *********************** ACTIVITY_MI_PERFIL*********************************** -->
+    <string name="ACTIVITY_MI_PERFIL_TAB_TUS_FOTOS">आपकी तस्वीरें</string>
+    <string name="ACTIVITY_MI_PERFIL_TAB_TUS_DATOS">आपका डेटा</string>
+    <string name="ACTIVITY_MI_PERFIL_TAB_TUS_ESTRELLAS">आपके तेरे</string>
+
+    <!--************************ ACTIVITY_CHAT_GENERAL ************************ -->
+    <string name="ACTIVITY_CHAT_GENERAL_CUANTOS_HAY">ऑनलाइन %d लोग हैं</string>
+
+    <!--************************ ACTIVITY_CHAT ************************ -->
+    <string name="ACTIVITY_CHAT_AMISTAD_TERMINADA">उपयोगकर्ता सन्देश स्वीकार नहीं करता है या पंजीकृत नहीं</string>
+    <string name="ACTIVITY_CHAT_ESTRELLAS_GRATIS">नि: शुल्क सितारे प्राप्त करें</string>
+
+    <!--************************  ACTIVITY_CONFIGURA_RADAR************************ -->
+    <string name="ACTIVITY_CONFIGURA_RADAR_EDAD_ENTRE">आयु सीमा</string>
+    <string name="ACTIVITY_CONFIGURA_RADAR_ALTURA_ENTRE">ऊँचाई की सीमा</string>
+    <string name="ACTIVITY_CONFIGURA_RADAR_PESO_ENTRE">भार की सीमा</string>
+    <string name="ACTIVITY_CONFIGURA_RADAR_QUE_TENGA_CASA">केवल वे जिनके पास घर है</string>
+    <string name="ACTIVITY_CONFIGURA_RADAR_QUE_TENGA_COCHE">केवल जिनके पास कार है</string>
+    <string name="ACTIVITY_CONFIGURA_RADAR_QUE_TENGA_MOTO">केवल वही जिनके पास मोटरसाइकिल है</string>
+    <string name="ACTIVITY_CONFIGURA_RADAR_RAZA_">रेस:</string>
+    <string name="ACTIVITY_CONFIGURA_RADAR_DISTANCIA_MI">Mi के %1$s दायरे में</string>
+    <string name="ACTIVITY_CONFIGURA_RADAR_DISTANCIA_KM">%1$d किलोमीटर के दायरे में</string>
+    <string name="ACTIVITY_CONFIGURA_RADAR_CUALQUIER_RAZA">कोई भी दौड़</string>
+    <string name="ACTIVITY_CONFIGURA_RADAR_AL_MENOS_1_RAZA">आपको कम से कम एक दौड़ का चयन करना होगा</string>
+    <string name="ACTIVITY_CONFIGURA_RADAR_ONLINE">ऑनलाइन</string>
+    <string name="ACTIVITY_CONFIGURA_RADAR_NEW">नया</string>
+
+    <!--************************ ACTIVITY_CONFIGURACION ************************  -->
+    <string name="ACTIVITY_CONFIGURACION_UNIDADES">इकाइयां:</string>
+    <string name="ACTIVITY_CONFIGURACION_CHAT_ACTIVADO">चैट सक्षम हैं</string>
+    <string name="ACTIVITY_CONFIGURACION_SONIDO_CHAT_DESACTIVADO">चैट अक्षम</string>
+
+    <!-- ***********************  ACTIVITY_UNINSTALL *********************************** -->
+    <string name="ACTIVITY_UNINSTALL_UNINSTALL">खाता मिटाएँ</string>
+
+    <!-- ***********************  ACTIVITY_INICIO *********************************** -->
+    <string name="ACTIVITY_INICIO_ERROR_LOGGIN">साइन इन करते समय त्रुटि। कृपया पुनः प्रयास करें</string>
+    <string name="ACTIVITY_INICIO_HINT_EMAIL">ईमेल</string>
+    <string name="ACTIVITY_INICIO_HINT_PASSWORD">पासवर्ड</string>
+    <string name="ACTIVITY_INICIO_HINT_REPEAT_PASSWORD">पासवर्ड दोहराएं</string>
+    <string name="ACTIVITY_INICIO_SIGNIN">साइन इन</string>
+    <string name="ACTIVITY_INICIO_SIGNUP">साइन अप करें</string>
+    <string name="ACTIVITY_INICIO_BAD_EMAIL">वैध ईमेल नहीं</string>
+    <string name="ACTIVITY_INICIO_FORGOT_PASSWORD">अपना पासवर्ड भूल गए?</string>
+    <string name="ACTIVITY_INICIO_FORGOT_RESET_PASSWORD">पासवर्ड रीसेट करें</string>
+    <string name="ACTIVITY_INICIO_FORGOT_RESET">रीसेट करें</string>
+    <string name="ACTIVITY_INICIO_EMAIL_SENT">आपको अपना पासवर्ड रीसेट करने के निर्देशों के साथ एक ईमेल प्राप्त हुआ है</string>
+    <string name="ACTIVITY_INICIO_PASSWORDS_DOESNT_MATCH">पासवर्ड मेल नहीं खाते</string>
+    <string name="ACTIVITY_INICIO_NOTA_PRIVACIDAD">आपके खाते से कोई डेटा एकत्र नहीं किया जाएगा और न ही हम किसी भी प्रकार का संदेश भेजेंगे</string>
+
+    <!-- ***********************  ACTIVITY_REGISTRO_PERSONA *********************************** -->
+    <string name="ACTIVITY_REGISTRO_TITULO">साइन अप करें</string>
+    <string name="ACTIVITY_REGISTRO_DATOS_FISICOS">आपको क्या पसंद है</string>
+    <string name="ACTIVITY_REGISTRO_SEXUALIDAD">लैंगिकता</string>
+    <string name="ACTIVITY_REGISTRO_CHECKBOX_I_AGREE">मैं इसके लिए सहमत हूँ</string>
+    <string name="ACTIVITY_REGISTRO_TEXTVIEW_TERMS_AND_CONDITIONS"> उपयोग की शर्तें</string>
+    <string name="ACTIVITY_REGISTRO_ALTURA_">ऊंचाई:</string>
+    <string name="ACTIVITY_REGISTRO_PESO_">वजन:</string>
+    <string name="ACTIVITY_REGISTRO_RAZA_">रेस:</string>
+    <string name="ACTIVITY_REGISTRO_NICK_">निक</string>
+    <string name="ACTIVITY_REGISTRO_QUIERO_DEJAR_CLARO">मैं यह स्पष्ट करना चाहता हूं कि *</string>
+    <string name="ACTIVITY_REGISTRO_OPCIONAL">* वैकल्पिक</string>
+    <string name="ACTIVITY_REGISTRO_BIRTH_">जन्म</string>
+    <string name="ACTIVITY_REGISTRO_ERROR_FALTA_NICK">त्रुटि: अपने निक डालें</string>
+    <string name="ACTIVITY_REGISTRO_ERROR_FALTA_SEXUALIDAD">त्रुटि: आपको अपने लिंग और अपने यौन अभिविन्यास का चयन करना होगा</string>
+    <string name="ACTIVITY_REGISTRO_ERROR_UNDERAGE">त्रुटि: आपको %1$d वर्ष से ज्यादा आयु का होना चाहिए</string>
+    <string name="ACTIVITY_REGISTRO_ERROR_INCONGRUENCIA_SEXUAL">त्रुटि: आपका लिंग और यौन अभिविन्यास सांगत नहीं है</string>
+    <string name="ACTIVITY_REGISTRO_ERROR_TERMS"> आपको नियम और शर्तों से सहमत होना चाहिए</string>
+
+    <!-- *********************** ACTIVITY_PRIMERAS_FOTOS y*********************************** -->
+    <string name="ACTIVITY_PRIMERAS_FOTOS_INSERTA_FOTOS">वैकल्पिक रूप से, आप अपनी एक तस्वीर अपलोड कर सकते हैं</string>
+    <string name="ADVERTENCIA">ध्यान दें:अश्लील या अश्लील फोटो अपलोड करने की अनुमति नहीं है। व्यवस्थापक किसी भी अनुचित चित्र को बिना सूचना के हटा देंगे।</string>
+
+    <!-- ***********************  ACTIVITY_PRINCIPAL *********************************** -->
+    <string name="ACTIVITY_PRINCIPAL_NO_VA_EL_GPS">आपके स्थान के अनजान होने पर लोगों को सही तरीके से खोजना असंभव है। अपने स्थान को सक्रिय करें और कुछ सेकंड के बाद इसे फिर से आज़माएँ</string>
+    <string name="ACTIVITY_PRINCIPAL_NINGUN_PERFIL_ENCONTRADO">आपकी वर्तमान रडार सेटिंग्स के साथ कोई भी नहीं मिला</string>
+
+    <!-- ***********************  FRAGMENT_BORRAR *********************************** -->
+    <string name="ACTIVITY_CONFIGURACION_ELIMINAR_CUENTA">खाता हटा दो</string>
+
+    <!-- ***********************  ACTIVITY_COMPRAS *********************************** -->
+    <string name="ACTIVITY_MEJORAR_COMPRA_X_ESTRELLAS">%2$s के लिए %1$d सितारे</string>
+    <string name="ACTIVITY_MEJORAR_SUSCRIBE_6_MESES">%1$s के लिए 6 महीने की सदस्यता लें</string>
+    <string name="ACTIVITY_MEJORAR_SUSCRIBE_1_AÑO">%1$s के लिए 1 वर्ष की सदस्यता लें</string>
+    <string name="ACTIVITY_MEJORAR_TITULO_SUSCRIBIR"> सदस्यता लें प्रीमियम</string>
+    <string name="ACTIVITY_MEJORAR_TITULO_COMPRAR"> सितारों की खरीदारी करें</string>
+    <string name="ACTIVITY_MEJORAR_ERROR_COMPRA_ESTRELLAS">त्रुटि: असफल खरीद</string>
+    <string name="ACTIVITY_MEJORAR_EXITO_COMPRA">खरीद सफलतापूर्वक पूर्ण हुई</string>
+    <string name="ACTIVITY_MEJORAR_ERROR_SUSCRIPCION">त्रुटि: असफल सब्सक्रिप्शन</string>
+    <string name="ACTIVITY_MEJORAR_EXITO_SUSCRIPCION">सब्सक्रिप्शन को सफलता से पूरा किया गया</string>
+    <string name="ACTIVITY_MEJORAR_CANCELADO">रद्द</string>
+    <string name="ACTIVITY_MEJORAR_YA_ES_PREMIUM">आपके पास पहले से ही एक प्रीमियम खाता है</string>
+
+    <!-- ***********************  ACTIVITY_ESTRELLAS_GRATIS *********************************** -->
+    <string name="ACTIVITY_ESTRELLAS_POR_ANUNCIO">एक विज्ञापन देखकर %1$d तारा प्राप्त करें</string>
+
+    <!-- ***********************  ACTIVITY_FEEDBACK *********************************** -->
+    <string name="ACTIVITY_FEEDBACK_TITULO">क्या आपको यह ऐप पसंद है?</string>
+    <string name="ACTIVITY_FEEDBACK_PLEASE_FEEDBACK">कृपया, हमें बताएं कि आपको क्या पसंद है।</string>
+    <string name="ACTIVITY_FEEDBACK_SEND_FEEDBACK">भेजें</string>
+    <string name="ACTIVITY_FEEDBACK_RATE_APP"> कृपया, Play Store में इस ऐप को रेट करें</string>
+    <string name="ACTIVITY_FEEDBACK_RATE"> मूल्यांकन करें</string>
+    <string name="ACTIVITY_FEEDBACK_SENT"> प्रतिक्रिया भेजी गई</string>
+    <string name="ACTIVITY_FEEDBACK_HINT_YOUR_FEEDBACK"> अपनी टिप्पणी लिखें</string>
+    <string name="ACTIVITY_FEEDBACK_APP_LENTA">ऐप धीमी चल रही है</string>
+    <string name="ACTIVITY_FEEDBACK_MAL_DISENO">भयानक डिजाइन</string>
+    <string name="ACTIVITY_FEEDBACK_MAL_TRADUCIDA">अनुवाद की गलतियाँ</string>
+    <string name="ACTIVITY_FEEDBACK_NO_SE_COMO_VA">मुझे नहीं पता कि इसका उपयोग कैसे किया जाता है (कृपया पहले मदद पढ़ें)</string>
+    <string name="ACTIVITY_FEEDBACK_NO_FUNCIONA_BIEN">खराबी</string>
+    <string name="ACTIVITY_FEEDBACK_POCOS_USUARIOS">कुछ उपयोगकर्ता</string>
+    <string name="ACTIVITY_FEEDBACK_OTROS">अन्य</string>
+
+    <!-- ***********************  FRAGMENT_FOTO *********************************** -->
+    <string name="FRAGMENT_FOTO_ERROR_FOTO_NO_CARGADA">फ़ोटो लोड करने में त्रुटि हुई</string>
+    <string name="FRAGMENT_FOTO_ERROR_FOTO_MUY_PESADA">त्रुटि:जायदा आकार की फ़ोटो</string>
+    <string name="FRAGMENT_FOTO_EROR_FORMAT_NOT_SUPPORTED">त्रुटि: समर्थित प्रारूप की फ़ाइल नहीं</string>
+    <string name="FRAGMENT_FOTO_WAIT">छवि अपलोड होने तक प्रतीक्षा करें</string>
+
+    <!-- ***********************  FRAGMENT_DATOS_PERSONALES *********************************** -->
+    <string name="FRAGMENT_DATOS_PERSONALES_NICK_">निक</string>
+    <string name="FRAGMENT_DATOS_PERSONALES_EDAD_">उम्र:</string>
+    <string name="FRAGMENT_DATOS_PERSONALES_ALTURA_">ऊंचाई:</string>
+    <string name="FRAGMENT_DATOS_PERSONALES_PESO_">वजन:</string>
+    <string name="FRAGMENT_DATOS_PERSONALES_RAZA_">रेस:</string>
+    <string name="FRAGMENT_DATOS_PERSONALES_SEXUALIDAD">लैंगिकता</string>
+    <string name="FRAGMENT_DATOS_PERSONALES_TUS_DATOS">आपका डेटा</string>
+    <string name="FRAGMENT_DATOS_PERSONALES_OTROS_DATOS">अन्य आंकड़ा</string>
+    <string name="FRAGMENT_DATOS_PERSONALES_QUIERO_DEJAR_CLARO">मैं यह स्पष्ट करना चाहता हूं कि</string>
+
+    <!-- *******************  Dialogo interactuar ************************** -->
+    <string name="DIALOGO_INTERACTUAR_TITULO">एक क्रिया का चयन करें</string>
+
+    <!-- *******************  Dialogo borrar cuenta ************************** -->
+    <string name="DIALOGO_BORRAR_CUENTA_TITULO">खाता हटा दें</string>
+    <string name="DIALOGO_BORRAR_CUENTA_ADVERTENCIA">यदि आपके पास आपके सब्सक्रिप्शन भी है और आप सितारे खो देंगे</string>
+
+    <!--************************  dialogo denuncia ************************-->
+    <string name="DIALOGO_DENUNCIAR_PREGUNTA_MOTIVO">आपके डांट का कारण क्या है?</string>
+    <string name="DIALOGO_DENUNCIAR_DENUNCIAR">डांट</string>
+    <string name="DIALOGO_DENUNCIAR_DENUNCIADO">उपयोगकर्ता को डांटा गया</string>
+
+    <!--************************  dialogo se te va a cobrar ************************-->
+    <string name="DIALOGO_AVISO_MENSAJE_SE_TE_VA_A_COBRAR">यह कार्रवाई गैर-प्रीमियम उपयोगकर्ताओं के लिए %1$d सितारे बनते हैं।</string>
+    <string name="DIALOGO_AVISO_MENSAJE_NO_TIENES_ESTRELLAS"> यह कार्रवाई गैर-प्रीमियम उपयोगकर्ताओं के लिए %1$d सितारे पड़ते हैं। इस क्रिया को करने के लिए आपके पास पर्याप्त सितारे नहीं हैं।</string>
+    <string name="DIALOGO_COMPRAR_ESTRELLAS">सितारे खरीदें</string>
+
+    <!--************************  dialogo ayuda ************************-->
+    <string name="DIALOGO_CONSEJO_TITULO">मदद</string>
+    <string name="DIALOGO_CONSEJO_MENSAJE">किसी भी कार्रवाई को करने के लिए एक प्रोफ़ाइल पर टैप करें।</string>
+    <string name="DIALOGO_CONSEJO_MENSAJE_CHAT_GENERAL">अपने देश के लोगों के साथ चैट करें। निजी तौर पर चैट करने के लिए, उपयोगकर्ता के चित्र पर टैप करें और संदेश बटन दबाएँ।</string>
+    <string name="DIALOGO_CONSEJO_YA_NO_MAS">अब और नहीं दिखाओ</string>
+    <string name="DIALOGO_CONSEJO_FOTO_MANAGER">एक तस्वीर बदलने के लिए टैप करें।</string>
+
+
+    <string name="MOTIVO_SIGNED_UP">साइनअप किया</string>
+    <string name="MOTIVO_COBRO_SEMANAL">साप्ताहिक शुल्क</string>
+    <string name="MOTIVO_COMPRA_ESTRELLAS">खरीद फरोख्त</string>
+    <string name="MOTIVO_COBRO_PETICION_CHAT_GENERAL">चैट का उपयोग करके मैत्री अनुरोध</string>
+    <string name="MOTIVO_ANUNCIO_BONIFICADO">चैट का उपयोग करके संलग्न फ़ाइल भेजें</string>
+
+    <!-- ventajas premium-->
+    <string name="ventajas_de_suscribir">
+        \n\t- आप पहले पदों पर दिखाई देंगे\n 
+        \n\t- आपसे साप्ताहिक रूप से शुल्क नहीं लिया जाएगा\n
+        \n\t- %1$d तक प्रोफाइल पिक्स अपलोड करें\n 
+        \n\t- आप अधिक खोज फ़िल्टर का उपयोग कर सकते हैं\n 
+        \n\t- डबल त्रिज्या खोज\n 
+        \n\t- विज्ञापन नहीं\n
+         \n\t- प्रोफाइल सूची दूरी के अनुसार क्रमबद्ध\n 
+        \n\t- आप अपने संदेशों में असीमित रूप से फोटो भेज सकते हैं</string>
+    <string name="ventajas_de_comprar">\n- अपनी दृश्यता को बढ़ाएं\n \n- अपने मैत्री अनुरोधों को बढ़ाएं\n \n- आप अपने संदेशों में तस्वीरें भेज सकते हैं</string>
+
+    <!-- HELP -->
+    <string name="help_info_title">%1$s क्या है?</string>
+    <string name="help_info"> %1$s एक ऐसी ऐप है, जहाँ आप अपने आस-पास के नए दोस्तों को खोज सकते हैं। यह मुफ़्त है हालांकि आप प्रीमियम संस्करण के लिए भुगतान कर सकते हैं। अपने रडार को कॉन्फ़िगर करें और नियमित रूप से लोगों को खोजें।\n\nअन्य लोगों के साथ संदेश भेजकर पहले स्थान पर आने के लिए सितारों को प्राप्त करें। सितारों की खरीद भी संभव है।</string>
+    <string name="help_ganar_estrellas">खोज के शीर्ष स्थान पर आने के लिए सितारे प्राप्त करें। यदि आप प्रीमियम उपयोगकर्ता नहीं हैं,साप्ताहिक रूप से%1$d सितारों का शुल्क लिया जाएगा।</string>
+    <string name="help_como_funciona">यह काम किस प्रकार करता है?</string>
+    <string name="help_principal">यहां आपको अपनी खोज का परिणाम मिलेगा। किसी भी कार्य को करने के लिए प्रोफ़ाइल पर टैप करें। यदि आप एक प्रीमियम उपयोगकर्ता नहीं हैं और यदि आप एक प्रीमियम उपयोगकर्ता हैं तो दूरी के आधार पर प्रोफाइल को सितारों द्वारा क्रमबद्ध किया जाता है।</string>
+    <string name="help_configura_radar">अपने रडार को केवल उन लोगों को खोजने के लिए कॉन्फ़िगर करें जिन्हें आप पसंद करते हैं। अपने घर,यदि आप एक प्रीमियम सदस्य हैं, तो आप अन्य सुविधाओं के अलावा दो बार लोगों को खोज सकते हैं।</string>
+    <string name="help_mensajes">आपके द्वारा भेजे गए या प्राप्त सभी संदेशों को पढ़ें।</string>
+    <string name="help_mi_perfil">पिक्स अपलोड करें, अपना प्रोफाइल अपडेट करें और यहां अपने सितारों की जांच करें। प्रीमियम उपयोगकर्ता %1$d तस्वीरें अपलोड कर सकते हैं।</string>
+    <string name="help_compras">एक प्रीमियम उपयोगकर्ता बनें या यहां सितारे खरीदें। उनके लाभों का आनंद लें!</string>
+    <string name="help_ajustes">अपने ऐप की कुछ विशेषताओं को सूचनाओं, माप इकाइयों आदि के रूप में सेट करें। आप अपना खाता भी हटा सकते हैं।</string>
+    <string name="help_chat_general">अपने देश के लोगों के साथ और आप से एक ही यौन अभिविन्यास वाले लोगों के साथ चैट करें।</string>
+    <string name="help_feedback">हमारे ऐप के बारे में अपनी राय हमें बताएं। हमें दर या किसी भी समस्या की रिपोर्ट कर सकते हैं जिसे हम सुधार सकते हैं</string>
+    <string name="help_como_contactar">मैं %1$s के प्रशासकों के साथ कैसे संपर्क कर सकता हूं?</string>
+    <string name="help_para_cualquier_consulta">आप निम्न पते के माध्यम से हमसे संपर्क कर सकते हैं:</string>
+</resources>

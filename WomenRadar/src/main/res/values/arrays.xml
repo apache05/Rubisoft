@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="dias_nacimiento" translatable="false">
+        <item>01</item>
+        <item>02</item>
+        <item>03</item>
+        <item>04</item>
+        <item>05</item>
+        <item>06</item>
+        <item>07</item>
+        <item>08</item>
+        <item>09</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+        <item>21</item>
+        <item>22</item>
+        <item>23</item>
+        <item>24</item>
+        <item>25</item>
+        <item>26</item>
+        <item>27</item>
+        <item>28</item>
+        <item>29</item>
+        <item>30</item>
+        <item>31</item>
+    </string-array>
+
+    <string-array name="array_unidades">
+        <item> Kg - m - Km</item>
+        <item> St/lb - in - Mi </item>
+        <item> lb - in - Mi </item>
+    </string-array>
+
+    <string-array name="meses_nacimiento">
+        <item>january</item>
+        <item>february</item>
+        <item>march</item>
+        <item>april</item>
+        <item>may</item>
+        <item>juny</item>
+        <item>july</item>
+        <item>august</item>
+        <item>september</item>
+        <item>october</item>
+        <item>november</item>
+        <item>december</item>
+    </string-array>
+    <string-array name="sexos">
+        <item>Gender</item>
+        <item>I\'m male</item>
+        <item>I\'m female</item>
+    </string-array>
+
+    <string-array name="orientaciones_registro">
+        <item>Orientation \u002a</item>
+        <item>I am straight</item>
+        <item>I am lesbian</item>
+        <item>I am gay </item>
+
+        <item>I am bisexual</item>
+    </string-array>
+
+    <string-array name="orientaciones_mi_perfil">
+        <item>I am straight</item>
+        <item>I am lesbian</item>
+        <item>I am gay </item>
+
+        <item>I am bisexual</item>
+    </string-array>
+    <string-array name="busqueda_personas" >
+        <item>Looking for straight women</item>
+        <item>Looking for straight men</item>
+        <item>Looking for  gay men</item>
+        <item>Looking for lesbian women</item>
+        <item>Looking for bisexual women</item>
+        <item>Looking for bisexual men</item>
+    </string-array>
+
+    <string-array name="razas">
+        <item> White (Blonde)</item>
+        <item> White (Dark)</item>
+        <item> Black</item>
+        <item> Mulate</item>
+        <item> Oriental (East)</item>
+        <item> Oriental (Southeast)</item>
+        <item> Latin</item>
+        <item> Arab</item>
+        <item> Hindu</item>
+    </string-array>
+
+    <!-- Nav Drawer Menu Items -->
+    <string-array name="nav_drawer_items">
+        <item>Radar</item>
+        <item>Adjust radar</item>
+        <item>Messages</item>
+        <item>Your profile</item>
+        <item>Free stars</item>
+        <item>Purchases</item>
+        <item>Chat</item>
+        <item>Help</item>
+        <item>Settings</item>
+        <item>Feedback</item>
+        <item>Sign out</item>
+    </string-array>
+
+    <string-array name="causas_deuncia">
+        <item> Obscene pic </item>
+        <item> False profile</item>
+        <item> Violent pic</item>
+        <item> Inappropriate or ofensive  pic</item>
+        <item> Child Protection </item>
+    </string-array>
+</resources>

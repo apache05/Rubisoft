@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+    <!--************************ MENU_CAMBIAR_FOTO ************************  -->
+    <string name="change_pic">写真を変更する</string>
+
+    <!-- *********************** SETTING OPTIONS y*********************************** -->
+    <string name="title_activity_condiciones_uso">利用規約</string>
+    <string name="title_activity_politica_privacidad">個人情報保護方針</string>
+
+    <!-- unidades de medida -->
+    <string name="Mi">%1$s マイル</string>
+    <string name="kg">%1$d キログラム</string>
+    <string name="km">%1$.2fキロ</string>
+    <string name="m">%1$.2f地下鉄</string>
+
+    <!-- ****************************  VARIOS ****************************-->
+    <string name="no">いいえ</string>
+    <string name="si">はい</string>
+    <string name="y">そして</string>
+    <string name="Cancelar">キャンセルする</string>
+    <string name="ok">OK</string>
+    <string name="app_name">bisex finder </string>
+    <string name="anyos">%1$d年</string>
+    <string name="foto_inapropiada">この写真は不適切だと考えられています</string>
+    <string name="SOLO_PREMIUM">プレミアムユーザーのみ</string>
+    <string name="LOCATION_NOT_READY">現在地を更新できるように、ロケーションモードをオンに設定してください。</string>
+
+    <!--  MENSAJES DEL GOOGLE CLOUD MESSAGING -->
+    <string name="MENSAJE_DE">%1$sが、あなたにメッセージを送信しました</string>
+    <string name="NUEVO_MENSAJE">%1$sはチャットで書きました</string>
+
+    <!--  MENSAJES POR DEFECTO CUANDO LLEGA UN MENSAJE Y LA APP ESTÁ EN BACKGROUND -->
+    <string name="DEFAULT_NOTIFICATION_TITLE" >新しいメッセージ</string>
+    <string name="DEFAULT_NOTIFICATION_TEXT" >新しい未読メッセージがあります。 読んでみよう！</string>
+
+    <!-- *********************** ACTIVITY_SIN_CONEXION y*********************************** -->
+    <string name="ACTIVITY_SIN_CONEXION_NO_HAY_CONEXION">接続されていません</string>
+
+    <!-- *********************** Activity_Mensajes*********************************** -->
+    <string name="ACTIVITY_MI_PERFIL_TAB_TUS_FOTOS">あなたの写真</string>
+    <string name="ACTIVITY_MI_PERFIL_TAB_TUS_DATOS">あなたのデータ</string>
+    <string name="ACTIVITY_MI_PERFIL_TAB_TUS_ESTRELLAS">あなたの星</string>
+
+    <!--************************ ACTIVITY_CHAT_GENERAL ************************ -->
+    <string name="ACTIVITY_CHAT_GENERAL_CUANTOS_HAY">%d人が来店中です</string>
+
+    <!-- *********************** ACTIVITY_MENSAJES*********************************** -->
+    <string name="ACTIVITY_MENSAJES_NO_HAY_MENSAJES">まだメッセージがありません</string><!--*******-->
+
+    <!--************************ ACTIVITY_CHAT ************************ -->
+    <string name="ACTIVITY_CHAT_AMISTAD_TERMINADA">ユーザーはもはやメッセージを受け入れない、またはユーザーはもはや登録されていない</string>
+    <string name="ACTIVITY_CHAT_ESTRELLAS_GRATIS">星を無料で手に入れよう</string>
+
+    <!--************************  ACTIVITY_CONFIGURA_RADAR************************ -->
+    <string name="ACTIVITY_CONFIGURA_RADAR_EDAD_ENTRE">年齢層</string>
+    <string name="ACTIVITY_CONFIGURA_RADAR_ALTURA_ENTRE">身長の範囲</string>
+    <string name="ACTIVITY_CONFIGURA_RADAR_PESO_ENTRE">体重の範囲</string>
+    <string name="ACTIVITY_CONFIGURA_RADAR_QUE_TENGA_CASA">家を持っている人のみ</string>
+    <string name="ACTIVITY_CONFIGURA_RADAR_QUE_TENGA_COCHE">車を持っている人のみ</string>
+    <string name="ACTIVITY_CONFIGURA_RADAR_QUE_TENGA_MOTO">オートバイを持っている人のみ</string>
+    <string name="ACTIVITY_CONFIGURA_RADAR_RAZA_">人種：</string>
+    <string name="ACTIVITY_CONFIGURA_RADAR_DISTANCIA_MI">半径%1$sマイル以内</string>
+    <string name="ACTIVITY_CONFIGURA_RADAR_DISTANCIA_KM">半径%1$dキロ以内</string>
+    <string name="ACTIVITY_CONFIGURA_RADAR_CUALQUIER_RAZA">全ての人種</string>
+    <string name="ACTIVITY_CONFIGURA_RADAR_AL_MENOS_1_RAZA">少なくとも一つ、人種を選択する必要があります</string>
+    <string name="ACTIVITY_CONFIGURA_RADAR_NEW">新しい</string>
+    <string name="ACTIVITY_CONFIGURA_RADAR_ONLINE">オンライン</string>
+
+    <!--************************ ACTIVITY_CONFIGURACION ************************  -->
+    <string name="ACTIVITY_CONFIGURACION_UNIDADES">ユニット：</string>
+    <string name="ACTIVITY_CONFIGURACION_CHAT_ACTIVADO">チャット有効</string>
+    <string name="ACTIVITY_CONFIGURACION_SONIDO_CHAT_DESACTIVADO">チャット無効</string>
+    <string name="ACTIVITY_CONFIGURACION_ELIMINAR_CUENTA">アカウントを削除</string>
+
+    <!-- ***********************  ACTIVITY_UNINSTALL *********************************** -->
+    <string name="ACTIVITY_UNINSTALL_UNINSTALL">アンインストール</string>
+
+    <!-- ***********************  ACTIVITY_INICIO *********************************** -->
+    <string name="ACTIVITY_INICIO_ERROR_LOGGIN">サインインしている際にエラーが発生しました。もう一度お試しください</string>
+    <string name="ACTIVITY_INICIO_HINT_EMAIL">メイル</string>
+    <string name="ACTIVITY_INICIO_HINT_PASSWORD">パスワード</string>
+    <string name="ACTIVITY_INICIO_HINT_REPEAT_PASSWORD">パスワードを再度入力してください。</string>
+    <string name="ACTIVITY_INICIO_SIGNIN">サインインする</string>
+    <string name="ACTIVITY_INICIO_SIGNUP">登録する</string>
+    <string name="ACTIVITY_INICIO_BAD_EMAIL">無効なEメールアドレスです</string>
+    <string name="ACTIVITY_INICIO_FORGOT_PASSWORD">パスワードをお忘れですか？</string>
+    <string name="ACTIVITY_INICIO_FORGOT_RESET_PASSWORD">パスワードを再設定する</string>
+    <string name="ACTIVITY_INICIO_FORGOT_RESET">再設定する</string>
+    <string name="ACTIVITY_INICIO_EMAIL_SENT">あなたのEメールアドレスに、パスワードをリセットする手順を記載したメールを送信しました。受信トレイをご確認ください。</string>
+    <string name="ACTIVITY_INICIO_PASSWORDS_DOESNT_MATCH">パスワードが一致していません</string>
+    <string name="ACTIVITY_INICIO_NOTA_PRIVACIDAD">いかなるデータも、あなたのアカウントから収集される事はありません。また、いかなるメッセージも、プロフィールで表示される事はありません。</string>
+
+    <!-- ***********************  ACTIVITY_REGISTRO_PERSONA *********************************** -->
+    <string name="ACTIVITY_REGISTRO_DATOS_FISICOS" >あなたの出現</string>
+    <string name="ACTIVITY_REGISTRO_SEXUALIDAD" >あなたのセクシュアリティ</string>
+    <string name="ACTIVITY_REGISTRO_TITULO">登録する</string>
+    <string name="ACTIVITY_REGISTRO_CHECKBOX_I_AGREE">同意します</string>
+    <string name="ACTIVITY_REGISTRO_TEXTVIEW_TERMS_AND_CONDITIONS"> 利用規約</string>
+    <string name="ACTIVITY_REGISTRO_ALTURA_">身長：</string>
+    <string name="ACTIVITY_REGISTRO_PESO_">体重：</string>
+    <string name="ACTIVITY_REGISTRO_RAZA_">人種：</string>
+    <string name="ACTIVITY_REGISTRO_NICK_">ニックネーム</string>
+    <string name="ACTIVITY_REGISTRO_QUIERO_DEJAR_CLARO">私が明確にしたい点\u002a</string>
+    <string name="ACTIVITY_REGISTRO_OPCIONAL">\u002a 任意</string>
+    <string name="ACTIVITY_REGISTRO_BIRTH_">誕生日</string>
+    <string name="ACTIVITY_REGISTRO_ERROR_FALTA_NICK">エラー：ニックネームがありません</string>
+    <string name="ACTIVITY_REGISTRO_ERROR_FALTA_SEXUALIDAD">エラー：あなたの性別と性的指向を選択する必要があります</string>
+    <string name="ACTIVITY_REGISTRO_ERROR_UNDERAGE">エラー：あなたは%1$d歳以上でなければなりません</string>
+    <string name="ACTIVITY_REGISTRO_ERROR_INCONGRUENCIA_SEXUAL">エラー：あなたの性別と性的指向が不適切に選択されています</string>
+    <string name="ACTIVITY_REGISTRO_ERROR_TERMS">利用規約に同意する必要があります</string>
+
+    <!-- *********************** ACTIVITY_PRIMERAS_FOTOS y*********************************** -->
+    <string name="ACTIVITY_PRIMERAS_FOTOS_INSERTA_FOTOS">必要に応じて、あなた自身の1つの画像</string>
+    <string name="ADVERTENCIA">注意：わいせつ写真やポルノ写真はアップロードできません。 管理者は、不適切な画像を予告なく削除します。</string>
+
+    <!-- ***********************  ACTIVITY_PRINCIPAL *********************************** -->
+    <string name="ACTIVITY_PRINCIPAL_NO_VA_EL_GPS">あなたのロケーション情報が不明のため、他のユーザーを検索できません。</string>
+    <string name="ACTIVITY_PRINCIPAL_NINGUN_PERFIL_ENCONTRADO">現在のレーダーの設定では、誰も検索できません。</string>
+
+    <!-- ***********************  ACTIVITY_COMPRAS *********************************** -->
+    <string name="ACTIVITY_MEJORAR_COMPRA_X_ESTRELLAS">%2$sにつき星%1$d個</string>
+    <string name="ACTIVITY_MEJORAR_SUSCRIBE_6_MESES">%1$sのために6ヶ月分購読する</string>
+    <string name="ACTIVITY_MEJORAR_SUSCRIBE_1_AÑO">%1$sのために1年分購読する</string>
+    <string name="ACTIVITY_MEJORAR_TITULO_SUSCRIBIR">プレミアム版を購読する</string>
+    <string name="ACTIVITY_MEJORAR_TITULO_COMPRAR">星を購入する</string>
+    <string name="ACTIVITY_MEJORAR_ERROR_COMPRA_ESTRELLAS">エラー：購入に失敗しました</string>
+    <string name="ACTIVITY_MEJORAR_EXITO_COMPRA">問題なく購入処理が完了しました</string>
+    <string name="ACTIVITY_MEJORAR_ERROR_SUSCRIPCION">エラー：購入できませんでした</string>
+    <string name="ACTIVITY_MEJORAR_EXITO_SUSCRIPCION">問題なく購入処理が完了しました</string>
+    <string name="ACTIVITY_MEJORAR_CANCELADO">キャンセルする</string>
+    <string name="ACTIVITY_MEJORAR_YA_ES_PREMIUM">あなたは既にプレミアムアカウントを持っています</string>
+
+    <!-- ***********************  ACTIVITY_ESTRELLAS_GRATIS *********************************** -->
+    <string name="ACTIVITY_ESTRELLAS_POR_ANUNCIO">広告を見て%1$dつの星を得る</string>
+
+    <!-- ***********************  ACTIVITY_FEEDBACK *********************************** -->
+    <string name="ACTIVITY_FEEDBACK_TITULO">このアプリが好きですか？</string>
+    <!--<string name="ACTIVITY_FEEDBACK_EXPLICACION">こアプリについてフィードバックをお待ちしています</string>-->
+    <string name="ACTIVITY_FEEDBACK_PLEASE_FEEDBACK">ぜひ、お気に召さなかっったことをお知らせください</string>
+    <string name="ACTIVITY_FEEDBACK_SEND_FEEDBACK">送信</string>
+    <string name="ACTIVITY_FEEDBACK_RATE_APP">プレイストアで、このアプリを評価してください</string>
+    <string name="ACTIVITY_FEEDBACK_RATE">レート</string>
+    <string name="ACTIVITY_FEEDBACK_SENT">フィードバック送信</string>
+    <string name="ACTIVITY_FEEDBACK_HINT_YOUR_FEEDBACK"> コメントを書きます</string><string name="ACTIVITY_FEEDBACK_APP_LENTA">遅いアプリ</string>
+    <string name="ACTIVITY_FEEDBACK_MAL_DISENO">設計が不十分な</string>
+    <string name="ACTIVITY_FEEDBACK_MAL_TRADUCIDA">誤訳</string>
+    <string name="ACTIVITY_FEEDBACK_NO_SE_COMO_VA">私はそれがどのように動作するか理解していません （以前にヘルプをお読みください）</string>
+    <string name="ACTIVITY_FEEDBACK_NO_FUNCIONA_BIEN">うまく動作しません</string>
+    <string name="ACTIVITY_FEEDBACK_POCOS_USUARIOS">少数のユーザーがあります</string>
+    <string name="ACTIVITY_FEEDBACK_OTROS">他の </string>
+
+    <!-- ***********************  FRAGMENT_FOTO *********************************** -->
+    <string name="FRAGMENT_FOTO_ERROR_FOTO_NO_CARGADA">画像を読み込み中にエラーが発生しました</string>
+    <string name="FRAGMENT_FOTO_ERROR_FOTO_MUY_PESADA">エラー：写真のサイズが大きすぎます</string>
+    <string name="FRAGMENT_FOTO_EROR_FORMAT_NOT_SUPPORTED">エラー：サポートされていないファイル形式です</string>
+    <string name="FRAGMENT_FOTO_WAIT">画像がアップロードされるまで待つ</string>
+
+    <!-- ***********************  FRAGMENT_DATOS_PERSONALES *********************************** -->
+    <string name="FRAGMENT_DATOS_PERSONALES_NICK_">ニックネーム：</string>
+    <string name="FRAGMENT_DATOS_PERSONALES_EDAD_">年齢：</string>
+
+    <!--<string name="FRAGMENT_DATOS_PERSONALES_IM_PROFESIONAL">エスコート</string>-->
+    <string name="FRAGMENT_DATOS_PERSONALES_ALTURA_">身長</string>
+    <string name="FRAGMENT_DATOS_PERSONALES_PESO_">体重：</string>
+    <string name="FRAGMENT_DATOS_PERSONALES_RAZA_">人種：</string>
+    <string name="FRAGMENT_DATOS_PERSONALES_SEXUALIDAD">性的関心</string>
+    <string name="FRAGMENT_DATOS_PERSONALES_TUS_DATOS">あなたのデータ</string>
+    <string name="FRAGMENT_DATOS_PERSONALES_OTROS_DATOS">その他のデータ</string>
+    <string name="FRAGMENT_DATOS_PERSONALES_QUIERO_DEJAR_CLARO">明確にしたい事</string>
+
+    <!-- *******************  DialogS ************************** -->
+    <string name="DIALOGO_INTERACTUAR_TITULO">アクションを選択</string>
+    <string name="DIALOGO_BORRAR_CUENTA_TITULO">アカウントを削除する</string>
+    <string name="DIALOGO_BORRAR_CUENTA_ADVERTENCIA">あなたの星および購入履歴が消去されます</string>
+    <string name="DIALOGO_DENUNCIAR_PREGUNTA_MOTIVO">報告する理由は何ですか？</string>
+    <string name="DIALOGO_DENUNCIAR_DENUNCIAR">報告する</string>
+    <string name="DIALOGO_DENUNCIAR_DENUNCIADO">ユーザーが報告されました</string>
+    <string name="DIALOGO_CONSEJO_TITULO">ヘルプ</string>
+    <string name="DIALOGO_CONSEJO_MENSAJE">プロフィールをタッチして任意の操作を実行する。</string>
+    <string name="DIALOGO_CONSEJO_MENSAJE_CHAT_GENERAL">同じ国の出身者とチャット。非公開でチャットするには、あなたのイメージをクリックし、メッセージボタンをクリックしてください</string>
+    <string name="DIALOGO_CONSEJO_YA_NO_MAS">もう表示しないでください</string>
+    <string name="DIALOGO_CONSEJO_FOTO_MANAGER">変更するためには画像をクリック</string>
+    <string name="DIALOGO_AVISO_MENSAJE_SE_TE_VA_A_COBRAR"> このアクションは、プレミアムではないユーザーの%1$d個の星にかかります。</string>
+    <string name="DIALOGO_AVISO_MENSAJE_NO_TIENES_ESTRELLAS">このアクションは、プレミアムではないユーザーの%1$d個の星にかかります。 あなたは十分な星を持っていません</string>
+    <string name="DIALOGO_COMPRAR_ESTRELLAS">星を買います</string>
+
+    <!--************************  MOTIVOS PARA DAR ESTRELLAS ************************-->
+
+    <string name="MOTIVO_SIGNED_UP">登録されました</string>
+    <string name="MOTIVO_COBRO_SEMANAL">週会費</string>
+    <string name="MOTIVO_COMPRA_ESTRELLAS">購入する</string>
+    <string name="MOTIVO_COBRO_PETICION_CHAT_GENERAL">チャットを使用して添付ファイルを送信する</string>
+
+    <!-- ventajas premium-->
+    <string name="ventajas_de_suscribir">
+        \n\t- あなたは最初の位置に表示されます
+        \n\t- 星に毎週の料金はかかりません\n
+        \n\t- プロフィール画像は%1$d枚までアップデートできます\n
+        \n\t- より多くの検索フィルタを使用することができます\n
+        \n\t- ダブル半径検索\n
+        \n\t- 検索結果は距離によって並べ替えられています\n
+        \n\t- いいえ広告ません\n
+        \n\t- メッセージを無制限に送信することができます
+        \n
+
+    </string>
+    <string name="ventajas_de_comprar">
+        \n\t- 表示優先度を上げる\n
+        \n\t- 友達リクエストの数を増やす\n
+        \n\t- メッセージに写真を送ることができます
+        \n
+    </string>
+
+    <!-- HELP -->
+    <string name="help_info_title">%1$sとは?</string>
+    <string name="help_info">%1$sはあなたの周りで新しい友達を発見できるアプリです。無料でご利用になれる一般ユーザーに加えてプレミアム バージョンもあります。レーダーを設定して、コンスタントに検索してみてください。</string>
+    <string name="help_ganar_estrellas">星をつくると、検索の上位に表示されます。%1$d個の星は、通常のユーザーに対して毎週補充されます。</string>
+    <string name="help_como_funciona">しくみ</string>
+    <string name="help_principal">ここに検索の結果が表示されます。プロフィールをタッチして任意の操作を実行する。一般ユーザーは星でプロフィールがソートされます。プレミアムユーザーは距離でソートされます。</string>
+    <string name="help_configura_radar">好きな人だけが見つかるようにレーダーを設定します。プレミアムメンバーの場合、他の機能から2倍離れた人を検索できます。</string>
+    <string name="help_mensajes">送信または受信したすべてのメッセージを読むことができます。</string>
+    <string name="help_mi_perfil">画像のアップロード、プロフィールの更新、星の確認ができます。プレミアムユーザーは最大%1$d枚の画像をアップロードできます。</string>
+    <string name="help_compras">プレミアムユーザーへのアップグレード、星の購入を行います。プレミアムユーザーだけの特典をお楽しみください。</string>
+    <string name="help_ajustes">通知や表示単位などアプリの一部の機能を設定したり、アカウントの削除が行えます。</string>
+    <string name="help_chat_general">国内で同じ性指向を持った人とチャットしましょう。</string>
+    <string name="help_feedback">評価または問題を報告して、アプリに対する意見を教えてください。</string>
+    <string name="help_como_contactar">どうやって%1$sと連絡を取れますか？</string>
+    <string name="help_para_cualquier_consulta">以下のアドレスにご連絡ください：</string>
+    <string name="MOTIVO_ANUNCIO_BONIFICADO">表示された広告</string>
+    <string name="estrellas">+%1$dスター</string>
+</resources>

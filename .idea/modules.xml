@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/bisexcuddles/BisexCuddles.iml" filepath="$PROJECT_DIR$/bisexcuddles/BisexCuddles.iml" />
+      <module fileurl="file://$PROJECT_DIR$/GayCuddles/GayCuddles.iml" filepath="$PROJECT_DIR$/GayCuddles/GayCuddles.iml" />
+      <module fileurl="file://$PROJECT_DIR$/GayRadar/GayRadar.iml" filepath="$PROJECT_DIR$/GayRadar/GayRadar.iml" />
+      <module fileurl="file://$PROJECT_DIR$/LesbianCuddles/LesbianCuddles.iml" filepath="$PROJECT_DIR$/LesbianCuddles/LesbianCuddles.iml" />
+      <module fileurl="file://$PROJECT_DIR$/LesbianRadar/LesbianRadar.iml" filepath="$PROJECT_DIR$/LesbianRadar/LesbianRadar.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MenCuddles/MenCuddles.iml" filepath="$PROJECT_DIR$/MenCuddles/MenCuddles.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MenRadar/MenRadar.iml" filepath="$PROJECT_DIR$/MenRadar/MenRadar.iml" />
+      <module fileurl="file://$PROJECT_DIR$/WomenCuddles/WomenCuddles.iml" filepath="$PROJECT_DIR$/WomenCuddles/WomenCuddles.iml" />
+      <module fileurl="file://$PROJECT_DIR$/WomenRadar/WomenRadar.iml" filepath="$PROJECT_DIR$/WomenRadar/WomenRadar.iml" />
+      <module fileurl="file://$PROJECT_DIR$/radar.iml" filepath="$PROJECT_DIR$/radar.iml" />
+    </modules>
+  </component>
+</project>

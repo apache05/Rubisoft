@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Xradar_theme" parent="Xradar_theme.Base">
+
+    </style>
+
+    <style name="Xradar_theme.Base" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/primary</item>
+        <!--   darker variant for the status bar and contextual app bars -->
+        <item name="colorPrimaryDark">@color/primary_dark</item>
+        <!--   theme UI controls like checkboxes and text fields -->
+        <item name="colorAccent">@color/accent</item>
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <!-- title text color -->
+        <item name="android:textColorPrimary">@color/textColorPrimary</item>
+        <!-- subtitle text color -->
+        <item name="android:textColorSecondary">@color/gris</item>
+        <!-- action menu item text color -->
+        <item name="actionMenuTextColor">@color/gris</item>
+        <!-- action menu item icon color - only applies to appcompat-v7 icons :( -->
+        <item name="colorControlNormal">@color/gris</item>
+
+        <item name="android:textColor">@color/gris</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+</resources>

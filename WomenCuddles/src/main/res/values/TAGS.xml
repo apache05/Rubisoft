@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- NOMBRES DE LAS COLECCIONES-->
+    <string name="FEEDBACK" translatable="false">FEEDBACK</string>
+    <string name="LOGROS" translatable="false">LOGROS</string>
+
+    <string name="COMPRAS" translatable="false">COMPRAS</string>
+    <string name="PREMIUMS" translatable="false">PREMIUMS</string>
+    <string name="DENUNCIAS" translatable="false">DENUNCIAS</string>
+
+    <string name="USUARIOS" translatable="false">USUARIOS</string>
+    <string name="USUARIO_FECHA_NACIMIENTO" translatable="false">fecha_nacimiento</string>
+    <string name="USUARIO_FECHA_ULTIMO_ACCESO" translatable="false">fecha_ultimo_acceso</string>
+    <string name="USUARIO_FECHA_REGISTRO" translatable="false">fecha_registro</string>
+    <string name="USUARIO_ESTRELLAS" translatable="false">estrellas</string>
+    <string name="USUARIO_FECHA_COBRO_ESTRELLAS" translatable="false">fecha_cobro_estrellas</string>
+    <string name="USUARIO_PESO" translatable="false">peso</string>
+    <string name="USUARIO_ALTURA" translatable="false">altura</string>
+    <string name="USUARIO_ES_PREMIUM" translatable="false">es_premium</string>
+    <string name="USUARIO_LATITUD" translatable="false">latitud</string>
+    <string name="USUARIO_LONGITUD" translatable="false">longitud</string>
+    <string name="USUARIO_PAIS" translatable="false">pais</string>
+    <string name="USUARIO_ORIENTACION" translatable="false">orientacion</string>
+    <string name="USUARIO_SEXO" translatable="false">sexo</string>
+    <string name="USUARIO_TOKEN_FCM" translatable="false">token_fcm</string>
+    <string name="USUARIO_NICK" translatable="false">nick</string>
+    <string name="USUARIO_QUIERO_DEJAR_CLARO" translatable="false">quiero_dejar_claro_que</string>
+
+    <string name="RELACIONES" translatable="false">RELACIONES</string>
+    <string name="RELACIONES_ESTADO_DE_LA_RELACION" translatable="false">estado_de_la_relacion</string>
+    <string name="RELACIONES_TOKEN_SOCIALAUTH_DE_LA_OTRA_PERSONA" translatable="false">token_socialauth_de_la_otra_persona</string>
+    <string name="RELACIONES_NICK_DE_LA_OTRA_PERSONA" translatable="false">nick_de_la_otra_persona</string>
+    <string name="RELACIONES_ID_RELACION" translatable="false">id_relacion</string>
+    <string name="RELACIONES_TIENE_MENSAJES_SIN_LEER" translatable="false">tiene_mensajes_sin_leer</string>
+
+    <string name="CHAT" translatable="false">CHAT</string>
+    <string name="CHAT_ID_RELACION" translatable="false">id_relacion</string>
+
+    <string name="STATS_PAISES" translatable="false">STATS_PAISES</string>
+    <string name="STATS_RELACIONES" translatable="false">STATS_RELACIONES</string>
+    <string name="STATS_GLOBAL" translatable="false">STATS_GLOBAL</string>
+    <string name="STATS_GLOBAL_POR_APPS" translatable="false">STATS_GLOBAL_POR_APPS</string>
+    <string name="STATS_GLOBAL_POR_PERFILES" translatable="false">STATS_GLOBAL_POR_PERFILES</string>
+
+    <!--VARIOS-->
+    <string name="GOT_MESSAGE_CHAT_INDIVIDUAL" translatable="false">GOT_MESSAGE_CHAT_INDIVIDUAL</string>
+    <string name="GOT_MESSAGE_CHAT_GENERAL" translatable="false">GOT_MESSAGE_CHAT_GENERAL</string>
+    <string name="TIPO_MENSAJE_INDIVIDUAL" translatable="false">TIPO_MENSAJE_INDIVIDUAL</string>
+    <string name="TIPO_MENSAJE_GRUPAL" translatable="false">TIPO_MENSAJE_GRUPAL</string>
+
+    <!-- SHAREDPREFERENCES -->
+    <string name="SHAREDPREFERENCES_BUSQUEDAS_USUARIO" translatable="false">BUSQUEDAS_USUARIO</string>
+    <string name="SHAREDPREFERENCES_PERFIL_USUARIO" translatable="false">PERFIL_USUARIO</string>
+    <string name="SHAREDPREFERENCES_PREFERENCIAS_USUARIO" translatable="false">PREFERENCIAS_USUARIO</string>
+    <string name="SHAREDPREFERENCES_PRINCIPAL" translatable="false">PRINCIPAL</string>
+    <string name="SHAREDPREFERENCES_GDPR" translatable="false">GDPR</string>
+
+    <!-- SHAREDPREFERENCES CHAT GENERAL -->
+    <string name="CHAT_GENERAL_QUE_DIJO" translatable="false">CHAT_GENERAL_QUE_DIJO</string>
+    <string name="CHAT_GENERAL_QUIEN_LO_DIJO" translatable="false">CHAT_GENERAL_QUIEN_LO_DIJO</string>
+    <string name="CHAT_GENERAL_CUANDO_LO_DIJO" translatable="false">CHAT_GENERAL_CUANDO_LO_DIJO</string>
+    <string name="CHAT_GENERAL_NICK_DE_QUIEN_LO_DIJO" translatable="false">CHAT_GENERAL_NICK_DE_QUIEN_LO_DIJO</string>
+
+    <!-- SHAREDPREFERENCES BUSQUEDA USUARIO -->
+    <string name="BUSQUEDA_SEXO_QUE_BUSCA" translatable="false">BUSQUEDA_SEXO_QUE_BUSCA</string>
+    <string name="BUSQUEDA_ORIENTACION_QUE_BUSCA" translatable="false">BUSQUEDA_ORIENTACION_QUE_BUSCA</string>
+    <string name="BUSQUEDA_PERSONAS_QUE_BUSCA" translatable="false">BUSQUEDA_PERSONAS_QUE_BUSCA</string>
+
+    <string name="BUSQUEDA_EDAD_MINIMA" translatable="false">BUSQUEDA_EDAD_MINIMA</string>
+    <string name="BUSQUEDA_EDAD_MAXIMA" translatable="false">BUSQUEDA_EDAD_MAXIMA</string>
+    <string name="BUSQUEDA_RADIO" translatable="false">BUSQUEDA_RADIO</string>
+    <string name="BUSQUEDA_QUE_ESTE_ONLINE" translatable="false">BUSQUEDA_QUE_ESTE_ONLINE</string>
+    <string name="BUSQUEDA_QUE_SEA_NUEVO" translatable="false">BUSQUEDA_QUE_SEA_NUEVO</string>
+
+    <string name="BUSQUEDA_PERSONAS_ALTURA_MAXIMA" translatable="false">BUSQUEDA_PERSONAS_ALTURA_MAXIMA</string>
+    <string name="BUSQUEDA_PERSONAS_ALTURA_MINIMA" translatable="false">BUSQUEDA_PERSONAS_ALTURA_MINIMA</string>
+    <string name="BUSQUEDA_PERSONAS_PESO_MAXIMO" translatable="false">BUSQUEDA_PERSONAS_PESO_MAXIMO</string>
+    <string name="BUSQUEDA_PERSONAS_PESO_MINIMO" translatable="false">BUSQUEDA_PERSONAS_PESO_MINIMO</string>
+    <string name="BUSQUEDA_PERSONAS_RAZA" translatable="false">BUSQUEDA_PERSONAS_RAZA</string>
+
+
+    <!-- SHAREDPREFERENCES PREFERENCIAS USUARIO -->
+    <string name="PREFERENCIAS_UNIDADES" translatable="false">PREFERENCIAS_UNIDADES</string>
+    <string name="PREFERENCIAS_ENABLE_CHAT" translatable="false">PREFERENCIAS_ENABLE_CHAT</string>
+
+    <!--  SHAREDPREFERENCES PERFIL DE USUARIO -->
+    <string name="PREFERENCIAS_GDPR_CONSENT" translatable="false">PREFERENCIAS_GDPR_CONSENT</string>
+    <string name="PERFIL_USUARIO_ES_PREMIUM" translatable="false">PERFIL_USUARIO_ES_PREMIUM</string>
+    <string name="PERFIL_USUARIO_ORIENTACION" translatable="false">PERFIL_USUARIO_ORIENTACION</string>
+    <string name="PERFIL_USUARIO_PESO" translatable="false">PERFIL_USUARIO_PESO</string>
+    <string name="PERFIL_USUARIO_QUIERO_DEJAR_CLARO" translatable="false">PERFIL_USUARIO_QUIERO_DEJAR_CLARO</string>
+    <string name="PERFIL_USUARIO_NICK" translatable="false">PERFIL_USUARIO_NICK</string>
+    <string name="PERFIL_USUARIO_PAIS" translatable="false">PERFIL_USUARIO_PAIS</string>
+    <string name="PERFIL_USUARIO_FECHA_NACIMIENTO" translatable="false">PERFIL_USUARIO_FECHA_NACIMIENTO</string>
+    <string name="PERFIL_USUARIO_SEXO" translatable="false">PERFIL_USUARIO_SEXO</string>
+    <string name="PERFIL_USUARIO_ALTURA" translatable="false">PERFIL_USUARIO_ALTURA</string>
+    <string name="PERFIL_USUARIO_RAZA" translatable="false">PERFIL_USUARIO_RAZA</string>
+    <string name="PERFIL_USUARIO_TOKEN_SOCIALAUTH" translatable="false">PERFIL_USUARIO_TOKEN_SOCIALAUTH</string>
+    <string name="PERFIL_USUARIO_ESTRELLAS" translatable="false">PERFIL_USUARIO_ESTRELLAS</string>
+    <string name="PERFIL_USUARIO_LATITUD" translatable="false">PERFIL_USUARIO_LATITUD</string>
+    <string name="PERFIL_USUARIO_LONGITUD" translatable="false">PERFIL_USUARIO_LONGITUD</string>
+    <string name="PERFIL_USUARIO_ULTIMA_ESTRELLA_DIARIA_GRATIS" translatable="false">PERFIL_USUARIO_ULTIMA_ESTRELLA_DIARIA_GRATIS</string>
+    <string name="PERFIL_USUARIO_TOKEN_FCM" translatable="false">PERFIL_USUARIO_TOKEN_FCM</string>
+    <string name="PERFIL_USUARIO_FECHA_ULTIMO_ACCESO" translatable="false">PERFIL_USUARIO_FECHA_ULTIMO_ACCESO</string>
+    <string name="PERFIL_USUARIO_DISTANCIA" translatable="false">PERFIL_USUARIO_DISTANCIA</string>
+    <string name="PERFIL_USUARIO_DE_DONDE_VENGO" translatable="false">PERFIL_USUARIO_DE_DONDE_VENGO</string>
+
+    <!-- OTROS -->
+    <string name="PAGINA" translatable="false">PAGINA</string>
+    <string name="NOMBRE_FOTO" translatable="false">NOMBRE_FOTO</string>
+
+    <!-- TIPS -->
+    <string name="AYUDA_FRAGMENT_FOTO_MANAGER" translatable="false">AYUDA_FRAGMENT_FOTO_MANAGER</string>
+    <string name="AYUDA_ACTIVITY_PRINCIPAL" translatable="false">AYUDA_ACTIVITY_PRINCIPAL</string>
+
+    <!-- UNA_FOTO -->
+    <string name="URI_DE_LA_FOTO" translatable="false">URI_DE_LA_FOTO</string>
+</resources>

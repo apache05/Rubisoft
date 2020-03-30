@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="NavigationTheme" parent="AppTheme">
+        <item name="android:textSize">20sp</item>
+        <item name="android:layout_marginBottom">02dp</item>
+    </style>
+    <style name="Dialog" parent="Theme.AppCompat.Light.Dialog">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@color/transparente</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:textColorPrimary">@color/black</item>
+        <item name="android:textColor">@color/gris</item>
+        <item name="android:editTextColor">@color/gris</item>
+        <item name="android:windowFullscreen">false</item>
+
+
+        <item name="colorAccent">@color/accent</item>
+        <item name="android:background">@color/white</item>
+    </style>
+
+    <style name="Dialog_Header_Background">
+        <item name="android:background">@color/primary</item>
+    </style>
+
+    <!-- estilos de los tablayouts -->
+    <style name="tablayout_style">
+        <item name="android:background">@color/white</item>
+        <item name="tabMode">fixed</item>
+        <item name="tabGravity">fill</item>
+        <item name="tabIndicatorColor">@color/accent</item>
+        <item name="tabIndicatorHeight">2dp</item>
+        <item name="tabPaddingStart">8dp</item>
+        <item name="tabPaddingEnd">8dp</item>
+        <item name="tabSelectedTextColor">@color/accent</item>
+    </style>
+
+    <!--botones de los tabs-->
+
+
+    <!-- ESTO ES PARA LAS PARRAFADAS DE PRIVACIDAD Y TERMINOS DE USO -->
+    <style name="titulo">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:color">@color/black</item>
+    </style>
+
+    <style name="parrafo">
+        <item name="android:textSize">12sp</item>
+        <item name="android:color">@color/black</item>
+    </style>
+
+    <!-- estilo de los botones de comprar-->
+    <style name="comprar">
+        <item name="android:textSize">@dimen/tamanyo_letra_l</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- estilo del toolbar -->
+    <style name="ToolbarTheme" parent="@style/ThemeOverlay.AppCompat.Light">
+        <!-- android:textColorPrimary is the color of the title text in the Toolbar  -->
+        <item name="android:textColorPrimary">@color/white</item>
+        <!-- actionMenuTextColor is the color of the text of action (menu) items  -->
+        <item name="actionMenuTextColor">@color/white</item>
+        <!-- Tints the input fields like checkboxes and text fields -->
+        <item name="colorAccent">@color/accent</item>
+        <!-- Applies to views in their normal state. -->
+        <item name="colorControlNormal">@color/white</item>
+        <!-- Applies to views in their activated state (i.e checked or switches) -->
+        <item name="colorControlActivated">@color/accent</item>
+        <!-- Applied to framework control highlights (i.e ripples or list selectors) -->
+        <item name="colorControlHighlight">@color/accent</item>
+
+        <!-- Enable these below if you want clicking icons to trigger a ripple effect -->
+        <!--
+        <item name="selectableItemBackground">?android:selectableItemBackground</item>
+        <item name="selectableItemBackgroundBorderless">?android:selectableItemBackground</item>
+        -->
+    </style>
+
+</resources>

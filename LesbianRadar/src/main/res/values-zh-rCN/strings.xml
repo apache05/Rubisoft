@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+    <!-- ****************************  UNIDADES DE MEDIDA ****************************-->
+    <string name="Mi"> %1$s英里</string>
+    <string name="m"> %1$.2f米</string>
+    <string name="kg"> %1$d公斤</string>
+    <string name="km"> %1$.2f公里</string>
+
+    <!--************************ MENU_CAMBIAR_FOTO ************************  -->
+    <string name="change_pic">更改照片</string>
+
+    <!-- *********************** SETTING OPTIONS y*********************************** -->
+    <string name="title_activity_condiciones_uso">使用条款</string>
+    <string name="title_activity_politica_privacidad">隐私政策</string>
+
+    <!-- ****************************  VARIOS ****************************-->
+    <string name="no">否</string>
+    <string name="si">是</string>
+    <string name="y">和</string>
+    <string name="Cancelar">取消</string>
+    <string name="ok">好</string>
+    <string name="app_name">女同性恋雷达</string>
+    <string name="estrellas">+%1$d星</string>
+    <string name="anyos"> %1$d年</string>
+    <string name="SOLO_PREMIUM">仅适用于高级用户</string>
+    <string name="LOCATION_NOT_READY">请开启位置模式，以便获得并更新您的位置信息。</string>
+    <string name="foto_inapropiada">这张照片被认为不合适</string>
+
+    <!--  MENSAJES DEL GOOGLE CLOUD MESSAGING -->
+    <string name="MENSAJE_DE">%1$s向您发送了一条消息</string>
+    <string name="NUEVO_MENSAJE">%1$s在聊天中写道</string>
+    <!--  MENSAJES POR DEFECTO CUANDO LLEGA UN MENSAJE Y LA APP ESTÁ EN BACKGROUND -->
+    <string name="DEFAULT_NOTIFICATION_TITLE" >新讯息</string>
+    <string name="DEFAULT_NOTIFICATION_TEXT" >您有一条新的未读消息。 让我们读吧！</string>
+
+    <!-- *********************** ACTIVITY_SIN_CONEXION y*********************************** -->
+    <string name="ACTIVITY_SIN_CONEXION_NO_HAY_CONEXION">没有连接</string>
+    <string name="ACTIVITY_MI_PERFIL_TAB_TUS_FOTOS">你的照片</string><!--*******-->
+    <string name="ACTIVITY_MI_PERFIL_TAB_TUS_DATOS">你的数据</string><!--*******-->
+    <string name="ACTIVITY_MI_PERFIL_TAB_TUS_ESTRELLAS">你的星星</string><!--*******-->
+    <!--************************ ACTIVITY_CHAT_GENERAL ************************ -->
+
+    <string name="ACTIVITY_CHAT_GENERAL_CUANTOS_HAY">共有%d人在线</string>
+
+    <!-- *********************** ACTIVITY_MENSAJES*********************************** -->
+    <string name="ACTIVITY_MENSAJES_NO_HAY_MENSAJES">还没有消息</string><!--*******-->
+
+    <!--************************ ACTIVITY_CHAT ************************ -->
+    <string name="ACTIVITY_CHAT_AMISTAD_TERMINADA">用户不再接受消息或用户不再注册</string>
+    <string name="ACTIVITY_CHAT_ESTRELLAS_GRATIS">免费获取星星</string>
+
+
+    <!--************************  ACTIVITY_CONFIGURA_RADAR************************ -->
+    <string name="ACTIVITY_CONFIGURA_RADAR_EDAD_ENTRE">年龄范围</string>
+    <string name="ACTIVITY_CONFIGURA_RADAR_ALTURA_ENTRE">身高范围</string>
+    <string name="ACTIVITY_CONFIGURA_RADAR_PESO_ENTRE">体重范围</string>
+    <string name="ACTIVITY_CONFIGURA_RADAR_QUE_TENGA_CASA">只看有房子的人</string>
+    <string name="ACTIVITY_CONFIGURA_RADAR_QUE_TENGA_COCHE">只看有车的人</string>
+    <string name="ACTIVITY_CONFIGURA_RADAR_QUE_TENGA_MOTO">只看有摩托车的人</string>
+    <string name="ACTIVITY_CONFIGURA_RADAR_RAZA_">种族：</string>
+    <string name="ACTIVITY_CONFIGURA_RADAR_DISTANCIA_MI">在%1$s英里半径内</string>
+    <string name="ACTIVITY_CONFIGURA_RADAR_DISTANCIA_KM">在%1$d公里半径内</string>
+    <string name="ACTIVITY_CONFIGURA_RADAR_CUALQUIER_RAZA">任何种族</string>
+    <string name="ACTIVITY_CONFIGURA_RADAR_AL_MENOS_1_RAZA">您必须至少选择一个种族</string>
+    <string name="ACTIVITY_CONFIGURA_RADAR_ONLINE">线上</string>
+    <string name="ACTIVITY_CONFIGURA_RADAR_NEW">新</string>
+
+    <!--************************ ACTIVITY_CONFIGURACION ************************  -->
+    <string name="ACTIVITY_CONFIGURACION_UNIDADES">单位：</string>
+    <string name="ACTIVITY_CONFIGURACION_CHAT_ACTIVADO">启用聊天</string>
+    <string name="ACTIVITY_CONFIGURACION_SONIDO_CHAT_DESACTIVADO">聊天已禁用</string>
+
+    <!-- ***********************  ACTIVITY_UNINSTALL *********************************** -->
+    <string name="ACTIVITY_UNINSTALL_UNINSTALL">删除帐户</string>
+
+    <!-- ***********************  ACTIVITY_INICIO *********************************** -->
+    <string name="ACTIVITY_INICIO_ERROR_LOGGIN">登录时出错，请重试</string>
+    <string name="ACTIVITY_INICIO_HINT_EMAIL">电子邮箱</string>
+    <string name="ACTIVITY_INICIO_HINT_PASSWORD">密码</string>
+    <string name="ACTIVITY_INICIO_HINT_REPEAT_PASSWORD">重复输入密码</string>
+    <string name="ACTIVITY_INICIO_SIGNIN">登录</string>
+    <string name="ACTIVITY_INICIO_SIGNUP">注册</string>
+    <string name="ACTIVITY_INICIO_BAD_EMAIL">不是有效的电子邮箱</string>
+    <string name="ACTIVITY_INICIO_FORGOT_PASSWORD">忘记密码？</string>
+    <string name="ACTIVITY_INICIO_FORGOT_RESET_PASSWORD">重置密码</string>
+    <string name="ACTIVITY_INICIO_FORGOT_RESET">重置</string>
+    <string name="ACTIVITY_INICIO_EMAIL_SENT">您已收到一封带有密码重置说明的电子邮件</string>
+    <string name="ACTIVITY_INICIO_PASSWORDS_DOESNT_MATCH">密码不匹配</string>
+    <string name="ACTIVITY_INICIO_NOTA_PRIVACIDAD">我们不会从您的帐户中收集任何数据，也不会发送任何类型的消息</string>
+
+    <!-- ***********************  ACTIVITY_REGISTRO_PERSONA *********************************** -->
+    <string name="ACTIVITY_REGISTRO_DATOS_FISICOS" >你的外表</string>
+    <string name="ACTIVITY_REGISTRO_SEXUALIDAD" >你的性</string>
+    <string name="ACTIVITY_REGISTRO_TITULO">注册</string>
+    <string name="ACTIVITY_REGISTRO_CHECKBOX_I_AGREE">我同意</string>
+    <string name="ACTIVITY_REGISTRO_TEXTVIEW_TERMS_AND_CONDITIONS"> 使用条款及条件</string>
+    <string name="ACTIVITY_REGISTRO_ALTURA_">身高：</string>
+    <string name="ACTIVITY_REGISTRO_PESO_">体重：</string>
+    <string name="ACTIVITY_REGISTRO_RAZA_">种族：</string>
+    <string name="ACTIVITY_REGISTRO_NICK_">昵称</string>
+    <string name="ACTIVITY_REGISTRO_QUIERO_DEJAR_CLARO">我想明确指出*</string>
+    <string name="ACTIVITY_REGISTRO_OPCIONAL">* 可选</string>
+    <string name="ACTIVITY_REGISTRO_BIRTH_">出生</string>
+    <string name="ACTIVITY_REGISTRO_ERROR_FALTA_NICK">错误：缺少您的昵称</string>
+    <string name="ACTIVITY_REGISTRO_ERROR_FALTA_SEXUALIDAD">错误：您必须选择您的性别和您的性取向</string>
+    <string name="ACTIVITY_REGISTRO_ERROR_UNDERAGE">错误：您必须严格地超过%1$d岁</string>
+    <string name="ACTIVITY_REGISTRO_ERROR_INCONGRUENCIA_SEXUAL">错误：您的性别和性取向并不一致</string>
+    <string name="ACTIVITY_REGISTRO_ERROR_TERMS"> 您必须同意条款和条件</string>
+
+    <!-- *********************** ACTIVITY_PRIMERAS_FOTOS y*********************************** -->
+    <string name="ACTIVITY_PRIMERAS_FOTOS_INSERTA_FOTOS">您可以上传自己的一张图片</string>
+    <string name="ADVERTENCIA">注意：不得上传淫秽或色情照片。 管理员将会删除任何不适当的图片</string>
+
+    <!-- ***********************  ACTIVITY_PRINCIPAL *********************************** -->
+    <string name="ACTIVITY_PRINCIPAL_NO_VA_EL_GPS">当您的位置为未知时，无法正确地搜索人。激活您的位置，并在几秒钟后再次尝试</string>
+    <string name="ACTIVITY_PRINCIPAL_NINGUN_PERFIL_ENCONTRADO">您当前的雷达设置未发现任何人</string>
+
+    <!-- ***********************  FRAGMENT_BORRAR *********************************** -->
+    <string name="ACTIVITY_CONFIGURACION_ELIMINAR_CUENTA">删除帐户</string>
+
+    <!-- ***********************  ACTIVITY_COMPRAS *********************************** -->
+    <string name="ACTIVITY_MEJORAR_COMPRA_X_ESTRELLAS">%1$d星星需%2$s</string>
+    <string name="ACTIVITY_MEJORAR_SUSCRIBE_6_MESES">订阅6个月需%1$s</string>
+    <string name="ACTIVITY_MEJORAR_SUSCRIBE_1_AÑO">订阅1年需%1$s</string>
+    <string name="ACTIVITY_MEJORAR_TITULO_SUSCRIBIR"> 订阅高级</string>
+    <string name="ACTIVITY_MEJORAR_TITULO_COMPRAR">购买星星</string>
+    <string name="ACTIVITY_MEJORAR_ERROR_COMPRA_ESTRELLAS">错误：购买未成功</string>
+    <string name="ACTIVITY_MEJORAR_EXITO_COMPRA">购买成功完成</string>
+    <string name="ACTIVITY_MEJORAR_ERROR_SUSCRIPCION">错误：订阅未成功</string>
+    <string name="ACTIVITY_MEJORAR_EXITO_SUSCRIPCION">订阅成功完成</string>
+    <string name="ACTIVITY_MEJORAR_CANCELADO">已取消</string>
+    <string name="ACTIVITY_MEJORAR_YA_ES_PREMIUM">您已经有一个高级帐户</string>
+
+    <!-- ***********************  ACTIVITY_ESTRELLAS_GRATIS *********************************** -->
+    <string name="ACTIVITY_ESTRELLAS_POR_ANUNCIO">通过观看广告获得%1$d颗星</string>
+
+    <!-- ***********************  ACTIVITY_FEEDBACK *********************************** -->
+    <string name="ACTIVITY_FEEDBACK_TITULO">你喜欢这个程序吗？</string>
+    <string name="ACTIVITY_FEEDBACK_PLEASE_FEEDBACK">请告诉我们您不喜欢哪些点？</string>
+    <string name="ACTIVITY_FEEDBACK_SEND_FEEDBACK">发送</string>
+    <string name="ACTIVITY_FEEDBACK_RATE_APP">请在Play商店评价此应用</string>
+    <string name="ACTIVITY_FEEDBACK_RATE">评价</string>
+    <string name="ACTIVITY_FEEDBACK_SENT">反馈已发送</string>
+    <string name="ACTIVITY_FEEDBACK_HINT_YOUR_FEEDBACK"> 写出您的评论......</string>
+    <string name="ACTIVITY_FEEDBACK_APP_LENTA"> 应用很慢</string>
+    <string name="ACTIVITY_FEEDBACK_MAL_DISENO">糟糕的设计</string>
+    <string name="ACTIVITY_FEEDBACK_MAL_TRADUCIDA">翻译错误</string>
+    <string name="ACTIVITY_FEEDBACK_NO_SE_COMO_VA">我不知道如何使用它（请先阅读帮助）</string>
+    <string name="ACTIVITY_FEEDBACK_NO_FUNCIONA_BIEN">故障</string>
+    <string name="ACTIVITY_FEEDBACK_POCOS_USUARIOS">用户很少</string>
+    <string name="ACTIVITY_FEEDBACK_OTROS">其他</string>
+
+    <!-- ***********************  FRAGMENT_FOTO *********************************** -->
+    <string name="FRAGMENT_FOTO_ERROR_FOTO_NO_CARGADA">加载照片时出现错误</string>
+    <string name="FRAGMENT_FOTO_ERROR_FOTO_MUY_PESADA">错误：照片尺寸太大</string>
+    <string name="FRAGMENT_FOTO_EROR_FORMAT_NOT_SUPPORTED">错误：不支持的文件格式</string>
+    <string name="FRAGMENT_FOTO_WAIT">等待图像上传</string>
+
+    <!-- ***********************  FRAGMENT_DATOS_PERSONALES *********************************** -->
+    <string name="FRAGMENT_DATOS_PERSONALES_NICK_">昵称：</string>
+    <string name="FRAGMENT_DATOS_PERSONALES_EDAD_">年龄：</string>
+    <string name="FRAGMENT_DATOS_PERSONALES_ALTURA_">身高：</string>
+    <string name="FRAGMENT_DATOS_PERSONALES_PESO_">体重：</string>
+    <string name="FRAGMENT_DATOS_PERSONALES_RAZA_">种族：</string>
+    <string name="FRAGMENT_DATOS_PERSONALES_SEXUALIDAD">性别</string>
+    <string name="FRAGMENT_DATOS_PERSONALES_TUS_DATOS">您的数据</string>
+    <string name="FRAGMENT_DATOS_PERSONALES_OTROS_DATOS">其他数据</string>
+    <string name="FRAGMENT_DATOS_PERSONALES_QUIERO_DEJAR_CLARO">我想明确表示</string>
+
+    <!-- *******************  Dialogo interactuar************************** -->
+    <string name="DIALOGO_INTERACTUAR_TITULO">选择一个动作</string>
+
+    <!-- *******************  Dialogo borrar cuenta ************************** -->
+    <string name="DIALOGO_BORRAR_CUENTA_TITULO">删除帐户</string>
+    <string name="DIALOGO_BORRAR_CUENTA_ADVERTENCIA">您将会失去您的星星，如果您有订阅则也会丢失</string>
+
+    <!--************************  dialogo denuncia ************************-->
+    <string name="DIALOGO_DENUNCIAR_PREGUNTA_MOTIVO">您进行谴责的原因是什么？</string>
+    <string name="DIALOGO_DENUNCIAR_DENUNCIAR">谴责</string>
+    <string name="DIALOGO_DENUNCIAR_DENUNCIADO">用户已谴责</string>
+
+    <!--************************  dialogo ayuda ************************-->
+    <string name="DIALOGO_CONSEJO_TITULO">帮助</string>
+    <string name="DIALOGO_CONSEJO_MENSAJE">单击用户执行任何操作。</string>
+    <string name="DIALOGO_CONSEJO_MENSAJE_CHAT_GENERAL">和来自您的国家的人聊天。要私下聊天，点击你的照片，然后按消息按钮。</string>
+    <string name="DIALOGO_CONSEJO_YA_NO_MAS">不要再显示</string>
+    <string name="DIALOGO_CONSEJO_FOTO_MANAGER">点击以更改照片。</string>
+
+    <!--************************  dialogo se te va a cobrar ************************-->
+    <string name="DIALOGO_AVISO_MENSAJE_SE_TE_VA_A_COBRAR">对于非高级用户，此操作会花费%1$d星。</string>
+    <string name="DIALOGO_AVISO_MENSAJE_NO_TIENES_ESTRELLAS">对于非高级用户，此操作会花费%1$d星。您并没有足够的星星来执行此操作。</string>
+    <string name="DIALOGO_COMPRAR_ESTRELLAS">购买星星</string>
+
+    <!--************************  MOTIVOS PARA DAR ESTRELLAS ************************-->
+
+    <string name="MOTIVO_SIGNED_UP">已注册</string>
+    <string name="MOTIVO_COBRO_SEMANAL">每周费用</string>
+    <string name="MOTIVO_COMPRA_ESTRELLAS">购买</string>
+    <string name="MOTIVO_COBRO_PETICION_CHAT_GENERAL">使用聊天发送附件</string>
+    <string name="MOTIVO_ANUNCIO_BONIFICADO">展示广告</string>
+
+    <!-- ventajas premium-->
+    <string name="ventajas_de_suscribir">
+        \n\t- 你会出现在第一个位置\n
+        \n\t- 每周不收取费用\n
+        \n\t- 至多可上传%1$d 张个人资料照片\n
+        \n\t- 您可以使用更多搜索过滤器。\n
+        \n\t- 双半径搜索\n
+        \n\t- 无广告\n
+        \n\t- 个人资料列表按距离排序\n
+        \n\t- 您可以无限制地发送照片
+        \n
+    </string>
+    <string name="ventajas_de_comprar">
+        \n\t- 大大增加您的可见度\n
+        \n\t- 增加您的好友请求\n
+        \n\t- 你可以在你的信息中发送照片
+        \n
+    </string>
+
+    <!-- HELP -->
+    <string name="help_info_title">什么是%1$s？</string>
+    <string name="help_info">%1$s是一个应用程序，在这里您可以找到您附近的新的朋友。这是一个免费应用程序，但是您可以通过付费购买高级版本。配置您的雷达并定期搜索用户。</string>
+    <string name="help_ganar_estrellas">得到星星，你会出现在搜索的顶部位置。如果您不是高级用户，每周将向您收取%1$d星。</string>
+    <string name="help_como_funciona">它是如何工作的？</string>
+    <string name="help_principal">在这里您会得到搜索结果。单击用户执行任何操作。如果您不是高级用户，个人资料将根据星星数量来排序；如果您是高级用户，将根据距离排序。</string>
+    <string name="help_configura_radar">配置您的雷达， 只寻找您喜欢的人。如果您是高级会员，则可以搜索相距其他功能两倍的人。</string>
+    <string name="help_mensajes">阅读您发送或接收的所有消息。</string>
+    <string name="help_mi_perfil">在这里上传图片，更新您的个人资料并检查您的星星。高级用户可以上传最多%1$d张图片。</string>
+    <string name="help_compras">在这里可以成为高级用户或购买星星。享受它们的福利吧！</string>
+    <string name="help_ajustes">将应用的某些功能设置为通知，设置计量单位等等。您也可以删除您的帐户。</string>
+    <string name="help_chat_general">和您的国家的人聊天，并且有着相同的性取向。</string>
+    <string name="help_feedback">请告诉我们，您对此应用程序的意见。评价我们，或报告任何问题供我们改进</string>
+    <string name="help_como_contactar">我怎样才能和%1$s的管理员取得联系？</string>
+    <string name="help_para_cualquier_consulta">您可以通过以下地址联系我们：</string>
+</resources>

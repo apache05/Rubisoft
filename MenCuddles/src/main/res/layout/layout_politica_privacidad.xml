@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/PP_politica_privacidad"
+            android:textSize="@dimen/tamanyo_letra_l" />
+
+        <TextView
+            style="@style/parrafo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/PP_parrafo_politica_privacidad" />
+
+        <TextView
+            style="@style/titulo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/PP_capitulo_1" />
+
+        <TextView
+            style="@style/parrafo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/PP_parrafo_1" />
+
+        <TextView
+            style="@style/titulo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/PP_capitulo_2" />
+
+        <TextView
+            style="@style/parrafo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/PP_parrafo_2" />
+
+        <TextView
+            style="@style/titulo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/PP_capitulo_3" />
+
+        <TextView
+            style="@style/parrafo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/PP_parrafo_3" />
+
+        <TextView
+            style="@style/titulo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/PP_capitulo_4" />
+
+        <TextView
+            style="@style/parrafo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/PP_parrafo_4" />
+
+        <TextView
+            style="@style/titulo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/PP_capitulo_5" />
+
+        <TextView
+            style="@style/parrafo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/PP_parrafo_5" />
+
+        <TextView
+            style="@style/titulo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/PP_capitulo_6" />
+
+        <TextView
+            style="@style/parrafo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/PP_parrafo_6" />
+    </LinearLayout>
+</ScrollView>

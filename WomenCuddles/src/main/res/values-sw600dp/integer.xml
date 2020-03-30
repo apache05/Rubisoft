@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--- tamanyo nav bar size-->
+
+
+    <integer name="Tam_Normal_icons">30</integer>
+    <integer name="Tam_Small_icons">21</integer>
+    <integer name="Tam_Notification_icons">28</integer>
+
+
+    <!-- el icono de la estrella tiene que ser un poco mas grande pq dentro tiene texto -->
+
+
+</resources>

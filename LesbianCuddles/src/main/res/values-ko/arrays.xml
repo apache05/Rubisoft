@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?><resources>
+
+    <string-array name="array_unidades">
+    <item> Kg - m - Km</item>
+    <item> St/lb - in - Mi</item>
+    <item> lb - in - Mi</item>
+  </string-array>
+
+    <string-array name="meses_nacimiento">
+    <item>1월</item>
+    <item>2월</item>
+    <item>3월</item>
+    <item>4월</item>
+    <item>5월</item>
+    <item>6월</item>
+    <item>7월</item>
+    <item>8월</item>
+    <item>9월</item>
+    <item>10월</item>
+    <item>11월</item>
+    <item>12월</item>
+  </string-array>
+    <string-array name="sexos">
+    <item>성별</item>
+    <item>나는 남성입니다</item>
+    <item>나는 여성입니다</item>
+  </string-array>
+
+    <string-array name="orientaciones_registro">
+    <item>성향*</item>
+    <item>나는 이성애자입니다</item>
+    <item>나는 레즈비언입니다</item>
+    <item>나는 게이 바텀입니다</item>
+    <item>나는 양성애자입니다</item>
+  </string-array>
+
+    <string-array name="orientaciones_mi_perfil">
+    <item>나는 이성애자입니다</item>
+    <item>나는 레즈비언입니다</item>
+    <item>나는 게이 바텀입니다</item>
+    <item>나는 양성애자입니다</item>
+  </string-array>
+    <string-array name="busqueda_personas">
+    <item>이성애자 여성을 찾음</item>
+    <item>이성애자 남성을 찾음</item>
+    <item>게이 남자 발견</item>
+    <item>레즈비언 여성을 찾음</item>
+    <item>양성애자 여성을 찾음</item>
+    <item>양성애자 남성을 찾음</item>
+  </string-array>
+
+    <string-array name="razas">
+    <item>백인(금발)</item>
+    <item>백인(어두운색 머리)</item>
+    <item>흑인</item>
+    <item>물라토</item>
+    <item>동양인(동아시아)</item>
+    <item>동양인(서남아시아)</item>
+    <item>라틴계</item>
+    <item>아랍인</item>
+    <item>힌두교도</item>
+  </string-array>
+
+    <!-- Nav Drawer Menu Items -->
+    <string-array name="nav_drawer_items">
+    <item>레이더</item>
+    <item>레이더 조정</item>
+    <item>메시지</item>
+    <item>내 프로필</item>
+    <item>무료 별</item>
+    <item>구매</item>
+    <item>채팅</item>
+    <item>도움말</item>
+    <item>설정</item>
+    <item>피드백</item>
+    <item>로그아웃</item>
+  </string-array>
+
+    <string-array name="causas_deuncia">
+    <item>음란한 사진</item>
+    <item> 가짜 프로필</item>
+    <item>폭력적인 사진</item>
+    <item>부적절하거나 불쾌감을 주는 사진</item>
+    <item>아동 보호</item>
+  </string-array>
+</resources>

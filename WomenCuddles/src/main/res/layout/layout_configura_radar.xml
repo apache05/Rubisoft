@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?><!-- CUALQUIER CAMBIO AQUI DEBE SER REPLICADO EN LAYOUT-SW600DP-LAND -->
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:id="@id/mDrawerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary_light"
+    android:tag="mDrawerLayout"
+    android:layout_marginTop="50dp">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include layout="@layout/toolbar" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@id/Layout_configura_radar_CardView_Busca_Personas"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="20dp"
+                        app:cardCornerRadius="@dimen/corner_radius"
+                        app:cardElevation="@dimen/elevation_perfiles"
+                        card_view:cardUseCompatPadding="true">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="10dp"
+                            android:gravity="top"
+                            android:padding="18dp">
+
+                            <Spinner
+                                android:id="@id/Layout_configura_radar_de_persona_spinner_que_busca"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+
+                                android:layout_marginTop="15dp"
+                                android:textSize="@dimen/tamanyo_letra_m"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@id/Layout_configura_radar_de_persona_TextView_radio"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="15dp"
+                                android:textIsSelectable="true"
+
+                                android:textSize="@dimen/tamanyo_letra_m"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/Layout_configura_radar_de_persona_spinner_que_busca" />
+
+                            <com.appyvet.rangebar.RangeBar xmlns:custom="http://schemas.android.com/apk/res-auto"
+                                android:id="@id/Layout_configura_radar_de_persona_RangeBar_radio"
+                                android:layout_width="0dp"
+                                android:layout_height="42dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_weight="0.95"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/Layout_configura_radar_de_persona_TextView_radio"
+                                custom:connectingLineColor="@color/accent"
+                                custom:connectingLineWeight="2dp"
+                                custom:layout_constraintEnd_toStartOf="@+id/Layout_configura_radar_de_persona_ImageView_check_radio"
+                                custom:pinColor="@color/accent"
+                                custom:pinRadius="0dp"
+                                custom:rangeBar="false"
+                                custom:rangeBarColor="@color/accent"
+                                custom:selectorColor="@color/accent"
+                                custom:selectorSize="10dp"
+                                custom:temporaryPins="false"
+                                custom:tickHeight="0dp"
+                                custom:tickInterval="4"
+                                custom:tickStart="1" />
+
+                            <TextView
+                                android:id="@id/Layout_configura_radar_de_persona_TextView_Rango_edades"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+
+                                android:text="@string/ACTIVITY_CONFIGURA_RADAR_EDAD_ENTRE"
+                                android:textIsSelectable="true"
+                                android:textSize="@dimen/tamanyo_letra_m"
+                                app:layout_constraintStart_toStartOf="@id/Layout_configura_radar_de_persona_RangeBar_edad"
+                                app:layout_constraintTop_toBottomOf="@id/Layout_configura_radar_de_persona_RangeBar_radio" />
+
+                            <TextView
+                                android:id="@id/Layout_configura_radar_de_persona_TextView_min_edad"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:textIsSelectable="true"
+
+                                android:textSize="@dimen/tamanyo_letra_m"
+                                app:layout_constraintLeft_toLeftOf="@id/Layout_configura_radar_de_persona_RangeBar_edad"
+                                app:layout_constraintTop_toBottomOf="@id/Layout_configura_radar_de_persona_TextView_Rango_edades" />
+
+                            <TextView
+                                android:id="@id/Layout_configura_radar_de_persona_TextView_max_edad"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:textIsSelectable="true"
+                                android:textSize="@dimen/tamanyo_letra_m"
+                                app:layout_constraintRight_toRightOf="@id/Layout_configura_radar_de_persona_RangeBar_edad"
+                                app:layout_constraintTop_toBottomOf="@id/Layout_configura_radar_de_persona_TextView_Rango_edades" />
+
+                            <com.appyvet.rangebar.RangeBar xmlns:custom="http://schemas.android.com/apk/res-auto"
+                                android:id="@id/Layout_configura_radar_de_persona_RangeBar_edad"
+                                android:layout_width="match_parent"
+                                android:layout_height="39dp"
+
+                                custom:connectingLineColor="@color/accent"
+                                custom:layout_constraintEnd_toEndOf="parent"
+                                custom:layout_constraintStart_toStartOf="parent"
+                                custom:layout_constraintTop_toBottomOf="@id/Layout_configura_radar_de_persona_TextView_max_edad"
+                                custom:pinColor="@color/accent"
+                                custom:pinRadius="0dp"
+                                custom:rangeBarColor="@color/accent"
+                                custom:selectorColor="@color/accent"
+                                custom:selectorSize="10dp"
+                                custom:temporaryPins="false"
+                                custom:tickEnd="99"
+                                custom:tickHeight="0dp"
+                                custom:tickInterval="1"
+                                custom:tickStart="18" />
+
+                            <TextView
+                                android:id="@id/Layout_configura_radar_de_persona_TextView_altura_entre"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+
+                                android:text="@string/ACTIVITY_CONFIGURA_RADAR_ALTURA_ENTRE"
+                                android:textIsSelectable="true"
+                                android:textSize="@dimen/tamanyo_letra_m"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/Layout_configura_radar_de_persona_RangeBar_edad" />
+
+                            <TextView
+                                android:id="@id/Layout_configura_radar_de_persona_TextView_min_altura"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:textIsSelectable="true"
+                                android:textSize="@dimen/tamanyo_letra_m"
+                                app:layout_constraintLeft_toLeftOf="@id/Layout_configura_radar_de_persona_RangeBar_altura"
+                                app:layout_constraintTop_toBottomOf="@id/Layout_configura_radar_de_persona_TextView_altura_entre" />
+
+                            <TextView
+                                android:id="@id/Layout_configura_radar_de_persona_TextView_max_altura"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:textIsSelectable="true"
+                                android:textSize="@dimen/tamanyo_letra_m"
+                                app:layout_constraintRight_toRightOf="@id/Layout_configura_radar_de_persona_RangeBar_altura"
+                                app:layout_constraintTop_toBottomOf="@id/Layout_configura_radar_de_persona_TextView_altura_entre" />
+
+                            <com.appyvet.rangebar.RangeBar xmlns:custom="http://schemas.android.com/apk/res-auto"
+                                android:id="@id/Layout_configura_radar_de_persona_RangeBar_altura"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+
+                                custom:connectingLineColor="@color/accent"
+                                custom:layout_constraintEnd_toEndOf="parent"
+                                custom:layout_constraintStart_toStartOf="parent"
+                                custom:layout_constraintTop_toBottomOf="@id/Layout_configura_radar_de_persona_TextView_max_altura"
+                                custom:pinColor="@color/accent"
+                                custom:pinRadius="0dp"
+                                custom:rangeBarColor="@color/accent"
+                                custom:selectorColor="@color/accent"
+                                custom:selectorSize="10dp"
+                                custom:temporaryPins="false"
+                                custom:tickEnd="220"
+                                custom:tickHeight="0dp"
+                                custom:tickInterval="2"
+                                custom:tickStart="140" />
+
+                            <TextView
+                                android:id="@id/Layout_configura_radar_de_persona_TextView_peso_entre"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+
+                                android:text="@string/ACTIVITY_CONFIGURA_RADAR_PESO_ENTRE"
+                                android:textIsSelectable="true"
+                                android:textSize="@dimen/tamanyo_letra_m"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/Layout_configura_radar_de_persona_RangeBar_altura" />
+
+                            <TextView
+                                android:id="@id/Layout_configura_radar_de_persona_TextView_min_peso"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:textIsSelectable="true"
+                                android:textSize="@dimen/tamanyo_letra_m"
+                                app:layout_constraintLeft_toLeftOf="@id/Layout_configura_radar_de_persona_RangeBar_peso"
+                                app:layout_constraintTop_toBottomOf="@id/Layout_configura_radar_de_persona_TextView_peso_entre" />
+
+                            <TextView
+                                android:id="@id/Layout_configura_radar_de_persona_TextView_max_peso"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:textIsSelectable="true"
+                                android:textSize="@dimen/tamanyo_letra_m"
+                                app:layout_constraintRight_toRightOf="@id/Layout_configura_radar_de_persona_RangeBar_peso"
+                                app:layout_constraintTop_toBottomOf="@id/Layout_configura_radar_de_persona_TextView_peso_entre" />
+
+                            <com.appyvet.rangebar.RangeBar xmlns:custom="http://schemas.android.com/apk/res-auto"
+                                android:id="@id/Layout_configura_radar_de_persona_RangeBar_peso"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+
+                                custom:connectingLineColor="@color/accent"
+                                custom:layout_constraintEnd_toEndOf="parent"
+                                custom:layout_constraintStart_toStartOf="parent"
+                                custom:layout_constraintTop_toBottomOf="@id/Layout_configura_radar_de_persona_TextView_max_peso"
+                                custom:pinColor="@color/accent"
+                                custom:pinRadius="0dp"
+                                custom:rangeBarColor="@color/accent"
+                                custom:selectorColor="@color/accent"
+                                custom:selectorSize="10dp"
+                                custom:temporaryPins="false"
+                                custom:tickEnd="150"
+                                custom:tickHeight="0dp"
+                                custom:tickInterval="2"
+                                custom:tickStart="50" />
+                            <TextView
+                                android:id="@id/Layout_configura_radar_de_persona_TextView_raza"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_vertical"
+                                android:gravity="center_vertical|start"
+                                android:layout_marginBottom="20dp"
+                                android:text="@string/ACTIVITY_CONFIGURA_RADAR_RAZA_"
+                                android:textIsSelectable="true"
+                                android:textSize="@dimen/tamanyo_letra_m"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="@id/Layout_configura_radar_de_persona_Spinner_razas" />
+                            <com.rubisoft.womencuddles.Classes.MultiSpinner
+                                android:id="@id/Layout_configura_radar_de_persona_Spinner_razas"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+
+                                android:layout_marginTop="15dp"
+                                android:gravity="center_vertical|end"
+                                android:textSize="@dimen/tamanyo_letra_m"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toEndOf="@id/Layout_configura_radar_de_persona_TextView_raza"
+                                app:layout_constraintTop_toBottomOf="@id/Layout_configura_radar_de_persona_RangeBar_peso" />
+
+                            <View
+                                android:id="@+id/linea_personas"
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginEnd="8dp"
+                                android:layout_marginTop="20dp"
+
+                                android:background="@android:color/darker_gray"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/Layout_configura_radar_de_persona_Spinner_razas" />
+
+                            <TextView
+                                android:id="@id/Layout_configura_radar_de_persona_TextView_only_premiums"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal"
+                                android:textIsSelectable="true"
+                                android:layout_marginTop="10dp"
+
+                                android:textSize="@dimen/tamanyo_letra_m"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/linea_personas"
+                                android:text="@string/SOLO_PREMIUM"/>
+
+
+                            <TextView
+                                android:id="@id/Layout_configura_radar_de_persona_TextView_que_este_online"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="15dp"
+                                android:gravity="center_vertical"
+                                android:text="@string/ACTIVITY_CONFIGURA_RADAR_ONLINE"
+                                android:textSize="@dimen/tamanyo_letra_m"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/Layout_configura_radar_de_persona_TextView_only_premiums" />
+
+                            <androidx.appcompat.widget.SwitchCompat
+                                android:id="@id/Layout_configura_radar_de_persona_SwitchCompat_que_este_online"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="end"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="@+id/Layout_configura_radar_de_persona_TextView_que_este_online" />
+
+                            <TextView
+                                android:id="@id/Layout_configura_radar_de_persona_TextView_que_sea_nuevo"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="15dp"
+                                android:gravity="center_vertical"
+                                android:text="@string/ACTIVITY_CONFIGURA_RADAR_NEW"
+                                android:textSize="@dimen/tamanyo_letra_m"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/Layout_configura_radar_de_persona_TextView_que_este_online" />
+
+                            <androidx.appcompat.widget.SwitchCompat
+                                android:id="@id/Layout_configura_radar_de_persona_SwitchCompat_que_sea_nuevo"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="end"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="@id/Layout_configura_radar_de_persona_TextView_que_sea_nuevo" />
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@id/Layout_configura_radar_de_persona_Button_actualizar_configuracion_radar"
+                                style="@style/boton_surface_reaction"
+                                android:layout_width="@dimen/Tam_Normal_icons"
+                                android:layout_height="@dimen/Tam_Normal_icons"
+                                android:layout_gravity="end"
+
+                                android:layout_marginTop="15dp"
+
+                                android:contentDescription="@string/Content_description_boton"
+                                android:focusable="false"
+                                android:scaleType="centerInside"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/Layout_configura_radar_de_persona_SwitchCompat_que_sea_nuevo" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+        </androidx.core.widget.NestedScrollView>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <include
+        layout="@layout/navigation_drawer"
+        card_view:layout_editor_absoluteX="0dp"
+        card_view:layout_editor_absoluteY="0dp" />
+</androidx.drawerlayout.widget.DrawerLayout>

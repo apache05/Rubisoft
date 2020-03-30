@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?><!-- CUALQUIER CAMBIO AQUI DEBE SER REPLICADO EN LAYOUT-SW600DP-LAND -->
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@id/mDrawerLayout"
+    android:tag="mDrawerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary_light"
+    android:layout_marginTop="50dp">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include layout="@layout/toolbar" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@id/layout_feedback_scrollview">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+
+
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="20dp"
+                        app:cardCornerRadius="@dimen/corner_radius"
+                        app:cardElevation="@dimen/elevation_perfiles">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="vertical"
+                            android:padding="20dp">
+
+                            <TextView
+                                android:id="@id/Layout_feedback_TextView_titulo"
+                                style="@style/comprar"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal"
+                                android:paddingTop="20dp"
+                                android:textIsSelectable="true"
+                                android:textSize="@dimen/tamanyo_letra_l" />
+
+                            <RadioGroup
+                                android:id="@id/Layout_feedback_RadioGroup_me_gusta"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="20dp"
+                                android:paddingEnd="15dp"
+                                android:paddingStart="15dp">
+
+                                <RadioButton
+                                    android:id="@id/Layout_feedback_RadioButton_si_me_gusta"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:checked="false"
+                                    android:text="@string/si"
+                                    android:textSize="@dimen/tamanyo_letra_m"
+                                    android:textColor="@color/gris"/>
+
+                                <RadioButton
+                                    android:id="@id/Layout_feedback_RadioButton_no_me_gusta"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:checked="false"
+                                    android:text="@string/no"
+                                    android:textSize="@dimen/tamanyo_letra_m"
+                                    android:textColor="@color/gris"/>
+                            </RadioGroup>
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@id/Layout_feedback_CardView_write_suggestion"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:visibility="invisible"
+                            app:cardCornerRadius="@dimen/corner_radius"
+                            app:cardElevation="@dimen/elevation_perfiles"
+                            android:padding="20dp">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical|center_horizontal"
+                                android:orientation="vertical"
+                                android:padding="20dp">
+                                <TextView
+                                    android:id="@id/Layout_feedback_TextView_please_feedback"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="20dp"
+                                    android:gravity="center_horizontal"
+                                    android:text="@string/ACTIVITY_FEEDBACK_PLEASE_FEEDBACK"
+                                    android:textIsSelectable="true"
+                                    android:textSize="@dimen/tamanyo_letra_l" />
+                                <RadioGroup
+                                android:id="@id/Layout_feedback_RadioGroup_encuesta"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="20dp"
+                                android:paddingEnd="15dp"
+                                android:paddingStart="15dp"
+                                android:layout_gravity="start"
+                                android:gravity="start">
+
+                                <RadioButton
+                                    android:id="@id/Layout_feedback_RadioButton_poca_gente"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:checked="false"
+                                    android:text="@string/ACTIVITY_FEEDBACK_POCOS_USUARIOS"
+                                    android:textSize="@dimen/tamanyo_letra_m"
+                                    android:textColor="@color/gris"/>
+                                <RadioButton
+                                    android:id="@id/Layout_feedback_RadioButton_mal_disenyo"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:checked="false"
+                                    android:text="@string/ACTIVITY_FEEDBACK_MAL_DISENO"
+                                    android:textSize="@dimen/tamanyo_letra_m"
+                                    android:textColor="@color/gris"/>
+                                <RadioButton
+                                    android:id="@id/Layout_feedback_RadioButton_mal_traducida"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:checked="false"
+                                    android:text="@string/ACTIVITY_FEEDBACK_MAL_TRADUCIDA"
+                                    android:textSize="@dimen/tamanyo_letra_m"
+                                    android:textColor="@color/gris"/>
+                                <RadioButton
+                                    android:id="@id/Layout_feedback_RadioButton_no_funciona_bien"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:checked="false"
+                                    android:text="@string/ACTIVITY_FEEDBACK_NO_FUNCIONA_BIEN"
+                                    android:textSize="@dimen/tamanyo_letra_m"
+                                    android:textColor="@color/gris"/>
+                                <RadioButton
+                                    android:id="@id/Layout_feedback_RadioButton_no_se_como_va"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:checked="false"
+                                    android:text="@string/ACTIVITY_FEEDBACK_NO_SE_COMO_VA"
+                                    android:textSize="@dimen/tamanyo_letra_m"
+                                    android:textColor="@color/gris"/>
+                                <RadioButton
+                                    android:id="@id/Layout_feedback_RadioButton_va_lenta"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:checked="false"
+                                    android:text="@string/ACTIVITY_FEEDBACK_APP_LENTA"
+                                    android:textSize="@dimen/tamanyo_letra_m"
+                                    android:textColor="@color/gris"/>
+                                <RadioButton
+                                    android:id="@id/Layout_feedback_RadioButton_otro"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:checked="false"
+                                    android:text="@string/ACTIVITY_FEEDBACK_OTROS"
+                                    android:textSize="@dimen/tamanyo_letra_m"
+                                    android:textColor="@color/gris"/>
+
+                            </RadioGroup>
+                                <EditText
+                                    android:id="@id/Layout_feedback_EditText_feedback"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="bottom"
+                                    android:hint="@string/ACTIVITY_FEEDBACK_HINT_YOUR_FEEDBACK"
+                                    android:inputType="textMultiLine"
+                                    android:lines="5"
+                                    android:maxLength="290"
+                                    android:textColor="@color/black"
+                                     />
+                                <TextView
+                                    android:id="@id/Layout_feedback_Button_enviar_feedback"
+                                    style="@style/boton_surface_reaction"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="bottom|end"
+                                    android:layout_marginTop="20dp"
+                                    android:contentDescription="@string/Content_description_boton"
+                                    android:cropToPadding="false"
+                                    android:focusable="false"
+                                    android:scaleType="centerInside"
+                                    android:text="@string/ACTIVITY_FEEDBACK_SEND_FEEDBACK"
+                                    android:textColor="@color/accent" />
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@id/Layout_feedback_CardView_rate_app"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:visibility="invisible"
+                            app:cardCornerRadius="@dimen/corner_radius"
+                            app:cardElevation="@dimen/elevation_perfiles">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:orientation="vertical"
+                                android:padding="20dp">
+
+                                <TextView
+                                    android:id="@id/Layout_feedback_TextView_rate_app"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="20dp"
+                                    android:gravity="center_horizontal"
+                                    android:text="@string/ACTIVITY_FEEDBACK_RATE_APP"
+                                    android:textIsSelectable="true"
+                                    android:textSize="@dimen/tamanyo_letra_l" />
+
+                                <TextView
+                                    android:id="@id/Layout_feedback_Button_rate_app"
+                                    style="@style/boton_surface_reaction"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="end"
+                                    android:layout_marginTop="20dp"
+                                    android:contentDescription="@string/Content_description_boton"
+                                    android:cropToPadding="false"
+                                    android:focusable="false"
+                                    android:scaleType="centerInside"
+                                    android:text="@string/ACTIVITY_FEEDBACK_RATE"
+                                    android:textColor="@color/accent"
+                                    android:textSize="@dimen/tamanyo_letra_m" />
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+                    </RelativeLayout>
+
+                </LinearLayout>
+            </ScrollView>
+        </androidx.core.widget.NestedScrollView>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <include layout="@layout/navigation_drawer" />
+</androidx.drawerlayout.widget.DrawerLayout>

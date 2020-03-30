@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--*********************  gdpr consent -->
+    <color name="main">#FFE11916</color>
+    <!--*********************  colores utilizados -->
+    <color name="primary">#FF9800</color> <!-- Light Blue -->
+    <color name="primary_dark">#F57C00</color>
+    <color name="primary_light">#FFE0B2</color>
+
+    <color name="verde_online">#00FF00</color>
+    <color name="accent">#FF5252</color> <!--Pink -->
+    <color name="textColorPrimary">#FFFFFF</color>
+    <color name="border_card">#AAAAAA</color>
+    <!-- <color name="votar_mal">#D91E18</color>
+    <color name="votar_regular_mal">#E9D460</color>
+    <color name="votar_regular_bien">#86E2D5</color>
+    <color name="votar_bien">#3FC380</color>-->
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="white_transparente">#40FFFFFF</color>
+   <!-- <color name="oro">#EABE3F</color>    <color name="plata">#bebebe</color>    <color name="bronce">#cd7f32</color> -->
+
+    <color name="gris">#777777</color>
+    <color name="gris_semi_transparente">#33696969</color>
+    <color name="gris_transparente">#10696969</color>
+    <color name="transparente">#00000000</color>
+    <color name="conversacion_izqda">#228BC34A</color>
+    <color name="conversacion_dcha">#2203A9F4</color>
+
+
+</resources>

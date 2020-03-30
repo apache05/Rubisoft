@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="PP_politica_privacidad"> Rubisoft\'s Privacy Policy</string>
+    <string name="PP_parrafo_politica_privacidad">
+        This policy and any dispute or claim arising out of or in connection with it or its subject matter (including non-contractual disputes or claims) shall be governed by and construed in accordance with Spanish law. In the event there is a discrepancy between this English language version and any translated copies of the Privacy Policy, the Spanish version shall prevail.        \n
+        What’s this all about then?\n
+        You should read this privacy policy because it will tell you exactly how your personal data is being looked after by Rubisoft and that’s a pretty important thing for you to know. Here are the topics that we cover:\n
+
+            \n\t- What information we collect and how we collect it
+            \n\t- How we use the information and who we share it with
+            \n\t- How you can access and update such information
+            \n\t- How we protect the information we store about you
+
+        <!--Rubisoft es una empresa registrada en España con número XXXX y con domicilio en XXXX, España -->
+        \n\n
+       The full legal bit\n
+        We know that other people’s use of your personal data is a big concern for social network users, so we at Rubisoft have developed this privacy policy (the “Policy”) to let you know how we use personal information (‘personal data’ or ‘personal information’).\n
+        \n
+        Our Policy applies to your use of the  any Rubisoft app. When you access or use any Rubisoft app, you agree to our Privacy Policy and you consent to our collection, storage, use and disclosure of your personal information as we’ve set out in this Policy.\n
+        \n
+        Rubisoft  reserves the right to change our Policy at any time and without notice, so be sure to check this Policy regularly to understand how we use your information.
+        \n
+        \n
+        IF YOU DO NOT ACCEPT AND AGREE WITH OUR PRIVACY POLICY THEN YOU MUST NOT ACCESS OR USE THE APP.\n
+    </string>
+    <string name="PP_capitulo_1">1. Rubisoft App\'s users</string>
+    <string name="PP_parrafo_1">
+        What information does Rubisoft  collect if I decide to join the any Rubisoft app social community?\n
+        Any Rubisoft app is a meeting place for adults, and we provide that service by operating a social network app offering users the opportunity to connect to our global community of users.
+        To join  any Rubisoft app network you will have to complete our registration form, where we ask you to provide us with information about you such as your name, your gender, your date of birth, your location details. You also have the opportunity to provide other details about yourself, but these are optional.\n
+        Once you have created a Profile, we will automatically track certain information such as your position. \n
+        \n
+        What information does Rubisoft  collect about me if I’m under 18?\n
+        You can only become a member of any Rubisoft app if your aged 18 or over or the age of majority in the country in which you reside if that happens to be greater than 18. That means  Rubisoft  does not knowingly collect any information about children, minors or anyone under the age of majority. Nor do we knowingly market to children, minors or anyone under the age of 18. If you are less than 18 years old, we request that you do not submit information to us. If we become aware that a child, minor or anyone under the age of 18 has registered with us and provided us with personal information, we will take steps to terminate that person’s registration and delete their Profile information from any Rubisoft app. If we do delete a Profile because you violated our no children rules, we may retain your ID  to ensure that you do not try to get around our rules by creating a new Profile. \n
+        \n
+        Does Rubisoft  collect my personal information if I am not a member and just visit the app?
+        No. We don’t collect any personal information about visitors to our app.
+        \n
+        Does Rubisoft  use my personal information for any other purpose?
+        We may use material that you post on the open access areas of any Rubisoft app in advertising and promotional materials on our partner sites and partner products. We believe these uses allow us to improve our app and better tailor your online experience to meet your needs.
+        We use your personal information to resolve disputes, troubleshoot problems and enforce our Terms and Conditions of Use.
+    </string>
+    <string name="PP_capitulo_2">2. Friends and other  Rubisoft apps users</string>
+    <string name="PP_parrafo_2">
+        When I put information about myself on any  Rubisoft app, what do the other users see?
+        To ensure you get to meet as many people as possible on any  Rubisoft app, other members get to see your user name and any information you post on your Profile, including photos if you select the \'Any users\' access setting. Any information you choose to provide should reflect how much you want other  Rubisoft apps members to know about you.\n
+        \n
+        What am I allowed to do with other user’s personal information?\n
+        Use it to meet new friends and make new contacts! Beware that you may not use other users\' information for commercial purposes, to spam, to harass, or to make unlawful threats.   Rubisoft  reserves the right to terminate the accounts of those who misuse other users\' information or who otherwise violate the Terms and Conditions of Use.\n
+    </string>
+    <string name="PP_capitulo_3">3. Third parties</string>
+    <string name="PP_parrafo_3">
+
+        Does   Rubisoft  disclose my information to other parties?
+        We may share aggregated information with such parties that includes your personal information (but which doesn’t identify you directly),
+        together with other information including log data with third parties for industry analysis and demographic profiling and to deliver
+        targeted advertising about other products and services..
+        In particular, in relation to targeted advertising, we use third-party advertising companies to serve ads when you use   any Rubisoft app.
+        These companies may use information about your visits to this app in order to provide advertisements about goods and services of interest to you.
+        If you would like more information about this practice and to know your choices about not having this information used by these companies,
+        please visit this page.\n
+        If you choose to, we may share your information with vendors, service providers, and other carefully selected third parties to
+        improve our services to you, such as by facilitating payments. We ensure these parties must adhere to strict data protection and
+        confidentiality provisions that are consistent with this Privacy Policy.\n
+          Rubisoft  also wishes to maintain a healthy community, and we will cooperate with all law enforcement inquiries and with all third
+        parties to enforce their intellectual property or other rights. We may also disclose your personal information to government or law
+        enforcement agencies, or private parties, as required by law when/or, in our sole discretion, we believe that disclosure is necessary
+        to protect our legal rights, or those of third parties and/or to comply with a judicial proceeding, court order, or legal process served on us.\n
+        In the event that   Rubisoft  or any of its affiliates undergoes a business transition or change of ownership, such as a merger,
+        acquisition by another company, re-organisation, or sale of all or a portion of its assets, or in the event of insolvency or
+        administration, we may be required to disclose your personal information.\n
+
+         \n\nTo help us improve our service we collect the following information on an anonymous basis:\n\n
+
+    Operating System, Date &amp; time, Latitude, Longitude, Accuracy (GPS), SSID (network), BSSID (network),
+    Internal MAC address (network), Bundle ID, Device Model, Device Manufacturer, Carrier Code (Android only),
+    Carrier Name, Sim Code, Country, and Locale.
+        \n\nIn addition to helping us to measure the usage of our app this
+    anonymous information is shared with third parties for their business purposes, including the creation of reports,
+    market research and trend analysis.
+
+     \n\n One of these third parties is Huq, data shared does not contain information from
+    which users can be identified and we will not provide additional information to such third parties that enables such
+    third parties to identify you. You can find a full description of Huq and what it does with the information collected  via our app at this address: https://huq.io/terms/privacy/
+    \n \n\n Another one of those third parties is Appodeal. You can find his privacy policy at this address: https://www.appodeal.com/home/privacy-policy/ \n\n
+    \n\n
+
+    </string>
+    <string name="PP_capitulo_4">4. Data storage</string>
+    <string name="PP_parrafo_4">
+          Rubisoft apps are  global apps operating through servers located in a number of countries around the world, including the United States. If you live in a country with data protection laws, the storage of your personal data may not provide you with the same protections as you enjoy in your country of residence. By submitting your personal information, or by choosing to upgrade the services you use, or by making use of the applications available on   any Rubisoft app, you agree to the transfer of your personal information to, and storage and processing of your personal information in, any such countries and destinations.</string>
+    <string name="PP_capitulo_5">5. Security</string>
+    <string name="PP_parrafo_5">
+        How does    Rubisoft  protect my personal information?\n
+           Rubisoft  has implemented reasonable and appropriate security measures to protect and prevent the loss, misuse, and alteration of the information under our control, including your personal information.    Rubisoft  uses reasonable security measures to safeguard the confidentiality of your personal information such as secured servers using firewalls. Our technical experts at    Rubisoft  work hard to ensure your secure use of our app.\n
+        While we take reasonable precautions against possible security breaches of our servers,  databases and records, no server or Internet transmission is completely secure and we cannot guarantee that unauthorised access, hacking, data loss, or other breaches will never occur. We urge you to take steps to keep your personal information safe (including your password) and to log out of your account after use.\n
+        We cannot guarantee the security of your personal data while it is being transmitted to our servers and any transmission is at your own risk. Once we have received your information we have procedures and security features in place to try to prevent unauthorised access.\n
+        \n
+        How do I help keep my information secure?\n
+        You may not disclose your password to any third parties or share it with any third parties. If you lose your password or give it out, your personal information may be compromised. If that happens, please report it to Support via email. </string>
+    <string name="PP_capitulo_6">6.  Your rights</string>
+    <string name="PP_parrafo_6">
+        How do I change my Profile?\n
+        ou can review and revise your profile information at any time. Once you register, you will be able to review and change much of your personal information.\n
+        \n
+        Can I deactivate or delete my Profile?\n
+        You can access to your account and delete your profile permanently. This option is en Settings menu\n
+        To prevent abuse and/or misuse of   any Rubisoft app by a user following termination or deletion of a profile/account we shall retain such information as we deem in our sole discretion may be necessary to ensure that user does not open a new account and profile in breach of our Terms and Conditions of Use and to ensure compliance with all laws and regulations.\n
+        Warning: Even after you remove information from your profile or delete your account, copies of that information may still be viewable and/or accessed on the Internet to the extent such information has been previously shared with others, or copied or stored by other users or to the extent such information has been shared with search engines. We cannot control this, nor do we accept any liability for this. If you have given third party applications  they may retain such information to the extent permitted under their terms of service or privacy policies.\n
+        \n
+        What happens if I do nothing?\n
+        If you have not signed in to   any Rubisoft app for two years, we may remove your Profile as part of our data cleansing process.\n
+        Your    Rubisoft  account is non-transferable and any rights to your profile or contents within your account will be cancelled upon your death.\n
+        If you have questions about our Privacy Policy or how we collect and use information, drop us a line via  email (rubisoft.apps@gmail.com).\n
+        \nThis Privacy Policy was last updated on  october 23,  2018.
+    </string>
+</resources>

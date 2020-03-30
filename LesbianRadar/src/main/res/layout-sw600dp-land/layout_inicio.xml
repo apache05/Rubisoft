@@ -1,0 +1,185 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary_light"
+    tools:context=".activities.Activity_Inicio">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginEnd="100dp"
+                android:layout_marginStart="100dp">
+                <TextView
+                    android:id="@id/Layout_inicio_TextView_nombre_app"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:gravity="center"
+                    android:text="@string/app_name"
+                    android:textColor="@color/accent"
+                    android:textIsSelectable="true"
+                    android:textSize="@dimen/tamanyo_letra_xxl"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.facebook.login.widget.LoginButton
+                        android:id="@id/Layout_inicio_AppCompatImageView_facebook"
+                        style="@style/boton_surface_reaction"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="50dp"
+                        android:layout_marginRight="50dp"
+                        android:layout_marginTop="10dp"
+                        android:background="#3b5998" />
+
+                    <com.google.android.gms.common.SignInButton
+                        android:id="@id/Layout_inicio_AppCompatImageView_google_plus"
+                        style="@style/boton_surface_reaction"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:layout_marginLeft="47dp"
+                        android:layout_marginRight="47dp"
+                        android:layout_marginTop="30dp"/>
+
+<!--
+                    <com.twitter.sdk.android.core.identity.TwitterLoginButton
+                        android:id="@id/Layout_inicio_AppCompatImageView_twitter"
+                        style="@style/boton_surface_reaction"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:layout_marginLeft="50dp"
+                        android:layout_marginRight="50dp"
+                        android:layout_marginTop="30dp" />
+-->
+
+                    <TextView
+                        android:id="@id/Layout_inicio_TextView_nota_privacidad"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:gravity="center"
+                        android:paddingLeft="70dp"
+                        android:paddingRight="70dp"
+                        android:text="@string/ACTIVITY_INICIO_NOTA_PRIVACIDAD"
+                        android:textColor="@color/accent"
+                        android:textIsSelectable="true"
+                        android:textSize="@dimen/tamanyo_letra_s" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="30dp"
+                    android:layout_marginLeft="60dp"
+                    android:layout_marginRight="60dp"
+                    android:layout_marginTop="30dp"
+                    android:background="@color/accent" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="20dp"
+                        android:layout_marginLeft="47dp"
+                        android:layout_marginRight="47dp"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            >
+                            <AutoCompleteTextView
+                                android:id="@id/Layout_inicio_EditText_Email"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/ACTIVITY_INICIO_HINT_EMAIL"
+                                android:inputType="textEmailAddress"
+                                android:scrollHorizontally="true"
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/gris" />
+                        </com.google.android.material.textfield.TextInputLayout>
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            >
+                            <AutoCompleteTextView
+                                android:id="@id/Layout_inicio_EditText_Password"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/ACTIVITY_INICIO_HINT_PASSWORD"
+                                android:inputType="textPassword"
+                                android:scrollHorizontally="true"
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/gris" />
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="47dp"
+                        android:layout_marginRight="47dp"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@id/Layout_inicio_Button_signin"
+                            style="@style/boton_surface_reaction"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginEnd="20dp"
+                            android:text="@string/ACTIVITY_INICIO_SIGNIN"
+                            android:textColor="@color/accent"
+                            android:textSize="@dimen/tamanyo_letra_s"/>
+
+                        <Button
+                            android:id="@id/Layout_inicio_Button_signup"
+                            style="@style/boton_surface_reaction"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="20dp"
+                            android:text="@string/ACTIVITY_INICIO_SIGNUP"
+                            android:textColor="@color/accent"
+                            android:textSize="@dimen/tamanyo_letra_s"/>
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@id/Layout_inicio_Button_forgot_password"
+                        style="@style/boton_surface_reaction"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="40dp"
+                        android:layout_marginLeft="47dp"
+                        android:layout_marginRight="47dp"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:text="@string/ACTIVITY_INICIO_FORGOT_PASSWORD"
+                        android:textColor="@color/accent"
+                        android:textSize="@dimen/tamanyo_letra_s" />
+                </LinearLayout>
+            </LinearLayout>
+    </ScrollView>
+
+    <include layout="@layout/progressbar" />
+</RelativeLayout>
+

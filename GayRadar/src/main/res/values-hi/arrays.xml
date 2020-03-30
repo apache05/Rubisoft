@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="array_unidades">
+    <item> किलो - मीटर - किमी</item>
+    <item> सेंट / एलबी - इन - एमआई</item>
+    <item> एलबी - इन - एमआई</item>
+  </string-array>
+
+    <string-array name="meses_nacimiento">
+    <item>जनवरी</item>
+    <item>फरवरी</item>
+    <item>मार्च</item>
+    <item>अप्रैल</item>
+    <item>मई</item>
+    <item>जून</item>
+    <item>जुलाई</item>
+    <item>अगस्त</item>
+    <item>सितंबर</item>
+    <item>अक्टूबर</item>
+    <item>नवंबर</item>
+    <item>दिसंबर</item>
+  </string-array>
+    <string-array name="sexos">
+    <item>लिंग</item>
+    <item>मैं पुरुष हूं</item>
+    <item>में महिला हूँ</item>
+  </string-array>
+
+    <string-array name="orientaciones_registro">
+    <item>ओरिएंटेशन *</item>
+    <item>मैं विषमलिंगी हूँ</item>
+    <item>मैं लेस्बियन हूं</item>
+    <item>मैं समलैंगिक हूंं</item>
+    <item>मैं उभयलिंगी हूँ</item>
+  </string-array>
+
+
+    <string-array name="orientaciones_mi_perfil">
+    <item>मैं विषमलिंगी हूँ</item>
+    <item>मैं लेस्बियन हूं</item>
+    <item>मैं समलैंगिक हूं</item>
+    <item>मैं उभयलिंगी हूँ</item>
+  </string-array>
+    <string-array name="busqueda_personas">
+    <item>विषमलिंगी महिलाओं की तलाश में</item>
+    <item>विषमलिंगी आदमियों की तलाश है</item>
+    <item>समलैंगिक पुरुषों की तलाश मेंं</item>
+    <item>समलैंगिक महिलाओं की तलाश में</item>
+    <item>उभयलिंगी महिलाओं की तलाश में</item>
+    <item>उभयलिंगी पुरुषों की तलाश में</item>
+  </string-array>
+
+
+    <string-array name="razas">
+    <item> सफेद (गोरा)</item>
+    <item> सफेद (गहरा)</item>
+    <item> काली</item>
+    <item>म्युलेट</item>
+    <item> ओरिएंटल (पूर्व)</item>
+    <item> ओरिएंटल (दक्षिण पूर्व)</item>
+    <item> लैटिन</item>
+    <item> अरब</item>
+    <item> हिंदू</item>
+  </string-array>
+
+    <!-- Nav Drawer Menu Items -->
+    <string-array name="nav_drawer_items">
+    <item>राडार</item>
+    <item>रडार समायोजित करें</item>
+    <item>संदेश</item>
+    <item>आपकी प्रोफाइल</item>
+    <item>मुफ्त के सितारे</item>
+    <item>खरीद</item>
+    <item>बातचीत</item>
+    <item>मदद</item>
+    <item>सेटिंग्स</item>
+    <item>प्रतिक्रिया</item>
+    <item>साइन आउट</item>
+  </string-array>
+
+    <string-array name="causas_deuncia">
+    <item> अश्लील तस्वीर</item>
+    <item> झूठी प्रोफ़ाइल</item>
+    <item> हिंसक तस्वीर</item>
+    <item> अनुचित या आक्रामक तस्वीर</item>
+    <item> बाल संरक्षण</item>
+  </string-array>
+</resources>

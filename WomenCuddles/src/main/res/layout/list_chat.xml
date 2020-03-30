@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?><!-- ESTO ES EL DISEÑO DEL LIST DE FOTOS  DE PERFILES  QUE UTILIZAMOS MEDIANTE UN RECYCLERVIEW -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:focusable="true"
+    android:clipToPadding="false"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:layout_marginTop="10dp">
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@id/Chat_List_ImageView"
+        android:layout_width="@dimen/tamanyo_miniaturas_chat"
+        android:layout_height="@dimen/tamanyo_miniaturas_chat"
+        android:contentDescription="@string/Content_description_foto"
+        android:gravity="center_horizontal"/>
+    <TextView
+        android:id="@id/Chat_List_TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/tamanyo_letra_s"
+        android:gravity="center_horizontal"/>
+
+</LinearLayout>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?><resources>
+   
+    <string-array name="array_unidades">
+    <item>กก. - ม. - กม.</item>
+    <item>สโตน/ปอนด์ - นิ้ว - ไมล์</item>
+    <item>ปอนด์ - นิ้ว - ไมล์</item>
+  </string-array>
+
+    <string-array name="meses_nacimiento">
+    <item>มกราคม</item>
+    <item>กุมภาพันธ์</item>
+    <item>มีนาคม</item>
+    <item>เมษายน</item>
+    <item>พฤษภาคม</item>
+    <item>มิถุนายน</item>
+    <item>กรกฎาคม</item>
+    <item>สิงหาคม</item>
+    <item>กันยายน</item>
+    <item>ตุลาคม</item>
+    <item>พฤศจิกายน</item>
+    <item>ธันวาคม</item>
+  </string-array>
+    <string-array name="sexos">
+    <item>เพศ</item>
+    <item>ฉันเป็นผู้ชาย</item>
+    <item>ฉันเป็นผู้หญิง</item>
+  </string-array>
+
+    <string-array name="orientaciones_registro">
+    <item>รสนิยมทางเพศ</item>
+    <item>ฉันชอบเพศตรงข้าม</item>
+    <item>ฉันเป็นเลสเบี้ยน</item>
+    <item>ฉันเป็นเกย์</item>
+    <item>ฉันเป็นไบเซ็กชวล</item>
+  </string-array>
+
+    <string-array name="orientaciones_mi_perfil">
+    <item>ฉันชอบเพศตรงข้าม</item>
+    <item>ฉันเป็นเลสเบี้ยน</item>
+    <item>ฉันเป็นไบเซ็กชวล</item>
+    <item>ฉันเป็นไบเซ็กชวล</item>
+  </string-array>
+    <string-array name="busqueda_personas">
+    <item>กำลังมองหาผู้หญิงที่ชอบเพศตรงข้าม</item>
+    <item>กำลังมองหาผู้ชายที่ชอบเพศตรงข้าม</item>
+    <item>กำลังมองหาเกย์</item>
+    <item>กำลังมองหาเลสเบี้ยน</item>
+    <item>กำลังมองหาผู้หญิงที่เป็นไบเซ็กชวล</item>
+    <item>กำลังมองหาผู้ชายที่เป็นไบเซ็กชวล</item>
+  </string-array>
+
+    <string-array name="razas">
+    <item>ผิวขาว (ผมบลอนด์)</item>
+    <item>ผิวขาว (ผมดำ)</item>
+    <item>ผิวสี</item>
+    <item>ลูกครึ่งผิวขาวกับผิวสี</item>
+    <item>เอเชีย (ตะวันออก)</item>
+    <item>เอเชียน (ตะวันออกเฉียงใต้)</item>
+    <item>ลาติน</item>
+    <item>อาหรับ</item>
+    <item>ฮินดู</item>
+  </string-array>
+
+    <!-- Nav Drawer Menu Items -->
+    <string-array name="nav_drawer_items">
+    <item>เรดาร์</item>
+    <item>ปรับเรดาร์</item>
+    <item>ข้อความ</item>
+    <item>โปรไฟล์ของคุณ</item>
+    <item>ดาวฟรี</item>
+    <item>การซื้อ</item>
+    <item>แชท</item>
+    <item>ความช่วยเหลือ</item>
+    <item>การตั้งค่า</item>
+    <item>คำติชม</item>
+    <item>ออกจากระบบ</item>
+  </string-array>
+
+    <string-array name="causas_deuncia">
+    <item>รูปภาพลามก</item>
+    <item>โปรไฟล์ปลอม</item>
+    <item>รูปภาพที่รุนแรง</item>
+    <item>รูปภาพที่ไม่เหมาะสมหรือน่าขุ่นเคืองใจ</item>
+    <item> การคุ้มครองเด็ก</item>
+  </string-array>
+</resources>

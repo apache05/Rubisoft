@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- *********************** ARRAYS *********************************** -->
+
+
+    <string-array name="array_unidades">
+        <item> Kg - m - Km</item>
+        <item> St/lb - in - Mi </item>
+        <item> lb - in - Mi </item>
+    </string-array>
+    <string-array name="meses_nacimiento">
+        <item>janeiro</item>
+        <item>fevereiro</item>
+        <item>março</item>
+        <item>abril</item>
+        <item>maio</item>
+        <item>junho</item>
+        <item>julho</item>
+        <item>agosto</item>
+        <item>setembro</item>
+        <item>outubro</item>
+        <item>novembro</item>
+        <item>dezembro</item>
+    </string-array>
+    <string-array name="sexos">
+        <item>Sexo</item>
+        <item>Sou um homem</item>
+        <item>Sou uma mulher</item>
+    </string-array>
+
+    <string-array name="orientaciones_registro">
+        <item>Orientação \u002a</item>
+        <item>Sou hetero</item>
+        <item>Sou lésbica</item>
+
+        <item>Sou gay</item>
+        <item>Sou bissexual</item>
+    </string-array>
+    <string-array name="orientaciones_mi_perfil">
+        <item>Sou hetero</item>
+        <item>Sou lésbica</item>
+        <item>Sou gay</item>
+        <item>Sou bissexual</item>
+    </string-array>
+    <string-array name="busqueda_personas" >
+        <item>Procurar mulheres hetero</item>
+        <item>Procurar homens hetero</item>
+        <item>Procurar homens gay</item>
+        <item>Procurar mulheres lésbicas</item>
+        <item>Procurar mulheres bissexuais</item>
+        <item>Procurar homens bissexuais</item>
+    </string-array>
+
+    <string-array name="razas">
+        <item> Branco/a (loiro)</item>
+        <item> Branco/a (moreno)</item>
+        <item> Preto/a</item>
+        <item> Mulato/a</item>
+        <item> Asiático/a (Este)</item>
+        <item> Asiático/a (Sudeste)</item>
+        <item> Latino/a</item>
+        <item> Árabe</item>
+        <item> Hindu</item>
+    </string-array>
+
+    <!-- Nav Drawer Menu Items -->
+    <string-array name="nav_drawer_items">
+        <item>Radar</item>
+        <item>Ajustar radar</item>
+        <item>Mensagens</item>
+        <item>O seu perfil</item>
+        <item>Estrelas grátis</item>
+        <item>Compras</item>
+        <item>Bate-papo</item>
+
+        <item>Ajuda</item>
+        <item>Configurações</item>
+        <item>Melhorar</item>
+        <item>Fechar sessão</item>
+    </string-array>
+
+
+    <string-array name="causas_deuncia">
+        <item> Foto lascivo </item>
+        <item> Falso perfil</item>
+        <item> Foto violenta</item>
+        <item> Foto inapropriado ou ofensivo</item>
+        <item> Proteção da criança </item>
+    </string-array>
+</resources>

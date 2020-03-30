@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?><resources>
+    
+    <string-array name="array_unidades">
+    <item>Kg - m - Km</item>
+    <item>St/lb - in - Mil</item>
+    <item>lb - in - Mil</item>
+  </string-array>
+
+    <string-array name="meses_nacimiento">
+    <item>januari</item>
+    <item>februari</item>
+    <item>maret</item>
+    <item>april</item>
+    <item>mei</item>
+    <item>juni</item>
+    <item>juli</item>
+    <item>agustus</item>
+    <item>september</item>
+    <item>oktober</item>
+    <item>november</item>
+    <item>desember</item>
+  </string-array>
+
+    <string-array name="sexos">
+    <item>Jenis Kelamin</item>
+    <item>Saya pria</item>
+    <item>Saya wanita</item>
+  </string-array>
+
+    <string-array name="orientaciones_registro">
+      <item>Orientasi *</item>
+      <item>Saya heteroseks</item>
+      <item>Saya lesbian</item>
+      <item>Saya gay </item>
+      <item>Saya biseksual</item>
+    </string-array>
+    <string-array name="orientaciones_mi_perfil">
+      <item>Saya heteroseks</item>
+      <item>Saya lesbian</item>
+      <item>Saya gay </item>
+      <item>Saya biseksual</item>
+    </string-array>
+    <string-array name="busqueda_personas" >
+      <item>Mencari wanita heteroseksual</item>
+      <item>Mencari pria heteroseksual</item>
+      <item>Mencari Pria gay </item>
+      <item>Mencari wanita lesbian</item>
+      <item>Mencari biseksual wanita</item>
+      <item>Mencari biseksual pria</item>
+    </string-array>
+    <string-array name="razas">
+    <item>Putih (Pirang)</item>
+    <item>Putih (Gelap)</item>
+    <item>Hitam</item>
+    <item>Mulate</item>
+    <item>Oriental (Timur)</item>
+    <item>Oriental (Tenggara)</item>
+    <item>Latin</item>
+    <item>Arab</item>
+    <item>Hindu</item>
+  </string-array>
+
+    <!-- Nav Drawer Menu Items -->
+    <string-array name="nav_drawer_items">
+        <item>Radar</item>
+        <item>Sesuaikan radar</item>
+        <item>Pesan</item>
+        <item>Profil Anda</item>
+        <item>Bintang bebas</item>
+        <item>Pembelian</item>
+        <item>Obrolan</item>
+        <item>Bantuan</item>
+        <item>Pengaturan</item>
+        <item>Masukan</item>
+        <item>Keluar</item>
+  </string-array>
+
+    <string-array name="causas_deuncia">
+    <item>Gambar cabul</item>
+    <item>Profil palsu</item>
+    <item>Gambar kekerasan</item>
+    <item>Gambar tidak pantas atau tidak sopan</item>
+    <item>Perlindungan Anak</item>
+  </string-array>
+</resources>

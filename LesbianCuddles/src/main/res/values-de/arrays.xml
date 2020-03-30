@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+
+
+    <string-array name="array_unidades">
+        <item> Kg - m - Km</item>
+        <item> St/lb - in - Me </item>
+        <item> lb - in - Me </item>
+    </string-array>
+    <string-array name="meses_nacimiento">
+        <item>Januar</item>
+        <item>Februar</item>
+        <item>März</item>
+        <item>April</item>
+        <item>Mai</item>
+        <item>Juni</item>
+        <item>Juli</item>
+        <item>August</item>
+        <item>September</item>
+        <item>Oktober</item>
+        <item>November</item>
+        <item>Dezember</item>
+    </string-array>
+    <string-array name="sexos">
+        <item>Geschlecht</item>
+        <item>Ich bin männlich</item>
+        <item>Ich bin weiblich</item>
+    </string-array>
+
+    <string-array name="orientaciones_registro">
+        <item>Orientierung *</item>
+        <item>Ich bin hetero</item>
+        <item>Ich bin lesbisch</item>
+        <item>Ich bin schwul</item>
+        <item>Ich bin bisexuell</item>
+    </string-array>
+    <string-array name="orientaciones_mi_perfil">
+        <item>Ich bin hetero</item>
+        <item>Ich bin lesbisch</item>
+        <item>Ich bin schwul</item>
+        <item>Ich bin bisexuell</item>
+    </string-array>
+    <string-array name="busqueda_personas" >
+        <item>Suche nach Heterosexuelle Frauen </item>
+        <item>Suche nach Heterosexuelle Männer </item>
+        <item>Suche nach schwulen Männern</item>
+        <item>Suche nach lesbischen Frauen</item>
+        <item>Suche bisexuelle Frauen</item>
+        <item>Suche nach bisexuellen Männern</item>
+    </string-array>
+    <string-array name="razas">
+        <item>Weiß (blond)</item>
+        <item>Weiß (dunkel)</item>
+        <item>Schwarz</item>
+        <item>Mulatte</item>
+        <item>Asiatisch (Ost)</item>
+        <item>Asiatisch (Südost)</item>
+        <item>Latino</item>
+        <item>Araber</item>
+        <item>Hindu</item>
+    </string-array>
+
+    <!-- Nav Drawer Menu Items -->
+    <string-array name="nav_drawer_items">
+        <item>Radar</item>
+        <item>Radar anpassen</item>
+        <item>Nachrichten</item>
+        <item>Dein Profil</item>
+        <item>Freie Sterne</item>
+        <item>Käufe</item>
+        <item>Chat</item>
+        <item>Hilfe</item>
+        <item>Einstellungen</item>
+        <item>Verbessern</item>
+        <item>Abmelden</item>
+    </string-array>
+
+
+    <string-array name="causas_deuncia">
+        <item>Obszöne Bilde</item>
+        <item>Gefälschte Profile</item>
+        <item>Gewalttätige Bilder</item>
+        <item>Unangemessene oder beleidigende Bilder</item>
+        <item>Jugendschutz</item>
+    </string-array>
+</resources>

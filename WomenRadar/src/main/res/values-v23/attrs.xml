@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="status_bar_inset">#4000</color>
+    <dimen name="drawer_margin">56dp</dimen>
+
+    <dimen name="margin_padding_16">16dp</dimen>
+    <!--<dimen name="icon_size_24">24dp</dimen>-->
+    <dimen name="margin_padding_48">48dp</dimen>
+
+</resources>

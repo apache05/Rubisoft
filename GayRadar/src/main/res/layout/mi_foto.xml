@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?><!-- PARA HACER LAS MINIATURAS DE UN_PERFIL -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:layout_width="@dimen/tamanyo_foto_grid_perfiles"
+    android:layout_height="@dimen/tamanyo_foto_grid_perfiles"
+    android:layout_margin="4dp">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@id/ImageView_mi_foto"
+        android:layout_width="@dimen/tamanyo_foto_grid_perfiles"
+        android:layout_height="@dimen/tamanyo_foto_grid_perfiles"
+        android:layout_gravity="center"
+        android:adjustViewBounds="true"
+        android:cropToPadding="false"
+        android:scaleType="centerCrop"
+        card_view:cardUseCompatPadding="true" />
+
+<!--
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@id/ImageView_llavecita"
+        android:layout_width="@dimen/Tam_Normal_icons"
+        android:layout_height="@dimen/Tam_Normal_icons"
+        android:layout_alignParentEnd="true"
+        android:layout_gravity="center"
+        android:layout_margin="8dp" />
+-->
+
+</RelativeLayout>

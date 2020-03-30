@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- SISTEMAS DE MEDICION -->
+    <integer name="METRICO">0</integer>
+    <integer name="BRITANICO">1</integer>
+    <integer name="AMERICANO">2</integer>
+
+    <!-- ORIENTACIONES SEXUALES -->
+    <integer name="HETERO">1</integer>
+    <integer name="LESBIANA">2</integer>
+    <integer name="GAY">3</integer>
+    <integer name="BISEX">4</integer>
+
+    <!-- GÉNEROS -->
+    <integer name="HOMBRE">1</integer>
+    <integer name="MUJER">2</integer>
+
+
+    <!-- CARACTERÍSTICAS FÍSICAS POR DEFECTO PARA UNA BÚSQUEDA -->
+    <integer name="DEFAULT_ALTURA_MINIMA">140</integer>
+    <integer name="DEFAULT_ALTURA_MAXIMA">220</integer>
+    <integer name="DEFAULT_PESO_MINIMO">50</integer>
+    <integer name="DEFAULT_PESO_MAXIMO">130</integer>
+    <integer name="DEFAULT_EDAD_MINIMA">18</integer>
+    <integer name="DEFAULT_EDAD_MAXIMA">99</integer>
+    <integer name="DEFAULT_RADIO">300</integer>
+
+    <integer name="NUM_MAX_FOTOS_PREMIUM">12
+    </integer>    <!-- NUM MAXIMO DE FOTOS QUE PUEDE CARGAR UN USUARIO PREMIUM. Debe coincidir con el de backend-->
+    <integer name="NUM_MAX_FOTOS_NO_PREMIUM">1
+    </integer>    <!-- NUM MINIMO DE FOTOS QUE PUEDE CARGAR UN USUARIO NO PREMIUM. Debe coincidir con el de backend-->
+
+    <!-- LOGROS -->
+    <!-- LOS LOGROS INDICAN CUANTAS ESTRELLAS GANAS O PIERDEN -->
+    <integer name="LOGRO_ANUNCIO_BONIFICADO">1</integer>
+    <integer name="LOGRO_COBRO_SEMANAL">-1</integer>
+    <integer name="LOGRO_COBRO_PETICION_CHAT_GENERAL">-2</integer>
+    <integer name="LOGRO_SIGNED_UP">0</integer>
+    <integer name="LOGRO_COMPRA_5_ESTRELLAS">5</integer>
+    <integer name="LOGRO_COMPRA_10_ESTRELLAS">10</integer>
+    <integer name="LOGRO_COMPRA_20_ESTRELLAS">20</integer>
+    <integer name="LOGRO_COMPRA_40_ESTRELLAS">40</integer>
+
+    <!--- tamanyo MAXIMO DE LAS FOTOS (8MB)-->
+    <integer name="MAX_PHOTO_LENGTH">25165824</integer>
+
+    <!-- MOTIVOS PARA DAR O QUITAR ESTRELLAS -->
+    <!-- LOS MOTIVOS EXPLICAN QUÉ HA HECHO -->
+    <integer name="MOTIVO_SIGNED_UP">0</integer>
+    <integer name="MOTIVO_COMPRA_5_ESTRELLAS">1</integer>
+    <integer name="MOTIVO_COMPRA_10_ESTRELLAS">2</integer>
+    <integer name="MOTIVO_COMPRA_20_ESTRELLAS">3</integer>
+    <integer name="MOTIVO_COMPRA_40_ESTRELLAS">4</integer>
+    <integer name="MOTIVO_AD_REWARDED">5</integer>
+    <integer name="MOTIVO_COBRO_SEMANAL">6</integer>
+    <integer name="MOTIVO_COBRO_PETICION_CHAT_GENERAL">7</integer>
+
+    <!--duracion del fade in de las listas de perfiles -->
+
+    <integer name="Tam_Normal_icons">24</integer>
+    <integer name="Tam_Small_icons">16</integer>
+    <integer name="Tam_Notification_icons">22</integer>
+    <integer name="Tam_leido">11</integer>
+
+
+    <!-- el icono de la estrella tiene que ser un poco mas grande pq dentro tiene texto -->
+
+    <!-- estado de las relaciones (debe coincidir con el mismo en el backend -->
+    <!--<integer name="RELACION_PENDIENTE_APROBACION">0</integer> --> <!-- HASTA QUE EL OTRO NO RESPONDA NO PODRÁ ESCRIBIR MAS-->
+    <integer name="RELACION_ACTIVA">1</integer> <!-- LOS DOS PUEDEN HABLAR LIBREMENTE -->
+    <integer name="RELACION_BORRADA">2</integer> <!-- SE HA BORRADO LA RELACION PERO EL OTRO AUN PUEDE HABLARLE -->
+    <integer name="RELACION_VIUDA">3</integer> <!-- EL OTRO HA BORRADO SU PERFIL-->
+    <integer name="RELACION_DENUNCIADA">4</integer> <!-- HA SIDO DENUNCIADO-->
+
+    <!--- MAXIMO NUMER DE CONVERSACIONES QUE GUARDAMOS PARA EL CHAT GENERAL-->
+    <integer name="MAX_CHAT_LENGTH">40</integer>
+
+
+    <integer name="VENGO_DE_PRINCIPAL">1</integer>
+    <integer name="VENGO_DE_CHAT_GENERAL">3</integer>
+    <integer name="VENGO_DE_MENSAJES">7</integer>
+
+
+
+    <integer name="UMBRAL_ONLINE">24</integer> <!-- un dia -->
+    <integer name="UMBRAL_NUEVO">168</integer> <!--24*7 (una semana)-->
+</resources>

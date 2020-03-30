@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@id/Dialog_signup_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
+        android:hint="@string/ACTIVITY_INICIO_HINT_EMAIL"
+        android:inputType="textEmailAddress"
+        android:scrollHorizontally="true"
+        android:textColor="@color/gris"
+        android:textColorHint="@color/gris_semi_transparente" />
+
+    <EditText
+        android:id="@id/Dialog_signup_password1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
+        android:hint="@string/ACTIVITY_INICIO_HINT_PASSWORD"
+        android:inputType="textPassword"
+        android:scrollHorizontally="true"
+        android:textColor="@color/gris"
+        android:textColorHint="@color/gris_semi_transparente"
+         />
+
+    <EditText
+        android:id="@id/Dialog_signup_password2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
+        android:hint="@string/ACTIVITY_INICIO_HINT_REPEAT_PASSWORD"
+        android:inputType="textPassword"
+        android:scrollHorizontally="true"
+        android:textColor="@color/gris"
+        android:textColorHint="@color/gris_semi_transparente"
+         />
+</LinearLayout>
+
+

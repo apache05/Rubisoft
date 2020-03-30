@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="boton_surface_reaction">
+        <item name="android:background">?attr/selectableItemBackgroundBorderless</item>
+    </style>
+
+    <!-- estilos de los tablayouts -->
+    <style name="tablayout_style">
+        <item name="android:background">@color/white</item>
+        <item name="tabMode">fixed</item>
+        <item name="tabGravity">fill</item>
+        <item name="tabIndicatorColor">@color/accent</item>
+        <item name="tabIndicatorHeight">2dp</item>
+        <item name="tabPaddingStart">8dp</item>
+        <item name="tabPaddingEnd">8dp</item>
+        <item name="tabBackground">?attr/selectableItemBackgroundBorderless</item>
+        <item name="tabSelectedTextColor">@color/accent</item>
+    </style>
+
+    <!-- <style name="shared_element_amistad">
+         <item name="android:transitionName">@string/SHARED_ELEMENT_AMISTAD</item>
+     </style>
+
+     <style name="shared_element_solicitud_amistad">
+         <item name="android:transitionName">@string/SHARED_ELEMENT_SOLICITUD_AMISTAD</item>
+     </style>
+
+     <style name="shared_element_principal">
+         <item name="android:transitionName">@string/SHARED_ELEMENT_PRINCIPAL</item>
+     </style>-->
+</resources>

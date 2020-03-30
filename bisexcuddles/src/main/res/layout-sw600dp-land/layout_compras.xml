@@ -1,0 +1,200 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_marginTop="90dp"
+    android:background="@color/primary_light"
+    android:id="@id/Main_LinearLayout">
+        <include layout="@layout/navigation_drawer" />
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <include layout="@layout/toolbar" />
+
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal|top"
+                    android:orientation="vertical">
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="20dp"
+                        app:cardCornerRadius="@dimen/corner_radius"
+                        app:cardElevation="@dimen/elevation_perfiles">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:padding="20dp">
+
+
+                            <TextView
+                                android:id="@id/Layout_compras_TextView_comprar_estrellas"
+                                style="@style/comprar"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="10dp"
+                                android:textIsSelectable="true"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                android:textSize="@dimen/tamanyo_letra_l"/>
+
+                            <TextView
+                                android:id="@id/Layout_compras_TextView_ventajas_de_comprar"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:textIsSelectable="true"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/Layout_compras_TextView_comprar_estrellas"
+                                android:layout_marginTop="10dp"
+                                android:textSize="@dimen/tamanyo_letra_m"
+                                />
+
+                                <RadioGroup
+                                    android:id="@id/Layout_compras_RadioGroup_compra"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    app:layout_constraintTop_toBottomOf="@id/Layout_compras_TextView_ventajas_de_comprar"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    android:layout_marginTop="20dp"
+                                    android:layout_marginStart="10dp">
+                                    <RadioButton
+                                        android:id="@id/Layout_compras_RadioButton_5_estrellas"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:checked="true" />
+
+                                    <RadioButton
+                                        android:id="@id/Layout_compras_RadioButton_10_estrellas"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:checked="true" />
+
+                                    <RadioButton
+                                        android:id="@id/Layout_compras_RadioButton_20_estrellas"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content" />
+
+                                    <RadioButton
+                                        android:id="@id/Layout_compras_RadioButton_40_estrellas"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content" />
+
+                                </RadioGroup>
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@id/Layout_compras_Button_comprar"
+                                style="@style/boton_surface_reaction"
+                                android:layout_width="@dimen/Tam_Normal_icons"
+                                android:layout_height="@dimen/Tam_Normal_icons"
+                                android:layout_gravity="end"
+                                android:layout_marginBottom="10dp"
+                                android:layout_marginEnd="10dp"
+                                android:contentDescription="@string/Content_description_boton"
+                                android:cropToPadding="false"
+                                android:focusable="false"
+                                android:scaleType="centerInside"
+                                android:tint="@color/accent"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent" />
+
+                            <ProgressBar
+                                android:id="@id/mProgressBar"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:indeterminate="true"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </androidx.cardview.widget.CardView>
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginStart="20dp"
+                        app:cardCornerRadius="@dimen/corner_radius"
+                        app:cardElevation="@dimen/elevation_perfiles">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="vertical"
+                            android:padding="20dp">
+
+                            <TextView
+                                android:id="@id/Layout_compras_TextView_suscribir_premium"
+                                style="@style/comprar"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="20dp"
+                                android:gravity="center_horizontal"
+                                android:textIsSelectable="true"
+                                android:textSize="@dimen/tamanyo_letra_l"
+                                />
+
+                            <TextView
+                                android:id="@id/Layout_compras_TextView_ventajas_de_suscribir"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="20dp"
+                                android:textIsSelectable="true"
+                                android:textSize="@dimen/tamanyo_letra_m"
+                                />
+
+                            <RadioGroup
+                                android:id="@id/Layout_compras_RadioGroup_suscribe"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingTop="10dp">
+
+                                <RadioButton
+                                    android:id="@id/Layout_compras_RadioButton_medio_anyo"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:checked="true" />
+
+                                <RadioButton
+                                    android:id="@id/Layout_compras_RadioButton_1_anyo"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+                            </RadioGroup>
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@id/Layout_compras_Button_suscribirse"
+                                style="@style/boton_surface_reaction"
+                                android:layout_width="@dimen/Tam_Normal_icons"
+                                android:layout_height="@dimen/Tam_Normal_icons"
+                                android:layout_gravity="end"
+                                android:layout_marginTop="20dp"
+                                android:contentDescription="@string/Content_description_boton"
+                                android:cropToPadding="false"
+                                android:focusable="false"
+                                android:scaleType="centerInside"
+                                android:tint="@color/accent" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+            </androidx.core.widget.NestedScrollView>
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</LinearLayout>

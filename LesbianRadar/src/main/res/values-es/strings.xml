@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- UNIDADES DE MEDIDA -->
+    <string name="Mi">%1$s Mi</string>
+    <string name="kg">%1$d Kg</string>
+    <string name="km">%1$.2f Km</string>
+    <string name="m">%1$.2f m</string>
+
+    <!-- *********************** SETTING OPTIONS y*********************************** -->
+    <string name="title_activity_condiciones_uso">Términos de uso</string>
+    <string name="title_activity_politica_privacidad">Privacidad</string>
+
+    <!-- ****************************  VARIOS ****************************-->
+    <string name="no">No</string>
+    <string name="si">Si</string>
+    <string name="y">y</string>
+    <string name="Cancelar">Cancelar</string>
+    <string name="ok">Ok</string>
+    <string name="app_name">Lesbian Radar</string>
+    <string name="anyos">%1$d años</string>
+    <string name="foto_inapropiada">Esta foto se considera inapropiada</string>
+    <string name="SOLO_PREMIUM">Sólo para usuarios premium</string>
+    <string name="LOCATION_NOT_READY">Por favor, activa el modo Ubicación para encontrar y actualizar tu posición.</string>
+
+    <!--  MENSAJES DEL GOOGLE CLOUD MESSAGING -->
+    <string name="MENSAJE_DE">%1$s te ha mandado un mensaje </string>
+    <string name="NUEVO_MENSAJE">%1$s ha escrito en el chat </string>
+
+    <!--  MENSAJES POR DEFECTO CUANDO LLEGA UN MENSAJE Y LA APP ESTÁ EN BACKGROUND -->
+    <string name="DEFAULT_NOTIFICATION_TITLE" >Nuevo mensaje</string>
+    <string name="DEFAULT_NOTIFICATION_TEXT" >Tienes un mensaje sin leer. ¡Leelo!</string>
+
+    <!--************************ MENU_CAMBIAR_FOTO ************************  -->
+    <string name="change_pic">Cambiar foto</string>
+    ¡
+    <!-- *********************** TEXTO QUE APARECE CUANDO NO HAY INTERNET y*********************************** -->
+    <string name="ACTIVITY_SIN_CONEXION_NO_HAY_CONEXION">NO HAY CONEXION</string>
+
+    <!-- *********************** Activity_Mensajes*********************************** -->
+    <string name="ACTIVITY_MI_PERFIL_TAB_TUS_FOTOS">Tus fotos</string>
+    <string name="ACTIVITY_MI_PERFIL_TAB_TUS_DATOS">Tus datos</string>
+    <string name="ACTIVITY_MI_PERFIL_TAB_TUS_ESTRELLAS">Tus estrellas</string>
+
+    <!--************************ ACTIVITY_CHAT_GENERAL ************************ -->
+    <string name="ACTIVITY_CHAT_GENERAL_CUANTOS_HAY">Hay %d personas online</string>
+
+    <!-- *********************** ACTIVITY_MENSAJES*********************************** -->
+    <string name="ACTIVITY_MENSAJES_NO_HAY_MENSAJES">No tienes ningún mensaje aún</string><!--*******-->
+
+    <!--************************ ACTIVITY_CHAT ************************ -->
+    <string name="ACTIVITY_CHAT_AMISTAD_TERMINADA">El usuario ya no acepta más mensajes o se ha dado de baja</string>
+    <string name="ACTIVITY_CHAT_ESTRELLAS_GRATIS">Consigue estrellas gratis</string>
+
+
+    <!--************************  ACTIVITY_CONFIGURA_RADAR grupo ************************ -->
+    <string name="ACTIVITY_CONFIGURA_RADAR_EDAD_ENTRE">Rango de edad </string>
+    <string name="ACTIVITY_CONFIGURA_RADAR_ALTURA_ENTRE"> Rango de altura </string>
+    <string name="ACTIVITY_CONFIGURA_RADAR_PESO_ENTRE">Rango de peso </string>
+    <string name="ACTIVITY_CONFIGURA_RADAR_QUE_TENGA_CASA">Sólo los/las que tengan casa </string>
+    <string name="ACTIVITY_CONFIGURA_RADAR_QUE_TENGA_COCHE">Sólo los/las que tengan coche </string>
+    <string name="ACTIVITY_CONFIGURA_RADAR_QUE_TENGA_MOTO">Sólo los/las que tengan moto </string>
+    <string name="ACTIVITY_CONFIGURA_RADAR_RAZA_">Raza: </string>
+    <string name="ACTIVITY_CONFIGURA_RADAR_DISTANCIA_MI">En un radio de %1$s Mi</string>
+    <string name="ACTIVITY_CONFIGURA_RADAR_DISTANCIA_KM">En un radio de %1$d Km</string>
+    <string name="ACTIVITY_CONFIGURA_RADAR_CUALQUIER_RAZA">Cualquier raza</string>
+    <string name="ACTIVITY_CONFIGURA_RADAR_AL_MENOS_1_RAZA">Debes seleccionar al menos una raza</string>
+    <string name="ACTIVITY_CONFIGURA_RADAR_NEW">Nuevos</string>
+    <string name="ACTIVITY_CONFIGURA_RADAR_ONLINE">Online</string>
+
+    <!-- ***********************  ACTIVITY_UNINSTALL *********************************** -->
+    <string name="ACTIVITY_UNINSTALL_UNINSTALL">Borrr cuenta</string>
+
+    <!--************************ ACTIVITY_CONFIGURACION ************************  -->
+    <string name="ACTIVITY_CONFIGURACION_UNIDADES">Unidades: </string>
+    <string name="ACTIVITY_CONFIGURACION_CHAT_ACTIVADO">Chat activadd</string>
+    <string name="ACTIVITY_CONFIGURACION_SONIDO_CHAT_DESACTIVADO">Chat desactivado</string>
+    <string name="ACTIVITY_CONFIGURACION_ELIMINAR_CUENTA">Darse de baja</string>
+
+    <!-- ***********************  ACTIVITY_INICIO *********************************** -->
+    <string name="ACTIVITY_INICIO_ERROR_LOGGIN">Error al autenticarse. Por favor, inténtelo de nuevo</string>
+    <string name="ACTIVITY_INICIO_HINT_EMAIL">Email</string>
+    <string name="ACTIVITY_INICIO_HINT_PASSWORD">Contraseña</string>
+    <string name="ACTIVITY_INICIO_HINT_REPEAT_PASSWORD">Repite contraseña</string>
+    <string name="ACTIVITY_INICIO_SIGNIN">Entrar</string>
+    <string name="ACTIVITY_INICIO_SIGNUP">Registrarse</string>
+    <string name="ACTIVITY_INICIO_BAD_EMAIL">Email no válido</string>
+    <string name="ACTIVITY_INICIO_FORGOT_PASSWORD">¿Has olvidado tu contraseña?</string>
+    <string name="ACTIVITY_INICIO_FORGOT_RESET_PASSWORD">Reestablecer contraseña</string>
+    <string name="ACTIVITY_INICIO_FORGOT_RESET">Reestablecer</string>
+    <string name="ACTIVITY_INICIO_EMAIL_SENT">Has recibido un email con las instrucciones para restablecer la contraseña </string>
+    <string name="ACTIVITY_INICIO_PASSWORDS_DOESNT_MATCH">Las contraseñas no coinciden</string>
+    <string name="ACTIVITY_INICIO_NOTA_PRIVACIDAD">No se utilizará ningún dato de tu cuenta ni se enviará ningún mensaje</string>
+
+    <!-- ***********************  ACTIVITY_REGISTRO *********************************** -->
+    <string name="ACTIVITY_REGISTRO_DATOS_FISICOS" >Cómo eres</string>
+    <string name="ACTIVITY_REGISTRO_SEXUALIDAD" >Sexualidad</string>
+    <string name="ACTIVITY_REGISTRO_TITULO">Registro</string>
+    <string name="ACTIVITY_REGISTRO_CHECKBOX_I_AGREE">Acepto los </string>
+    <string name="ACTIVITY_REGISTRO_TEXTVIEW_TERMS_AND_CONDITIONS">Términos y Condiciones de uso</string>
+    <string name="ACTIVITY_REGISTRO_ALTURA_">Altura: </string>
+    <string name="ACTIVITY_REGISTRO_PESO_">Peso: </string>
+    <string name="ACTIVITY_REGISTRO_RAZA_">Raza: </string>
+    <string name="ACTIVITY_REGISTRO_NICK_">Nombre </string>
+    <string name="ACTIVITY_REGISTRO_QUIERO_DEJAR_CLARO">Quiero dejar claro que\u002a  </string>
+    <string name="ACTIVITY_REGISTRO_OPCIONAL">\u002a Opcional </string>
+    <string name="ACTIVITY_REGISTRO_BIRTH_">Fecha nacimiento </string>
+    <string name="ACTIVITY_REGISTRO_ERROR_FALTA_NICK">Error: Falta tu nombre</string>
+    <string name="ACTIVITY_REGISTRO_ERROR_FALTA_SEXUALIDAD">Error: Debes seleccionar tu sexo y tu orientación</string>
+    <string name="ACTIVITY_REGISTRO_ERROR_UNDERAGE">Error: Debes ser estrictamente mayor de %1$d años</string>
+    <string name="ACTIVITY_REGISTRO_ERROR_TERMS"> Debes aceptar los Términos y Condiciones de uso</string>
+    <string name="ACTIVITY_REGISTRO_ERROR_INCONGRUENCIA_SEXUAL">Error: Tu sexo y orientación no son congruentes</string>
+
+    <!-- *********************** ACTIVITY_PRIMERAS_FOTOS y*********************************** -->
+    <string name="ACTIVITY_PRIMERAS_FOTOS_INSERTA_FOTOS">Opcionalmente, puedes subir una foto de perfil tuya</string>
+    <string name="ADVERTENCIA">Atención: No está permitido subir fotos obscenas o pornográficas. Los administradores borrarán cualquier foto no apropiada sin ningún aviso.</string>
+
+    <!-- ***********************  ACTIVITY_PRINCIPAL *********************************** -->
+    <string name="ACTIVITY_PRINCIPAL_NO_VA_EL_GPS">Imposible buscar gente correctamente mientras tu localización sea desconocida. Activa tu localización y prueba otra vez pasados unos segundos</string>
+    <string name="ACTIVITY_PRINCIPAL_NINGUN_PERFIL_ENCONTRADO">Ningún perfil encontrado con los ajustes actuales de tu radar</string>
+
+    <!-- ***********************  ACTIVITY_COMPRAS *********************************** -->
+    <string name="ACTIVITY_MEJORAR_COMPRA_X_ESTRELLAS">%1$d estrellas por %2$s</string>
+    <string name="ACTIVITY_MEJORAR_SUSCRIBE_6_MESES">Subscribir 6 meses por %1$s</string>
+    <string name="ACTIVITY_MEJORAR_SUSCRIBE_1_AÑO">Suscribir 1 año por %1$s</string>
+    <string name="ACTIVITY_MEJORAR_TITULO_SUSCRIBIR"> Suscribir premium</string>
+    <string name="ACTIVITY_MEJORAR_TITULO_COMPRAR"> Comprar estrellas</string>
+    <string name="ACTIVITY_MEJORAR_ERROR_COMPRA_ESTRELLAS">Error: Compra no efectuada</string>
+    <string name="ACTIVITY_MEJORAR_EXITO_COMPRA">Compra efectuada</string>
+    <string name="ACTIVITY_MEJORAR_ERROR_SUSCRIPCION">Error: Suscripción no efectuada</string>
+    <string name="ACTIVITY_MEJORAR_EXITO_SUSCRIPCION">Suscripción efectuada</string>
+    <string name="ACTIVITY_MEJORAR_CANCELADO">Cancelado</string>
+    <string name="ACTIVITY_MEJORAR_YA_ES_PREMIUM">Ya tienes una cuenta premium</string>
+
+    <!-- ***********************  ACTIVITY_ESTRELLAS_GRATIS *********************************** -->
+    <string name="ACTIVITY_ESTRELLAS_POR_ANUNCIO">Obtener %1$d estrellas viendo un anuncio</string>
+
+    <!-- ***********************  ACTIVITY_FEEDBACK *********************************** -->
+    <string name="ACTIVITY_FEEDBACK_TITULO">¿Te gusta esta app?</string>
+    <string name="ACTIVITY_FEEDBACK_PLEASE_FEEDBACK">Por favor, dinos qué cosas te desagradan o mejorarías.</string>
+    <string name="ACTIVITY_FEEDBACK_SEND_FEEDBACK">Enviar</string>
+    <string name="ACTIVITY_FEEDBACK_RATE_APP">Por favor, danos una buena puntuación en el Play Store</string>
+    <string name="ACTIVITY_FEEDBACK_RATE"> Puntuar </string>
+    <string name="ACTIVITY_FEEDBACK_SENT"> Información enviada</string>
+    <string name="ACTIVITY_FEEDBACK_HINT_YOUR_FEEDBACK"> Escribe un comentario</string>
+    <string name="ACTIVITY_FEEDBACK_APP_LENTA"> Aplicación lenta</string>
+    <string name="ACTIVITY_FEEDBACK_MAL_DISENO">Diseño horrible</string>
+    <string name="ACTIVITY_FEEDBACK_MAL_TRADUCIDA">Mal traducida </string>
+    <string name="ACTIVITY_FEEDBACK_NO_SE_COMO_VA">No entiendo como funciona (Por favor, lea la ayuda primero)</string>
+    <string name="ACTIVITY_FEEDBACK_NO_FUNCIONA_BIEN">Funciona mal </string>
+    <string name="ACTIVITY_FEEDBACK_POCOS_USUARIOS">Hay pocos usuarios </string>
+    <string name="ACTIVITY_FEEDBACK_OTROS">Otros motivos </string>
+
+    <!-- ***********************  FRAGMENT_FOTO *********************************** -->
+    <string name="FRAGMENT_FOTO_ERROR_FOTO_NO_CARGADA">Error: No se ha podido cargar la foto</string>
+    <string name="FRAGMENT_FOTO_ERROR_FOTO_MUY_PESADA">Error: tamaño de la foto excesivo</string>
+    <string name="FRAGMENT_FOTO_EROR_FORMAT_NOT_SUPPORTED">Error: formato de fichero no soportado</string>
+    <string name="FRAGMENT_FOTO_WAIT">Espere mientras la foto se guarda</string>
+
+    <!-- ***********************  FRAGMENT_DATOS_PERSONALES *********************************** -->
+    <string name="FRAGMENT_DATOS_PERSONALES_NICK_">Nombre: </string>
+    <string name="FRAGMENT_DATOS_PERSONALES_EDAD_">Edad: </string>
+    <string name="FRAGMENT_DATOS_PERSONALES_ALTURA_">Altura:</string>
+    <string name="FRAGMENT_DATOS_PERSONALES_PESO_">Peso: </string>
+    <string name="FRAGMENT_DATOS_PERSONALES_RAZA_">Raza: </string>
+    <string name="FRAGMENT_DATOS_PERSONALES_SEXUALIDAD">Sexualidad</string>
+    <string name="FRAGMENT_DATOS_PERSONALES_TUS_DATOS">Tus datos</string>
+    <string name="FRAGMENT_DATOS_PERSONALES_OTROS_DATOS">Otros datos</string>
+    <string name="FRAGMENT_DATOS_PERSONALES_QUIERO_DEJAR_CLARO">Quiero dejar claro que</string>
+
+    <!-- *******************  Dialog interactuar ************************** -->
+    <string name="DIALOGO_INTERACTUAR_TITULO">Selecciona una acción</string>
+
+    <!-- *******************  Dialogo borrar cuenta ************************** -->
+    <string name="DIALOGO_BORRAR_CUENTA_TITULO">Darse de baja</string>
+    <string name="DIALOGO_BORRAR_CUENTA_ADVERTENCIA">Perderás todas tus estrellas e incluso tu suscripción si la tuvieras</string>
+
+    <!--************************  dialogo denuncia ************************-->
+    <string name="DIALOGO_DENUNCIAR_PREGUNTA_MOTIVO">¿Cuál es el motivo de la denuncia?</string>
+    <string name="DIALOGO_DENUNCIAR_DENUNCIAR">Denunciar</string>
+    <string name="DIALOGO_DENUNCIAR_DENUNCIADO">Usuario denunciado</string>
+
+    <!--************************  dialogo ayuda ************************-->
+    <string name="DIALOGO_CONSEJO_TITULO">Ayuda</string>
+    <string name="DIALOGO_CONSEJO_MENSAJE">Pulsa sobre cualquier perfil para realizar cualquier acción. </string>
+    <string name="DIALOGO_CONSEJO_MENSAJE_CHAT_GENERAL">Chatea con gente de tu país. Para charlar en privado, pulsa sobre su foto y pulsa el botón de mensaje.</string>
+    <string name="DIALOGO_CONSEJO_YA_NO_MAS">No mostrar más</string>
+    <string name="DIALOGO_CONSEJO_FOTO_MANAGER">Pulsa sobre una foto para cambiarla.</string>
+
+    <!--************************  dialogo se te va a cobrar ************************-->
+    <string name="DIALOGO_AVISO_MENSAJE_SE_TE_VA_A_COBRAR">Esta acción cuesta %1$d estrellas para los usuarios que no son premium.</string>
+    <string name="DIALOGO_AVISO_MENSAJE_NO_TIENES_ESTRELLAS">Esta acción cuesta %1$d estrellas para los usuarios que no son premium. No tienes suficientes estrellas para solicitarla.</string>
+    <string name="DIALOGO_COMPRAR_ESTRELLAS">Comprar estrellas</string>
+
+    <!--************************  MOTIVOS PARA DAR ESTRELLAS ************************-->
+
+    <string name="MOTIVO_SIGNED_UP">Registro</string>
+    <string name="MOTIVO_COBRO_SEMANAL">Cuota semanal</string>
+    <string name="MOTIVO_COMPRA_ESTRELLAS">Compra</string>
+    <string name="MOTIVO_COBRO_PETICION_CHAT_GENERAL">Enviar archivo adjunto usando chat</string>
+
+    <!-- Ventajas premium -->
+    <string name="ventajas_de_suscribir">
+        \n\t- Aparecerás en las primeras posiciones.\n
+        \n\t- No se te cobrarán estrellas semanalmente.\n
+        \n\t- Podrás subir hasta %1$d fotos en tu perfil.\n
+        \n\t- Podrás utilizar más filtros de búsqueda.\n
+        \n\t- Doble radio de búsqueda\n
+        \n\t- Los resultados de las búsquedas se muestran ordenados por distancia\n
+        \n\t- No hay publicidad\n
+        \n\t- Podrás enviar fotos en tus mensajes de forma ilimitada\n
+        \n
+    </string>
+    <string name="ventajas_de_comprar">
+        \n\t- Aumenta tu visibilidad\n
+        \n\t- Multiplica tus peticiones de amistad\n
+        \n\t- Podrás enviar fotos en tus mensajes\n
+        \n
+    </string>
+
+    <!-- HELP -->
+    <string name="help_info_title">
+       ¿Qué es %1$s?
+    </string>
+    <string name="help_info">
+        %1$s es una app donde puedes encontrar nuevos amigos cerca de ti. Es gratuito aunque puedes pagar por disfrutar de la versión premium. Configura tu radar y realiza búsquedas regularmente.
+    </string>
+    <string name="help_ganar_estrellas">Obtén estrellas para aparecer en las primeras posiciones de las búsquedas. %1$d estrellas serán cobradas semanalmente si no eres usuario premium.</string>
+    <string name="help_como_funciona">
+        ¿Cómo funciona?
+    </string>
+    <string name="help_principal" >Aquí se mostrará el resultado de tu búsqueda. Pulsa sobre los perfiles encontrados para realizar cualquier acción.  Los perfiles aparecen ordenados por estrellas si no eres usuario premium y ordenados por distancia si eres usuario premium.</string>
+    <string name="help_configura_radar" >Configura tu radar para encontrar gente que más te agrade.Si es un miembro Premium, puede buscar  personas al doble de distancia además de otras características. </string>
+    <string name="help_mensajes">Aquí podrás leer todas los mensajes que hayas mandado o recibido </string>
+    <string name="help_mi_perfil" >Sube fotos, actualiza tu perfil y revisa tus estrellas aquí. Los usuarios premium pueden subir hasta %1$d fotos.</string>
+    <string name="help_compras" >Conviértete en un usuario premium o compra estrellas aquí. ¡Disfruta de todos sus beneficios!</string>
+    <string name="help_ajustes" >Ajusta algunas opciones como las notificaciones o las unidades de medida. También puedes darte de baja aquí.</string>
+    <string name="help_chat_general">Chatea con gente de tu país y con la misma orientación sexual que tú. </string>
+    <string name="help_feedback" >Dinos tu opinión sobre esta app. Puntuanos o dinos que cosas no te gustan.</string>
+    <string name="help_como_contactar" >¿Cómo puedo ponerme en contacto con el administrador de %1$s ?</string>
+    <string name="help_para_cualquier_consulta">Puedes contactar con nosotros mediante las siguientes direcciones:</string>
+    <string name="MOTIVO_ANUNCIO_BONIFICADO">Anuncio visualizado</string>
+    <string name="estrellas">+%1$d estrellas</string>
+</resources>

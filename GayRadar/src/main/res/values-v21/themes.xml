@@ -1,0 +1,18 @@
+<resources>
+
+    <style name="Xradar_theme" parent="Xradar_theme.Base">
+        <!-- exclusivo de android 5.0 -->
+        <item name="android:windowContentTransitions">true</item>
+        <item name="android:windowAllowEnterTransitionOverlap">true</item>
+        <item name="android:windowAllowReturnTransitionOverlap">true</item>
+
+        <!-- specify shared element transitions -->
+
+
+        <!-- specify enter and exit transitions -->
+        <item name="android:windowEnterTransition">@transition/slide</item>
+        <item name="android:windowExitTransition">@transition/slide</item>
+    </style>
+
+
+</resources>

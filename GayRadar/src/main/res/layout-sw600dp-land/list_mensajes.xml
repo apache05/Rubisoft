@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?><!-- ESTO ES EL DISEÑO DEL LIST DE FOTOS  DE PERFILES  QUE UTILIZAMOS MEDIANTE UN RECYCLERVIEW -->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:clickable="true"
+    android:focusable="true"
+    android:clipToPadding="false"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:layout_marginTop="10dp">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@id/Mensajes_list_ImageView"
+        android:layout_width="@dimen/tamanyo_foto_perfiles"
+        android:layout_height="@dimen/tamanyo_foto_perfiles"
+        android:layout_marginEnd="8dp"
+        android:contentDescription="@string/Content_description_foto"
+        android:gravity="center_horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@id/Mensajes_list_ImageView_mensaje_sin_leer"
+        android:layout_width="@dimen/Tam_Notification_icons"
+        android:layout_height="@dimen/Tam_Notification_icons"
+        android:layout_margin="8dp"
+        android:contentDescription="@string/Content_description_foto"
+        app:layout_constraintEnd_toEndOf="@id/Mensajes_list_ImageView"
+        app:layout_constraintTop_toTopOf="@id/Mensajes_list_ImageView" />
+
+    <TextView
+        android:id="@id/Mensajes_list_TextView"
+        android:layout_width="@dimen/tamanyo_foto_perfiles"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="@dimen/tamanyo_letra_s"
+        android:background="@color/primary"
+        android:gravity="center_horizontal"
+        app:layout_constraintTop_toBottomOf="@id/Mensajes_list_ImageView"
+        app:layout_constraintEnd_toEndOf="@id/Mensajes_list_ImageView"
+        app:layout_constraintStart_toStartOf="@id/Mensajes_list_ImageView"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

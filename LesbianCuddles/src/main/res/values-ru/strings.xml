@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+    <!--************************ MENU_CAMBIAR_FOTO ************************  -->
+    <string name="change_pic">Изменить фото</string>
+
+    <!-- *********************** SETTING OPTIONS y*********************************** -->
+    <string name="title_activity_condiciones_uso">Условия использования</string>
+    <string name="title_activity_politica_privacidad">Политика конфиденциальности</string>
+
+    <!-- unidades de medida -->
+    <string name="Mi">%1$s миль</string>
+    <string name="kg">%1$d кг</string>
+    <string name="km">%1$.2f км</string>
+    <string name="m">%1$.2f м</string>
+
+    <!-- ****************************  VARIOS ****************************-->
+    <string name="no">Нет</string>
+    <string name="si">Да</string>
+    <string name="y">и</string>
+    <string name="Cancelar">Отмена</string>
+    <string name="ok">оК</string>
+    <string name="app_name">Лесбийский искатель</string>
+    <string name="anyos">%1$d года/лет</string>
+    <string name="foto_inapropiada">Эта фотография считается неуместной</string>
+    <string name="SOLO_PREMIUM">Только для премиум-пользователей</string>
+    <string name="LOCATION_NOT_READY">Пожалуйста, включите режим определения местоположения, чтобы определить и обновить ваше местоположение.</string>
+
+    <!--  MENSAJES DEL GOOGLE CLOUD MESSAGING -->
+    <string name="MENSAJE_DE">%1$s отправил(а) вам сообщение</string>
+    <string name="NUEVO_MENSAJE">%1$s написал(а) в чате</string>
+
+    <!--  MENSAJES POR DEFECTO CUANDO LLEGA UN MENSAJE Y LA APP ESTÁ EN BACKGROUND -->
+    <string name="DEFAULT_NOTIFICATION_TITLE" >Новое сообщение</string>
+    <string name="DEFAULT_NOTIFICATION_TEXT" >У вас есть новое непрочитанное сообщение. Давайте читать это!</string>
+
+    <!-- *********************** ACTIVITY_SIN_CONEXION y*********************************** -->
+    <string name="ACTIVITY_SIN_CONEXION_NO_HAY_CONEXION">НЕТ ПОДКЛЮЧЕНИЯ</string>
+
+    <!-- *********************** Activity_Mensajes*********************************** -->
+    <string name="ACTIVITY_MI_PERFIL_TAB_TUS_FOTOS">ваши фотографии</string>
+    <string name="ACTIVITY_MI_PERFIL_TAB_TUS_DATOS">ваши данные</string>
+    <string name="ACTIVITY_MI_PERFIL_TAB_TUS_ESTRELLAS">ваши звезды</string>
+
+    <!--************************ ACTIVITY_CHAT_GENERAL ************************ -->
+    <string name="ACTIVITY_CHAT_GENERAL_CUANTOS_HAY">Пользователи онлайн: %d</string>
+
+    <!-- *********************** ACTIVITY_MENSAJES*********************************** -->
+    <string name="ACTIVITY_MENSAJES_NO_HAY_MENSAJES">Нет сообщений</string><!--*******-->
+
+    <!--************************ ACTIVITY_CHAT ************************ -->
+    <string name="ACTIVITY_CHAT_AMISTAD_TERMINADA">Пользователь больше не принимает сообщения или пользователь больше не зарегистрирован</string>
+    <string name="ACTIVITY_CHAT_ESTRELLAS_GRATIS">Получить звезды бесплатно</string>
+
+    <!--************************  ACTIVITY_CONFIGURA_RADAR************************ -->
+    <string name="ACTIVITY_CONFIGURA_RADAR_EDAD_ENTRE">Возраст</string>
+    <string name="ACTIVITY_CONFIGURA_RADAR_ALTURA_ENTRE">Рост</string>
+    <string name="ACTIVITY_CONFIGURA_RADAR_PESO_ENTRE">Вес</string>
+    <string name="ACTIVITY_CONFIGURA_RADAR_QUE_TENGA_CASA">Только те, у кого есть дом.</string>
+    <string name="ACTIVITY_CONFIGURA_RADAR_QUE_TENGA_COCHE">Только те, у кого есть машина.</string>
+    <string name="ACTIVITY_CONFIGURA_RADAR_QUE_TENGA_MOTO">Только те, у кого есть мотоцикл.</string>
+    <string name="ACTIVITY_CONFIGURA_RADAR_RAZA_">Раса:</string>
+    <string name="ACTIVITY_CONFIGURA_RADAR_DISTANCIA_MI">В радиусе %1$s миль</string>
+    <string name="ACTIVITY_CONFIGURA_RADAR_DISTANCIA_KM">В радиусе %1$d км</string>
+    <string name="ACTIVITY_CONFIGURA_RADAR_CUALQUIER_RAZA">Любая раса</string>
+    <string name="ACTIVITY_CONFIGURA_RADAR_AL_MENOS_1_RAZA">Вы должны выбрать хотя бы одну расу</string>
+    <string name="ACTIVITY_CONFIGURA_RADAR_NEW">новый</string>
+    <string name="ACTIVITY_CONFIGURA_RADAR_ONLINE">онлайн</string>
+
+    <!--************************ ACTIVITY_CONFIGURACION ************************  -->
+    <string name="ACTIVITY_CONFIGURACION_UNIDADES">Единицы измерения:</string>
+    <string name="ACTIVITY_CONFIGURACION_CHAT_ACTIVADO">чат включен</string>
+    <string name="ACTIVITY_CONFIGURACION_SONIDO_CHAT_DESACTIVADO">чат отключен</string>
+
+    <!-- ***********************  ACTIVITY_UNINSTALL *********************************** -->
+    <string name="ACTIVITY_UNINSTALL_UNINSTALL">Удалить аккаунт</string>
+
+    <!-- ***********************  ACTIVITY_INICIO *********************************** -->
+    <string name="ACTIVITY_INICIO_ERROR_LOGGIN">Ошибка входа в систему. Пожалуйста, повторите попытку.</string>
+    <string name="ACTIVITY_INICIO_HINT_EMAIL">E-mail</string>
+    <string name="ACTIVITY_INICIO_HINT_PASSWORD">Пароль</string>
+    <string name="ACTIVITY_INICIO_HINT_REPEAT_PASSWORD">Повторите пароль</string>
+    <string name="ACTIVITY_INICIO_SIGNIN">Вход</string>
+    <string name="ACTIVITY_INICIO_SIGNUP">Регистрация</string>
+    <string name="ACTIVITY_INICIO_BAD_EMAIL">Недействительный адрес эл. почты</string>
+    <string name="ACTIVITY_INICIO_FORGOT_PASSWORD">Забыли пароль?</string>
+    <string name="ACTIVITY_INICIO_FORGOT_RESET_PASSWORD">Восстановление пароля</string>
+    <string name="ACTIVITY_INICIO_FORGOT_RESET">Восстановить</string>
+    <string name="ACTIVITY_INICIO_EMAIL_SENT">Вы получили электронное письмо с инструкциями по восстановлению пароля</string>
+    <string name="ACTIVITY_INICIO_PASSWORDS_DOESNT_MATCH">Пароли не совпадают</string>
+    <string name="ACTIVITY_INICIO_NOTA_PRIVACIDAD">Ваш аккаунт не будет использоваться для сбора информации, и мы не будем отправлять вам никаких сообщений.</string>
+
+    <!-- ***********************  ACTIVITY_REGISTRO_PERSONA *********************************** -->
+    <string name="ACTIVITY_REGISTRO_DATOS_FISICOS" >Ваш внешний вид</string>
+    <string name="ACTIVITY_REGISTRO_SEXUALIDAD" >Ваша сексуальность</string>
+    <string name="ACTIVITY_REGISTRO_TITULO">Регистрация</string>
+    <string name="ACTIVITY_REGISTRO_CHECKBOX_I_AGREE">Я принимаю</string>
+    <string name="ACTIVITY_REGISTRO_TEXTVIEW_TERMS_AND_CONDITIONS">Условия использования</string>
+    <string name="ACTIVITY_REGISTRO_ALTURA_">Рост:</string>
+    <string name="ACTIVITY_REGISTRO_PESO_">Вес:</string>
+    <string name="ACTIVITY_REGISTRO_RAZA_">Раса:</string>
+    <string name="ACTIVITY_REGISTRO_NICK_">Ник</string>
+    <string name="ACTIVITY_REGISTRO_QUIERO_DEJAR_CLARO">Я хочу заявить: *</string>
+    <string name="ACTIVITY_REGISTRO_OPCIONAL">* Необязательно</string>
+    <string name="ACTIVITY_REGISTRO_BIRTH_">Рождение</string>
+    <string name="ACTIVITY_REGISTRO_ERROR_FALTA_NICK">Ошибка: Ваш ник не указан.</string>
+    <string name="ACTIVITY_REGISTRO_ERROR_FALTA_SEXUALIDAD">Ошибка: Вы должны выбрать свой пол и сексуальную ориентацию.</string>
+    <string name="ACTIVITY_REGISTRO_ERROR_UNDERAGE">Ошибка: Вы обязательно должны быть старше %1$d лет.</string>
+    <string name="ACTIVITY_REGISTRO_ERROR_INCONGRUENCIA_SEXUAL">Ошибка: Ваш пол не соответствует вашей сексуальной ориентации.</string>
+    <string name="ACTIVITY_REGISTRO_ERROR_TERMS">Вы должны принять Условия использования</string>
+
+    <!-- *********************** ACTIVITY_PRIMERAS_FOTOS y*********************************** -->
+    <string name="ACTIVITY_PRIMERAS_FOTOS_INSERTA_FOTOS">Вы можете загрузить одно изображение самостоятельно</string>
+    <string name="ADVERTENCIA">Внимание: Вам не разрешено загружать фотографии непристойного или порнографического характера. Администраторы удаляют любое недопустимое изображение без уведомления.</string>
+
+    <!-- ***********************  ACTIVITY_PRINCIPAL *********************************** -->
+    <string name="ACTIVITY_PRINCIPAL_NO_VA_EL_GPS">Невозможно корректное осуществление поиска пользователей, если ваше местоположение неизвестно. Активируйте функцию определения местоположения и повторите попытку через несколько секунд.</string>
+    <string name="ACTIVITY_PRINCIPAL_NINGUN_PERFIL_ENCONTRADO">Не найдены пользователи, соответствующие настройкам вашего радара.</string>
+
+    <!-- ***********************  ACTIVITY_COMPRAS *********************************** -->
+    <string name="ACTIVITY_MEJORAR_COMPRA_X_ESTRELLAS">%1$d звезд(ы) за %2$s</string>
+    <string name="ACTIVITY_MEJORAR_SUSCRIBE_6_MESES">6-месячная подписка за %1$s</string>
+    <string name="ACTIVITY_MEJORAR_SUSCRIBE_1_AÑO">Годовая подписка за %1$s</string>
+    <string name="ACTIVITY_MEJORAR_TITULO_SUSCRIBIR">Премиум-подписка</string>
+    <string name="ACTIVITY_MEJORAR_TITULO_COMPRAR">Приобрести звезды</string>
+    <string name="ACTIVITY_MEJORAR_ERROR_COMPRA_ESTRELLAS">Ошибка: Не удалось осуществить покупку.</string>
+    <string name="ACTIVITY_MEJORAR_EXITO_COMPRA">Покупка успешно осуществлена</string>
+    <string name="ACTIVITY_MEJORAR_ERROR_SUSCRIPCION">Ошибка: Не удалось оформить подписку.</string>
+    <string name="ACTIVITY_MEJORAR_EXITO_SUSCRIPCION">Подписка успешно оформлена</string>
+    <string name="ACTIVITY_MEJORAR_CANCELADO">Отменено</string>
+    <string name="ACTIVITY_MEJORAR_YA_ES_PREMIUM">Вы уже являетесь премиум-пользователем</string>
+
+    <!-- ***********************  ACTIVITY_ESTRELLAS_GRATIS *********************************** -->
+    <string name="ACTIVITY_ESTRELLAS_POR_ANUNCIO">Получите %1$d звезду, просмотрев объявление</string>
+
+    <!-- ***********************  ACTIVITY_FEEDBACK *********************************** -->
+    <string name="ACTIVITY_FEEDBACK_TITULO">Вам нравится это приложение?</string>
+    <string name="ACTIVITY_FEEDBACK_PLEASE_FEEDBACK">Пожалуйста, расскажите нам, что могли бы улучшить</string>
+    <string name="ACTIVITY_FEEDBACK_SEND_FEEDBACK">Отправить</string>
+    <string name="ACTIVITY_FEEDBACK_RATE_APP">Пожалуйста, оцените наше приложение на Play Маркете.</string>
+    <string name="ACTIVITY_FEEDBACK_RATE">Оценить</string>
+    <string name="ACTIVITY_FEEDBACK_SENT">Отзыв отправлен</string>
+    <string name="ACTIVITY_FEEDBACK_HINT_YOUR_FEEDBACK">Напишите свои комментарии…</string><string name="ACTIVITY_FEEDBACK_APP_LENTA">приложение медленно</string>
+    <string name="ACTIVITY_FEEDBACK_MAL_DISENO">дизайн омерзительным</string>
+    <string name="ACTIVITY_FEEDBACK_MAL_TRADUCIDA">неправильно переводил</string>
+    <string name="ACTIVITY_FEEDBACK_NO_SE_COMO_VA">Я не понимаю, как это работает (Пожалуйста, прочтите справку раньше)</string>
+    <string name="ACTIVITY_FEEDBACK_NO_FUNCIONA_BIEN">Не работает хорошо</string>
+    <string name="ACTIVITY_FEEDBACK_POCOS_USUARIOS">Я не нашел никого</string>
+    <string name="ACTIVITY_FEEDBACK_OTROS">другой </string>
+
+    <!-- ***********************  FRAGMENT_FOTO *********************************** -->
+    <string name="FRAGMENT_FOTO_ERROR_FOTO_NO_CARGADA">При загрузке фото произошла ошибка</string>
+    <string name="FRAGMENT_FOTO_ERROR_FOTO_MUY_PESADA">Ошибка: Слишком большой размер фото.</string>
+    <string name="FRAGMENT_FOTO_EROR_FORMAT_NOT_SUPPORTED">Ошибка: Формат файла не поддерживается.</string>
+    <string name="FRAGMENT_FOTO_WAIT">Подождите, пока изображение загрузится</string>
+
+    <!-- ***********************  FRAGMENT_DATOS_PERSONALES *********************************** -->
+    <string name="FRAGMENT_DATOS_PERSONALES_NICK_">Ник:</string>
+    <string name="FRAGMENT_DATOS_PERSONALES_EDAD_">Возраст:</string>
+    <string name="FRAGMENT_DATOS_PERSONALES_ALTURA_">Рост:</string>
+    <string name="FRAGMENT_DATOS_PERSONALES_PESO_">Вес:</string>
+    <string name="FRAGMENT_DATOS_PERSONALES_RAZA_">Раса:</string>
+    <string name="FRAGMENT_DATOS_PERSONALES_SEXUALIDAD">Ориентация</string>
+    <string name="FRAGMENT_DATOS_PERSONALES_TUS_DATOS">Ваши данные</string>
+    <string name="FRAGMENT_DATOS_PERSONALES_OTROS_DATOS">Другие данные</string>
+    <string name="FRAGMENT_DATOS_PERSONALES_QUIERO_DEJAR_CLARO">Я хочу заявить:</string>
+
+    <!-- *******************  Dialogo interactuar ************************** -->
+    <string name="DIALOGO_INTERACTUAR_TITULO">Выберите действие</string>
+
+    <!-- *******************  Dialogo borrar cuenta ************************** -->
+    <string name="DIALOGO_BORRAR_CUENTA_TITULO">Удалить аккаунт</string>
+    <string name="DIALOGO_BORRAR_CUENTA_ADVERTENCIA">Вы лишитесь звезд и подписки при их наличии</string>
+
+    <!--************************  dialogo denuncia ************************-->
+    <string name="DIALOGO_DENUNCIAR_PREGUNTA_MOTIVO">Какова причина вашего сообщения?</string>
+    <string name="DIALOGO_DENUNCIAR_DENUNCIAR">Сообщение</string>
+    <string name="DIALOGO_DENUNCIAR_DENUNCIADO">Пользователь, о котором вы хотите сообщить.</string>
+
+    <!--************************  dialogo ayuda ************************-->
+    <string name="DIALOGO_CONSEJO_TITULO">Помощь</string>
+    <string name="DIALOGO_CONSEJO_MENSAJE">Нажмите на профиль, чтобы выбрать действие.</string>
+    <string name="DIALOGO_CONSEJO_MENSAJE_CHAT_GENERAL">Общайтесь с людьми из вашей страны. Чтобы пообщаться в частном порядке, нажмите на свою фотографию и нажмите кнопку сообщения.</string>
+    <string name="DIALOGO_CONSEJO_YA_NO_MAS">Больше не показывать</string>
+    <string name="DIALOGO_CONSEJO_FOTO_MANAGER">Нажмите на изображение, чтобы его отредактировать.</string>
+    <!-- ****************-->
+    <string name="DIALOGO_AVISO_MENSAJE_SE_TE_VA_A_COBRAR">Это действие стоит %1$d звезд для пользователей без премиум-класса.</string>
+    <string name="DIALOGO_AVISO_MENSAJE_NO_TIENES_ESTRELLAS">Это действие стоит %1$d звезд для пользователей без премиум-класса. Вам не хватает звезд</string>
+    <string name="DIALOGO_COMPRAR_ESTRELLAS">купить звезды</string>
+
+    <!--************************  MOTIVOS PARA DAR ESTRELLAS ************************-->
+
+    <string name="MOTIVO_SIGNED_UP">Регистрация завершена</string>
+    <string name="MOTIVO_COBRO_SEMANAL">Еженедельная плата</string>
+    <string name="MOTIVO_COMPRA_ESTRELLAS">Приобрести</string>
+    <string name="MOTIVO_COBRO_PETICION_CHAT_GENERAL">Отправить прикрепленный файл с помощью чата</string>
+
+    <!-- ventajas premium-->
+    <string name="ventajas_de_suscribir">
+        \nt- Нет еженедельной звезды
+        \n\t- вы выйдете на первые позиции\n
+        \n\t- Загрузка до %1$d фото профиля\n
+        \n\t- Двойной радиус поиска
+        \n\t- Вы можете использовать больше фильтров поиска.\n
+        \n\t- Опция поиска профессионалов активна в вашем профиле и на вашем радаре\n
+        \n\t- Без рекламы\n
+        \n\t- Сортировка профилей по удаленности\n
+        \n\t- Вы можете отправлять фотографии в своих сообщениях неограниченно
+        \n
+    </string>
+    <string name="ventajas_de_comprar">
+        \n\t- Сделайте себя заметнее\n
+        \n\t- Увеличьте количество запросов на добавление в друзья\n
+        \n\t- Вы можете отправлять фотографии в сообщениях
+        \n
+    </string>
+
+
+    <string name="ACTIVITY_CONFIGURACION_ELIMINAR_CUENTA">Удалить аккаунт</string>
+
+    <!-- HELP -->
+    <string name="help_info_title">Что такое %1$s?</string>
+    <string name="help_info">%1$s - это программа, с помощью которой вы сможете найти новых друзей, живущих рядом с вами. Она бесплатна, однако вы можете приобрести за деньги премиум-версию. Настройте ваш радар и ищите людей. </string>
+    <string name="help_ganar_estrellas">получить звезды, и вы окажетесь в верхних позициях поиска. Звезды%1$d взимаются еженедельно, если вы не являетесь премиум-пользователем.</string>
+    <string name="help_como_funciona">Как это работает?</string>
+    <string name="help_principal">Здесь вы увидите результаты вашего поиска. Нажмите на профиль, чтобы выполнить какие-либо действия. Профили отсортированы по звездам, если вы не премиум-пользователь и по расстоянию, если вы - премиум-пользователь. </string>
+    <string name="help_configura_radar">Настройте радар, чтобы находить только людей, которые вам нравятся. Если вы являетесь премиум-участником, вы можете искать людей вдвое дальше, чем другие функции.</string>
+    <string name="help_mensajes">Прочитайте все свои сообщения, которые вы отправили или получили.</string>
+    <string name="help_mi_perfil">Загрузить фото, обновить свой профиль и проверить звезды здесь. Премиум-пользователи могут загружать до %1$d фотографии.</string>
+    <string name="help_compras">Станьте премиум-пользователем или купите звезды. Наслаждайтесь предоставляемыми ими преимуществами!</string>
+    <string name="help_ajustes">Настройте  некоторые функции приложения - уведомления, единицы измерения и т.д. Вы также можете удалить свой аккаунт.</string>
+    <string name="help_chat_general">Общайтесь с людьми из вашей страны с такой же сексуальной ориентацией, что и у вас.</string>
+    <string name="help_feedback">Расскажите, что вы думаете о нашем приложении. Оцените нас или скажите нам о том, что мы можем улучшить</string>
+    <string name="help_como_contactar">Как я могу связаться с администраторами %1$s?</string>
+    <string name="help_para_cualquier_consulta">Вы можете связаться с нами по следующим адресамВы можете связаться с нами по следующим адресам:</string>
+    <string name="MOTIVO_ANUNCIO_BONIFICADO">объявление  визуализированы</string>
+    <string name="estrellas">+%1$d звезда</string>
+</resources>

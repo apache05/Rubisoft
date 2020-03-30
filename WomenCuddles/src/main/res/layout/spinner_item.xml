@@ -1,0 +1,10 @@
+<!-- necesitamos esto para centrar los elementos de los spinners -->
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:padding="4dp"
+    android:textSize="@dimen/tamanyo_letra_s_plus"
+    android:textAlignment="gravity"
+    android:layout_gravity="end"
+    />

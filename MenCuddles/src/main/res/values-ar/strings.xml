@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+    <!--************************ MENU_CAMBIAR_FOTO ************************  -->
+    <string name="change_pic">تغيير الصورة</string>
+
+    <!-- *********************** SETTING OPTIONS y*********************************** -->
+    <string name="title_activity_condiciones_uso">شروط الاستخدام</string>
+    <string name="title_activity_politica_privacidad">سياسة الخصوصية</string>
+
+    <!-- UNIDADES DE MEDIDA -->
+    <string name="kg">كلغ%1$d</string>
+    <string name="Mi">ميل%1$s</string>
+    <string name="km">كم%1$.2f</string>
+    <string name="m">المترو%1$.2f</string>
+
+    <!-- ****************************  VARIOS ****************************-->
+    <string name="no">لا</string>
+    <string name="si">نعم</string>
+    <string name="y">و</string>
+    <string name="Cancelar">إلغاء</string>
+    <string name="ok">حسنا</string>
+    <string name="app_name">مكتشف الرجال</string>
+    <string name="anyos"> %1$d أعوام</string>
+    <string name="foto_inapropiada">هذه الصورة تعتبر غير مناسبة</string>
+    <string name="SOLO_PREMIUM">للمستخدمين البريميوم فقط</string>
+    <string name="LOCATION_NOT_READY">من فضلك، شغل وضع الموقع لتحصل على موقعك وتقوم بتحديثه.</string>
+
+    <!--  MENSAJES DEL GOOGLE CLOUD MESSAGING -->
+    <string name="MENSAJE_DE">%1$s أرسل لك رسالة</string>
+    <string name="NUEVO_MENSAJE">%1$s كتب في الدردشة</string>
+
+    <!--  MENSAJES POR DEFECTO CUANDO LLEGA UN MENSAJE Y LA APP ESTÁ EN BACKGROUND -->
+    <string name="DEFAULT_NOTIFICATION_TITLE" >رسالة جديدة</string>
+    <string name="DEFAULT_NOTIFICATION_TEXT" >لديك رسالة جديدة غير مقروءة. دعنا نقرأها!</string>
+
+    <!-- *********************** ACTIVITY_SIN_CONEXION y*********************************** -->
+    <string name="ACTIVITY_SIN_CONEXION_NO_HAY_CONEXION">لا يوجد اتصال</string>
+
+    <!-- *********************** Activity_Mensajes*********************************** -->
+    <string name="ACTIVITY_MI_PERFIL_TAB_TUS_FOTOS">صورك</string>
+    <string name="ACTIVITY_MI_PERFIL_TAB_TUS_DATOS">البيانات الخاصة بك</string>
+    <string name="ACTIVITY_MI_PERFIL_TAB_TUS_ESTRELLAS">نجومك</string>
+
+    <!--************************ ACTIVITY_CHAT_GENERAL ************************ -->
+    <string name="ACTIVITY_CHAT_GENERAL_CUANTOS_HAY">يوجد %d أشخاص متصلين</string>
+
+    <!-- *********************** ACTIVITY_MENSAJES*********************************** -->
+    <string name="ACTIVITY_MENSAJES_NO_HAY_MENSAJES">ليست هناك رسائل حتى الآن</string><!--*******-->
+
+    <!--************************ ACTIVITY_CHAT ************************ -->
+    <string name="ACTIVITY_CHAT_AMISTAD_TERMINADA">لا يقبل المستخدم الرسائل بعد الآن أو أن المستخدم غير مسجل</string>
+    <string name="ACTIVITY_CHAT_ESTRELLAS_GRATIS">احصل على نجوم مجانية</string>
+
+    <!--************************  ACTIVITY_CONFIGURA_RADAR************************ -->
+    <string name="ACTIVITY_CONFIGURA_RADAR_EDAD_ENTRE">الفئة العمرية</string>
+    <string name="ACTIVITY_CONFIGURA_RADAR_ALTURA_ENTRE">نطاق الطول</string>
+    <string name="ACTIVITY_CONFIGURA_RADAR_PESO_ENTRE">نطاق الوزن</string>
+    <string name="ACTIVITY_CONFIGURA_RADAR_QUE_TENGA_CASA">من لديهم منازل فقط</string>
+    <string name="ACTIVITY_CONFIGURA_RADAR_QUE_TENGA_COCHE">من لديهم سيارات فقط</string>
+    <string name="ACTIVITY_CONFIGURA_RADAR_QUE_TENGA_MOTO">من لديهم دراجات نارية فقط</string>
+    <string name="ACTIVITY_CONFIGURA_RADAR_RAZA_">العرق:</string>
+    <string name="ACTIVITY_CONFIGURA_RADAR_DISTANCIA_MI">في نطاق دائرة نصف قطرها %1$s ميل</string>
+    <string name="ACTIVITY_CONFIGURA_RADAR_DISTANCIA_KM">في نطاق دائرة نصف قطرها %1$d كم</string>
+    <string name="ACTIVITY_CONFIGURA_RADAR_CUALQUIER_RAZA">أي جنس</string>
+    <string name="ACTIVITY_CONFIGURA_RADAR_AL_MENOS_1_RAZA">عليك اختيار جنس واحد على الأقل</string>
+    <string name="ACTIVITY_CONFIGURA_RADAR_NEW">جديد</string>
+    <string name="ACTIVITY_CONFIGURA_RADAR_ONLINE">عبر الانترنت</string>
+
+    <!--************************ ACTIVITY_CONFIGURACION ************************  -->
+    <string name="ACTIVITY_CONFIGURACION_UNIDADES">الوحدات:</string>
+    <string name="ACTIVITY_CONFIGURACION_CHAT_ACTIVADO">تم تمكين الدردشة</string>
+    <string name="ACTIVITY_CONFIGURACION_SONIDO_CHAT_DESACTIVADO">تم تعطيل الدردشة</string>
+
+    <!-- ***********************  ACTIVITY_UNINSTALL *********************************** -->
+    <string name="ACTIVITY_UNINSTALL_UNINSTALL">حذف الحساب</string>
+
+    <!-- ***********************  ACTIVITY_INICIO *********************************** -->
+    <string name="ACTIVITY_INICIO_ERROR_LOGGIN">حدث خطأ أثناء تسجيل الدخول، يرجى المحاولة مرة أخرى</string>
+    <string name="ACTIVITY_INICIO_HINT_EMAIL">البريد الإلكتروني</string>
+    <string name="ACTIVITY_INICIO_HINT_PASSWORD">كلمه المرور</string>
+    <string name="ACTIVITY_INICIO_HINT_REPEAT_PASSWORD">أعد كلمة المرور</string>
+    <string name="ACTIVITY_INICIO_SIGNIN">تسجيل الدخول</string>
+    <string name="ACTIVITY_INICIO_SIGNUP">سجل</string>
+    <string name="ACTIVITY_INICIO_BAD_EMAIL">البريد الإلكتروني غير صالح</string>
+    <string name="ACTIVITY_INICIO_FORGOT_PASSWORD">نسيت رقم المرور؟</string>
+    <string name="ACTIVITY_INICIO_FORGOT_RESET_PASSWORD">إعادة تعيين كلمة المرور</string>
+    <string name="ACTIVITY_INICIO_FORGOT_RESET">إعادة تعيين</string>
+    <string name="ACTIVITY_INICIO_EMAIL_SENT">لقد تلقيت بريدا إلكترونيا بتعليمات إعادة تعيين كلمة المرور الخاصة بك</string>
+    <string name="ACTIVITY_INICIO_PASSWORDS_DOESNT_MATCH">كلمات المرور غير متطابقة</string>
+    <string name="ACTIVITY_INICIO_NOTA_PRIVACIDAD">لن نقوم بجمع أي بيانات من حسابك ولن نقوم بإرسال أي رسائل</string>
+
+    <!-- ***********************  ACTIVITY_REGISTRO_PERSONA *********************************** -->
+    <string name="ACTIVITY_REGISTRO_DATOS_FISICOS" >ماذا تشبه</string>
+    <string name="ACTIVITY_REGISTRO_SEXUALIDAD" >جنسانية</string>
+    <string name="ACTIVITY_REGISTRO_TITULO">سجل</string>
+    <string name="ACTIVITY_REGISTRO_CHECKBOX_I_AGREE">أنا أوافق على</string>
+    <string name="ACTIVITY_REGISTRO_TEXTVIEW_TERMS_AND_CONDITIONS">شروط وأحكام الخدمة</string>
+    <string name="ACTIVITY_REGISTRO_ALTURA_">الطول:</string>
+    <string name="ACTIVITY_REGISTRO_PESO_">الوزن:</string>
+    <string name="ACTIVITY_REGISTRO_RAZA_">الجنس:</string>
+    <string name="ACTIVITY_REGISTRO_NICK_">اللقب</string>
+    <string name="ACTIVITY_REGISTRO_QUIERO_DEJAR_CLARO">أريد أن أوضح أن *</string>
+    <string name="ACTIVITY_REGISTRO_OPCIONAL">* اختياري</string>
+    <string name="ACTIVITY_REGISTRO_BIRTH_">تاريخ الميلاد</string>
+    <string name="ACTIVITY_REGISTRO_ERROR_FALTA_NICK">خطأ: اللقب مفقود</string>
+    <string name="ACTIVITY_REGISTRO_ERROR_FALTA_SEXUALIDAD">خطأ: يجب تحديد الجنس والميول الجنسية الخاصة بك</string>
+    <string name="ACTIVITY_REGISTRO_ERROR_UNDERAGE">خطأ: يجب أن يكون عمرك أكبر من %1$d عاما</string>
+    <string name="ACTIVITY_REGISTRO_ERROR_INCONGRUENCIA_SEXUAL">خطأ: جنسك والميول الجنسية ليست منسجمة</string>
+    <string name="ACTIVITY_REGISTRO_ERROR_TERMS"> يجب عليك الموافقة على الاحكام والشروط</string>
+
+    <!-- *********************** ACTIVITY_PRIMERAS_FOTOS y*********************************** -->
+    <string name="ACTIVITY_PRIMERAS_FOTOS_INSERTA_FOTOS">اختياريا يمكنك تحميل صورة لنفسك</string>
+    <string name="ADVERTENCIA">انتباه: لا يسمح لتحميل الصور الفاحشة أو الإباحية. سيقوم المسؤولون بحذف أي صورة غير لائقة دون إشعار.</string>
+
+    <!-- ***********************  ACTIVITY_PRINCIPAL *********************************** -->
+    <string name="ACTIVITY_PRINCIPAL_NO_VA_EL_GPS">من المستحيل البحث عن الناس بشكل صحيح بينما موقعك مجهول.\nفعل موقعك وحاول مرة أخرى خلال ثوان</string>
+    <string name="ACTIVITY_PRINCIPAL_NINGUN_PERFIL_ENCONTRADO">لم يتم العثور على أي شخص بإعداد رادارك الحالية</string>
+
+    <!-- ***********************  ACTIVITY_COMPRAS *********************************** -->
+    <string name="ACTIVITY_MEJORAR_COMPRA_X_ESTRELLAS">%1$d نجوم لـ %2$s</string>
+    <string name="ACTIVITY_MEJORAR_SUSCRIBE_6_MESES">اشترك لمدة 6 أشهر مقابل %1$s</string>
+    <string name="ACTIVITY_MEJORAR_SUSCRIBE_1_AÑO">اشترك لمدة 1 عام مقابل %1$s</string>
+    <string name="ACTIVITY_MEJORAR_TITULO_SUSCRIBIR">اشترك في الخدمة البريميوم</string>
+    <string name="ACTIVITY_MEJORAR_TITULO_COMPRAR">اشتر نجوما</string>
+    <string name="ACTIVITY_MEJORAR_ERROR_COMPRA_ESTRELLAS">خطأ: عملية شراء غير ناجحة</string>
+    <string name="ACTIVITY_MEJORAR_EXITO_COMPRA">تمت عملية الشراء بنجاح</string>
+    <string name="ACTIVITY_MEJORAR_ERROR_SUSCRIPCION">خطأ: فشل الاشتراك</string>
+    <string name="ACTIVITY_MEJORAR_EXITO_SUSCRIPCION">تم الاشتراك بنجاح</string>
+    <string name="ACTIVITY_MEJORAR_CANCELADO">تم الإلغاء</string>
+    <string name="ACTIVITY_MEJORAR_YA_ES_PREMIUM">لديك حساب بريميوم بالفعل</string>
+
+    <!-- ***********************  ACTIVITY_ESTRELLAS_GRATIS *********************************** -->
+    <string name="ACTIVITY_ESTRELLAS_POR_ANUNCIO">الحصول على %1$d نجمة رؤية إعلان</string>
+
+    <!-- ***********************  ACTIVITY_FEEDBACK *********************************** -->
+    <string name="ACTIVITY_FEEDBACK_TITULO">هل تحب هذا التطبيق؟</string>
+    <string name="ACTIVITY_FEEDBACK_PLEASE_FEEDBACK">من فضلك قل لنا الأشياء التي لا يحب</string>
+    <string name="ACTIVITY_FEEDBACK_SEND_FEEDBACK">إرسال</string>
+    <string name="ACTIVITY_FEEDBACK_RATE_APP">منف ضلك قيمنا على المتجر</string>
+    <string name="ACTIVITY_FEEDBACK_RATE">قيم</string>
+    <string name="ACTIVITY_FEEDBACK_SENT">تم إرسال التعليق</string>
+    <string name="ACTIVITY_FEEDBACK_HINT_YOUR_FEEDBACK">اكتب تعليقك…</string><string name="ACTIVITY_FEEDBACK_APP_LENTA"> التطبيق بطيئة</string>
+    <string name="ACTIVITY_FEEDBACK_MAL_DISENO">تصميم القبيح</string>
+    <string name="ACTIVITY_FEEDBACK_MAL_TRADUCIDA">أخطاء الترجمة</string>
+    <string name="ACTIVITY_FEEDBACK_NO_SE_COMO_VA">أنا لا أعرف كيف يعمل (يرجى قراءة التعليمات أولا)</string>
+    <string name="ACTIVITY_FEEDBACK_NO_FUNCIONA_BIEN">لا تعمل بشكل جيد </string>
+    <string name="ACTIVITY_FEEDBACK_POCOS_USUARIOS">وهناك عدد قليل جدا من المستخدمين </string>
+    <string name="ACTIVITY_FEEDBACK_OTROS">آخر </string>
+
+    <!-- ***********************  FRAGMENT_FOTO *********************************** -->
+    <string name="FRAGMENT_FOTO_ERROR_FOTO_NO_CARGADA">حدث خطأ أثناء تحميل الصورة</string>
+    <string name="FRAGMENT_FOTO_ERROR_FOTO_MUY_PESADA">خطأ: صورة كبيرة الحجم</string>
+    <string name="FRAGMENT_FOTO_EROR_FORMAT_NOT_SUPPORTED">خطأ: لا تدعم تنسيق الملف</string>
+    <string name="FRAGMENT_FOTO_WAIT">انتظر بينما يتم تحميل الصورة</string>
+
+    <!-- ***********************  FRAGMENT_DATOS_PERSONALES *********************************** -->
+    <string name="FRAGMENT_DATOS_PERSONALES_NICK_">اللقب</string>
+    <string name="FRAGMENT_DATOS_PERSONALES_EDAD_">العمر:</string>
+    <string name="FRAGMENT_DATOS_PERSONALES_ALTURA_">الطول:</string>
+    <string name="FRAGMENT_DATOS_PERSONALES_PESO_">الوزن:</string>
+    <string name="FRAGMENT_DATOS_PERSONALES_RAZA_">العرق:</string>
+    <string name="FRAGMENT_DATOS_PERSONALES_SEXUALIDAD">التوجه الجنسي</string>
+    <string name="FRAGMENT_DATOS_PERSONALES_TUS_DATOS">بياناتك</string>
+    <string name="FRAGMENT_DATOS_PERSONALES_OTROS_DATOS">البيانات الأخرى</string>
+    <string name="FRAGMENT_DATOS_PERSONALES_QUIERO_DEJAR_CLARO">أريد أن أوضح أن</string>
+
+    <!-- *******************  Dialogo borrar cuenta ************************** -->
+    <string name="DIALOGO_BORRAR_CUENTA_TITULO">حذف الحساب</string>
+    <string name="DIALOGO_BORRAR_CUENTA_ADVERTENCIA">سوف تفقد النجوم بل وحسابك أيضا إذا كان لديك</string>
+
+    <!--************************  dialogo denuncia ************************-->
+    <string name="DIALOGO_DENUNCIAR_PREGUNTA_MOTIVO">ما هو سبب إبلاغك؟</string>
+    <string name="DIALOGO_DENUNCIAR_DENUNCIAR">إبلاغ</string>
+    <string name="DIALOGO_DENUNCIAR_DENUNCIADO">تم الإبلاغ عن مستخدم</string>
+
+    <!--************************  dialogo enviar mensaje al solicitar amistad************************-->
+    <string name="DIALOGO_INTERACTUAR_TITULO">حدد إجراء</string>
+
+    <!--************************  dialogo ayuda ************************-->
+    <string name="DIALOGO_CONSEJO_TITULO">مساعدة</string>
+    <string name="DIALOGO_CONSEJO_MENSAJE">انقر على المستخدم لإجراء أي عمل. اضغط على المستخدم للقيام بأي إجراء</string>
+    <string name="DIALOGO_CONSEJO_MENSAJE_CHAT_GENERAL">الدردشة مع الناس من بلدك. للدردشة على وجه الخصوص، انقر على الصورة واضغط على زر الرسالة</string>
+    <string name="DIALOGO_CONSEJO_YA_NO_MAS">لا تظر مرة أخرى</string>
+    <string name="DIALOGO_CONSEJO_FOTO_MANAGER">اضغط على صورة لتحريرها</string>
+    <string name="DIALOGO_AVISO_MENSAJE_SE_TE_VA_A_COBRAR">يكلف هذا الإجراء %1$d من النجوم للمستخدمين غير المتميزين.</string>
+    <string name="DIALOGO_AVISO_MENSAJE_NO_TIENES_ESTRELLAS">يكلف هذا الإجراء%1$d من النجوم للمستخدمين غير المتميزين. ليس لديك ما يكفي من النجوم لتنفيذ هذا الإجراء.</string>
+    <string name="DIALOGO_COMPRAR_ESTRELLAS">شراء النجوم</string>
+
+    <!--************************  MOTIVOS PARA DAR ESTRELLAS ************************-->
+
+    <string name="MOTIVO_SIGNED_UP">تم التسجيل</string>
+    <string name="MOTIVO_COBRO_SEMANAL">الرسوم الأسبوعية</string>
+    <string name="MOTIVO_COMPRA_ESTRELLAS">شراء</string>
+    <string name="MOTIVO_COBRO_PETICION_CHAT_GENERAL">إرسال الملف المرفق باستخدام الدردشة</string>
+
+    <!-- ventajas premium-->
+    <string name="ventajas_de_suscribir">
+        \n\t- سوف تظهر في المواقف الأولى
+        \n\t- لا توجد رسوم أسبوعية للنجوم
+        \n\t- رفع ما يصل إلى %1$d صور
+        \n\t- يمكنك استخدام المزيد من فلاتر البحث
+        \n\t- البحث نصف قطرها مزدوج
+        \n\t- لا إعلانات
+        \n\t- قوائم الملفات مرتبة بالمسافة
+        \n\t- يمكنك إرسال الصور في رسائلك بشكل غير محدود
+        \n
+    </string>
+    <string name="ventajas_de_comprar">
+        \n\t- ضاعف ظهورك\n
+        \n\t- قم بزيادة طلبات الصداقة\n
+        \n\t- يمكنك إرسال الصور في رسائلك
+        \n</string>
+
+    <string name="ACTIVITY_CONFIGURACION_ELIMINAR_CUENTA">حذف الحساب</string>
+
+    <!-- HELP -->
+    <string name="help_info_title">ما هو %1$s؟</string>
+    <string name="help_info">%1$s هو تطبيق يمكنك من العثور على أصدقاء جدد بالقرب منك. يتوفر التطبيق مجانا ويمكنك شراء نسخة بريميوم مدفوعة. قم بتهيئة الرادار وابحث عن الأصدقاء بشكل دوري.\n\nاحصل على النجوم لعرضها أولا في عمليات البحث عن طريق المراسلة مع أشخاص آخرين. يمكنك أيضا شراء </string>
+    <string name="help_ganar_estrellas">احصل على النجوم وستظهر في المواضع العليا لعمليات البحث. يتم تحصيل رسوم%1$d من النجوم أسبوعيًا إذا لم تكن مستخدمًا متميزًا.</string>
+    <string name="help_como_funciona">كيف يعمل؟</string>
+    <string name="help_principal">ستظهر نتيجة البحث هنا. انقر على المستخدم لأداء أي عمل. فرز ملامح حسب النجوم إذا لم تكن مستخدم قسط وتنظيم من بعد المسافة إذا كنت مستخدم بريميوم.</string>
+    <string name="help_configura_radar">قم بإعداد الرادار الخاص بك للعثور على الأشخاص الذين تحبهم فقط. إذا كنت عضوًا متميزًا ، فيمكنك البحث مرتين عن الميزات الأخرى.</string>
+    <string name="help_mensajes">قراءة جميع الرسائل التي قمت بإرسالها أو استلامها.</string>
+    <string name="help_mi_perfil">ارفع الصور، وحدث ملفك الشخصي، وتفقد نجومك هنا. يستطيع المستخدمون البريميوم تحميل ما يصل إلى %1$d صور.</string>
+    <string name="help_compras">كن مستخدم بريميوم أو اشتر نجوما من هنا، واستمتع بمميزاتها!</string>
+    <string name="help_ajustes">قم بضبط بعض الخصائص في تطبيقك لتكون إخطارات، ووحدات قياس، إلخ. ويمكنك أيضا حذف حسابك</string>
+    <string name="help_chat_general">دردش مع أشخاص من بلدك مع وأشخاص لهم نفس التوجه الجنسي. </string>
+    <string name="help_feedback">أخبرنا عن رأيك في تطبيقنا. وقيمنا أو أخبرنا عن أي مشكلة يمكننا تحسينها</string>
+    <string name="help_como_contactar">كيف يمكنني التواصل مع إدارة %1$s؟</string>
+    <string name="help_para_cualquier_consulta">يمكنك الاتصال بنا من خلال العناوين التالية:</string>
+    <string name="MOTIVO_ANUNCIO_BONIFICADO">الإعلان المعروض</string>
+    <string name="estrellas">+%1$d نجمة</string>
+</resources>

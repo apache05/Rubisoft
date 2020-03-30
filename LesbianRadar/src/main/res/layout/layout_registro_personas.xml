@@ -1,0 +1,495 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:layout_marginTop="50dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/primary_light">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+
+            >
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:padding="20dp"
+                app:cardCornerRadius="@dimen/corner_radius"
+                app:cardElevation="@dimen/elevation_perfiles"
+                card_view:cardUseCompatPadding="true">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_gravity="bottom"
+                    android:layout_weight="0.3"
+                    android:gravity="center"
+                    android:text="@string/ACTIVITY_REGISTRO_TITULO"
+                    android:textIsSelectable="true"
+                    android:textSize="@dimen/tamanyo_letra_l" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                app:cardCornerRadius="@dimen/corner_radius"
+                app:cardElevation="@dimen/elevation_perfiles"
+                card_view:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:id="@id/Layout_registro_personas_TextView_nick"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:gravity="bottom"
+                        android:labelFor="@id/Layout_registro_personas_EditText_nick"
+                        android:textIsSelectable="true"
+                        android:textSize="@dimen/tamanyo_letra_l"
+                        android:text="@string/ACTIVITY_REGISTRO_NICK_"/>
+
+                    <EditText
+                        android:id="@id/Layout_registro_personas_EditText_nick"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical|bottom"
+                        android:gravity="bottom"
+                        android:inputType="text"
+                        android:maxLength="35"
+                        android:textSize="@dimen/tamanyo_letra_l"
+                        android:textColor="@color/black"
+                        />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_weight="1"
+                app:cardCornerRadius="@dimen/corner_radius"
+                app:cardElevation="@dimen/elevation_perfiles"
+                card_view:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    >
+
+                    <TextView
+                        android:id="@id/Layout_registro_personas_TextView_registro_birth"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:textIsSelectable="true"
+                        android:layout_margin="20dp"
+                        android:textSize="@dimen/tamanyo_letra_l"
+                        android:layout_marginBottom="20dp"
+                        />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:orientation="horizontal">
+
+                        <Spinner
+                            android:id="@id/Layout_registro_personas_Spinner_mi_dia_nacimiento"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.20"
+                            android:gravity="end"
+                            android:textAlignment="gravity" />
+
+                        <Spinner
+                            android:id="@id/Layout_registro_personas_Spinner_mi_mes_nacimiento"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.27"
+                            android:gravity="end"
+                            android:textAlignment="gravity" />
+
+                        <Spinner
+                            android:id="@id/Layout_registro_personas_Spinner_mi_anyo_nacimiento"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.22"
+                            android:gravity="end"
+                            android:textAlignment="gravity" />
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                app:cardCornerRadius="@dimen/corner_radius"
+                app:cardElevation="@dimen/elevation_perfiles"
+                card_view:cardUseCompatPadding="true"
+                android:id="@id/Layout_registro_personas_CardView_Sexualidad">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+                    <TextView
+                        android:id="@id/Layout_registro_personas_sexualidad"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:gravity="bottom"
+                        android:textIsSelectable="true"
+                        android:textSize="@dimen/tamanyo_letra_l"
+                        android:layout_marginBottom="20dp"
+
+                        android:text="@string/ACTIVITY_REGISTRO_SEXUALIDAD"/>
+                    <Spinner
+                        android:id="@id/Layout_registro_personas_Spinner_mi_sexo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="20dp"
+                        android:gravity="end"
+                        android:textSize="@dimen/tamanyo_letra_m" />
+
+                    <Spinner
+                        android:id="@id/Layout_registro_personas_Spinner_mi_orientacion"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:textSize="@dimen/tamanyo_letra_m" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                app:cardCornerRadius="@dimen/corner_radius"
+                app:cardElevation="@dimen/elevation_perfiles"
+                card_view:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical"
+                        >
+                        <TextView
+                            android:id="@id/Layout_registro_personas_datos_fisicos"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:gravity="bottom"
+                            android:textIsSelectable="true"
+                            android:textSize="@dimen/tamanyo_letra_l"
+                            android:layout_marginBottom="20dp"
+                            android:text="@string/ACTIVITY_REGISTRO_DATOS_FISICOS"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:gravity="bottom"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@id/Layout_registro_personas_TextView_Altura_registro"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="start"
+                                android:textIsSelectable="true" />
+
+                            <TextView
+                                android:id="@id/Layout_registro_personas_TextView_mi_Altura_registro"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="end"
+                                android:textIsSelectable="true" />
+                        </LinearLayout>
+
+                        <com.appyvet.rangebar.RangeBar xmlns:custom="http://schemas.android.com/apk/res-auto"
+                            android:id="@id/Layout_registro_personas_RangeBar_mi_altura"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            custom:connectingLineColor="@color/accent"
+                            custom:pinColor="@color/accent"
+                            custom:pinRadius="0dp"
+                            custom:rangeBar="false"
+                            custom:rangeBarColor="@color/accent"
+                            custom:selectorColor="@color/accent"
+                            custom:selectorSize="10dp"
+                            custom:temporaryPins="false"
+                            custom:tickEnd="220"
+                            custom:tickInterval="2"
+                            custom:tickStart="140" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="20dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:gravity="bottom"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@id/Layout_registro_personas_TextView_Peso_registro"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="start"
+                                android:textIsSelectable="true" />
+
+                            <TextView
+                                android:id="@id/Layout_registro_personas_TextView_mi_Peso_registro"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="end"
+                                android:textIsSelectable="true" />
+                        </LinearLayout>
+
+                        <com.appyvet.rangebar.RangeBar xmlns:custom="http://schemas.android.com/apk/res-auto"
+                            android:id="@id/Layout_registro_personas_RangeBar_mi_peso"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            custom:connectingLineColor="@color/accent"
+                            custom:pinColor="@color/accent"
+                            custom:pinRadius="0dp"
+                            custom:rangeBar="false"
+                            custom:rangeBarColor="@color/accent"
+                            custom:selectorColor="@color/accent"
+                            custom:selectorSize="10dp"
+                            custom:temporaryPins="false"
+                            custom:tickEnd="150"
+                            custom:tickInterval="2"
+                            custom:tickStart="50" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="20dp"
+                        android:gravity="center_vertical|start"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@id/Layout_registro_personas_TextView_mi_Raza_registro"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="0.4"
+                            android:gravity="center_vertical"
+                            android:textIsSelectable="true" />
+
+                        <Spinner
+                            android:id="@id/Layout_registro_personas_Spinner_mi_Raza_registro"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical" />
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                app:cardCornerRadius="@dimen/corner_radius"
+                app:cardElevation="@dimen/elevation_perfiles"
+                card_view:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:id="@id/Layout_registro_personas_TextView_quiero_dejar_claro"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.2"
+                        android:labelFor="@id/Layout_registro_personas_EditText_quiero_dejar_claro"
+                        android:text="@string/ACTIVITY_REGISTRO_QUIERO_DEJAR_CLARO"
+                        android:textIsSelectable="true" />
+
+                    <EditText
+                        android:id="@id/Layout_registro_personas_EditText_quiero_dejar_claro"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="bottom"
+                        android:inputType="textMultiLine"
+                        android:lines="11"
+                        android:maxLength="290"
+                        android:textColor="@color/black"
+                        />
+
+                    <TextView
+                        android:id="@id/Layout_registro_personas_TextView_opcional"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/ACTIVITY_REGISTRO_OPCIONAL"
+                        android:textIsSelectable="true" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_weight="1"
+                android:padding="20dp"
+                app:cardCornerRadius="@dimen/corner_radius"
+                app:cardElevation="@dimen/elevation_perfiles"
+                card_view:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:orientation="vertical">
+
+                    <CheckBox
+                        android:id="@id/Layout_registro_personas_CheckBox_I_Agree"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/ACTIVITY_REGISTRO_CHECKBOX_I_AGREE"
+                        android:textSize="@dimen/tamanyo_letra_m" />
+
+                    <TextView
+                        android:id="@id/Layout_registro_personas_TextView_Terms"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="30dp"
+                        android:text="@string/ACTIVITY_REGISTRO_TEXTVIEW_TERMS_AND_CONDITIONS"
+                        android:textColor="@color/accent"
+                        android:textSize="@dimen/tamanyo_letra_m" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                app:cardCornerRadius="@dimen/corner_radius"
+                app:cardElevation="@dimen/elevation_perfiles"
+                card_view:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="20dp"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@id/Layout_registro_personas_Button_retroceder"
+                            style="@style/boton_surface_reaction"
+                            android:layout_width="@dimen/Tam_Normal_icons"
+                            android:layout_height="@dimen/Tam_Normal_icons"
+                            android:layout_gravity="center_vertical|start"
+                            android:contentDescription="@string/Content_description_boton"
+                            android:focusable="false"
+                            android:gravity="center_vertical|start"
+                            android:scaleType="centerInside" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5"
+                        android:gravity="end"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@id/Layout_registro_personas_Button_registrarse"
+                            style="@style/boton_surface_reaction"
+                            android:layout_width="@dimen/Tam_Normal_icons"
+                            android:layout_height="@dimen/Tam_Normal_icons"
+                            android:layout_gravity="center_vertical|end"
+                            android:contentDescription="@string/Content_description_boton"
+                            android:focusable="false"
+                            android:gravity="center_vertical|end"
+                            android:scaleType="centerInside" />
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
+
+    <ProgressBar
+        android:id="@id/mProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:indeterminate="true"
+        android:visibility="invisible" />
+</RelativeLayout>

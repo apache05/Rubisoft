@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+    <!-- ****************************  UNIDADES DE MEDIDA ****************************-->
+    <string name="Mi">%1$s Mi</string>
+    <string name="m">%1$.2f m</string>
+    <string name="kg">%1$d Kg</string>
+    <string name="km">%1$.2f Km</string>
+
+    <!--************************ MENU_CAMBIAR_FOTO ************************  -->
+    <string name="change_pic">Fotoğrafı değiştir</string>
+
+    <string name="title_activity_condiciones_uso">Kullanım şartları</string>
+    <string name="title_activity_politica_privacidad">Gizlilik politikası</string>
+
+    <!-- ****************************  VARIOS ****************************-->
+    <string name="app_name">Biseksüel bulucu</string>
+    <string name="no">Hayır</string>
+    <string name="si">Evet</string>
+    <string name="y">ve</string>
+    <string name="Cancelar">İptal</string>
+    <string name="ok">Tamam</string>
+    <string name="estrellas">+ %1$d yıldız</string>
+    <string name="anyos"> %1$d yıl</string>
+    <string name="foto_inapropiada">Bu fotoğraf uygunsuz olarak kabul edilir</string>
+    <string name="SOLO_PREMIUM">Sadece premium kullanıcılar için</string>
+    <string name="LOCATION_NOT_READY">Lütfen konumunuzu almak ve güncellemek için Konum modunu açın.</string>
+
+    <!--  MENSAJES DEL GOOGLE CLOUD MESSAGING -->
+    <string name="MENSAJE_DE">%1$s size bir mesaj gönderdi</string>
+    <string name="NUEVO_MENSAJE">%1$s sohbette yazdı</string>
+
+    <!--  MENSAJES POR DEFECTO CUANDO LLEGA UN MENSAJE Y LA APP ESTÁ EN BACKGROUND -->
+    <string name="DEFAULT_NOTIFICATION_TITLE" >Yeni mesaj</string>
+    <string name="DEFAULT_NOTIFICATION_TEXT" >Okunmamış yeni bir mesajınız var. Hadi okuyalım!</string>
+
+    <!-- *********************** ACTIVITY_MENSAJES*********************************** -->
+    <string name="ACTIVITY_MENSAJES_NO_HAY_MENSAJES">Henüz mesaj yok</string>
+
+    <!-- *********************** ACTIVITY_SIN_CONEXION y*********************************** -->
+    <string name="ACTIVITY_SIN_CONEXION_NO_HAY_CONEXION">BAĞLANTI YOK</string>
+
+    <!-- *********************** ACTIVITY_MI_PERFIL*********************************** -->
+    <string name="ACTIVITY_MI_PERFIL_TAB_TUS_FOTOS">Fotoğraflarınız</string>
+    <string name="ACTIVITY_MI_PERFIL_TAB_TUS_DATOS">Verileriniz</string>
+    <string name="ACTIVITY_MI_PERFIL_TAB_TUS_ESTRELLAS">Yıldızlarınız</string>
+
+    <!--************************ ACTIVITY_CHAT_GENERAL ************************ -->
+    <string name="ACTIVITY_CHAT_GENERAL_CUANTOS_HAY">Çevrimiçi %d kişi var</string>
+
+    <!--************************ ACTIVITY_CHAT ************************ -->
+    <string name="ACTIVITY_CHAT_AMISTAD_TERMINADA">Kullanıcı artık mesajları kabul etmiyor veya kayıtlı değil</string>
+    <string name="ACTIVITY_CHAT_ESTRELLAS_GRATIS">Ücretsiz yıldız alın</string>
+
+    <!--************************  ACTIVITY_CONFIGURA_RADAR************************ -->
+    <string name="ACTIVITY_CONFIGURA_RADAR_EDAD_ENTRE">Yaş aralığı</string>
+    <string name="ACTIVITY_CONFIGURA_RADAR_ALTURA_ENTRE">Boy aralığı</string>
+    <string name="ACTIVITY_CONFIGURA_RADAR_PESO_ENTRE">Kilo aralığı</string>
+    <string name="ACTIVITY_CONFIGURA_RADAR_QUE_TENGA_CASA">Sadece evi olanlar</string>
+    <string name="ACTIVITY_CONFIGURA_RADAR_QUE_TENGA_COCHE">Sadece arabası olanlar</string>
+    <string name="ACTIVITY_CONFIGURA_RADAR_QUE_TENGA_MOTO">Sadece motosikleti olanlar</string>
+    <string name="ACTIVITY_CONFIGURA_RADAR_RAZA_">Irk:</string>
+    <string name="ACTIVITY_CONFIGURA_RADAR_DISTANCIA_MI">%1$s Mi yarıçap içinde</string>
+    <string name="ACTIVITY_CONFIGURA_RADAR_DISTANCIA_KM">%1$d Km yarıçap içinde</string>
+    <string name="ACTIVITY_CONFIGURA_RADAR_CUALQUIER_RAZA">Herhangi bir ırk</string>
+    <string name="ACTIVITY_CONFIGURA_RADAR_AL_MENOS_1_RAZA">En az bir ırk seçmelisiniz</string>
+    <string name="ACTIVITY_CONFIGURA_RADAR_ONLINE">Çevrimiçi</string>
+    <string name="ACTIVITY_CONFIGURA_RADAR_NEW">Yeni</string>
+
+    <!--************************ ACTIVITY_CONFIGURACION ************************  -->
+    <string name="ACTIVITY_CONFIGURACION_UNIDADES">Birimler:</string>
+    <string name="ACTIVITY_CONFIGURACION_CHAT_ACTIVADO">sohbet etkin</string>
+    <string name="ACTIVITY_CONFIGURACION_SONIDO_CHAT_DESACTIVADO">sohbet devre dışı</string>
+
+    <!-- ***********************  ACTIVITY_UNINSTALL *********************************** -->
+    <string name="ACTIVITY_UNINSTALL_UNINSTALL">Hesabı sil</string>
+
+    <!-- ***********************  ACTIVITY_INICIO *********************************** -->
+    <string name="ACTIVITY_INICIO_ERROR_LOGGIN">Oturum açarken hata oluştu. Lütfen tekrar deneyin</string>
+    <string name="ACTIVITY_INICIO_HINT_EMAIL">E-posta</string>
+    <string name="ACTIVITY_INICIO_HINT_PASSWORD">Parola</string>
+    <string name="ACTIVITY_INICIO_HINT_REPEAT_PASSWORD">Parolayı tekrar girin</string>
+    <string name="ACTIVITY_INICIO_SIGNIN">Oturum aç</string>
+    <string name="ACTIVITY_INICIO_SIGNUP">Kaydol</string>
+    <string name="ACTIVITY_INICIO_BAD_EMAIL">Geçerli bir e-posta değil</string>
+    <string name="ACTIVITY_INICIO_FORGOT_PASSWORD">Parolanızı mı unuttunuz?</string>
+    <string name="ACTIVITY_INICIO_FORGOT_RESET_PASSWORD">Parolayı sıfırla</string>
+    <string name="ACTIVITY_INICIO_FORGOT_RESET">Sıfırla</string>
+    <string name="ACTIVITY_INICIO_EMAIL_SENT">Parolanızı sıfırlama talimatlarını içeren bir e-posta aldınız</string>
+    <string name="ACTIVITY_INICIO_PASSWORDS_DOESNT_MATCH">Parolalar uyuşmuyor</string>
+    <string name="ACTIVITY_INICIO_NOTA_PRIVACIDAD">Hesabınızdan hiçbir veri toplanmayacak ve herhangi bir mesaj göndermeyeceğiz</string>
+
+    <!-- ***********************  ACTIVITY_REGISTRO_PERSONA *********************************** -->
+    <string name="ACTIVITY_REGISTRO_TITULO">Kaydol</string>
+    <string name="ACTIVITY_REGISTRO_DATOS_FISICOS">Neye benziyorsunuz?</string>
+    <string name="ACTIVITY_REGISTRO_SEXUALIDAD">Cinsiyet</string>
+    <string name="ACTIVITY_REGISTRO_CHECKBOX_I_AGREE">Katılıyorum</string>
+    <string name="ACTIVITY_REGISTRO_TEXTVIEW_TERMS_AND_CONDITIONS"> Kullanım Koşulları</string>
+    <string name="ACTIVITY_REGISTRO_ALTURA_">Boy:</string>
+    <string name="ACTIVITY_REGISTRO_PESO_">Kilo:</string>
+    <string name="ACTIVITY_REGISTRO_RAZA_">Irk:</string>
+    <string name="ACTIVITY_REGISTRO_NICK_">Takma ad</string>
+    <string name="ACTIVITY_REGISTRO_QUIERO_DEJAR_CLARO">Bunu açıklığa kavuşturmak istiyorum *</string>
+    <string name="ACTIVITY_REGISTRO_OPCIONAL">* İsteğe bağlı</string>
+    <string name="ACTIVITY_REGISTRO_BIRTH_">Doğum</string>
+    <string name="ACTIVITY_REGISTRO_ERROR_FALTA_NICK">Hata: Takma adınız eksik</string>
+    <string name="ACTIVITY_REGISTRO_ERROR_FALTA_SEXUALIDAD">Hata: cinsiyetinizi ve cinsel tercihinizi seçmelisiniz</string>
+    <string name="ACTIVITY_REGISTRO_ERROR_UNDERAGE">Hata: kesinlikle %1$d yaşından daha büyüksünüz</string>
+    <string name="ACTIVITY_REGISTRO_ERROR_INCONGRUENCIA_SEXUAL">Hata: cinsiyetiniz ve cinsel tercihiniz uyumlu değil</string>
+    <string name="ACTIVITY_REGISTRO_ERROR_TERMS"> Hüküm ve Koşulları kabul etmelisiniz</string>
+
+    <!-- *********************** ACTIVITY_PRIMERAS_FOTOS y*********************************** -->
+    <string name="ACTIVITY_PRIMERAS_FOTOS_INSERTA_FOTOS">İsteğe bağlı olarak, kendi resminizi yükleyebilirsiniz</string>
+    <string name="ADVERTENCIA">Dikkat: Müstehcen veya pornografik fotoğraflar yüklemek yasaktır. Yöneticiler herhangi bir uygunsuz resmi haber vermeksizin silecektir.</string>
+
+    <!-- ***********************  ACTIVITY_PRINCIPAL *********************************** -->
+    <string name="ACTIVITY_PRINCIPAL_NO_VA_EL_GPS">Konumunuz bilinmiyorken doğru şekilde kişi aramak mümkün değil. Konumunuzu etkinleştirin ve birkaç saniye sonra tekrar deneyin</string>
+    <string name="ACTIVITY_PRINCIPAL_NINGUN_PERFIL_ENCONTRADO">Mevcut radar ayarlarınızla kimse bulunamadı</string>
+
+    <!-- ***********************  FRAGMENT_BORRAR *********************************** -->
+    <string name="ACTIVITY_CONFIGURACION_ELIMINAR_CUENTA">Hesabı sil</string>
+
+    <!-- ***********************  ACTIVITY_COMPRAS *********************************** -->
+    <string name="ACTIVITY_MEJORAR_COMPRA_X_ESTRELLAS">%2$s için %1$d yıldız</string>
+    <string name="ACTIVITY_MEJORAR_SUSCRIBE_6_MESES">%1$s için 6 ay abone ol</string>
+    <string name="ACTIVITY_MEJORAR_SUSCRIBE_1_AÑO">%1$s için 1 yıl abone ol</string>
+    <string name="ACTIVITY_MEJORAR_TITULO_SUSCRIBIR"> Premium üyeliğe abone ol</string>
+    <string name="ACTIVITY_MEJORAR_TITULO_COMPRAR"> Yıldız satın al</string>
+    <string name="ACTIVITY_MEJORAR_ERROR_COMPRA_ESTRELLAS">Hata: başarısız satın alma</string>
+    <string name="ACTIVITY_MEJORAR_EXITO_COMPRA">Satın alma başarıyla tamamlandı</string>
+    <string name="ACTIVITY_MEJORAR_ERROR_SUSCRIPCION">Hata: başarısız abonelik</string>
+    <string name="ACTIVITY_MEJORAR_EXITO_SUSCRIPCION">Abonelik başarıyla tamamlandı</string>
+    <string name="ACTIVITY_MEJORAR_CANCELADO">İptal edildi</string>
+    <string name="ACTIVITY_MEJORAR_YA_ES_PREMIUM">Zaten bir premium hesabınız var</string>
+
+    <!-- ***********************  ACTIVITY_ESTRELLAS_GRATIS *********************************** -->
+    <string name="ACTIVITY_ESTRELLAS_POR_ANUNCIO">Bir reklamı görüntüleyerek %1$d yıldız al</string>
+
+    <!-- ***********************  ACTIVITY_FEEDBACK *********************************** -->
+    <string name="ACTIVITY_FEEDBACK_TITULO">Bu uygulamayı beğendiniz mi?</string>
+    <string name="ACTIVITY_FEEDBACK_PLEASE_FEEDBACK">Lütfen bize neyi sevmediğinizi söyleyin.</string>
+    <string name="ACTIVITY_FEEDBACK_SEND_FEEDBACK">Gönder</string>
+    <string name="ACTIVITY_FEEDBACK_RATE_APP"> Lütfen, bu uygulamayı Google Play Store\'da değerlendirin</string>
+    <string name="ACTIVITY_FEEDBACK_RATE">Değerlendir</string>
+    <string name="ACTIVITY_FEEDBACK_SENT"> Geri bildirim gönderildi</string>
+    <string name="ACTIVITY_FEEDBACK_HINT_YOUR_FEEDBACK"> Yorumlarınızı yazın</string>
+    <string name="ACTIVITY_FEEDBACK_APP_LENTA"> Uygulama yavaş</string>
+    <string name="ACTIVITY_FEEDBACK_MAL_DISENO">Korkunç tasarım</string>
+    <string name="ACTIVITY_FEEDBACK_MAL_TRADUCIDA">Çeviri hataları</string>
+    <string name="ACTIVITY_FEEDBACK_NO_SE_COMO_VA">Nasıl kullanıldığını bilmiyorum (Lütfen önce yardımı okuyun)</string>
+    <string name="ACTIVITY_FEEDBACK_NO_FUNCIONA_BIEN">Arıza</string>
+    <string name="ACTIVITY_FEEDBACK_POCOS_USUARIOS">Birkaç kullanıcı</string>
+    <string name="ACTIVITY_FEEDBACK_OTROS">Diğerleri</string>
+
+    <!-- ***********************  FRAGMENT_FOTO *********************************** -->
+    <string name="FRAGMENT_FOTO_ERROR_FOTO_NO_CARGADA">Fotoğraf yüklenirken bir hata oluştu</string>
+    <string name="FRAGMENT_FOTO_ERROR_FOTO_MUY_PESADA">Hata: büyük boy fotoğraf</string>
+    <string name="FRAGMENT_FOTO_EROR_FORMAT_NOT_SUPPORTED">Hata: desteklenmeyen biçim dosyası</string>
+    <string name="FRAGMENT_FOTO_WAIT">Resim yüklenirken bekleyin</string>
+
+    <!-- ***********************  FRAGMENT_DATOS_PERSONALES *********************************** -->
+    <string name="FRAGMENT_DATOS_PERSONALES_NICK_">Takma ad:</string>
+    <string name="FRAGMENT_DATOS_PERSONALES_EDAD_">Yaş:</string>
+    <string name="FRAGMENT_DATOS_PERSONALES_ALTURA_">Boy:</string>
+    <string name="FRAGMENT_DATOS_PERSONALES_PESO_">Kilo:</string>
+    <string name="FRAGMENT_DATOS_PERSONALES_RAZA_">Irk:</string>
+    <string name="FRAGMENT_DATOS_PERSONALES_SEXUALIDAD">Cinsiyet</string>
+    <string name="FRAGMENT_DATOS_PERSONALES_TUS_DATOS">Verileriniz</string>
+    <string name="FRAGMENT_DATOS_PERSONALES_OTROS_DATOS">Diğer veriler</string>
+    <string name="FRAGMENT_DATOS_PERSONALES_QUIERO_DEJAR_CLARO">Bunu açıklığa kavuşturmak istiyorum</string>
+
+    <!-- *******************  Dialogo interactuar ************************** -->
+    <string name="DIALOGO_INTERACTUAR_TITULO">Bir eylem seç</string>
+
+    <!-- *******************  Dialogo borrar cuenta ************************** -->
+    <string name="DIALOGO_BORRAR_CUENTA_TITULO">Hesabı sil</string>
+    <string name="DIALOGO_BORRAR_CUENTA_ADVERTENCIA">Yıldızlarınızı ve hatta varsa aboneliğinizi kaybedeceksiniz</string>
+
+    <!--************************  dialogo denuncia ************************-->
+    <string name="DIALOGO_DENUNCIAR_PREGUNTA_MOTIVO">Beğenmeme nedeniniz nedir?</string>
+    <string name="DIALOGO_DENUNCIAR_DENUNCIAR">Beğenme</string>
+    <string name="DIALOGO_DENUNCIAR_DENUNCIADO">Kullanıcı beğenmedi</string>
+
+    <!--************************  dialogo se te va a cobrar ************************-->
+    <string name="DIALOGO_AVISO_MENSAJE_SE_TE_VA_A_COBRAR">Bu işlem, premium olmayan kullanıcılar için %1$d yıldıza mal olur.</string>
+    <string name="DIALOGO_AVISO_MENSAJE_NO_TIENES_ESTRELLAS">Bu işlem, premium olmayan kullanıcılar için %1$d yıldıza mal olur. Bu işlemi gerçekleştirmek için yeterli yıldızınız yok.</string>
+    <string name="DIALOGO_COMPRAR_ESTRELLAS">Yıldız satın al</string>
+
+    <!--************************  dialogo ayuda ************************-->
+    <string name="DIALOGO_CONSEJO_TITULO">Yardım</string>
+    <string name="DIALOGO_CONSEJO_MENSAJE">Herhangi bir işlemi gerçekleştirmek için profile dokunun.</string>
+    <string name="DIALOGO_CONSEJO_MENSAJE_CHAT_GENERAL">Ülkenizdeki insanlarla sohbet edin. Özel olarak sohbet etmek için, bir kullanıcı resminin üzerine dokunun ve mesaj düğmesine basın.</string>
+    <string name="DIALOGO_CONSEJO_YA_NO_MAS">Daha fazla gösterme</string>
+    <string name="DIALOGO_CONSEJO_FOTO_MANAGER">Bir resmi değiştirmek için dokunun.</string>
+
+    <string name="MOTIVO_SIGNED_UP">Kaydolundu</string>
+
+    <string name="MOTIVO_COBRO_SEMANAL">Haftalık ücret</string>
+    <string name="MOTIVO_COMPRA_ESTRELLAS">Satın al</string>
+    <string name="MOTIVO_COBRO_PETICION_CHAT_GENERAL">Ekli dosyayı sohbeti kullanarak gönder</string>
+    <string name="MOTIVO_ANUNCIO_BONIFICADO">Reklam ödüllendirildi</string>
+
+    <!-- ventajas premium-->
+    <string name="ventajas_de_suscribir">
+        \n\t- İlk sıralarda görüneceksiniz\n 
+        \n\t- Haftalık yıldız ücreti alınmaz\n 
+        \n\t- %1$d profil resmine kadar resim yükleyebilirsiniz\n 
+        \n\t- Daha fazla arama filtresi kullanabilirsiniz\n 
+        \n\t- Çift yarıçap araması\n 
+        \n\t- Reklam yoktur\n 
+        \n\t- Profil listeleri mesafeye göre sıralanmıştır\n 
+        \n\t- Mesajlarınızda sınırsız sayıda fotoğraf gönderebilirsiniz</string>
+    <string name="ventajas_de_comprar">\n- Görünürlüğünüzü artırın\n \n- Arkadaşlık isteklerinizi artırın\n \n- Mesajlarınızda fotoğraf gönderebilirsiniz</string>
+
+    <!-- HELP -->
+    <string name="help_info_title">%1$s nedir?</string>
+    <string name="help_info"> %1$s size en yakın yeni arkadaşlarınızı bulabileceğiniz bir uygulamadır. Premium sürüm için ödeme yapabiliyor olsanız da ücretsizdir. Radarınızı yapılandırın ve düzenli olarak kişi arayın.\n\nDiğer kişilerle mesajlaşarak ilk sıralarda görünmek için yıldız kazanın. Yıldız satın almak da mümkündür.</string>
+    <string name="help_ganar_estrellas">Aramaların en üst sıralarında görünmek için yıldız alın. Premium kullanıcı değilseniz, haftalık %1$d yıldız ücretlendirilir.</string>
+    <string name="help_como_funciona">Nasıl çalışır?</string>
+    <string name="help_principal">Burada aramanızın sonucunu alacaksınız. Herhangi bir işlemi gerçekleştirmek için bir profile dokunun. Premium kullanıcı değilseniz profiller yıldızlara göre, premium kullanıcı iseniz mesafeye göre sıralanır.</string>
+    <string name="help_configura_radar">Radarınızı sadece sevdiğiniz kişileri bulacak şekilde yapılandırın. Premium üyeyseniz, diğer özelliklerden iki kat daha fazla kişi arayabilirsiniz.</string>
+    <string name="help_mensajes">Gönderdiğiniz veya aldığınız tüm mesajları okuyun.</string>
+    <string name="help_mi_perfil">Resim yükleyin, profilinizi güncelleyin ve yıldızlarınızı buradan kontrol edin. Premium kullanıcılar %1$d resme kadar yükleme yapabilir.</string>
+    <string name="help_compras">Premium kullanıcı olun veya buradan yıldız satın alın. Avantajlarından yararlanın!</string>
+    <string name="help_ajustes">Uygulamanızın bazı özelliklerini bildirimler, ölçüm birimleri vb. olarak ayarlayın. Ayrıca hesabınızı da silebilirsiniz.</string>
+    <string name="help_chat_general">Ülkenizdeki insanlarla ve sizinle aynı cinsel tercihi olanlarla sohbet edin.</string>
+    <string name="help_feedback">Bize uygulamamız hakkındaki fikrinizi söyleyin. Bize puan verin veya düzeltebileceğimiz herhangi bir sorunu bildirin</string>
+    <string name="help_como_contactar">%1$s yöneticileri ile nasıl temasa geçebilirim?</string>
+    <string name="help_para_cualquier_consulta">Aşağıdaki adreslerden bize ulaşabilirsiniz:</string>
+</resources>

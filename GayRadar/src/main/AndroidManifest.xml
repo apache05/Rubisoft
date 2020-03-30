@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.rubisoft.gayradar"
+    android:installLocation="auto">
+    <!-- no quitar -->
+    <!-- *********** PARA UTILIZAR huq ************* -->
+    <!--<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />--> <!-- *********** PARA GUARDAR LAS FOTOS ********** -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- DANGEROUS -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" /> <!-- DANGEROUS -->
+
+    <!-- *********** PARA UTILIZAR LOCALIZACION ************* -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> <!-- DANGEROUS -->
+
+    <!-- *********** PARA LAS FirebaseAnalytics ************* -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" /> <!-- *********** PARA HACER COMPRAS ************* -->
+    <uses-permission android:name="com.android.vending.BILLING" /> <!-- *********** PARA HACER FOTOS ************* -->
+
+    <!-- para appodeal -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+
+    <uses-feature
+        android:name="android.hardware.camera2"
+        android:required="false" /> <!-- *********** PARA QUE FUNCIONE EN CHROMEBOOKS ************* -->
+    <uses-feature
+        android:name="android.hardware.touchscreen"
+        android:required="false" />
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:resizeable="true"
+        android:smallScreens="true"
+        android:xlargeScreens="true" />
+
+    <application
+        tools:replace="android:allowBackup,android:fullBackupContent"
+        android:name="androidx.multidex.MultiDexApplication"
+        android:allowBackup="false"
+        android:fullBackupContent="true"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_launcher"
+        android:installLocation="auto"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:supportsRtl="true"
+        android:theme="@style/Xradar_theme"
+        android:usesCleartextTraffic="true">
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+        <activity
+            android:name=".activities.Activity_Inicio"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/app_name">
+            <intent-filter>
+                <!-- esta activity sera la inicial -->
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter
+                android:autoVerify="true"
+                android:label="@string/app_name"
+                tools:targetApi="m">
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <!-- Accepts URIs that begin with "http://www.example.com/gizmos" -->
+                <data
+                    android:host="www.rubisoft.es"
+                    android:pathPrefix="/"
+                    android:scheme="http" />
+                <!-- note that the leading "/" is required for pathPrefix -->
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activities.Activity_Principal"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".activities.Activity_Mi_Perfil"
+            android:label="@string/app_name"
+            android:parentActivityName=".activities.Activity_Principal"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activities.Activity_Configuracion"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".activities.Activity_Registro_Persona"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".activities.Activity_Configura_Radar"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".activities.Activity_Mensajes"
+            android:label="@string/app_name" />
+
+        <activity
+            android:name=".activities.Activity_Chat_General"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".activities.Activity_Compras"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".activities.Activity_Feedback"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".activities.Activity_Chat_Individual"
+            android:label="@string/app_name"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".activities.Activity_Sin_Conexion"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".activities.Activity_Condiciones_Uso"
+            android:label="@string/app_name" />
+        <activity android:name=".activities.Activity_Politica_Privacidad" />
+        <activity
+            android:name=".activities.Activity_Primeras_fotos"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".activities.Activity_Ayuda"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".activities.Activity_Un_Perfil"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name" />
+        <activity android:name=".activities.Activity_estrellas_gratis" />
+        <activity
+            android:name=".activities.Activity_una_foto"
+            android:label="@string/app_name" />
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="@string/Admob_APPID" /> <!-- para logearse con facebook utilizando firebase -->
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id"
+            tools:replace="android:value" /> <!-- para generar token_fcm y poder recibir notificaciones -->
+        <service
+            android:name=".services.MyFirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <!-- Set custom default icon. This is used when no icon is set for incoming notification messages.
+             See README(https://goo.gl/l4GJaQ) for more. -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/heart" />
+        <!-- Set color used with incoming notification messages. This is used when no color is set for the incoming
+             notification message. See README(https://goo.gl/6BKBk7) for more. -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/accent" />
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="169805167c8c3bc98aaa8e04a29a71e066d117f8" /> <!-- In order to take full advantage of the larger display formats on these devices, you should consider increasing your app's maximum supported aspect ratio -->
+        <meta-data
+            android:name="android.max_aspect"
+            android:value="2.1" /> <!-- para hacer fotos en nougat -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true"
+            tools:replace="android:authorities">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths"
+                tools:replace="android:resource" />
+        </provider>
+    </application>
+
+</manifest>

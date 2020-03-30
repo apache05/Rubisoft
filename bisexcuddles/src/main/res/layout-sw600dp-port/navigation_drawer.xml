@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?><!-- The navigation drawer -->
+<com.rubisoft.bisexcuddles.FrameLayouts.ScrimInsetsFrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="@dimen/drawer_width"
+    android:layout_height="match_parent"
+    android:layout_gravity="start"
+    android:layout_marginEnd="@dimen/drawer_margin"
+    android:layout_marginStart="-64dp"
+    android:clickable="true"
+    android:fitsSystemWindows="true"
+    app:insetForeground="@color/status_bar_inset"
+    android:focusable="true">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true"
+        android:background="@drawable/drawer_gradient">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_padding_4"
+            android:layout_marginStart="@dimen/margin_padding_16"
+            android:layout_marginTop="@dimen/margin_padding_40">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@id/mImageView_PictureMain"
+                android:layout_width="@dimen/tamanyo_miniaturas_perfil"
+                android:layout_height="@dimen/tamanyo_miniaturas_perfil"
+                android:clickable="true"
+                android:focusable="true"
+                android:scaleType="centerCrop"
+                app:civ_border_color="#FF000000"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@id/Drawer_TextView_Name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:maxLines="1"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="20dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textColor="@color/white"
+                android:textIsSelectable="true"
+                android:textSize="@dimen/tamanyo_letra_l"
+                app:layout_constraintStart_toEndOf="@id/mImageView_PictureMain"
+                app:layout_constraintTop_toTopOf="@id/mImageView_PictureMain"
+                app:layout_constraintBottom_toBottomOf="@id/mImageView_PictureMain"/>
+
+            <TextView
+                android:id="@id/Drawer_TextView_Premium_User"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="8dp"
+                android:gravity="bottom"
+                android:maxLines="1"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textColor="@color/accent"
+                android:textIsSelectable="true"
+                android:textSize="@dimen/tamanyo_letra_s_plus"
+                app:layout_constraintStart_toEndOf="@id/mImageView_PictureMain"
+                app:layout_constraintTop_toBottomOf="@+id/Drawer_TextView_Name" />
+
+            <TextView
+                android:id="@id/Drawer_TextView_Num_Estrellas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginEnd="4dp"
+                android:gravity="bottom"
+                android:textColor="@color/accent"
+                android:textIsSelectable="true"
+                android:textSize="@dimen/tamanyo_letra_l"
+                app:layout_constraintEnd_toStartOf="@+id/Drawer_ImageView_estrella"
+                app:layout_constraintTop_toTopOf="@+id/Drawer_TextView_Name" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@id/Drawer_ImageView_estrella"
+                android:layout_width="@dimen/Tam_Notification_icons"
+                android:layout_height="@dimen/Tam_Notification_icons"
+                android:layout_gravity="bottom"
+                android:layout_marginEnd="30dp"
+                android:contentDescription="@string/Content_description_foto"
+                app:layout_constraintBottom_toBottomOf="@+id/Drawer_TextView_Num_Estrellas"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/Drawer_TextView_Num_Estrellas" />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@id/recyclerViewDrawer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:overScrollMode="never"
+                android:scrollbars="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="parent"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="40dp"
+                android:paddingBottom="40dp"
+                app:layout_constraintTop_toBottomOf="@id/mImageView_PictureMain" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</com.rubisoft.bisexcuddles.FrameLayouts.ScrimInsetsFrameLayout>

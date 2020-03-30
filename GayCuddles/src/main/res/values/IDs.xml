@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="Main_LinearLayout" type="id" />
+
+    <!--**************** Chat_list  ****************-->
+    <item name="Chat_List_ImageView" type="id" />
+    <item name="Chat_List_TextView" type="id" />
+
+    <!--**************** Mensajes_List  ****************-->
+    <item name="Mensajes_list_ImageView" type="id" />
+    <item name="Mensajes_list_TextView" type="id" />
+    <item name="Mensajes_list_ImageView_mensaje_sin_leer" type="id" />
+
+
+    <!--**************** Cardview_list_pareja  ****************-->
+    <item name="Cardview_list_pareja_TextView_rango_edades" type="id" />
+    <item name="Cardview_list_pareja_TextView_distancia" type="id" />
+
+    <!--**************** Cardview_list_persona  ****************-->
+    <item name="Layout_un_perfil_LinearLayout_info" type="id" />
+    <item name="Cardview_list_persona_ImageView_usuario" type="id" />
+
+    <item name="Cardview_list_persona_TextView_nombre" type="id" />
+    <item name="Cardview_list_persona_ImageView_premium" type="id" />
+    <item name="Cardview_list_persona_ImageView_estrella" type="id" />
+    <item name="Cardview_list_persona_ImageView_casa" type="id" />
+    <item name="Cardview_list_persona_ImageView_coche" type="id" />
+    <item name="Cardview_list_persona_ImageView_moto" type="id" />
+
+    <item name="Cardview_list_persona_TextView_edad" type="id" />
+    <item name="Cardview_list_persona_TextView_altura" type="id" />
+    <item name="Cardview_list_persona_TextView_peso" type="id" />
+    <item name="Cardview_list_persona_TextView_raza" type="id" />
+    <item name="Cardview_list_persona_TextView_distancia" type="id" />
+    <item name="Cardview_list_persona_TextView_quiero_dejar_claro" type="id" />
+    <item name="Cardview_list_persona_TextView_estrellas" type="id" />
+    <item name="Cardview_list_persona_view" type="id" />
+    <item name="Cardview_list_persona_ImageView_sexualidad" type="id" />
+    <item name="Cardview_list_persona_ImageView_online" type="id" />
+
+    <!--****************  Dialogo_cambiar_foto ****************-->
+    <item name="Dialogo_cambiar_foto_title" type="id" />
+    <item name="Dialogo_cambiar_foto_Button_cambiar_foto" type="id" />
+    <item name="Dialogo_cambiar_foto_Button_hacer_foto" type="id" />
+    <item name="Dialogo_cambiar_foto_Button_borrar_foto" type="id" />
+    <!--
+        <item name="Dialogo_cambiar_foto_Button_hacer_foto_privada" type="id" />
+    -->
+    <!--****************  Dialogo_interactuar ****************-->
+    <item name="Dialogo_interactuar_title" type="id" />
+    <item name="Dialogo_interactuar_Button_Ver_fotos" type="id" />
+    <item name="Dialogo_interactuar_Button_escribir_mensaje" type="id" />
+    <item name="Dialogo_interactuar_Button_denunciar" type="id" />
+    <item name="Dialogo_interactuar_Button_info" type="id" />
+    <item name="Dialogo_interactuar_Button_ver_fotos" type="id" />
+    <item name="Dialogo_interactuar_Button_borrar_conversacion" type="id" />
+    <item name="Dialogo_interactuar_Button_bloquear" type="id" />
+
+    <!--**************** Drawer_item  ****************-->
+    <item name="Drawer_item_ImageView" type="id" />
+    <item name="Drawer_item_TextView_title" type="id" />
+    <!--****************  Fragment_datos_parejiles ****************-->
+
+
+    <!--****************  Fragment_datos_personales ****************-->
+    <item name="Fragment_datos_personales_TextView_Nick" type="id" />
+    <item name="Fragment_datos_personales_EditText_nick" type="id" />
+    <item name="Fragment_datos_personales_TextView_Tus_Datos" type="id" />
+    <item name="Fragment_datos_personales_TextView_Edad" type="id" />
+    <item name="Fragment_datos_personales_TextView_mi_Edad" type="id" />
+    <item name="Fragment_datos_personales_TextView_Altura" type="id" />
+    <item name="Fragment_datos_personales_RangeBar_mi_Altura" type="id" />
+    <item name="Fragment_datos_personales_TextView_mi_Altura" type="id" />
+    <item name="Fragment_datos_personales_TextView_Peso" type="id" />
+    <item name="Fragment_datos_personales_RangeBar_mi_Peso" type="id" />
+    <item name="Fragment_datos_personales_TextView_mi_Peso" type="id" />
+    <item name="Fragment_datos_personales_TextView_Raza" type="id" />
+    <item name="Fragment_datos_personales_TextView_mi_Raza" type="id" />
+    <item name="Fragment_datos_personales_TextView_Sexualidad" type="id" />
+    <item name="Fragment_datos_personales_TextView_sexo" type="id" />
+    <item name="Fragment_datos_personales_TextView_y" type="id" />
+    <item name="Fragment_datos_personales_Spinner_cambiar_mi_orientacion" type="id" />
+    <item name="Fragment_datos_personales_Button_actualizar_datos_personales" type="id" />
+    <item name="Fragment_datos_personales_TextView_Quiero_dejar_claro_que" type="id" />
+    <item name="Fragment_datos_personales_TextView_Quiero_dejar_claro" type="id" />
+    <item name="Fragment_datos_personales_Edittext_quiero_dejar_claro" type="id" />
+
+    <!--****************  Fragment_foto_manager ****************-->
+    <item name="Fragment_foto_manager_ReciclerView" type="id" />
+    <item name="Dialogo_cambiar_foto_LinearLayout_botonera" type="id" />
+
+    <!--****************  Fragment_localizacion ****************-->
+
+    <!--****************  Fragment_logros ****************-->
+    <item name="Fragment_logros_ImageView_reloj" type="id" />
+    <item name="Fragment_logros_ImageView_motivo" type="id" />
+    <item name="Fragment_logros_ImageView_variacion" type="id" />
+    <item name="Fragment_logros_ImageView_total" type="id" />
+    <item name="Fragment_logros_TableLayout_logros" type="id" />
+
+
+    <!--****************  Layout_centro_mensajes ****************-->
+
+    <item name="Layout_centro_mensajes_ReciclerView" type="id" />
+    <item name="Layout_centro_mensajes_TextView_ningun_perfil" type="id" />
+    <item name="Layout_centro_mensajes_RelativeLayout" type="id" />
+    <item name="Layout_centro_mensajes_CardView" type="id" />
+
+
+    <!--****************  Layout_chat ****************-->
+    <item name="Layout_chat_ScrollView" type="id" />
+    <item name="Layout_chat_LinearLayout_conversacion" type="id" />
+    <item name="Layout_chat_EditText_texto_a_enviar" type="id" />
+    <item name="Layout_chat_ImageView_enviar_mensaje" type="id" />
+    <item name="Layout_chat_ImageView_adjuntar_foto" type="id" />
+    <item name="Layout_chat_ImageView_hacer_foto" type="id" />
+
+    <!--****************  Layout_configura_radar ****************-->
+    <item name="Layout_configura_radar_RadioGroup_elegir" type="id" />
+    <item name="Layout_configura_radar_RadioButton_una_persona" type="id" />
+    <item name="Layout_configura_radar_RadioButton_una_pareja" type="id" />
+    <item name="Layout_configura_radar_CardView_Busca_Personas" type="id" />
+
+    <!--*************************************-->
+
+    <!--*************************************-->
+    <item name="Layout_configura_radar_de_persona_spinner_que_busca" type="id" />
+    <item name="Layout_configura_radar_de_persona_TextView_radio" type="id" />
+    <item name="Layout_configura_radar_de_persona_RangeBar_radio" type="id" />
+    <item name="Layout_configura_radar_de_persona_TextView_raza" type="id" />
+    <item name="Layout_configura_radar_de_persona_Spinner_razas" type="id" />
+    <item name="Layout_configura_radar_de_persona_ImageView_check_radio" type="id" />
+    <item name="Layout_configura_radar_de_persona_TextView_que_tenga_casa" type="id" />
+    <item name="Layout_configura_radar_de_persona_TextView_que_tenga_coche" type="id" />
+    <item name="Layout_configura_radar_de_persona_TextView_que_tenga_moto" type="id" />
+
+    <item name="Layout_configura_radar_de_persona_ImageView_que_tenga_casa" type="id" />
+    <item name="Layout_configura_radar_de_persona_ImageView_que_tenga_coche" type="id" />
+    <item name="Layout_configura_radar_de_persona_ImageView_que_tenga_moto" type="id" />
+
+    <item name="Layout_configura_radar_de_persona_TextView_Rango_edades" type="id" />
+    <item name="Layout_configura_radar_de_persona_TextView_altura_entre" type="id" />
+    <item name="Layout_configura_radar_de_persona_TextView_peso_entre" type="id" />
+    <item name="Layout_configura_radar_de_persona_TextView_min_altura" type="id" />
+    <item name="Layout_configura_radar_de_persona_TextView_max_altura" type="id" />
+    <item name="Layout_configura_radar_de_persona_TextView_min_peso" type="id" />
+    <item name="Layout_configura_radar_de_persona_TextView_max_peso" type="id" />
+    <item name="Layout_configura_radar_de_persona_TextView_min_edad" type="id" />
+    <item name="Layout_configura_radar_de_persona_TextView_max_edad" type="id" />
+    <item name="Layout_configura_radar_de_persona_TextView_que_este_online" type="id" />
+    <item name="Layout_configura_radar_de_persona_SwitchCompat_que_este_online" type="id" />
+    <item name="Layout_configura_radar_de_persona_TextView_que_sea_nuevo" type="id" />
+    <item name="Layout_configura_radar_de_persona_SwitchCompat_que_sea_nuevo" type="id" />
+    <item name="Layout_configura_radar_de_persona_TextView_only_premiums" type="id" />
+
+    <item name="Layout_configura_radar_de_persona_RangeBar_altura" type="id" />
+    <item name="Layout_configura_radar_de_persona_RangeBar_edad" type="id" />
+    <item name="Layout_configura_radar_de_persona_RangeBar_peso" type="id" />
+    <item name="Layout_configura_radar_de_persona_Button_actualizar_configuracion_radar" type="id" />
+
+
+    <!--****************  Layout_configuracion ****************-->
+    <item name="Layout_configuracion_TextView_unidades" type="id" />
+    <item name="Layout_configuracion_Spinner_unidades" type="id" />
+    <item name="Layout_configuracion_Switch_modo_invisible" type="id" />
+    <item name="Layout_configuracion_TextView_modo_invisible" type="id" />
+
+    <item name="Layout_configuracion_AppCompatButton_eliminar_cuenta" type="id" />
+
+    <item name="Layout_configuracion_TextView_desactivar_sonido_chat" type="id" />
+    <item name="Layout_configuracion_Switch_desactivar_sonido_chat" type="id" />
+    <!--****************  Layout_estrellas_gratis ****************-->
+    <item name="Layout_estrellas_por_anuncio" type="id" />
+
+    <!--****************  Layout_feedback ****************-->
+    <item name="Layout_feedback_TextView_titulo" type="id" />
+    <item name="Layout_feedback_RadioGroup_me_gusta" type="id" />
+    <item name="Layout_feedback_RadioButton_si_me_gusta" type="id" />
+    <item name="Layout_feedback_RadioButton_no_me_gusta" type="id" />
+    <item name="Layout_feedback_Button_enviar_feedback" type="id" />
+    <item name="Layout_feedback_TextView_rate_app" type="id" />
+    <item name="Layout_feedback_Button_rate_app" type="id" />
+    <item name="Layout_feedback_TextView_please_feedback" type="id" />
+    <item name="Layout_feedback_EditText_feedback" type="id" />
+    <item name="Layout_feedback_CardView_write_suggestion" type="id" />
+    <item name="Layout_feedback_CardView_rate_app" type="id" />
+    <item name="Layout_feedback_RadioGroup_encuesta" type="id" />
+    <item name="Layout_feedback_RadioButton_poca_gente" type="id" />
+    <item name="Layout_feedback_RadioButton_va_lenta" type="id" />
+    <item name="Layout_feedback_RadioButton_no_se_como_va" type="id" />
+    <item name="Layout_feedback_RadioButton_mal_traducida" type="id" />
+    <item name="Layout_feedback_RadioButton_no_funciona_bien" type="id" />
+    <item name="Layout_feedback_RadioButton_mal_disenyo" type="id" />
+    <item name="Layout_feedback_RadioButton_otro" type="id" />
+    <item name="layout_feedback_scrollview" type="id" />
+
+    <!--****************  Dialog_reset_password ****************-->
+    <!--****************  Dialog_signup ****************-->
+    <item name="Dialog_signup_email" type="id" />
+    <item name="Dialog_signup_password1" type="id" />
+    <item name="Dialog_signup_password2" type="id" />
+
+    <!--****************  Layout_inicio ****************-->
+    <item name="Layout_inicio_TextView_nombre_app" type="id" />
+    <item name="Layout_inicio_AppCompatImageView_facebook" type="id" />
+    <item name="Layout_inicio_AppCompatImageView_google_plus" type="id" />
+    <item name="Layout_inicio_Button_signin" type="id" />
+    <item name="Layout_inicio_Button_signup" type="id" />
+    <item name="Layout_inicio_EditText_Email" type="id" />
+    <item name="Layout_inicio_EditText_Password" type="id" />
+    <item name="Layout_inicio_Button_forgot_password" type="id" />
+    <item name="Layout_inicio_TextView_nota_privacidad" type="id" />
+
+    <!--****************  Layout_uninstall ****************-->
+
+    <!--****************  Layout_chat_general ****************-->
+    <item name="Layout_chat_general_ScrollView" type="id" />
+    <item name="Layout_chat_general_LinearLayout_conversacion" type="id" />
+    <item name="Layout_chat_general_EditText_texto_a_enviar" type="id" />
+    <item name="Layout_chat_general_ImageView_enviar_mensaje" type="id" />
+    <item name="Layout_chat_general_TextView_ayuda" type="id" />
+    <item name="Layout_chat_general_ReciclerView" type="id" />
+
+    <!--****************  Layout_ayuda ****************-->
+
+
+    <!--****************  Layout_mejorar ****************-->
+    <item name="Layout_compras_TextView_comprar_estrellas" type="id" />
+    <item name="Layout_compras_TextView_ventajas_de_comprar" type="id" />
+    <item name="Layout_compras_RadioGroup_compra" type="id" />
+    <item name="Layout_compras_RadioButton_5_estrellas" type="id" />
+    <item name="Layout_compras_RadioButton_10_estrellas" type="id" />
+    <item name="Layout_compras_RadioButton_20_estrellas" type="id" />
+    <item name="Layout_compras_RadioButton_40_estrellas" type="id" />
+    <item name="Layout_compras_Button_comprar" type="id" />
+    <item name="Layout_compras_TextView_suscribir_premium" type="id" />
+
+    <item name="Layout_compras_TextView_ventajas_de_suscribir" type="id" />
+    <item name="Layout_compras_RadioGroup_suscribe" type="id" />
+    <item name="Layout_compras_RadioButton_medio_anyo" type="id" />
+    <item name="Layout_compras_RadioButton_1_anyo" type="id" />
+    <item name="Layout_compras_Button_suscribirse" type="id" />
+
+    <!--****************  Layout_mi_perfil ****************-->
+    <item name="Layout_mi_perfil_TabLayout" type="id" />
+    <item name="Layout_mi_perfil_ViewPager" type="id" />
+
+    <!--****************  Layout_persona_o_grupo ****************-->
+
+    <!--****************  Layout_principal ****************-->
+    <item name="Layout_principal_RelativeLayout" type="id" />
+    <item name="Layout_principal_TextView_ningun_perfil" type="id" />
+    <item name="Layout_principal_ReciclerView" type="id" />
+
+    <item name="Layout_principal_Button_avanzar" type="id" />
+    <item name="Layout_principal_Button_retroceder" type="id" />
+    <item name="Layout_principal_Cardview" type="id" />
+
+    <!--****************  Layout_registro_pareja ****************-->
+
+
+    <!--****************  Layout_registro_personas ****************-->
+    <item name="Layout_registro_personas_EditText_nick" type="id" />
+    <item name="Layout_registro_personas_TextView_nick" type="id" />
+    <item name="Layout_registro_personas_Spinner_mi_sexo" type="id" />
+    <item name="Layout_registro_personas_TextView_registro_birth" type="id" />
+    <item name="Layout_registro_personas_Spinner_mi_dia_nacimiento" type="id" />
+    <item name="Layout_registro_personas_Spinner_mi_mes_nacimiento" type="id" />
+    <item name="Layout_registro_personas_Spinner_mi_anyo_nacimiento" type="id" />
+    <item name="Layout_registro_personas_Spinner_mi_orientacion" type="id" />
+    <item name="Layout_registro_personas_TextView_Altura_registro" type="id" />
+    <item name="Layout_registro_personas_TextView_mi_Altura_registro" type="id" />
+    <item name="Layout_registro_personas_RangeBar_mi_altura" type="id" />
+    <item name="Layout_registro_personas_TextView_Peso_registro" type="id" />
+    <item name="Layout_registro_personas_TextView_mi_Peso_registro" type="id" />
+    <item name="Layout_registro_personas_RangeBar_mi_peso" type="id" />
+    <item name="Layout_registro_personas_TextView_mi_Raza_registro" type="id" />
+    <item name="Layout_registro_personas_Spinner_mi_Raza_registro" type="id" />
+    <item name="Layout_registro_personas_TextView_quiero_dejar_claro" type="id" />
+    <item name="Layout_registro_personas_EditText_quiero_dejar_claro" type="id" />
+    <item name="Layout_registro_personas_TextView_opcional" type="id" />
+    <item name="Layout_registro_personas_CheckBox_I_Agree" type="id" />
+    <item name="Layout_registro_personas_TextView_Terms" type="id" />
+    <item name="Layout_registro_personas_Button_registrarse" type="id" />
+    <item name="Layout_registro_personas_Button_retroceder" type="id" />
+    <item name="Layout_registro_personas_CardView_Sexualidad" type="id" />
+
+    <!--****************  Layout_sin_conexion ****************-->
+    <item name="Layout_sin_conexion_TextView_NO_HAY_CONEXION" type="id" />
+    <item name="Layout_sin_conexion_LinearLayout" type="id" />
+
+    <!--****************  Layout_sobre_xradar ****************-->
+    <item name="Layout_sobre_xradar_TextView_nombre_aplicacion" type="id" />
+    <item name="Layout_sobre_xradar_TextView_version_aplicacion" type="id" />
+    <item name="Layout_sobre_xradar_TextView_explicacion_xradar_title" type="id" />
+    <item name="Layout_sobre_xradar_TextView_explicacion_xradar" type="id" />
+    <item name="Layout_sobre_xradar_TextView_como_funciona_title" type="id" />
+    <item name="Layout_sobre_xradar_TextView_como_ganar_estrellas_title" type="id" />
+    <item name="Layout_sobre_xradar_TextView_como_ganar_estrellas" type="id" />
+    <item name="Layout_registro_personas_sexualidad" type="id" />
+    <item name="Layout_registro_personas_datos_fisicos" type="id" />
+
+    <item name="Layout_sobre_xradar_TextView_principal" type="id" />
+    <item name="Layout_sobre_xradar_TextView_configura_radar" type="id" />
+    <item name="Layout_sobre_xradar_TextView_mensajes" type="id" />
+    <item name="Layout_sobre_xradar_TextView_mi_perfil" type="id" />
+    <item name="Layout_sobre_xradar_TextView_compras" type="id" />
+    <item name="Layout_sobre_xradar_TextView_ajustes" type="id" />
+    <item name="Layout_sobre_xradar_TextView_chat_general" type="id" />
+    <item name="Layout_sobre_xradar_TextView_estrellas" type="id" />
+
+
+    <item name="Layout_sobre_xradar_TextView_feedback" type="id" />
+    <item name="Layout_sobre_xradar_ImageView_principal" type="id" />
+    <item name="Layout_sobre_xradar_configura_radar" type="id" />
+    <item name="Layout_sobre_xradar_ImageView_mensajes" type="id" />
+    <item name="Layout_sobre_xradar_ImageView_mi_perfil" type="id" />
+    <item name="Layout_sobre_xradar_ImageView_compras" type="id" />
+    <item name="Layout_sobre_xradar_ImageView_ajustes" type="id" />
+    <item name="Layout_sobre_xradar_ImageView_chat_general" type="id" />
+    <item name="Layout_sobre_xradar_ImageView_feedback" type="id" />
+    <item name="Layout_sobre_xradar_ImageView_estrellas" type="id" />
+
+
+    <item name="Layout_sobre_xradar_TextView_como_contactar" type="id" />
+    <item name="Layout_sobre_xradar_TextView_para_cualquier_consulta" type="id" />
+    <item name="Layout_sobre_xradar_TextView_rubisoft_email" type="id" />
+    <item name="Layout_sobre_xradar_TextView_rubisoft_twitter" type="id" />
+    <item name="Layout_sobre_xradar_ImageView_icono_email" type="id" />
+    <item name="Layout_sobre_xradar_ImageView_icono_twitter" type="id" />
+
+    <!--****************  Layout_una_foto ****************-->
+    <item name="Layout_una_foto_ImageView_expanded_image" type="id" />
+
+    <!--****************  Layout_un_perfil ****************-->
+
+    <item name="Layout_un_perfil_ImageView_expanded_image" type="id" />
+    <item name="Layout_un_perfil_LinearLayout_miniaturas" type="id" />
+
+    <!--****************  Layout_primeras_fotos ****************-->
+    <item name="Layout_primeras_fotos_TextView_pon_fotos" type="id" />
+    <item name="Layout_primeras_fotos_ImageButton_1" type="id" />
+    <item name="Layout_primeras_fotos_AppCompatImageView_aceptar" type="id" />
+    <item name="advertencia" type="id" />
+
+    <item name="ImageView_mi_foto" type="id" />
+    <!--****************  Navigation_drawer ****************-->
+    <item name="mImageView_PictureMain" type="id" />
+    <item name="Drawer_TextView_Name" type="id" />
+    <item name="Drawer_TextView_Premium_User" type="id" />
+    <item name="mDrawerLayout" type="id" />
+    <item name="Drawer_TextView_Num_Estrellas" type="id" />
+    <item name="Drawer_ImageView_estrella" type="id" />
+
+    <item name="recyclerViewDrawer" type="id" />
+
+    <!--****************  Progressbar ****************-->
+    <item name="mProgressBar" type="id" />
+    <!--****************  Toolbar ****************-->
+    <item name="mToolbar" type="id" />
+    <!--****************  menu_options ****************-->
+    <item name="menu_options_condiciones_de_uso" type="id" />
+    <item name="menu_options_politica_privacidad" type="id" />
+</resources>

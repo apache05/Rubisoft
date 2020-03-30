@@ -1,0 +1,53 @@
+<resources>
+    <!-- Example customization of dimensions originally defined in res/values/dimens.xml
+         (such as screen margins) for screens with more than 820dp of available width. This
+         would include 7" and 10" devices in landscape (~960dp and ~1280dp respectively). -->
+  <!--<dimen name="design_navigation_icon_size" tools:override="true">90dp</dimen>
+    <dimen name="design_tab_text_size" tools:override="true">18dp</dimen>
+    <dimen name="design_snackbar_text_size" tools:override="true">24dp</dimen>
+
+-->
+    <dimen name="drawer_width">300dp</dimen>
+
+    <!-- tamanyo textos -->
+    <dimen name="tamanyo_letra_xxl">65sp</dimen>
+    <dimen name="tamanyo_letra_l_plus">39sp</dimen>
+    <dimen name="tamanyo_letra_l">26sp</dimen>
+    <dimen name="tamanyo_letra_m">18sp</dimen>
+    <dimen name="tamanyo_letra_s_plus">19sp</dimen>
+    <dimen name="tamanyo_letra_s">14sp</dimen>
+    <dimen name="tamanyo_letra_xs">11sp</dimen>
+
+
+    <!-- tamanyo EN PX DE mis fotos de mi perfil-->
+
+    <!-- tamanyo EN PX DE LAS PICS QUE SE MUESTRAN en el list-->
+    <dimen name="tamanyo_foto_perfiles">150dp</dimen>
+
+    <!-- tamanyo EN PX DE LAS PICS QUE SE MUESTRAN en el grid-->
+    <dimen name="tamanyo_foto_grid_perfiles">110dp</dimen>
+
+    <!-- tamanyo de las miniaturas de un_perfil-->
+    <dimen name="tamanyo_miniaturas_perfil">90dp</dimen>
+
+    <dimen name="tamanyo_miniaturas_chat">52dp</dimen>
+
+    <!-- elevation de los cardview y de all en general -->
+    <dimen name="elevation_perfiles">3dp</dimen>
+
+    <!-- radio de las esquinas de los cardviews -->
+    <dimen name="corner_radius">4dp</dimen>
+
+
+    <dimen name="Tam_Dialogs_icons">33dp</dimen>
+
+    <dimen name="Tam_Normal_icons">30dp</dimen>
+
+    <dimen name="Tam_Small_icons">21dp</dimen>
+
+    <dimen name="Tam_Notification_icons">28dp</dimen>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+
+
+</resources>

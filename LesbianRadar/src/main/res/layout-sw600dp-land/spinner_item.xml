@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--para que los spinners se vean mas grandes en las tabletas-->
+
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="7dp"
+    android:paddingBottom="7dp"
+    android:gravity="center"
+    android:textAlignment="gravity"
+    android:textSize="@dimen/tamanyo_letra_m"
+    android:layout_gravity="end"
+    />

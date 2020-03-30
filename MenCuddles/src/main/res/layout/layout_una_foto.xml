@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?><!-- CUALQUIER CAMBIO AQUI DEBE SER REPLICADO EN LAYOUT-SW600DP-LAND -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/primary_light">
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+            android:id="@id/Layout_una_foto_ImageView_expanded_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitCenter"
+            android:contentDescription="@string/Content_description_foto" />
+</LinearLayout>

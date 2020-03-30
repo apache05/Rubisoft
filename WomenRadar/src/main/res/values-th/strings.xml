@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?><resources>
+   
+    <!-- ****************************  UNIDADES DE MEDIDA ****************************-->
+    <string name="Mi">%1$sไมล์</string>
+    <string name="m">%1$.2fม.</string>
+    <string name="kg">%1$dกก.</string>
+    <string name="km">%1$.2fกม.</string>
+
+    <!--************************ MENU_CAMBIAR_FOTO ************************  -->
+    <string name="change_pic">เปลี่ยนรูป</string>
+
+    <string name="title_activity_condiciones_uso">ข้อตกลงในการใช้งาน</string>
+    <string name="title_activity_politica_privacidad">นโยบายความเป็นส่วนตัว</string>
+
+    <!-- ****************************  VARIOS ****************************-->
+    <string name="no">ไม่</string>
+    <string name="si">ใช่</string>
+    <string name="y">และ</string>
+    <string name="Cancelar">ยกเลิก</string>
+    <string name="ok">ตกลง</string>
+    <string name="app_name">เรดาร์ผู้หญิง</string>
+    <string name="estrellas">+%1$dดาว</string>
+    <string name="anyos">%1$dปี</string>
+    <string name="foto_inapropiada">ภาพนี้ถือว่าไม่เหมาะสม</string>
+    <string name="SOLO_PREMIUM">สำหรับผู้ใช้แบบพรีเมียมเท่านั้น</string>
+    <string name="LOCATION_NOT_READY">โปรดเปิดโหมดตำแหน่งที่ตั้งเพื่อรับและอัปเดตตำแหน่งของคุณ</string>
+
+    <!--  MENSAJES DEL GOOGLE CLOUD MESSAGING -->
+    <string name="MENSAJE_DE">%1$sส่งข้อความถึงคุณ</string>
+    <string name="NUEVO_MENSAJE">%1$sเขียนในแชท</string>
+
+    <!--  MENSAJES POR DEFECTO CUANDO LLEGA UN MENSAJE Y LA APP ESTÁ EN BACKGROUND -->
+    <string name="DEFAULT_NOTIFICATION_TITLE" >ข้อความใหม่</string>
+    <string name="DEFAULT_NOTIFICATION_TEXT" >คุณมีข้อความที่ยังไม่ได้อ่านใหม่ มาอ่านกันเถอะ!</string>
+
+    <!-- *********************** ACTIVITY_MENSAJES*********************************** -->
+    <string name="ACTIVITY_MENSAJES_NO_HAY_MENSAJES">ยังไม่มีข้อความ</string>
+
+    <!-- *********************** ACTIVITY_SIN_CONEXION y*********************************** -->
+    <string name="ACTIVITY_SIN_CONEXION_NO_HAY_CONEXION">ไม่มีการเชื่อมต่อ</string>
+
+    <!-- *********************** ACTIVITY_MI_PERFIL*********************************** -->
+    <string name="ACTIVITY_MI_PERFIL_TAB_TUS_FOTOS">รูปภาพของคุณ</string>
+    <string name="ACTIVITY_MI_PERFIL_TAB_TUS_DATOS">ข้อมูลของคุณ</string>
+    <string name="ACTIVITY_MI_PERFIL_TAB_TUS_ESTRELLAS">ดาวของคุณ</string>
+
+    <!--************************ ACTIVITY_CHAT_GENERAL ************************ -->
+    <string name="ACTIVITY_CHAT_GENERAL_CUANTOS_HAY">มี%dคนออนไลน์</string>
+
+    <!--************************ ACTIVITY_CHAT ************************ -->
+    <string name="ACTIVITY_CHAT_AMISTAD_TERMINADA">ผู้ใช้ไม่รับข้อความอีกแล้วหรือผู้ใช้ยกเลิกการลงทะเบียน</string>
+    <string name="ACTIVITY_CHAT_ESTRELLAS_GRATIS">รับดาวฟรี</string>
+
+    <!--************************  ACTIVITY_CONFIGURA_RADAR************************ -->
+    <string name="ACTIVITY_CONFIGURA_RADAR_EDAD_ENTRE">ช่วงอายุ</string>
+    <string name="ACTIVITY_CONFIGURA_RADAR_ALTURA_ENTRE">ช่วงความสูง</string>
+    <string name="ACTIVITY_CONFIGURA_RADAR_PESO_ENTRE">ช่วงน้ำหนัก</string>
+    <string name="ACTIVITY_CONFIGURA_RADAR_QUE_TENGA_CASA">ผู้ที่มีบ้านเท่านั้น</string>
+    <string name="ACTIVITY_CONFIGURA_RADAR_QUE_TENGA_COCHE">ผู้ที่มีรถเท่านั้น</string>
+    <string name="ACTIVITY_CONFIGURA_RADAR_QUE_TENGA_MOTO">ผู้ที่มีจักรยานยนต์เท่านั้น</string>
+    <string name="ACTIVITY_CONFIGURA_RADAR_RAZA_">เชื้อชาติ:</string>
+    <string name="ACTIVITY_CONFIGURA_RADAR_DISTANCIA_MI">ภายในรัศมี%1$sไมล์</string>
+    <string name="ACTIVITY_CONFIGURA_RADAR_DISTANCIA_KM">ภายในรัศมี%1$dกม.</string>
+    <string name="ACTIVITY_CONFIGURA_RADAR_CUALQUIER_RAZA">ทุกเชื้อชาติ</string>
+    <string name="ACTIVITY_CONFIGURA_RADAR_AL_MENOS_1_RAZA">คุณต้องเลือกอย่างน้อยหนึ่งเชื้อชาติ</string>
+    <string name="ACTIVITY_CONFIGURA_RADAR_ONLINE" >ออนไลน์</string>
+    <string name="ACTIVITY_CONFIGURA_RADAR_NEW" >ใหม่</string>
+
+    <!--************************ ACTIVITY_CONFIGURACION ************************  -->
+    <string name="ACTIVITY_CONFIGURACION_UNIDADES">หน่วย:</string>
+    <string name="ACTIVITY_CONFIGURACION_CHAT_ACTIVADO">เปิดใช้งานการแชท</string>
+    <string name="ACTIVITY_CONFIGURACION_SONIDO_CHAT_DESACTIVADO">ปิดการใช้งานการแชท</string>
+
+    <!-- ***********************  ACTIVITY_UNINSTALL *********************************** -->
+    <string name="ACTIVITY_UNINSTALL_UNINSTALL">ลบบัญชีผู้ใช้</string>
+
+    <!-- ***********************  ACTIVITY_INICIO *********************************** -->
+    <string name="ACTIVITY_INICIO_ERROR_LOGGIN">เกิดข้อผิดพลาดขณะลงชื่อเข้าใช้ โปรดลองอีกครั้ง</string>
+    <string name="ACTIVITY_INICIO_HINT_EMAIL">อีเมล</string>
+    <string name="ACTIVITY_INICIO_HINT_PASSWORD">รหัสผ่าน</string>
+    <string name="ACTIVITY_INICIO_HINT_REPEAT_PASSWORD">ทวนรหัสผ่าน</string>
+    <string name="ACTIVITY_INICIO_SIGNIN">ลงชื่อเข้าใช้</string>
+    <string name="ACTIVITY_INICIO_SIGNUP">ลงทะเบียน</string>
+    <string name="ACTIVITY_INICIO_BAD_EMAIL">อีเมลไม่ถูกต้อง</string>
+    <string name="ACTIVITY_INICIO_FORGOT_PASSWORD">ลืมรหัสผ่านใช่ไหม?</string>
+    <string name="ACTIVITY_INICIO_FORGOT_RESET_PASSWORD">รีเซ็ตรหัสผ่าน</string>
+    <string name="ACTIVITY_INICIO_FORGOT_RESET">รีเซ็ต</string>
+    <string name="ACTIVITY_INICIO_EMAIL_SENT">คุณได้รับอีเมลพร้อมคำแนะนำในการรีเซ็ตรหัสผ่านของคุณ</string>
+    <string name="ACTIVITY_INICIO_PASSWORDS_DOESNT_MATCH">รหัสผ่านไม่ตรงกัน</string>
+    <string name="ACTIVITY_INICIO_NOTA_PRIVACIDAD">ข้อมูลจะไม่ถูกเก็ยจากบัญชีผู้ใช้ของคุณและเราจะไม่ส่งข้อความใดๆ</string>
+
+    <!-- ***********************  ACTIVITY_REGISTRO_PERSONA *********************************** -->
+    <string name="ACTIVITY_REGISTRO_TITULO">ลงทะเบียน</string>
+    <string name="ACTIVITY_REGISTRO_DATOS_FISICOS">คุณเป็นอย่างไร</string>
+    <string name="ACTIVITY_REGISTRO_SEXUALIDAD">ลักษณะทางเพศ</string>
+    <string name="ACTIVITY_REGISTRO_CHECKBOX_I_AGREE">ฉันยอมรับกับ</string>
+    <string name="ACTIVITY_REGISTRO_TEXTVIEW_TERMS_AND_CONDITIONS">กฎเกณฑ์และเงื่อนไขการใช้งาน</string>
+    <string name="ACTIVITY_REGISTRO_ALTURA_">ส่วนสูง:</string>
+    <string name="ACTIVITY_REGISTRO_PESO_">น้ำหนัก:</string>
+    <string name="ACTIVITY_REGISTRO_RAZA_">เชื้อชาติ:</string>
+    <string name="ACTIVITY_REGISTRO_NICK_">ชื่อเล่น</string>
+    <string name="ACTIVITY_REGISTRO_QUIERO_DEJAR_CLARO">ฉันต้องการทำให้ชัดเจนว่า *</string>
+    <string name="ACTIVITY_REGISTRO_OPCIONAL"> * ระบุหรือไม่ก็ได้</string>
+    <string name="ACTIVITY_REGISTRO_BIRTH_">วันเกิด</string>
+    <string name="ACTIVITY_REGISTRO_ERROR_FALTA_NICK">ข้อผิดพลาด: ไม่มีชื่อเล่นของคุณ</string>
+    <string name="ACTIVITY_REGISTRO_ERROR_FALTA_SEXUALIDAD">ข้อผิดพลาด: คุณต้องเลือกเพศและรสนิยมทางเพศของคุณ</string>
+    <string name="ACTIVITY_REGISTRO_ERROR_UNDERAGE">ข้อผิดพลาด: คุณต้องมีอายุมากกว่า%1$dปี</string>
+    <string name="ACTIVITY_REGISTRO_ERROR_INCONGRUENCIA_SEXUAL">ข้อผิดพลาด: เพศและรสนิยมทางเพศของคุณไม่สอดคล้องกัน</string>
+    <string name="ACTIVITY_REGISTRO_ERROR_TERMS">คุณต้องยอมรับกฎเกณฑ์และเงื่อนไข</string>
+
+    <!-- *********************** ACTIVITY_PRIMERAS_FOTOS y*********************************** -->
+    <string name="ACTIVITY_PRIMERAS_FOTOS_INSERTA_FOTOS">คุณจะอัปโหลดรูปภาพของคุณหรือไม่ก็ได้</string>
+    <string name="ADVERTENCIA">ข้อควรระวัง: คุณไม่สามารถอัปโหลดรูปภาพลามกหรือโป๊เปลือยได้ ผู้ดูแลจะลบรูปใดๆ ที่ไม่เหมาะสมโดยไม่แจ้งล่วงหน้า</string>
+
+    <!-- ***********************  ACTIVITY_PRINCIPAL *********************************** -->
+    <string name="ACTIVITY_PRINCIPAL_NO_VA_EL_GPS">ไม่สามารถค้นหาผู้คนได้อย่างถูกต้องแม่นยำขณะที่ไม่ได้ระบุตำแหน่งที่ตั้งของคุณ เปิดใช้งานตำแหน่งที่ตั้งของคุณและลองอีกครั้งหนึ่ง</string>
+    <string name="ACTIVITY_PRINCIPAL_NINGUN_PERFIL_ENCONTRADO">ไม่พบผู้คนในการตั้งค่าเรดาร์ปัจจุบันของคุณ</string>
+
+    <!-- ***********************  FRAGMENT_BORRAR *********************************** -->
+    <string name="ACTIVITY_CONFIGURACION_ELIMINAR_CUENTA">บัญชีผู้ใช้ที่ลบแล้ว</string>
+
+    <!-- ***********************  ACTIVITY_COMPRAS *********************************** -->
+    <string name="ACTIVITY_MEJORAR_COMPRA_X_ESTRELLAS">%1$dดาวในราคา%2$s</string>
+    <string name="ACTIVITY_MEJORAR_SUSCRIBE_6_MESES">สมัคร 6 เดือนในราคา%1$s</string>
+    <string name="ACTIVITY_MEJORAR_SUSCRIBE_1_AÑO">สมัคร 1 ปีในราคา%1$s</string>
+    <string name="ACTIVITY_MEJORAR_TITULO_SUSCRIBIR">สมัครใช้พรีเมียม</string>
+    <string name="ACTIVITY_MEJORAR_TITULO_COMPRAR">ซื้อดาว</string>
+    <string name="ACTIVITY_MEJORAR_ERROR_COMPRA_ESTRELLAS">ข้อผิดพลาด: การซื้อไม่สำเร็จ</string>
+    <string name="ACTIVITY_MEJORAR_EXITO_COMPRA">การซื้อเสร็จสิ้น</string>
+    <string name="ACTIVITY_MEJORAR_ERROR_SUSCRIPCION">ข้อผิดพลาด: การสมัครไม่สำเร็จ</string>
+    <string name="ACTIVITY_MEJORAR_EXITO_SUSCRIPCION">การสมัครเสร็จสิ้น</string>
+    <string name="ACTIVITY_MEJORAR_CANCELADO">ยกเลิกแล้ว</string>
+    <string name="ACTIVITY_MEJORAR_YA_ES_PREMIUM">คุณมีบัญชีผู้ใช้แบบพรีเมียมอยู่</string>
+
+    <!-- ***********************  ACTIVITY_ESTRELLAS_GRATIS *********************************** -->
+    <string name="ACTIVITY_ESTRELLAS_POR_ANUNCIO">รับ%1$dดาวโดยรับชมโฆษณา</string>
+
+    <!-- ***********************  ACTIVITY_FEEDBACK *********************************** -->
+    <string name="ACTIVITY_FEEDBACK_TITULO">คุณชอบแอปนี้หรือไม่</string>
+    <string name="ACTIVITY_FEEDBACK_PLEASE_FEEDBACK">โปรดบอกเราว่าคุณไม่ชอบอะไร</string>
+    <string name="ACTIVITY_FEEDBACK_SEND_FEEDBACK">ส่ง</string>
+    <string name="ACTIVITY_FEEDBACK_RATE_APP">โปรดให้คะแนนแอปนี้ใน Play Store</string>
+    <string name="ACTIVITY_FEEDBACK_RATE">ให้คะแนน</string>
+    <string name="ACTIVITY_FEEDBACK_SENT">ส่งคำติชมแล้ว</string>
+    <string name="ACTIVITY_FEEDBACK_HINT_YOUR_FEEDBACK"> เขียนความคิดเห็นของคุณ</string>
+    <string name="ACTIVITY_FEEDBACK_APP_LENTA">แอปช้า</string>
+    <string name="ACTIVITY_FEEDBACK_MAL_DISENO">การออกแบบแย่</string>
+    <string name="ACTIVITY_FEEDBACK_MAL_TRADUCIDA">คำแปลผิด</string>
+    <string name="ACTIVITY_FEEDBACK_NO_SE_COMO_VA">ฉันไม่รู้ว่าใช้อย่างไร (โปรดอ่านความช่วยเหลือก่อน)</string>
+    <string name="ACTIVITY_FEEDBACK_NO_FUNCIONA_BIEN">ทำงานผิดปกติ</string>
+    <string name="ACTIVITY_FEEDBACK_POCOS_USUARIOS">ผู้ใช้น้อย</string>
+    <string name="ACTIVITY_FEEDBACK_OTROS">อื่นๆ</string>
+
+    <!-- ***********************  FRAGMENT_FOTO *********************************** -->
+    <string name="FRAGMENT_FOTO_ERROR_FOTO_NO_CARGADA">เกินข้อผิดพลาดขณะโหลดรูปภาพ</string>
+    <string name="FRAGMENT_FOTO_ERROR_FOTO_MUY_PESADA">ข้อผิดพลาด: รูปภาพขนาดใหญ่เกินไป</string>
+    <string name="FRAGMENT_FOTO_EROR_FORMAT_NOT_SUPPORTED">ข้อผิดพลาด: ไม่รองรับรูปแบบไฟล์นี้</string>
+    <string name="FRAGMENT_FOTO_WAIT">รอขณะที่รูปกำลังอัปโหลด</string>
+
+    <!-- ***********************  FRAGMENT_DATOS_PERSONALES *********************************** -->
+    <string name="FRAGMENT_DATOS_PERSONALES_NICK_">ชื่อเล่น</string>
+    <string name="FRAGMENT_DATOS_PERSONALES_EDAD_">อายุ:</string>
+    <string name="FRAGMENT_DATOS_PERSONALES_ALTURA_">ส่วนสูง:</string>
+    <string name="FRAGMENT_DATOS_PERSONALES_PESO_">น้ำหนัก:</string>
+    <string name="FRAGMENT_DATOS_PERSONALES_RAZA_">เชื้อชาติ:</string>
+    <string name="FRAGMENT_DATOS_PERSONALES_SEXUALIDAD">ลักษณะทางเพศ</string>
+    <string name="FRAGMENT_DATOS_PERSONALES_TUS_DATOS">ข้อมูลของคุณ</string>
+    <string name="FRAGMENT_DATOS_PERSONALES_OTROS_DATOS">ข้อมูลอื่นๆ</string>
+    <string name="FRAGMENT_DATOS_PERSONALES_QUIERO_DEJAR_CLARO">ฉันต้องการทำให้ชัดเจนว่า</string>
+
+    <!-- *******************  Dialogo interactuar ************************** -->
+    <string name="DIALOGO_INTERACTUAR_TITULO">เลือกการกระทำ</string>
+
+    <!-- *******************  Dialogo borrar cuenta ************************** -->
+    <string name="DIALOGO_BORRAR_CUENTA_TITULO">ลบบัญชีผู้ใช้</string>
+    <string name="DIALOGO_BORRAR_CUENTA_ADVERTENCIA">คุณจะสูญเสียดาวและการสมัครสมาชิกของคุณหากคุณมี</string>
+
+    <!--************************  dialogo denuncia ************************-->
+    <string name="DIALOGO_DENUNCIAR_PREGUNTA_MOTIVO">เหตุผลใดคุณจึงเลิกใช้งาน</string>
+    <string name="DIALOGO_DENUNCIAR_DENUNCIAR">เลิกใช้งาน</string>
+    <string name="DIALOGO_DENUNCIAR_DENUNCIADO">ผู้ใช้ที่เลิกใช้งาน</string>
+
+    <!--************************  dialogo se te va a cobrar ************************-->
+    <string name="DIALOGO_AVISO_MENSAJE_SE_TE_VA_A_COBRAR">การดำเนินการนี้ใช้%1$dดาวสำหรับผู้ใช้ที่ไม่ใช่แบบพรีเมียม</string>
+    <string name="DIALOGO_AVISO_MENSAJE_NO_TIENES_ESTRELLAS">การดำเนินการนี้ใช้%1$dดาวสำหรับผู้ใช้ที่ไม่ใช่แบบพรีเมียม คุณมีดาวไม่เพียงพอสำหรับการดำเนินการนี้</string>
+    <string name="DIALOGO_COMPRAR_ESTRELLAS">ซื้อดาว</string>
+
+    <!--************************  dialogo ayuda ************************-->
+    <string name="DIALOGO_CONSEJO_TITULO">ความช่วยเหลือ</string>
+    <string name="DIALOGO_CONSEJO_MENSAJE">แตะที่โปรไฟล์เพื่อดำเนินการใดๆ</string>
+    <string name="DIALOGO_CONSEJO_MENSAJE_CHAT_GENERAL">แชทกับผู้คนจากประเทศของคุณ ในการแชทส่วนตัว แตะที่รูปผู้ใช้และกดปุ่มข้อความ</string>
+    <string name="DIALOGO_CONSEJO_YA_NO_MAS">ไม่ต้องแสดงอีกต่อไป</string>
+    <string name="DIALOGO_CONSEJO_FOTO_MANAGER">แตะเพื่อเปลี่ยนรูปภาพ</string>
+
+
+    <string name="MOTIVO_SIGNED_UP">ลงทะเบียนแล้ว</string>
+    <string name="MOTIVO_COBRO_SEMANAL">คการใช้จ่ายรายสัปดาห์</string>
+    <string name="MOTIVO_COMPRA_ESTRELLAS">ซื้อ</string>
+    <string name="MOTIVO_COBRO_PETICION_CHAT_GENERAL">ส่งไฟล์แนบโดยใช้การแชท</string>
+    <string name="MOTIVO_ANUNCIO_BONIFICADO">โฆษณาที่มีรางวัลหลังชมจบ</string>
+
+
+    <!-- ventajas premium-->
+    <string name="ventajas_de_suscribir">
+        \n\t    - คุณจะปรากฏในตำแหน่งแรก\n
+        \n\t	- จะไม่เรียกเก็บค่าธรรมเนียมดาวรายสัปดาห์\n
+        \n\t	- อัปโหลดรูปโปรไฟล์ได้สูงสุด%1$dรูป\n
+        \n\t	- กรองการค้นหาของคุณด้วยตัวเลือกการมีรถ จักรยานยนต์ หรือบ้าน\n
+        \n\t	- รัศมีการค้นหาสองเท่า\n\n	- ไม่มีโฆษณา\n
+        \n\t	- รายการโปรไฟล์แบ่งตามระยะทาง\n
+        \n\t	- คุณสามารถส่งรูปภาพในข้อความของคุณได้ไม่จำกัด</string>
+    <string name="ventajas_de_comprar">\n	- ทำให้ผู้อื่นมองเห็นคุณได้มากขึ้น\n\n	- เพิ่มคำขอเป็นเพื่อนของคุณ\n\n	- คุณสามารถส่งรูปภาพในข้อความของคุณได้</string>
+
+    <!-- HELP -->
+    <string name="help_info_title">%1$sคืออะไร</string>
+    <string name="help_info">%1$sคือแอปที่คุณสามารถหาเพื่อนใหม่ที่อยู่ใกล้คุณได้ ไม่เสียค่าใช้จ่าย แต่คุณสามารถจ่ายเพื่อใช้เวอร์ชั่นแบบพรีเมียมได้ ปรับเรดาร์ของคุณและค้นหาผู้คนอย่างสม่ำเสมอ</string>
+    <string name="help_ganar_estrellas">ครับดาวและคุณจะปรากฏในตำแหน่งบนสุดของการค้นหา จะมีการเรียกเก็บ%1$d ครั้งต่อสัปดาห์หากคุณไม่ใช่ผู้ใช้ระดับพรีเมียม</string>
+    <string name="help_como_funciona">ทำงานอย่างไร</string>
+    <string name="help_principal">คุณจะได้รับผลลัพธ์การค้นหาของคุณที่นี่ แตะที่โปรไฟล์เพื่อดำเนินการ โปรไฟล์จะแบ่งตามดาว หากคุณไม่ใช่ผู้ใช้แบบพรีเมียม และแบ่งตามระยะทาง หากคุณไม่ใช่ผู้ใช้แบบพรีเมียม</string>
+    <string name="help_configura_radar">ปรับเรดาร์ของคุณเพื่อค้นหาเฉพาะคนที่คุณชอบ ผู้ใช้ระดับพรีเมียมสามารถค้นหาได้สองเท่าจากคุณสมบัติอื่น ๆ</string>
+    <string name="help_mensajes">อ่านข้อความทั้งหมดที่คุณส่งหรือได้รับ</string>
+    <string name="help_mi_perfil">อัปโหลดรูปภาพ อัปเดตโปรไฟล์ของคุณ และตรวจสอบดาวของคุณที่นี่ ผู้ใช้แบบพรีเมียมสามารถอัปโหลดได้มากสุด%1$dรูป</string>
+    <string name="help_compras">กลายมาเป็นผู้ใช้แบบพรีเมียมหรือซื้อดาวที่นี่ เพลิดเพลินไปกับสิทธิประโยชน์!</string>
+    <string name="help_ajustes">ตั้งการแจ้งเตือนฟีเจอร์บางอย่างในแอปของคุณ ตั้งค่าหน่วย และอื่นๆ อีกทั้ง คุณสามารถลบบัญชีผู้ใช้ของคุณได้</string>
+    <string name="help_chat_general">แชทกับผู้คนในประเทศของคุณและกับผู้ที่มีรสนิยมทางเพศแบบเดียวกันกับคุณ </string>
+    <string name="help_feedback">บอกเราว่าคุณมีความเห็นอย่างไรกับแอปของเรา ให้คะแนนเราหรือรายงานปัญหาเพื่อที่เราจะพัฒนาให้ดีขึ้นได้</string>
+    <string name="help_como_contactar">ฉันจะติดต่อกับผู้ดูแล%1$sได้อย่างไร</string>
+    <string name="help_para_cualquier_consulta">คุณสามารถติดต่อเราได้ผ่านที่อยู่ต่อไปนี้:</string>
+
+</resources>

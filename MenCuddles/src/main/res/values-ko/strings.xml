@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?><resources>
+    <!-- ****************************  UNIDADES DE MEDIDA ****************************-->
+    <string name="Mi">%1$sMi</string>
+    <string name="m">%1$.2fm</string>
+    <string name="kg">%1$dKg</string>
+    <string name="km">%1$.2fKm</string>
+
+    <!--************************ MENU_CAMBIAR_FOTO ************************  -->
+    <string name="change_pic">사진 변경</string>
+
+    <string name="title_activity_condiciones_uso">이용 약관</string>
+    <string name="title_activity_politica_privacidad">개인정보 처리방침</string>
+
+    <!-- ****************************  VARIOS ****************************-->
+    <string name="no">아니요</string>
+    <string name="si">예</string>
+    <string name="y">및</string>
+    <string name="Cancelar">취소</string>
+    <string name="ok">확인</string>
+    <string name="app_name">Men finder</string>
+    <string name="estrellas">별 %1$d개 추가</string>
+    <string name="anyos">%1$d세</string>
+    <string name="foto_inapropiada">이 사진은 부적절한 것으로 간주됩니다</string>
+    <string name="SOLO_PREMIUM">프리미엄 사용자 전용</string>
+    <string name="LOCATION_NOT_READY">사용자의 위치를 확인하고 업데이트할 수 있도록 위치 모드를 켜주십시오.</string>
+
+    <!--  MENSAJES DEL GOOGLE CLOUD MESSAGING -->
+    <string name="MENSAJE_DE">%1$s님이 메시지를 보냈습니다</string>
+    <string name="NUEVO_MENSAJE">%1$s님이 채팅에 글을 남겼습니다</string>
+
+    <!--  MENSAJES POR DEFECTO CUANDO LLEGA UN MENSAJE Y LA APP ESTÁ EN BACKGROUND -->
+    <string name="DEFAULT_NOTIFICATION_TITLE" >새로운 메시지</string>
+    <string name="DEFAULT_NOTIFICATION_TEXT" >읽지 않은 새 메시지가 있습니다. 읽어 봅시다!</string>
+
+    <!-- *********************** ACTIVITY_MENSAJES*********************************** -->
+    <string name="ACTIVITY_MENSAJES_NO_HAY_MENSAJES">아직 메시지가 없습니다</string>
+
+    <!-- *********************** ACTIVITY_SIN_CONEXION y*********************************** -->
+    <string name="ACTIVITY_SIN_CONEXION_NO_HAY_CONEXION">연결 없음</string>
+
+    <!-- *********************** ACTIVITY_MI_PERFIL*********************************** -->
+    <string name="ACTIVITY_MI_PERFIL_TAB_TUS_FOTOS">내 사진</string>
+    <string name="ACTIVITY_MI_PERFIL_TAB_TUS_DATOS">내 데이터</string>
+    <string name="ACTIVITY_MI_PERFIL_TAB_TUS_ESTRELLAS">내 별</string>
+
+    <!--************************ ACTIVITY_CHAT_GENERAL ************************ -->
+    <string name="ACTIVITY_CHAT_GENERAL_CUANTOS_HAY">%d명이 접속 중입니다</string>
+
+    <!--************************ ACTIVITY_CHAT ************************ -->
+    <string name="ACTIVITY_CHAT_AMISTAD_TERMINADA">사용자가 더 이상 메시지를 수락하지 않거나 사용자가 탈퇴했습니다</string>
+    <string name="ACTIVITY_CHAT_ESTRELLAS_GRATIS">무료 별 얻기</string>
+
+    <!--************************  ACTIVITY_CONFIGURA_RADAR************************ -->
+    <string name="ACTIVITY_CONFIGURA_RADAR_EDAD_ENTRE">연령 범위</string>
+    <string name="ACTIVITY_CONFIGURA_RADAR_ALTURA_ENTRE">신장 범위</string>
+    <string name="ACTIVITY_CONFIGURA_RADAR_PESO_ENTRE">체중 범위</string>
+    <string name="ACTIVITY_CONFIGURA_RADAR_QUE_TENGA_CASA">집이 있는 사람만</string>
+    <string name="ACTIVITY_CONFIGURA_RADAR_QUE_TENGA_COCHE">차가 있는 사람만</string>
+    <string name="ACTIVITY_CONFIGURA_RADAR_QUE_TENGA_MOTO">오토바이가 있는 사람만</string>
+    <string name="ACTIVITY_CONFIGURA_RADAR_RAZA_">인종:</string>
+    <string name="ACTIVITY_CONFIGURA_RADAR_DISTANCIA_MI">%1$sMi 반경 이내</string>
+    <string name="ACTIVITY_CONFIGURA_RADAR_DISTANCIA_KM">%1$dKm 반경 이내</string>
+    <string name="ACTIVITY_CONFIGURA_RADAR_CUALQUIER_RAZA">모든 인종</string>
+    <string name="ACTIVITY_CONFIGURA_RADAR_AL_MENOS_1_RAZA">인종을 하나 이상 선택해야 합니다</string>
+    <string name="ACTIVITY_CONFIGURA_RADAR_ONLINE">온라인</string>
+    <string name="ACTIVITY_CONFIGURA_RADAR_NEW">새로운</string>
+
+    <!--************************ ACTIVITY_CONFIGURACION ************************  -->
+    <string name="ACTIVITY_CONFIGURACION_UNIDADES">단위:</string>
+    <string name="ACTIVITY_CONFIGURACION_CHAT_ACTIVADO">채팅 가능</string>
+    <string name="ACTIVITY_CONFIGURACION_SONIDO_CHAT_DESACTIVADO">채팅 비활성화</string>
+
+    <!-- ***********************  ACTIVITY_UNINSTALL *********************************** -->
+    <string name="ACTIVITY_UNINSTALL_UNINSTALL">계정 삭제</string>
+
+    <!-- ***********************  ACTIVITY_INICIO *********************************** -->
+    <string name="ACTIVITY_INICIO_ERROR_LOGGIN">로그인 도중 오류가 발생했습니다. 다시 시도하세요</string>
+    <string name="ACTIVITY_INICIO_HINT_EMAIL">이메일</string>
+    <string name="ACTIVITY_INICIO_HINT_PASSWORD">비밀번호</string>
+    <string name="ACTIVITY_INICIO_HINT_REPEAT_PASSWORD">비밀번호 반복</string>
+    <string name="ACTIVITY_INICIO_SIGNIN">로그인</string>
+    <string name="ACTIVITY_INICIO_SIGNUP">가입</string>
+    <string name="ACTIVITY_INICIO_BAD_EMAIL">유효한 이메일이 아닙니다</string>
+    <string name="ACTIVITY_INICIO_FORGOT_PASSWORD">비밀번호를 잊으셨나요?</string>
+    <string name="ACTIVITY_INICIO_FORGOT_RESET_PASSWORD">비밀번호 재설정</string>
+    <string name="ACTIVITY_INICIO_FORGOT_RESET">재설정</string>
+    <string name="ACTIVITY_INICIO_EMAIL_SENT">비밀번호 재설정 안내 이메일이 전송되었습니다</string>
+    <string name="ACTIVITY_INICIO_PASSWORDS_DOESNT_MATCH">비밀번호가 일치하지 않습니다</string>
+    <string name="ACTIVITY_INICIO_NOTA_PRIVACIDAD">귀하의 계정에서 어떠한 데이터도 수집하지 않으며 어떠한 종류의 메시지도 전송하지 않습니다</string>
+
+    <!-- ***********************  ACTIVITY_REGISTRO_PERSONA *********************************** -->
+    <string name="ACTIVITY_REGISTRO_TITULO">가입</string>
+    <string name="ACTIVITY_REGISTRO_DATOS_FISICOS">당신은 어떤 사람입니까</string>
+    <string name="ACTIVITY_REGISTRO_SEXUALIDAD">성적 지향</string>
+    <string name="ACTIVITY_REGISTRO_CHECKBOX_I_AGREE">다음에 동의합니다.</string>
+    <string name="ACTIVITY_REGISTRO_TEXTVIEW_TERMS_AND_CONDITIONS">이용 약관</string>
+    <string name="ACTIVITY_REGISTRO_ALTURA_">신장:</string>
+    <string name="ACTIVITY_REGISTRO_PESO_">체중:</string>
+    <string name="ACTIVITY_REGISTRO_RAZA_">인종:</string>
+    <string name="ACTIVITY_REGISTRO_NICK_">닉네임</string>
+    <string name="ACTIVITY_REGISTRO_QUIERO_DEJAR_CLARO">나는 다음 사항을 분명히 하고자 합니다 *</string>
+    <string name="ACTIVITY_REGISTRO_OPCIONAL">* 선택사항</string>
+    <string name="ACTIVITY_REGISTRO_BIRTH_">생년월일</string>
+    <string name="ACTIVITY_REGISTRO_ERROR_FALTA_NICK">오류: 닉네임 누락</string>
+    <string name="ACTIVITY_REGISTRO_ERROR_FALTA_SEXUALIDAD">오류: 성별 및 성적 지향을 선택해야 합니다</string>
+    <string name="ACTIVITY_REGISTRO_ERROR_UNDERAGE">오류: 반드시 만 %1$d세를 넘어야만 합니다</string>
+    <string name="ACTIVITY_REGISTRO_ERROR_INCONGRUENCIA_SEXUAL">오류: 성별 및 성적 지향이 맞지 않습니다</string>
+    <string name="ACTIVITY_REGISTRO_ERROR_TERMS">이용 약관에 동의하셔야 합니다</string>
+
+    <!-- *********************** ACTIVITY_PRIMERAS_FOTOS y*********************************** -->
+    <string name="ACTIVITY_PRIMERAS_FOTOS_INSERTA_FOTOS">원하는 경우 자신의 사진을 업로드할 수 있습니다</string>
+    <string name="ADVERTENCIA">주의: 외설적이거나 음란한 사진을 올리는 것은 허용되지 않습니다. 부적절한 사진은 관리자가 예고 없이 삭제합니다.</string>
+
+    <!-- ***********************  ACTIVITY_PRINCIPAL *********************************** -->
+    <string name="ACTIVITY_PRINCIPAL_NO_VA_EL_GPS">위치를 알 수 없는 경우 사람들을 정확하게 검색할 수 없습니다. 위치를 활성화하시고 몇 초 뒤에 다시 시도하세요</string>
+    <string name="ACTIVITY_PRINCIPAL_NINGUN_PERFIL_ENCONTRADO">현재 레이더 설정에서 아무도 찾지 못했습니다</string>
+
+    <!-- ***********************  FRAGMENT_BORRAR *********************************** -->
+    <string name="ACTIVITY_CONFIGURACION_ELIMINAR_CUENTA">계정 삭제</string>
+
+    <!-- ***********************  ACTIVITY_COMPRAS *********************************** -->
+    <string name="ACTIVITY_MEJORAR_COMPRA_X_ESTRELLAS">%2$s에 별 %1$d개</string>
+    <string name="ACTIVITY_MEJORAR_SUSCRIBE_6_MESES">%1$s 비용으로 6개월간 구독</string>
+    <string name="ACTIVITY_MEJORAR_SUSCRIBE_1_AÑO">%1$s 비용으로 1년간 구독</string>
+    <string name="ACTIVITY_MEJORAR_TITULO_SUSCRIBIR">프리미엄 구독</string>
+    <string name="ACTIVITY_MEJORAR_TITULO_COMPRAR">별 구매</string>
+    <string name="ACTIVITY_MEJORAR_ERROR_COMPRA_ESTRELLAS">오류: 구매 실패</string>
+    <string name="ACTIVITY_MEJORAR_EXITO_COMPRA">구매가 성공적으로 완료되었습니다</string>
+    <string name="ACTIVITY_MEJORAR_ERROR_SUSCRIPCION">오류: 구독 실패</string>
+    <string name="ACTIVITY_MEJORAR_EXITO_SUSCRIPCION">구독이 성공적으로 완료되었습니다</string>
+    <string name="ACTIVITY_MEJORAR_CANCELADO">취소됨</string>
+    <string name="ACTIVITY_MEJORAR_YA_ES_PREMIUM">이미 프리미엄 계정입니다</string>
+
+    <!-- ***********************  ACTIVITY_ESTRELLAS_GRATIS *********************************** -->
+    <string name="ACTIVITY_ESTRELLAS_POR_ANUNCIO">광고를 시청하고 별 %1$d개 얻기</string>
+
+    <!-- ***********************  ACTIVITY_FEEDBACK *********************************** -->
+    <string name="ACTIVITY_FEEDBACK_TITULO">이 앱이 마음에 드셨나요?</string>
+    <string name="ACTIVITY_FEEDBACK_PLEASE_FEEDBACK">마음에 들지 않는 점을 알려주세요.</string>
+    <string name="ACTIVITY_FEEDBACK_SEND_FEEDBACK">전송</string>
+    <string name="ACTIVITY_FEEDBACK_RATE_APP">Play Store에서 앱을 평가해주세요</string>
+    <string name="ACTIVITY_FEEDBACK_RATE">평가하기</string>
+    <string name="ACTIVITY_FEEDBACK_SENT">피드백 전송 완료</string>
+    <string name="ACTIVITY_FEEDBACK_HINT_YOUR_FEEDBACK">의견을 써주세요</string>
+    <string name="ACTIVITY_FEEDBACK_APP_LENTA">느린 앱 속도</string>
+    <string name="ACTIVITY_FEEDBACK_MAL_DISENO">디자인이 별로임</string>
+    <string name="ACTIVITY_FEEDBACK_MAL_TRADUCIDA">오역</string>
+    <string name="ACTIVITY_FEEDBACK_NO_SE_COMO_VA">사용하는 방법을 모름(도움말을 먼저 읽어주세요)</string>
+    <string name="ACTIVITY_FEEDBACK_NO_FUNCIONA_BIEN">오작동</string>
+    <string name="ACTIVITY_FEEDBACK_POCOS_USUARIOS">사용자가 너무 적음</string>
+    <string name="ACTIVITY_FEEDBACK_OTROS">기타</string>
+
+    <!-- ***********************  FRAGMENT_FOTO *********************************** -->
+    <string name="FRAGMENT_FOTO_ERROR_FOTO_NO_CARGADA">사진을 불러오는 도중 오류가 발생했습니다</string>
+    <string name="FRAGMENT_FOTO_ERROR_FOTO_MUY_PESADA">오류: 사진 크기가 너무 큼</string>
+    <string name="FRAGMENT_FOTO_EROR_FORMAT_NOT_SUPPORTED">오류: 지원하지 않는 형식의 파일</string>
+    <string name="FRAGMENT_FOTO_WAIT">이미지가 업로드될 때까지 기다려주십시오</string>
+
+    <!-- ***********************  FRAGMENT_DATOS_PERSONALES *********************************** -->
+    <string name="FRAGMENT_DATOS_PERSONALES_NICK_">닉네임</string>
+    <string name="FRAGMENT_DATOS_PERSONALES_EDAD_">연령:</string>
+    <string name="FRAGMENT_DATOS_PERSONALES_ALTURA_">신장:</string>
+    <string name="FRAGMENT_DATOS_PERSONALES_PESO_">체중:</string>
+    <string name="FRAGMENT_DATOS_PERSONALES_RAZA_">인종:</string>
+    <string name="FRAGMENT_DATOS_PERSONALES_SEXUALIDAD">성적 지향</string>
+    <string name="FRAGMENT_DATOS_PERSONALES_TUS_DATOS">내 데이터</string>
+    <string name="FRAGMENT_DATOS_PERSONALES_OTROS_DATOS">기타 데이터</string>
+    <string name="FRAGMENT_DATOS_PERSONALES_QUIERO_DEJAR_CLARO">나는 다음 사항을 분명히 하고자 합니다</string>
+
+    <!-- *******************  Dialogo interactuar ************************** -->
+    <string name="DIALOGO_INTERACTUAR_TITULO">행동 선택</string>
+
+    <!-- *******************  Dialogo borrar cuenta ************************** -->
+    <string name="DIALOGO_BORRAR_CUENTA_TITULO">계정 삭제</string>
+    <string name="DIALOGO_BORRAR_CUENTA_ADVERTENCIA">모든 별이 사라지며 구독한 경우 구독까지 사라집니다</string>
+
+    <!--************************  dialogo denuncia ************************-->
+    <string name="DIALOGO_DENUNCIAR_PREGUNTA_MOTIVO">신고하는 이유는 무엇입니까?</string>
+    <string name="DIALOGO_DENUNCIAR_DENUNCIAR">신고</string>
+    <string name="DIALOGO_DENUNCIAR_DENUNCIADO">사용자 신고됨</string>
+
+    <!--************************  dialogo se te va a cobrar ************************-->
+    <string name="DIALOGO_AVISO_MENSAJE_SE_TE_VA_A_COBRAR">프리미엄 사용자가 아닌 경우 이 행동에 별 %1$d개가 소모됩니다.</string>
+    <string name="DIALOGO_AVISO_MENSAJE_NO_TIENES_ESTRELLAS">프리미엄 사용자가 아닌 경우 이 행동에 별 %1$d개가 소모됩니다.</string>
+    <string name="DIALOGO_COMPRAR_ESTRELLAS">별 구매</string>
+
+    <!--************************  dialogo ayuda ************************-->
+    <string name="DIALOGO_CONSEJO_TITULO">도움말</string>
+    <string name="DIALOGO_CONSEJO_MENSAJE">행동을 실행하려면 프로필 위를 터치하세요.</string>
+    <string name="DIALOGO_CONSEJO_MENSAJE_CHAT_GENERAL">같은 나라 사람들과 채팅하세요. 비공개로 채팅하려면 사용자 사진 위를 터치하고 메시지 버튼을 누르세요.</string>
+    <string name="DIALOGO_CONSEJO_YA_NO_MAS">다시 보지 않기</string>
+    <string name="DIALOGO_CONSEJO_FOTO_MANAGER">사진을 변경하려면 터치하세요.</string>
+
+
+    <string name="MOTIVO_SIGNED_UP">가입함</string>
+    <string name="MOTIVO_COBRO_SEMANAL">주간 비용</string>
+    <string name="MOTIVO_COMPRA_ESTRELLAS">구매</string>
+    <string name="MOTIVO_COBRO_PETICION_CHAT_GENERAL">채팅을 사용하여 첨부 파일 보내기</string>
+    <string name="MOTIVO_ANUNCIO_BONIFICADO">광고 보상</string>
+
+    <!-- ventajas premium-->
+    <string name="ventajas_de_suscribir">
+        \n\t    - 내가 첫 번째 위치에 나타납니다\n
+        \n\t	- 주간 수수료 없음\n
+        \n\t	- 프로필 사진을 최대 %1$d장까지 업로드하세요\n
+        \n\t	- 자동차, 오토바이 또는 집 소유 여부에 대한 옵션으로 검색을 상세하게 조정하세요.\n
+        \n\t	- 검색 반경 두 배\n
+        \n\t	- 광고 없음\n
+        \n\t	- 거리별로 프로필 목록 정렬\n
+        \n\t	- 메시지에서 무제한으로 사진을 전송할 수 있습니다
+    </string>
+    <string name="ventajas_de_comprar">\n\n	- 다른 사람에게 더 많이 노출됩니다\n\n	- 친구 요청이 늘어납니다\n\n	- 메시지에서 사진을 전송할 수 있습니다</string>
+
+    <!-- HELP -->
+    <string name="help_info_title">%1$s에 대해</string>
+    <string name="help_info">%1$s 앱은 내 주변에서 새로운 친구를 찾을 수 있는 앱입니다. 무료 앱이지만 프리미엄 버전을 이용할 경우 비용이 발생합니다. 레이더를 설정하고 정기적으로 사람들을 검색하세요.\n\n다른 사람들과 메시지를 보낼 때 첫 번째 위치에 표시되려면 별을 획득하세요. 별을 구매할 수도 있습니다.</string>
+    <string name="help_ganar_estrellas">별표를 얻으면 검색의 최상위 순위에 게재됩니다.프리미엄 사용자가 아닌 경우 주당 %1$d가 청구됩니다.</string>
+    <string name="help_como_funciona">어떤 방식으로 작동하나요?</string>
+    <string name="help_principal">여기에서 검색 결과를 확인할 수 있습니다. 행동을 실행하려면 프로필 위를 터치하세요. 프로필은 프리미엄 사용자가 아닌 경우 별 개수별로, 프리미엄 사용자인 경우 거리별로 정렬됩니다.</string>
+    <string name="help_configura_radar">선호하는 사람들만 검색하려면 레이더를 설정하세요. 프리미엄 회원 인 경우 다른 기능에서 2 배 떨어진 사람을 검색 할 수 있습니다.</string>
+    <string name="help_mensajes">주고받은 메시지를 모두 읽어보세요.</string>
+    <string name="help_mi_perfil">사진을 업로드하고 프로필을 업데이트한 후 여기에서 별을 확인하세요. 프리미엄 사용자는 사진을 최대 %1$d장까지 업로드할 수 있습니다.</string>
+    <string name="help_compras">프리미엄 사용자가 되시거나 여기에서 별을 구매하세요. 혜택을 즐겨보세요!</string>
+    <string name="help_ajustes">앱의 일부 기능에 대해 알림, 측정 단위 등을 설정하세요. 또한 계정을 삭제할 수도 있습니다.</string>
+    <string name="help_chat_general">같은 나라 사람들이나 같은 성적 지향을 지닌 사람들과 채팅하세요.</string>
+    <string name="help_feedback">저희 앱에 관한 의견을 말해주세요. 평가해주시거나 개선해야 할 사항을 알려주세요</string>
+    <string name="help_como_contactar">%1$s 관리자와 어떻게 연락할 수 있습니까?</string>
+    <string name="help_para_cualquier_consulta">다음 주소를 통해 저희에게 연락하실 수 있습니다.</string>
+</resources>

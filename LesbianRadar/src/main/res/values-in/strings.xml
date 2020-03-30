@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+    <!-- ****************************  UNIDADES DE MEDIDA ****************************-->
+    <string name="Mi">%1$s Mil</string>
+    <string name="m">%1$.2f m</string>
+    <string name="kg">%1$d Kg</string>
+    <string name="km">%1$.2f Km</string>
+
+    <!--************************ MENU_CAMBIAR_FOTO ************************  -->
+    <string name="change_pic">Ubah foto</string>
+
+    <!-- *********************** SETTING OPTIONS y*********************************** -->
+    <string name="title_activity_condiciones_uso">Ketentuan Penggunaan</string>
+    <string name="title_activity_politica_privacidad">Kebijakan privasi</string>
+
+    <!-- ****************************  VARIOS ****************************-->
+    <string name="no">Tidak</string>
+    <string name="si">Ya</string>
+    <string name="y">dan</string>
+    <string name="Cancelar">Batal</string>
+    <string name="ok">Oke</string>
+    <string name="app_name">Radar lesbian</string>
+    <string name="anyos">%1$d tahun</string>
+    <string name="foto_inapropiada">Foto ini dianggap tidak pantas</string>
+    <string name="SOLO_PREMIUM">Hanya untuk pengguna premium</string>
+    <string name="LOCATION_NOT_READY">Nyalakan modus Lokasi untuk mendapatkan dan memperbarui posisi Anda.</string>
+
+    <!--  MENSAJES DEL GOOGLE CLOUD MESSAGING -->
+    <string name="MENSAJE_DE">%1$s mengirimi Anda sebuah pesan</string>
+    <string name="NUEVO_MENSAJE">%1$s telah menulis dalam obrolan</string>
+
+    <!--  MENSAJES POR DEFECTO CUANDO LLEGA UN MENSAJE Y LA APP ESTÁ EN BACKGROUND -->
+    <string name="DEFAULT_NOTIFICATION_TITLE" >Pesan baru</string>
+    <string name="DEFAULT_NOTIFICATION_TEXT" >Anda memiliki pesan baru yang belum dibaca. Mari kita baca!</string>
+
+    <!-- *********************** ACTIVITY_SIN_CONEXION y*********************************** -->
+    <string name="ACTIVITY_SIN_CONEXION_NO_HAY_CONEXION">TIDAK ADA KONEKSI</string>
+    <string name="ACTIVITY_MI_PERFIL_TAB_TUS_FOTOS">Foto anda</string><!--*******-->
+    <string name="ACTIVITY_MI_PERFIL_TAB_TUS_DATOS">Data anda</string><!--*******-->
+    <string name="ACTIVITY_MI_PERFIL_TAB_TUS_ESTRELLAS">Bintangmu</string><!--*******-->
+
+    <!--************************ ACTIVITY_CHAT_GENERAL ************************ -->
+    <string name="ACTIVITY_CHAT_GENERAL_CUANTOS_HAY">Ada %d orang yang sedang online</string>
+
+    <!-- *********************** ACTIVITY_MENSAJES*********************************** -->
+    <string name="ACTIVITY_MENSAJES_NO_HAY_MENSAJES">Belum ada pesan</string><!--*******-->
+
+    <!--************************ ACTIVITY_CHAT ************************ -->
+    <string name="ACTIVITY_CHAT_AMISTAD_TERMINADA">Pengguna tidak lagi menerima pesan atau pengguna yang tidak terdaftar</string>
+    <string name="ACTIVITY_CHAT_ESTRELLAS_GRATIS">Dapatkan bintang secara gratis</string>
+
+    <!--************************  ACTIVITY_CONFIGURA_RADAR************************ -->
+    <string name="ACTIVITY_CONFIGURA_RADAR_EDAD_ENTRE">Kisaran Usia</string>
+    <string name="ACTIVITY_CONFIGURA_RADAR_ALTURA_ENTRE">Kisaran Tinggi Badan</string>
+    <string name="ACTIVITY_CONFIGURA_RADAR_PESO_ENTRE">Kisaran Berat Badan</string>
+    <string name="ACTIVITY_CONFIGURA_RADAR_QUE_TENGA_CASA">Hanya mereka yang punya rumah</string>
+    <string name="ACTIVITY_CONFIGURA_RADAR_QUE_TENGA_COCHE">Hanya mereka yang punya mobil</string>
+    <string name="ACTIVITY_CONFIGURA_RADAR_QUE_TENGA_MOTO">Hanya mereka yang punya motor</string>
+    <string name="ACTIVITY_CONFIGURA_RADAR_RAZA_">Ras:</string>
+    <string name="ACTIVITY_CONFIGURA_RADAR_DISTANCIA_MI">Dalam radius %1$s Mil</string>
+    <string name="ACTIVITY_CONFIGURA_RADAR_DISTANCIA_KM">Dalam radius %1$d Km</string>
+    <string name="ACTIVITY_CONFIGURA_RADAR_CUALQUIER_RAZA">Ras apa pun</string>
+    <string name="ACTIVITY_CONFIGURA_RADAR_AL_MENOS_1_RAZA">Anda harus memilih minimal satu ras</string>
+    <string name="ACTIVITY_CONFIGURA_RADAR_NEW">Baru</string>
+    <string name="ACTIVITY_CONFIGURA_RADAR_ONLINE">Online</string>
+
+    <!--************************ ACTIVITY_CONFIGURACION ************************  -->
+    <string name="ACTIVITY_CONFIGURACION_UNIDADES">Satuan:</string>
+    <string name="ACTIVITY_CONFIGURACION_CHAT_ACTIVADO">Obrolan diaktifkan</string>
+    <string name="ACTIVITY_CONFIGURACION_SONIDO_CHAT_DESACTIVADO">Obrolan dinonaktifkan</string>
+
+    <!-- ***********************  ACTIVITY_UNINSTALL *********************************** -->
+    <string name="ACTIVITY_UNINSTALL_UNINSTALL">Hapus akun</string>
+
+    <!-- ***********************  ACTIVITY_INICIO *********************************** -->
+    <string name="ACTIVITY_INICIO_ERROR_LOGGIN">Terjadi kesalahan saat masuk. Coba lagi.</string>
+    <string name="ACTIVITY_INICIO_HINT_EMAIL">Email</string>
+    <string name="ACTIVITY_INICIO_HINT_PASSWORD">Kata sandi</string>
+    <string name="ACTIVITY_INICIO_HINT_REPEAT_PASSWORD">Ulangi kata sandi</string>
+    <string name="ACTIVITY_INICIO_SIGNIN">Masuk</string>
+    <string name="ACTIVITY_INICIO_SIGNUP">Daftar</string>
+    <string name="ACTIVITY_INICIO_BAD_EMAIL">Bukan email yang valid</string>
+    <string name="ACTIVITY_INICIO_FORGOT_PASSWORD">Lupa kata sandi?</string>
+    <string name="ACTIVITY_INICIO_FORGOT_RESET_PASSWORD">Atur ulang kata sandi</string>
+    <string name="ACTIVITY_INICIO_FORGOT_RESET">Atur ulang</string>
+    <string name="ACTIVITY_INICIO_EMAIL_SENT">Anda telah menerima email berisi petunjuk cara mengatur ulang kata sandi Anda</string>
+    <string name="ACTIVITY_INICIO_PASSWORDS_DOESNT_MATCH">Kata sandi tidak cocok</string>
+    <string name="ACTIVITY_INICIO_NOTA_PRIVACIDAD">Setiap data akan diambil dari akun Anda dan kami tidak akan mengirimkan pesan jenis apa pun</string>
+
+    <!-- ***********************  ACTIVITY_REGISTRO_PERSONA *********************************** -->
+    <string name="ACTIVITY_REGISTRO_DATOS_FISICOS" >Tentang tubuhmu</string>
+    <string name="ACTIVITY_REGISTRO_SEXUALIDAD" >Seksualitas</string>
+    <string name="ACTIVITY_REGISTRO_TITULO">Daftar</string>
+    <string name="ACTIVITY_REGISTRO_CHECKBOX_I_AGREE">Saya menyetujui</string>
+    <string name="ACTIVITY_REGISTRO_TEXTVIEW_TERMS_AND_CONDITIONS">Syarat dan Ketentuan penggunaan</string>
+    <string name="ACTIVITY_REGISTRO_ALTURA_">Tinggi badan:</string>
+    <string name="ACTIVITY_REGISTRO_PESO_">Berat badan:</string>
+    <string name="ACTIVITY_REGISTRO_RAZA_">Ras:</string>
+    <string name="ACTIVITY_REGISTRO_NICK_">Panggilan</string>
+    <string name="ACTIVITY_REGISTRO_QUIERO_DEJAR_CLARO">Saya ingin menjelaskan bahwa *</string>
+    <string name="ACTIVITY_REGISTRO_OPCIONAL">* Opsional</string>
+    <string name="ACTIVITY_REGISTRO_BIRTH_">Tanggal lahir</string>
+    <string name="ACTIVITY_REGISTRO_ERROR_FALTA_NICK">Kesalahan: Panggilan tidak ditemukan</string>
+    <string name="ACTIVITY_REGISTRO_ERROR_FALTA_SEXUALIDAD">Kesalahan: Anda harus memilih jenis kelamin dan orientasi seksual</string>
+    <string name="ACTIVITY_REGISTRO_ERROR_UNDERAGE">Kesalahan: usia Anda harus di atas %1$d tahun</string>
+    <string name="ACTIVITY_REGISTRO_ERROR_INCONGRUENCIA_SEXUAL">Kesalahan: jenis kelamin dan orientasi seksual Anda tidak sesuai</string>
+    <string name="ACTIVITY_REGISTRO_ERROR_TERMS">Anda harus menyetujui Syarat dan Ketentuan</string>
+
+    <!-- *********************** ACTIVITY_PRIMERAS_FOTOS y*********************************** -->
+    <string name="ACTIVITY_PRIMERAS_FOTOS_INSERTA_FOTOS">Opsional Anda bisa mengunggah satu gambar dari diri Anda</string>
+    <string name="ADVERTENCIA">Perhatian: tidak diperbolehkan mengunggah foto cabul atau pornografi. Administrator akan menghapus gambar yang tidak pantas tanpa pemberitahuan sebelumnya.</string>
+
+    <!-- ***********************  ACTIVITY_PRINCIPAL *********************************** -->
+    <string name="ACTIVITY_PRINCIPAL_NO_VA_EL_GPS">Tidak mungkin mencari seseorang dengan tepat jika lokasi Anda tidak diketahui. Aktifkan lokasi Anda, lalu coba lagi setelah beberapa detik</string>
+    <string name="ACTIVITY_PRINCIPAL_NINGUN_PERFIL_ENCONTRADO">Tak seorang pun ditemukan dengan pengaturan radar Anda saat ini</string>
+
+    <!-- ***********************  FRAGMENT_BORRAR *********************************** -->
+    <string name="ACTIVITY_CONFIGURACION_ELIMINAR_CUENTA">Hapus akun</string>
+
+    <!-- ***********************  ACTIVITY_COMPRAS *********************************** -->
+    <string name="ACTIVITY_MEJORAR_COMPRA_X_ESTRELLAS">%1$d bintang dengan %2$s</string>
+    <string name="ACTIVITY_MEJORAR_SUSCRIBE_6_MESES">Berlangganan 6 bulan dengan %1$s</string>
+    <string name="ACTIVITY_MEJORAR_SUSCRIBE_1_AÑO">Berlangganan 1 tahun dengan %1$s</string>
+    <string name="ACTIVITY_MEJORAR_TITULO_SUSCRIBIR">Berlangganan premium</string>
+    <string name="ACTIVITY_MEJORAR_TITULO_COMPRAR">Beli bintang</string>
+    <string name="ACTIVITY_MEJORAR_ERROR_COMPRA_ESTRELLAS">Kesalahan: pembelian tidak berhasil</string>
+    <string name="ACTIVITY_MEJORAR_EXITO_COMPRA">Pembelian berhasil diselesaikan</string>
+    <string name="ACTIVITY_MEJORAR_ERROR_SUSCRIPCION">Kesalahan: langganan tidak berhasil</string>
+    <string name="ACTIVITY_MEJORAR_EXITO_SUSCRIPCION">Langganan berhasil diselesaikan</string>
+    <string name="ACTIVITY_MEJORAR_CANCELADO">Dibatalkan</string>
+    <string name="ACTIVITY_MEJORAR_YA_ES_PREMIUM">Anda sudah menggunakan akun premium</string>
+
+    <!-- ***********************  ACTIVITY_ESTRELLAS_GRATIS *********************************** -->
+    <string name="ACTIVITY_ESTRELLAS_POR_ANUNCIO">Dapatkan %1$d bintang dengan melihat iklan</string>
+
+    <!-- ***********************  ACTIVITY_FEEDBACK *********************************** -->
+    <string name="ACTIVITY_FEEDBACK_TITULO">Apakah Anda menyukai aplikasi ini?</string>
+    <string name="ACTIVITY_FEEDBACK_PLEASE_FEEDBACK">Mohon beri tahu kami apa yang tidak Anda sukai.</string>
+    <string name="ACTIVITY_FEEDBACK_SEND_FEEDBACK">Kirim</string>
+    <string name="ACTIVITY_FEEDBACK_RATE_APP">Beri nilai aplikasi ini di Play Store</string>
+    <string name="ACTIVITY_FEEDBACK_RATE">Beri nilai</string>
+    <string name="ACTIVITY_FEEDBACK_SENT">Masukan terkirim</string>
+    <string name="ACTIVITY_FEEDBACK_HINT_YOUR_FEEDBACK">Tuliskan komentar Anda…</string>
+    <string name="ACTIVITY_FEEDBACK_APP_LENTA">Aplikasi lambat</string>
+    <string name="ACTIVITY_FEEDBACK_MAL_DISENO">Desainnya jelek</string>
+    <string name="ACTIVITY_FEEDBACK_MAL_TRADUCIDA">Kesalahan terjemahan</string>
+    <string name="ACTIVITY_FEEDBACK_NO_SE_COMO_VA">Saya tidak tahu cara menggunakannya (Mohon baca Bantuan terlebih dahulu)</string>
+    <string name="ACTIVITY_FEEDBACK_NO_FUNCIONA_BIEN">Malafungsi</string>
+    <string name="ACTIVITY_FEEDBACK_POCOS_USUARIOS">Penggunanya sedikit</string>
+    <string name="ACTIVITY_FEEDBACK_OTROS">Lain-lain</string>
+
+    <!-- ***********************  FRAGMENT_FOTO *********************************** -->
+    <string name="FRAGMENT_FOTO_ERROR_FOTO_NO_CARGADA">Terjadi kesalahan saat memuat foto</string>
+    <string name="FRAGMENT_FOTO_ERROR_FOTO_MUY_PESADA">Kesalahan: foto terlalu besar</string>
+    <string name="FRAGMENT_FOTO_EROR_FORMAT_NOT_SUPPORTED">Kesalahan: format file tidak didukung</string>
+    <string name="FRAGMENT_FOTO_WAIT">Tunggu sementara gambar diunggah</string>
+
+    <!-- ***********************  FRAGMENT_DATOS_PERSONALES *********************************** -->
+    <string name="FRAGMENT_DATOS_PERSONALES_NICK_">Panggilan:</string>
+    <string name="FRAGMENT_DATOS_PERSONALES_EDAD_">Usia:</string>
+    <string name="FRAGMENT_DATOS_PERSONALES_ALTURA_">Tinggi badan:</string>
+    <string name="FRAGMENT_DATOS_PERSONALES_PESO_">Berat badan:</string>
+    <string name="FRAGMENT_DATOS_PERSONALES_RAZA_">Ras:</string>
+    <string name="FRAGMENT_DATOS_PERSONALES_SEXUALIDAD">Seksualitas</string>
+    <string name="FRAGMENT_DATOS_PERSONALES_TUS_DATOS">Data Anda</string>
+    <string name="FRAGMENT_DATOS_PERSONALES_OTROS_DATOS">Data lain</string>
+    <string name="FRAGMENT_DATOS_PERSONALES_QUIERO_DEJAR_CLARO">Saya ingin menjelaskan bahwa</string>
+
+    <!-- *******************  Dialogo interactuar ************************** -->
+    <string name="DIALOGO_INTERACTUAR_TITULO">Pilih sebuah tindakan</string>
+
+    <!-- *******************  Dialogo borrar cuenta ************************** -->
+    <string name="DIALOGO_BORRAR_CUENTA_TITULO">Hapus akun</string>
+    <string name="DIALOGO_BORRAR_CUENTA_ADVERTENCIA">Anda akan kehilangan bintang Anda dan bahkan langganan Anda jika Anda telah</string>
+
+    <!--************************  dialogo denuncia ************************-->
+    <string name="DIALOGO_DENUNCIAR_PREGUNTA_MOTIVO">Apakah alasan pelaporan Anda?</string>
+    <string name="DIALOGO_DENUNCIAR_DENUNCIAR">Laporkan</string>
+    <string name="DIALOGO_DENUNCIAR_DENUNCIADO">Pengguna dilaporkan</string>
+
+    <!--************************  dialogo ayuda ************************-->
+    <string name="DIALOGO_CONSEJO_TITULO">Bantuan</string>
+    <string name="DIALOGO_CONSEJO_MENSAJE">Ketuk pada profil untuk melakukan tindakan apa pun.</string>
+    <string name="DIALOGO_CONSEJO_MENSAJE_CHAT_GENERAL">Mengobrol dengan orang dari negara Anda. Untuk ngobrol pribadi,klik foto Anda dan tekan tombol pesan.</string>
+    <string name="DIALOGO_CONSEJO_YA_NO_MAS">Jangan tampilkan lagi</string>
+    <string name="DIALOGO_CONSEJO_FOTO_MANAGER">Ketuk untuk mengubah foto.</string>
+
+    <!--************************  dialogo se te va a cobrar ************************-->
+    <string name="DIALOGO_AVISO_MENSAJE_SE_TE_VA_A_COBRAR"> Tindakan ini membebani %1$d bintang untuk pengguna non-premium.</string>
+    <string name="DIALOGO_AVISO_MENSAJE_NO_TIENES_ESTRELLAS">Tindakan ini membebani %1$d bintang untuk pengguna non-premium. Anda tidak memiliki cukup bintang untuk melakukan tindakan ini.</string>
+    <string name="DIALOGO_COMPRAR_ESTRELLAS">Beli bintang</string>
+
+    <!--************************  MOTIVOS PARA DAR ESTRELLAS ************************-->
+
+    <string name="MOTIVO_SIGNED_UP">Mendaftar</string>
+    <string name="MOTIVO_COBRO_SEMANAL">Biaya mingguan</string>
+    <string name="MOTIVO_COMPRA_ESTRELLAS">Beli</string>
+    <string name="MOTIVO_COBRO_PETICION_CHAT_GENERAL">Kirim file terlampir menggunakan obrolan</string>
+
+    <!-- ventajas premium-->
+    <string name="ventajas_de_suscribir">
+        \n\t- Anda akan muncul di posisi pertama\n
+        \n\t- Tanpa biaya bintang bulanan \n
+        \n\t- Mengunggah hingga %1$d foto profil \n
+        \n\t- Anda dapat menggunakan lebih banyak filter pencarian. \n
+        \n\t- Pencarian radius ganda \n
+        \n\t- Tanpa iklan \n
+        \n\t- Daftar profil diurutkan menurut jarak\n
+        \n\t- Anda dapat mengirim foto dalam pesan Anda tanpa batas
+        \n
+    </string>
+    <string name="ventajas_de_comprar">
+        \t- Gandakan visibilitas Anda \n
+        \n\t- Tingkatkan permintaan pertemanan Anda\n
+        \n\t- Anda dapat mengirim foto ke dalam pesan Anda
+        \n
+    </string>
+
+    <!-- HELP -->
+    <string name="help_info_title">Apakah %1$s itu?</string>
+    <string name="help_info">%1$s adalah aplikasi yang bisa menemukan teman baru di sekitar Anda. Aplikasi ini gratis, tetapi Anda bisa membeli versi premium. Konfigurasikan radar Anda dan carilah orang secara rutin.</string>
+    <string name="help_ganar_estrellas">Dapatkan bintang dan Anda akan muncul di posisi teratas pencarian.  %1$d bintang dibebankan mingguan jika Anda bukan anggota premium.</string>
+    <string name="help_como_funciona">Bagaimana cara kerjanya?</string>
+    <string name="help_principal">Anda bisa mendapatkan hasil pencarian Anda di sini. Ketuk pada profil untuk melakukan tindakan apa pun.  Profil disortir menurut bintang, jika Anda bukan pengguna premium, dan menurut jarak, jika Anda pengguna premium. </string>
+    <string name="help_configura_radar">Konfigurasikan radar Anda untuk menemukan hanya orang yang Anda sukai. Jika Anda anggota Premium, Anda dapat mencari orang yang terpisah dua kali dari fitur lain.</string>
+    <string name="help_mensajes">Baca semua pesan yang telah Anda kirim atau terima.</string>
+    <string name="help_mi_perfil">Unggah foto, perbarui profil Anda, dan periksa bintang Anda di sini. Pengguna premium bisa mengunggah hingga %1$d foto.</string>
+    <string name="help_compras">Jadilah pengguna premium atau beli bintang di sini. Nikmati manfaat yang diberikan!</string>
+    <string name="help_ajustes">Atur beberapa fitur aplikasi Anda, seperti pemberitahuan, unit ukuran, dll. Anda juga bisa menghapus akun Anda.</string>
+    <string name="help_chat_general">Mengobrol dengan orang-orang dari negara Anda dan memiliki orientasi seksual yang sama dengan Anda.</string>
+    <string name="help_feedback">Sampaikan pendapat Anda tentang aplikasi kami. Beri kami nilai atau laporkan masalah yang perlu kami perbaiki</string>
+    <string name="help_como_contactar">Bagaimana cara menghubungi administrator %1$s?</string>
+    <string name="help_para_cualquier_consulta">Anda dapat menghubungi kami melalui alamat berikut:</string>
+    <string name="MOTIVO_ANUNCIO_BONIFICADO">Iklan yang ditampilkan</string>
+    <string name="estrellas">Bintang +%1$d</string>
+</resources>

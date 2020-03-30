@@ -1,0 +1,20 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".activities.Activity_Inicio">
+    <item
+        android:id="@id/menu_options_condiciones_de_uso"
+        android:orderInCategory="100"
+        android:title="@string/title_activity_condiciones_uso"
+        app:showAsAction="never" />
+    <item
+        android:id="@id/menu_options_politica_privacidad"
+        android:orderInCategory="100"
+        android:title="@string/title_activity_politica_privacidad"
+        app:showAsAction="never" />
+    <!--<item
+        android:id="@id/menu_options_sobre_xradar"
+        android:orderInCategory="100"
+        android:title="@string/title_activity_help"
+        app:showAsAction="never" />-->
+</menu>

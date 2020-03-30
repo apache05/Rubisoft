@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- *********************** ARRAYS *********************************** -->
+
+
+    <string-array name="array_unidades">
+        <item> Kg - m - Km</item>
+        <item> St/lb - in - Mi </item>
+        <item> lb - in - Mi </item>
+    </string-array>
+    <string-array name="meses_nacimiento">
+        <item>gener</item>
+        <item>febrer</item>
+        <item>març</item>
+        <item>abril</item>
+        <item>maig</item>
+        <item>juny</item>
+        <item>juliol</item>
+        <item>agost</item>
+        <item>septembre</item>
+        <item>octubre</item>
+        <item>novembre</item>
+        <item>dicembre</item>
+    </string-array>
+    <string-array name="sexos">
+        <item>Sexe</item>
+        <item>Sóc home</item>
+        <item>Sóc dona</item>
+    </string-array>
+
+
+    <string-array name="orientaciones_registro">
+        <item>Orientació \u002a</item>
+        <item>Sóc hetero</item>
+        <item>Sóc lesbiana</item>
+        <item>Sóc gai</item>
+        <item>Sóc bisexual</item>
+    </string-array>
+    <string-array name="orientaciones_mi_perfil">
+        <item>Sóc hetero</item>
+        <item>Sóc lesbiana</item>
+        <item>Sóc gai</item><item>Sóc bisexual</item>
+    </string-array>
+    <string-array name="busqueda_personas" >
+        <item>Trobar dones hetero</item>
+        <item>Trobar homes hetero</item>
+        <item>Trobar homes gay</item>
+        <item>Trobar dones lesbianes</item>
+        <item>Trobar dones bisexuals</item>
+        <item>Trobar homes bisexuals</item>
+    </string-array>
+
+    <string-array name="razas">
+        <item> Blanc/a (Ros/sa)</item>
+        <item> Blanc/a (Morè/na)</item>
+        <item> Negre/a</item>
+        <item> Mulat/a</item>
+        <item> Asiatic/a (Est)</item>
+        <item> Asiatic/a (Sudest)</item>
+        <item> Llatí/na</item>
+        <item> Àrab</item>
+        <item> Hindú</item>
+    </string-array>
+
+    <!-- Nav Drawer Menu Items -->
+    <string-array name="nav_drawer_items">
+        <item>Radar</item>
+        <item>Ajustar radar</item>
+        <item>Missatges</item>
+        <item>El teu perfil</item>
+        <item>Estreles gratis</item>
+        <item>Comprar</item>
+        <item>Xat</item>
+        <item>Ajuda</item>
+        <item>Ajustos</item>
+        <item>Millorar</item>
+        <item>Tancar sessió</item>
+    </string-array>
+
+    <string-array name="causas_deuncia">
+        <item> Foto obscena </item>
+        <item> Perfil fals</item>
+        <item> Foto violenta</item>
+        <item> Foto inapropiada u ofensiva</item>
+        <item> Protecció de l\'infància </item>
+    </string-array>
+</resources>

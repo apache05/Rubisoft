@@ -1,0 +1,63 @@
+<!-- CUALQUIER CAMBIO AQUI DEBE SER REPLICADO EN LAYOUT-SW600DP-LAND -->
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_marginTop="50dp"
+    android:id="@id/mDrawerLayout"
+    android:tag="mDrawerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary_light">
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <include layout="@layout/toolbar" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@id/Layout_centro_mensajes_RelativeLayout"
+            android:layout_marginTop="?attr/actionBarSize">
+
+
+
+
+            <TextView
+                android:id="@id/Layout_centro_mensajes_TextView_ningun_perfil"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:textIsSelectable="true"
+                android:textSize="@dimen/tamanyo_letra_l"
+                android:visibility="invisible"/>
+            <androidx.cardview.widget.CardView
+                xmlns:app="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:cardElevation="@dimen/elevation_perfiles"
+                android:layout_marginTop="?attr/actionBarSize"
+                android:id="@id/Layout_centro_mensajes_CardView"
+                android:visibility="invisible"
+                android:layout_margin="10dp"
+                >
+
+                <com.rubisoft.womencuddles.RecyclersViews.RecyclerView_AutoFit
+                    android:id="@id/Layout_centro_mensajes_ReciclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:clipToPadding="true"
+                    android:columnWidth="@dimen/tamanyo_foto_grid_perfiles"
+                    />
+            </androidx.cardview.widget.CardView>
+
+
+        </RelativeLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <include layout="@layout/navigation_drawer" />
+</androidx.drawerlayout.widget.DrawerLayout>

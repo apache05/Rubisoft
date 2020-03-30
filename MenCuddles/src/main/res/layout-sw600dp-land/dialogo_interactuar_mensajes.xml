@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        style="@style/Dialog_Header_Background"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@id/Dialogo_interactuar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:paddingLeft="8dip"
+            android:paddingRight="8dip"
+            android:textSize="@dimen/tamanyo_letra_l_plus"
+            android:textIsSelectable="true"
+            android:textColor="@color/white"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@id/Dialogo_interactuar_Button_escribir_mensaje"
+            style="@style/boton_surface_reaction"
+            android:layout_width="@dimen/Tam_Dialogs_icons"
+            android:layout_height="@dimen/Tam_Dialogs_icons"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@id/Dialogo_interactuar_Button_ver_fotos"
+            style="@style/boton_surface_reaction"
+            android:layout_width="@dimen/Tam_Dialogs_icons"
+            android:layout_height="@dimen/Tam_Dialogs_icons"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@id/Dialogo_interactuar_Button_info"
+            style="@style/boton_surface_reaction"
+            android:layout_width="@dimen/Tam_Dialogs_icons"
+            android:layout_height="@dimen/Tam_Dialogs_icons"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp" />
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@id/Dialogo_interactuar_Button_borrar_conversacion"
+            style="@style/boton_surface_reaction"
+            android:layout_width="@dimen/Tam_Dialogs_icons"
+            android:layout_height="@dimen/Tam_Dialogs_icons"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp" />
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@id/Dialogo_interactuar_Button_bloquear"
+            style="@style/boton_surface_reaction"
+            android:layout_width="@dimen/Tam_Dialogs_icons"
+            android:layout_height="@dimen/Tam_Dialogs_icons"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"/>
+
+    </LinearLayout>
+</LinearLayout>

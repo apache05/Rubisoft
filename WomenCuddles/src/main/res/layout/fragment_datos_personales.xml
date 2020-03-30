@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        app:cardCornerRadius="@dimen/corner_radius"
+        app:cardElevation="@dimen/elevation_perfiles"
+        card_view:cardUseCompatPadding="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:id="@id/Fragment_datos_personales_TextView_Tus_Datos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:text="@string/FRAGMENT_DATOS_PERSONALES_TUS_DATOS"
+                android:textIsSelectable="true"
+                android:textSize="@dimen/tamanyo_letra_l" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+                    android:id="@id/Fragment_datos_personales_TextView_Nick"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:text="@string/FRAGMENT_DATOS_PERSONALES_NICK_"
+                    android:textIsSelectable="true"
+                    android:textSize="@dimen/tamanyo_letra_m"
+                    android:labelFor="@id/Fragment_datos_personales_EditText_nick"/>
+
+                <EditText
+                    android:id="@id/Fragment_datos_personales_EditText_nick"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:inputType="text"
+                    android:maxLength="15"
+                    android:lines="1"
+                    android:textColor="@color/black"
+                     />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@id/Fragment_datos_personales_TextView_Edad"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical|start"
+                    android:text="@string/FRAGMENT_DATOS_PERSONALES_EDAD_"
+                    android:textIsSelectable="true"
+                    android:textSize="@dimen/tamanyo_letra_m" />
+
+                <TextView
+                    android:id="@id/Fragment_datos_personales_TextView_mi_Edad"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:gravity="end"
+                    android:textIsSelectable="true"
+                    android:textSize="@dimen/tamanyo_letra_m" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@id/Fragment_datos_personales_TextView_Altura"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight="0.2"
+                    android:gravity="center_vertical|start"
+                    android:text="@string/FRAGMENT_DATOS_PERSONALES_ALTURA_"
+                    android:textIsSelectable="true"
+                    android:textSize="@dimen/tamanyo_letra_m" />
+
+                <com.appyvet.rangebar.RangeBar xmlns:custom="http://schemas.android.com/apk/res-auto"
+                    android:id="@id/Fragment_datos_personales_RangeBar_mi_Altura"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="0.5"
+                    custom:connectingLineColor="@color/accent"
+                    custom:pinColor="@color/accent"
+                    custom:pinRadius="0dp"
+                    custom:rangeBar="false"
+                    custom:rangeBarColor="@color/accent"
+                    custom:selectorColor="@color/accent"
+                    custom:selectorSize="10dp"
+                    custom:temporaryPins="false"
+                    custom:tickEnd="220"
+                    custom:tickInterval="2"
+                    custom:tickStart="140" />
+
+                <TextView
+                    android:id="@id/Fragment_datos_personales_TextView_mi_Altura"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    android:gravity="end|center_vertical"
+                    android:textIsSelectable="true"
+                    android:textSize="@dimen/tamanyo_letra_m" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@id/Fragment_datos_personales_TextView_Peso"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    android:gravity="center_vertical|start"
+                    android:text="@string/FRAGMENT_DATOS_PERSONALES_PESO_"
+                    android:textIsSelectable="true"
+                    android:textSize="@dimen/tamanyo_letra_m" />
+
+                <com.appyvet.rangebar.RangeBar xmlns:custom="http://schemas.android.com/apk/res-auto"
+                    android:id="@id/Fragment_datos_personales_RangeBar_mi_Peso"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="0.5"
+                    custom:connectingLineColor="@color/accent"
+                    custom:pinColor="@color/accent"
+                    custom:pinRadius="0dp"
+                    custom:rangeBar="false"
+                    custom:rangeBarColor="@color/accent"
+                    custom:selectorColor="@color/accent"
+                    custom:selectorSize="10dp"
+                    custom:temporaryPins="false"
+                    custom:tickEnd="150"
+                    custom:tickInterval="2"
+                    custom:tickStart="50" />
+
+                <TextView
+                    android:id="@id/Fragment_datos_personales_TextView_mi_Peso"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    android:gravity="end|center_vertical"
+                    android:textIsSelectable="true"
+                    android:textSize="@dimen/tamanyo_letra_m" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@id/Fragment_datos_personales_TextView_Raza"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical|start"
+                    android:text="@string/FRAGMENT_DATOS_PERSONALES_RAZA_"
+                    android:textIsSelectable="true"
+                    android:textSize="@dimen/tamanyo_letra_m" />
+
+                <TextView
+                    android:id="@id/Fragment_datos_personales_TextView_mi_Raza"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical|start"
+                    android:textIsSelectable="true"
+                    android:textSize="@dimen/tamanyo_letra_m" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@id/Fragment_datos_personales_TextView_Sexualidad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:gravity="start"
+                android:text="@string/FRAGMENT_DATOS_PERSONALES_SEXUALIDAD"
+                android:textIsSelectable="true"
+                android:textSize="@dimen/tamanyo_letra_l" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="20dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@id/Fragment_datos_personales_TextView_sexo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:textIsSelectable="true"
+                    android:textSize="@dimen/tamanyo_letra_m"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/Fragment_datos_personales_TextView_y"
+                    app:layout_constraintHorizontal_chainStyle="spread_inside"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@id/Fragment_datos_personales_TextView_y"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center_horizontal"
+                    android:text="@string/y"
+                    android:textIsSelectable="true"
+                    android:textSize="@dimen/tamanyo_letra_m"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/Fragment_datos_personales_Spinner_cambiar_mi_orientacion"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/Fragment_datos_personales_TextView_sexo"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Spinner
+                    android:id="@id/Fragment_datos_personales_Spinner_cambiar_mi_orientacion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginTop="8dp"
+                    android:textSize="@dimen/tamanyo_letra_m"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/Fragment_datos_personales_TextView_y"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@id/Fragment_datos_personales_TextView_Quiero_dejar_claro_que"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:gravity="start"
+                android:text="@string/FRAGMENT_DATOS_PERSONALES_QUIERO_DEJAR_CLARO"
+                android:textIsSelectable="true"
+                android:textSize="@dimen/tamanyo_letra_l" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray" />
+
+            <EditText
+                android:id="@id/Fragment_datos_personales_Edittext_quiero_dejar_claro"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="bottom"
+                android:inputType="textMultiLine"
+                android:lines="5"
+                android:maxLength="290"
+                android:textColor="@color/black"
+                android:labelFor="@id/Fragment_datos_personales_TextView_Quiero_dejar_claro_que"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@id/Fragment_datos_personales_Button_actualizar_datos_personales"
+                style="@style/boton_surface_reaction"
+                android:layout_width="@dimen/Tam_Normal_icons"
+                android:layout_height="@dimen/Tam_Normal_icons"
+                android:layout_gravity="end"
+                android:layout_marginTop="40dp"
+                android:layout_weight="0.1"
+                android:contentDescription="@string/Content_description_boton"
+                android:focusable="false"
+                android:scaleType="centerInside" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</ScrollView>

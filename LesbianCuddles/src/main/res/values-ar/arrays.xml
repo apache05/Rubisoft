@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+
+    <string-array name="array_unidades">
+        <item> كلغ - المترو - كم</item>
+        <item> St/lb - in - ميل </item>
+        <item> lb - in - Mi </item>
+    </string-array>
+
+    <string-array name="meses_nacimiento">
+        <item>يناير</item>
+        <item>فبراير</item>
+        <item>مارس</item>
+        <item>أبريل</item>
+        <item>مايو</item>
+        <item>يونيو</item>
+        <item>يوليو</item>
+        <item>أغسطس</item>
+        <item>سبتمبر</item>
+        <item>أكتوبر</item>
+        <item>نوفمبر</item>
+        <item>ديسمبر</item>
+    </string-array>
+    <string-array name="sexos">
+        <item>الجنس</item>
+        <item>أنا ذكر</item>
+        <item>أنا أنثى</item>
+    </string-array>
+
+    <string-array name="orientaciones_registro">
+        <item>الميول الجنسية *</item>
+        <item>أنا ذكر</item>
+        <item>أنا مثلية</item>
+        <item>أنا مثلي</item>
+        <item>أنا ثنائي الجنس</item>
+    </string-array>
+    <string-array name="orientaciones_mi_perfil">
+        <item>أنا مغاير الجنس</item>
+        <item>أنا مثلية</item>
+        <item>أنا مثلي الجنس</item>
+        <item>أنا ثنائي الجنس</item>
+    </string-array>
+    <string-array name="busqueda_personas" >
+        <item>البحث عن النساء الغيرية</item>
+        <item>البحث عن الرجال المغايرين</item>
+        <item>البحث عن الرجال مثلي الجنس</item>
+        <item>البحث عن النساء السحاقيات</item>
+        <item>البحث عن النساء المخنثين</item>
+        <item>العثور على الرجال المخنثين</item>
+    </string-array>
+
+    <string-array name="razas">
+        <item>أبيض (أشقر)</item>
+        <item>أبيض (أشقر)</item>
+        <item>أسود</item>
+        <item>خليط</item>
+        <item>شرقي (الشرق)</item>
+        <item>شرقي (الجنوب الشرقي)</item>
+        <item>لاتيني</item>
+        <item>عربي</item>
+        <item>هندوسي</item>
+    </string-array>
+
+    <!-- Nav Drawer Menu Items -->
+    <string-array name="nav_drawer_items">
+        <item>رادار</item><!--radar-->
+        <item>ضبط الرادار</item><!-- ajustar radar-->
+        <item>المشاركات</item><!--amigos-->
+        <item>ملفك الشخصي</item><!--mi perfil-->
+        <item>نجوم مجانا</item><!--estrellas gratis-->
+        <item>عمليات الشراء</item><!--compras-->
+        <item>دردشة</item><!--chat-->
+        <item>مساعدة</item><!--ayuda-->
+        <item>الإعدادات</item><!--ajustes-->
+        <item>تحسن</item><!--feedback-->
+        <item>تسجيل خروج</item><!--finalizar sesion-->
+    </string-array>
+
+    <string-array name="causas_deuncia">
+        <item>صور فاحشة</item>
+        <item>ملفات شخصية زائفة</item>
+        <item>صور عنيفة</item>
+        <item>صورة غير ملائمة</item>
+        <item>حماية الطفل</item>
+    </string-array>
+</resources>

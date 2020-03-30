@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="Gradle: com.yandex.android:mobileads:2.113@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/1088d19a6ee1de0162fad423f70cabb5/jetified-mobileads-2.113/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/1088d19a6ee1de0162fad423f70cabb5/jetified-mobileads-2.113/res" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.yandex.android/mobileads/2.113/22286fcca22dc6ad7c54cad8070423ac010154a3/mobileads-2.113-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.yandex.android/mobileads/2.113/2816c9a7519a363af7108719673e2f058e40b0d2/mobileads-2.113-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

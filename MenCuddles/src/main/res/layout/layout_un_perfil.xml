@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?><!-- CUALQUIER CAMBIO AQUI DEBE SER REPLICADO EN LAYOUT-SW600DP-LAND -->
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/primary_light"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_marginTop="50dp"
+    android:id="@id/Main_LinearLayout">
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@id/Layout_un_perfil_ImageView_expanded_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitCenter"
+        android:contentDescription="@string/Content_description_foto" />
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:id="@id/Layout_un_perfil_LinearLayout_miniaturas"
+            android:layout_width="@dimen/tamanyo_miniaturas_perfil"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" />
+    </ScrollView>
+</RelativeLayout>

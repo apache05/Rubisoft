@@ -1,0 +1,270 @@
+{
+  "project_info": {
+    "project_number": "559888187719",
+    "firebase_url": "https://rubisoft-10e7e.firebaseio.com",
+    "project_id": "rubisoft-10e7e",
+    "storage_bucket": "rubisoft-10e7e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:559888187719:android:6306be1d2ea3f7ee060c62",
+        "android_client_info": {
+          "package_name": "com.rubisoft.bisexcuddles"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "559888187719-fkbjsm30s6bvvjsuuqd5krnl8kh1epa6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.rubisoft.bisexcuddles",
+            "certificate_hash": "bb69b5add18065fc85aa1d9c9fe417e5498983d0"
+          }
+        },
+        {
+          "client_id": "559888187719-il9lpq7jv44pjrssa365jnd62q90ut2i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC87N2pnfbOeuYer2kdfOuKY-xhWjWvPnA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "559888187719-il9lpq7jv44pjrssa365jnd62q90ut2i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:559888187719:android:1149f99ecf1339d0060c62",
+        "android_client_info": {
+          "package_name": "com.rubisoft.gaycuddles"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "559888187719-il9lpq7jv44pjrssa365jnd62q90ut2i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC87N2pnfbOeuYer2kdfOuKY-xhWjWvPnA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "559888187719-il9lpq7jv44pjrssa365jnd62q90ut2i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:559888187719:android:408388da93f63a1a060c62",
+        "android_client_info": {
+          "package_name": "com.rubisoft.gayradar"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "559888187719-1pdc0ia1qs87l0e4ags14hcstn30gohs.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.rubisoft.gayradar",
+            "certificate_hash": "96bb736d326d664cb68c2eacce27d32c79cc0223"
+          }
+        },
+        {
+          "client_id": "559888187719-il9lpq7jv44pjrssa365jnd62q90ut2i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC87N2pnfbOeuYer2kdfOuKY-xhWjWvPnA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "559888187719-il9lpq7jv44pjrssa365jnd62q90ut2i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:559888187719:android:cc9771c10c85080f060c62",
+        "android_client_info": {
+          "package_name": "com.rubisoft.lesbiancuddles"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "559888187719-f5ib5396dapp4lbrhr51o361f80fnpsc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.rubisoft.lesbiancuddles",
+            "certificate_hash": "bb69b5add18065fc85aa1d9c9fe417e5498983d0"
+          }
+        },
+        {
+          "client_id": "559888187719-il9lpq7jv44pjrssa365jnd62q90ut2i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC87N2pnfbOeuYer2kdfOuKY-xhWjWvPnA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "559888187719-il9lpq7jv44pjrssa365jnd62q90ut2i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:559888187719:android:de05d00a3ec5c944060c62",
+        "android_client_info": {
+          "package_name": "com.rubisoft.mencuddles"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "559888187719-06ni5hted5qc1439gh38028orbuspmto.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.rubisoft.mencuddles",
+            "certificate_hash": "bb69b5add18065fc85aa1d9c9fe417e5498983d0"
+          }
+        },
+        {
+          "client_id": "559888187719-il9lpq7jv44pjrssa365jnd62q90ut2i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC87N2pnfbOeuYer2kdfOuKY-xhWjWvPnA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "559888187719-il9lpq7jv44pjrssa365jnd62q90ut2i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:559888187719:android:25c6141bcff9b0b4060c62",
+        "android_client_info": {
+          "package_name": "com.rubisoft.womencuddles"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "559888187719-kg8ehtfkn1o257ru4gqbfdppvd0tb885.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.rubisoft.womencuddles",
+            "certificate_hash": "bb69b5add18065fc85aa1d9c9fe417e5498983d0"
+          }
+        },
+        {
+          "client_id": "559888187719-il9lpq7jv44pjrssa365jnd62q90ut2i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC87N2pnfbOeuYer2kdfOuKY-xhWjWvPnA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "559888187719-il9lpq7jv44pjrssa365jnd62q90ut2i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:559888187719:android:c4ddd8d292b06374060c62",
+        "android_client_info": {
+          "package_name": "com.rubisoft.mencuddles."
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "559888187719-mhpaa3jus64qv5e5hf3rvt74tr0lsmh6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.rubisoft.mencuddles.",
+            "certificate_hash": "826c3eb338125a3711f25d5e4b1403ff541b6180"
+          }
+        },
+        {
+          "client_id": "559888187719-jr7762pcri8b0dd4f2g7mp8r9p8bju7o.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.rubisoft.mencuddles.",
+            "certificate_hash": "96bb736d326d664cb68c2eacce27d32c79cc0223"
+          }
+        },
+        {
+          "client_id": "559888187719-il9lpq7jv44pjrssa365jnd62q90ut2i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC87N2pnfbOeuYer2kdfOuKY-xhWjWvPnA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "559888187719-il9lpq7jv44pjrssa365jnd62q90ut2i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

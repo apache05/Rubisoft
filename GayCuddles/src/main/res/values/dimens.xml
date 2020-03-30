@@ -1,0 +1,51 @@
+<resources>
+    <dimen name="drawer_width">150dp</dimen>
+
+    <!-- tamanyo textos -->
+    <dimen name="tamanyo_letra_xxl">50sp</dimen>
+
+    <dimen name="tamanyo_letra_l_plus">30sp</dimen>
+
+    <dimen name="tamanyo_letra_l">20sp</dimen>
+
+    <dimen name="tamanyo_letra_m">14sp</dimen>
+
+    <dimen name="tamanyo_letra_s_plus">13sp</dimen>
+
+    <dimen name="tamanyo_letra_s">11sp</dimen>
+
+    <dimen name="tamanyo_letra_xs">8sp</dimen>
+
+
+    <!-- tamanyo EN PX DE mis fotos de mi perfil-->
+
+    <!-- tamanyo EN PX DE LAS PICS QUE SE MUESTRAN en el list-->
+    <dimen name="tamanyo_foto_perfiles">100dp</dimen>
+
+    <!-- tamanyo EN PX DE LAS PICS QUE SE MUESTRAN en el grid-->
+    <dimen name="tamanyo_foto_grid_perfiles">110dp</dimen>
+
+    <!-- tamanyo de las miniaturas de un_perfil-->
+    <dimen name="tamanyo_miniaturas_perfil">64dp</dimen>
+
+    <dimen name="tamanyo_miniaturas_chat">40dp</dimen>
+
+    <!-- elevation de los cardview y de all en general -->
+    <dimen name="elevation_perfiles">3dp</dimen>
+
+    <!-- radio de las esquinas de los cardviews -->
+    <dimen name="corner_radius">4dp</dimen>
+
+
+    <dimen name="Tam_Dialogs_icons">30dp</dimen>
+
+    <dimen name="Tam_Normal_icons">24dp</dimen>
+
+    <dimen name="Tam_Small_icons">16dp</dimen>
+
+    <dimen name="Tam_Notification_icons">22dp</dimen>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+
+
+</resources>
