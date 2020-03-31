@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="PluralsCandidate">
+    <string name="Content_description_foto" translatable="false">Pic</string>
+    <string name="Content_description_boton" translatable="false">Button</string>
+    <string name="version" translatable="false">v%1$s</string>
+    <string name="rubisoft_email" translatable="false">rubisoft.apps@gmail.com</string>
+    <string name="rubisoft_twitter" translatable="false">\@Rubisoft_apps </string>
+    <string name="my_bucket" translatable="false">gs://rubisoft-10e7e.appspot.com</string>
+    <string name="facebook_app_id" translatable="false">845247938925779</string>
+    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyBppXYxocEZ-bwTtFid02-brP1FkII__m0</string>
+    <string name="huqh_API_KEY" templateMergeStrategy="preserve" translatable="false">1188d9bf-338e-465b-af7b-57ac728eb904</string>
+    <string name="CLOUD_VISION_API_KEY" templateMergeStrategy="preserve" translatable="false">AIzaSyAltVvI2LkK_9rpZb87dnMQUqODIKWiDjw</string>
+    <string name="Admob_APPID" translatable="false">ca-app-pub-7323079119104426~2641175599</string>
+    <string name="APPODEAL_APP_KEY" translatable="false">4615c55ba96dd86a1a581aa627b6151824b771b701a4884a</string>
+
+
+    <string name="NICK_FECHA_HORA" translatable="false">%1$s - %2$s - %3$s</string>
+
+
+    <!-- ****************************  UNIDADES DE MEDIDA ****************************-->
+    <string name="Mi">%1$s Mi</string>
+    <string name="m">%1$.2f m</string>
+    <string name="kg">%1$d Kg </string>
+    <string name="km">%1$.2fKm</string>
+    <string name="st_y_lb" translatable="false">%1$d st %2$.2f lb</string>
+
+    <!--************************ MENU_CAMBIAR_FOTO ************************  -->
+    <string name="change_pic">Change photo</string>
+
+    <string name="title_activity_condiciones_uso">Terms of Use</string>
+    <string name="title_activity_politica_privacidad">Privacy policy</string>
+
+    <!-- ****************************  VARIOS ****************************-->
+    <string name="app_name">Bisex Radar</string>
+    <string name="no">No</string>
+    <string name="si">Yes</string>
+    <string name="y">and</string>
+    <string name="Cancelar">Cancel</string>
+    <string name="numero" translatable="false">%1$d </string>
+    <string name="texto" translatable="false">%1$s </string>
+    <string name="error_deleting_files" translatable="false">Error deleting files</string>
+    <string name="ok">OK </string>
+    <string name="estrellas">+%1$d stars</string>
+    <string name="anyos"> %1$d years</string>
+    <string name="foto_inapropiada">This photo is considered inappropriate</string>
+    <string name="SOLO_PREMIUM">Only for premium users</string>
+    <string name="LOCATION_NOT_READY">Please, turn on the Location mode in order to get and update your position.</string>
+
+    <!-- ****************************  navigation drawer ****************************-->
+    <string name="drawer_open" translatable="false">open drawer</string>
+    <string name="drawer_close" translatable="false">close drawer</string>
+    <string name="premium_user" translatable="false">Premium User</string>
+
+    <!--  MENSAJES DEL GOOGLE CLOUD MESSAGING -->
+    <string name="MENSAJE_DE">%1$s has sent you a message </string>
+    <string name="NUEVO_MENSAJE">%1$s has writted in chat </string>
+    <!--  MENSAJES POR DEFECTO CUANDO LLEGA UN MENSAJE Y LA APP ESTÁ EN BACKGROUND -->
+    <string name="DEFAULT_NOTIFICATION_TITLE" >New message</string>
+    <string name="DEFAULT_NOTIFICATION_TEXT" >You have a new unread message. Let\'s read it!</string>
+
+    <!-- *********************** ACTIVITY_MENSAJES*********************************** -->
+    <string name="ACTIVITY_MENSAJES_NO_HAY_MENSAJES">There\'s no messages yet</string><!--*******-->
+
+    <!-- *********************** ACTIVITY_SIN_CONEXION y*********************************** -->
+    <string name="ACTIVITY_SIN_CONEXION_NO_HAY_CONEXION">NO CONEXION</string>
+
+    <!-- *********************** ACTIVITY_MI_PERFIL*********************************** -->
+    <string name="ACTIVITY_MI_PERFIL_TAB_TUS_FOTOS">Your pics</string><!--*******-->
+    <string name="ACTIVITY_MI_PERFIL_TAB_TUS_DATOS">Your data</string><!--*******-->
+    <string name="ACTIVITY_MI_PERFIL_TAB_TUS_ESTRELLAS">Your stars</string><!--*******-->
+
+    <!--*********************** ACTIVITY_CHAT_GENERAL ************************ -->
+    <string name="ACTIVITY_CHAT_GENERAL_CUANTOS_HAY">There are %d people online</string>
+
+    <!--************************ ACTIVITY_CHAT ************************ -->
+    <string name="ACTIVITY_CHAT_AMISTAD_TERMINADA">User doesn\'t accept messages any longer or user unregistered</string>
+    <string name="ACTIVITY_CHAT_ESTRELLAS_GRATIS">Get free stars</string>
+
+    <!--************************  ACTIVITY_CONFIGURA_RADAR************************ -->
+    <string name="ACTIVITY_CONFIGURA_RADAR_EDAD_ENTRE">Age Range </string>
+    <string name="ACTIVITY_CONFIGURA_RADAR_ALTURA_ENTRE">Height Range </string>
+    <string name="ACTIVITY_CONFIGURA_RADAR_PESO_ENTRE">Weight Range </string>
+    <string name="ACTIVITY_CONFIGURA_RADAR_QUE_TENGA_CASA">Only those who have a house </string>
+    <string name="ACTIVITY_CONFIGURA_RADAR_QUE_TENGA_COCHE">Only those who have a car </string>
+    <string name="ACTIVITY_CONFIGURA_RADAR_QUE_TENGA_MOTO">Only those who have a motorcycle </string>
+    <string name="ACTIVITY_CONFIGURA_RADAR_RAZA_">Race: </string>
+    <string name="ACTIVITY_CONFIGURA_RADAR_DISTANCIA_MI">Within a radius of %1$s Mi</string>
+    <string name="ACTIVITY_CONFIGURA_RADAR_DISTANCIA_KM">Within a radius of %1$d Km</string>
+    <string name="ACTIVITY_CONFIGURA_RADAR_CUALQUIER_RAZA">Any race</string>
+    <string name="ACTIVITY_CONFIGURA_RADAR_AL_MENOS_1_RAZA">You must select at least one race</string>
+    <string name="ACTIVITY_CONFIGURA_RADAR_ONLINE">Online</string>
+    <string name="ACTIVITY_CONFIGURA_RADAR_NEW">New</string>
+
+    <!--************************ ACTIVITY_CONFIGURACION ************************  -->
+    <string name="ACTIVITY_CONFIGURACION_UNIDADES">Units: </string>
+    <string name="ACTIVITY_CONFIGURACION_CHAT_ACTIVADO">Chat enabled</string>
+    <string name="ACTIVITY_CONFIGURACION_SONIDO_CHAT_DESACTIVADO">chat disabled</string>
+
+    <!-- ***********************  ACTIVITY_UNINSTALL *********************************** -->
+    <string name="ACTIVITY_UNINSTALL_UNINSTALL">Delete account</string>
+
+    <!-- ***********************  ACTIVITY_INICIO *********************************** -->
+    <string name="ACTIVITY_INICIO_ERROR_LOGGIN">Error while signing in. Please try again</string>
+    <string name="ACTIVITY_INICIO_HINT_EMAIL">Email</string>
+    <string name="ACTIVITY_INICIO_HINT_PASSWORD">Password</string>
+    <string name="ACTIVITY_INICIO_HINT_REPEAT_PASSWORD">Repeat password</string>
+    <string name="ACTIVITY_INICIO_SIGNIN">Sign in</string>
+    <string name="ACTIVITY_INICIO_SIGNUP">Sign up</string>
+    <string name="ACTIVITY_INICIO_BAD_EMAIL">Not a valid email</string>
+    <string name="ACTIVITY_INICIO_FORGOT_PASSWORD">Forgot your password?</string>
+    <string name="ACTIVITY_INICIO_FORGOT_RESET_PASSWORD">Reset password</string>
+    <string name="ACTIVITY_INICIO_FORGOT_RESET">Reset</string>
+    <string name="ACTIVITY_INICIO_EMAIL_SENT">You have received an email with instructions to reset your password</string>
+    <string name="ACTIVITY_INICIO_PASSWORDS_DOESNT_MATCH">Passwords do not match</string>
+    <string name="ACTIVITY_INICIO_NOTA_PRIVACIDAD">No data will be collected from your account neither we will send any kind of message</string>
+
+    <!-- ***********************  ACTIVITY_REGISTRO_PERSONA *********************************** -->
+    <string name="ACTIVITY_REGISTRO_TITULO">Sign up</string>
+    <string name="ACTIVITY_REGISTRO_DATOS_FISICOS">What are you like</string>
+    <string name="ACTIVITY_REGISTRO_SEXUALIDAD">Sexuality</string>
+    <string name="ACTIVITY_REGISTRO_CHECKBOX_I_AGREE">I Agree to the </string>
+    <string name="ACTIVITY_REGISTRO_TEXTVIEW_TERMS_AND_CONDITIONS"> Terms and Conditions of use</string>
+    <string name="ACTIVITY_REGISTRO_ALTURA_">Height: </string>
+    <string name="ACTIVITY_REGISTRO_PESO_">Weight: </string>
+    <string name="ACTIVITY_REGISTRO_RAZA_">Race: </string>
+    <string name="ACTIVITY_REGISTRO_NICK_">Nick </string>
+    <string name="ACTIVITY_REGISTRO_QUIERO_DEJAR_CLARO">I want to make it clear that \u002a  </string>
+    <string name="ACTIVITY_REGISTRO_OPCIONAL">\u002a Optional </string>
+    <string name="ACTIVITY_REGISTRO_BIRTH_">Birth </string>
+    <string name="ACTIVITY_REGISTRO_ERROR_FALTA_NICK">Error: Missing your nick</string>
+    <string name="ACTIVITY_REGISTRO_ERROR_FALTA_SEXUALIDAD">Error: you must select your gender and your sexual orientation</string>
+    <string name="ACTIVITY_REGISTRO_ERROR_UNDERAGE">Error: you must be strictly older than %1$d years-old</string>
+    <string name="ACTIVITY_REGISTRO_ERROR_INCONGRUENCIA_SEXUAL">Error: your gender and sexual orientation are not congruent</string>
+    <string name="ACTIVITY_REGISTRO_ERROR_TERMS"> You must agree to the Terms and Conditions</string>
+
+    <!-- *********************** ACTIVITY_PRIMERAS_FOTOS y*********************************** -->
+    <string name="ACTIVITY_PRIMERAS_FOTOS_INSERTA_FOTOS">Optionally, you can upload a picture of yourself</string>
+    <string name="ADVERTENCIA">Attention: It is not allowed to upload obscene or pornographic photos. Administrators will delete any inappropriate picture without notice.</string>
+
+    <!-- ***********************  ACTIVITY_PRINCIPAL *********************************** -->
+    <string name="ACTIVITY_PRINCIPAL_NO_VA_EL_GPS">Impossible to search people correctly while your location is unknow. Activate your location and try it again after some seconds</string>
+    <string name="ACTIVITY_PRINCIPAL_NINGUN_PERFIL_ENCONTRADO">Nobody found with your current radar settings</string>
+
+    <!-- ***********************  FRAGMENT_BORRAR *********************************** -->
+    <string name="ACTIVITY_CONFIGURACION_ELIMINAR_CUENTA">Delete account</string>
+
+    <!-- ***********************  ACTIVITY_COMPRAS *********************************** -->
+    <string name="ACTIVITY_MEJORAR_COMPRA_X_ESTRELLAS">%1$d stars for %2$s</string>
+    <string name="ACTIVITY_MEJORAR_SUSCRIBE_6_MESES">Subscribe 6 months for %1$s</string>
+    <string name="ACTIVITY_MEJORAR_SUSCRIBE_1_AÑO">Subscribe 1 year for %1$s</string>
+    <string name="ACTIVITY_MEJORAR_TITULO_SUSCRIBIR"> Subscribe premium</string>
+    <string name="ACTIVITY_MEJORAR_TITULO_COMPRAR"> Purchase stars</string>
+    <string name="ACTIVITY_MEJORAR_ERROR_COMPRA_ESTRELLAS">Error: unsuccessful purchase</string>
+    <string name="ACTIVITY_MEJORAR_EXITO_COMPRA">Purchase completed successfully</string>
+    <string name="ACTIVITY_MEJORAR_ERROR_SUSCRIPCION">Error: unsuccessful suscription</string>
+    <string name="ACTIVITY_MEJORAR_EXITO_SUSCRIPCION">Suscription completed successfully</string>
+    <string name="ACTIVITY_MEJORAR_CANCELADO">Cancelled</string>
+    <string name="ACTIVITY_MEJORAR_YA_ES_PREMIUM">You have already a premium account</string>
+
+    <!-- ***********************  ACTIVITY_ESTRELLAS_GRATIS *********************************** -->
+    <string name="ACTIVITY_ESTRELLAS_POR_ANUNCIO">Get %1$d star seeing an ad</string>
+
+    <!-- ***********************  ACTIVITY_FEEDBACK *********************************** -->
+    <string name="ACTIVITY_FEEDBACK_TITULO">Do you like this app?</string>
+    <string name="ACTIVITY_FEEDBACK_PLEASE_FEEDBACK">Please, tell us what dislike you.</string>
+    <string name="ACTIVITY_FEEDBACK_SEND_FEEDBACK">Send</string>
+    <string name="ACTIVITY_FEEDBACK_RATE_APP"> Please, rate this app in Play Store</string>
+    <string name="ACTIVITY_FEEDBACK_RATE"> Rate </string>
+    <string name="ACTIVITY_FEEDBACK_SENT"> Feedback sent </string>
+    <string name="ACTIVITY_FEEDBACK_HINT_YOUR_FEEDBACK"> Write your comments</string>
+    <string name="ACTIVITY_FEEDBACK_APP_LENTA"> App slow </string>
+    <string name="ACTIVITY_FEEDBACK_MAL_DISENO">Horrible design</string>
+    <string name="ACTIVITY_FEEDBACK_MAL_TRADUCIDA">Translation mistakes </string>
+    <string name="ACTIVITY_FEEDBACK_NO_SE_COMO_VA">I don\'t know how it is used (Please, read help first) </string>
+    <string name="ACTIVITY_FEEDBACK_NO_FUNCIONA_BIEN">Malfunction </string>
+    <string name="ACTIVITY_FEEDBACK_POCOS_USUARIOS">Few users </string>
+    <string name="ACTIVITY_FEEDBACK_OTROS">Others </string>
+
+    <!-- ***********************  FRAGMENT_FOTO *********************************** -->
+    <string name="FRAGMENT_FOTO_ERROR_FOTO_NO_CARGADA">An error occurred loading photo</string>
+    <string name="FRAGMENT_FOTO_ERROR_FOTO_MUY_PESADA">Error:  oversized photo</string>
+    <string name="FRAGMENT_FOTO_EROR_FORMAT_NOT_SUPPORTED">Error: not supported format file</string>
+    <string name="FRAGMENT_FOTO_WAIT">Wait while the image is uploaded</string>
+
+    <!-- ***********************  FRAGMENT_DATOS_PERSONALES *********************************** -->
+    <string name="FRAGMENT_DATOS_PERSONALES_NICK_">Nick: </string>
+    <string name="FRAGMENT_DATOS_PERSONALES_EDAD_">Age: </string>
+    <string name="FRAGMENT_DATOS_PERSONALES_ALTURA_">Height:</string>
+    <string name="FRAGMENT_DATOS_PERSONALES_PESO_">Weight: </string>
+    <string name="FRAGMENT_DATOS_PERSONALES_RAZA_">Race: </string>
+    <string name="FRAGMENT_DATOS_PERSONALES_SEXUALIDAD">Sexuality</string>
+    <string name="FRAGMENT_DATOS_PERSONALES_TUS_DATOS">Your data</string>
+    <string name="FRAGMENT_DATOS_PERSONALES_OTROS_DATOS">Other data</string>
+    <string name="FRAGMENT_DATOS_PERSONALES_QUIERO_DEJAR_CLARO">I want to make it clear that </string>
+
+    <!-- *******************  Dialogo interactuar ************************** -->
+    <string name="DIALOGO_INTERACTUAR_TITULO">Select an action</string>
+
+    <!-- *******************  Dialogo borrar cuenta ************************** -->
+    <string name="DIALOGO_BORRAR_CUENTA_TITULO">Delete account</string>
+    <string name="DIALOGO_BORRAR_CUENTA_ADVERTENCIA">You will loose your stars and even your suscription if you had</string>
+
+    <!--************************  dialogo denuncia ************************-->
+    <string name="DIALOGO_DENUNCIAR_PREGUNTA_MOTIVO">Which is the reason of your denounce?</string>
+    <string name="DIALOGO_DENUNCIAR_DENUNCIAR">Denounce</string>
+    <string name="DIALOGO_DENUNCIAR_DENUNCIADO">User denounced</string>
+
+    <!--************************  dialogo se te va a cobrar ************************-->
+    <string name="DIALOGO_AVISO_MENSAJE_SE_TE_VA_A_COBRAR">This action costs %1$d stars for non premium users.</string><!--*******-->
+    <string name="DIALOGO_AVISO_MENSAJE_NO_TIENES_ESTRELLAS"> This action costs %1$d stars for non premium users. You have not enough stars to carry out this action.  </string><!--********-->
+    <string name="DIALOGO_COMPRAR_ESTRELLAS">Buy stars</string>
+
+    <!--************************  dialogo ayuda ************************-->
+    <string name="DIALOGO_CONSEJO_TITULO">Help</string>
+    <string name="DIALOGO_CONSEJO_MENSAJE">Tap over a profile to carry out any action. </string>
+    <string name="DIALOGO_CONSEJO_MENSAJE_CHAT_GENERAL">Chat with people from your country. To chat privately, tap over a user pic and press message button.</string>
+    <string name="DIALOGO_CONSEJO_YA_NO_MAS">Do not show anymore</string>
+    <string name="DIALOGO_CONSEJO_FOTO_MANAGER">Tap to change a pic.</string>
+
+    <string name="MOTIVO_SIGNED_UP">Signed up</string>
+    <string name="MOTIVO_COBRO_SEMANAL">weekly fee</string>
+    <string name="MOTIVO_COMPRA_ESTRELLAS">Purchase</string>
+    <string name="MOTIVO_COBRO_PETICION_CHAT_GENERAL">Send attached file using chat</string>
+    <string name="MOTIVO_ANUNCIO_BONIFICADO">Ad rewarded</string>
+
+    <!-- ventajas premium-->
+    <string name="ventajas_de_suscribir">
+        \n\t- You will appear in the first positions\n
+        \n\t- You will not be charged stars weekly\n
+        \n\t- Upload up to %1$d profile pics\n
+        \n\t- You can use more search filters \n
+        \n\t- Double radius search\n
+        \n\t- No ads\n
+        \n\t- Profile lists sorted by distance\n
+        \n\t- You can send photos in your messages unlimitedly
+        \n
+    </string>
+    <string name="ventajas_de_comprar">
+        \n\t- Multiply your visibility\n
+        \n\t- Increase your friendship requests\n
+        \n\t- You can send photos in your messages
+        \n
+    </string>
+
+    <!-- HELP -->
+    <string name="help_info_title">
+       What is %1$s?
+    </string>
+    <string name="help_info"> %1$s is an app where you can find new friends near from you. It\'s free although you can pay for premium version. Configure your radar and search for people
+        regularly. \n\nGain stars in order to appear in the first positions by messaging with other people. Purchasing stars is also possible.
+    </string>
+
+    <string name="help_ganar_estrellas">Get stars to appear in the top positions of searches.  %1$d stars are charged monthly if you are not a premium user.</string>
+    <string name="help_como_funciona">
+        How it works?
+    </string>
+    <string name="help_principal">Here you will get the result of your search. Tap over a profile to carry on any action. Profiles are sorted by stars if you are not a premium user and by distance if you are a premium user.</string>
+    <string name="help_configura_radar">Configure your radar to find only people you like.  Premium users have a double radius of search as well as other features. </string>
+    <string name="help_mensajes">Read all your messages you has sent or received.  </string>
+    <string name="help_mi_perfil">Upload pics, update your profile and check your stars here. Premium users can upload up to %1$d pics.</string>
+    <string name="help_compras">Become a premium user or purchase stars here. Enjoy their benefits!</string>
+    <string name="help_ajustes">Set some features of your app as notifications, measurement units, etc. You can also delete your account.</string>
+    <string name="help_chat_general">Chat with people of your country and with the same sexual orientation than you. </string>
+    <string name="help_feedback">Tell us your opinion about our app. Rate us or report any issue we can improve</string>
+    <string name="help_como_contactar">How can I get in touch with the administrators of %1$s ?</string>
+    <string name="help_para_cualquier_consulta">You can contact us through the following addresses:</string>
+</resources>

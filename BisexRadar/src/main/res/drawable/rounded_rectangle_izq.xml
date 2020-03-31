@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?><!-- esto es para hacer el bocadillo de los chats -->
+
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <solid android:color="@color/conversacion_izqda" />
+
+    <corners android:radius="11dp" />
+
+</shape>

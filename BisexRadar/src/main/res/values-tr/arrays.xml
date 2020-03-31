@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+    <string-array name="array_unidades">
+    <item> Kg - m - Km</item>
+    <item>St/lb - in - Mi</item>
+    <item> lb - in - Mi</item>
+  </string-array>
+
+    <string-array name="meses_nacimiento">
+    <item>Ocak</item>
+    <item>Şubat</item>
+    <item>Mart</item>
+    <item>Nisan</item>
+    <item>Mayıs</item>
+    <item>Haziran</item>
+    <item>Temmuz</item>
+    <item>Ağustos</item>
+    <item>Eylül</item>
+    <item>Ekim</item>
+    <item>Kasım</item>
+    <item>Aralık</item>
+  </string-array>
+    <string-array name="sexos">
+    <item>Cinsiyet</item>
+    <item>Erkeğim</item>
+    <item>Kadınım</item>
+  </string-array>
+
+    <string-array name="orientaciones_registro">
+    <item>Cinsel tercih *</item>
+    <item>Karşı cinse ilgi duyuyorum</item>
+    <item>Lezbiyenim</item>
+    <item>gay\'im</item>
+    <item>Biseksüelim</item>
+  </string-array>
+
+
+    <string-array name="orientaciones_mi_perfil">
+    <item>Karşı cinse ilgi duyuyorum</item>
+    <item>Lezbiyenim</item>
+    <item>gay\'im</item>
+    <item>Biseksüelim</item>
+  </string-array>
+    <string-array name="busqueda_personas">
+    <item>Karşı cinse ilgi duyan kadınlar arıyorum</item>
+    <item>Karşı cinse ilgi duyan erkekler arıyorum</item>
+    <item> gay arıyorum</item>
+    <item>Lezbiyen arıyorum</item>
+    <item>Biseksüel kadınlar arıyorum</item>
+    <item>Biseksüel erkekler arıyorum</item>
+  </string-array>
+
+    <string-array name="razas">
+    <item> Beyaz (sarışın)</item>
+    <item> Beyaz (esmer)</item>
+    <item> Siyahi</item>
+    <item> Mulate</item>
+    <item> Oryantel (Doğu)</item>
+    <item> Oryantel (Güneydoğu)</item>
+    <item> Latin</item>
+    <item> Arap</item>
+    <item> Hintli</item>
+  </string-array>
+
+    <!-- Nav Drawer Menu Items -->
+    <string-array name="nav_drawer_items">
+    <item>Radar</item>
+    <item>Radarı ayarla</item>
+    <item>Mesajlar</item>
+    <item>Profiliniz</item>
+    <item>Ücretsiz yıldızlar</item>
+    <item>Satın alımlar</item>
+    <item>Sohbet</item>
+    <item>Yardım</item>
+    <item>Ayarlar</item>
+    <item>Geri bildirim</item>
+    <item>Oturumu kapat</item>
+  </string-array>
+
+    <string-array name="causas_deuncia">
+    <item> Müstehcen resim</item>
+    <item> Sahte profil</item>
+    <item> Şiddet içeren resim</item>
+    <item> Uygunsuz veya ofansif resim</item>
+    <item> Çocuk koruması</item>
+  </string-array>
+</resources>

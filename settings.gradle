@@ -1,1 +1,1 @@
-include     ':WomenRadar', ':WomenCuddles', ':LesbianRadar', ':BisexCuddles', ':LesbianCuddles', ':GayCuddles', ':MenCuddles', ':MenRadar', ':GayRadar'
+include     ':WomenRadar', ':WomenCuddles', ':LesbianRadar', ':BisexCuddles', ':LesbianCuddles', ':GayCuddles', ':MenCuddles', ':MenRadar', ':GayRadar', ':bisexradar'

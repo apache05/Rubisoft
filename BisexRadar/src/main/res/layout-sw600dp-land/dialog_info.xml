@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:clickable="true"
+    android:clipToPadding="false"
+    android:focusable="true"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:id="@id/Layout_un_perfil_LinearLayout_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        app:cardElevation="@dimen/elevation_perfiles"
+        card_view:cardUseCompatPadding="true">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@id/Cardview_list_persona_TextView_nombre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="18dp"
+                    android:layout_gravity="bottom"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="8dp"
+                    android:textColor="@color/gris"
+                    android:textIsSelectable="true"
+                    android:textSize="@dimen/tamanyo_letra_m"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@id/Cardview_list_persona_TextView_edad"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginTop="8dp"
+                    android:gravity="end"
+                    android:textAlignment="gravity"
+                    android:textColor="@color/gris"
+                    android:textIsSelectable="true"
+                    android:textSize="@dimen/tamanyo_letra_s_plus"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@id/Cardview_list_persona_TextView_altura"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="8dp"
+                    android:textColor="@color/gris"
+                    android:textIsSelectable="true"
+                    android:textSize="@dimen/tamanyo_letra_s_plus"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/Cardview_list_persona_TextView_nombre" />
+
+                <TextView
+                    android:id="@id/Cardview_list_persona_TextView_peso"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginTop="8dp"
+                    android:textColor="@color/gris"
+                    android:textIsSelectable="true"
+                    android:textSize="@dimen/tamanyo_letra_s_plus"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/Cardview_list_persona_TextView_nombre" />
+
+                <TextView
+                    android:id="@id/Cardview_list_persona_TextView_raza"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="8dp"
+                    android:textColor="@color/gris"
+                    android:textIsSelectable="true"
+                    android:textSize="@dimen/tamanyo_letra_s_plus"
+                    app:layout_constraintHorizontal_chainStyle="spread_inside"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/Cardview_list_persona_TextView_altura" />
+
+                <TextView
+                    android:id="@id/Cardview_list_persona_TextView_distancia"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="10dp"
+                    android:textColor="@color/gris"
+                    android:textIsSelectable="true"
+                    android:textSize="@dimen/tamanyo_letra_s_plus"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/Cardview_list_persona_TextView_peso" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@id/Cardview_list_persona_ImageView_sexualidad"
+                    android:layout_width="@dimen/Tam_Normal_icons"
+                    android:layout_height="@dimen/Tam_Normal_icons"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="8dp"
+                    android:contentDescription="@string/Content_description_boton"
+
+                    android:tint="@color/accent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/Cardview_list_persona_TextView_raza" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@id/Cardview_list_persona_ImageView_premium"
+                    android:layout_width="@dimen/Tam_Normal_icons"
+                    android:layout_height="@dimen/Tam_Normal_icons"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginTop="8dp"
+                    android:contentDescription="@string/Content_description_boton"
+                    app:layout_constraintEnd_toStartOf="@id/Cardview_list_persona_ImageView_casa"
+                    app:layout_constraintStart_toEndOf="@id/Cardview_list_persona_ImageView_sexualidad"
+                    app:layout_constraintTop_toBottomOf="@id/Cardview_list_persona_TextView_raza" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@id/Cardview_list_persona_ImageView_casa"
+                    android:layout_width="@dimen/Tam_Normal_icons"
+                    android:layout_height="@dimen/Tam_Normal_icons"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginTop="8dp"
+                    android:contentDescription="@string/Content_description_boton"
+                    app:layout_constraintEnd_toStartOf="@id/Cardview_list_persona_ImageView_coche"
+                    app:layout_constraintStart_toEndOf="@id/Cardview_list_persona_ImageView_premium"
+                    app:layout_constraintTop_toBottomOf="@id/Cardview_list_persona_TextView_raza" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@id/Cardview_list_persona_ImageView_coche"
+                    android:layout_width="@dimen/Tam_Normal_icons"
+                    android:layout_height="@dimen/Tam_Normal_icons"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginTop="8dp"
+                    android:contentDescription="@string/Content_description_boton"
+                    app:layout_constraintEnd_toStartOf="@id/Cardview_list_persona_ImageView_moto"
+                    app:layout_constraintStart_toEndOf="@id/Cardview_list_persona_ImageView_casa"
+                    app:layout_constraintTop_toBottomOf="@id/Cardview_list_persona_TextView_raza" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@id/Cardview_list_persona_ImageView_moto"
+                    android:layout_width="@dimen/Tam_Normal_icons"
+                    android:layout_height="@dimen/Tam_Normal_icons"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginTop="8dp"
+                    android:contentDescription="@string/Content_description_boton"
+                    app:layout_constraintEnd_toStartOf="@id/Cardview_list_persona_TextView_estrellas"
+                    app:layout_constraintStart_toEndOf="@id/Cardview_list_persona_ImageView_coche"
+                    app:layout_constraintTop_toBottomOf="@id/Cardview_list_persona_TextView_raza" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@id/Cardview_list_persona_TextView_estrellas"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginTop="8dp"
+                    android:textColor="@color/gris"
+                    android:textSize="@dimen/tamanyo_letra_m"
+                    app:layout_constraintEnd_toStartOf="@id/Cardview_list_persona_ImageView_estrella"
+                    app:layout_constraintTop_toBottomOf="@id/Cardview_list_persona_TextView_raza" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@id/Cardview_list_persona_ImageView_estrella"
+                    android:layout_width="@dimen/Tam_Normal_icons"
+                    android:layout_height="@dimen/Tam_Normal_icons"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginTop="8dp"
+
+                    android:contentDescription="@string/Content_description_boton"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/Cardview_list_persona_TextView_raza" />
+
+                <TextView
+                    android:id="@id/Cardview_list_persona_TextView_quiero_dejar_claro"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="8dp"
+
+                    android:gravity="top"
+                    android:paddingBottom="2dp"
+                    android:paddingTop="2dp"
+                    android:textColor="@color/gris"
+                    android:textIsSelectable="true"
+                    android:textSize="@dimen/tamanyo_letra_s_plus"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/Cardview_list_persona_ImageView_sexualidad" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@id/Cardview_list_persona_TextView_nombre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="18dp"
+                    android:layout_gravity="bottom"
+                    android:textColor="@color/gris"
+                    android:textIsSelectable="true"
+                    android:textSize="@dimen/tamanyo_letra_m"
+                    android:textStyle="bold"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@id/Cardview_list_pareja_TextView_rango_edades"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:textColor="@color/gris"
+                    android:textIsSelectable="true"
+                    android:textSize="@dimen/tamanyo_letra_s_plus"
+                    android:layout_marginStart="10dp"
+
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/Cardview_list_persona_TextView_nombre" />
+
+                <TextView
+                    android:id="@id/Cardview_list_pareja_TextView_distancia"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="10dp"
+
+                    android:textColor="@color/gris"
+                    android:textIsSelectable="true"
+                    android:textSize="@dimen/tamanyo_letra_s_plus"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/Cardview_list_persona_TextView_nombre" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@id/Cardview_list_persona_ImageView_sexualidad"
+                    android:layout_width="@dimen/Tam_Normal_icons"
+                    android:layout_height="@dimen/Tam_Normal_icons"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="8dp"
+
+                    android:contentDescription="@string/Content_description_boton"
+                    android:tint="@color/accent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/Cardview_list_pareja_TextView_rango_edades" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@id/Cardview_list_persona_ImageView_premium"
+                    android:layout_width="@dimen/Tam_Normal_icons"
+                    android:layout_height="@dimen/Tam_Normal_icons"
+                    android:layout_marginTop="8dp"
+                    android:contentDescription="@string/Content_description_boton"
+                    app:layout_constraintEnd_toStartOf="@id/Cardview_list_persona_ImageView_casa"
+                    app:layout_constraintStart_toEndOf="@id/Cardview_list_persona_ImageView_sexualidad"
+                    app:layout_constraintTop_toBottomOf="@+id/Cardview_list_pareja_TextView_rango_edades" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@id/Cardview_list_persona_ImageView_casa"
+                    android:layout_width="@dimen/Tam_Normal_icons"
+                    android:layout_height="@dimen/Tam_Normal_icons"
+                    android:layout_marginTop="8dp"
+                    android:contentDescription="@string/Content_description_boton"
+                    app:layout_constraintEnd_toStartOf="@id/Cardview_list_persona_ImageView_coche"
+                    app:layout_constraintLeft_toRightOf="@id/Cardview_list_persona_ImageView_premium"
+                    app:layout_constraintTop_toBottomOf="@+id/Cardview_list_pareja_TextView_rango_edades" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@id/Cardview_list_persona_ImageView_coche"
+                    android:layout_width="@dimen/Tam_Normal_icons"
+                    android:layout_height="@dimen/Tam_Normal_icons"
+                    android:layout_marginTop="8dp"
+                    android:contentDescription="@string/Content_description_boton"
+                    app:layout_constraintEnd_toStartOf="@id/Cardview_list_persona_ImageView_moto"
+                    app:layout_constraintLeft_toRightOf="@id/Cardview_list_persona_ImageView_casa"
+                    app:layout_constraintTop_toBottomOf="@+id/Cardview_list_pareja_TextView_rango_edades" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@id/Cardview_list_persona_ImageView_moto"
+                    android:layout_width="@dimen/Tam_Normal_icons"
+                    android:layout_height="@dimen/Tam_Normal_icons"
+                    android:layout_marginTop="8dp"
+                    android:contentDescription="@string/Content_description_boton"
+                    app:layout_constraintEnd_toStartOf="@id/Cardview_list_persona_TextView_estrellas"
+                    app:layout_constraintLeft_toRightOf="@id/Cardview_list_persona_ImageView_coche"
+                    app:layout_constraintTop_toBottomOf="@+id/Cardview_list_pareja_TextView_rango_edades" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@id/Cardview_list_persona_TextView_estrellas"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:textColor="@color/gris"
+                    android:textSize="@dimen/tamanyo_letra_m"
+                    app:layout_constraintEnd_toStartOf="@id/Cardview_list_persona_ImageView_estrella"
+                    app:layout_constraintTop_toBottomOf="@+id/Cardview_list_pareja_TextView_rango_edades" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@id/Cardview_list_persona_ImageView_estrella"
+                    android:layout_width="@dimen/Tam_Normal_icons"
+                    android:layout_height="@dimen/Tam_Normal_icons"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginTop="8dp"
+
+                    android:contentDescription="@string/Content_description_boton"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/Cardview_list_pareja_TextView_rango_edades" />
+
+                <TextView
+                    android:id="@id/Cardview_list_persona_TextView_quiero_dejar_claro"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="8dp"
+                    android:gravity="top"
+                    android:paddingBottom="2dp"
+                    android:paddingTop="2dp"
+                    android:textColor="@color/gris"
+                    android:textIsSelectable="true"
+                    android:textSize="@dimen/tamanyo_letra_s_plus"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/Cardview_list_persona_ImageView_premium" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

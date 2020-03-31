@@ -64,7 +64,6 @@ import androidx.core.util.Pair;
 import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.RecyclerView;
 
-//import com.example.ruben.backend.endpointPerfilApi.model.BeanPerfil;
 public class utils {
 	private static final double earthRadius = 6372.8;//kilometers
 
@@ -589,6 +588,9 @@ public class utils {
 			case 9:
 				app_decodificada = "lesbianradar";
 				break;
+			case 10:
+				app_decodificada = "bisexradar";
+				break;
 		}
 		return app_decodificada;
 	}
@@ -934,9 +936,11 @@ public class utils {
 			case ("com.rubisoft.lesbianradar"):
 				code=9L;
 				break;
+			case ("com.rubisoft.bisexradar"):
+				code=10L;
+				break;
 		}
 		return code;
 	}
 }
-
 

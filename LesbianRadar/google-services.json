@@ -179,11 +179,11 @@
       },
       "oauth_client": [
         {
-          "client_id": "559888187719-qcgao5o133gickq9p8s0qpekvrsbpp65.apps.googleusercontent.com",
+          "client_id": "559888187719-hoiqre2e3mdras6cvd841dg3jscrs3ng.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.rubisoft.lesbianradar",
-            "certificate_hash": "96bb736d326d664cb68c2eacce27d32c79cc0223"
+            "certificate_hash": "b70eb237468be189a60cb561a62dbd5138a01562"
           }
         },
         {

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="status_bar_inset">#0000</color>
+    <dimen name="drawer_margin">320dp
+    </dimen>  <!-- hemos modificado esta con respecto al modo portrait -->
+
+    <dimen name="margin_padding_4">4dp</dimen>
+    <dimen name="margin_padding_16">16dp</dimen>
+    <dimen name="margin_padding_40">40dp</dimen>
+    <dimen name="margin_padding_48">48dp</dimen>
+</resources>

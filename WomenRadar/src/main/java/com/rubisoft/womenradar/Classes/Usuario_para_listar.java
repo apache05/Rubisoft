@@ -3,9 +3,9 @@ package com.rubisoft.womenradar.Classes;
 
 import android.graphics.drawable.Drawable;
 
-//import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
 import java.util.Map;
+
+//import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 //@JsonIgnoreProperties(ignoreUnknown = true)
 public class Usuario_para_listar {

@@ -29,16 +29,356 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="67eebe9a-8cf8-4be4-a951-30fe84e685db" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/BisexRadar/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BisexRadar/bisexradar.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BisexRadar/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BisexRadar/proguard-rules.pro" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BisexRadar/src/main/AndroidManifest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BisexRadar/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BisexRadar/src/main/res/mipmap-hdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BisexRadar/src/main/res/mipmap-mdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BisexRadar/src/main/res/mipmap-xhdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BisexRadar/src/main/res/mipmap-xxhdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BisexRadar/src/main/res/mipmap-xxxhdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BisexRadar/src/main/res/values/strings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BisexRadar/src/main/res/values/styles.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GayRadar/src/main/res/mipmap-xxxhdpi/ic_launcher_foreground.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WomenRadar/src/main/res/mipmap-xxxhdpi/ic_launcher_foreground.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/caches/gradle_models.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/gradle_models.ser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GayCuddles/src/main/java/com/rubisoft/gaycuddles/activities/Activity_Registro_Persona.java" beforeDir="false" afterPath="$PROJECT_DIR$/GayCuddles/src/main/java/com/rubisoft/gaycuddles/activities/Activity_Registro_Persona.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GayRadar/src/main/java/com/rubisoft/gayradar/activities/Activity_Registro_Persona.java" beforeDir="false" afterPath="$PROJECT_DIR$/GayRadar/src/main/java/com/rubisoft/gayradar/activities/Activity_Registro_Persona.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LesbianCuddles/src/main/java/com/rubisoft/lesbiancuddles/activities/Activity_Registro_Persona.java" beforeDir="false" afterPath="$PROJECT_DIR$/LesbianCuddles/src/main/java/com/rubisoft/lesbiancuddles/activities/Activity_Registro_Persona.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LesbianRadar/src/main/java/com/rubisoft/lesbianradar/activities/Activity_Registro_Persona.java" beforeDir="false" afterPath="$PROJECT_DIR$/LesbianRadar/src/main/java/com/rubisoft/lesbianradar/activities/Activity_Registro_Persona.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MenCuddles/src/main/java/com/rubisoft/mencuddles/activities/Activity_Registro_Persona.java" beforeDir="false" afterPath="$PROJECT_DIR$/MenCuddles/src/main/java/com/rubisoft/mencuddles/activities/Activity_Registro_Persona.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MenRadar/src/main/java/com/rubisoft/menradar/activities/Activity_Registro_Persona.java" beforeDir="false" afterPath="$PROJECT_DIR$/MenRadar/src/main/java/com/rubisoft/menradar/activities/Activity_Registro_Persona.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WomenCuddles/src/main/java/com/rubisoft/womencuddles/activities/Activity_Registro_Persona.java" beforeDir="false" afterPath="$PROJECT_DIR$/WomenCuddles/src/main/java/com/rubisoft/womencuddles/activities/Activity_Registro_Persona.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WomenRadar/src/main/java/com/rubisoft/womenradar/activities/Activity_Registro_Persona.java" beforeDir="false" afterPath="$PROJECT_DIR$/WomenRadar/src/main/java/com/rubisoft/womenradar/activities/Activity_Registro_Persona.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_fasterxml_jackson_core_jackson_annotations_2_10_2_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_fasterxml_jackson_core_jackson_core_2_10_2_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_fasterxml_jackson_core_jackson_databind_2_10_2_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_maps_16_0_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GayCuddles/src/main/java/com/rubisoft/gaycuddles/tools/utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/GayCuddles/src/main/java/com/rubisoft/gaycuddles/tools/utils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GayCuddles/src/main/res/mipmap-hdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/GayCuddles/src/main/res/mipmap-hdpi/ic_launcher.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GayCuddles/src/main/res/mipmap-mdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/GayCuddles/src/main/res/mipmap-mdpi/ic_launcher.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GayCuddles/src/main/res/mipmap-xhdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/GayCuddles/src/main/res/mipmap-xhdpi/ic_launcher.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GayCuddles/src/main/res/mipmap-xxhdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/GayCuddles/src/main/res/mipmap-xxhdpi/ic_launcher.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GayCuddles/src/main/res/mipmap-xxxhdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/GayCuddles/src/main/res/mipmap-xxxhdpi/ic_launcher.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GayCuddles/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/GayCuddles/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GayRadar/GayRadar.iml" beforeDir="false" afterPath="$PROJECT_DIR$/GayRadar/GayRadar.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GayRadar/src/main/java/com/rubisoft/gayradar/tools/utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/GayRadar/src/main/java/com/rubisoft/gayradar/tools/utils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GayRadar/src/main/res/mipmap-hdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/GayRadar/src/main/res/mipmap-hdpi/ic_launcher.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GayRadar/src/main/res/mipmap-mdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/GayRadar/src/main/res/mipmap-mdpi/ic_launcher.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GayRadar/src/main/res/mipmap-xhdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/GayRadar/src/main/res/mipmap-xhdpi/ic_launcher.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GayRadar/src/main/res/mipmap-xxhdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/GayRadar/src/main/res/mipmap-xxhdpi/ic_launcher.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GayRadar/src/main/res/mipmap-xxxhdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/GayRadar/src/main/res/mipmap-xxxhdpi/ic_launcher.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GayRadar/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/GayRadar/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LesbianCuddles/src/main/java/com/rubisoft/lesbiancuddles/tools/utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/LesbianCuddles/src/main/java/com/rubisoft/lesbiancuddles/tools/utils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LesbianCuddles/src/main/res/mipmap-hdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/LesbianCuddles/src/main/res/mipmap-hdpi/ic_launcher.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LesbianCuddles/src/main/res/mipmap-mdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/LesbianCuddles/src/main/res/mipmap-mdpi/ic_launcher.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LesbianCuddles/src/main/res/mipmap-xhdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/LesbianCuddles/src/main/res/mipmap-xhdpi/ic_launcher.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LesbianCuddles/src/main/res/mipmap-xxhdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/LesbianCuddles/src/main/res/mipmap-xxhdpi/ic_launcher.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LesbianCuddles/src/main/res/mipmap-xxxhdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/LesbianCuddles/src/main/res/mipmap-xxxhdpi/ic_launcher.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LesbianCuddles/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/LesbianCuddles/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LesbianRadar/google-services.json" beforeDir="false" afterPath="$PROJECT_DIR$/LesbianRadar/google-services.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LesbianRadar/src/main/java/com/rubisoft/lesbianradar/tools/utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/LesbianRadar/src/main/java/com/rubisoft/lesbianradar/tools/utils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LesbianRadar/src/main/res/mipmap-hdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/LesbianRadar/src/main/res/mipmap-hdpi/ic_launcher.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LesbianRadar/src/main/res/mipmap-mdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/LesbianRadar/src/main/res/mipmap-mdpi/ic_launcher.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LesbianRadar/src/main/res/mipmap-xhdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/LesbianRadar/src/main/res/mipmap-xhdpi/ic_launcher.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LesbianRadar/src/main/res/mipmap-xxhdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/LesbianRadar/src/main/res/mipmap-xxhdpi/ic_launcher.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LesbianRadar/src/main/res/mipmap-xxxhdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/LesbianRadar/src/main/res/mipmap-xxxhdpi/ic_launcher.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LesbianRadar/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/LesbianRadar/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MenCuddles/src/main/java/com/rubisoft/mencuddles/tools/utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/MenCuddles/src/main/java/com/rubisoft/mencuddles/tools/utils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MenCuddles/src/main/res/mipmap-hdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/MenCuddles/src/main/res/mipmap-hdpi/ic_launcher.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MenCuddles/src/main/res/mipmap-mdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/MenCuddles/src/main/res/mipmap-mdpi/ic_launcher.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MenCuddles/src/main/res/mipmap-xhdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/MenCuddles/src/main/res/mipmap-xhdpi/ic_launcher.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MenCuddles/src/main/res/mipmap-xxhdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/MenCuddles/src/main/res/mipmap-xxhdpi/ic_launcher.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MenCuddles/src/main/res/mipmap-xxxhdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/MenCuddles/src/main/res/mipmap-xxxhdpi/ic_launcher.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MenCuddles/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MenCuddles/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MenRadar/src/main/java/com/rubisoft/menradar/tools/utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/MenRadar/src/main/java/com/rubisoft/menradar/tools/utils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MenRadar/src/main/res/mipmap-hdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/MenRadar/src/main/res/mipmap-hdpi/ic_launcher.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MenRadar/src/main/res/mipmap-mdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/MenRadar/src/main/res/mipmap-mdpi/ic_launcher.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MenRadar/src/main/res/mipmap-xhdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/MenRadar/src/main/res/mipmap-xhdpi/ic_launcher.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MenRadar/src/main/res/mipmap-xxhdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/MenRadar/src/main/res/mipmap-xxhdpi/ic_launcher.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MenRadar/src/main/res/mipmap-xxxhdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/MenRadar/src/main/res/mipmap-xxxhdpi/ic_launcher.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MenRadar/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MenRadar/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WomenCuddles/src/main/java/com/rubisoft/womencuddles/tools/utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/WomenCuddles/src/main/java/com/rubisoft/womencuddles/tools/utils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WomenCuddles/src/main/res/mipmap-hdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/WomenCuddles/src/main/res/mipmap-hdpi/ic_launcher.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WomenCuddles/src/main/res/mipmap-mdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/WomenCuddles/src/main/res/mipmap-mdpi/ic_launcher.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WomenCuddles/src/main/res/mipmap-xhdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/WomenCuddles/src/main/res/mipmap-xhdpi/ic_launcher.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WomenCuddles/src/main/res/mipmap-xxhdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/WomenCuddles/src/main/res/mipmap-xxhdpi/ic_launcher.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WomenCuddles/src/main/res/mipmap-xxxhdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/WomenCuddles/src/main/res/mipmap-xxxhdpi/ic_launcher.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WomenCuddles/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/WomenCuddles/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WomenRadar/src/main/java/com/rubisoft/womenradar/Classes/Usuario_para_listar.java" beforeDir="false" afterPath="$PROJECT_DIR$/WomenRadar/src/main/java/com/rubisoft/womenradar/Classes/Usuario_para_listar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WomenRadar/src/main/java/com/rubisoft/womenradar/tools/utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/WomenRadar/src/main/java/com/rubisoft/womenradar/tools/utils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WomenRadar/src/main/res/mipmap-hdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/WomenRadar/src/main/res/mipmap-hdpi/ic_launcher.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WomenRadar/src/main/res/mipmap-mdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/WomenRadar/src/main/res/mipmap-mdpi/ic_launcher.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WomenRadar/src/main/res/mipmap-xhdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/WomenRadar/src/main/res/mipmap-xhdpi/ic_launcher.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WomenRadar/src/main/res/mipmap-xxhdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/WomenRadar/src/main/res/mipmap-xxhdpi/ic_launcher.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WomenRadar/src/main/res/mipmap-xxxhdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/WomenRadar/src/main/res/mipmap-xxxhdpi/ic_launcher.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WomenRadar/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/WomenRadar/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/BisexCuddles.iml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/BisexCuddles.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/google-services.json" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/google-services.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/libs/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/libs/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/libs/ogury-3.0.22.aar" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/libs/ogury-3.0.22.aar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/libs/proguard-rules-consumer.pro" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/libs/proguard-rules-consumer.pro" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/proguard-rules.pro" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/proguard-rules.pro" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/rubisoft-10e7e-firebase-adminsdk-cs0gq-e5b902b14e.json" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/rubisoft-10e7e-firebase-adminsdk-cs0gq-e5b902b14e.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/aidl/com/android/vending/billing/IInAppBillingService.aidl" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/aidl/com/android/vending/billing/IInAppBillingService.aidl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/assets/fonts/Roboto-Bold.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/assets/fonts/Roboto-Bold.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/assets/fonts/Roboto-Light.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/assets/fonts/Roboto-Light.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/assets/fonts/Roboto-Regular.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/assets/fonts/Roboto-Regular.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/java/billing/IabBroadcastReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/java/billing/IabBroadcastReceiver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/java/billing/IabException.java" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/java/billing/IabException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/java/billing/IabHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/java/billing/IabHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/java/billing/IabResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/java/billing/IabResult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/java/billing/Inventory.java" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/java/billing/Inventory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/java/billing/Purchase.java" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/java/billing/Purchase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/java/billing/Security.java" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/java/billing/Security.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/java/billing/SkuDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/java/billing/SkuDetails.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/java/com/rubisoft/bisexcuddles/Adapters/Drawer_Adapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/java/com/rubisoft/bisexradar/Adapters/Drawer_Adapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/java/com/rubisoft/bisexcuddles/Adapters/Image_Adapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/java/com/rubisoft/bisexradar/Adapters/Image_Adapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/java/com/rubisoft/bisexcuddles/Adapters/RecyclerView_Chat_Adapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/java/com/rubisoft/bisexradar/Adapters/RecyclerView_Chat_Adapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/java/com/rubisoft/bisexcuddles/Adapters/RecyclerView_Messages_Adapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/java/com/rubisoft/bisexradar/Adapters/RecyclerView_Messages_Adapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/java/com/rubisoft/bisexcuddles/Adapters/RecyclerView_Principal_Adapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/java/com/rubisoft/bisexradar/Adapters/RecyclerView_Principal_Adapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/java/com/rubisoft/bisexcuddles/Adapters/ViewPagerTabs_Adapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/java/com/rubisoft/bisexradar/Adapters/ViewPagerTabs_Adapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/java/com/rubisoft/bisexcuddles/Classes/Chat.java" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/java/com/rubisoft/bisexradar/Classes/Chat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/java/com/rubisoft/bisexcuddles/Classes/Compra.java" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/java/com/rubisoft/bisexradar/Classes/Compra.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/java/com/rubisoft/bisexcuddles/Classes/Denuncia.java" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/java/com/rubisoft/bisexradar/Classes/Denuncia.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/java/com/rubisoft/bisexcuddles/Classes/Drawer_Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/java/com/rubisoft/bisexradar/Classes/Drawer_Item.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/java/com/rubisoft/bisexcuddles/Classes/Error.java" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/java/com/rubisoft/bisexradar/Classes/Error.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/java/com/rubisoft/bisexcuddles/Classes/Feedback.java" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/java/com/rubisoft/bisexradar/Classes/Feedback.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/java/com/rubisoft/bisexcuddles/Classes/Logro.java" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/java/com/rubisoft/bisexradar/Classes/Logro.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/java/com/rubisoft/bisexcuddles/Classes/Mi_foto.java" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/java/com/rubisoft/bisexradar/Classes/Mi_foto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/java/com/rubisoft/bisexcuddles/Classes/MultiSpinner.java" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/java/com/rubisoft/bisexradar/Classes/MultiSpinner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/java/com/rubisoft/bisexcuddles/Classes/NpaGridLayoutManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/java/com/rubisoft/bisexradar/Classes/NpaGridLayoutManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/java/com/rubisoft/bisexcuddles/Classes/NpaLinearLayoutManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/java/com/rubisoft/bisexradar/Classes/NpaLinearLayoutManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/java/com/rubisoft/bisexcuddles/Classes/Premium.java" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/java/com/rubisoft/bisexradar/Classes/Premium.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/java/com/rubisoft/bisexcuddles/Classes/Relacion.java" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/java/com/rubisoft/bisexradar/Classes/Relacion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/java/com/rubisoft/bisexcuddles/Classes/Relacion_para_listar.java" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/java/com/rubisoft/bisexradar/Classes/Relacion_para_listar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/java/com/rubisoft/bisexcuddles/Classes/STATS_GLOBAL.java" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/java/com/rubisoft/bisexradar/Classes/STATS_GLOBAL.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/java/com/rubisoft/bisexcuddles/Classes/STATS_PAISES.java" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/java/com/rubisoft/bisexradar/Classes/STATS_PAISES.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/java/com/rubisoft/bisexcuddles/Classes/STATS_RELACIONES.java" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/java/com/rubisoft/bisexradar/Classes/STATS_RELACIONES.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/java/com/rubisoft/bisexcuddles/Classes/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/java/com/rubisoft/bisexradar/Classes/Usuario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/java/com/rubisoft/bisexcuddles/Classes/Usuario_para_listar.java" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/java/com/rubisoft/bisexradar/Classes/Usuario_para_listar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/java/com/rubisoft/bisexcuddles/Dialogs/Dialog_Cambiar_Foto.java" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/java/com/rubisoft/bisexradar/Dialogs/Dialog_Cambiar_Foto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/java/com/rubisoft/bisexcuddles/Dialogs/Dialog_Cambiar_Primeras_Fotos.java" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/java/com/rubisoft/bisexradar/Dialogs/Dialog_Cambiar_Primeras_Fotos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/java/com/rubisoft/bisexcuddles/Dialogs/Dialog_Interactuar_Chat_General.java" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/java/com/rubisoft/bisexradar/Dialogs/Dialog_Interactuar_Chat_General.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/java/com/rubisoft/bisexcuddles/Dialogs/Dialog_Interactuar_Mensajes.java" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/java/com/rubisoft/bisexradar/Dialogs/Dialog_Interactuar_Mensajes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/java/com/rubisoft/bisexcuddles/Dialogs/Dialog_Interactuar_Principal.java" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/java/com/rubisoft/bisexradar/Dialogs/Dialog_Interactuar_Principal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/java/com/rubisoft/bisexcuddles/Dialogs/Dialog_info.java" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/java/com/rubisoft/bisexradar/Dialogs/Dialog_info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/java/com/rubisoft/bisexcuddles/Fragments/fragment_datos_personales.java" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/java/com/rubisoft/bisexradar/Fragments/fragment_datos_personales.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/java/com/rubisoft/bisexcuddles/Fragments/fragment_foto_manager.java" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/java/com/rubisoft/bisexradar/Fragments/fragment_foto_manager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/java/com/rubisoft/bisexcuddles/Fragments/fragment_logros.java" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/java/com/rubisoft/bisexradar/Fragments/fragment_logros.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/java/com/rubisoft/bisexcuddles/FrameLayouts/ScrimInsetsFrameLayout.java" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/java/com/rubisoft/bisexradar/FrameLayouts/ScrimInsetsFrameLayout.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/java/com/rubisoft/bisexcuddles/Interfaces/AdvertisingInfoListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/java/com/rubisoft/bisexradar/Interfaces/AdvertisingInfoListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/java/com/rubisoft/bisexcuddles/Interfaces/Interface_ClickListener_Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/java/com/rubisoft/bisexradar/Interfaces/Interface_ClickListener_Menu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/java/com/rubisoft/bisexcuddles/Interfaces/Interface_ClickListener_Perfiles.java" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/java/com/rubisoft/bisexradar/Interfaces/Interface_ClickListener_Perfiles.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/java/com/rubisoft/bisexcuddles/RecyclersViews/RecyclerView_AutoFit.java" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/java/com/rubisoft/bisexradar/RecyclersViews/RecyclerView_AutoFit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/java/com/rubisoft/bisexcuddles/ViewPagers/Viewpager_Especial.java" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/java/com/rubisoft/bisexradar/ViewPagers/Viewpager_Especial.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/java/com/rubisoft/bisexcuddles/activities/Activity_Ayuda.java" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/java/com/rubisoft/bisexradar/activities/Activity_Ayuda.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/java/com/rubisoft/bisexcuddles/activities/Activity_Chat_General.java" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/java/com/rubisoft/bisexradar/activities/Activity_Chat_General.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/java/com/rubisoft/bisexcuddles/activities/Activity_Chat_Individual.java" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/java/com/rubisoft/bisexradar/activities/Activity_Chat_Individual.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/java/com/rubisoft/bisexcuddles/activities/Activity_Compras.java" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/java/com/rubisoft/bisexradar/activities/Activity_Compras.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/java/com/rubisoft/bisexcuddles/activities/Activity_Condiciones_Uso.java" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/java/com/rubisoft/bisexradar/activities/Activity_Condiciones_Uso.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/java/com/rubisoft/bisexcuddles/activities/Activity_Configura_Radar.java" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/java/com/rubisoft/bisexradar/activities/Activity_Configura_Radar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/java/com/rubisoft/bisexcuddles/activities/Activity_Configuracion.java" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/java/com/rubisoft/bisexradar/activities/Activity_Configuracion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/java/com/rubisoft/bisexcuddles/activities/Activity_Feedback.java" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/java/com/rubisoft/bisexradar/activities/Activity_Feedback.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/java/com/rubisoft/bisexcuddles/activities/Activity_Inicio.java" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/java/com/rubisoft/bisexradar/activities/Activity_Inicio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/java/com/rubisoft/bisexcuddles/activities/Activity_Mensajes.java" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/java/com/rubisoft/bisexradar/activities/Activity_Mensajes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/java/com/rubisoft/bisexcuddles/activities/Activity_Mi_Perfil.java" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/java/com/rubisoft/bisexradar/activities/Activity_Mi_Perfil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/java/com/rubisoft/bisexcuddles/activities/Activity_Politica_Privacidad.java" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/java/com/rubisoft/bisexradar/activities/Activity_Politica_Privacidad.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/java/com/rubisoft/bisexcuddles/activities/Activity_Primeras_fotos.java" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/java/com/rubisoft/bisexradar/activities/Activity_Primeras_fotos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/java/com/rubisoft/bisexcuddles/activities/Activity_Principal.java" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/java/com/rubisoft/bisexradar/activities/Activity_Principal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/java/com/rubisoft/bisexcuddles/activities/Activity_Registro_Persona.java" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/java/com/rubisoft/bisexradar/activities/Activity_Registro_Persona.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/java/com/rubisoft/bisexcuddles/activities/Activity_Sin_Conexion.java" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/java/com/rubisoft/bisexradar/activities/Activity_Sin_Conexion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/java/com/rubisoft/bisexcuddles/activities/Activity_Un_Perfil.java" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/java/com/rubisoft/bisexradar/activities/Activity_Un_Perfil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/java/com/rubisoft/bisexcuddles/activities/Activity_estrellas_gratis.java" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/java/com/rubisoft/bisexradar/activities/Activity_estrellas_gratis.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/java/com/rubisoft/bisexcuddles/activities/Activity_una_foto.java" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/java/com/rubisoft/bisexradar/activities/Activity_una_foto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/java/com/rubisoft/bisexcuddles/services/MyFirebaseMessagingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/java/com/rubisoft/bisexradar/services/MyFirebaseMessagingService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/java/com/rubisoft/bisexcuddles/tools/utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/java/com/rubisoft/bisexradar/tools/utils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/anim/activity_in.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/anim/activity_in.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/anim/activity_out.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/anim/activity_out.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/drawable/appodeal.png" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/drawable/appodeal.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/drawable/button.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/drawable/button.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/drawable/card_background.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/drawable/card_background.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/drawable/chat_general.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/drawable/chat_general.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/drawable/close.png" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/drawable/close.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/drawable/drawer_gradient.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/drawable/drawer_gradient.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/drawable/gender_couple_gay.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/drawable/gender_couple_gay.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/drawable/gender_couple_hetero.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/drawable/gender_couple_hetero.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/drawable/gender_couple_lesbian.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/drawable/gender_couple_lesbian.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/drawable/gender_man.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/drawable/gender_man.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/drawable/gender_woman.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/drawable/gender_woman.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/drawable/heart.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/drawable/heart.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/drawable/icono_twitter.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/drawable/icono_twitter.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/drawable/mensaje.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/drawable/mensaje.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/drawable/no_pic.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/drawable/no_pic.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/drawable/rectangulo_blanco_transparente.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/drawable/rectangulo_blanco_transparente.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/drawable/rounded_rectangle_dcha.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/drawable/rounded_rectangle_dcha.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/drawable/rounded_rectangle_izq.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/drawable/rounded_rectangle_izq.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/layout-sw600dp-land/dialog_info.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/layout-sw600dp-land/dialog_info.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/layout-sw600dp-land/dialog_signup.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/layout-sw600dp-land/dialog_signup.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/layout-sw600dp-land/dialogo_cambiar_foto.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/layout-sw600dp-land/dialogo_cambiar_foto.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/layout-sw600dp-land/dialogo_cambiar_primeras_fotos.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/layout-sw600dp-land/dialogo_cambiar_primeras_fotos.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/layout-sw600dp-land/dialogo_interactuar_chat_general.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/layout-sw600dp-land/dialogo_interactuar_chat_general.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/layout-sw600dp-land/dialogo_interactuar_mensajes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/layout-sw600dp-land/dialogo_interactuar_mensajes.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/layout-sw600dp-land/dialogo_interactuar_principal.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/layout-sw600dp-land/dialogo_interactuar_principal.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/layout-sw600dp-land/fragment_datos_personales.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/layout-sw600dp-land/fragment_datos_personales.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/layout-sw600dp-land/fragment_foto_manager.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/layout-sw600dp-land/fragment_foto_manager.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/layout-sw600dp-land/fragment_logros.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/layout-sw600dp-land/fragment_logros.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/layout-sw600dp-land/layout_ayuda.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/layout-sw600dp-land/layout_ayuda.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/layout-sw600dp-land/layout_chat.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/layout-sw600dp-land/layout_chat.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/layout-sw600dp-land/layout_chat_general.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/layout-sw600dp-land/layout_chat_general.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/layout-sw600dp-land/layout_compras.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/layout-sw600dp-land/layout_compras.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/layout-sw600dp-land/layout_configura_radar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/layout-sw600dp-land/layout_configura_radar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/layout-sw600dp-land/layout_configuracion.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/layout-sw600dp-land/layout_configuracion.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/layout-sw600dp-land/layout_estrellas_gratis.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/layout-sw600dp-land/layout_estrellas_gratis.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/layout-sw600dp-land/layout_feedback.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/layout-sw600dp-land/layout_feedback.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/layout-sw600dp-land/layout_inicio.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/layout-sw600dp-land/layout_inicio.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/layout-sw600dp-land/layout_mensajes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/layout-sw600dp-land/layout_mensajes.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/layout-sw600dp-land/layout_mi_perfil.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/layout-sw600dp-land/layout_mi_perfil.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/layout-sw600dp-land/layout_principal.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/layout-sw600dp-land/layout_principal.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/layout-sw600dp-land/list_chat.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/layout-sw600dp-land/list_chat.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/layout-sw600dp-land/list_mensajes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/layout-sw600dp-land/list_mensajes.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/layout-sw600dp-land/list_principal.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/layout-sw600dp-land/list_principal.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/layout-sw600dp-land/navigation_drawer.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/layout-sw600dp-land/navigation_drawer.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/layout-sw600dp-land/spinner_item.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/layout-sw600dp-land/spinner_item.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/layout-sw600dp-port/navigation_drawer.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/layout-sw600dp-port/navigation_drawer.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/layout/dialog_info.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/layout/dialog_info.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/layout/dialog_signup.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/layout/dialog_signup.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/layout/dialogo_cambiar_foto.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/layout/dialogo_cambiar_foto.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/layout/dialogo_cambiar_primeras_fotos.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/layout/dialogo_cambiar_primeras_fotos.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/layout/dialogo_interactuar_chat_general.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/layout/dialogo_interactuar_chat_general.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/layout/dialogo_interactuar_mensajes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/layout/dialogo_interactuar_mensajes.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/layout/dialogo_interactuar_principal.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/layout/dialogo_interactuar_principal.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/layout/drawer_item.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/layout/drawer_item.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/layout/fragment_datos_personales.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/layout/fragment_datos_personales.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/layout/fragment_foto_manager.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/layout/fragment_foto_manager.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/layout/fragment_logros.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/layout/fragment_logros.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/layout/layout_ayuda.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/layout/layout_ayuda.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/layout/layout_chat.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/layout/layout_chat.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/layout/layout_chat_general.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/layout/layout_chat_general.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/layout/layout_compras.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/layout/layout_compras.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/layout/layout_condiciones_uso.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/layout/layout_condiciones_uso.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/layout/layout_configura_radar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/layout/layout_configura_radar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/layout/layout_configuracion.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/layout/layout_configuracion.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/layout/layout_estrellas_gratis.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/layout/layout_estrellas_gratis.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/layout/layout_feedback.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/layout/layout_feedback.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/layout/layout_inicio.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/layout/layout_inicio.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/layout/layout_mensajes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/layout/layout_mensajes.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/layout/layout_mi_perfil.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/layout/layout_mi_perfil.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/layout/layout_politica_privacidad.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/layout/layout_politica_privacidad.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/layout/layout_primeras_fotos.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/layout/layout_primeras_fotos.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/layout/layout_principal.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/layout/layout_principal.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/layout/layout_registro_personas.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/layout/layout_registro_personas.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/layout/layout_sin_conexion.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/layout/layout_sin_conexion.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/layout/layout_un_perfil.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/layout/layout_un_perfil.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/layout/layout_una_foto.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/layout/layout_una_foto.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/layout/list_chat.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/layout/list_chat.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/layout/list_mensajes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/layout/list_mensajes.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/layout/list_principal.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/layout/list_principal.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/layout/mi_foto.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/layout/mi_foto.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/layout/navigation_drawer.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/layout/navigation_drawer.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/layout/progressbar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/layout/progressbar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/layout/spinner_item.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/layout/spinner_item.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/layout/toolbar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/layout/toolbar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/menu/menu_options.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/menu/menu_options.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/mipmap-hdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/mipmap-hdpi/ic_launcher.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/mipmap-hdpi/ic_launcher_foreground.png" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/mipmap-hdpi/ic_launcher_foreground.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/mipmap-mdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/mipmap-mdpi/ic_launcher.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/mipmap-mdpi/ic_launcher_foreground.png" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/mipmap-mdpi/ic_launcher_foreground.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/mipmap-xhdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/mipmap-xhdpi/ic_launcher.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/mipmap-xhdpi/ic_launcher_foreground.png" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/mipmap-xhdpi/ic_launcher_foreground.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/mipmap-xxhdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/mipmap-xxhdpi/ic_launcher.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/mipmap-xxhdpi/ic_launcher_foreground.png" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/mipmap-xxhdpi/ic_launcher_foreground.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/mipmap-xxxhdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/mipmap-xxxhdpi/ic_launcher.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/mipmap-xxxhdpi/ic_launcher_foreground.png" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/mipmap-xxxhdpi/ic_launcher_foreground.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/raw/new_message.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/raw/new_message.mp3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/raw/notification.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/raw/notification.mp3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/transition/slide.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/transition/slide.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/values-ar/arrays.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/values-ar/arrays.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/values-ar/condiciones_uso.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/values-ar/condiciones_uso.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/values-ar/politica_privacidad.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/values-ar/politica_privacidad.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/values-ar/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/values-ar/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/values-ca/arrays.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/values-ca/arrays.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/values-ca/condiciones_uso.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/values-ca/condiciones_uso.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/values-ca/politica_privacidad.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/values-ca/politica_privacidad.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/values-ca/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/values-ca/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/values-de/arrays.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/values-de/arrays.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/values-de/condiciones_uso.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/values-de/condiciones_uso.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/values-de/politica_privacidad.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/values-de/politica_privacidad.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/values-de/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/values-de/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/values-es/arrays.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/values-es/arrays.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/values-es/condiciones_uso.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/values-es/condiciones_uso.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/values-es/politica_privacidad.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/values-es/politica_privacidad.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/values-es/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/values-es/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/values-fr/arrays.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/values-fr/arrays.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/values-fr/condiciones_uso.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/values-fr/condiciones_uso.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/values-fr/politica_privacidad.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/values-fr/politica_privacidad.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/values-fr/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/values-fr/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/values-hi/arrays.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/values-hi/arrays.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/values-hi/condiciones_uso.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/values-hi/condiciones_uso.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/values-hi/politica_privacidad.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/values-hi/politica_privacidad.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/values-hi/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/values-hi/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/values-in/arrays.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/values-in/arrays.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/values-in/condiciones_uso.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/values-in/condiciones_uso.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/values-in/politica_privacidad.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/values-in/politica_privacidad.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/values-in/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/values-in/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/values-it/arrays.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/values-it/arrays.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/values-it/condiciones_uso.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/values-it/condiciones_uso.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/values-it/politica_privacidad.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/values-it/politica_privacidad.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/values-it/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/values-it/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/values-ja/arrays.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/values-ja/arrays.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/values-ja/condiciones_uso.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/values-ja/condiciones_uso.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/values-ja/politica_privacidad.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/values-ja/politica_privacidad.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/values-ja/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/values-ja/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/values-ko/arrays.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/values-ko/arrays.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/values-ko/condiciones_uso.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/values-ko/condiciones_uso.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/values-ko/politica_privacidad.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/values-ko/politica_privacidad.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/values-ko/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/values-ko/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/values-land/attrs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/values-land/attrs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/values-pt/arrays.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/values-pt/arrays.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/values-pt/condiciones_uso.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/values-pt/condiciones_uso.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/values-pt/politica_privacidad.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/values-pt/politica_privacidad.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/values-pt/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/values-pt/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/values-ru/arrays.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/values-ru/arrays.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/values-ru/condiciones_uso.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/values-ru/condiciones_uso.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/values-ru/politica_privacidad.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/values-ru/politica_privacidad.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/values-ru/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/values-ru/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/values-sw600dp/attrs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/values-sw600dp/attrs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/values-sw600dp/dimens.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/values-sw600dp/dimens.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/values-sw600dp/integer.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/values-sw600dp/integer.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/values-sw600dp/styles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/values-sw600dp/styles.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/values-th/arrays.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/values-th/arrays.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/values-th/condiciones_uso.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/values-th/condiciones_uso.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/values-th/politica_privacidad.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/values-th/politica_privacidad.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/values-th/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/values-th/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/values-tr/arrays.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/values-tr/arrays.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/values-tr/condiciones_uso.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/values-tr/condiciones_uso.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/values-tr/politica_privacidad.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/values-tr/politica_privacidad.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/values-tr/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/values-tr/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/values-v21/themes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/values-v21/themes.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/values-v23/styles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/values-v23/styles.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/values-w820dp/dimens.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/values-w820dp/dimens.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/values-zh-rCN/arrays.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/values-zh-rCN/arrays.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/values-zh-rCN/condiciones_uso.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/values-zh-rCN/condiciones_uso.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/values-zh-rCN/politica_privacidad.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/values-zh-rCN/politica_privacidad.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/values-zh-rCN/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/values-zh-rCN/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/values/IDs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/values/IDs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/values/TAGS.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/values/TAGS.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/values/arrays.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/values/arrays.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/values/attrs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/values/attrs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/values/color.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/values/color.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/values/condiciones_uso.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/values/condiciones_uso.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/values/dimens.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/values/dimens.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/values/ic_launcher_background.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/values/ic_launcher_background.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/values/integer.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/values/integer.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/values/politica_privacidad.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/values/politica_privacidad.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/values/styles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/values/styles.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/values/themes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/values/themes.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/xml/network_security_config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/xml/network_security_config.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bisexcuddles/src/main/res/xml/provider_paths.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BisexCuddles/src/main/res/xml/provider_paths.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -49,7 +389,7 @@
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="Pixel_XL_API_28" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="Nexus_10_API_23_tableta" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -114,15 +454,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>AIzaSyC87N2pnfbOeuYer2kdfOuKY-xhWjWvPnA</find>
-      <find>com.google.gms:google-services</find>
-      <find>&quot;app_name&quot;&gt;</find>
-      <find>27</find>
-      <find>women radar</find>
-      <find>&lt;string name=&quot;app_name&quot;&gt;</find>
-      <find>com.rubisoft.womenradar</find>
-      <find>womenradar</find>
-      <find>com.rubisoft.cuddles</find>
       <find>cuddles</find>
       <find>case (&quot;com.rubisoft.lesbianradar&quot;):</find>
       <find>e39867efd3c756332b73ab171cd111593cb12edc7907d25e</find>
@@ -144,11 +475,17 @@
       <find>&lt;string name=&quot;STATS_GLOBAL_POR_PERFILES&quot; translatable=&quot;false&quot;&gt;</find>
       <find>class_</find>
       <find>WriteBatch batch_STATS_GLOBAL_POR_APPS = db.batch();</find>
+      <find>ic_launcher_background</find>
+      <find>&lt;!-- 82:6C:3E:B3:38:12:5A:37:11:F2:5D:5E:4B:14:03:FF:54:1B:61:80 --&gt;</find>
+      <find>Bisex finder</find>
+      <find>com.rubisoft.bisexcuddles</find>
+      <find>&lt;string name=&quot;app_name&quot;&gt;</find>
+      <find>case (&quot;com.rubisoft.bisexradar&quot;):</find>
+      <find>ca-app-pub-7323079119104426~4662270527</find>
+      <find>&lt;string name=&quot;Admob_APPID&quot;  translatable=&quot;false&quot;&gt;</find>
+      <find>&lt;string name=&quot;Admob_APPID&quot; translatable=&quot;false&quot;&gt;</find>
     </findStrings>
     <replaceStrings>
-      <replace>gs://rubisoft-10e7e.appspot.com</replace>
-      <replace>gayc finder</replace>
-      <replace>gaycfinder</replace>
       <replace>gayfinder</replace>
       <replace>gayfcuddles</replace>
       <replace>gaycuddles</replace>
@@ -167,7 +504,6 @@
       <replace>bisexcuddles</replace>
       <replace>menradar</replace>
       <replace>Men Radar</replace>
-      <replace />
       <replace>&lt;!-- 82:6C:3E:B3:38:12:5A:37:11:F2:5D:5E:4B:14:03:FF:54:1B:61:80 --&gt;</replace>
       <replace>com.rubisoft.lesbianradar</replace>
       <replace>Lesbian Radar</replace>
@@ -176,6 +512,10 @@
       <replace>//AndroidManifest.xml</replace>
       <replace>//import com.fasterxml.jackson.annotation.JsonIgnoreProperties;</replace>
       <replace>//@JsonIgnoreProperties(ignoreUnknown = true)</replace>
+      <replace />
+      <replace>Bisex Radar</replace>
+      <replace>com.rubisoft.bisexradar</replace>
+      <replace>&lt;string name=&quot;Admob_APPID&quot; translatable=&quot;false&quot;&gt;</replace>
     </replaceStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/GayCuddles</dir>
@@ -192,7 +532,6 @@
     <option name="KEY_STORE_PATH" value="$PROJECT_DIR$/../rubisoft_keystore.jks" />
     <option name="KEY_ALIAS" value="key_radar" />
     <option name="REMEMBER_PASSWORDS" value="true" />
-    <option name="BUILD_TARGET_KEY" value="apk" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -200,32 +539,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/LesbianRadar/src/main/res/values-it/strings.xml" />
-        <option value="$PROJECT_DIR$/LesbianRadar/src/main/res/values-ru/strings.xml" />
-        <option value="$PROJECT_DIR$/LesbianRadar/src/main/res/values-th/strings.xml" />
-        <option value="$PROJECT_DIR$/LesbianRadar/src/main/res/values-tr/strings.xml" />
-        <option value="$PROJECT_DIR$/LesbianRadar/src/main/res/values-zh-rCN/strings.xml" />
-        <option value="$PROJECT_DIR$/settings.gradle" />
-        <option value="$PROJECT_DIR$/LesbianRadar/build.gradle" />
-        <option value="$PROJECT_DIR$/LesbianRadar/src/main/java/com/rubisoft/lesbianradar/tools/utils.java" />
-        <option value="$PROJECT_DIR$/bisexcuddles/src/main/java/com/rubisoft/bisexcuddles/tools/utils.java" />
-        <option value="$PROJECT_DIR$/GayCuddles/src/main/java/com/rubisoft/gaycuddles/tools/utils.java" />
-        <option value="$PROJECT_DIR$/GayRadar/src/main/java/com/rubisoft/gayradar/tools/utils.java" />
-        <option value="$PROJECT_DIR$/LesbianCuddles/src/main/java/com/rubisoft/lesbiancuddles/tools/utils.java" />
-        <option value="$PROJECT_DIR$/MenCuddles/src/main/java/com/rubisoft/mencuddles/tools/utils.java" />
-        <option value="$PROJECT_DIR$/MenRadar/src/main/java/com/rubisoft/menradar/tools/utils.java" />
-        <option value="$PROJECT_DIR$/WomenCuddles/src/main/java/com/rubisoft/womencuddles/tools/utils.java" />
-        <option value="$PROJECT_DIR$/WomenRadar/src/main/java/com/rubisoft/womenradar/tools/utils.java" />
-        <option value="$PROJECT_DIR$/WomenRadar/src/main/res/values/strings.xml" />
-        <option value="$PROJECT_DIR$/LesbianRadar/src/main/res/values/strings.xml" />
-        <option value="$PROJECT_DIR$/WomenRadar/src/main/java/com/rubisoft/womenradar/activities/Activity_Primeras_fotos.java" />
-        <option value="$PROJECT_DIR$/WomenRadar/src/main/java/com/rubisoft/womenradar/Classes/Usuario_para_listar.java" />
-        <option value="$PROJECT_DIR$/WomenRadar/src/main/java/com/rubisoft/womenradar/Dialogs/Dialog_Cambiar_Foto.java" />
-        <option value="$PROJECT_DIR$/WomenRadar/src/main/res/values/color.xml" />
-        <option value="$PROJECT_DIR$/GayRadar/src/main/res/values/color.xml" />
-        <option value="$PROJECT_DIR$/GayCuddles/src/main/res/values/color.xml" />
-        <option value="$PROJECT_DIR$/LesbianRadar/src/main/res/values/color.xml" />
-        <option value="$PROJECT_DIR$/LesbianCuddles/src/main/res/values/color.xml" />
         <option value="$PROJECT_DIR$/MenRadar/src/main/res/values/color.xml" />
         <option value="$PROJECT_DIR$/GayCuddles/build.gradle" />
         <option value="$PROJECT_DIR$/GayRadar/build.gradle" />
@@ -251,6 +564,32 @@
         <option value="$PROJECT_DIR$/LesbianCuddles/src/main/java/com/rubisoft/lesbiancuddles/activities/Activity_Registro_Persona.java" />
         <option value="$PROJECT_DIR$/GayRadar/src/main/java/com/rubisoft/gayradar/activities/Activity_Registro_Persona.java" />
         <option value="$PROJECT_DIR$/GayCuddles/src/main/java/com/rubisoft/gaycuddles/activities/Activity_Registro_Persona.java" />
+        <option value="$PROJECT_DIR$/bisexradar/src/main/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/bisexradar/src/main/res/values-ar/strings.xml" />
+        <option value="$PROJECT_DIR$/bisexradar/src/main/res/values-de/strings.xml" />
+        <option value="$PROJECT_DIR$/bisexradar/src/main/res/values-hi/strings.xml" />
+        <option value="$PROJECT_DIR$/bisexradar/src/main/res/values-in/strings.xml" />
+        <option value="$PROJECT_DIR$/bisexradar/src/main/res/values-it/strings.xml" />
+        <option value="$PROJECT_DIR$/bisexradar/src/main/res/values-ru/strings.xml" />
+        <option value="$PROJECT_DIR$/bisexradar/src/main/res/values-th/strings.xml" />
+        <option value="$PROJECT_DIR$/bisexradar/src/main/res/values-tr/strings.xml" />
+        <option value="$PROJECT_DIR$/bisexradar/src/main/res/values-zh-rCN/strings.xml" />
+        <option value="$PROJECT_DIR$/BisexRadar/src/main/java/com/rubisoft/bisexradar/tools/utils.java" />
+        <option value="$PROJECT_DIR$/BisexCuddles/src/main/java/com/rubisoft/bisexradar/tools/utils.java" />
+        <option value="$PROJECT_DIR$/GayCuddles/src/main/java/com/rubisoft/gaycuddles/tools/utils.java" />
+        <option value="$PROJECT_DIR$/GayRadar/src/main/java/com/rubisoft/gayradar/tools/utils.java" />
+        <option value="$PROJECT_DIR$/LesbianCuddles/src/main/java/com/rubisoft/lesbiancuddles/tools/utils.java" />
+        <option value="$PROJECT_DIR$/LesbianRadar/src/main/java/com/rubisoft/lesbianradar/tools/utils.java" />
+        <option value="$PROJECT_DIR$/MenCuddles/src/main/java/com/rubisoft/mencuddles/tools/utils.java" />
+        <option value="$PROJECT_DIR$/MenRadar/src/main/java/com/rubisoft/menradar/tools/utils.java" />
+        <option value="$PROJECT_DIR$/WomenCuddles/src/main/java/com/rubisoft/womencuddles/tools/utils.java" />
+        <option value="$PROJECT_DIR$/WomenRadar/src/main/java/com/rubisoft/womenradar/tools/utils.java" />
+        <option value="$PROJECT_DIR$/MenCuddles/src/main/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/BisexCuddles/src/main/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/BisexRadar/src/main/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/LesbianRadar/src/main/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/MenRadar/src/main/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/WomenRadar/src/main/res/values/strings.xml" />
       </list>
     </option>
   </component>
@@ -267,40 +606,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="radar" type="b2602c69:ProjectViewProjectNode" />
-              <item name="radar" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="AndroidView">
-        <subPane>
-          <expand>
-            <path>
-              <item name="Rubisoft" type="1abcf292:AndroidViewProjectNode" />
-              <item name="GayRadar" type="feadf853:AndroidModuleNode" />
-            </path>
-            <path>
-              <item name="Rubisoft" type="1abcf292:AndroidViewProjectNode" />
-              <item name="GayRadar" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-            </path>
-            <path>
-              <item name="Rubisoft" type="1abcf292:AndroidViewProjectNode" />
-              <item name="GayRadar" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="gayradar" type="cbb59c9e:AndroidPsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope">
         <subPane subId="Project Non-Source Files">
           <expand>
@@ -337,17 +642,49 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="AndroidView">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Rubisoft" type="1abcf292:AndroidViewProjectNode" />
+              <item name="GayRadar" type="feadf853:AndroidModuleNode" />
+            </path>
+            <path>
+              <item name="Rubisoft" type="1abcf292:AndroidViewProjectNode" />
+              <item name="GayRadar" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+            </path>
+            <path>
+              <item name="Rubisoft" type="1abcf292:AndroidViewProjectNode" />
+              <item name="GayRadar" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="gayradar" type="cbb59c9e:AndroidPsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="radar" type="b2602c69:ProjectViewProjectNode" />
+              <item name="radar" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="Pixel_XL_API_28" />
-    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2020-03-21T17:03:40.310Z" />
+    <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="Nexus_10_API_23_tableta" />
+    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2020-03-31T01:05:41.339Z" />
     <property name="ExportApk.ApkPath" value="$PROJECT_DIR$/.." />
     <property name="ExportApk.BuildType" value="release" />
     <property name="ExportApk.BuildVariants" value="release" />
     <property name="ExportApk.Flavors" value="" />
-    <property name="ExportApk.SignV1" value="true" />
-    <property name="ExportApk.SignV2" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="GoToFile.includeJavaFiles" value="false" />
@@ -362,20 +699,20 @@
     <property name="android.recentlyUsedThemes" value="Theme.MaterialComponents.Dialog" />
     <property name="android.sdk.path" value="$USER_HOME$/Library/Android/sdk" />
     <property name="device.picker.selection" value="Pixel_XL_API_25" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/LesbianRadar" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/GayRadar/src/main/res/mipmap-xxxhdpi" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.17" />
     <property name="project.structure.side.proportion" value="0.28432733" />
     <property name="run.code.analysis.last.selected.profile" value="aDefault" />
-    <property name="settings.editor.selected.configurable" value="Errors" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/LesbianRadar" />
-      <recent name="$PROJECT_DIR$/gayradar" />
-      <recent name="$PROJECT_DIR$/WomenRadar/src/main/res" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/WomenRadar/libs" />
       <recent name="$PROJECT_DIR$/WomenRadar/src/main/res/drawable" />
-      <recent name="$PROJECT_DIR$/WomenRadar" />
+      <recent name="$PROJECT_DIR$/WomenRadar/src/main/res/xml" />
+      <recent name="$PROJECT_DIR$/Cuddles" />
+      <recent name="$PROJECT_DIR$/GayRadar" />
     </key>
     <key name="android.template.packageName">
       <recent name="com.rubisoft.womenradar.activities" />
@@ -387,12 +724,12 @@
       <recent name="com.example.ruben.backend.Workers" />
       <recent name="com.rubisoft.gayradar.Interfaces" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/WomenRadar/libs" />
-      <recent name="$PROJECT_DIR$/WomenRadar/src/main/res/drawable" />
-      <recent name="$PROJECT_DIR$/WomenRadar/src/main/res/xml" />
-      <recent name="$PROJECT_DIR$/Cuddles" />
-      <recent name="$PROJECT_DIR$/GayRadar" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/GayRadar/src/main/res/mipmap-xxxhdpi" />
+      <recent name="$PROJECT_DIR$/WomenRadar/src/main/res/mipmap-xxxhdpi" />
+      <recent name="$PROJECT_DIR$/LesbianRadar" />
+      <recent name="$PROJECT_DIR$/gayradar" />
+      <recent name="$PROJECT_DIR$/WomenRadar/src/main/res" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -407,7 +744,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Android App.Cuddles">
+  <component name="RunManager" selected="Android App.BisexRadar">
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -494,8 +831,8 @@
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Cuddles" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
-      <module name="LesbianRadar" />
+    <configuration name="BisexRadar" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
+      <module name="bisexradar" />
       <option name="DEPLOY" value="true" />
       <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
       <option name="DEPLOY_AS_INSTANT" value="false" />
@@ -508,7 +845,7 @@
       <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
       <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
       <option name="FORCE_STOP_RUNNING_APP" value="true" />
-      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
       <option name="USE_LAST_SELECTED_DEVICE" value="false" />
       <option name="PREFERRED_AVD" value="" />
       <option name="DEBUGGER_TYPE" value="Auto" />
@@ -537,7 +874,7 @@
       <Profilers>
         <option name="ADVANCED_PROFILING_ENABLED" value="false" />
         <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
-        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Sampled (Java)" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Sample Java Methods" />
       </Profilers>
       <option name="DEEP_LINK" value="" />
       <option name="ACTIVITY_CLASS" value="" />
@@ -698,6 +1035,57 @@
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
       </method>
     </configuration>
+    <configuration name="LesbianRadar" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
+      <module name="LesbianRadar" />
+      <option name="DEPLOY" value="true" />
+      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+      <option name="DEPLOY_AS_INSTANT" value="false" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="DEBUGGER_TYPE" value="Auto" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Hybrid>
+      <Java />
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Native>
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Sample Java Methods" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="MenCuddles" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
       <module name="MenCuddles" />
       <option name="DEPLOY" value="true" />
@@ -749,7 +1137,7 @@
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SwingersCuddles" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
+    <configuration name="MenRadar" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
       <module name="MenRadar" />
       <option name="DEPLOY" value="true" />
       <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
@@ -792,7 +1180,7 @@
       <Profilers>
         <option name="ADVANCED_PROFILING_ENABLED" value="false" />
         <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
-        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Sampled (Java)" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Sample Java Methods" />
       </Profilers>
       <option name="DEEP_LINK" value="" />
       <option name="ACTIVITY_CLASS" value="" />
@@ -966,14 +1354,15 @@
     </configuration>
     <list>
       <item itemvalue="Android App.BisexCuddles" />
-      <item itemvalue="Android App.Cuddles" />
+      <item itemvalue="Android App.LesbianRadar" />
       <item itemvalue="Android App.GayCuddles" />
       <item itemvalue="Android App.GayRadar" />
       <item itemvalue="Android App.LesbianCuddles" />
       <item itemvalue="Android App.MenCuddles" />
-      <item itemvalue="Android App.SwingersCuddles" />
+      <item itemvalue="Android App.MenRadar" />
       <item itemvalue="Android App.WomenCuddles" />
       <item itemvalue="Android App.WomenRadar" />
+      <item itemvalue="Android App.BisexRadar" />
       <item itemvalue="Gradle.radar:WomenRadar [signingReport]" />
       <item itemvalue="Gradle.radar:WomenRadar [androidDependencies]" />
     </list>
@@ -1021,11 +1410,11 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49353796" weight="0.73676014" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32847896" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.48626816" weight="0.30996886" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.48626816" weight="0.54049844" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49676898" weight="0.32554516" />
-      <window_info anchor="bottom" id="Android Profiler" order="7" show_stripe_button="false" sideWeight="0.49919224" weight="0.32866043" />
+      <window_info anchor="bottom" id="Android Profiler" order="7" sideWeight="0.49919224" weight="0.32866043" />
       <window_info anchor="bottom" id="Logcat" order="8" sideWeight="0.4911147" weight="0.6137072" />
       <window_info anchor="bottom" id="Build" order="9" sideWeight="0.48626816" weight="0.28193146" />
       <window_info anchor="bottom" id="Version Control" order="10" show_stripe_button="false" sideWeight="0.49676898" weight="0.326284" />
@@ -1059,19 +1448,19 @@
       <window_info id="Image Layers" order="7" />
       <window_info id="Resources Explorer" order="8" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49434572" weight="0.68380064" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49353796" weight="0.73676014" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32847896" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.48626816" visible="true" weight="0.30996886" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.48626816" weight="0.54049844" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49676898" weight="0.32554516" />
       <window_info anchor="bottom" id="Android Profiler" order="7" sideWeight="0.49919224" weight="0.32866043" />
       <window_info anchor="bottom" id="Logcat" order="8" sideWeight="0.4911147" weight="0.6137072" />
-      <window_info anchor="bottom" id="Build" order="9" sideWeight="0.48869145" weight="0.28193146" />
+      <window_info anchor="bottom" id="Build" order="9" sideWeight="0.48626816" visible="true" weight="0.28193146" />
       <window_info anchor="bottom" id="Version Control" order="10" show_stripe_button="false" sideWeight="0.49676898" weight="0.326284" />
       <window_info anchor="bottom" id="Inspection Results" order="11" sideWeight="0.48949918" weight="0.46728972" />
       <window_info anchor="bottom" id="Terminal" order="12" sideWeight="0.4911147" weight="0.3656958" />
-      <window_info anchor="bottom" id="Event Log" order="13" sideWeight="0.51130855" side_tool="true" weight="0.28193146" />
+      <window_info anchor="bottom" id="Event Log" order="13" sideWeight="0.5072698" side_tool="true" weight="0.28193146" />
       <window_info anchor="bottom" id="Dependency Viewer" order="14" weight="0.32866043" />
       <window_info active="true" anchor="bottom" id="Messages" order="15" visible="true" weight="0.32866043" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -1154,12 +1543,6 @@
           <option name="timeStamp" value="294" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/LesbianCuddles/src/main/java/com/rubisoft/lesbiancuddles/tools/utils.java</url>
-          <line>831</line>
-          <properties />
-          <option name="timeStamp" value="646" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/WomenCuddles/src/main/java/com/rubisoft/womencuddles/Dialogs/Dialog_Cambiar_Foto.java</url>
           <line>355</line>
           <properties />
@@ -1172,7 +1555,7 @@
           <option name="timeStamp" value="805" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/bisexcuddles/src/main/java/com/rubisoft/bisexcuddles/activities/Activity_Inicio.java</url>
+          <url>file://$PROJECT_DIR$/BisexCuddles/src/main/java/com/rubisoft/bisexradar/activities/Activity_Inicio.java</url>
           <line>630</line>
           <properties />
           <option name="timeStamp" value="808" />
@@ -1200,12 +1583,6 @@
           <line>1348</line>
           <properties />
           <option name="timeStamp" value="812" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/GayCuddles/src/main/java/com/rubisoft/gaycuddles/tools/utils.java</url>
-          <line>723</line>
-          <properties />
-          <option name="timeStamp" value="960" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/WomenRadar/src/main/java/com/rubisoft/womenradar/activities/Activity_Compras.java</url>
@@ -1418,294 +1795,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/WomenRadar/src/main/java/com/rubisoft/womenradar/tools/utils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="83">
-          <caret line="932" column="47" lean-forward="true" selection-start-line="932" selection-start-column="12" selection-end-line="932" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LesbianCuddles/build/generated/res/google-services/debug/values/values.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="6" column="18" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LesbianRadar/build/generated/res/google-services/debug/values/values.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="6" column="18" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LesbianRadar/src/main/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1056">
-          <folding>
-            <element signature="e#39#8778#0" expanded="true" />
-            <element signature="e#1985#8765#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-      <provider editor-type-id="android-manifest" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LesbianRadar/src/main/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-240">
-          <caret line="19" column="19" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WomenRadar/src/main/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="1" column="11" selection-start-line="1" selection-start-column="11" selection-end-line="1" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WomenRadar/libs/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1785">
-          <caret line="8" column="49" selection-start-line="8" selection-start-column="49" selection-end-line="8" selection-end-column="49" />
-          <folding>
-            <element signature="e#361#556#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-      <provider editor-type-id="android-manifest" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WomenRadar/src/main/java/com/rubisoft/womenradar/activities/Activity_Primeras_fotos.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="476" column="98" selection-start-line="476" selection-start-column="69" selection-end-line="476" selection-end-column="98" />
-          <folding>
-            <element signature="method#prepareAnnotationRequest#0;class#Activity_Primeras_fotos#0" expanded="true" />
-            <element signature="class#14911:15623" expanded="true" />
-            <element signature="method#initializeVisionRequest#0;class#14911:15623" expanded="true" />
-            <element signature="method#signatureDigest#0;class#Activity_Primeras_fotos#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WomenRadar/src/main/java/com/rubisoft/womenradar/Classes/Usuario_para_listar.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="9" column="23" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WomenRadar/src/main/java/com/rubisoft/womenradar/Dialogs/Dialog_Cambiar_Foto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="731" column="55" selection-start-line="731" selection-start-column="41" selection-end-line="731" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bisexcuddles/src/main/res/values/color.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="146">
-          <caret line="7" column="39" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WomenCuddles/src/main/res/values/color.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="5" column="3" selection-start-line="5" selection-start-column="3" selection-end-line="7" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WomenRadar/src/main/res/values/color.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="8" column="47" selection-start-line="8" selection-start-column="47" selection-end-line="8" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GayCuddles/src/main/res/values/color.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="7" column="47" selection-start-line="7" selection-start-column="47" selection-end-line="7" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GayRadar/src/main/res/values/color.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="8" column="47" selection-start-line="8" selection-start-column="47" selection-end-line="8" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LesbianCuddles/src/main/res/values/color.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="7" column="47" selection-start-line="7" selection-start-column="47" selection-end-line="7" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LesbianRadar/src/main/res/values/color.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="7" column="47" lean-forward="true" selection-start-line="5" selection-start-column="3" selection-end-line="7" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MenCuddles/src/main/res/values/color.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="7" column="47" lean-forward="true" selection-start-line="5" selection-start-column="3" selection-end-line="7" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MenRadar/src/main/res/values/color.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="146">
-          <caret line="7" column="47" selection-start-line="7" selection-start-column="47" selection-end-line="7" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WomenRadar/src/main/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-257">
-          <folding>
-            <element signature="e#39#8776#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-      <provider editor-type-id="android-manifest" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LesbianCuddles/build.gradle">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LesbianRadar/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="546">
-          <caret line="26" column="48" selection-start-line="26" selection-start-column="48" selection-end-line="26" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MenCuddles/build.gradle">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MenRadar/build.gradle">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GayCuddles/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="327">
-          <caret line="121" column="6" selection-start-line="121" selection-start-column="6" selection-end-line="121" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GayRadar/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1053">
-          <caret line="121" column="25" lean-forward="true" selection-start-line="121" selection-start-column="4" selection-end-line="121" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="49" selection-start-line="49" selection-end-line="49" />
-          <folding>
-            <element signature="e#156#348#0" />
-            <element signature="e#851#1293#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WomenCuddles/src/main/java/com/rubisoft/womencuddles/Classes/Usuario_para_listar.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="12" column="24" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WomenCuddles/src/main/java/com/rubisoft/womencuddles/activities/Activity_Ayuda.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-56">
-          <caret line="52" column="13" selection-start-line="52" selection-start-column="13" selection-end-line="52" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bisexcuddles/src/main/res/values/TAGS.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="43" column="100" selection-start-line="43" selection-start-column="100" selection-end-line="43" selection-end-column="100" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WomenCuddles/src/main/res/values/TAGS.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="44" selection-start-line="44" selection-end-line="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MenRadar/src/main/res/values/TAGS.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="43" column="100" selection-start-line="43" selection-start-column="100" selection-end-line="43" selection-end-column="100" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MenCuddles/src/main/res/values/TAGS.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="43" column="100" selection-start-line="43" selection-start-column="100" selection-end-line="43" selection-end-column="100" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LesbianRadar/src/main/res/values/TAGS.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="43" column="100" selection-start-line="43" selection-start-column="100" selection-end-line="43" selection-end-column="100" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LesbianCuddles/src/main/res/values/TAGS.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="43" column="100" selection-start-line="43" selection-start-column="100" selection-end-line="43" selection-end-column="100" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GayRadar/src/main/res/values/TAGS.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="49" column="100" selection-start-line="49" selection-start-column="100" selection-end-line="49" selection-end-column="100" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GayCuddles/src/main/res/values/TAGS.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="43" column="100" selection-start-line="43" selection-start-column="100" selection-end-line="43" selection-end-column="100" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WomenRadar/src/main/res/values/TAGS.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="43" column="66" lean-forward="true" selection-start-line="43" selection-start-column="66" selection-end-line="43" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WomenCuddles/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="29" column="8" selection-start-line="29" selection-start-column="8" selection-end-line="30" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/WomenRadar/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="264">
@@ -1727,7 +1816,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bisexcuddles/src/main/java/com/rubisoft/bisexcuddles/activities/Activity_Registro_Persona.java">
+    <entry file="file://$PROJECT_DIR$/BisexCuddles/src/main/java/com/rubisoft/bisexradar/activities/Activity_Registro_Persona.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="369">
           <caret line="831" selection-start-line="831" selection-end-line="831" />
@@ -1797,6 +1886,577 @@
             <element signature="e#39890#39946#0" expanded="true" />
             <element signature="e#40245#40305#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WomenCuddles/src/main/res/mipmap-xxxhdpi/ic_launcher_foreground.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WomenRadar/src/main/res/mipmap-xxxhdpi/ic_launcher.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WomenCuddles/src/main/res/mipmap-xxxhdpi/ic_launcher.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WomenRadar/src/main/res/values/color.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="6" column="33" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MenRadar/src/main/res/values/color.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="5" column="33" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LesbianCuddles/src/main/res/values/color.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="5" column="33" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GayCuddles/src/main/res/values/color.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="5" column="33" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BisexCuddles/src/main/res/values/color.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="167">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GayRadar/src/main/res/mipmap-anydpi-v26/ic_launcher.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="4" column="16" lean-forward="true" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
+          <folding>
+            <element signature="e#39#265#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GayCuddles/src/main/res/mipmap-anydpi-v26/ic_launcher.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="2" column="41" selection-start-line="2" selection-start-column="41" selection-end-line="2" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GayCuddles/src/main/res/values/ic_launcher_background.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GayRadar/src/main/res/mipmap-xxhdpi/ic_launcher.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BisexRadar/src/main/res/values-ar/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="37">
+          <caret line="21" column="45" selection-start-line="21" selection-start-column="45" selection-end-line="21" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BisexRadar/src/main/res/values-de/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="37">
+          <caret line="21" column="39" selection-start-line="21" selection-start-column="39" selection-end-line="21" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BisexRadar/src/main/res/values-hi/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="26">
+          <caret line="17" column="42" selection-start-line="17" selection-start-column="42" selection-end-line="17" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BisexRadar/src/main/res/values-in/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="26">
+          <caret line="21" column="4" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BisexRadar/src/main/res/values-it/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="37">
+          <caret line="18" column="39" selection-start-line="18" selection-start-column="39" selection-end-line="18" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BisexRadar/src/main/res/values-ru/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="37">
+          <caret line="21" column="43" selection-start-line="21" selection-start-column="43" selection-end-line="21" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BisexRadar/src/main/res/values-th/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="37">
+          <caret line="20" column="39" selection-start-line="20" selection-start-column="39" selection-end-line="20" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BisexRadar/src/main/res/values-tr/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="37">
+          <caret line="15" column="43" selection-start-line="15" selection-start-column="43" selection-end-line="15" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BisexRadar/src/main/res/values-zh-rCN/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="26">
+          <caret line="21" column="33" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BisexRadar/src/main/java/com/rubisoft/bisexradar/tools/utils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="946" lean-forward="true" selection-start-line="66" selection-end-line="946" />
+          <folding>
+            <element signature="e#30695#31103#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BisexCuddles/src/main/java/com/rubisoft/bisexradar/tools/utils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="946" selection-start-line="946" selection-end-line="946" />
+          <folding>
+            <element signature="e#30695#31103#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GayCuddles/src/main/java/com/rubisoft/gaycuddles/tools/utils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="946" selection-start-line="946" selection-end-line="946" />
+          <folding>
+            <element signature="e#24773#24838#0" expanded="true" />
+            <element signature="e#24846#24901#0" expanded="true" />
+            <element signature="e#25063#25159#0" expanded="true" />
+            <element signature="e#25191#25237#0" expanded="true" />
+            <element signature="e#25309#25374#0" expanded="true" />
+            <element signature="e#25382#25437#0" expanded="true" />
+            <element signature="e#25604#25650#0" expanded="true" />
+            <element signature="e#25793#25839#0" expanded="true" />
+            <element signature="e#25910#25956#0" expanded="true" />
+            <element signature="e#26146#26195#0" expanded="true" />
+            <element signature="e#27452#27513#0" expanded="true" />
+            <element signature="e#27589#27655#0" expanded="true" />
+            <element signature="e#27715#27782#0" expanded="true" />
+            <element signature="e#28131#28202#0" expanded="true" />
+            <element signature="e#28302#28357#0" expanded="true" />
+            <element signature="e#28406#28467#0" expanded="true" />
+            <element signature="e#28495#28556#0" expanded="true" />
+            <element signature="e#28587#28665#0" expanded="true" />
+            <element signature="e#28700#28763#0" expanded="true" />
+            <element signature="e#28799#28869#0" expanded="true" />
+            <element signature="e#28904#28959#0" expanded="true" />
+            <element signature="e#28995#29060#0" expanded="true" />
+            <element signature="e#29095#29145#0" expanded="true" />
+            <element signature="e#29179#29250#0" expanded="true" />
+            <element signature="e#29283#29339#0" expanded="true" />
+            <element signature="e#29379#29457#0" expanded="true" />
+            <element signature="e#29461#29522#0" expanded="true" />
+            <element signature="e#29567#29637#0" expanded="true" />
+            <element signature="e#29641#29702#0" expanded="true" />
+            <element signature="e#29746#29811#0" expanded="true" />
+            <element signature="e#29815#29876#0" expanded="true" />
+            <element signature="e#29913#29984#0" expanded="true" />
+            <element signature="e#29988#30049#0" expanded="true" />
+            <element signature="e#30126#30204#0" expanded="true" />
+            <element signature="e#30248#30318#0" expanded="true" />
+            <element signature="e#30361#30426#0" expanded="true" />
+            <element signature="e#30462#30533#0" expanded="true" />
+            <element signature="e#30695#31103#0" expanded="true" />
+            <element signature="e#32556#32608#0" expanded="true" />
+            <element signature="e#32840#32901#0" expanded="true" />
+            <element signature="e#33010#33075#0" expanded="true" />
+            <element signature="e#33242#33303#0" expanded="true" />
+            <element signature="e#33368#33441#0" expanded="true" />
+            <element signature="e#33611#33677#0" expanded="true" />
+            <element signature="e#33708#33773#0" expanded="true" />
+            <element signature="e#33890#33942#0" expanded="true" />
+            <element signature="e#33982#34032#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GayRadar/src/main/java/com/rubisoft/gayradar/tools/utils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="946" selection-start-line="946" selection-end-line="946" />
+          <folding>
+            <element signature="e#30657#31065#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LesbianCuddles/src/main/java/com/rubisoft/lesbiancuddles/tools/utils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="335">
+          <caret line="946" selection-start-line="946" selection-end-line="946" />
+          <folding>
+            <element signature="e#24849#24914#0" expanded="true" />
+            <element signature="e#24922#24977#0" expanded="true" />
+            <element signature="e#25139#25235#0" expanded="true" />
+            <element signature="e#25267#25313#0" expanded="true" />
+            <element signature="e#25385#25450#0" expanded="true" />
+            <element signature="e#25458#25513#0" expanded="true" />
+            <element signature="e#25680#25726#0" expanded="true" />
+            <element signature="e#25869#25915#0" expanded="true" />
+            <element signature="e#25986#26032#0" expanded="true" />
+            <element signature="e#26222#26271#0" expanded="true" />
+            <element signature="e#27528#27589#0" expanded="true" />
+            <element signature="e#27665#27731#0" expanded="true" />
+            <element signature="e#27791#27858#0" expanded="true" />
+            <element signature="e#28207#28278#0" expanded="true" />
+            <element signature="e#28378#28433#0" expanded="true" />
+            <element signature="e#28482#28543#0" expanded="true" />
+            <element signature="e#28571#28632#0" expanded="true" />
+            <element signature="e#28663#28741#0" expanded="true" />
+            <element signature="e#28776#28839#0" expanded="true" />
+            <element signature="e#28875#28945#0" expanded="true" />
+            <element signature="e#28980#29035#0" expanded="true" />
+            <element signature="e#29071#29136#0" expanded="true" />
+            <element signature="e#29171#29221#0" expanded="true" />
+            <element signature="e#29255#29326#0" expanded="true" />
+            <element signature="e#29359#29415#0" expanded="true" />
+            <element signature="e#29455#29533#0" expanded="true" />
+            <element signature="e#29537#29598#0" expanded="true" />
+            <element signature="e#29643#29713#0" expanded="true" />
+            <element signature="e#29717#29778#0" expanded="true" />
+            <element signature="e#29822#29887#0" expanded="true" />
+            <element signature="e#29891#29952#0" expanded="true" />
+            <element signature="e#29989#30060#0" expanded="true" />
+            <element signature="e#30064#30125#0" expanded="true" />
+            <element signature="e#30202#30280#0" expanded="true" />
+            <element signature="e#30324#30394#0" expanded="true" />
+            <element signature="e#30437#30502#0" expanded="true" />
+            <element signature="e#30538#30609#0" expanded="true" />
+            <element signature="e#30771#31179#0" expanded="true" />
+            <element signature="e#32632#32684#0" expanded="true" />
+            <element signature="e#32916#32977#0" expanded="true" />
+            <element signature="e#33086#33151#0" expanded="true" />
+            <element signature="e#33318#33379#0" expanded="true" />
+            <element signature="e#33444#33517#0" expanded="true" />
+            <element signature="e#33687#33753#0" expanded="true" />
+            <element signature="e#33784#33849#0" expanded="true" />
+            <element signature="e#33966#34018#0" expanded="true" />
+            <element signature="e#34058#34108#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LesbianRadar/src/main/java/com/rubisoft/lesbianradar/tools/utils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="946" selection-start-line="946" selection-end-line="946" />
+          <folding>
+            <element signature="e#12597#12673#0" expanded="true" />
+            <element signature="e#12766#12822#0" expanded="true" />
+            <element signature="e#18928#19000#0" expanded="true" />
+            <element signature="e#19108#19166#0" expanded="true" />
+            <element signature="e#19231#19303#0" expanded="true" />
+            <element signature="e#24811#24876#0" expanded="true" />
+            <element signature="e#24884#24939#0" expanded="true" />
+            <element signature="e#25101#25197#0" expanded="true" />
+            <element signature="e#25229#25275#0" expanded="true" />
+            <element signature="e#25347#25412#0" expanded="true" />
+            <element signature="e#25420#25475#0" expanded="true" />
+            <element signature="e#25642#25688#0" expanded="true" />
+            <element signature="e#25831#25877#0" expanded="true" />
+            <element signature="e#25948#25994#0" expanded="true" />
+            <element signature="e#26184#26233#0" expanded="true" />
+            <element signature="e#27490#27551#0" expanded="true" />
+            <element signature="e#27627#27693#0" expanded="true" />
+            <element signature="e#27753#27820#0" expanded="true" />
+            <element signature="e#28169#28240#0" expanded="true" />
+            <element signature="e#28340#28395#0" expanded="true" />
+            <element signature="e#28444#28505#0" expanded="true" />
+            <element signature="e#28533#28594#0" expanded="true" />
+            <element signature="e#28625#28703#0" expanded="true" />
+            <element signature="e#28738#28801#0" expanded="true" />
+            <element signature="e#28837#28907#0" expanded="true" />
+            <element signature="e#28942#28997#0" expanded="true" />
+            <element signature="e#29033#29098#0" expanded="true" />
+            <element signature="e#29133#29183#0" expanded="true" />
+            <element signature="e#29217#29288#0" expanded="true" />
+            <element signature="e#29321#29377#0" expanded="true" />
+            <element signature="e#29417#29495#0" expanded="true" />
+            <element signature="e#29499#29560#0" expanded="true" />
+            <element signature="e#29605#29675#0" expanded="true" />
+            <element signature="e#29679#29740#0" expanded="true" />
+            <element signature="e#29784#29849#0" expanded="true" />
+            <element signature="e#29853#29914#0" expanded="true" />
+            <element signature="e#29951#30022#0" expanded="true" />
+            <element signature="e#30026#30087#0" expanded="true" />
+            <element signature="e#30164#30242#0" expanded="true" />
+            <element signature="e#30286#30356#0" expanded="true" />
+            <element signature="e#30399#30464#0" expanded="true" />
+            <element signature="e#30500#30571#0" expanded="true" />
+            <element signature="e#30733#31141#0" expanded="true" />
+            <element signature="e#32594#32646#0" expanded="true" />
+            <element signature="e#32878#32939#0" expanded="true" />
+            <element signature="e#33048#33113#0" expanded="true" />
+            <element signature="e#33280#33341#0" expanded="true" />
+            <element signature="e#33406#33479#0" expanded="true" />
+            <element signature="e#33649#33715#0" expanded="true" />
+            <element signature="e#33746#33811#0" expanded="true" />
+            <element signature="e#33928#33980#0" expanded="true" />
+            <element signature="e#34020#34070#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MenCuddles/src/main/java/com/rubisoft/mencuddles/tools/utils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="356">
+          <caret line="946" selection-start-line="946" selection-end-line="946" />
+          <folding>
+            <element signature="e#24773#24838#0" expanded="true" />
+            <element signature="e#24846#24901#0" expanded="true" />
+            <element signature="e#25063#25159#0" expanded="true" />
+            <element signature="e#25191#25237#0" expanded="true" />
+            <element signature="e#25309#25374#0" expanded="true" />
+            <element signature="e#25382#25437#0" expanded="true" />
+            <element signature="e#25604#25650#0" expanded="true" />
+            <element signature="e#25793#25839#0" expanded="true" />
+            <element signature="e#25910#25956#0" expanded="true" />
+            <element signature="e#26146#26195#0" expanded="true" />
+            <element signature="e#27452#27513#0" expanded="true" />
+            <element signature="e#27589#27655#0" expanded="true" />
+            <element signature="e#27715#27782#0" expanded="true" />
+            <element signature="e#28131#28202#0" expanded="true" />
+            <element signature="e#28302#28357#0" expanded="true" />
+            <element signature="e#28406#28467#0" expanded="true" />
+            <element signature="e#28495#28556#0" expanded="true" />
+            <element signature="e#28587#28665#0" expanded="true" />
+            <element signature="e#28700#28763#0" expanded="true" />
+            <element signature="e#28799#28869#0" expanded="true" />
+            <element signature="e#28904#28959#0" expanded="true" />
+            <element signature="e#28995#29060#0" expanded="true" />
+            <element signature="e#29095#29145#0" expanded="true" />
+            <element signature="e#29179#29250#0" expanded="true" />
+            <element signature="e#29283#29339#0" expanded="true" />
+            <element signature="e#29379#29457#0" expanded="true" />
+            <element signature="e#29461#29522#0" expanded="true" />
+            <element signature="e#29567#29637#0" expanded="true" />
+            <element signature="e#29641#29702#0" expanded="true" />
+            <element signature="e#29746#29811#0" expanded="true" />
+            <element signature="e#29815#29876#0" expanded="true" />
+            <element signature="e#29913#29984#0" expanded="true" />
+            <element signature="e#29988#30049#0" expanded="true" />
+            <element signature="e#30126#30204#0" expanded="true" />
+            <element signature="e#30248#30318#0" expanded="true" />
+            <element signature="e#30361#30426#0" expanded="true" />
+            <element signature="e#30462#30533#0" expanded="true" />
+            <element signature="e#30695#31103#0" expanded="true" />
+            <element signature="e#32556#32608#0" expanded="true" />
+            <element signature="e#32840#32901#0" expanded="true" />
+            <element signature="e#33010#33075#0" expanded="true" />
+            <element signature="e#33242#33303#0" expanded="true" />
+            <element signature="e#33368#33441#0" expanded="true" />
+            <element signature="e#33611#33677#0" expanded="true" />
+            <element signature="e#33708#33773#0" expanded="true" />
+            <element signature="e#33890#33942#0" expanded="true" />
+            <element signature="e#33982#34032#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MenRadar/src/main/java/com/rubisoft/menradar/tools/utils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="356">
+          <caret line="946" selection-start-line="946" selection-end-line="946" />
+          <folding>
+            <element signature="e#24735#24800#0" expanded="true" />
+            <element signature="e#24808#24863#0" expanded="true" />
+            <element signature="e#25025#25121#0" expanded="true" />
+            <element signature="e#25153#25199#0" expanded="true" />
+            <element signature="e#25271#25336#0" expanded="true" />
+            <element signature="e#25344#25399#0" expanded="true" />
+            <element signature="e#25566#25612#0" expanded="true" />
+            <element signature="e#25755#25801#0" expanded="true" />
+            <element signature="e#25872#25918#0" expanded="true" />
+            <element signature="e#26108#26157#0" expanded="true" />
+            <element signature="e#27414#27475#0" expanded="true" />
+            <element signature="e#27551#27617#0" expanded="true" />
+            <element signature="e#27677#27744#0" expanded="true" />
+            <element signature="e#28093#28164#0" expanded="true" />
+            <element signature="e#28264#28319#0" expanded="true" />
+            <element signature="e#28368#28429#0" expanded="true" />
+            <element signature="e#28457#28518#0" expanded="true" />
+            <element signature="e#28549#28627#0" expanded="true" />
+            <element signature="e#28662#28725#0" expanded="true" />
+            <element signature="e#28761#28831#0" expanded="true" />
+            <element signature="e#28866#28921#0" expanded="true" />
+            <element signature="e#28957#29022#0" expanded="true" />
+            <element signature="e#29057#29107#0" expanded="true" />
+            <element signature="e#29141#29212#0" expanded="true" />
+            <element signature="e#29245#29301#0" expanded="true" />
+            <element signature="e#29341#29419#0" expanded="true" />
+            <element signature="e#29423#29484#0" expanded="true" />
+            <element signature="e#29529#29599#0" expanded="true" />
+            <element signature="e#29603#29664#0" expanded="true" />
+            <element signature="e#29708#29773#0" expanded="true" />
+            <element signature="e#29777#29838#0" expanded="true" />
+            <element signature="e#29875#29946#0" expanded="true" />
+            <element signature="e#29950#30011#0" expanded="true" />
+            <element signature="e#30088#30166#0" expanded="true" />
+            <element signature="e#30210#30280#0" expanded="true" />
+            <element signature="e#30323#30388#0" expanded="true" />
+            <element signature="e#30424#30495#0" expanded="true" />
+            <element signature="e#30657#31065#0" expanded="true" />
+            <element signature="e#32518#32570#0" expanded="true" />
+            <element signature="e#32802#32863#0" expanded="true" />
+            <element signature="e#32972#33037#0" expanded="true" />
+            <element signature="e#33204#33265#0" expanded="true" />
+            <element signature="e#33330#33403#0" expanded="true" />
+            <element signature="e#33573#33639#0" expanded="true" />
+            <element signature="e#33670#33735#0" expanded="true" />
+            <element signature="e#33852#33904#0" expanded="true" />
+            <element signature="e#33944#33994#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WomenRadar/src/main/java/com/rubisoft/womenradar/tools/utils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="938" column="45" lean-forward="true" selection-start-line="938" selection-start-column="12" selection-end-line="938" selection-end-column="45" />
+          <folding>
+            <element signature="e#30695#31103#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WomenCuddles/src/main/java/com/rubisoft/womencuddles/tools/utils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="946" selection-start-line="946" selection-end-line="946" />
+          <folding>
+            <element signature="e#24811#24876#0" expanded="true" />
+            <element signature="e#24884#24939#0" expanded="true" />
+            <element signature="e#25101#25197#0" expanded="true" />
+            <element signature="e#25229#25275#0" expanded="true" />
+            <element signature="e#25347#25412#0" expanded="true" />
+            <element signature="e#25420#25475#0" expanded="true" />
+            <element signature="e#25642#25688#0" expanded="true" />
+            <element signature="e#25831#25877#0" expanded="true" />
+            <element signature="e#25948#25994#0" expanded="true" />
+            <element signature="e#26184#26233#0" expanded="true" />
+            <element signature="e#27490#27551#0" expanded="true" />
+            <element signature="e#27627#27693#0" expanded="true" />
+            <element signature="e#27753#27820#0" expanded="true" />
+            <element signature="e#28169#28240#0" expanded="true" />
+            <element signature="e#28340#28395#0" expanded="true" />
+            <element signature="e#28444#28505#0" expanded="true" />
+            <element signature="e#28533#28594#0" expanded="true" />
+            <element signature="e#28625#28703#0" expanded="true" />
+            <element signature="e#28738#28801#0" expanded="true" />
+            <element signature="e#28837#28907#0" expanded="true" />
+            <element signature="e#28942#28997#0" expanded="true" />
+            <element signature="e#29033#29098#0" expanded="true" />
+            <element signature="e#29133#29183#0" expanded="true" />
+            <element signature="e#29217#29288#0" expanded="true" />
+            <element signature="e#29321#29377#0" expanded="true" />
+            <element signature="e#29417#29495#0" expanded="true" />
+            <element signature="e#29499#29560#0" expanded="true" />
+            <element signature="e#29605#29675#0" expanded="true" />
+            <element signature="e#29679#29740#0" expanded="true" />
+            <element signature="e#29784#29849#0" expanded="true" />
+            <element signature="e#29853#29914#0" expanded="true" />
+            <element signature="e#29951#30022#0" expanded="true" />
+            <element signature="e#30026#30087#0" expanded="true" />
+            <element signature="e#30164#30242#0" expanded="true" />
+            <element signature="e#30286#30356#0" expanded="true" />
+            <element signature="e#30399#30464#0" expanded="true" />
+            <element signature="e#30500#30571#0" expanded="true" />
+            <element signature="e#30733#31141#0" expanded="true" />
+            <element signature="e#32594#32646#0" expanded="true" />
+            <element signature="e#32878#32939#0" expanded="true" />
+            <element signature="e#33048#33113#0" expanded="true" />
+            <element signature="e#33280#33341#0" expanded="true" />
+            <element signature="e#33406#33479#0" expanded="true" />
+            <element signature="e#33649#33715#0" expanded="true" />
+            <element signature="e#33746#33811#0" expanded="true" />
+            <element signature="e#33928#33980#0" expanded="true" />
+            <element signature="e#34020#34070#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BisexCuddles/src/main/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="26">
+          <caret line="12" column="90" selection-start-line="12" selection-start-column="90" selection-end-line="12" selection-end-column="90" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BisexRadar/src/main/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="26">
+          <caret line="12" column="90" selection-start-line="12" selection-start-column="90" selection-end-line="12" selection-end-column="90" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GayCuddles/src/main/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="12" column="4" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GayRadar/src/main/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="12" column="4" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LesbianRadar/src/main/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="37">
+          <caret line="12" column="90" selection-start-line="12" selection-start-column="90" selection-end-line="12" selection-end-column="90" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MenRadar/src/main/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="9">
+          <caret line="13" column="90" selection-start-line="13" selection-start-column="90" selection-end-line="13" selection-end-column="90" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WomenRadar/src/main/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="37">
+          <caret line="12" column="90" selection-start-line="12" selection-start-column="90" selection-end-line="12" selection-end-column="90" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MenCuddles/src/main/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="12" column="52" lean-forward="true" selection-start-line="12" selection-start-column="52" selection-end-line="12" selection-end-column="52" />
         </state>
       </provider>
     </entry>

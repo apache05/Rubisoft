@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/bisexcuddles/BisexCuddles.iml" filepath="$PROJECT_DIR$/bisexcuddles/BisexCuddles.iml" />
+      <module fileurl="file://$PROJECT_DIR$/BisexCuddles/BisexCuddles.iml" filepath="$PROJECT_DIR$/BisexCuddles/BisexCuddles.iml" />
       <module fileurl="file://$PROJECT_DIR$/GayCuddles/GayCuddles.iml" filepath="$PROJECT_DIR$/GayCuddles/GayCuddles.iml" />
       <module fileurl="file://$PROJECT_DIR$/GayRadar/GayRadar.iml" filepath="$PROJECT_DIR$/GayRadar/GayRadar.iml" />
       <module fileurl="file://$PROJECT_DIR$/LesbianCuddles/LesbianCuddles.iml" filepath="$PROJECT_DIR$/LesbianCuddles/LesbianCuddles.iml" />
@@ -11,6 +11,7 @@
       <module fileurl="file://$PROJECT_DIR$/MenRadar/MenRadar.iml" filepath="$PROJECT_DIR$/MenRadar/MenRadar.iml" />
       <module fileurl="file://$PROJECT_DIR$/WomenCuddles/WomenCuddles.iml" filepath="$PROJECT_DIR$/WomenCuddles/WomenCuddles.iml" />
       <module fileurl="file://$PROJECT_DIR$/WomenRadar/WomenRadar.iml" filepath="$PROJECT_DIR$/WomenRadar/WomenRadar.iml" />
+      <module fileurl="file://$PROJECT_DIR$/BisexRadar/bisexradar.iml" filepath="$PROJECT_DIR$/BisexRadar/bisexradar.iml" />
       <module fileurl="file://$PROJECT_DIR$/radar.iml" filepath="$PROJECT_DIR$/radar.iml" />
     </modules>
   </component>

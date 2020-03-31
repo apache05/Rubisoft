@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- *********************** ARRAYS *********************************** -->
+
+
+    <string-array name="array_unidades">
+        <item> Kg - m - Km</item>
+        <item> St/lb - in - Mi </item>
+        <item> lb - in - Mi </item>
+    </string-array>
+    <string-array name="meses_nacimiento">
+        <item>gennaio</item>
+        <item>febbraio</item>
+        <item>marzo</item>
+        <item>aprile</item>
+        <item>maggio</item>
+        <item>giugno</item>
+        <item>luglio</item>
+        <item>agosto</item>
+        <item>settembre</item>
+        <item>ottobre</item>
+        <item>novembre</item>
+        <item>dicembre</item>
+    </string-array>
+    <string-array name="sexos">
+        <item>Genere</item>
+        <item>Sono un uomo</item>
+        <item>Sono una donna</item>
+    </string-array>
+
+    <string-array name="orientaciones_registro">
+        <item>Orientamento \u002a</item>
+        <item>Sono etero</item>
+        <item>Sono lesbica</item>
+        <item>Sono gay  </item>
+        <item>Sono bisessuale</item>
+    </string-array>
+    <string-array name="orientaciones_mi_perfil">
+        <item>Sono etero</item>
+        <item>Sono lesbica</item>
+        <item>Sono gay  </item>
+        <item>Sono bisessuale</item>
+    </string-array>
+    <string-array name="busqueda_personas" >
+        <item>Cerca donne etero</item>
+        <item>Cerca uomini etero</item>
+        <item>Cerca uomini gay </item>
+        <item>Cerca donne lesbiche</item>
+        <item>Cerca donne bisessuali</item>
+        <item>Cerca uomini bisessuali</item>
+    </string-array>
+
+    <string-array name="razas">
+        <item> Bianco/a (biondo)</item>
+        <item> Bianco/a (bruno)</item>
+        <item> Nero/a</item>
+        <item> mulatto/a</item>
+        <item> Asiatico/a (Este)</item>
+        <item> Asiatico/a (Sudeste)</item>
+        <item> Latino/a</item>
+        <item> Árabo</item>
+        <item> Hindu</item>
+    </string-array>
+
+    <!-- Nav Drawer Menu Items -->
+    <string-array name="nav_drawer_items">
+        <item>Radar</item>
+        <item>Regolare il radar</item>
+        <item>Messaggi</item>
+        <item>Tuo profilo </item>
+        <item>Stelle gratis</item>
+        <item>Acquista</item>
+        <item>Chat</item>
+        <item>aiuto</item>
+        <item>Impostazioni</item>
+        <item>Migliorare</item>
+        <item>Esci</item>
+    </string-array>
+
+
+    <string-array name="causas_deuncia">
+        <item> foto oscena</item>
+        <item> Falso profilo</item>
+        <item> Foto violenta</item>
+        <item> Foto inappropriati o offensivi</item>
+        <item> Protezione dei minori </item>
+    </string-array>
+</resources>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+
+    <string-array name="array_unidades">
+        <item> кг - м - км</item>
+        <item> St/lb - in - миль </item>
+        <item> lb - in - миль </item>
+    </string-array>
+
+    <string-array name="meses_nacimiento">
+        <item>январь</item>
+        <item>февраль</item>
+        <item>март</item>
+        <item>апрель</item>
+        <item>май</item>
+        <item>июнь</item>
+        <item>июль</item>
+        <item>август</item>
+        <item>сентябрь</item>
+        <item>октябрь</item>
+        <item>ноябрь</item>
+        <item>декабрь</item>
+    </string-array>
+
+    <string-array name="sexos">
+        <item>Пол</item>
+        <item>Я мужчина</item>
+        <item>Я женщина</item>
+    </string-array>
+
+    <string-array name="orientaciones_registro">
+        <item>Ориентация *</item>
+        <item>Я натурал</item>
+        <item>Я лесбиянка</item>
+        <item>Я гей</item>
+        <item>Я бисексуал</item>
+    </string-array>
+    <string-array name="orientaciones_mi_perfil">
+        <item>Я натурал</item>
+        <item>Я лесбиянка</item>
+        <item>Я гей</item>
+        <item>Я бисексуал</item>
+    </string-array>
+    <string-array name="busqueda_personas" >
+        <item>найти натурал женщин</item>
+        <item>Найти натурал мужчин</item>
+        <item>Найти гей</item>
+        <item>Найти лесбиянки</item>
+        <item>Найти бисексуальных женщин</item>
+        <item>Найти бисексуалов мужчин</item>
+    </string-array>
+
+    <string-array name="razas">
+        <item>Европеец (блондин)</item>
+        <item>Европеец (брюнет)</item>
+        <item>Чернокожий</item>
+        <item>Мулат</item>
+        <item>Восточный (восток)</item>
+        <item>Восточный (юго-восток)</item>
+        <item>Латиноамериканец</item>
+        <item>Араб</item>
+        <item>Индус</item>
+    </string-array>
+
+    <!-- Nav Drawer Menu Items -->
+    <string-array name="nav_drawer_items">
+        <item>Радар</item>
+        <item>Настроить радар</item>
+        <item>сообщений</item>
+        <item>Ваш профиль</item>
+        <item>Бесплатные звезды</item>
+        <item>Покупки</item>
+        <item>Чат</item>
+        <item>Помогите</item>
+        <item>Настройки</item>
+        <item>Обратная связь</item>
+        <item>Выход</item>
+    </string-array>
+
+
+    <string-array name="causas_deuncia">
+        <item>Непристойные изображения</item>
+        <item>Фальшивый профиль</item>
+        <item>Изображения со сценами жестокости</item>
+        <item>Неприемлемые или оскорбительные изображения</item>
+        <item>Защита детей</item>
+    </string-array>
+</resources>

@@ -10,9 +10,9 @@
     <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyBppXYxocEZ-bwTtFid02-brP1FkII__m0</string>
     <string name="huqh_API_KEY" templateMergeStrategy="preserve" translatable="false">1188d9bf-338e-465b-af7b-57ac728eb904</string>
     <string name="CLOUD_VISION_API_KEY" templateMergeStrategy="preserve" translatable="false">AIzaSyAltVvI2LkK_9rpZb87dnMQUqODIKWiDjw</string>
-    <string name="Admob_APPID"  translatable="false">ca-app-pub-7323079119104426~9754654771</string>
+    <string name="Admob_APPID" translatable="false">ca-app-pub-7323079119104426~9754654771</string>
     <string name="APPODEAL_APP_KEY" translatable="false">22f327bd5c0177a6dce8621030597872236a144099101c90</string>
-    <!-- 82:6C:3E:B3:38:12:5A:37:11:F2:5D:5E:4B:14:03:FF:54:1B:61:80 -->
+
     <string name="NICK_FECHA_HORA" translatable="false">%1$s - %2$s - %3$s</string>
 
     <!-- ****************************  UNIDADES DE MEDIDA ****************************-->
