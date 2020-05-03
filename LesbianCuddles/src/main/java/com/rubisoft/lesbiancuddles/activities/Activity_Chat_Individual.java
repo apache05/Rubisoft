@@ -29,13 +29,11 @@ import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.WindowManager;
-import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.ImageView.ScaleType;
 import android.widget.LinearLayout;
 import android.widget.LinearLayout.LayoutParams;
-import android.widget.ProgressBar;
 import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -69,6 +67,7 @@ import com.rubisoft.lesbiancuddles.Classes.Relacion;
 import com.rubisoft.lesbiancuddles.Classes.STATS_RELACIONES;
 import com.rubisoft.lesbiancuddles.Interfaces.Interface_ClickListener_Menu;
 import com.rubisoft.lesbiancuddles.R;
+import com.rubisoft.lesbiancuddles.databinding.LayoutChatBinding;
 import com.rubisoft.lesbiancuddles.tools.utils;
 import com.squareup.picasso.Picasso;
 
@@ -95,14 +94,12 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.content.ContextCompat;
 import androidx.core.content.FileProvider;
 import androidx.core.util.Pair;
-import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import de.hdodenhof.circleimageview.CircleImageView;
 
 public class Activity_Chat_Individual extends AppCompatActivity {
 	private final BroadcastReceiver mBroadcastReceiver_new_chat_individual = new MyReceiver_new_message_chat_individual();
-
 	private static final int REQUEST_LOAD_IMAGE = 1;
 	private static final int REQUEST_CAPTURE_IMAGE = 2;
 	private static final int PERMISSION_CAPTURAR_FOTO = 1;
@@ -119,24 +116,20 @@ public class Activity_Chat_Individual extends AppCompatActivity {
 	private String nick_mio;
 
 	private String id_relacion;  //el que inició la relación
-	private LinearLayout linearlayout_conversacion;
+	//private LinearLayout linearlayout_conversacion;
 	private Typeface typeFace_roboto_Light;
 	private Typeface typeFace_roboto_Regular;
-	private AppCompatImageView boton_enviar;
-	private AppCompatImageView boton_adjuntar_foto;
+
 	private String nombre_foto_capturada;
-	private AppCompatImageView boton_hacer_foto;
 	private String token_FCM_de_la_otra_persona;
-	private ProgressBar mProgressBar;
 
 	//navigation drawer
 	private Toolbar toolbar;
 	private ActionBarDrawerToggle drawerToggle;
-	private DrawerLayout mDrawerLayout;
 	private RecyclerView recyclerViewDrawer;
 	private ImageView mImageView_PictureMain;
 
-	private LinearLayout Main_LinearLayout;
+	private LayoutChatBinding binding;
 
 	private static String get_nombre_foto(String token_socialauth) {
 		return token_socialauth + "_foto0.jpg";
@@ -192,8 +185,8 @@ public class Activity_Chat_Individual extends AppCompatActivity {
 				if (perfil_usuario.getString(getString(R.string.PERFIL_USUARIO_TOKEN_SOCIALAUTH), "").isEmpty()) {
 					salir();
 				} else {
-					setContentView(R.layout.layout_chat);
-					setup_views();
+					binding = LayoutChatBinding.inflate(getLayoutInflater());
+					setContentView(binding.getRoot());
 					setup_toolbar();// Setup toolbar and statusBar (really FrameLayout)
 					inicializa_anuncios();
 
@@ -201,7 +194,7 @@ public class Activity_Chat_Individual extends AppCompatActivity {
 					token_socialauth_mio = perfil_usuario.getString(getResources().getString(R.string.PERFIL_USUARIO_TOKEN_SOCIALAUTH), "");
 					nick_mio = perfil_usuario.getString(getResources().getString(R.string.PERFIL_USUARIO_NICK), "");
 
-					mProgressBar.setVisibility(View.VISIBLE);
+					binding.mProgressBar.setVisibility(View.VISIBLE);
 					get_datos_del_bundle();
 					set_Typefaces();
 					get_token_FCM_de_la_otra_persona();
@@ -210,12 +203,12 @@ public class Activity_Chat_Individual extends AppCompatActivity {
 					Drawable icono_adjuntar_foto = new IconicsDrawable(getApplicationContext()).icon(Icon.gmd_attach_file).color(ContextCompat.getColor(getApplicationContext(), R.color.primary)).sizeDp(getResources().getInteger(R.integer.Tam_Normal_icons));
 					Drawable icono_hacer_foto = new IconicsDrawable(getApplicationContext()).icon(Icon.gmd_camera_alt).color(ContextCompat.getColor(getApplicationContext(), R.color.primary)).sizeDp(getResources().getInteger(R.integer.Tam_Normal_icons));
 
-					boton_enviar.setImageDrawable(icono_enviar);
-					boton_enviar.setEnabled(false);
-					boton_adjuntar_foto.setImageDrawable(icono_adjuntar_foto);
-					boton_adjuntar_foto.setEnabled(false);
-					boton_hacer_foto.setImageDrawable(icono_hacer_foto);
-					boton_hacer_foto.setEnabled(false);
+					binding.LayoutChatImageViewEnviarMensaje.setImageDrawable(icono_enviar);
+					binding.LayoutChatImageViewEnviarMensaje.setEnabled(false);
+					binding.LayoutChatImageViewAdjuntarFoto.setImageDrawable(icono_adjuntar_foto);
+					binding.LayoutChatImageViewAdjuntarFoto.setEnabled(false);
+					binding.LayoutChatImageViewHacerFoto.setImageDrawable(icono_hacer_foto);
+					binding.LayoutChatImageViewHacerFoto.setEnabled(false);
 
 					//Oculta el softkeyboard
 					getWindow().setSoftInputMode(
@@ -335,7 +328,7 @@ public class Activity_Chat_Individual extends AppCompatActivity {
 			case PERMISSION_CAPTURAR_FOTO:
 				if ((grantResults.length > 0) && (grantResults[0] == PackageManager.PERMISSION_GRANTED)) {
 					//Si nos da permiso, continuamos
-					lanza_intent_capturar_foto();
+					lanza_intent_hacer_foto();
 				}
 				break;
 
@@ -375,10 +368,10 @@ public class Activity_Chat_Individual extends AppCompatActivity {
 			}else {
 				FrameLayout.LayoutParams layoutParams = new FrameLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT);
 				layoutParams.setMargins(0, 0, 0, 0);
-				if (mDrawerLayout!=null){
-					mDrawerLayout.setLayoutParams(layoutParams);
+				if (binding.mDrawerLayout!=null){
+					binding.mDrawerLayout.setLayoutParams(layoutParams);
 				}else{
-					Main_LinearLayout.setLayoutParams(layoutParams);
+					binding.MainLinearLayout.setLayoutParams(layoutParams);
 				}
 			}
 		}catch (Exception e){
@@ -563,12 +556,11 @@ public class Activity_Chat_Individual extends AppCompatActivity {
 
 			}
 
-			linearlayout_conversacion.addView(LinearLayout_horizontal);
+			binding.LayoutChatLinearLayoutConversacion.addView(LinearLayout_horizontal);
 
-			linearlayout_conversacion.invalidate();
+			binding.LayoutChatLinearLayoutConversacion.invalidate();
 			//esto es para que se vea la parte final del scrollview
-			ScrollView scrollview = findViewById(R.id.Layout_chat_ScrollView);
-			scrollview.postDelayed(new Activity_Chat_Individual.MyRunnable(scrollview), 100);
+			binding.LayoutChatScrollView.postDelayed(new Activity_Chat_Individual.MyRunnable(binding.LayoutChatScrollView), 100);
 		} catch (RejectedExecutionException e){
 			try {
 				Thread.sleep(500);
@@ -617,18 +609,18 @@ public class Activity_Chat_Individual extends AppCompatActivity {
 			});
 
 
-		if (getApplicationContext() != null) { //puede que ya no estemos en la activity
-			Picasso.with(getApplicationContext())
-					.load(uri)
-					.placeholder(utils.get_no_pic(getApplicationContext(), ContextCompat.getColor(getApplicationContext(), R.color.primary_light)))   // optional
-					.error(utils.get_no_pic(getApplicationContext(), ContextCompat.getColor(getApplicationContext(), R.color.primary_light)))       // optional
-					.centerCrop()
-					.resize(getResources().getDimensionPixelSize(R.dimen.tamanyo_miniaturas_chat), getResources().getDimensionPixelSize(R.dimen.tamanyo_miniaturas_chat))                        // optional
-					.into(Thumb);
+			if (getApplicationContext() != null) { //puede que ya no estemos en la activity
+				Picasso.with(getApplicationContext())
+						.load(uri)
+						.placeholder(utils.get_no_pic(getApplicationContext(), ContextCompat.getColor(getApplicationContext(), R.color.primary_light)))   // optional
+						.error(utils.get_no_pic(getApplicationContext(), ContextCompat.getColor(getApplicationContext(), R.color.primary_light)))       // optional
+						.centerCrop()
+						.resize(getResources().getDimensionPixelSize(R.dimen.tamanyo_miniaturas_chat), getResources().getDimensionPixelSize(R.dimen.tamanyo_miniaturas_chat))                        // optional
+						.into(Thumb);
 
-			Thumb.invalidate();
-			linearlayout_conversacion.invalidate();
-		}
+				Thumb.invalidate();
+				binding.LayoutChatLinearLayoutConversacion.invalidate();
+			}
 
 			String pais = utils.get_locale(this);
 
@@ -641,47 +633,46 @@ public class Activity_Chat_Individual extends AppCompatActivity {
 			LinearLayout LinearLayout_horizontal = new LinearLayout(getApplicationContext());
 
 			float SCREEN_DENSITY = getResources().getDisplayMetrics().density;
-				TextView TextView_nick_y_hora = new TextView(getApplicationContext());
-				TextView_nick_y_hora.setTypeface(typeFace_roboto_Light);
-				TextView_nick_y_hora.setText(getResources().getString(R.string.NICK_FECHA_HORA, nick_de_la_otra_persona, sdf_fecha.format(cal.getTime()), sdf_hora.format(cal.getTime())));
+			TextView TextView_nick_y_hora = new TextView(getApplicationContext());
+			TextView_nick_y_hora.setTypeface(typeFace_roboto_Light);
+			TextView_nick_y_hora.setText(getResources().getString(R.string.NICK_FECHA_HORA, nick_de_la_otra_persona, sdf_fecha.format(cal.getTime()), sdf_hora.format(cal.getTime())));
 
-				TextView_nick_y_hora.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.gris));
+			TextView_nick_y_hora.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.gris));
 
-				TextView_nick_y_hora.setTextSize(TypedValue.COMPLEX_UNIT_SP, getResources().getDimension(R.dimen.tamanyo_letra_xs) / SCREEN_DENSITY);
+			TextView_nick_y_hora.setTextSize(TypedValue.COMPLEX_UNIT_SP, getResources().getDimension(R.dimen.tamanyo_letra_xs) / SCREEN_DENSITY);
 
-				LayoutParams LayoutParams_horizontal = new LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
-				LayoutParams_horizontal.setMargins(0, utils.Dp2Px(8, this), 0, 0);
+			LayoutParams LayoutParams_horizontal = new LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
+			LayoutParams_horizontal.setMargins(0, utils.Dp2Px(8, this), 0, 0);
 
-				LayoutParams LayoutParams_vertical = new LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
-				LayoutParams_vertical.setMargins(10, 10, 10, 10);
-				LayoutParams_vertical.weight = 0.8f;
+			LayoutParams LayoutParams_vertical = new LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
+			LayoutParams_vertical.setMargins(10, 10, 10, 10);
+			LayoutParams_vertical.weight = 0.8f;
 
-				descarga_Thumb_de_la_otra_persona(token_socialauth_de_la_otra_persona, mAppCompatImageView);
-				TextView_nick_y_hora.setGravity(Gravity.END);
-				LinearLayout_horizontal.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.rounded_rectangle_dcha));
-				LayoutParams_horizontal.gravity = Gravity.END;
+			descarga_Thumb_de_la_otra_persona(token_socialauth_de_la_otra_persona, mAppCompatImageView);
+			TextView_nick_y_hora.setGravity(Gravity.END);
+			LinearLayout_horizontal.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.rounded_rectangle_dcha));
+			LayoutParams_horizontal.gravity = Gravity.END;
 
-				LinearLayout_vertical.setOrientation(LinearLayout.VERTICAL);
+			LinearLayout_vertical.setOrientation(LinearLayout.VERTICAL);
 
-				LinearLayout_horizontal.setOrientation(LinearLayout.HORIZONTAL);
-				LinearLayout_horizontal.setPadding(5, 5, 5, 5);
+			LinearLayout_horizontal.setOrientation(LinearLayout.HORIZONTAL);
+			LinearLayout_horizontal.setPadding(5, 5, 5, 5);
 
-				LinearLayout_vertical.setLayoutParams(LayoutParams_vertical);
-				LinearLayout_horizontal.setLayoutParams(LayoutParams_horizontal);
+			LinearLayout_vertical.setLayoutParams(LayoutParams_vertical);
+			LinearLayout_horizontal.setLayoutParams(LayoutParams_horizontal);
 
-				LinearLayout_vertical.addView(Thumb);
-				LinearLayout_vertical.addView(TextView_nick_y_hora);
+			LinearLayout_vertical.addView(Thumb);
+			LinearLayout_vertical.addView(TextView_nick_y_hora);
 
-				LinearLayout_horizontal.addView(LinearLayout_vertical);
-				LinearLayout_horizontal.addView(mAppCompatImageView);
+			LinearLayout_horizontal.addView(LinearLayout_vertical);
+			LinearLayout_horizontal.addView(mAppCompatImageView);
 
 
-			linearlayout_conversacion.addView(LinearLayout_horizontal);
+			binding.LayoutChatLinearLayoutConversacion.addView(LinearLayout_horizontal);
 
-			linearlayout_conversacion.invalidate();
+			binding.LayoutChatLinearLayoutConversacion.invalidate();
 			//esto es para que se vea la parte final del scrollview
-			ScrollView scrollview = findViewById(R.id.Layout_chat_ScrollView);
-			scrollview.postDelayed(new Activity_Chat_Individual.MyRunnable(scrollview), 100);
+			binding.LayoutChatScrollView.postDelayed(new Activity_Chat_Individual.MyRunnable(binding.LayoutChatScrollView), 100);
 
 		} catch(RejectedExecutionException e){
 			try {
@@ -782,12 +773,12 @@ public class Activity_Chat_Individual extends AppCompatActivity {
 			LinearLayout_horizontal.addView(LinearLayout_vertical);
 			LinearLayout_horizontal.addView(mAppCompatImageView);
 
-			linearlayout_conversacion.addView(LinearLayout_horizontal);
+			binding.LayoutChatLinearLayoutConversacion.addView(LinearLayout_horizontal);
 
-			linearlayout_conversacion.invalidate();
+			binding.LayoutChatLinearLayoutConversacion.invalidate();
 			//esto es para que se vea la parte final del scrollview
-			ScrollView scrollview = findViewById(R.id.Layout_chat_ScrollView);
-			scrollview.postDelayed(new Activity_Chat_Individual.MyRunnable(scrollview), 100);
+
+			binding.LayoutChatScrollView.postDelayed(new Activity_Chat_Individual.MyRunnable(binding.LayoutChatScrollView), 100);
 		} catch (RejectedExecutionException e) {
 			try {
 				Thread.sleep(500);
@@ -813,15 +804,15 @@ public class Activity_Chat_Individual extends AppCompatActivity {
 
 	private void setupNavigationDrawer() {
 		try {
-			if (mDrawerLayout!=null) {
+			if (binding.mDrawerLayout!=null) {
 				// Setup Drawer Icon
-				drawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout, toolbar, R.string.drawer_open, R.string.drawer_close);
-				mDrawerLayout.addDrawerListener(drawerToggle);
+				drawerToggle = new ActionBarDrawerToggle(this, binding.mDrawerLayout, toolbar, R.string.drawer_open, R.string.drawer_close);
+				binding.mDrawerLayout.addDrawerListener(drawerToggle);
 				drawerToggle.syncState();
 
 				TypedValue typedValue = new TypedValue();
 				int color = typedValue.data;
-				mDrawerLayout.setStatusBarBackgroundColor(color);
+				binding.mDrawerLayout.setStatusBarBackgroundColor(color);
 			}
 			// Setup RecyclerViews inside drawer
 			setupNavigationDrawerRecyclerViews();
@@ -896,7 +887,7 @@ public class Activity_Chat_Individual extends AppCompatActivity {
 		recyclerViewDrawer.addOnItemTouchListener(new RecyclerTouchListener_menu(this, recyclerViewDrawer, (view, position) -> {
 			utils.gestiona_onclick_menu_principal(Activity_Chat_Individual.this, position);
 			if (!utils.isTablet(getApplicationContext())) {
-				mDrawerLayout.closeDrawers();
+				binding.mDrawerLayout.closeDrawers();
 			}
 		}));
 	}
@@ -922,12 +913,11 @@ public class Activity_Chat_Individual extends AppCompatActivity {
 
 			startActivityForResult(mIntent, REQUEST_LOAD_IMAGE);
 
-		} catch (Exception e) {
-			//new AsyncTask_registra_error().execute(new Pair<>("", "Exception en lanza_intent_seleccionar_foto en Activity_Chat_Individual: " + e));
+		} catch (Exception ignored) {
 		}
 	}
 
-	private void lanza_intent_capturar_foto() {
+	private void lanza_intent_hacer_foto() {
 		try {
 			// create Intent to take a picture and return control to the calling application
 			Intent mIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
@@ -943,7 +933,7 @@ public class Activity_Chat_Individual extends AppCompatActivity {
 				startActivityForResult(mIntent, REQUEST_CAPTURE_IMAGE);
 			}
 		} catch (Exception e) {
-			utils.registra_error(e.toString(), "lanza_intent_capturar_foto  de chat_individual");
+			utils.registra_error(e.toString(), "lanza_intent_hacer_foto  de chat_individual");
 		}
 	}
 
@@ -1010,7 +1000,7 @@ public class Activity_Chat_Individual extends AppCompatActivity {
 					.positiveText(getResources().getString(R.string.ok))
 					.onPositive((dialog, which) -> {
 						try {
-							lanza_intent_capturar_foto();
+							lanza_intent_hacer_foto();
 						} catch (Exception e) {
 							utils.registra_error(e.toString(), "lanza_dialogo_se_te_va_a_cobrar_por_hacer_foto (material builder) de Activity_Chat_Individual");
 
@@ -1196,17 +1186,6 @@ public class Activity_Chat_Individual extends AppCompatActivity {
 		}
 	}
 
-	private void setup_views(){
-		mDrawerLayout = findViewById(R.id.mDrawerLayout);
-		Main_LinearLayout = findViewById(R.id.Main_LinearLayout);
-		mProgressBar = findViewById(R.id.mProgressBar);
-		linearlayout_conversacion = findViewById(R.id.Layout_chat_LinearLayout_conversacion);
-		boton_enviar = findViewById(R.id.Layout_chat_ImageView_enviar_mensaje);
-		boton_adjuntar_foto = findViewById(R.id.Layout_chat_ImageView_adjuntar_foto);
-		boton_hacer_foto = findViewById(R.id.Layout_chat_ImageView_hacer_foto);
-
-	}
-
 	private void set_Typefaces(){
 		typeFace_roboto_Light = Typeface.createFromAsset(getAssets(), "fonts/Roboto-Light.ttf");
 		typeFace_roboto_Regular = Typeface.createFromAsset(getAssets(), "fonts/Roboto-Regular.ttf");
@@ -1254,16 +1233,9 @@ public class Activity_Chat_Individual extends AppCompatActivity {
 								batch.update(Ref,"total", FieldValue.increment(1));
 								batch.commit();
 							} else {
-								STATS_RELACIONES nueva_semana_relaciones= new STATS_RELACIONES(0L,0L,0L,0L,0L,0L,0L,0L);
+								STATS_RELACIONES nueva_semana_relaciones= new STATS_RELACIONES(0L,0L,0L,0L,0L,0L,0L,1L);
 								db.collection(getResources().getString(R.string.STATS_RELACIONES)).document(semana_del_anyo).set(nueva_semana_relaciones)
-										.addOnSuccessListener(aVoid -> {
-											DocumentReference Ref=db.collection(getResources().getString(R.string.STATS_RELACIONES)).document(semana_del_anyo);
-											WriteBatch batch = db.batch();
-											batch.set(Ref,nueva_semana_relaciones);
-											batch.update(Ref,utils.decodifica_app(utils.get_app_code(getApplicationContext().getPackageName())), FieldValue.increment(1));
-											batch.update(Ref,"total", FieldValue.increment(1));
-											batch.commit();
-										});
+										.addOnSuccessListener(aVoid -> db.collection(getResources().getString(R.string.STATS_RELACIONES)).document(semana_del_anyo).update(utils.decodifica_app(utils.get_app_code(getApplicationContext().getPackageName())), FieldValue.increment(1)));
 
 							}
 						}
@@ -1277,10 +1249,9 @@ public class Activity_Chat_Individual extends AppCompatActivity {
 	}
 
 	private void crea_boton_enviar_listener(){
-		boton_enviar.setOnClickListener(v -> {
+		binding.LayoutChatImageViewEnviarMensaje.setOnClickListener(v -> {
 			try{
-				EditText texto_a_enviar = findViewById(R.id.Layout_chat_EditText_texto_a_enviar);
-				String texto = texto_a_enviar.getText().toString();
+				String texto = binding.LayoutChatEditTextTextoAEnviar.getText().toString();
 				if (!texto.isEmpty()){
 					if (token_FCM_de_la_otra_persona!=null){
 						if (id_relacion==null) {
@@ -1291,7 +1262,7 @@ public class Activity_Chat_Individual extends AppCompatActivity {
 						guarda_mensaje_en_Firestore(texto); //lo guardamos directamente
 						pinta_conversacion(token_socialauth_mio, texto);
 						envia_mensaje_por_FCM(texto);
-						texto_a_enviar.getText().clear();
+						binding.LayoutChatEditTextTextoAEnviar.getText().clear();
 					}else{
 						Toast.makeText(getApplicationContext(), "Unknow error", Toast.LENGTH_LONG).show();
 					}
@@ -1305,7 +1276,34 @@ public class Activity_Chat_Individual extends AppCompatActivity {
 	}
 
 	private void crea_boton_hacer_foto_listener(){
-		boton_adjuntar_foto.setOnClickListener(v -> {
+		binding.LayoutChatImageViewHacerFoto.setOnClickListener(v -> {
+			try {
+				//Tenemos que pedir permiso explicitamente si estamos en un dispositivo Marshmallow
+				if ((ContextCompat.checkSelfPermission(getApplicationContext(), Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) ||
+						(ContextCompat.checkSelfPermission(getApplicationContext(), Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED)) {
+					if (Build.VERSION.SDK_INT >= 23) {
+						requestPermissions(new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.READ_EXTERNAL_STORAGE}, PERMISSION_CAPTURAR_FOTO);
+					}
+				} else {
+					if (perfil_usuario.getBoolean(getResources().getString(R.string.PERFIL_USUARIO_ES_PREMIUM), false) ) {
+						lanza_intent_hacer_foto();
+					}else {
+						if (perfil_usuario.getLong(getResources().getString(R.string.PERFIL_USUARIO_ESTRELLAS), 0) >= 2L) {
+							lanza_dialogo_se_te_va_a_cobrar_por_hacer_foto();
+						} else {
+							lanza_dialogo_no_tienes_suficientes_estrellas();
+						}
+					}
+				}
+			} catch (Exception e) {
+				utils.registra_error(e.toString(), "boton_adjuntar_foto");
+			}
+		});
+
+	}
+
+	private void crea_boton_seleccionar_foto_listener(){
+		binding.LayoutChatImageViewAdjuntarFoto.setOnClickListener(v -> {
 			try {
 				//Tenemos que pedir permiso explicitamente si estamos en un dispositivo Marshmallow
 				if ((ContextCompat.checkSelfPermission(getApplicationContext(), Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) ||
@@ -1325,33 +1323,6 @@ public class Activity_Chat_Individual extends AppCompatActivity {
 					}
 				}
 			} catch (Exception e) {
-				utils.registra_error(e.toString(), "boton_adjuntar_foto");
-			}
-		});
-
-	}
-
-	private void crea_boton_adjuntar_foto_listener(){
-		boton_hacer_foto.setOnClickListener(v -> {
-			try {
-				//Tenemos que pedir permiso explicitamente si estamos en un dispositivo Marshmallow
-				if ((ContextCompat.checkSelfPermission(getApplicationContext(), Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) ||
-						(ContextCompat.checkSelfPermission(getApplicationContext(), Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED)) {
-					if (Build.VERSION.SDK_INT >= 23) {
-						requestPermissions(new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.READ_EXTERNAL_STORAGE}, PERMISSION_CAPTURAR_FOTO);
-					}
-				} else {
-					if (perfil_usuario.getBoolean(getResources().getString(R.string.PERFIL_USUARIO_ES_PREMIUM), false) ) {
-						lanza_intent_capturar_foto();
-					}else {
-						if (perfil_usuario.getLong(getResources().getString(R.string.PERFIL_USUARIO_ESTRELLAS), 0) >= 2L) {
-							lanza_dialogo_se_te_va_a_cobrar_por_hacer_foto();
-						} else {
-							lanza_dialogo_no_tienes_suficientes_estrellas();
-						}
-					}
-				}
-			} catch (Exception e) {
 				utils.registra_error(e.toString(), "boton_hacer_foto");
 			}
 		});
@@ -1361,27 +1332,27 @@ public class Activity_Chat_Individual extends AppCompatActivity {
 		try {
 			boolean permitimos_chatear;
 			if (una_relacion !=null) {
-				 int estado_de_la_relacion = ((Long) una_relacion.get("estado_de_la_relacion")).intValue();
-				 permitimos_chatear = (estado_de_la_relacion == getResources().getInteger(R.integer.RELACION_ACTIVA))
-				 || (estado_de_la_relacion == getResources().getInteger(R.integer.RELACION_BORRADA));
+				int estado_de_la_relacion = ((Long) una_relacion.get("estado_de_la_relacion")).intValue();
+				permitimos_chatear = (estado_de_la_relacion == getResources().getInteger(R.integer.RELACION_ACTIVA))
+						|| (estado_de_la_relacion == getResources().getInteger(R.integer.RELACION_BORRADA));
 			}else{
 				permitimos_chatear=true;
 			}
-			boton_enviar.setEnabled(permitimos_chatear);
-			boton_hacer_foto.setEnabled(permitimos_chatear);
-			boton_adjuntar_foto.setEnabled(permitimos_chatear);
-			mProgressBar.setVisibility(View.INVISIBLE);
+			binding.LayoutChatImageViewEnviarMensaje.setEnabled(permitimos_chatear);
+			binding.LayoutChatImageViewHacerFoto.setEnabled(permitimos_chatear);
+			binding.LayoutChatImageViewAdjuntarFoto.setEnabled(permitimos_chatear);
+			binding.mProgressBar.setVisibility(View.INVISIBLE);
 
 			if (permitimos_chatear) {
 				crea_boton_enviar_listener();
 				crea_boton_hacer_foto_listener();
-				crea_boton_adjuntar_foto_listener();
+				crea_boton_seleccionar_foto_listener();
 			}
 			else  {
 				Toast.makeText(getApplicationContext(), getResources().getString(R.string.ACTIVITY_CHAT_AMISTAD_TERMINADA), Toast.LENGTH_LONG).show();
-				boton_enviar.setOnClickListener(v -> Toast.makeText(getApplicationContext(), getResources().getString(R.string.ACTIVITY_CHAT_AMISTAD_TERMINADA), Toast.LENGTH_LONG).show());
-				boton_hacer_foto.setOnClickListener(v -> Toast.makeText(getApplicationContext(), getResources().getString(R.string.ACTIVITY_CHAT_AMISTAD_TERMINADA), Toast.LENGTH_LONG).show());
-				boton_adjuntar_foto.setOnClickListener(v -> Toast.makeText(getApplicationContext(), getResources().getString(R.string.ACTIVITY_CHAT_AMISTAD_TERMINADA), Toast.LENGTH_LONG).show());
+				binding.LayoutChatImageViewEnviarMensaje.setOnClickListener(v -> Toast.makeText(getApplicationContext(), getResources().getString(R.string.ACTIVITY_CHAT_AMISTAD_TERMINADA), Toast.LENGTH_LONG).show());
+				binding.LayoutChatImageViewHacerFoto.setOnClickListener(v -> Toast.makeText(getApplicationContext(), getResources().getString(R.string.ACTIVITY_CHAT_AMISTAD_TERMINADA), Toast.LENGTH_LONG).show());
+				binding.LayoutChatImageViewAdjuntarFoto.setOnClickListener(v -> Toast.makeText(getApplicationContext(), getResources().getString(R.string.ACTIVITY_CHAT_AMISTAD_TERMINADA), Toast.LENGTH_LONG).show());
 			}
 		} catch (Exception e) {
 			//utils.registra_error("", "Exception en onBindViewHolder de RecyclerView_Principal_Adapter: " + e));
@@ -1455,32 +1426,32 @@ public class Activity_Chat_Individual extends AppCompatActivity {
 				.whereEqualTo("id_relacion",id_relacion)
 				.orderBy("fecha", Query.Direction.ASCENDING)
 				.get().addOnCompleteListener(task -> {
-					if (task.isSuccessful()) {
-						try {
-							for (QueryDocumentSnapshot document : task.getResult()) {
-								String que_dijo = (String) document.get("que_dijo");
-								String quien_lo_dijo = (String) document.get("de_quien");
-								if (!que_dijo.isEmpty()) {
-									if (que_dijo.contains(getResources().getString(R.string.my_bucket) + "/fotos_usuarios/")) {
-										if (quien_lo_dijo.equals(token_socialauth_mio)) {
-											FirebaseStorage storage = FirebaseStorage.getInstance();
-											StorageReference gsReference = storage.getReferenceFromUrl(que_dijo);
-											File localFile = File.createTempFile("images", "jpg");
+			if (task.isSuccessful()) {
+				try {
+					for (QueryDocumentSnapshot document : task.getResult()) {
+						String que_dijo = (String) document.get("que_dijo");
+						String quien_lo_dijo = (String) document.get("de_quien");
+						if (!que_dijo.isEmpty()) {
+							if (que_dijo.contains(getResources().getString(R.string.my_bucket) + "/fotos_usuarios/")) {
+								if (quien_lo_dijo.equals(token_socialauth_mio)) {
+									FirebaseStorage storage = FirebaseStorage.getInstance();
+									StorageReference gsReference = storage.getReferenceFromUrl(que_dijo);
+									File localFile = File.createTempFile("images", "jpg");
 
-											gsReference.getFile(localFile).addOnSuccessListener(taskSnapshot -> pinta_thumb_enviado_por_mi(localFile));
-										} else {
-											pinta_thumb_enviado_por_el_otro_usuario(que_dijo);
-										}
-									} else {
-										pinta_conversacion(quien_lo_dijo, que_dijo);
-									}
+									gsReference.getFile(localFile).addOnSuccessListener(taskSnapshot -> pinta_thumb_enviado_por_mi(localFile));
+								} else {
+									pinta_thumb_enviado_por_el_otro_usuario(que_dijo);
 								}
+							} else {
+								pinta_conversacion(quien_lo_dijo, que_dijo);
 							}
-						}catch (Exception e){
-							utils.registra_error(e.toString(), "carga_conversacion");
 						}
 					}
-				});
+				}catch (Exception e){
+					utils.registra_error(e.toString(), "carga_conversacion");
+				}
+			}
+		});
 	}
 
 	private class AsyncTask_Carga_Miniatura_mia_de_memoria extends AsyncTask<CircleImageView, Void, Pair<CircleImageView, Bitmap>> {

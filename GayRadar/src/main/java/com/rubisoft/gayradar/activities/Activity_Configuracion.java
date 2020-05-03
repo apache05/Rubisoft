@@ -21,7 +21,6 @@ import android.widget.ArrayAdapter;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -45,6 +44,7 @@ import com.rubisoft.gayradar.Adapters.Drawer_Adapter;
 import com.rubisoft.gayradar.Classes.Drawer_Item;
 import com.rubisoft.gayradar.Interfaces.Interface_ClickListener_Menu;
 import com.rubisoft.gayradar.R;
+import com.rubisoft.gayradar.databinding.LayoutConfiguracionBinding;
 import com.rubisoft.gayradar.tools.utils;
 
 import java.io.File;
@@ -57,33 +57,25 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.AppCompatButton;
 import androidx.appcompat.widget.AppCompatImageView;
-import androidx.appcompat.widget.SwitchCompat;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.content.ContextCompat;
-import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 public class Activity_Configuracion extends AppCompatActivity {
-    private TextView mTextView_unidades;
-    private TextView mTextView_desactivar_chat;
-    private SwitchCompat mSwitch_desactivar_chat;
 	private FirebaseFirestore db;
 
-    private Spinner mSpinner_unidades;
     private SharedPreferences preferencias_usuario;
     private SharedPreferences perfil_usuario;
 
     //navigation drawer
     private Toolbar toolbar;
     private ActionBarDrawerToggle drawerToggle;
-    private DrawerLayout mDrawerLayout;
     private RecyclerView recyclerViewDrawer;
     private ImageView mImageView_PictureMain;
 
-	private LinearLayout Main_LinearLayout;
+	private LayoutConfiguracionBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -96,16 +88,16 @@ public class Activity_Configuracion extends AppCompatActivity {
             if (perfil_usuario.getString(getString(R.string.PERFIL_USUARIO_TOKEN_SOCIALAUTH), "").isEmpty()) {
                 salir();
             } else {
-				setContentView(R.layout.layout_configuracion);
-                setup_Views();
-                setTypefaces();
-                mTextView_unidades.setText(getResources().getString(R.string.ACTIVITY_CONFIGURACION_UNIDADES));
+				binding = LayoutConfiguracionBinding.inflate(getLayoutInflater());
+				setContentView(binding.getRoot());
+				setTypefaces();
+				binding.LayoutConfiguracionTextViewUnidades.setText(getResources().getString(R.string.ACTIVITY_CONFIGURACION_UNIDADES));
 				db = FirebaseFirestore.getInstance();
 				inicializa_anuncios();
                 setup_spinners();
                 setup_textviews_y_switches();
 
-                mSpinner_unidades.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                binding.LayoutConfiguracionSpinnerUnidades.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                     @Override
                     public void onItemSelected(AdapterView<?> parent, View view, int posicion_actual, long id) {
                         SharedPreferences.Editor editor = preferencias_usuario.edit();
@@ -119,23 +111,22 @@ public class Activity_Configuracion extends AppCompatActivity {
                     }
                 });
 
-                mSwitch_desactivar_chat.setOnCheckedChangeListener((buttonView, isChecked) -> {
+                binding.LayoutConfiguracionSwitchDesactivarSonidoChat.setOnCheckedChangeListener((buttonView, isChecked) -> {
 					SharedPreferences.Editor editor = preferencias_usuario.edit();
 					editor.putBoolean(getResources().getString(R.string.PREFERENCIAS_ENABLE_CHAT), isChecked);
 					editor.apply();
 
 					if (isChecked) {
 						suscribir_a_grupo();
-						mTextView_desactivar_chat.setText(getResources().getString(R.string.ACTIVITY_CONFIGURACION_CHAT_ACTIVADO));
+						binding.LayoutConfiguracionTextViewDesactivarSonidoChat.setText(getResources().getString(R.string.ACTIVITY_CONFIGURACION_CHAT_ACTIVADO));
 					} else {
 						desuscribir_de_grupo();
-						mTextView_desactivar_chat.setText(getResources().getString(R.string.ACTIVITY_CONFIGURACION_SONIDO_CHAT_DESACTIVADO));
+						binding.LayoutConfiguracionTextViewDesactivarSonidoChat.setText(getResources().getString(R.string.ACTIVITY_CONFIGURACION_SONIDO_CHAT_DESACTIVADO));
 					}
 				});
 
-                AppCompatButton boton_eliminar_cuenta = findViewById(R.id.Layout_configuracion_AppCompatButton_eliminar_cuenta);
-                boton_eliminar_cuenta.setText(getResources().getString(R.string.ACTIVITY_CONFIGURACION_ELIMINAR_CUENTA));
-                boton_eliminar_cuenta.setOnClickListener(v -> confirmacion());
+                binding.LayoutConfiguracionAppCompatButtonEliminarCuenta.setText(getResources().getString(R.string.ACTIVITY_CONFIGURACION_ELIMINAR_CUENTA));
+				binding.LayoutConfiguracionAppCompatButtonEliminarCuenta.setOnClickListener(v -> confirmacion());
                 setup_toolbar();// Setup toolbar and statusBar (really FrameLayout)
             }
         } catch (Exception e) {
@@ -367,6 +358,20 @@ public class Activity_Configuracion extends AppCompatActivity {
 		batch2.update(ref_usuarios, sexo+"_"+orientacion, FieldValue.increment(-1));
 		batch2.update(ref_usuarios, app, FieldValue.increment(-1));
 		batch2.commit();
+
+		DocumentReference ref;
+
+		ref= db.collection(getResources().getString(R.string.STATS_GLOBAL)).document(getResources().getString(R.string.STATS_GLOBAL_POR_APPS));
+		WriteBatch batch_STATS_GLOBAL_POR_APPS = db.batch();
+		batch_STATS_GLOBAL_POR_APPS.update(ref, "total_usuarios", FieldValue.increment(-1));
+		batch_STATS_GLOBAL_POR_APPS.update(ref, app, FieldValue.increment(-1));
+		batch_STATS_GLOBAL_POR_APPS.commit();
+
+		ref= db.collection(getResources().getString(R.string.STATS_GLOBAL)).document(getResources().getString(R.string.STATS_GLOBAL_POR_PERFILES));
+		WriteBatch batch_STATS_GLOBAL_POR_PERFILES = db.batch();
+		batch_STATS_GLOBAL_POR_PERFILES.update(ref, "total_usuarios", FieldValue.increment(-1));
+		batch_STATS_GLOBAL_POR_PERFILES.update(ref, sexo+ "_" + orientacion, FieldValue.increment(-1));
+		batch_STATS_GLOBAL_POR_PERFILES.commit();
 	}
 
 	private void setup_toolbar() {
@@ -384,15 +389,15 @@ public class Activity_Configuracion extends AppCompatActivity {
 
 	private void setupNavigationDrawer() {
 		try {
-			if (mDrawerLayout!=null) {
+			if (binding.mDrawerLayout!=null) {
 				// Setup Drawer Icon
-				drawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout, toolbar, R.string.drawer_open, R.string.drawer_close);
-				mDrawerLayout.addDrawerListener(drawerToggle);
+				drawerToggle = new ActionBarDrawerToggle(this, binding.mDrawerLayout, toolbar, R.string.drawer_open, R.string.drawer_close);
+				binding.mDrawerLayout.addDrawerListener(drawerToggle);
 				drawerToggle.syncState();
 
 				TypedValue typedValue = new TypedValue();
 				int color = typedValue.data;
-				mDrawerLayout.setStatusBarBackgroundColor(color);
+				binding.mDrawerLayout.setStatusBarBackgroundColor(color);
 			}
 			// Setup RecyclerViews inside drawer
 			setupNavigationDrawerRecyclerViews();
@@ -467,7 +472,7 @@ public class Activity_Configuracion extends AppCompatActivity {
         recyclerViewDrawer.addOnItemTouchListener(new Activity_Configuracion.RecyclerTouchListener_menu(this, recyclerViewDrawer, (view, position) -> {
 			utils.gestiona_onclick_menu_principal(Activity_Configuracion.this, position);
 			if (!utils.isTablet(getApplicationContext())) {
-				mDrawerLayout.closeDrawers();
+				binding.mDrawerLayout.closeDrawers();
 			}
 		}));
     }
@@ -488,10 +493,10 @@ public class Activity_Configuracion extends AppCompatActivity {
 			}else {
 				FrameLayout.LayoutParams layoutParams = new FrameLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT);
 				layoutParams.setMargins(0, 0, 0, 0);
-				if (mDrawerLayout!=null){
-					mDrawerLayout.setLayoutParams(layoutParams);
+				if (binding.mDrawerLayout!=null){
+					binding.mDrawerLayout.setLayoutParams(layoutParams);
 				}else{
-					Main_LinearLayout.setLayoutParams(layoutParams);
+					binding.MainLinearLayout.setLayoutParams(layoutParams);
 				}
 			}
 		}catch (Exception e){
@@ -535,32 +540,16 @@ public class Activity_Configuracion extends AppCompatActivity {
 
 	private void setTypefaces() {
         Typeface typeFace_roboto_light = Typeface.createFromAsset(this.getAssets(), "fonts/Roboto-Light.ttf");
-
-
-        //mSwitch_aceptar_peticiones.setTypeface(typeFace_roboto_light);
-        mTextView_unidades.setTypeface(typeFace_roboto_light);
-    //    mTextView_modo_invisible.setTypeface(typeFace_roboto_light);
-        //mTextView_eliminar_cuenta.setTypeface(typeFace_roboto_light);
-        mTextView_desactivar_chat.setTypeface(typeFace_roboto_light);
-
+        binding.LayoutConfiguracionTextViewUnidades.setTypeface(typeFace_roboto_light);
+        binding.LayoutConfiguracionTextViewDesactivarSonidoChat.setTypeface(typeFace_roboto_light);
     }
 
-    private void setup_Views() {
-        mTextView_desactivar_chat = findViewById(R.id.Layout_configuracion_TextView_desactivar_sonido_chat);
-		Main_LinearLayout = findViewById(R.id.Main_LinearLayout);
-        mTextView_unidades = findViewById(R.id.Layout_configuracion_TextView_unidades);
-        mSwitch_desactivar_chat = findViewById(R.id.Layout_configuracion_Switch_desactivar_sonido_chat);
-		mDrawerLayout = findViewById(R.id.mDrawerLayout);
-
-	}
-
     private void setup_spinners() {
-        mSpinner_unidades = findViewById(R.id.Layout_configuracion_Spinner_unidades);
         ArrayAdapter<CharSequence> adapter_unidades;
 		adapter_unidades = ArrayAdapter.createFromResource(this, R.array.array_unidades, R.layout.spinner_item);
         adapter_unidades.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        mSpinner_unidades.setAdapter(adapter_unidades);
-        mSpinner_unidades.setSelection((int) preferencias_usuario.getLong(getResources().getString(R.string.PREFERENCIAS_UNIDADES), 0));
+        binding.LayoutConfiguracionSpinnerUnidades.setAdapter(adapter_unidades);
+        binding.LayoutConfiguracionSpinnerUnidades.setSelection((int) preferencias_usuario.getLong(getResources().getString(R.string.PREFERENCIAS_UNIDADES), 0));
     }
 
     private void setup_textviews_y_switches() {
@@ -568,7 +557,7 @@ public class Activity_Configuracion extends AppCompatActivity {
 
         //mSwitch_aceptar_peticiones.setChecked(preferencias_usuario.getBoolean(getResources().getString(R.string.PERFIL_USUARIO_ACEPTA_PETICIONES), true));
 
-        mSwitch_desactivar_chat.setChecked(preferencias_usuario.getBoolean(getResources().getString(R.string.PREFERENCIAS_ENABLE_CHAT), true));
+       binding.LayoutConfiguracionSwitchDesactivarSonidoChat.setChecked(preferencias_usuario.getBoolean(getResources().getString(R.string.PREFERENCIAS_ENABLE_CHAT), true));
 /*
 
         if (mSwitch_aceptar_peticiones.isChecked()) {
@@ -578,10 +567,10 @@ public class Activity_Configuracion extends AppCompatActivity {
         }
 */
 
-        if (mSwitch_desactivar_chat.isChecked()) {
-            mTextView_desactivar_chat.setText(getResources().getString(R.string.ACTIVITY_CONFIGURACION_CHAT_ACTIVADO));
+        if (binding.LayoutConfiguracionSwitchDesactivarSonidoChat.isChecked()) {
+            binding.LayoutConfiguracionTextViewDesactivarSonidoChat.setText(getResources().getString(R.string.ACTIVITY_CONFIGURACION_CHAT_ACTIVADO));
         } else {
-            mTextView_desactivar_chat.setText(getResources().getString(R.string.ACTIVITY_CONFIGURACION_SONIDO_CHAT_DESACTIVADO));
+            binding.LayoutConfiguracionTextViewDesactivarSonidoChat.setText(getResources().getString(R.string.ACTIVITY_CONFIGURACION_SONIDO_CHAT_DESACTIVADO));
         }
     }
 

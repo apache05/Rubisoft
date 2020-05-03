@@ -535,13 +535,14 @@ public class utils {
 			case 2:
 				sexo_decodificado = "mujer";
 				break;
+			default:
+				sexo_decodificado=sexo_decodificado.toString();
 		}
 		return sexo_decodificado;
 	}
 	public static String decodifica_orientacion(Long orientacion_codificada){
-		String orientacion_decodificada="";
+		String orientacion_decodificada;
 		switch (orientacion_codificada.intValue()) {
-
 			case 1:
 				orientacion_decodificada = "hetero";
 				break;
@@ -551,10 +552,11 @@ public class utils {
 			case 3:
 				orientacion_decodificada = "gay";
 				break;
-
 			case 4:
 				orientacion_decodificada = "bi";
 				break;
+			default:
+				orientacion_decodificada=orientacion_codificada.toString();
 		}
 		return orientacion_decodificada;
 	}

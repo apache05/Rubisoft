@@ -4,12 +4,11 @@ import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.Menu;
-import android.widget.LinearLayout;
-import android.widget.TextView;
 
 import com.mikepenz.google_material_typeface_library.GoogleMaterial.Icon;
 import com.mikepenz.iconics.IconicsDrawable;
 import com.rubisoft.lesbiancuddles.R;
+import com.rubisoft.lesbiancuddles.databinding.LayoutSinConexionBinding;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
@@ -20,23 +19,22 @@ import androidx.core.content.ContextCompat;
 
 public class Activity_Sin_Conexion extends AppCompatActivity {
 
-    @Override
+	@Override
     protected void onCreate(Bundle savedInstanceState) {
         overridePendingTransition(R.anim.activity_in, R.anim.activity_out);
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.layout_sin_conexion);
-        Typeface typeFace_roboto = Typeface.createFromAsset(getAssets(), "fonts/Roboto-Light.ttf");
+		com.rubisoft.lesbiancuddles.databinding.LayoutSinConexionBinding binding = LayoutSinConexionBinding.inflate(getLayoutInflater());
+		setContentView(binding.getRoot());
+		Typeface typeFace_roboto = Typeface.createFromAsset(getAssets(), "fonts/Roboto-Light.ttf");
 
-        TextView mTextView_no_hay_conexion = findViewById(R.id.Layout_sin_conexion_TextView_NO_HAY_CONEXION);
-        mTextView_no_hay_conexion.setTypeface(typeFace_roboto);
-        mTextView_no_hay_conexion.setText(getResources().getString(R.string.ACTIVITY_SIN_CONEXION_NO_HAY_CONEXION));
+        binding.LayoutSinConexionTextViewNOHAYCONEXION.setTypeface(typeFace_roboto);
+		binding.LayoutSinConexionTextViewNOHAYCONEXION.setText(getResources().getString(R.string.ACTIVITY_SIN_CONEXION_NO_HAY_CONEXION));
 
 
         Drawable fondo = new IconicsDrawable(this.getApplicationContext())
                 .icon(Icon.gmd_signal_wifi_off)
                 .color(ContextCompat.getColor(this.getApplicationContext(), R.color.gris_transparente));
-        LinearLayout LinearLayout_fondo = this.findViewById(R.id.Layout_sin_conexion_LinearLayout);
-        LinearLayout_fondo.setBackground(fondo);
+		binding.LayoutSinConexionLinearLayout.setBackground(fondo);
     }
 
     @Override

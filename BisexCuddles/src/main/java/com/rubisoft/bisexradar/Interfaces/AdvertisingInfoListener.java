@@ -1,4 +1,4 @@
-package com.rubisoft.bisexradar.Interfaces;
+package com.rubisoft.bisexcuddles.Interfaces;
 
 import com.google.android.gms.ads.identifier.AdvertisingIdClient;
 

@@ -49,7 +49,7 @@
                         android:padding="20dp">
 
                         <TextView
-                            android:id="@id/Layout_sobre_xradar_TextView_nombre_aplicacion"
+                            android:id="@id/Layout_ayuda_TextView_nombre_aplicacion"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:gravity="center_horizontal"
@@ -58,7 +58,7 @@
                             android:textStyle="bold" />
 
                         <TextView
-                            android:id="@id/Layout_sobre_xradar_TextView_version_aplicacion"
+                            android:id="@id/Layout_ayuda_TextView_version_aplicacion"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="10dp"
@@ -67,7 +67,7 @@
                             android:textSize="@dimen/tamanyo_letra_s" />
 
                         <TextView
-                            android:id="@id/Layout_sobre_xradar_TextView_explicacion_xradar_title"
+                            android:id="@id/Layout_ayuda_TextView_explicacion_title"
                             style="@style/titulo"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -76,28 +76,13 @@
                             android:textIsSelectable="true" />
 
                         <TextView
-                            android:id="@id/Layout_sobre_xradar_TextView_explicacion_xradar"
+                            android:id="@id/Layout_ayuda_TextView_explicacion"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:textIsSelectable="true" />
 
-                     <!--   <TextView
-                            android:id="@id/Layout_sobre_xradar_TextView_como_ganar_estrellas_title"
-                            style="@style/titulo"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="20dp"
-                            android:layout_marginBottom="10dp"
-                            android:textIsSelectable="true" />
-
                         <TextView
-                            android:id="@id/Layout_sobre_xradar_TextView_como_ganar_estrellas"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:textIsSelectable="true" />-->
-
-                        <TextView
-                            android:id="@id/Layout_sobre_xradar_TextView_como_funciona_title"
+                            android:id="@id/Layout_ayuda_TextView_como_funciona_title"
                             style="@style/titulo"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -117,9 +102,9 @@
                                 android:layout_width="@dimen/Tam_Normal_icons"
                                 android:layout_height="@dimen/Tam_Normal_icons"
                                 android:layout_gravity="start|center_vertical"
-                                android:id="@id/Layout_sobre_xradar_ImageView_principal" />
+                                android:id="@id/Layout_ayuda_ImageView_principal" />
                             <TextView
-                                android:id="@id/Layout_sobre_xradar_TextView_principal"
+                                android:id="@id/Layout_ayuda_TextView_principal"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="20dp"
@@ -135,9 +120,9 @@
                                 android:layout_width="@dimen/Tam_Normal_icons"
                                 android:layout_height="@dimen/Tam_Normal_icons"
                                 android:layout_gravity="start|center_vertical"
-                                android:id="@id/Layout_sobre_xradar_configura_radar"/>
+                                android:id="@id/Layout_ayuda_configura_radar"/>
                             <TextView
-                                android:id="@id/Layout_sobre_xradar_TextView_configura_radar"
+                                android:id="@id/Layout_ayuda_TextView_configura_radar"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="20dp"
@@ -153,9 +138,9 @@
                                 android:layout_width="@dimen/Tam_Normal_icons"
                                 android:layout_height="@dimen/Tam_Normal_icons"
                                 android:layout_gravity="start|center_vertical"
-                                android:id="@id/Layout_sobre_xradar_ImageView_mensajes"/>
+                                android:id="@id/Layout_ayuda_ImageView_mensajes"/>
                             <TextView
-                                android:id="@id/Layout_sobre_xradar_TextView_mensajes"
+                                android:id="@id/Layout_ayuda_TextView_mensajes"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="20dp"
@@ -171,84 +156,9 @@
                                 android:layout_width="@dimen/Tam_Normal_icons"
                                 android:layout_height="@dimen/Tam_Normal_icons"
                                 android:layout_gravity="start|center_vertical"
-                                android:id="@id/Layout_sobre_xradar_ImageView_mi_perfil"/>
+                                android:id="@id/Layout_ayuda_ImageView_mi_perfil"/>
                             <TextView
-                                android:id="@id/Layout_sobre_xradar_TextView_mi_perfil"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginStart="20dp"
-                                android:textIsSelectable="true"
-                                android:textSize="@dimen/tamanyo_letra_m"/>
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="horizontal"
-                            android:layout_marginBottom="20dp">
-                            <androidx.appcompat.widget.AppCompatImageView
-                                android:layout_width="@dimen/Tam_Normal_icons"
-                                android:layout_height="@dimen/Tam_Normal_icons"
-                                android:layout_gravity="start|center_vertical"
-                                android:id="@id/Layout_sobre_xradar_ImageView_estrellas"/>
-                            <TextView
-                                android:id="@id/Layout_sobre_xradar_TextView_estrellas"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginStart="20dp"
-                                android:textIsSelectable="true"
-                                android:textSize="@dimen/tamanyo_letra_m"/>
-                        </LinearLayout>
-
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="horizontal"
-                            android:layout_marginBottom="20dp">
-                            <androidx.appcompat.widget.AppCompatImageView
-                                android:layout_width="@dimen/Tam_Normal_icons"
-                                android:layout_height="@dimen/Tam_Normal_icons"
-                                android:layout_gravity="start|center_vertical"
-                                android:id="@id/Layout_sobre_xradar_ImageView_compras"/>
-                            <TextView
-                                android:id="@id/Layout_sobre_xradar_TextView_compras"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginStart="20dp"
-                                android:textIsSelectable="true"
-                                android:textSize="@dimen/tamanyo_letra_m"/>
-                        </LinearLayout>
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="horizontal"
-                            android:layout_marginBottom="20dp">
-                            <androidx.appcompat.widget.AppCompatImageView
-                                android:layout_width="@dimen/Tam_Normal_icons"
-                                android:layout_height="@dimen/Tam_Normal_icons"
-                                android:layout_gravity="start|center_vertical"
-                                android:id="@id/Layout_sobre_xradar_ImageView_ajustes"/>
-                            <TextView
-                                android:id="@id/Layout_sobre_xradar_TextView_ajustes"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginStart="20dp"
-                                android:textIsSelectable="true"
-                                android:textSize="@dimen/tamanyo_letra_m"/>
-                        </LinearLayout>
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="horizontal"
-                            android:layout_marginBottom="20dp">
-                            <androidx.appcompat.widget.AppCompatImageView
-                                android:layout_width="@dimen/Tam_Normal_icons"
-                                android:layout_height="@dimen/Tam_Normal_icons"
-                                android:layout_gravity="start|center_vertical"
-                                android:id="@id/Layout_sobre_xradar_ImageView_chat_general"/>
-                            <TextView
-                                android:id="@id/Layout_sobre_xradar_TextView_chat_general"
+                                android:id="@id/Layout_ayuda_TextView_mi_perfil"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="20dp"
@@ -265,9 +175,84 @@
                                 android:layout_width="@dimen/Tam_Normal_icons"
                                 android:layout_height="@dimen/Tam_Normal_icons"
                                 android:layout_gravity="start|center_vertical"
-                                android:id="@id/Layout_sobre_xradar_ImageView_feedback"/>
+                                android:id="@id/Layout_ayuda_ImageView_estrellas"/>
                             <TextView
-                                android:id="@id/Layout_sobre_xradar_TextView_feedback"
+                                android:id="@id/Layout_ayuda_TextView_estrellas"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="20dp"
+                                android:textIsSelectable="true"
+                                android:textSize="@dimen/tamanyo_letra_m"/>
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginBottom="20dp">
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="@dimen/Tam_Normal_icons"
+                                android:layout_height="@dimen/Tam_Normal_icons"
+                                android:layout_gravity="start|center_vertical"
+                                android:id="@id/Layout_ayuda_ImageView_compras"/>
+                            <TextView
+                                android:id="@id/Layout_ayuda_TextView_compras"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="20dp"
+                                android:textIsSelectable="true"
+                                android:textSize="@dimen/tamanyo_letra_m"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginBottom="20dp">
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="@dimen/Tam_Normal_icons"
+                                android:layout_height="@dimen/Tam_Normal_icons"
+                                android:layout_gravity="start|center_vertical"
+                                android:id="@id/Layout_ayuda_ImageView_ajustes"/>
+                            <TextView
+                                android:id="@id/Layout_ayuda_TextView_ajustes"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="20dp"
+                                android:textIsSelectable="true"
+                                android:textSize="@dimen/tamanyo_letra_m"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginBottom="20dp">
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="@dimen/Tam_Normal_icons"
+                                android:layout_height="@dimen/Tam_Normal_icons"
+                                android:layout_gravity="start|center_vertical"
+                                android:id="@id/Layout_ayuda_ImageView_chat_general"/>
+                            <TextView
+                                android:id="@id/Layout_ayuda_TextView_chat_general"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="20dp"
+                                android:textIsSelectable="true"
+                                android:textSize="@dimen/tamanyo_letra_m"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginBottom="20dp">
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="@dimen/Tam_Normal_icons"
+                                android:layout_height="@dimen/Tam_Normal_icons"
+                                android:layout_gravity="start|center_vertical"
+                                android:id="@id/Layout_ayuda_ImageView_feedback"/>
+                            <TextView
+                                android:id="@id/Layout_ayuda_TextView_feedback"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="20dp"
@@ -276,7 +261,7 @@
                         </LinearLayout>
 
                         <TextView
-                            android:id="@id/Layout_sobre_xradar_TextView_como_contactar"
+                            android:id="@id/Layout_ayuda_TextView_como_contactar"
                             style="@style/titulo"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -284,7 +269,7 @@
                             android:layout_marginBottom="10dp"
                             android:textIsSelectable="true" />
                         <TextView
-                            android:id="@id/Layout_sobre_xradar_TextView_para_cualquier_consulta"
+                            android:id="@id/Layout_ayuda_TextView_para_cualquier_consulta"
                             style="@style/parrafo"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -300,9 +285,9 @@
                                 android:layout_width="@dimen/Tam_Normal_icons"
                                 android:layout_height="@dimen/Tam_Normal_icons"
                                 android:layout_gravity="bottom"
-                                android:id="@id/Layout_sobre_xradar_ImageView_icono_email"/>
+                                android:id="@id/Layout_ayuda_ImageView_icono_email"/>
                             <androidx.appcompat.widget.AppCompatButton
-                                android:id="@id/Layout_sobre_xradar_TextView_rubisoft_email"
+                                android:id="@id/Layout_ayuda_TextView_rubisoft_email"
                                 android:background="@android:color/transparent"
                                 android:gravity="bottom"
                                 android:layout_marginStart="10dp"
@@ -319,9 +304,9 @@
                                 android:layout_width="@dimen/Tam_Normal_icons"
                                 android:layout_height="@dimen/Tam_Normal_icons"
                                 android:layout_gravity="bottom"
-                                android:id="@id/Layout_sobre_xradar_ImageView_icono_twitter"/>
+                                android:id="@id/Layout_ayuda_ImageView_icono_twitter"/>
                             <androidx.appcompat.widget.AppCompatButton
-                                android:id="@id/Layout_sobre_xradar_TextView_rubisoft_twitter"
+                                android:id="@id/Layout_ayuda_TextView_rubisoft_twitter"
                                 android:background="@android:color/transparent"
                                 android:gravity="bottom"
                                 android:layout_marginStart="10dp"

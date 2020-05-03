@@ -40,5 +40,4 @@ build/
 .gradle/
 
 backend/
-.gradle/
 fabric.properties

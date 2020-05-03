@@ -1,4 +1,4 @@
-package com.rubisoft.bisexradar.ViewPagers;
+package com.rubisoft.bisexcuddles.ViewPagers;
 
 import android.content.Context;
 import android.util.AttributeSet;

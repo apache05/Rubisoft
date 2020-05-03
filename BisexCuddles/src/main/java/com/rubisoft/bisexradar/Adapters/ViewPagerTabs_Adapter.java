@@ -1,4 +1,4 @@
-package com.rubisoft.bisexradar.Adapters;
+package com.rubisoft.bisexcuddles.Adapters;
 
 import java.util.ArrayList;
 import java.util.List;

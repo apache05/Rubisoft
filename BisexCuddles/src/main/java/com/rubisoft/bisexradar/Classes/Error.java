@@ -1,4 +1,4 @@
-package com.rubisoft.bisexradar.Classes;
+package com.rubisoft.bisexcuddles.Classes;
 
 import java.text.DecimalFormat;
 import java.util.Calendar;

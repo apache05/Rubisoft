@@ -27,9 +27,6 @@ import android.widget.ImageView;
 import android.widget.ImageView.ScaleType;
 import android.widget.LinearLayout;
 import android.widget.LinearLayout.LayoutParams;
-import android.widget.ProgressBar;
-import android.widget.RadioButton;
-import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -51,6 +48,7 @@ import com.rubisoft.lesbiancuddles.Classes.Logro;
 import com.rubisoft.lesbiancuddles.Classes.Premium;
 import com.rubisoft.lesbiancuddles.Interfaces.Interface_ClickListener_Menu;
 import com.rubisoft.lesbiancuddles.R;
+import com.rubisoft.lesbiancuddles.databinding.LayoutComprasBinding;
 import com.rubisoft.lesbiancuddles.tools.utils;
 
 import org.json.JSONObject;
@@ -68,7 +66,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatImageView;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.content.ContextCompat;
-import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.RecyclerView.OnItemTouchListener;
@@ -87,26 +84,9 @@ public class Activity_Compras extends AppCompatActivity  {
     private static final int BILLING_RESPONSE_RESULT_ITEM_NOT_OWNED = 8;
 
     private SharedPreferences perfil_usuario;
-    private TextView TextView_comprar_estrellas;
-    private TextView TextView_suscribir_premium;
-    private TextView TextView_ventajas_de_suscribir;
-    private TextView TextView_ventajas_de_comprar;
 	private FirebaseFirestore db;
-
-    private ProgressBar mProgressBar;
-    private RadioButton RadioButton_medio_anyo;
-    private RadioButton RadioButton_1_anyo;
-    private RadioButton RadioButton_5_estrellas;
-
-    private RadioButton RadioButton_10_estrellas;
-    private RadioButton RadioButton_20_estrellas;
-    private RadioButton RadioButton_40_estrellas;
-
-    private AppCompatImageView Button_comprar_estrellas;
-    private AppCompatImageView Button_suscribirse;
-
     private String developerPayload;
-	private LinearLayout Main_LinearLayout;
+	private LayoutComprasBinding binding;
 
     @Nullable
     private IInAppBillingService mService;
@@ -128,7 +108,7 @@ public class Activity_Compras extends AppCompatActivity  {
     //navigation drawer
     private Toolbar toolbar;
     private ActionBarDrawerToggle drawerToggle;
-    private DrawerLayout mDrawerLayout;
+
     private RecyclerView recyclerViewDrawer;
     private ImageView mImageView_PictureMain;
 
@@ -142,8 +122,8 @@ public class Activity_Compras extends AppCompatActivity  {
                 if (perfil_usuario.getString(getString(R.string.PERFIL_USUARIO_TOKEN_SOCIALAUTH), "").isEmpty()) {
                     salir();
                 } else {
-					this.setContentView(R.layout.layout_compras);
-					mProgressBar = this.findViewById(R.id.mProgressBar);
+					binding = LayoutComprasBinding.inflate(getLayoutInflater());
+					setContentView(binding.getRoot());
                     this.setup_toolbar();// Setup toolbar and statusBar (really FrameLayout)
                     this.preparar_servicio_billing();
 					db = FirebaseFirestore.getInstance();
@@ -156,11 +136,10 @@ public class Activity_Compras extends AppCompatActivity  {
                     Drawable icono = new IconicsDrawable(this).icon(Icon.gmd_done).color(ContextCompat.getColor(this, R.color.accent)).sizeDp(this.getResources().getInteger(R.integer.Tam_Normal_icons));
 
                     //Creamos un listener para el botón de comprar estrellas
-                    Button_comprar_estrellas.setImageDrawable(icono);
-                    Button_comprar_estrellas.setOnClickListener(view -> {
+                    binding.LayoutComprasButtonComprar.setImageDrawable(icono);
+					binding.LayoutComprasButtonComprar.setOnClickListener(view -> {
 						try {
-							RadioGroup mRadioGroup = Activity_Compras.this.findViewById(R.id.Layout_compras_RadioGroup_compra);
-							int id_radio_selected = mRadioGroup.getCheckedRadioButtonId();
+							int id_radio_selected = binding.LayoutComprasRadioGroupCompra.getCheckedRadioButtonId();
 							switch (id_radio_selected) {
 								case R.id.Layout_compras_RadioButton_5_estrellas:
 									Activity_Compras.this.comprar_estrellas(utils.get_SKU_compra_5_estrellas());
@@ -183,11 +162,10 @@ public class Activity_Compras extends AppCompatActivity  {
 					});
 
                     //Creamos un listener para el botón de suscribirse
-                    Button_suscribirse.setImageDrawable(icono);
-                    Button_suscribirse.setOnClickListener(view -> {
+                    binding.LayoutComprasButtonSuscribirse.setImageDrawable(icono);
+					binding.LayoutComprasButtonSuscribirse.setOnClickListener(view -> {
 						try {
-							RadioGroup mRadioGroup = Activity_Compras.this.findViewById(R.id.Layout_compras_RadioGroup_suscribe);
-							int id_radio_selected = mRadioGroup.getCheckedRadioButtonId();
+							int id_radio_selected = binding.LayoutComprasRadioGroupSuscribe.getCheckedRadioButtonId();
 							switch (id_radio_selected) {
 								case R.id.Layout_compras_RadioButton_1_anyo:
 									if (perfil_usuario.getBoolean(getResources().getString(R.string.PERFIL_USUARIO_ES_PREMIUM), false)) {
@@ -408,16 +386,16 @@ public class Activity_Compras extends AppCompatActivity  {
 
 	private void setupNavigationDrawer() {
 		try {
-			if (mDrawerLayout!=null) {
+			if (binding.mDrawerLayout!=null) {
 
 				// Setup Drawer Icon
-				drawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout, toolbar, R.string.drawer_open, R.string.drawer_close);
-				mDrawerLayout.addDrawerListener(drawerToggle);
+				drawerToggle = new ActionBarDrawerToggle(this, binding.mDrawerLayout, toolbar, R.string.drawer_open, R.string.drawer_close);
+				binding.mDrawerLayout.addDrawerListener(drawerToggle);
 				drawerToggle.syncState();
 
 				TypedValue typedValue = new TypedValue();
 				int color = typedValue.data;
-				mDrawerLayout.setStatusBarBackgroundColor(color);
+				binding.mDrawerLayout.setStatusBarBackgroundColor(color);
 			}
 			// Setup RecyclerViews inside drawer
 			setupNavigationDrawerRecyclerViews();
@@ -492,7 +470,7 @@ public class Activity_Compras extends AppCompatActivity  {
         recyclerViewDrawer.addOnItemTouchListener(new Activity_Compras.RecyclerTouchListener_menu(this, recyclerViewDrawer, (view, position) -> {
 			utils.gestiona_onclick_menu_principal(Activity_Compras.this, position);
 			if (!utils.isTablet(getApplicationContext())) {
-				 mDrawerLayout.closeDrawers();
+				binding.mDrawerLayout.closeDrawers();
 			}
 		}));
     }
@@ -615,18 +593,18 @@ public class Activity_Compras extends AppCompatActivity  {
             Typeface typeFace_roboto_light = Typeface.createFromAsset(this.getAssets(), "fonts/Roboto-Light.ttf");
             Typeface typeFace_roboto_bold = Typeface.createFromAsset(this.getAssets(), "fonts/Roboto-Bold.ttf");
 
-            RadioButton_1_anyo.setTypeface(typeFace_roboto_light);
-            RadioButton_medio_anyo.setTypeface(typeFace_roboto_light);
-            RadioButton_5_estrellas.setTypeface(typeFace_roboto_light);
-            RadioButton_10_estrellas.setTypeface(typeFace_roboto_light);
-            RadioButton_20_estrellas.setTypeface(typeFace_roboto_light);
-            RadioButton_40_estrellas.setTypeface(typeFace_roboto_light);
+            binding.LayoutComprasRadioButton1Anyo.setTypeface(typeFace_roboto_light);
+			binding.LayoutComprasRadioButtonMedioAnyo.setTypeface(typeFace_roboto_light);
+			binding.LayoutComprasRadioButton5Estrellas.setTypeface(typeFace_roboto_light);
+			binding.LayoutComprasRadioButton10Estrellas.setTypeface(typeFace_roboto_light);
+			binding.LayoutComprasRadioButton20Estrellas.setTypeface(typeFace_roboto_light);
+			binding.LayoutComprasRadioButton40Estrellas.setTypeface(typeFace_roboto_light);
 
-            TextView_suscribir_premium.setTypeface(typeFace_roboto_bold);
-            TextView_comprar_estrellas.setTypeface(typeFace_roboto_bold);
+			binding.LayoutComprasTextViewSuscribirPremium.setTypeface(typeFace_roboto_bold);
+			binding.LayoutComprasTextViewComprarEstrellas.setTypeface(typeFace_roboto_bold);
 
-            TextView_ventajas_de_comprar.setTypeface(typeFace_roboto_light);
-            TextView_ventajas_de_suscribir.setTypeface(typeFace_roboto_light);
+			binding.LayoutComprasTextViewVentajasDeComprar.setTypeface(typeFace_roboto_light);
+			binding.LayoutComprasTextViewVentajasDeSuscribir.setTypeface(typeFace_roboto_light);
         } catch (Exception e) {
             utils.registra_error(e.toString(), "setTypeFace");
         }
@@ -634,31 +612,12 @@ public class Activity_Compras extends AppCompatActivity  {
 
     private void setup_Views() {
         try {
-			Main_LinearLayout = findViewById(R.id.Main_LinearLayout);
-			mDrawerLayout = findViewById(R.id.mDrawerLayout);
-
-            TextView_comprar_estrellas = this.findViewById(R.id.Layout_compras_TextView_comprar_estrellas);
-            TextView_suscribir_premium = this.findViewById(R.id.Layout_compras_TextView_suscribir_premium);
-
-            TextView_ventajas_de_suscribir = this.findViewById(R.id.Layout_compras_TextView_ventajas_de_suscribir);
-            TextView_ventajas_de_comprar = this.findViewById(R.id.Layout_compras_TextView_ventajas_de_comprar);
-            RadioButton_5_estrellas = this.findViewById(R.id.Layout_compras_RadioButton_5_estrellas);
-            RadioButton_10_estrellas = this.findViewById(R.id.Layout_compras_RadioButton_10_estrellas);
-            RadioButton_20_estrellas = this.findViewById(R.id.Layout_compras_RadioButton_20_estrellas);
-            RadioButton_40_estrellas = this.findViewById(R.id.Layout_compras_RadioButton_40_estrellas);
-
-            RadioButton_1_anyo = this.findViewById(R.id.Layout_compras_RadioButton_1_anyo);
-            RadioButton_medio_anyo = this.findViewById(R.id.Layout_compras_RadioButton_medio_anyo);
-
-            Button_comprar_estrellas = this.findViewById(R.id.Layout_compras_Button_comprar);
-            Button_suscribirse = this.findViewById(R.id.Layout_compras_Button_suscribirse);
-
 			if (perfil_usuario.getBoolean(getResources().getString(R.string.PERFIL_USUARIO_ES_PREMIUM), false)) {
-				RadioButton_1_anyo.setEnabled(false);
-				RadioButton_medio_anyo.setEnabled(false);
+				binding.LayoutComprasRadioButton1Anyo.setEnabled(false);
+				binding.LayoutComprasRadioButtonMedioAnyo.setEnabled(false);
 			} else {
-				RadioButton_1_anyo.setEnabled(true);
-				RadioButton_medio_anyo.setEnabled(true);
+				binding.LayoutComprasRadioButton1Anyo.setEnabled(true);
+				binding.LayoutComprasRadioButtonMedioAnyo.setEnabled(true);
 			}
         } catch (Exception e) {
             utils.registra_error(e.toString(), "setup_Views");
@@ -667,15 +626,11 @@ public class Activity_Compras extends AppCompatActivity  {
 
     private void setText() {
         try {
-            TextView_suscribir_premium.setText(this.getResources().getString(R.string.ACTIVITY_MEJORAR_TITULO_SUSCRIBIR));
-            TextView_comprar_estrellas.setText(this.getResources().getString(R.string.ACTIVITY_MEJORAR_TITULO_COMPRAR));
-            TextView_ventajas_de_suscribir.setText(String.format(this.getResources().getString(R.string.ventajas_de_suscribir), this.getResources().getInteger(R.integer.NUM_MAX_FOTOS_PREMIUM)));
-            TextView_ventajas_de_comprar.setText(this.getResources().getString(R.string.ventajas_de_comprar));
-            /*if (utils.isFromGooglePlay(this)) {*/
-                new AsyncTask_set_prices_from_google().execute();
-         /*   }else{
-                setup_prices_statically();
-            }*/
+            binding.LayoutComprasTextViewSuscribirPremium.setText(this.getResources().getString(R.string.ACTIVITY_MEJORAR_TITULO_SUSCRIBIR));
+			binding.LayoutComprasTextViewComprarEstrellas.setText(this.getResources().getString(R.string.ACTIVITY_MEJORAR_TITULO_COMPRAR));
+			binding.LayoutComprasTextViewVentajasDeSuscribir.setText(String.format(this.getResources().getString(R.string.ventajas_de_suscribir), this.getResources().getInteger(R.integer.NUM_MAX_FOTOS_PREMIUM)));
+			binding.LayoutComprasTextViewVentajasDeComprar.setText(this.getResources().getString(R.string.ventajas_de_comprar));
+            new AsyncTask_set_prices_from_google().execute();
         } catch (Exception e) {
             utils.registra_error(e.toString(), "setText");
         }
@@ -691,10 +646,10 @@ public class Activity_Compras extends AppCompatActivity  {
 			}else {
 				FrameLayout.LayoutParams layoutParams = new FrameLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT);
 				layoutParams.setMargins(0, 0, 0, 0);
-				if (mDrawerLayout!=null){
-					mDrawerLayout.setLayoutParams(layoutParams);
+				if (binding.mDrawerLayout!=null){
+					binding.mDrawerLayout.setLayoutParams(layoutParams);
 				}else{
-					Main_LinearLayout.setLayoutParams(layoutParams);
+					binding.MainLinearLayout.setLayoutParams(layoutParams);
 				}
 			}
 		}catch (Exception e){
@@ -888,8 +843,8 @@ public class Activity_Compras extends AppCompatActivity  {
         //Esta función consulta el precio de cada producto que tenemos a la venta para averiguar su precio
         @Override
         protected void onPreExecute() {
-            if (mProgressBar != null) {
-                utils.setProgressBar_visibility(mProgressBar, View.VISIBLE);
+            if (binding.mProgressBar != null) {
+                utils.setProgressBar_visibility(binding.mProgressBar, View.VISIBLE);
             }
 
         }
@@ -944,25 +899,25 @@ public class Activity_Compras extends AppCompatActivity  {
                         String sku = object.getString("productId");
                         String price = object.getString("price");
                         if (sku.equals(utils.get_SKU_compra_5_estrellas())) {
-                            RadioButton_5_estrellas.setText(String.format(Activity_Compras.this.getResources().getString(R.string.ACTIVITY_MEJORAR_COMPRA_X_ESTRELLAS), 5, price));
+                            binding.LayoutComprasRadioButton5Estrellas.setText(String.format(Activity_Compras.this.getResources().getString(R.string.ACTIVITY_MEJORAR_COMPRA_X_ESTRELLAS), 5, price));
                         }else if (sku.equals(utils.get_SKU_compra_10_estrellas())) {
-                            RadioButton_10_estrellas.setText(String.format(Activity_Compras.this.getResources().getString(R.string.ACTIVITY_MEJORAR_COMPRA_X_ESTRELLAS), 10, price));
+							binding.LayoutComprasRadioButton10Estrellas.setText(String.format(Activity_Compras.this.getResources().getString(R.string.ACTIVITY_MEJORAR_COMPRA_X_ESTRELLAS), 10, price));
                         } else if (sku.equals(utils.get_SKU_compra_20_estrellas())) {
-                            RadioButton_20_estrellas.setText(String.format(Activity_Compras.this.getResources().getString(R.string.ACTIVITY_MEJORAR_COMPRA_X_ESTRELLAS), 20, price));
+							binding.LayoutComprasRadioButton20Estrellas.setText(String.format(Activity_Compras.this.getResources().getString(R.string.ACTIVITY_MEJORAR_COMPRA_X_ESTRELLAS), 20, price));
                         } else if (sku.equals(utils.get_SKU_compra_40_estrellas())) {
-                            RadioButton_40_estrellas.setText(String.format(Activity_Compras.this.getResources().getString(R.string.ACTIVITY_MEJORAR_COMPRA_X_ESTRELLAS), 40, price));
+							binding.LayoutComprasRadioButton40Estrellas.setText(String.format(Activity_Compras.this.getResources().getString(R.string.ACTIVITY_MEJORAR_COMPRA_X_ESTRELLAS), 40, price));
                         } else if (sku.equals(utils.get_SKU_suscribe_1_anyo_premium())) {
-                            RadioButton_1_anyo.setText(String.format(Activity_Compras.this.getResources().getString(R.string.ACTIVITY_MEJORAR_SUSCRIBE_1_AÑO), price));
+							binding.LayoutComprasRadioButton1Anyo.setText(String.format(Activity_Compras.this.getResources().getString(R.string.ACTIVITY_MEJORAR_SUSCRIBE_1_AÑO), price));
                         } else if (sku.equals(utils.get_SKU_suscribe_medio_anyo_premium())) {
-                            RadioButton_medio_anyo.setText(String.format(Activity_Compras.this.getResources().getString(R.string.ACTIVITY_MEJORAR_SUSCRIBE_6_MESES), price));
+							binding.LayoutComprasRadioButtonMedioAnyo.setText(String.format(Activity_Compras.this.getResources().getString(R.string.ACTIVITY_MEJORAR_SUSCRIBE_6_MESES), price));
                         }
                     }
                 }
 			} catch (Exception e) {
                 utils.registra_error(e.toString(), "AsyncTask_set_prices_from_google");
             } finally {
-                if (mProgressBar != null) {
-                    utils.setProgressBar_visibility(mProgressBar, View.INVISIBLE);
+                if (binding.mProgressBar != null) {
+                    utils.setProgressBar_visibility(binding.mProgressBar, View.INVISIBLE);
                 }
             }
         }

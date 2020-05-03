@@ -12,12 +12,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.EditText;
 import android.widget.Spinner;
-import android.widget.TextView;
 import android.widget.Toast;
 
-import com.appyvet.rangebar.RangeBar;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.messaging.FirebaseMessaging;
@@ -26,96 +23,73 @@ import com.mikepenz.iconics.IconicsDrawable;
 import com.rubisoft.lesbiancuddles.Classes.Usuario;
 import com.rubisoft.lesbiancuddles.R;
 import com.rubisoft.lesbiancuddles.activities.Activity_Principal;
+import com.rubisoft.lesbiancuddles.databinding.FragmentDatosPersonalesBinding;
 import com.rubisoft.lesbiancuddles.tools.utils;
 
 import java.text.DecimalFormat;
 import java.text.DecimalFormatSymbols;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.widget.AppCompatImageView;
 import androidx.core.content.ContextCompat;
 import androidx.core.util.Pair;
 import androidx.fragment.app.Fragment;
 
 public class fragment_datos_personales extends Fragment {
-	private ViewGroup rootView;
 	private SharedPreferences perfil_usuario;
 	private SharedPreferences preferencias_usuario;
 
-	private TextView mTextView_sexo;
-	private TextView mTextView_nick;
-	private EditText mEditText_nick;
-
-	private TextView mTextView_raza;
-	private TextView mTextView_peso;
-	private TextView mTextView_altura;
-	private TextView mTextView_edad;
-	private TextView mTextView_mi_raza;
-	private RangeBar mRangeBar_mi_peso;
-	private RangeBar mRangeBar_mi_altura;
-	private TextView mTextView_mi_peso;
-	private TextView mTextView_mi_altura;
-	private TextView mTextView_mi_edad;
-	private TextView mTextView_y;
-	private TextView mTextView_Quiero_deja_claro;
-
-	private TextView mTextView_Sexualidad;
-	private TextView mTextView_Tus_Datos;
-	private EditText mEditText_quiero_dejar_claro;
-	private Spinner mSpinner_orientacion;
+	private FragmentDatosPersonalesBinding binding;
 
 	@Override
 	public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-		this.rootView = (ViewGroup) inflater.inflate(R.layout.fragment_datos_personales, container, false);
 		this.preferencias_usuario = this.getActivity().getSharedPreferences(this.getResources().getString(R.string.SHAREDPREFERENCES_PREFERENCIAS_USUARIO), Context.MODE_PRIVATE);
 		this.perfil_usuario = this.getActivity().getSharedPreferences(this.getResources().getString(R.string.SHAREDPREFERENCES_PERFIL_USUARIO), Context.MODE_PRIVATE);
-
+		binding = FragmentDatosPersonalesBinding.inflate(inflater, container, false);
+		View mView = binding.getRoot();
 		try {
-			this.setup_Views();
 			this.set_Views_TypeFace();
 			this.set_TextViews_Text();
 			this.setup_RangerBars();
 
-			AppCompatImageView Button_guarda_datos_personales = this.rootView.findViewById(R.id.Fragment_datos_personales_Button_actualizar_datos_personales);
 			Drawable icono = new IconicsDrawable(this.getContext()).icon(Icon.gmd_done).color(ContextCompat.getColor(this.getContext(), R.color.accent)).sizeDp(this.getResources().getInteger(R.integer.Tam_Normal_icons));
-			Button_guarda_datos_personales.setImageDrawable(icono);
-			Button_guarda_datos_personales.setOnClickListener(view -> {
-				if (no_hay_incongruencias_sexuales((int) perfil_usuario.getLong(getResources().getString(R.string.PERFIL_USUARIO_SEXO), 0), mSpinner_orientacion.getSelectedItemPosition() + 1)) {
-					if(mEditText_quiero_dejar_claro.getText().length()==0){
+			binding.FragmentDatosPersonalesButtonActualizarDatosPersonales.setImageDrawable(icono);
+			binding.FragmentDatosPersonalesButtonActualizarDatosPersonales.setOnClickListener(view -> {
+				if (no_hay_incongruencias_sexuales((int) perfil_usuario.getLong(getResources().getString(R.string.PERFIL_USUARIO_SEXO), 0), binding.FragmentDatosPersonalesSpinnerCambiarMiOrientacion.getSelectedItemPosition() + 1)) {
+					if(binding.FragmentDatosPersonalesEdittextQuieroDejarClaro.getText().length()==0){
 						desuscribir_de_grupo();
 					}
 					//guardamos la busqueda que ha hecho para recordarla y que no tenga que tocar otra vez los controles
 					Editor editor_perfil_usuario = perfil_usuario.edit();
 					long peso;
-					if (Long.valueOf(mRangeBar_mi_peso.getRightPinValue()) > getResources().getInteger(R.integer.DEFAULT_PESO_MAXIMO)) {
+					if (Long.valueOf(binding.FragmentDatosPersonalesRangeBarMiPeso.getRightPinValue()) > getResources().getInteger(R.integer.DEFAULT_PESO_MAXIMO)) {
 						peso = (long) getResources().getInteger(R.integer.DEFAULT_PESO_MAXIMO);
-					} else if (Long.valueOf(mRangeBar_mi_peso.getRightPinValue()) < getResources().getInteger(R.integer.DEFAULT_PESO_MINIMO)) {
+					} else if (Long.valueOf(binding.FragmentDatosPersonalesRangeBarMiPeso.getRightPinValue()) < getResources().getInteger(R.integer.DEFAULT_PESO_MINIMO)) {
 						peso = (long) getResources().getInteger(R.integer.DEFAULT_PESO_MINIMO);
 					} else {
-						peso = Long.parseLong(mRangeBar_mi_peso.getRightPinValue());
+						peso = Long.parseLong(binding.FragmentDatosPersonalesRangeBarMiPeso.getRightPinValue());
 					}
 					long altura;
-					if (Long.valueOf(mRangeBar_mi_altura.getRightPinValue()) > getResources().getInteger(R.integer.DEFAULT_ALTURA_MAXIMA)) {
+					if (Long.valueOf(binding.FragmentDatosPersonalesRangeBarMiAltura.getRightPinValue()) > getResources().getInteger(R.integer.DEFAULT_ALTURA_MAXIMA)) {
 						altura = (long) getResources().getInteger(R.integer.DEFAULT_ALTURA_MAXIMA);
-					} else if (Long.valueOf(mRangeBar_mi_altura.getRightPinValue()) < getResources().getInteger(R.integer.DEFAULT_ALTURA_MINIMA)) {
+					} else if (Long.valueOf(binding.FragmentDatosPersonalesRangeBarMiAltura.getRightPinValue()) < getResources().getInteger(R.integer.DEFAULT_ALTURA_MINIMA)) {
 						altura = (long) getResources().getInteger(R.integer.DEFAULT_ALTURA_MINIMA);
 					} else {
-						altura = Long.parseLong(mRangeBar_mi_altura.getRightPinValue());
+						altura = Long.parseLong(binding.FragmentDatosPersonalesRangeBarMiAltura.getRightPinValue());
 					}
 					
-					editor_perfil_usuario.putString(getResources().getString(R.string.PERFIL_USUARIO_NICK), mEditText_nick.getText().toString());
+					editor_perfil_usuario.putString(getResources().getString(R.string.PERFIL_USUARIO_NICK), binding.FragmentDatosPersonalesEditTextNick.getText().toString());
 					editor_perfil_usuario.putLong(getResources().getString(R.string.PERFIL_USUARIO_PESO), peso);
 					editor_perfil_usuario.putLong(getResources().getString(R.string.PERFIL_USUARIO_ALTURA), altura);
-					editor_perfil_usuario.putString(getResources().getString(R.string.PERFIL_USUARIO_QUIERO_DEJAR_CLARO), mEditText_quiero_dejar_claro.getText().toString());
-					editor_perfil_usuario.putLong(getResources().getString(R.string.PERFIL_USUARIO_ORIENTACION), (long) (mSpinner_orientacion.getSelectedItemPosition() + 1));
+					editor_perfil_usuario.putString(getResources().getString(R.string.PERFIL_USUARIO_QUIERO_DEJAR_CLARO), binding.FragmentDatosPersonalesEdittextQuieroDejarClaro.getText().toString());
+					editor_perfil_usuario.putLong(getResources().getString(R.string.PERFIL_USUARIO_ORIENTACION), (long) (binding.FragmentDatosPersonalesSpinnerCambiarMiOrientacion.getSelectedItemPosition() + 1));
 					editor_perfil_usuario.apply();
 
 					Usuario un_usuario=new Usuario();
-					un_usuario.setOrientacion((long) mSpinner_orientacion.getSelectedItemPosition() + 1);
-					un_usuario.setPeso(Long.valueOf(mRangeBar_mi_peso.getRightPinValue()));
-					un_usuario.setAltura(Long.valueOf(mRangeBar_mi_altura.getRightPinValue()));
-					un_usuario.setNick(mEditText_nick.getText().toString());
-					un_usuario.setQuiero_dejar_claro_que(mEditText_quiero_dejar_claro.getText().toString());
+					un_usuario.setOrientacion((long) binding.FragmentDatosPersonalesSpinnerCambiarMiOrientacion.getSelectedItemPosition() + 1);
+					un_usuario.setPeso(Long.valueOf(binding.FragmentDatosPersonalesRangeBarMiPeso.getRightPinValue()));
+					un_usuario.setAltura(Long.valueOf(binding.FragmentDatosPersonalesRangeBarMiAltura.getRightPinValue()));
+					un_usuario.setNick(binding.FragmentDatosPersonalesEditTextNick.getText().toString());
+					un_usuario.setQuiero_dejar_claro_que(binding.FragmentDatosPersonalesEdittextQuieroDejarClaro.getText().toString());
 					actualiza_perfil_en_Firestore(un_usuario);
 
 					if (un_usuario.getOrientacion()!=null) {
@@ -134,7 +108,7 @@ public class fragment_datos_personales extends Fragment {
 		} catch (Exception e) {
 			utils.registra_error(e.toString(), "onCreateView de fragment_datos_personales");
 		}
-		return this.rootView;
+		return mView;
 	}
 
 
@@ -168,77 +142,53 @@ public class fragment_datos_personales extends Fragment {
 		return utils.getEdad(this.perfil_usuario.getLong(this.getResources().getString(R.string.PERFIL_USUARIO_FECHA_NACIMIENTO), 0));
 	}
 
-	private void setup_Views() {
-		this.mTextView_sexo = this.rootView.findViewById(R.id.Fragment_datos_personales_TextView_sexo);
-		this.mTextView_Tus_Datos = this.rootView.findViewById(R.id.Fragment_datos_personales_TextView_Tus_Datos);
-		this.mTextView_Sexualidad = this.rootView.findViewById(R.id.Fragment_datos_personales_TextView_Sexualidad);
-		this.mTextView_nick = this.rootView.findViewById(R.id.Fragment_datos_personales_TextView_Nick);
-		this.mEditText_nick = this.rootView.findViewById(R.id.Fragment_datos_personales_EditText_nick);
-		this.mTextView_y = this.rootView.findViewById(R.id.Fragment_datos_personales_TextView_y);
-		this.mTextView_Quiero_deja_claro = this.rootView.findViewById(R.id.Fragment_datos_personales_TextView_Quiero_dejar_claro_que);
-
-		this.mTextView_raza = this.rootView.findViewById(R.id.Fragment_datos_personales_TextView_Raza);
-		this.mTextView_peso = this.rootView.findViewById(R.id.Fragment_datos_personales_TextView_Peso);
-		this.mTextView_altura = this.rootView.findViewById(R.id.Fragment_datos_personales_TextView_Altura);
-		this.mTextView_edad = this.rootView.findViewById(R.id.Fragment_datos_personales_TextView_Edad);
-		this.mTextView_mi_raza = this.rootView.findViewById(R.id.Fragment_datos_personales_TextView_mi_Raza);
-		this.mRangeBar_mi_peso = this.rootView.findViewById(R.id.Fragment_datos_personales_RangeBar_mi_Peso);
-		this.mRangeBar_mi_altura = this.rootView.findViewById(R.id.Fragment_datos_personales_RangeBar_mi_Altura);
-		this.mTextView_mi_peso = this.rootView.findViewById(R.id.Fragment_datos_personales_TextView_mi_Peso);
-		this.mTextView_mi_altura = this.rootView.findViewById(R.id.Fragment_datos_personales_TextView_mi_Altura);
-		this.mTextView_mi_edad = this.rootView.findViewById(R.id.Fragment_datos_personales_TextView_mi_Edad);
-		this.mSpinner_orientacion = this.rootView.findViewById(R.id.Fragment_datos_personales_Spinner_cambiar_mi_orientacion);
-		this.mEditText_quiero_dejar_claro = rootView.findViewById(R.id.Fragment_datos_personales_Edittext_quiero_dejar_claro);
-
-	}
-
 	private void set_Views_TypeFace() {
 		Typeface typeFace_roboto_light = Typeface.createFromAsset(this.getActivity().getAssets(), "fonts/Roboto-Light.ttf");
 		Typeface typeFace_roboto_bold = Typeface.createFromAsset(this.getActivity().getAssets(), "fonts/Roboto-Bold.ttf");
 
-		this.mTextView_raza.setTypeface(typeFace_roboto_bold);
-		this.mTextView_peso.setTypeface(typeFace_roboto_bold);
-		this.mTextView_altura.setTypeface(typeFace_roboto_bold);
-		this.mTextView_edad.setTypeface(typeFace_roboto_bold);
-		this.mTextView_nick.setTypeface(typeFace_roboto_bold);
-		this.mEditText_nick.setTypeface(typeFace_roboto_light);
-		this.mTextView_mi_raza.setTypeface(typeFace_roboto_light);
-		this.mTextView_mi_peso.setTypeface(typeFace_roboto_light);
-		this.mTextView_mi_altura.setTypeface(typeFace_roboto_light);
-		this.mTextView_mi_edad.setTypeface(typeFace_roboto_light);
-		this.mTextView_y.setTypeface(typeFace_roboto_light);
-		this.mTextView_Tus_Datos.setTypeface(typeFace_roboto_bold);
-		this.mTextView_Sexualidad.setTypeface(typeFace_roboto_bold);
-		this.mTextView_Quiero_deja_claro.setTypeface(typeFace_roboto_bold);
-		this.mTextView_sexo.setTypeface(typeFace_roboto_light);
+		binding.FragmentDatosPersonalesTextViewRaza.setTypeface(typeFace_roboto_bold);
+		binding.FragmentDatosPersonalesTextViewPeso.setTypeface(typeFace_roboto_bold);
+		binding.FragmentDatosPersonalesTextViewAltura.setTypeface(typeFace_roboto_bold);
+		binding.FragmentDatosPersonalesTextViewEdad.setTypeface(typeFace_roboto_bold);
+		binding.FragmentDatosPersonalesTextViewNick.setTypeface(typeFace_roboto_bold);
+		binding.FragmentDatosPersonalesEditTextNick.setTypeface(typeFace_roboto_light);
+		binding.FragmentDatosPersonalesTextViewMiRaza.setTypeface(typeFace_roboto_light);
+		binding.FragmentDatosPersonalesTextViewMiPeso.setTypeface(typeFace_roboto_light);
+		binding.FragmentDatosPersonalesTextViewMiAltura.setTypeface(typeFace_roboto_light);
+		binding.FragmentDatosPersonalesTextViewMiEdad.setTypeface(typeFace_roboto_light);
+		binding.FragmentDatosPersonalesTextViewY.setTypeface(typeFace_roboto_light);
+		binding.FragmentDatosPersonalesTextViewTusDatos.setTypeface(typeFace_roboto_bold);
+		binding.FragmentDatosPersonalesTextViewSexualidad.setTypeface(typeFace_roboto_bold);
+		binding.FragmentDatosPersonalesTextViewQuieroDejarClaroQue.setTypeface(typeFace_roboto_bold);
+		binding.FragmentDatosPersonalesTextViewSexo.setTypeface(typeFace_roboto_light);
 
-		mEditText_quiero_dejar_claro.setTypeface(typeFace_roboto_light);
+		binding.FragmentDatosPersonalesEdittextQuieroDejarClaro.setTypeface(typeFace_roboto_light);
 	}
 
 	private void set_TextViews_Text() {
 		try {
-			this.mEditText_nick.setText(this.perfil_usuario.getString(this.getResources().getString(R.string.PERFIL_USUARIO_NICK), ""));
-			mEditText_nick.requestFocus();
+			binding.FragmentDatosPersonalesEditTextNick.setText(this.perfil_usuario.getString(this.getResources().getString(R.string.PERFIL_USUARIO_NICK), ""));
+			binding.FragmentDatosPersonalesEditTextNick.requestFocus();
 
-			this.mTextView_mi_raza.setText(String.format(this.getResources().getString(R.string.texto), this.getResources().getStringArray(R.array.razas)[(int) this.perfil_usuario.getLong(this.getResources().getString(R.string.PERFIL_USUARIO_RAZA), 1)]));
-			this.mTextView_mi_edad.setText(String.format(this.getResources().getString(R.string.numero), this.get_edad()));
+			binding.FragmentDatosPersonalesTextViewMiRaza.setText(String.format(this.getResources().getString(R.string.texto), this.getResources().getStringArray(R.array.razas)[(int) this.perfil_usuario.getLong(this.getResources().getString(R.string.PERFIL_USUARIO_RAZA), 1)]));
+			binding.FragmentDatosPersonalesTextViewMiEdad.setText(String.format(this.getResources().getString(R.string.numero), this.get_edad()));
 
 			if (this.preferencias_usuario.getLong(this.getResources().getString(R.string.PREFERENCIAS_UNIDADES), 0L) == this.getResources().getInteger(R.integer.BRITANICO)) {
 				Pair un_par = utils.kg_a_st_and_lb((int) this.perfil_usuario.getLong(this.getResources().getString(R.string.PERFIL_USUARIO_PESO), 0L));
-				this.mTextView_mi_peso.setText(String.format(this.getResources().getString(R.string.st_y_lb), (double)un_par.first,(double) un_par.second));
-				this.mTextView_mi_altura.setText(String.format(this.getResources().getString(R.string.texto), utils.cm_a_feet_and_inches((int) this.perfil_usuario.getLong(this.getResources().getString(R.string.PERFIL_USUARIO_ALTURA), 0L))));
+				binding.FragmentDatosPersonalesTextViewMiPeso.setText(String.format(this.getResources().getString(R.string.st_y_lb), (int)un_par.first,(double) un_par.second));
+				binding.FragmentDatosPersonalesTextViewMiAltura.setText(String.format(this.getResources().getString(R.string.texto), utils.cm_a_feet_and_inches((int) this.perfil_usuario.getLong(this.getResources().getString(R.string.PERFIL_USUARIO_ALTURA), 0L))));
 			} else if (this.preferencias_usuario.getLong(this.getResources().getString(R.string.PREFERENCIAS_UNIDADES), 0L) == this.getResources().getInteger(R.integer.AMERICANO)) {
-				this.mTextView_mi_peso.setText(String.format(this.getResources().getString(R.string.texto), utils.kg_a_lb((int) this.perfil_usuario.getLong(this.getResources().getString(R.string.PERFIL_USUARIO_PESO), 0L))));
-				this.mTextView_mi_altura.setText(String.format(this.getResources().getString(R.string.texto), utils.cm_a_feet_and_inches((int) this.perfil_usuario.getLong(this.getResources().getString(R.string.PERFIL_USUARIO_ALTURA), 0L))));
+				binding.FragmentDatosPersonalesTextViewMiPeso.setText(String.format(this.getResources().getString(R.string.texto), utils.kg_a_lb((int) this.perfil_usuario.getLong(this.getResources().getString(R.string.PERFIL_USUARIO_PESO), 0L))));
+				binding.FragmentDatosPersonalesTextViewMiAltura.setText(String.format(this.getResources().getString(R.string.texto), utils.cm_a_feet_and_inches((int) this.perfil_usuario.getLong(this.getResources().getString(R.string.PERFIL_USUARIO_ALTURA), 0L))));
 			} else {
-				this.mTextView_mi_peso.setText(String.format(this.getResources().getString(R.string.kg), this.perfil_usuario.getLong(this.getResources().getString(R.string.PERFIL_USUARIO_PESO), 0L)));
-				this.mTextView_mi_altura.setText(String.format(this.getResources().getString(R.string.m), this.get_altura()));
+				binding.FragmentDatosPersonalesTextViewMiPeso.setText(String.format(this.getResources().getString(R.string.kg), this.perfil_usuario.getLong(this.getResources().getString(R.string.PERFIL_USUARIO_PESO), 0L)));
+				binding.FragmentDatosPersonalesTextViewMiAltura.setText(String.format(this.getResources().getString(R.string.m), this.get_altura()));
 			}
 
-			this.setup_spinners_perfil(this.mSpinner_orientacion);
+			this.setup_spinners_perfil(binding.FragmentDatosPersonalesSpinnerCambiarMiOrientacion);
 
-			this.mTextView_sexo.setText(this.getResources().getTextArray(R.array.sexos)[(int) this.perfil_usuario.getLong(this.getResources().getString(R.string.PERFIL_USUARIO_SEXO), 1L)]);
-			mEditText_quiero_dejar_claro.setText(perfil_usuario.getString(getResources().getString(R.string.PERFIL_USUARIO_QUIERO_DEJAR_CLARO), ""));
+			binding.FragmentDatosPersonalesTextViewSexo.setText(this.getResources().getTextArray(R.array.sexos)[(int) this.perfil_usuario.getLong(this.getResources().getString(R.string.PERFIL_USUARIO_SEXO), 1L)]);
+			binding.FragmentDatosPersonalesEdittextQuieroDejarClaro.setText(perfil_usuario.getString(getResources().getString(R.string.PERFIL_USUARIO_QUIERO_DEJAR_CLARO), ""));
 
 		} catch (Exception e) {
 			utils.registra_error(e.toString(), "set_TextViews_Text de fragment_datos_presonales");
@@ -248,41 +198,41 @@ public class fragment_datos_personales extends Fragment {
 	private void setup_RangerBars() {
 		try {
 			if (this.perfil_usuario.getLong(this.getResources().getString(R.string.PERFIL_USUARIO_ALTURA), 0L) > getResources().getInteger(R.integer.DEFAULT_ALTURA_MAXIMA)) {
-				mRangeBar_mi_altura.setSeekPinByValue(getResources().getInteger(R.integer.DEFAULT_ALTURA_MAXIMA));
+				binding.FragmentDatosPersonalesRangeBarMiAltura.setSeekPinByValue(getResources().getInteger(R.integer.DEFAULT_ALTURA_MAXIMA));
 			} else if (this.perfil_usuario.getLong(this.getResources().getString(R.string.PERFIL_USUARIO_ALTURA), 0L) < getResources().getInteger(R.integer.DEFAULT_ALTURA_MINIMA)) {
-				mRangeBar_mi_altura.setSeekPinByValue(getResources().getInteger(R.integer.DEFAULT_ALTURA_MINIMA));
+				binding.FragmentDatosPersonalesRangeBarMiAltura.setSeekPinByValue(getResources().getInteger(R.integer.DEFAULT_ALTURA_MINIMA));
 			} else {
-				mRangeBar_mi_altura.setSeekPinByValue(this.perfil_usuario.getLong(this.getResources().getString(R.string.PERFIL_USUARIO_ALTURA), 0L));
+				binding.FragmentDatosPersonalesRangeBarMiAltura.setSeekPinByValue(this.perfil_usuario.getLong(this.getResources().getString(R.string.PERFIL_USUARIO_ALTURA), 0L));
 			}
 
 			if (this.perfil_usuario.getLong(this.getResources().getString(R.string.PERFIL_USUARIO_PESO), 0L) > getResources().getInteger(R.integer.DEFAULT_PESO_MAXIMO)) {
-				mRangeBar_mi_peso.setSeekPinByValue(getResources().getInteger(R.integer.DEFAULT_PESO_MAXIMO));
+				binding.FragmentDatosPersonalesRangeBarMiPeso.setSeekPinByValue(getResources().getInteger(R.integer.DEFAULT_PESO_MAXIMO));
 			} else if (this.perfil_usuario.getLong(this.getResources().getString(R.string.PERFIL_USUARIO_PESO), 0L) < getResources().getInteger(R.integer.DEFAULT_PESO_MINIMO)) {
-				mRangeBar_mi_peso.setSeekPinByValue(getResources().getInteger(R.integer.DEFAULT_PESO_MINIMO));
+				binding.FragmentDatosPersonalesRangeBarMiPeso.setSeekPinByValue(getResources().getInteger(R.integer.DEFAULT_PESO_MINIMO));
 			} else {
-				mRangeBar_mi_peso.setSeekPinByValue(this.perfil_usuario.getLong(this.getResources().getString(R.string.PERFIL_USUARIO_PESO), 0L));
+				binding.FragmentDatosPersonalesRangeBarMiPeso.setSeekPinByValue(this.perfil_usuario.getLong(this.getResources().getString(R.string.PERFIL_USUARIO_PESO), 0L));
 			}
 
-			mRangeBar_mi_altura.setOnRangeBarChangeListener((rangeBar, leftPinIndex, rightPinIndex, leftPinValue, rightPinValue) -> {
+			binding.FragmentDatosPersonalesRangeBarMiAltura.setOnRangeBarChangeListener((rangeBar, leftPinIndex, rightPinIndex, leftPinValue, rightPinValue) -> {
 				try {
 					if ((preferencias_usuario.getLong(getResources().getString(R.string.PREFERENCIAS_UNIDADES), 0L) == getResources().getInteger(R.integer.BRITANICO)) || ((preferencias_usuario.getLong(getResources().getString(R.string.PREFERENCIAS_UNIDADES), 0L) == getResources().getInteger(R.integer.AMERICANO)))) {
-						mTextView_mi_altura.setText(utils.cm_a_feet_and_inches(Integer.valueOf(rightPinValue)));
+						binding.FragmentDatosPersonalesTextViewMiAltura.setText(utils.cm_a_feet_and_inches(Integer.valueOf(rightPinValue)));
 					} else {
-						mTextView_mi_altura.setText(String.format(getResources().getString(R.string.m),Float.valueOf(rightPinValue)/100));
+						binding.FragmentDatosPersonalesTextViewMiAltura.setText(String.format(getResources().getString(R.string.m),Float.valueOf(rightPinValue)/100));
 					}
 				} catch (Exception e) {
 					utils.registra_error(e.toString(), "");
 				}
 			});
-			mRangeBar_mi_peso.setOnRangeBarChangeListener((rangeBar, leftPinIndex, rightPinIndex, leftPinValue, rightPinValue) -> {
+			binding.FragmentDatosPersonalesRangeBarMiPeso.setOnRangeBarChangeListener((rangeBar, leftPinIndex, rightPinIndex, leftPinValue, rightPinValue) -> {
 				try{
 					if (preferencias_usuario.getLong(getResources().getString(R.string.PREFERENCIAS_UNIDADES), 0L) == getResources().getInteger(R.integer.BRITANICO)) {
 						Pair un_par = utils.kg_a_st_and_lb(Integer.valueOf(rightPinValue));
-						mTextView_mi_peso.setText(getResources().getString(R.string.st_y_lb, (double)un_par.first,(double) un_par.second));
+						binding.FragmentDatosPersonalesTextViewMiPeso.setText(getResources().getString(R.string.st_y_lb, (double)un_par.first,(double) un_par.second));
 					} else if (preferencias_usuario.getLong(getResources().getString(R.string.PREFERENCIAS_UNIDADES), 0L) == getResources().getInteger(R.integer.AMERICANO)) {
-						mTextView_mi_peso.setText(utils.kg_a_lb(Integer.valueOf(rightPinValue)));
+						binding.FragmentDatosPersonalesTextViewMiPeso.setText(utils.kg_a_lb(Integer.valueOf(rightPinValue)));
 					} else {
-						mTextView_mi_peso.setText(String.format(getResources().getString(R.string.kg), Integer.valueOf(rightPinValue)));
+						binding.FragmentDatosPersonalesTextViewMiPeso.setText(String.format(getResources().getString(R.string.kg), Integer.valueOf(rightPinValue)));
 					}
 				} catch (Exception e) {
 					utils.registra_error(e.toString(), "");

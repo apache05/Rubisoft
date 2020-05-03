@@ -1,4 +1,4 @@
-package com.rubisoft.bisexradar.Classes;
+package com.rubisoft.bisexcuddles.Classes;
 
 
 import android.app.AlertDialog.Builder;
@@ -8,8 +8,8 @@ import android.database.DataSetObserver;
 import android.util.AttributeSet;
 import android.widget.SpinnerAdapter;
 
-import com.rubisoft.bisexradar.R;
-import com.rubisoft.bisexradar.tools.utils;
+import com.rubisoft.bisexcuddles.R;
+import com.rubisoft.bisexcuddles.tools.utils;
 
 public class MultiSpinner extends androidx.appcompat.widget.AppCompatTextView implements DialogInterface.OnMultiChoiceClickListener {
 
@@ -96,9 +96,10 @@ public class MultiSpinner extends androidx.appcompat.widget.AppCompatTextView im
     public boolean hay_alguno_seleccionado() {
         boolean resultado = false;
         for (boolean aMSelected : mSelected) {
-            if (aMSelected) {
-                resultado = true;
-            }
+			if (aMSelected) {
+				resultado = true;
+				break;
+			}
         }
         return resultado;
     }

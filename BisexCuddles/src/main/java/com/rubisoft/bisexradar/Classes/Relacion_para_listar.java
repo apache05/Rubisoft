@@ -1,4 +1,4 @@
-package com.rubisoft.bisexradar.Classes;
+package com.rubisoft.bisexcuddles.Classes;
 
 
 import android.graphics.drawable.Drawable;

@@ -8,7 +8,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.afollestad.materialdialogs.MaterialDialog;
@@ -20,10 +19,10 @@ import com.rubisoft.bisexradar.Classes.Denuncia;
 import com.rubisoft.bisexradar.R;
 import com.rubisoft.bisexradar.activities.Activity_Chat_Individual;
 import com.rubisoft.bisexradar.activities.Activity_Un_Perfil;
+import com.rubisoft.bisexradar.databinding.DialogoInteractuarChatGeneralBinding;
 import com.rubisoft.bisexradar.tools.utils;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.widget.AppCompatImageView;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.FragmentTransaction;
@@ -41,8 +40,10 @@ public class Dialog_Interactuar_Chat_General extends DialogFragment {
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         this.onCreate(savedInstanceState);
 
-        View view = inflater.inflate(R.layout.dialogo_interactuar_chat_general, container);
-        try {
+        DialogoInteractuarChatGeneralBinding binding = DialogoInteractuarChatGeneralBinding.inflate(inflater, container, false);
+		View mView = binding.getRoot();
+
+		try {
             //si es una tableta hacemos la ventana mas grande
             if (utils.isTablet(getContext())) {
                 getDialog().getWindow().setLayout(600, 300);
@@ -55,9 +56,8 @@ public class Dialog_Interactuar_Chat_General extends DialogFragment {
 			token_socialauth_mio = args.getString(getResources().getString(R.string.PERFIL_USUARIO_TOKEN_SOCIALAUTH));
 
 			Typeface mTypeFace_roboto_light = Typeface.createFromAsset(getActivity().getAssets(), "fonts/Roboto-Light.ttf");
-            TextView mTextView_Title = view.findViewById(R.id.Dialogo_interactuar_title);
-            mTextView_Title.setText(getResources().getString(R.string.DIALOGO_INTERACTUAR_TITULO));
-            mTextView_Title.setTypeface(mTypeFace_roboto_light);
+			binding.DialogoInteractuarTitle.setText(getResources().getString(R.string.DIALOGO_INTERACTUAR_TITULO));
+			binding.DialogoInteractuarTitle.setTypeface(mTypeFace_roboto_light);
 
             // Set listener, view, data for your dialog fragment
             Drawable icono_fotos_usuario = new IconicsDrawable(getContext()).icon(Icon.gmd_recent_actors).color(ContextCompat.getColor(getContext(), R.color.primary)).sizeDp(getResources().getInteger(R.integer.Tam_Small_icons));
@@ -65,9 +65,8 @@ public class Dialog_Interactuar_Chat_General extends DialogFragment {
             Drawable icono_denunciar = new IconicsDrawable(getContext()).icon(Icon.gmd_remove_circle).color(ContextCompat.getColor(getContext(), R.color.primary)).sizeDp(getResources().getInteger(R.integer.Tam_Small_icons));
             Drawable icono_info = new IconicsDrawable(getContext()).icon(Icon.gmd_info).color(ContextCompat.getColor(getContext(), R.color.primary)).sizeDp(getResources().getInteger(R.integer.Tam_Small_icons));
 
-            AppCompatImageView Button_ver_fotos = view.findViewById(R.id.Dialogo_interactuar_Button_Ver_fotos);
-            Button_ver_fotos.setImageDrawable(icono_fotos_usuario);
-            Button_ver_fotos.setOnClickListener(view15 -> {
+			binding.DialogoInteractuarButtonVerFotos.setImageDrawable(icono_fotos_usuario);
+			binding.DialogoInteractuarButtonVerFotos.setOnClickListener(view15 -> {
 				try {
 					Intent mIntent = new Intent(getContext(), Activity_Un_Perfil.class);
 					mIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
@@ -83,9 +82,9 @@ public class Dialog_Interactuar_Chat_General extends DialogFragment {
 					utils.registra_error(e.toString(), "onCreateView (Button_ver_fotos) de dialog_interactuar_chat_general");
 				}
 			});
-            AppCompatImageView Button_escribir_mensaje = view.findViewById(R.id.Dialogo_interactuar_Button_escribir_mensaje);
-            Button_escribir_mensaje.setImageDrawable(icono_mandar_mensaje);
-            Button_escribir_mensaje.setOnClickListener(view14 -> {
+
+			binding.DialogoInteractuarButtonEscribirMensaje.setImageDrawable(icono_mandar_mensaje);
+			binding.DialogoInteractuarButtonEscribirMensaje.setOnClickListener(view14 -> {
 				try {
 						Intent mIntent = new Intent(getContext(), Activity_Chat_Individual.class);
 						Bundle bundle = new Bundle();
@@ -102,9 +101,9 @@ public class Dialog_Interactuar_Chat_General extends DialogFragment {
 					utils.registra_error(e.toString(), "onCreateView (Button_escribir_mensaje) de dialog_interactuar_chat_general");
 				}
 			});
-            AppCompatImageView Button_denunciar = view.findViewById(R.id.Dialogo_interactuar_Button_denunciar);
-            Button_denunciar.setImageDrawable(icono_denunciar);
-            Button_denunciar.setOnClickListener(view13 -> {
+
+			binding.DialogoInteractuarButtonDenunciar.setImageDrawable(icono_denunciar);
+			binding.DialogoInteractuarButtonDenunciar.setOnClickListener(view13 -> {
 				try {
 					new MaterialDialog.Builder(getActivity())
 							.theme(Theme.LIGHT)
@@ -130,9 +129,9 @@ public class Dialog_Interactuar_Chat_General extends DialogFragment {
 					utils.registra_error(e.toString(), "onCreateView (Button_denunciar) de dialog_interactuar_chat_general");
 				}
 			});
-            AppCompatImageView Button_info = view.findViewById(R.id.Dialogo_interactuar_Button_info);
-            Button_info.setImageDrawable(icono_info);
-            Button_info.setOnClickListener(view1 -> {
+
+			binding.DialogoInteractuarButtonInfo.setImageDrawable(icono_info);
+			binding.DialogoInteractuarButtonInfo.setOnClickListener(view1 -> {
 				try {
 					lanza_dialogo_info();
 					dismiss();
@@ -143,7 +142,7 @@ public class Dialog_Interactuar_Chat_General extends DialogFragment {
         }catch (Exception e){
             utils.registra_error(e.toString(), "onCreateView de Dialog_Interactuar_Chat_general");
         }
-        return view;
+        return mView;
     }
 
     @Override
@@ -151,7 +150,7 @@ public class Dialog_Interactuar_Chat_General extends DialogFragment {
         //No call for super(). Bug on API Level > 11.
     }
 
-    private  void lanza_dialogo_info() {
+    private void lanza_dialogo_info() {
         try {
             Bundle args = new Bundle();
             FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();

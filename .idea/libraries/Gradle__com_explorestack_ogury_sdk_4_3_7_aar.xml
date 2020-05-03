@@ -1,8 +1,8 @@
 <component name="libraryTable">
   <library name="Gradle: com.explorestack.ogury:sdk:4.3.7@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/6aa1283aa7c6ff685fee681a5e869f21/jetified-sdk-4.3.7/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/6aa1283aa7c6ff685fee681a5e869f21/jetified-sdk-4.3.7/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/6200501d0b346ac5b8d0802d6fbbcc7a/jetified-sdk-4.3.7/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/6200501d0b346ac5b8d0802d6fbbcc7a/jetified-sdk-4.3.7/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

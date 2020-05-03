@@ -20,8 +20,6 @@ import android.os.Environment;
 import android.provider.MediaStore;
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.ProgressBar;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.appodeal.ads.Appodeal;
@@ -49,8 +47,8 @@ import com.google.firebase.storage.UploadTask;
 import com.mikepenz.google_material_typeface_library.GoogleMaterial;
 import com.mikepenz.iconics.IconicsDrawable;
 import com.rubisoft.gaycuddles.BuildConfig;
-import com.rubisoft.gaycuddles.Dialogs.Dialog_Cambiar_Primeras_Fotos;
 import com.rubisoft.gaycuddles.R;
+import com.rubisoft.gaycuddles.databinding.LayoutPrimerasFotosBinding;
 import com.rubisoft.gaycuddles.tools.utils;
 
 import java.io.ByteArrayOutputStream;
@@ -58,16 +56,20 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
+import java.net.SocketTimeoutException;
+import java.net.UnknownHostException;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
 import java.util.Locale;
 import java.util.concurrent.RejectedExecutionException;
+import java.net.ConnectException;
+
+import javax.net.ssl.SSLException;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.AppCompatImageView;
 import androidx.core.content.ContextCompat;
 import androidx.core.content.FileProvider;
 import androidx.core.util.Pair;
@@ -85,15 +87,10 @@ public class Activity_Primeras_fotos extends AppCompatActivity {
 	private static final int PERMISSION_BORRAR_FOTO = 3;
 	private static final int MAX_LABEL_RESULTS = 10;
 	private static final String TAG_CAMBIAR_FOTO = "cambiar_foto";
-	private TextView mTextView_primeras_fotos;
-	private TextView mTextView_advertencia;
-	private ProgressBar mProgressBar;
 
-	private AppCompatImageView mAppCompatImageView_foto1;
-	private AppCompatImageView mAppCompatButton_aceptar;
-	private Dialog_Cambiar_Primeras_Fotos mDialog_Cambiar_Foto;
+	private LayoutPrimerasFotosBinding binding;
+
 	private SharedPreferences perfil_usuario;
-
 
 	@TargetApi(Build.VERSION_CODES.M)
 	@Override
@@ -101,8 +98,8 @@ public class Activity_Primeras_fotos extends AppCompatActivity {
 		try {
 			overridePendingTransition(R.anim.activity_in, R.anim.activity_out);
 			super.onCreate(savedInstanceState);
-			setContentView(R.layout.layout_primeras_fotos);
-
+			binding = LayoutPrimerasFotosBinding.inflate(getLayoutInflater());
+			setContentView(binding.getRoot());
 			perfil_usuario = getSharedPreferences(getResources().getString(R.string.SHAREDPREFERENCES_PERFIL_USUARIO), Context.MODE_PRIVATE);
 
 			setup_Views();
@@ -115,9 +112,8 @@ public class Activity_Primeras_fotos extends AppCompatActivity {
 			Drawable icono_hacer_foto = new IconicsDrawable(getApplicationContext()).icon(GoogleMaterial.Icon.gmd_photo_camera).color(ContextCompat.getColor(getApplicationContext(), R.color.primary)).sizeDp(getResources().getInteger(R.integer.Tam_Small_icons));
 			Drawable icono_borrar_foto = new IconicsDrawable(getApplicationContext()).icon(GoogleMaterial.Icon.gmd_delete).color(ContextCompat.getColor(getApplicationContext(), R.color.primary)).sizeDp(getResources().getInteger(R.integer.Tam_Small_icons));
 
-			AppCompatImageView Button_cambiar_foto = findViewById(R.id.Dialogo_cambiar_foto_Button_cambiar_foto);
-			Button_cambiar_foto.setImageDrawable(icono_cambiar_foto);
-			Button_cambiar_foto.setOnClickListener(view -> {
+			binding.DialogoCambiarFotoButtonCambiarFoto.setImageDrawable(icono_cambiar_foto);
+			binding.DialogoCambiarFotoButtonCambiarFoto.setOnClickListener(view -> {
 				try {
 					//Tenemos que pedir permiso explicitamente si estamos en un dispositivo Marshmallow
 					if ((ContextCompat.checkSelfPermission(getApplicationContext(), Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) &&
@@ -127,12 +123,11 @@ public class Activity_Primeras_fotos extends AppCompatActivity {
 						lanza_intent_seleccionar_foto();
 					}
 				} catch (Exception e) {
-					utils.registra_error(e.toString(), "onCreateView (Button_cambiar_foto) de Dialog_Cambiar_Foto");
+					utils.registra_error(e.toString(), "onCreateView (Button_cambiar_foto) de activity_primeras_fotos");
 				}
 			});
-			AppCompatImageView Button_capturar_foto = findViewById(R.id.Dialogo_cambiar_foto_Button_hacer_foto);
-			Button_capturar_foto.setImageDrawable(icono_hacer_foto);
-			Button_capturar_foto.setOnClickListener(view -> {
+			binding.DialogoCambiarFotoButtonHacerFoto.setImageDrawable(icono_hacer_foto);
+			binding.DialogoCambiarFotoButtonHacerFoto.setOnClickListener(view -> {
 				try {
 					//Tenemos que pedir permiso explicitamente si estamos en un dispositivo Marshmallow
 					if ((ContextCompat.checkSelfPermission(getApplicationContext(), Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) &&
@@ -142,12 +137,11 @@ public class Activity_Primeras_fotos extends AppCompatActivity {
 						lanza_intent_capturar_foto();
 					}
 				} catch (Exception e) {
-					utils.registra_error(e.toString(), "onCreateView (Button_capturar_foto) de Dialog_Cambiar_Foto");
+					utils.registra_error(e.toString(), "onCreateView (Button_capturar_foto) de activity_primeras_fotos");
 				}
 			});
-			AppCompatImageView Button_borrar_foto = findViewById(R.id.Dialogo_cambiar_foto_Button_borrar_foto);
-			Button_borrar_foto.setImageDrawable(icono_borrar_foto);
-			Button_borrar_foto.setOnClickListener(view -> {
+			binding.DialogoCambiarFotoButtonBorrarFoto.setImageDrawable(icono_borrar_foto);
+			binding.DialogoCambiarFotoButtonBorrarFoto.setOnClickListener(view -> {
 				try {
 					//Tenemos que pedir permiso explicitamente si estamos en un dispositivo Marshmallow
 					if ((ContextCompat.checkSelfPermission(getApplicationContext(), Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) &&
@@ -157,24 +151,37 @@ public class Activity_Primeras_fotos extends AppCompatActivity {
 						procesa_borrar_foto();
 					}
 				} catch (Exception e) {
-					utils.registra_error(e.toString(), "onCreateView (Button_borrar_foto) de Dialog_Cambiar_Foto");
+					utils.registra_error(e.toString(), "onCreateView (Button_borrar_foto) de activity_primeras_fotos");
 				}
 			});
-			mAppCompatButton_aceptar.setOnClickListener(view -> {
+			binding.LayoutPrimerasFotosAppCompatImageViewAceptar.setOnClickListener(view -> {
 				Intent mIntent = new Intent(Activity_Primeras_fotos.this, Activity_Principal.class);
 				mIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 				startActivity(mIntent);
 				finish();
 			});
-			if ((ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) ||
-					(ContextCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED)) {
-				requestPermissions(new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.READ_EXTERNAL_STORAGE}, PERMISSION_SELECCIONAR_FOTO);
-			}
-		}catch (Exception e){
+
+		} catch (Exception e) {
 			utils.registra_error(e.toString(), "onCreate de primeras_fotos");
 		}
 	}
 
+	@Override
+	public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+		if (requestCode == PERMISSION_SELECCIONAR_FOTO) {
+			if (grantResults.length > 0 && (grantResults[0] == PackageManager.PERMISSION_GRANTED) || (grantResults[1] == PackageManager.PERMISSION_GRANTED)){
+				lanza_intent_seleccionar_foto();
+			}
+		}else if (requestCode == PERMISSION_CAPTURAR_FOTO) {
+			if (grantResults.length > 0 && (grantResults[0] == PackageManager.PERMISSION_GRANTED) || (grantResults[1] == PackageManager.PERMISSION_GRANTED)){
+				lanza_intent_capturar_foto();
+			}
+		}else if (requestCode == PERMISSION_BORRAR_FOTO) {
+			if (grantResults.length > 0 && (grantResults[0] == PackageManager.PERMISSION_GRANTED) || (grantResults[1] == PackageManager.PERMISSION_GRANTED)){
+				procesa_borrar_foto();
+			}
+		}
+	}
 	@Override
 	public void onBackPressed() {
 		try {
@@ -183,7 +190,7 @@ public class Activity_Primeras_fotos extends AppCompatActivity {
 			mIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 			startActivity(mIntent);
 			finish();
-		}catch (Exception e){
+		} catch (Exception e) {
 			utils.registra_error(e.toString(), "onBackPressed de activity_primeras_fotos");
 
 		}
@@ -201,12 +208,10 @@ public class Activity_Primeras_fotos extends AppCompatActivity {
 				ft.remove(prev);
 				ft.commit();
 			}
-			if (mDialog_Cambiar_Foto != null) {
-				mDialog_Cambiar_Foto.dismiss();
-			}
+			/**/
 			String nombre_thumb_1 = utils.get_nombre_thumb(perfil_usuario.getString(getResources().getString(R.string.PERFIL_USUARIO_TOKEN_SOCIALAUTH), ""), 0);
 			coloca_ImageView(nombre_thumb_1);
-		}catch (Exception e){
+		} catch (Exception e) {
 			utils.registra_error(e.toString(), "onResume de primeras_fotos");
 
 		}
@@ -235,43 +240,35 @@ public class Activity_Primeras_fotos extends AppCompatActivity {
 				}
 
 			}
-		}catch (Exception e) {
-			utils.registra_error(e.toString(), "onActivityResult de Dialog_Cambiar_Foto");
+		} catch (Exception e) {
+			utils.registra_error(e.toString(), "onActivityResult de activity_primeras_fotos");
 		}
 	}
 
 	private void setup_Views() {
-		try{
-			mTextView_advertencia= findViewById(R.id.advertencia);
-			mTextView_primeras_fotos = findViewById(R.id.Layout_primeras_fotos_TextView_pon_fotos);
-			mAppCompatImageView_foto1 = findViewById(R.id.Layout_primeras_fotos_ImageButton_1);
-			mProgressBar = findViewById(R.id.mProgressBar);
-
-			mAppCompatButton_aceptar = findViewById(R.id.Layout_primeras_fotos_AppCompatImageView_aceptar);
+		try {
 			Drawable icono_seguir = new IconicsDrawable(this).icon(GoogleMaterial.Icon.gmd_done).color(ContextCompat.getColor(this, R.color.accent)).sizeDp(getResources().getInteger(R.integer.Tam_Normal_icons));
-			mAppCompatButton_aceptar.setImageDrawable(icono_seguir);
-		}catch (Exception e){
+			binding.LayoutPrimerasFotosAppCompatImageViewAceptar.setImageDrawable(icono_seguir);
+		} catch (Exception e) {
 			utils.registra_error(e.toString(), "setup_Views de activity_primeras_fotos");
-
 		}
 	}
 
 	private void setup_Typeface() {
-		try{
+		try {
 			Typeface mTypeFace_roboto_bold = Typeface.createFromAsset(getAssets(), "fonts/Roboto-Bold.ttf");
 			Typeface mTypeFace_roboto_light = Typeface.createFromAsset(getAssets(), "fonts/Roboto-Light.ttf");
 
-			mTextView_primeras_fotos.setTypeface(mTypeFace_roboto_light);
-			mTextView_advertencia.setTypeface(mTypeFace_roboto_bold);
-		}catch (Exception e){
+			binding.LayoutPrimerasFotosTextViewPonFotos.setTypeface(mTypeFace_roboto_light);
+			binding.advertencia.setTypeface(mTypeFace_roboto_bold);
+		} catch (Exception e) {
 			utils.registra_error(e.toString(), "setup_Typeface de activity_primeras_fotos");
 		}
 	}
 
 	private void set_Texts() {
-		mTextView_primeras_fotos.setText(getString(R.string.ACTIVITY_PRIMERAS_FOTOS_INSERTA_FOTOS));
-		mTextView_advertencia.setText(getString(R.string.ADVERTENCIA));
-
+		binding.LayoutPrimerasFotosTextViewPonFotos.setText(getString(R.string.ACTIVITY_PRIMERAS_FOTOS_INSERTA_FOTOS));
+		binding.advertencia.setText(getString(R.string.ADVERTENCIA));
 	}
 
 	private void coloca_ImageView(String nombre_thumb) {
@@ -282,12 +279,12 @@ public class Activity_Primeras_fotos extends AppCompatActivity {
 			if (file.exists()) {
 				Toast.makeText(getApplicationContext(), getResources().getString(R.string.FRAGMENT_FOTO_WAIT), Toast.LENGTH_LONG).show();
 
-				new AsyncTask_coloca_Thumb_de_memoria_interna().execute(file );
+				new AsyncTask_coloca_Thumb_de_memoria_interna().execute(file);
 
 				//mAppCompatImageView_foto1.setImageDrawable(null); // <--- added to force redraw of ImageView
 				//mAppCompatImageView_foto1.setImageBitmap(myBitmap);
 			} else {
-				mAppCompatImageView_foto1.setImageDrawable(utils.get_no_pic(getApplicationContext(),ContextCompat.getColor(getApplicationContext(), R.color.primary_light)));
+				binding.LayoutPrimerasFotosImageButton1.setImageDrawable(utils.get_no_pic(getApplicationContext(), ContextCompat.getColor(getApplicationContext(), R.color.primary_light)));
 			}
 
 		} catch (Exception e) {
@@ -311,15 +308,15 @@ public class Activity_Primeras_fotos extends AppCompatActivity {
 				un_bitmap = utils.decodeSampledBitmapFromFilePath(file.getPath(), getResources().getDimensionPixelSize(R.dimen.tamanyo_foto_perfiles), getResources().getDimensionPixelSize(R.dimen.tamanyo_foto_perfiles));
 			} catch (Exception ignored) {
 			}
-			return  un_bitmap;
+			return un_bitmap;
 		}
 
 		@Override
 		protected void onPostExecute(@Nullable Bitmap bitmap) {
 			try {
 				if (getApplicationContext() != null && !isCancelled()) {
-					mAppCompatImageView_foto1.setImageBitmap(bitmap);
-					mAppCompatImageView_foto1.setScaleType(ImageView.ScaleType.CENTER_CROP);
+					binding.LayoutPrimerasFotosImageButton1.setImageBitmap(bitmap);
+					binding.LayoutPrimerasFotosImageButton1.setScaleType(ImageView.ScaleType.CENTER_CROP);
 				}
 			} catch (Exception e) {
 				Toast.makeText(getApplicationContext(), "exception en AsyncTask_coloca_Thumb_de_memoria_interna (onPostExecute) en Activity_Primeras_Fotos", Toast.LENGTH_LONG).show();
@@ -329,6 +326,7 @@ public class Activity_Primeras_fotos extends AppCompatActivity {
 	}
 
 	private Vision.Images.Annotate prepareAnnotationRequest(Bitmap bitmap) throws IOException {
+
 		HttpTransport httpTransport = AndroidHttp.newCompatibleTransport();
 		JsonFactory jsonFactory = GsonFactory.getDefaultInstance();
 
@@ -363,7 +361,7 @@ public class Activity_Primeras_fotos extends AppCompatActivity {
 			AnnotateImageRequest annotateImageRequest = new AnnotateImageRequest();
 
 			// Add the image
-			Image base64EncodedImage =  new Image();
+			Image base64EncodedImage = new Image();
 			// Convert the bitmap to a JPEG
 			// Just in case it's a format that Android understands but Cloud Vision
 			ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
@@ -386,8 +384,7 @@ public class Activity_Primeras_fotos extends AppCompatActivity {
 			add(annotateImageRequest);
 		}});
 
-		Vision.Images.Annotate annotateRequest =
-				vision.images().annotate(batchAnnotateImagesRequest);
+		Vision.Images.Annotate annotateRequest = vision.images().annotate(batchAnnotateImagesRequest);
 		// Due to a bug: requests to Vision API containing large images fail when GZipped.
 		annotateRequest.setDisableGZipContent(true);
 
@@ -399,8 +396,8 @@ public class Activity_Primeras_fotos extends AppCompatActivity {
 			Intent intent = new Intent();
 			intent.setType("image/*");
 			intent.setAction(Intent.ACTION_GET_CONTENT);
-			startActivityForResult(Intent.createChooser(intent, "Select a photo"),REQUEST_LOAD_IMAGE);
-		}catch (IllegalArgumentException e){
+			startActivityForResult(Intent.createChooser(intent, "Select a photo"), REQUEST_LOAD_IMAGE);
+		} catch (IllegalArgumentException e) {
 			Toast.makeText(getApplicationContext(), e.toString(), Toast.LENGTH_LONG).show();
 		} catch (Exception e) {
 			utils.registra_error(e.toString(), "lanza_intent_seleccionar_foto de Activity_primeras_fotos");
@@ -420,20 +417,20 @@ public class Activity_Primeras_fotos extends AppCompatActivity {
 				startActivityForResult(mIntent, REQUEST_CAPTURE_IMAGE);
 			}
 
-		}catch (IllegalArgumentException e){
+		} catch (IllegalArgumentException e) {
 			Toast.makeText(getApplicationContext(), e.toString(), Toast.LENGTH_LONG).show();
 		} catch (Exception e) {
 			utils.registra_error(e.toString(), "lanza_intent_capturar_foto de Activity_primeras_fotos");
 		}
 	}
 
-	private void inicializa_anuncios(){
-		try{
-				Consent consent = ConsentManager.getInstance(this).getConsent();
-				Appodeal.setTesting(false);
-				Appodeal.initialize(this, getResources().getString(R.string.APPODEAL_APP_KEY), Appodeal.BANNER, consent);
-				setup_banner();
-		}catch (Exception e){
+	private void inicializa_anuncios() {
+		try {
+			Consent consent = ConsentManager.getInstance(this).getConsent();
+			Appodeal.setTesting(false);
+			Appodeal.initialize(this, getResources().getString(R.string.APPODEAL_APP_KEY), Appodeal.BANNER, consent);
+			setup_banner();
+		} catch (Exception e) {
 			utils.registra_error(e.toString(), "inicializa_anuncios de Activity_Principal");
 		}
 	}
@@ -445,22 +442,27 @@ public class Activity_Primeras_fotos extends AppCompatActivity {
 				public void onBannerLoaded(int height, boolean isPrecache) {
 
 				}
+
 				@Override
 				public void onBannerFailedToLoad() {
 
 				}
+
 				@Override
 				public void onBannerShown() {
 
 				}
+
 				@Override
 				public void onBannerClicked() {
 
 				}
+
 				@Override
 				public void onBannerExpired() {
 
 				}
+
 				@Override
 				public void onBannerShowFailed() {
 
@@ -515,7 +517,7 @@ public class Activity_Primeras_fotos extends AppCompatActivity {
 			Intent mIntent = new Intent(getApplicationContext(), Activity_Primeras_fotos.class);
 			startActivity(mIntent);
 		} catch (Exception e) {
-			utils.registra_error(e.toString(), "procesa_borrar_foto de Dialog_Cambiar_Foto");
+			utils.registra_error(e.toString(), "procesa_borrar_foto de activity_primeras_fotos");
 		}
 	}
 
@@ -526,12 +528,12 @@ public class Activity_Primeras_fotos extends AppCompatActivity {
 		try {
 			File storageDir = getExternalFilesDir(Environment.DIRECTORY_PICTURES);
 			File file = new File(storageDir, file_name);
-			boolean resultado =file.delete();
-			if (!resultado){
-				Toast.makeText(getApplicationContext(),getResources().getString(R.string.error_deleting_files), Toast.LENGTH_LONG).show();
+			boolean resultado = file.delete();
+			if (!resultado) {
+				Toast.makeText(getApplicationContext(), getResources().getString(R.string.error_deleting_files), Toast.LENGTH_LONG).show();
 			}
 		} catch (Exception e) {
-			utils.registra_error(e.toString(), "borra_foto_de_memoria_interna de Dialog_Cambiar_Foto");
+			utils.registra_error(e.toString(), "borra_foto_de_memoria_interna de activity_primeras_fotos");
 		}
 	}
 
@@ -558,24 +560,25 @@ public class Activity_Primeras_fotos extends AppCompatActivity {
 				// Uh-oh, an error occurred!
 
 			});
-		}catch (RejectedExecutionException e){
+		} catch (RejectedExecutionException e) {
 			try {
 				Thread.sleep(500);
-			}catch (Exception ignored){}
+			} catch (Exception ignored) {
+			}
 		} catch (Exception e) {
-			utils.registra_error(e.toString(), "borrar_foto_de_GCS de Dialog_Cambiar_Foto");
+			utils.registra_error(e.toString(), "borrar_foto_de_GCS de activity_primeras_fotos");
 		}
 	}
 
-	private  class SafeDetectionTask extends AsyncTask< Pair<Uri,Vision.Images.Annotate>, Void, Boolean> {
+	private class SafeDetectionTask extends AsyncTask<Pair<Uri, Vision.Images.Annotate>, Void, Boolean> {
 		@SafeVarargs
 		@Override
 		protected final Boolean doInBackground(Pair<Uri, Vision.Images.Annotate>... params) {
 			BatchAnnotateImagesResponse response;
-			Uri uri= params[0].first;
+			Uri uri = params[0].first;
 			Vision.Images.Annotate mRequest = params[0].second;
-			String message=null;
-			boolean resultado= true;
+			String message = null;
+			boolean resultado = true;
 			try {
 				response = mRequest.execute();
 
@@ -587,16 +590,16 @@ public class Activity_Primeras_fotos extends AppCompatActivity {
 					case " VERY_UNLIKELY":
 					case " UNLIKELY":
 						//probablemente no es obscena
-						subir_foto_a_FCS(uri,getResources().getDimensionPixelSize(R.dimen.tamanyo_foto_perfiles));
+						subir_foto_a_FCS(uri, getResources().getDimensionPixelSize(R.dimen.tamanyo_foto_perfiles));
 						File storageDir = getExternalFilesDir(Environment.DIRECTORY_PICTURES);
 						String nombre_foto = utils.get_nombre_thumb(perfil_usuario.getString(getResources().getString(R.string.PERFIL_USUARIO_TOKEN_SOCIALAUTH), ""), 0);
 						File file = new File(storageDir, nombre_foto);
 
-						InputStream iStream =   getContentResolver().openInputStream(uri);
+						InputStream iStream = getContentResolver().openInputStream(uri);
 						byte[] inputData = getBytes(iStream);
-						if (!utils.guarda_foto_en_memoria_interna(inputData, file.getPath())){
+						if (!utils.guarda_foto_en_memoria_interna(inputData, file.getPath())) {
 							Toast.makeText(getApplicationContext(), getResources().getString(R.string.FRAGMENT_FOTO_ERROR_FOTO_NO_CARGADA), Toast.LENGTH_LONG).show();
-						}else{
+						} else {
 							Intent mIntent = new Intent(Activity_Primeras_fotos.this, Activity_Mi_Perfil.class);
 							startActivity(mIntent);
 							finish();
@@ -606,28 +609,19 @@ public class Activity_Primeras_fotos extends AppCompatActivity {
 					case " LIKELY":
 					case "POSSIBLE":
 						//es obscena CASI seguro, ni si quiera hace falta revisar
-						resultado=false;
-						break;
-					default:
-						/*//es dudosa. La revisamos para asegurarnos y NO la hacemos publica todavía
-						resultado=false;
-						File storageDir2 = getExternalFilesDir(Environment.DIRECTORY_PICTURES);
-						String nombre_foto2 = utils.get_nombre_thumb(perfil_usuario.getString(getResources().getString(R.string.PERFIL_USUARIO_TOKEN_SOCIALAUTH), ""), 0);
-						File file2 = new File(storageDir2, nombre_foto2);
-
-						InputStream iStream2 =   getContentResolver().openInputStream(uri);
-						byte[] inputData2 = getBytes(iStream2);
-						if (!utils.guarda_foto_en_memoria_interna(inputData2, file2.getPath())){
-							Toast.makeText(getApplicationContext(), getResources().getString(R.string.FRAGMENT_FOTO_ERROR_FOTO_NO_CARGADA), Toast.LENGTH_LONG).show();
-						}
-						subir_foto_para_revisar(uri, getResources().getDimensionPixelSize(R.dimen.tamanyo_foto_perfiles));*/
+						resultado = false;
 						break;
 				}
-				mProgressBar.setVisibility(View.INVISIBLE);
-			}catch (Exception ignored) {
+			}catch (SocketTimeoutException | UnknownHostException | SSLException | ConnectException e ) {
+				Toast.makeText(getApplicationContext(), getResources().getString(R.string.FRAGMENT_FOTO_ERROR_FOTO_NO_CARGADA), Toast.LENGTH_LONG).show();
 			}
+			catch (Exception e) {
+				utils.registra_error(e.toString(), "SafeDetectionTask (onPostExecute) en Primeras_fotos");
+			}
+			binding.mProgressBar.setVisibility(View.INVISIBLE);
 			return resultado;
 		}
+
 		private byte[] BitmapToBytes(Bitmap bitmap) {
 
 			ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
@@ -637,7 +631,8 @@ public class Activity_Primeras_fotos extends AppCompatActivity {
 			}
 			return byteArrayOutputStream.toByteArray();
 		}
-		private void subir_foto_a_FCS(Uri Uri_de_la_foto,int tamanyo_foto_perfiles){
+
+		private void subir_foto_a_FCS(Uri Uri_de_la_foto, int tamanyo_foto_perfiles) {
 			try {
 				String token_socialauth = perfil_usuario.getString(getResources().getString(R.string.PERFIL_USUARIO_TOKEN_SOCIALAUTH), "");
 
@@ -658,9 +653,10 @@ public class Activity_Primeras_fotos extends AppCompatActivity {
 				upload_thumb_Task.addOnFailureListener(ignored -> {
 				}).addOnSuccessListener(taskSnapshot -> {
 				});
-			}catch (Exception ignored){
+			} catch (Exception ignored) {
 			}
 		}
+
 		protected void onPostExecute(Boolean resultado) {
 			if (!resultado) {
 				Toast.makeText(getApplicationContext(), getResources().getString(R.string.foto_inapropiada), Toast.LENGTH_LONG).show();
@@ -683,24 +679,22 @@ public class Activity_Primeras_fotos extends AppCompatActivity {
 	private void uploadImage(Uri uri) {
 		try {
 			if (uri != null) {
-				mProgressBar.setVisibility(View.VISIBLE);
+				binding.mProgressBar.setVisibility(View.VISIBLE);
 
 				Bitmap bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), uri);
-				Vision.Images.Annotate un_Annotate =null;
-				if (bitmap != null) {
-					un_Annotate = prepareAnnotationRequest(bitmap);
+				if (bitmap!= null) {
+					Vision.Images.Annotate un_Annotate = prepareAnnotationRequest(bitmap);
+					new SafeDetectionTask().execute(new Pair<>(uri, un_Annotate));
 				}else{
-					Toast.makeText(getApplicationContext(), getResources().getString(R.string.FRAGMENT_FOTO_ERROR_FOTO_NO_CARGADA), Toast.LENGTH_LONG).show();
+					Toast.makeText(this, getResources().getString(R.string.FRAGMENT_FOTO_ERROR_FOTO_NO_CARGADA), Toast.LENGTH_LONG).show();
 				}
-				new SafeDetectionTask().execute(new Pair<>(uri, un_Annotate));
-
 				Intent mIntent = new Intent(this, Activity_Primeras_fotos.class);
 				startActivity(mIntent);
 			} else {
 				Toast.makeText(getApplicationContext(), getResources().getString(R.string.FRAGMENT_FOTO_ERROR_FOTO_NO_CARGADA), Toast.LENGTH_LONG).show();
 			}
 		} catch (FileNotFoundException e) {
-			Toast.makeText(this, getResources().getString(R.string.FRAGMENT_FOTO_ERROR_FOTO_NO_CARGADA)+ " "+ e, Toast.LENGTH_LONG).show();
+			Toast.makeText(this, getResources().getString(R.string.FRAGMENT_FOTO_ERROR_FOTO_NO_CARGADA) + " " + e, Toast.LENGTH_LONG).show();
 		} catch (Exception e) {
 			utils.registra_error(e.toString(), "uploadImage de Activity_Primeras_Fotos");
 		}

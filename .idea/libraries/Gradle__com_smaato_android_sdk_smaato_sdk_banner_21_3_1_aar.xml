@@ -1,8 +1,8 @@
 <component name="libraryTable">
   <library name="Gradle: com.smaato.android.sdk:smaato-sdk-banner:21.3.1@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/a06c92f3c45af7c0b9c8e6b3d658167a/smaato-sdk-banner-21.3.1/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/a06c92f3c45af7c0b9c8e6b3d658167a/smaato-sdk-banner-21.3.1/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/1d10985f329cd3c35f298d53909ea6e6/jetified-smaato-sdk-banner-21.3.1/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/1d10985f329cd3c35f298d53909ea6e6/jetified-smaato-sdk-banner-21.3.1/res" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.smaato.android.sdk/smaato-sdk-banner/21.3.1/63567f83ff2bc4965c61aed4b83dc77deffaa415/smaato-sdk-banner-21.3.1-javadoc.jar!/" />

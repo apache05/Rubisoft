@@ -42,6 +42,7 @@ import com.rubisoft.menradar.Dialogs.Dialog_Interactuar_Mensajes;
 import com.rubisoft.menradar.Interfaces.Interface_ClickListener_Menu;
 import com.rubisoft.menradar.Interfaces.Interface_ClickListener_Perfiles;
 import com.rubisoft.menradar.R;
+import com.rubisoft.menradar.databinding.LayoutMensajesBinding;
 import com.rubisoft.menradar.tools.utils;
 
 import java.io.File;
@@ -56,9 +57,7 @@ import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatImageView;
 import androidx.appcompat.widget.Toolbar;
-import androidx.cardview.widget.CardView;
 import androidx.core.content.ContextCompat;
-import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -82,13 +81,11 @@ public class Activity_Mensajes extends AppCompatActivity {
 	//navigation drawer
 	private Toolbar toolbar;
 	private ActionBarDrawerToggle drawerToggle;
-	private DrawerLayout mDrawerLayout;
 	private RecyclerView recyclerViewDrawer;
 	private ImageView mImageView_PictureMain;
 	private SharedPreferences perfil_usuario;
-	private RecyclerView mRecyclerView;
 
-	private LinearLayout Main_LinearLayout;
+	private LayoutMensajesBinding binding;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -103,15 +100,16 @@ public class Activity_Mensajes extends AppCompatActivity {
 				if (perfil_usuario.getString(getString(R.string.PERFIL_USUARIO_TOKEN_SOCIALAUTH), "").isEmpty()) {
 					salir();
 				} else {
-					setContentView(R.layout.layout_mensajes);
+					binding = LayoutMensajesBinding.inflate(getLayoutInflater());
+					setContentView(binding.getRoot());
 					storage = FirebaseStorage.getInstance();
 					db = FirebaseFirestore.getInstance();
 					setup_toolbar();
-					setup_views();
+					//setup_views();
+
 					mRecyclerViewGridAdapter = new RecyclerView_Messages_Adapter(this);
-					mRecyclerView.setAdapter(mRecyclerViewGridAdapter);
+					binding.LayoutCentroMensajesReciclerView.setAdapter(mRecyclerViewGridAdapter);
 					get_amistades(perfil_usuario.getString(getResources().getString(R.string.PERFIL_USUARIO_TOKEN_SOCIALAUTH), ""));
-					//new AsyncTask_getAmistades().execute(perfil_usuario.getString(getResources().getString(R.string.PERFIL_USUARIO_TOKEN_SOCIALAUTH), ""));
 					inicializa_anuncios();
 				}
 			} else {
@@ -155,7 +153,7 @@ public class Activity_Mensajes extends AppCompatActivity {
 	}
 
 	@Override
-	public void onConfigurationChanged(Configuration newConfig) {
+	public void onConfigurationChanged(@NonNull Configuration newConfig) {
 		super.onConfigurationChanged(newConfig);
 		if (drawerToggle != null) {
 			drawerToggle.onConfigurationChanged(newConfig);
@@ -171,11 +169,6 @@ public class Activity_Mensajes extends AppCompatActivity {
 		finish();
 	}
 
-	private void setup_views(){
-		mDrawerLayout = findViewById(R.id.mDrawerLayout);
-		Main_LinearLayout = findViewById(R.id.Main_LinearLayout);
-		mRecyclerView = findViewById(R.id.Layout_centro_mensajes_ReciclerView); //para la matriz de fotos
-	}
 
 	private void inicializa_anuncios(){
 		try{
@@ -187,10 +180,10 @@ public class Activity_Mensajes extends AppCompatActivity {
 			}else {
 				FrameLayout.LayoutParams layoutParams = new FrameLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT);
 				layoutParams.setMargins(0, 0, 0, 0);
-				if (mDrawerLayout!=null){
-					mDrawerLayout.setLayoutParams(layoutParams);
+				if (binding.mDrawerLayout!=null){
+					binding.mDrawerLayout.setLayoutParams(layoutParams);
 				}else{
-					Main_LinearLayout.setLayoutParams(layoutParams);
+					binding.MainLinearLayout.setLayoutParams(layoutParams);
 				}
 			}
 		}catch (Exception e){
@@ -243,15 +236,15 @@ public class Activity_Mensajes extends AppCompatActivity {
 
 	private void setupNavigationDrawer() {
 		try {
-			if (mDrawerLayout!=null) {
+			if (binding.mDrawerLayout!=null) {
 				// Setup Drawer Icon
-				drawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout, toolbar, R.string.drawer_open, R.string.drawer_close);
-				mDrawerLayout.addDrawerListener(drawerToggle);
+				drawerToggle = new ActionBarDrawerToggle(this, binding.mDrawerLayout, toolbar, R.string.drawer_open, R.string.drawer_close);
+				binding.mDrawerLayout.addDrawerListener(drawerToggle);
 				drawerToggle.syncState();
 
 				TypedValue typedValue = new TypedValue();
 				int color = typedValue.data;
-				mDrawerLayout.setStatusBarBackgroundColor(color);
+				binding.mDrawerLayout.setStatusBarBackgroundColor(color);
 			}
 			// Setup RecyclerViews inside drawer
 			setupNavigationDrawerRecyclerViews();
@@ -326,7 +319,7 @@ public class Activity_Mensajes extends AppCompatActivity {
 		recyclerViewDrawer.addOnItemTouchListener(new Activity_Mensajes.RecyclerTouchListener_menu(this, recyclerViewDrawer, (view, position) -> {
 			utils.gestiona_onclick_menu_principal(Activity_Mensajes.this, position);
 			if (!utils.isTablet(getApplicationContext())) {
-				mDrawerLayout.closeDrawers();
+				binding.mDrawerLayout.closeDrawers();
 			}
 		}));
 	}
@@ -334,7 +327,7 @@ public class Activity_Mensajes extends AppCompatActivity {
 	private void crea_ItemTouchListener() {
 		//Aquí hacemos las acciones pertinentes según el gesto que haya hecho el Usuario_para_listar
 		//y que lo ha detectado y codificado primero el  RecyclerTouchListener
-		mRecyclerView.addOnItemTouchListener(new RecyclerTouchListener_perfiles(this.getApplicationContext(), mRecyclerView, (view, position) -> {
+		binding.LayoutCentroMensajesReciclerView.addOnItemTouchListener(new RecyclerTouchListener_perfiles(this.getApplicationContext(), binding.LayoutCentroMensajesReciclerView, (view, position) -> {
 			try {
 				lanza_dialogo(position);
 			} catch (Exception e) {
@@ -352,16 +345,15 @@ public class Activity_Mensajes extends AppCompatActivity {
 
 	private void pinta_amigos(){
 		try {
-			TextView TextView_ningun_perfil_encontrado = findViewById(R.id.Layout_centro_mensajes_TextView_ningun_perfil);
-			TextView_ningun_perfil_encontrado.setVisibility(View.INVISIBLE);
-			mRecyclerView.setVisibility(View.VISIBLE);
+			binding.LayoutCentroMensajesTextViewNingunPerfil.setVisibility(View.INVISIBLE);
+			binding.LayoutCentroMensajesReciclerView.setVisibility(View.VISIBLE);
 
-			mRecyclerView.setLayoutManager(new NpaGridLayoutManager(this, utils.get_num_columns_grids(getApplicationContext())));
+			binding.LayoutCentroMensajesReciclerView.setLayoutManager(new NpaGridLayoutManager(this, utils.get_num_columns_grids(getApplicationContext())));
 
 			for (int i = 0; i < relaciones_encontradas.size(); i++) {
 				carga_perfil_para_lista(relaciones_encontradas.get(i), i);
 			}
-			mRecyclerView.invalidate();//para que se ejecute su animacion
+			binding.LayoutCentroMensajesReciclerView.invalidate();//para que se ejecute su animacion
 		}catch (Exception e){
 			utils.registra_error(e.toString(), "pinta_amigos de mensajes");
 		}
@@ -403,7 +395,6 @@ public class Activity_Mensajes extends AppCompatActivity {
 				} else {
 					una_relacion_para_listar.setIcono_mensajes_sin_leer(null);
 				}
-
 				if (mRecyclerViewGridAdapter != null) {
 					mRecyclerViewGridAdapter.addItem(i, una_relacion_para_listar);
 					mRecyclerViewGridAdapter.notifyItemInserted(i);
@@ -444,10 +435,9 @@ public class Activity_Mensajes extends AppCompatActivity {
 	private void pinta_no_hay_amigos(){
 		try {
 			Typeface typeFace_roboto_light = Typeface.createFromAsset(getAssets(), "fonts/Roboto-Light.ttf");
-			TextView TextView_ningun_perfil_encontrado = findViewById(R.id.Layout_centro_mensajes_TextView_ningun_perfil);
-			TextView_ningun_perfil_encontrado.setVisibility(View.VISIBLE);
-			TextView_ningun_perfil_encontrado.setTypeface(typeFace_roboto_light);
-			TextView_ningun_perfil_encontrado.setText(getResources().getString(R.string.ACTIVITY_MENSAJES_NO_HAY_MENSAJES));
+			binding.LayoutCentroMensajesTextViewNingunPerfil.setVisibility(View.VISIBLE);
+			binding.LayoutCentroMensajesTextViewNingunPerfil.setTypeface(typeFace_roboto_light);
+			binding.LayoutCentroMensajesTextViewNingunPerfil.setText(getResources().getString(R.string.ACTIVITY_MENSAJES_NO_HAY_MENSAJES));
 		} catch (Exception e) {
 			utils.registra_error(e.toString(), "pinta_no_hay_amigos de mensajes");
 		}
@@ -459,27 +449,20 @@ public class Activity_Mensajes extends AppCompatActivity {
 				Drawable fondo=null;
 				RelativeLayout mRelativeLayout;
 
-				CardView mCardView= findViewById(R.id.Layout_centro_mensajes_CardView);
-
 				switch (tipo) {
 					case 0:
 						fondo = new IconicsDrawable(this.getApplicationContext())
 								.icon(GoogleMaterial.Icon.gmd_sentiment_very_satisfied)
 								.color(ContextCompat.getColor(this.getApplicationContext(), R.color.gris_transparente));
-						mCardView.setVisibility(View.VISIBLE);
-
+						binding.LayoutCentroMensajesCardView.setVisibility(View.VISIBLE);
 						break;
 					case 1:
 						fondo = new IconicsDrawable(this.getApplicationContext())
 								.icon(GoogleMaterial.Icon.gmd_sentiment_neutral)
 								.color(ContextCompat.getColor(this.getApplicationContext(), R.color.gris_transparente));
-
 						break;
-
 				}
-
-				mRelativeLayout = this.findViewById(R.id.Layout_centro_mensajes_RelativeLayout);
-				mRelativeLayout.setBackground(fondo);
+				binding.LayoutCentroMensajesRelativeLayout.setBackground(fondo);
 			}
 		}catch (Exception e){
 			utils.registra_error(e.toString(), "setup_fondo_pantalla de Activity_Mensajes");
@@ -528,19 +511,19 @@ public class Activity_Mensajes extends AppCompatActivity {
 	private void get_amistades(String Token_Socialauth){
 		db.collection(getString(R.string.USUARIOS)).document(Token_Socialauth).collection(getString(R.string.RELACIONES))
 				.whereEqualTo(getResources().getString(R.string.RELACIONES_ESTADO_DE_LA_RELACION),getResources().getInteger(R.integer.RELACION_ACTIVA)).get()
-		.addOnCompleteListener(task -> {
-			if (task.isSuccessful() && task.getResult().size()>0) {
-				List<Relacion_con_id> lista_relaciones = new ArrayList<>();
-				for (QueryDocumentSnapshot document : task.getResult()) {
-					Relacion_con_id una_relacion = new Relacion_con_id(document.getData());
-					una_relacion.setId_relacion(document.getId());
-					lista_relaciones.add(una_relacion);
-					procesa_relaciones(lista_relaciones);
-				}
-			}else{
-				procesa_relaciones(null);
-			}
-		});
+				.addOnCompleteListener(task -> {
+					if (task.isSuccessful() && task.getResult().size()>0) {
+						List<Relacion_con_id> lista_relaciones = new ArrayList<>();
+						for (QueryDocumentSnapshot document : task.getResult()) {
+							Relacion_con_id una_relacion = new Relacion_con_id(document.getData());
+							una_relacion.setId_relacion(document.getId());
+							lista_relaciones.add(una_relacion);
+						}
+						procesa_relaciones(lista_relaciones);
+					}else{
+						procesa_relaciones(null);
+					}
+				});
 	}
 
 	private void procesa_relaciones(List<Relacion_con_id> listado){
@@ -615,9 +598,9 @@ public class Activity_Mensajes extends AppCompatActivity {
 
 				@Override
 				public boolean onSingleTapUp(@NonNull MotionEvent e) {
-					View child = mRecyclerView.findChildViewUnder(e.getX(), e.getY());
+					View child = binding.LayoutCentroMensajesReciclerView.findChildViewUnder(e.getX(), e.getY());
 					if ((child != null) && (mInterfaceClickListener != null)) {
-						mInterfaceClickListener.My_onClick(child, recyclerView.getChildLayoutPosition(child));
+						mInterfaceClickListener.My_onClick(child, binding.LayoutCentroMensajesReciclerView.getChildLayoutPosition(child));
 					}
 					return true;
 				}
@@ -661,7 +644,7 @@ public class Activity_Mensajes extends AppCompatActivity {
 	}
 
 	//la clase Relacion que usamos para el firestore no tiene id_relacion entre sus campos ya que es su id
-	private class Relacion_con_id {
+	private static class Relacion_con_id {
 
 		private String token_socialauth_de_la_otra_persona;
 		private String nick_de_la_otra_persona;

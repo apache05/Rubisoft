@@ -17,8 +17,6 @@
             tools:context=".InicialActivity"
             android:id="@id/Layout_principal_RelativeLayout">
 
-            <include layout="@layout/progressbar" />
-
             <include layout="@layout/toolbar" />
 
             <LinearLayout

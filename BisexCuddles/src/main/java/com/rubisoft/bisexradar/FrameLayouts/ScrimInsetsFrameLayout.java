@@ -1,4 +1,4 @@
-package com.rubisoft.bisexradar.FrameLayouts;
+package com.rubisoft.bisexcuddles.FrameLayouts;
 
 /* Copyright 2014 Google Inc.
  *
@@ -23,7 +23,7 @@ import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
 import android.widget.FrameLayout;
 
-import com.rubisoft.bisexradar.R;
+import com.rubisoft.bisexcuddles.R;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;

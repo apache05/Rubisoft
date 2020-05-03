@@ -33,6 +33,7 @@ import com.rubisoft.mencuddles.Adapters.Drawer_Adapter;
 import com.rubisoft.mencuddles.Classes.Drawer_Item;
 import com.rubisoft.mencuddles.Interfaces.Interface_ClickListener_Menu;
 import com.rubisoft.mencuddles.R;
+import com.rubisoft.mencuddles.databinding.LayoutAyudaBinding;
 import com.rubisoft.mencuddles.tools.utils;
 
 import java.io.File;
@@ -42,11 +43,9 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.AppCompatButton;
 import androidx.appcompat.widget.AppCompatImageView;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.content.ContextCompat;
-import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -56,126 +55,86 @@ public class Activity_Ayuda extends AppCompatActivity {
     //navigation drawer
     private ActionBarDrawerToggle drawerToggle;
     private Toolbar toolbar;
-    private DrawerLayout mDrawerLayout;
+
     private RecyclerView recyclerViewDrawer;
     private ImageView mImageView_PictureMain;
-
-	private LinearLayout Main_LinearLayout;
-
-	private TextView TextView_nombre_aplicacion;
-	private TextView TextView_version_aplicacion;
-	private TextView TextView_explicacion_xradar_title;
-	private TextView TextView_explicacion_xradar;
-	private TextView TextView_principal;
-	private TextView TextView_configura_radar;
-	private TextView TextView_mensajes;
-	private TextView TextView_mi_perfil;
-	private TextView TextView_compras;
-	private TextView TextView_ajustes;
-	private TextView TextView_chat_general;
-	private TextView TextView_estrellas;
-	private TextView TextView_feedback;
-	private TextView TextView_como_contactar;
-	private TextView TextView_para_cualquier_consulta;
-	private AppCompatButton AppCompatButton_rubisoft_email;
-	private AppCompatButton AppCompatButton_rubisoft_twitter;
-	private AppCompatImageView ImageView_principal;
-	private AppCompatImageView ImageView_configura_radar;
-	private AppCompatImageView ImageView_mensajes;
-	private AppCompatImageView ImageView_mi_perfil;
-	private AppCompatImageView ImageView_compras;
-	private AppCompatImageView ImageView_ajustes;
-	private AppCompatImageView ImageView_chat_general;
-	private AppCompatImageView ImageView_estrellas;
-	private AppCompatImageView ImageView_feedback;
-	private AppCompatImageView ImageView_email;
-	private AppCompatImageView ImageView_twitter;
+	private LayoutAyudaBinding binding;
 
 	@Override
     protected void onCreate(Bundle savedInstanceState) {
         try {
             overridePendingTransition(R.anim.activity_in, R.anim.activity_out);
             super.onCreate(savedInstanceState);
-
-			setContentView(R.layout.layout_ayuda);
+			binding = LayoutAyudaBinding.inflate(getLayoutInflater());
+			setContentView(binding.getRoot());
             perfil_usuario= getSharedPreferences(getResources().getString(R.string.SHAREDPREFERENCES_PERFIL_USUARIO), Context.MODE_PRIVATE);
 
-			setup_views();
             setup_toolbar();
 			inicializa_anuncios();
 
             Typeface typeFace_roboto_Light = Typeface.createFromAsset(getAssets(), "fonts/Roboto-Light.ttf");
             Typeface typeFace_roboto_Bold = Typeface.createFromAsset(getAssets(), "fonts/Roboto-Bold.ttf");
 
-
 			if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
                 TypedValue outValue = new TypedValue();
                 getTheme().resolveAttribute(android.R.attr.selectableItemBackgroundBorderless, outValue, true);
-
-                ImageView_email.setBackgroundResource(outValue.resourceId);
-                ImageView_email.setClickable(true);
-                ImageView_twitter.setBackgroundResource(outValue.resourceId);
-                ImageView_twitter.setClickable(true);
+				binding.LayoutAyudaImageViewIconoEmail.setBackgroundResource(outValue.resourceId);
+				binding.LayoutAyudaImageViewIconoEmail.setClickable(true);
+				binding.LayoutAyudaImageViewIconoTwitter.setBackgroundResource(outValue.resourceId);
+				binding.LayoutAyudaImageViewIconoTwitter.setClickable(true);
             }
 
-            ImageView_principal.setImageDrawable(new IconicsDrawable(this).icon(GoogleMaterial.Icon.gmd_track_changes).color(ContextCompat.getColor(this, R.color.gris)));
-            ImageView_configura_radar.setImageDrawable(new IconicsDrawable(this).icon(GoogleMaterial.Icon.gmd_tune).color(ContextCompat.getColor(this, R.color.gris)));
-            ImageView_mensajes.setImageDrawable(new IconicsDrawable(this).icon(GoogleMaterial.Icon.gmd_email).color(ContextCompat.getColor(this, R.color.gris)));
-            ImageView_mi_perfil.setImageDrawable(new IconicsDrawable(this).icon(GoogleMaterial.Icon.gmd_perm_identity).color(ContextCompat.getColor(this, R.color.gris)));
-            ImageView_compras.setImageDrawable(new IconicsDrawable(this).icon(GoogleMaterial.Icon.gmd_attach_money).color(ContextCompat.getColor(this, R.color.gris)));
-            ImageView_ajustes.setImageDrawable(new IconicsDrawable(this).icon(GoogleMaterial.Icon.gmd_settings).color(ContextCompat.getColor(this, R.color.gris)));
-            ImageView_chat_general.setImageDrawable(new IconicsDrawable(this).icon(GoogleMaterial.Icon.gmd_forum).color(ContextCompat.getColor(this, R.color.gris)));
-            ImageView_feedback.setImageDrawable(new IconicsDrawable(this).icon(GoogleMaterial.Icon.gmd_thumbs_up_down).color(ContextCompat.getColor(this, R.color.gris)));
-            ImageView_estrellas.setImageDrawable(new IconicsDrawable(this).icon(GoogleMaterial.Icon.gmd_star_border).color(ContextCompat.getColor(this, R.color.gris)));
+			binding.LayoutAyudaImageViewPrincipal.setImageDrawable(new IconicsDrawable(this).icon(GoogleMaterial.Icon.gmd_track_changes).color(ContextCompat.getColor(this, R.color.gris)));
+            binding.LayoutAyudaConfiguraRadar.setImageDrawable(new IconicsDrawable(this).icon(GoogleMaterial.Icon.gmd_tune).color(ContextCompat.getColor(this, R.color.gris)));
+            binding.LayoutAyudaImageViewMensajes.setImageDrawable(new IconicsDrawable(this).icon(GoogleMaterial.Icon.gmd_email).color(ContextCompat.getColor(this, R.color.gris)));
+			binding.LayoutAyudaImageViewMiPerfil.setImageDrawable(new IconicsDrawable(this).icon(GoogleMaterial.Icon.gmd_perm_identity).color(ContextCompat.getColor(this, R.color.gris)));
+			binding.LayoutAyudaImageViewCompras.setImageDrawable(new IconicsDrawable(this).icon(GoogleMaterial.Icon.gmd_attach_money).color(ContextCompat.getColor(this, R.color.gris)));
+			binding.LayoutAyudaImageViewAjustes.setImageDrawable(new IconicsDrawable(this).icon(GoogleMaterial.Icon.gmd_settings).color(ContextCompat.getColor(this, R.color.gris)));
+			binding.LayoutAyudaImageViewChatGeneral.setImageDrawable(new IconicsDrawable(this).icon(GoogleMaterial.Icon.gmd_forum).color(ContextCompat.getColor(this, R.color.gris)));
+			binding.LayoutAyudaImageViewFeedback.setImageDrawable(new IconicsDrawable(this).icon(GoogleMaterial.Icon.gmd_thumbs_up_down).color(ContextCompat.getColor(this, R.color.gris)));
+			binding.LayoutAyudaImageViewEstrellas.setImageDrawable(new IconicsDrawable(this).icon(GoogleMaterial.Icon.gmd_star_border).color(ContextCompat.getColor(this, R.color.gris)));
+			binding.LayoutAyudaImageViewIconoEmail.setImageDrawable(new IconicsDrawable(this).icon(GoogleMaterial.Icon.gmd_email).color(ContextCompat.getColor(this, R.color.accent)));
+			binding.LayoutAyudaImageViewIconoTwitter.setImageDrawable(utils.get_icono_twitter(getApplicationContext(),ContextCompat.getColor(this, R.color.accent)));
+			binding.LayoutAyudaImageViewIconoEmail.setOnClickListener(v -> manda_email());
+			binding.LayoutAyudaImageViewIconoTwitter.setOnClickListener(v -> manda_twitter());
 
-            ImageView_email.setImageDrawable(new IconicsDrawable(this).icon(GoogleMaterial.Icon.gmd_email).color(ContextCompat.getColor(this, R.color.accent)));
-            ImageView_twitter.setImageDrawable(utils.get_icono_twitter(getApplicationContext(),ContextCompat.getColor(this, R.color.accent)));
-            ImageView_email.setOnClickListener(v -> manda_email());
-            ImageView_twitter.setOnClickListener(v -> manda_twitter());
-
-            TextView_nombre_aplicacion.setTypeface(typeFace_roboto_Bold);
-            TextView_version_aplicacion.setTypeface(typeFace_roboto_Light);
-            TextView_explicacion_xradar_title.setTypeface(typeFace_roboto_Bold);
-            TextView_explicacion_xradar.setTypeface(typeFace_roboto_Light);
-            TextView_principal.setTypeface(typeFace_roboto_Light);
-            TextView_configura_radar.setTypeface(typeFace_roboto_Light);
-
-            TextView_mi_perfil.setTypeface(typeFace_roboto_Light);
-            TextView_compras.setTypeface(typeFace_roboto_Light);
-            TextView_ajustes.setTypeface(typeFace_roboto_Light);
-            TextView_chat_general.setTypeface(typeFace_roboto_Light);
-            TextView_feedback.setTypeface(typeFace_roboto_Light);
-            TextView_estrellas.setTypeface(typeFace_roboto_Light);
-            TextView_mensajes.setTypeface(typeFace_roboto_Light);
-            TextView_como_contactar.setTypeface(typeFace_roboto_Bold);
-            TextView_para_cualquier_consulta.setTypeface(typeFace_roboto_Light);
-            AppCompatButton_rubisoft_email.setTypeface(typeFace_roboto_Light);
-            AppCompatButton_rubisoft_twitter.setTypeface(typeFace_roboto_Light);
-            AppCompatButton_rubisoft_twitter.setTextColor(ContextCompat.getColor(this, R.color.accent));
-            AppCompatButton_rubisoft_email.setTextColor(ContextCompat.getColor(this, R.color.accent));
-
-            TextView_explicacion_xradar_title.setText(String.format(getResources().getString(R.string.help_info_title),getString(R.string.app_name)));
-            TextView_explicacion_xradar.setText(String.format(getResources().getString(R.string.help_info),getString(R.string.app_name)));
-            TextView_nombre_aplicacion.setText(getString(R.string.app_name));
-            TextView_principal.setText(getResources().getString(R.string.help_principal));
-            TextView_configura_radar.setText(getResources().getString(R.string.help_configura_radar));
-            TextView_mensajes.setText((getResources().getString(R.string.help_mensajes)));
-            TextView_mi_perfil.setText(String.format(getResources().getString(R.string.help_mi_perfil),getResources().getInteger(R.integer.NUM_MAX_FOTOS_PREMIUM)));
-            TextView_compras.setText(getResources().getString(R.string.help_compras));
-            TextView_ajustes.setText(getResources().getString(R.string.help_ajustes));
-            TextView_chat_general.setText(getResources().getString(R.string.help_chat_general));
-			TextView_estrellas.setText( String.format(getResources().getString(R.string.help_ganar_estrellas),(getResources().getInteger(R.integer.LOGRO_COBRO_SEMANAL)*-1)));
-
-            TextView_feedback.setText(getResources().getString(R.string.help_feedback));
-            AppCompatButton_rubisoft_email.setText(getString(R.string.rubisoft_email));
-            AppCompatButton_rubisoft_twitter.setText(getString(R.string.rubisoft_twitter));
-            TextView_como_contactar.setText(String.format(getResources().getString(R.string.help_como_contactar),getString(R.string.app_name)));
-
-            TextView_version_aplicacion.setText(String.format(getString(R.string.version),  utils.get_Version_Name(this)));
-
-            AppCompatButton_rubisoft_email.setOnClickListener(v -> manda_email());
-
-            AppCompatButton_rubisoft_twitter.setOnClickListener(v -> manda_twitter());
+            binding.LayoutAyudaTextViewNombreAplicacion.setTypeface(typeFace_roboto_Bold);
+			binding.LayoutAyudaTextViewVersionAplicacion.setTypeface(typeFace_roboto_Light);
+			binding.LayoutAyudaTextViewExplicacionTitle.setTypeface(typeFace_roboto_Bold);
+			binding.LayoutAyudaTextViewExplicacion.setTypeface(typeFace_roboto_Light);
+			binding.LayoutAyudaTextViewPrincipal.setTypeface(typeFace_roboto_Light);
+			binding.LayoutAyudaTextViewConfiguraRadar.setTypeface(typeFace_roboto_Light);
+			binding.LayoutAyudaTextViewMiPerfil.setTypeface(typeFace_roboto_Light);
+			binding.LayoutAyudaTextViewCompras.setTypeface(typeFace_roboto_Light);
+			binding.LayoutAyudaTextViewAjustes.setTypeface(typeFace_roboto_Light);
+			binding.LayoutAyudaTextViewChatGeneral.setTypeface(typeFace_roboto_Light);
+			binding.LayoutAyudaTextViewFeedback.setTypeface(typeFace_roboto_Light);
+			binding.LayoutAyudaTextViewEstrellas.setTypeface(typeFace_roboto_Light);
+			binding.LayoutAyudaTextViewMensajes.setTypeface(typeFace_roboto_Light);
+			binding.LayoutAyudaTextViewComoContactar.setTypeface(typeFace_roboto_Bold);
+			binding.LayoutAyudaTextViewParaCualquierConsulta.setTypeface(typeFace_roboto_Light);
+			binding.LayoutAyudaTextViewRubisoftEmail.setTypeface(typeFace_roboto_Light);
+			binding.LayoutAyudaTextViewRubisoftTwitter.setTypeface(typeFace_roboto_Light);
+			binding.LayoutAyudaTextViewRubisoftTwitter.setTextColor(ContextCompat.getColor(this, R.color.accent));
+			binding.LayoutAyudaTextViewRubisoftEmail.setTextColor(ContextCompat.getColor(this, R.color.accent));
+			binding.LayoutAyudaTextViewExplicacionTitle.setText(String.format(getResources().getString(R.string.help_info_title),getString(R.string.app_name)));
+			binding.LayoutAyudaTextViewExplicacion.setText(String.format(getResources().getString(R.string.help_info),getString(R.string.app_name)));
+			binding.LayoutAyudaTextViewNombreAplicacion.setText(getString(R.string.app_name));
+			binding.LayoutAyudaTextViewPrincipal.setText(getResources().getString(R.string.help_principal));
+			binding.LayoutAyudaTextViewConfiguraRadar.setText(getResources().getString(R.string.help_configura_radar));
+			binding.LayoutAyudaTextViewMensajes.setText((getResources().getString(R.string.help_mensajes)));
+			binding.LayoutAyudaTextViewMiPerfil.setText(String.format(getResources().getString(R.string.help_mi_perfil),getResources().getInteger(R.integer.NUM_MAX_FOTOS_PREMIUM)));
+			binding.LayoutAyudaTextViewCompras.setText(getResources().getString(R.string.help_compras));
+			binding.LayoutAyudaTextViewAjustes.setText(getResources().getString(R.string.help_ajustes));
+			binding.LayoutAyudaTextViewChatGeneral.setText(getResources().getString(R.string.help_chat_general));
+			binding.LayoutAyudaTextViewEstrellas.setText( String.format(getResources().getString(R.string.help_ganar_estrellas),(getResources().getInteger(R.integer.LOGRO_COBRO_SEMANAL)*-1)));
+			binding.LayoutAyudaTextViewFeedback.setText(getResources().getString(R.string.help_feedback));
+			binding.LayoutAyudaTextViewRubisoftEmail.setText(getString(R.string.rubisoft_email));
+			binding.LayoutAyudaTextViewRubisoftTwitter.setText(getString(R.string.rubisoft_twitter));
+			binding.LayoutAyudaTextViewComoContactar.setText(String.format(getResources().getString(R.string.help_como_contactar),getString(R.string.app_name)));
+			binding.LayoutAyudaTextViewVersionAplicacion.setText(String.format(getString(R.string.version),  utils.get_Version_Name(this)));
+			binding.LayoutAyudaTextViewRubisoftEmail.setOnClickListener(v -> manda_email());
+			binding.LayoutAyudaTextViewRubisoftTwitter.setOnClickListener(v -> manda_twitter());
         }catch (Exception e){
             utils.registra_error(e.toString(), "oncreate de activity_ayuda");
         }
@@ -290,10 +249,10 @@ public class Activity_Ayuda extends AppCompatActivity {
 			}else {
 				FrameLayout.LayoutParams layoutParams = new FrameLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT);
 				layoutParams.setMargins(0, 0, 0, 0);
-				if (mDrawerLayout!=null){
-					mDrawerLayout.setLayoutParams(layoutParams);
+				if (binding.mDrawerLayout!=null){
+					binding.mDrawerLayout.setLayoutParams(layoutParams);
 				}else{
-					Main_LinearLayout.setLayoutParams(layoutParams);
+					binding.MainLinearLayout.setLayoutParams(layoutParams);
 				}
 			}
 		}catch (Exception e){
@@ -346,15 +305,15 @@ public class Activity_Ayuda extends AppCompatActivity {
 
 	private void setupNavigationDrawer() {
 		try {
-			if (mDrawerLayout!=null) {
+			if (binding.mDrawerLayout!=null) {
 				// Setup Drawer Icon
-				drawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout, toolbar, R.string.drawer_open, R.string.drawer_close);
-				mDrawerLayout.addDrawerListener(drawerToggle);
+				drawerToggle = new ActionBarDrawerToggle(this, binding.mDrawerLayout, toolbar, R.string.drawer_open, R.string.drawer_close);
+				binding.mDrawerLayout.addDrawerListener(drawerToggle);
 				drawerToggle.syncState();
 
 				TypedValue typedValue = new TypedValue();
 				int color = typedValue.data;
-				mDrawerLayout.setStatusBarBackgroundColor(color);
+				binding.mDrawerLayout.setStatusBarBackgroundColor(color);
 			}
 			// Setup RecyclerViews inside drawer
 			setupNavigationDrawerRecyclerViews();
@@ -388,44 +347,6 @@ public class Activity_Ayuda extends AppCompatActivity {
 		} catch (Exception e) {
 			utils.registra_error(e.toString(), "setupNavigationDrawer de Activity_ayuda");
 		}
-	}
-
-	private void setup_views(){
-		TextView_nombre_aplicacion = findViewById(R.id.Layout_sobre_xradar_TextView_nombre_aplicacion);
-		 TextView_version_aplicacion = findViewById(R.id.Layout_sobre_xradar_TextView_version_aplicacion);
-		 TextView_explicacion_xradar_title = findViewById(R.id.Layout_sobre_xradar_TextView_explicacion_xradar_title);
-		 TextView_explicacion_xradar = findViewById(R.id.Layout_sobre_xradar_TextView_explicacion_xradar);
-		 TextView_principal = findViewById(R.id.Layout_sobre_xradar_TextView_principal);
-		 TextView_configura_radar = findViewById(R.id.Layout_sobre_xradar_TextView_configura_radar);
-		 TextView_mensajes = findViewById(R.id.Layout_sobre_xradar_TextView_mensajes);
-		 TextView_mi_perfil = findViewById(R.id.Layout_sobre_xradar_TextView_mi_perfil);
-		 TextView_compras = findViewById(R.id.Layout_sobre_xradar_TextView_compras);
-		 TextView_ajustes = findViewById(R.id.Layout_sobre_xradar_TextView_ajustes);
-		 TextView_chat_general = findViewById(R.id.Layout_sobre_xradar_TextView_chat_general);
-		 TextView_estrellas = findViewById(R.id.Layout_sobre_xradar_TextView_estrellas);
-
-		 TextView_feedback = findViewById(R.id.Layout_sobre_xradar_TextView_feedback);
-		 TextView_como_contactar = findViewById(R.id.Layout_sobre_xradar_TextView_como_contactar);
-		 TextView_para_cualquier_consulta = findViewById(R.id.Layout_sobre_xradar_TextView_para_cualquier_consulta);
-		 AppCompatButton_rubisoft_email = findViewById(R.id.Layout_sobre_xradar_TextView_rubisoft_email);
-		 AppCompatButton_rubisoft_twitter = findViewById(R.id.Layout_sobre_xradar_TextView_rubisoft_twitter);
-
-		 ImageView_principal = findViewById(R.id.Layout_sobre_xradar_ImageView_principal);
-		 ImageView_configura_radar = findViewById(R.id.Layout_sobre_xradar_configura_radar);
-		 ImageView_mensajes = findViewById(R.id.Layout_sobre_xradar_ImageView_mensajes);
-		 ImageView_mi_perfil = findViewById(R.id.Layout_sobre_xradar_ImageView_mi_perfil);
-		 ImageView_compras = findViewById(R.id.Layout_sobre_xradar_ImageView_compras);
-		 ImageView_ajustes = findViewById(R.id.Layout_sobre_xradar_ImageView_ajustes);
-		 ImageView_chat_general = findViewById(R.id.Layout_sobre_xradar_ImageView_chat_general);
-		 ImageView_estrellas = findViewById(R.id.Layout_sobre_xradar_ImageView_estrellas);
-
-		 ImageView_feedback = findViewById(R.id.Layout_sobre_xradar_ImageView_feedback);
-		 ImageView_email = findViewById(R.id.Layout_sobre_xradar_ImageView_icono_email);
-		 ImageView_twitter = findViewById(R.id.Layout_sobre_xradar_ImageView_icono_twitter);
-
-		Main_LinearLayout = findViewById(R.id.Main_LinearLayout);
-		mDrawerLayout = findViewById(R.id.mDrawerLayout);
-
 	}
 
 	private void setupNavigationDrawerRecyclerViews() {
@@ -508,7 +429,7 @@ public class Activity_Ayuda extends AppCompatActivity {
         recyclerViewDrawer.addOnItemTouchListener(new Activity_Ayuda.RecyclerTouchListener_menu(this, recyclerViewDrawer, (view, position) -> {
 			utils.gestiona_onclick_menu_principal(Activity_Ayuda.this, position);
 			if (!utils.isTablet(getApplicationContext())) {
-				mDrawerLayout.closeDrawers();
+				binding.mDrawerLayout.closeDrawers();
 			}
 		}));
     }

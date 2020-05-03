@@ -1,4 +1,4 @@
-package com.rubisoft.bisexradar.Adapters;
+package com.rubisoft.bisexcuddles.Adapters;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -6,9 +6,9 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.rubisoft.bisexradar.Adapters.Drawer_Adapter.ViewHolder;
-import com.rubisoft.bisexradar.Classes.Drawer_Item;
-import com.rubisoft.bisexradar.R;
+import com.rubisoft.bisexcuddles.Adapters.Drawer_Adapter.ViewHolder;
+import com.rubisoft.bisexcuddles.Classes.Drawer_Item;
+import com.rubisoft.bisexcuddles.R;
 
 import java.util.ArrayList;
 

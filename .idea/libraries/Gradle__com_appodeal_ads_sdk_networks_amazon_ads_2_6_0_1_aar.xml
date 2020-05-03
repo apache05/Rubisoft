@@ -1,8 +1,8 @@
 <component name="libraryTable">
   <library name="Gradle: com.appodeal.ads.sdk.networks:amazon_ads:2.6.0.1@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/2c9b242852f1a1fb657683403c824c82/jetified-amazon_ads-2.6.0.1/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/2c9b242852f1a1fb657683403c824c82/jetified-amazon_ads-2.6.0.1/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/79327f4c5a32835a8fe2ef300a6e9959/jetified-amazon_ads-2.6.0.1/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/79327f4c5a32835a8fe2ef300a6e9959/jetified-amazon_ads-2.6.0.1/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

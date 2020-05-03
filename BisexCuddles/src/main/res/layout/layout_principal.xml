@@ -23,7 +23,7 @@
             android:id="@id/Layout_principal_RelativeLayout"
             app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-            <com.rubisoft.bisexradar.RecyclersViews.RecyclerView_AutoFit
+            <com.rubisoft.bisexcuddles.RecyclersViews.RecyclerView_AutoFit
                 android:id="@id/Layout_principal_ReciclerView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -88,20 +88,6 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
-
-                 <!--   <android.support.design.widget.FloatingActionButton
-                        android:id="@id/Layout_principal_fab"
-                        style="@style/boton_surface_reaction"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-
-                        android:layout_gravity="center_vertical|center_horizontal"
-                        android:clickable="true"
-                        android:focusable="true"
-                        ads:layout_constraintEnd_toEndOf="parent"
-                        ads:layout_constraintStart_toStartOf="parent"
-                        app:borderWidth="0dp"
-                        app:fabSize="mini" />-->
 
                     <androidx.appcompat.widget.AppCompatImageView
                         android:id="@id/Layout_principal_Button_avanzar"

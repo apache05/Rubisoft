@@ -16,36 +16,50 @@
     <item name="Cardview_list_pareja_TextView_rango_edades" type="id" />
     <item name="Cardview_list_pareja_TextView_distancia" type="id" />
 
-    <!--**************** Cardview_list_persona  ****************-->
-    <item name="Layout_un_perfil_LinearLayout_info" type="id" />
-    <item name="Cardview_list_persona_ImageView_usuario" type="id" />
-
-    <item name="Cardview_list_persona_TextView_nombre" type="id" />
-    <item name="Cardview_list_persona_ImageView_premium" type="id" />
-    <item name="Cardview_list_persona_ImageView_estrella" type="id" />
-    <item name="Cardview_list_persona_ImageView_casa" type="id" />
-    <item name="Cardview_list_persona_ImageView_coche" type="id" />
-    <item name="Cardview_list_persona_ImageView_moto" type="id" />
-
-    <item name="Cardview_list_persona_TextView_edad" type="id" />
-    <item name="Cardview_list_persona_TextView_altura" type="id" />
-    <item name="Cardview_list_persona_TextView_peso" type="id" />
-    <item name="Cardview_list_persona_TextView_raza" type="id" />
-    <item name="Cardview_list_persona_TextView_distancia" type="id" />
-    <item name="Cardview_list_persona_TextView_quiero_dejar_claro" type="id" />
-    <item name="Cardview_list_persona_TextView_estrellas" type="id" />
-    <item name="Cardview_list_persona_view" type="id" />
-    <item name="Cardview_list_persona_ImageView_sexualidad" type="id" />
-    <item name="Cardview_list_persona_ImageView_online" type="id" />
-
+    <!--**************** Dialog_info  ****************-->
+    <item name="Dialog_info_CardView" type="id" />
+    <item name="Dialog_Info_ImageView_usuario" type="id" />
+    <item name="Dialog_Info_TextView_nombre" type="id" />
+    <item name="Dialog_Info_ImageView_premium" type="id" />
+    <item name="Dialog_Info_ImageView_estrella" type="id" />
+    <item name="Dialog_Info_ImageView_casa" type="id" />
+    <item name="Dialog_Info_ImageView_coche" type="id" />
+    <item name="Dialog_Info_ImageView_moto" type="id" />
+    <item name="Dialog_Info_TextView_edad" type="id" />
+    <item name="Dialog_Info_TextView_altura" type="id" />
+    <item name="Dialog_Info_TextView_peso" type="id" />
+    <item name="Dialog_Info_TextView_raza" type="id" />
+    <item name="Dialog_Info_TextView_distancia" type="id" />
+    <item name="Dialog_Info_TextView_quiero_dejar_claro" type="id" />
+    <item name="Dialog_Info_TextView_estrellas" type="id" />
+    <item name="Dialog_Info_view" type="id" />
+    <item name="Dialog_Info_ImageView_sexualidad" type="id" />
+    <item name="Dialog_Info_ImageView_online" type="id" />
+    <!--**************** List_principal  ****************-->
+    <item name="List_principal_CardView" type="id" />
+    <item name="List_principal_ImageView_usuario" type="id" />
+    <item name="List_principal_TextView_nombre" type="id" />
+    <item name="List_principal_ImageView_premium" type="id" />
+    <item name="List_principal_ImageView_estrella" type="id" />
+    <item name="List_principal_ImageView_casa" type="id" />
+    <item name="List_principal_ImageView_coche" type="id" />
+    <item name="List_principal_ImageView_moto" type="id" />
+    <item name="List_principal_TextView_edad" type="id" />
+    <item name="List_principal_TextView_altura" type="id" />
+    <item name="List_principal_TextView_peso" type="id" />
+    <item name="List_principal_TextView_raza" type="id" />
+    <item name="List_principal_TextView_distancia" type="id" />
+    <item name="List_principal_TextView_quiero_dejar_claro" type="id" />
+    <item name="List_principal_TextView_estrellas" type="id" />
+    <item name="List_principal_view" type="id" />
+    <item name="List_principal_ImageView_sexualidad" type="id" />
+    <item name="List_principal_ImageView_online" type="id" />
     <!--****************  Dialogo_cambiar_foto ****************-->
     <item name="Dialogo_cambiar_foto_title" type="id" />
     <item name="Dialogo_cambiar_foto_Button_cambiar_foto" type="id" />
     <item name="Dialogo_cambiar_foto_Button_hacer_foto" type="id" />
     <item name="Dialogo_cambiar_foto_Button_borrar_foto" type="id" />
-<!--
-    <item name="Dialogo_cambiar_foto_Button_hacer_foto_privada" type="id" />
--->
+
     <!--****************  Dialogo_interactuar ****************-->
     <item name="Dialogo_interactuar_title" type="id" />
     <item name="Dialogo_interactuar_Button_Ver_fotos" type="id" />
@@ -120,8 +134,6 @@
     <item name="Layout_configura_radar_RadioButton_una_persona" type="id" />
     <item name="Layout_configura_radar_RadioButton_una_pareja" type="id" />
     <item name="Layout_configura_radar_CardView_Busca_Personas" type="id" />
-
-    <!--*************************************-->
 
     <!--*************************************-->
     <item name="Layout_configura_radar_de_persona_spinner_que_busca" type="id" />
@@ -211,8 +223,6 @@
     <item name="Layout_inicio_Button_forgot_password" type="id" />
     <item name="Layout_inicio_TextView_nota_privacidad" type="id" />
 
-    <!--****************  Layout_uninstall ****************-->
-
     <!--****************  Layout_chat_general ****************-->
     <item name="Layout_chat_general_ScrollView" type="id" />
     <item name="Layout_chat_general_LinearLayout_conversacion" type="id" />
@@ -220,8 +230,6 @@
     <item name="Layout_chat_general_ImageView_enviar_mensaje" type="id" />
     <item name="Layout_chat_general_TextView_ayuda" type="id" />
     <item name="Layout_chat_general_ReciclerView" type="id" />
-
-    <!--****************  Layout_ayuda ****************-->
 
 
     <!--****************  Layout_mejorar ****************-->
@@ -245,7 +253,6 @@
     <item name="Layout_mi_perfil_TabLayout" type="id" />
     <item name="Layout_mi_perfil_ViewPager" type="id" />
 
-    <!--****************  Layout_persona_o_grupo ****************-->
 
     <!--****************  Layout_principal ****************-->
     <item name="Layout_principal_RelativeLayout" type="id" />
@@ -255,8 +262,6 @@
     <item name="Layout_principal_Button_avanzar" type="id" />
     <item name="Layout_principal_Button_retroceder" type="id" />
     <item name="Layout_principal_Cardview" type="id" />
-
-    <!--****************  Layout_registro_pareja ****************-->
 
 
     <!--****************  Layout_registro_personas ****************-->
@@ -284,50 +289,45 @@
     <item name="Layout_registro_personas_Button_registrarse" type="id" />
     <item name="Layout_registro_personas_Button_retroceder" type="id" />
     <item name="Layout_registro_personas_CardView_Sexualidad" type="id" />
+    <item name="Layout_registro_personas_sexualidad" type="id" />
+    <item name="Layout_registro_personas_datos_fisicos" type="id" />
 
     <!--****************  Layout_sin_conexion ****************-->
     <item name="Layout_sin_conexion_TextView_NO_HAY_CONEXION" type="id" />
     <item name="Layout_sin_conexion_LinearLayout" type="id" />
 
-    <!--****************  Layout_sobre_xradar ****************-->
-    <item name="Layout_sobre_xradar_TextView_nombre_aplicacion" type="id" />
-    <item name="Layout_sobre_xradar_TextView_version_aplicacion" type="id" />
-    <item name="Layout_sobre_xradar_TextView_explicacion_xradar_title" type="id" />
-    <item name="Layout_sobre_xradar_TextView_explicacion_xradar" type="id" />
-    <item name="Layout_sobre_xradar_TextView_como_funciona_title" type="id" />
-    <item name="Layout_sobre_xradar_TextView_como_ganar_estrellas_title" type="id" />
-    <item name="Layout_sobre_xradar_TextView_como_ganar_estrellas" type="id" />
-    <item name="Layout_registro_personas_sexualidad" type="id" />
-    <item name="Layout_registro_personas_datos_fisicos" type="id" />
-
-    <item name="Layout_sobre_xradar_TextView_principal" type="id" />
-    <item name="Layout_sobre_xradar_TextView_configura_radar" type="id" />
-    <item name="Layout_sobre_xradar_TextView_mensajes" type="id" />
-    <item name="Layout_sobre_xradar_TextView_mi_perfil" type="id" />
-    <item name="Layout_sobre_xradar_TextView_compras" type="id" />
-    <item name="Layout_sobre_xradar_TextView_ajustes" type="id" />
-    <item name="Layout_sobre_xradar_TextView_chat_general" type="id" />
-    <item name="Layout_sobre_xradar_TextView_estrellas" type="id" />
-
-
-    <item name="Layout_sobre_xradar_TextView_feedback" type="id" />
-    <item name="Layout_sobre_xradar_ImageView_principal" type="id" />
-    <item name="Layout_sobre_xradar_configura_radar" type="id" />
-    <item name="Layout_sobre_xradar_ImageView_mensajes" type="id" />
-    <item name="Layout_sobre_xradar_ImageView_mi_perfil" type="id" />
-    <item name="Layout_sobre_xradar_ImageView_compras" type="id" />
-    <item name="Layout_sobre_xradar_ImageView_ajustes" type="id" />
-    <item name="Layout_sobre_xradar_ImageView_chat_general" type="id" />
-    <item name="Layout_sobre_xradar_ImageView_feedback" type="id" />
-    <item name="Layout_sobre_xradar_ImageView_estrellas" type="id" />
-
-
-    <item name="Layout_sobre_xradar_TextView_como_contactar" type="id" />
-    <item name="Layout_sobre_xradar_TextView_para_cualquier_consulta" type="id" />
-    <item name="Layout_sobre_xradar_TextView_rubisoft_email" type="id" />
-    <item name="Layout_sobre_xradar_TextView_rubisoft_twitter" type="id" />
-    <item name="Layout_sobre_xradar_ImageView_icono_email" type="id" />
-    <item name="Layout_sobre_xradar_ImageView_icono_twitter" type="id" />
+    <!--****************  Layout_ayuda ****************-->
+    <item name="Layout_ayuda_TextView_nombre_aplicacion" type="id" />
+    <item name="Layout_ayuda_TextView_version_aplicacion" type="id" />
+    <item name="Layout_ayuda_TextView_explicacion_title" type="id" />
+    <item name="Layout_ayuda_TextView_explicacion" type="id" />
+    <item name="Layout_ayuda_TextView_como_funciona_title" type="id" />
+    <item name="Layout_ayuda_TextView_como_ganar_estrellas_title" type="id" />
+    <item name="Layout_ayuda_TextView_como_ganar_estrellas" type="id" />
+    <item name="Layout_ayuda_TextView_principal" type="id" />
+    <item name="Layout_ayuda_TextView_configura_radar" type="id" />
+    <item name="Layout_ayuda_TextView_mensajes" type="id" />
+    <item name="Layout_ayuda_TextView_mi_perfil" type="id" />
+    <item name="Layout_ayuda_TextView_compras" type="id" />
+    <item name="Layout_ayuda_TextView_ajustes" type="id" />
+    <item name="Layout_ayuda_TextView_chat_general" type="id" />
+    <item name="Layout_ayuda_TextView_estrellas" type="id" />
+    <item name="Layout_ayuda_TextView_feedback" type="id" />
+    <item name="Layout_ayuda_ImageView_principal" type="id" />
+    <item name="Layout_ayuda_configura_radar" type="id" />
+    <item name="Layout_ayuda_ImageView_mensajes" type="id" />
+    <item name="Layout_ayuda_ImageView_mi_perfil" type="id" />
+    <item name="Layout_ayuda_ImageView_compras" type="id" />
+    <item name="Layout_ayuda_ImageView_ajustes" type="id" />
+    <item name="Layout_ayuda_ImageView_chat_general" type="id" />
+    <item name="Layout_ayuda_ImageView_feedback" type="id" />
+    <item name="Layout_ayuda_ImageView_estrellas" type="id" />
+    <item name="Layout_ayuda_TextView_como_contactar" type="id" />
+    <item name="Layout_ayuda_TextView_para_cualquier_consulta" type="id" />
+    <item name="Layout_ayuda_TextView_rubisoft_email" type="id" />
+    <item name="Layout_ayuda_TextView_rubisoft_twitter" type="id" />
+    <item name="Layout_ayuda_ImageView_icono_email" type="id" />
+    <item name="Layout_ayuda_ImageView_icono_twitter" type="id" />
 
     <!--****************  Layout_una_foto ****************-->
     <item name="Layout_una_foto_ImageView_expanded_image" type="id" />

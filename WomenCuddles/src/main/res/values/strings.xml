@@ -7,15 +7,12 @@
     <string name="rubisoft_twitter" translatable="false">\@Rubisoft_apps </string>
     <string name="my_bucket" translatable="false">gs://rubisoft-10e7e.appspot.com</string>
     <string name="facebook_app_id" translatable="false">845247938925779</string>
-    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyBppXYxocEZ-bwTtFid02-brP1FkII__m0</string>
     <string name="huqh_API_KEY" templateMergeStrategy="preserve" translatable="false">1188d9bf-338e-465b-af7b-57ac728eb904</string>
-    <string name="CLOUD_VISION_API_KEY" templateMergeStrategy="preserve" translatable="false">AIzaSyAltVvI2LkK_9rpZb87dnMQUqODIKWiDjw</string>
+    <string name="CLOUD_VISION_API_KEY" translatable="false">AIzaSyDT_yme-6q9U-xuu78i9wvSixyEgLVHCfM</string>
     <string name="Admob_APPID" translatable="false">ca-app-pub-7323079119104426~2191616908</string>
     <string name="APPODEAL_APP_KEY" translatable="false">dd56f65a3c2541db745b31d952c1193bea61e2f1d6bb7b6d</string>
-
-
-
     <string name="NICK_FECHA_HORA" translatable="false">%1$s - %2$s - %3$s</string>
+    <string name="web_client_id" translatable="false">559888187719-klmhif8sb002qaivmcemohoqhjpg84sm.apps.googleusercontent.com</string>
 
     <!-- ****************************  UNIDADES DE MEDIDA ****************************-->
     <string name="Mi">%1$s Mi</string>

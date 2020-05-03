@@ -1,4 +1,4 @@
-package com.rubisoft.bisexradar.Adapters;
+package com.rubisoft.bisexcuddles.Adapters;
 
 import android.content.Context;
 import android.graphics.Typeface;
@@ -13,9 +13,9 @@ import android.widget.TextView;
 
 import com.mikepenz.google_material_typeface_library.GoogleMaterial;
 import com.mikepenz.iconics.IconicsDrawable;
-import com.rubisoft.bisexradar.Classes.Usuario_para_listar;
-import com.rubisoft.bisexradar.R;
-import com.rubisoft.bisexradar.tools.utils;
+import com.rubisoft.bisexcuddles.Classes.Usuario_para_listar;
+import com.rubisoft.bisexcuddles.R;
+import com.rubisoft.bisexcuddles.tools.utils;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
@@ -184,22 +184,22 @@ public class RecyclerView_Principal_Adapter extends RecyclerView.Adapter<Recycle
 		CardView_ViewHolder(@NonNull View itemView) {
 			super(itemView);
 			itemView.setOnClickListener(this);
-			mCardView = itemView.findViewById(R.id.Layout_un_perfil_LinearLayout_info);
+			mCardView = itemView.findViewById(R.id.List_principal_CardView);
 
-			Cardview_list_persona_TextView_edad = itemView.findViewById(R.id.Cardview_list_persona_TextView_edad);
-			Cardview_list_persona_TextView_altura = itemView.findViewById(R.id.Cardview_list_persona_TextView_altura);
-			Cardview_list_persona_TextView_peso = itemView.findViewById(R.id.Cardview_list_persona_TextView_peso);
-			Cardview_list_persona_TextView_raza = itemView.findViewById(R.id.Cardview_list_persona_TextView_raza);
-			Cardview_list_persona_TextView_distancia = itemView.findViewById(R.id.Cardview_list_persona_TextView_distancia);
+			Cardview_list_persona_TextView_edad = itemView.findViewById(R.id.List_principal_TextView_edad);
+			Cardview_list_persona_TextView_altura = itemView.findViewById(R.id.List_principal_TextView_altura);
+			Cardview_list_persona_TextView_peso = itemView.findViewById(R.id.List_principal_TextView_peso);
+			Cardview_list_persona_TextView_raza = itemView.findViewById(R.id.List_principal_TextView_raza);
+			Cardview_list_persona_TextView_distancia = itemView.findViewById(R.id.List_principal_TextView_distancia);
 
-			user_name = itemView.findViewById(R.id.Cardview_list_persona_TextView_nombre);
-			user_foto = itemView.findViewById(R.id.Cardview_list_persona_ImageView_usuario);
-			user_stars = itemView.findViewById(R.id.Cardview_list_persona_TextView_estrellas);
-			star_icon = itemView.findViewById(R.id.Cardview_list_persona_ImageView_estrella);
-			user_sex = itemView.findViewById(R.id.Cardview_list_persona_ImageView_sexualidad);
+			user_name = itemView.findViewById(R.id.List_principal_TextView_nombre);
+			user_foto = itemView.findViewById(R.id.List_principal_ImageView_usuario);
+			user_stars = itemView.findViewById(R.id.List_principal_TextView_estrellas);
+			star_icon = itemView.findViewById(R.id.List_principal_ImageView_estrella);
+			user_sex = itemView.findViewById(R.id.List_principal_ImageView_sexualidad);
 
-			user_quiero_dejar_claro = itemView.findViewById(R.id.Cardview_list_persona_TextView_quiero_dejar_claro);
-			Esta_online = itemView.findViewById(R.id.Cardview_list_persona_ImageView_online);
+			user_quiero_dejar_claro = itemView.findViewById(R.id.List_principal_TextView_quiero_dejar_claro);
+			Esta_online = itemView.findViewById(R.id.List_principal_ImageView_online);
 
 			Typeface typeFace_roboto_bold = Typeface.createFromAsset(itemView.getContext().getAssets(), "fonts/Roboto-Bold.ttf");
 			Typeface typeFace_roboto_light = Typeface.createFromAsset(itemView.getContext().getAssets(), "fonts/Roboto-Light.ttf");
@@ -211,7 +211,6 @@ public class RecyclerView_Principal_Adapter extends RecyclerView.Adapter<Recycle
 			Cardview_list_persona_TextView_altura.setTypeface(typeFace_roboto_light);
 			Cardview_list_persona_TextView_raza.setTypeface(typeFace_roboto_light);
 			user_quiero_dejar_claro.setTypeface(typeFace_roboto_light);
-
 		}
 
 		@Override

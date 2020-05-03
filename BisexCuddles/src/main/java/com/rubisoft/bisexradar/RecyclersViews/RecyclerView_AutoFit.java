@@ -1,4 +1,4 @@
-package com.rubisoft.bisexradar.RecyclersViews;
+package com.rubisoft.bisexcuddles.RecyclersViews;
 
 import android.R.attr;
 import android.content.Context;

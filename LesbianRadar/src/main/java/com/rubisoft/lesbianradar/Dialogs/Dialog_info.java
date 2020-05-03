@@ -8,7 +8,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
-import android.widget.TextView;
 
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
@@ -17,26 +16,27 @@ import com.mikepenz.google_material_typeface_library.GoogleMaterial;
 import com.mikepenz.iconics.IconicsDrawable;
 import com.rubisoft.lesbianradar.Classes.Usuario_para_listar;
 import com.rubisoft.lesbianradar.R;
+import com.rubisoft.lesbianradar.databinding.DialogInfoBinding;
 import com.rubisoft.lesbianradar.tools.utils;
 
 import java.util.Map;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.widget.AppCompatImageView;
 import androidx.core.content.ContextCompat;
 import androidx.core.graphics.drawable.DrawableCompat;
 import androidx.fragment.app.DialogFragment;
 
- class Dialog_info extends DialogFragment {
+public class Dialog_info extends DialogFragment {
 
 	private SharedPreferences perfil_usuario;
+	private DialogInfoBinding binding;
 
-	private View view;
 	@Override
 	public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 		this.onCreate(savedInstanceState);
 
-		view = inflater.inflate(R.layout.dialog_info, container);
+		binding = DialogInfoBinding.inflate(inflater, container, false);
+		View mView = binding.getRoot();
 		try {
 			Bundle args = getArguments();
 
@@ -53,7 +53,7 @@ import androidx.fragment.app.DialogFragment;
 		}catch (Exception e){
 			utils.registra_error(e.toString(), "oncreateview  de dialog_info");
 		}
-		return view;
+		return mView;
 	}
 
 	private void get_document(String token_socialauth_de_la_otra_persona){
@@ -81,49 +81,26 @@ import androidx.fragment.app.DialogFragment;
 		un_usuario_para_listar = utils.prepara_datos_usuario_para_listar(getContext(),un_usuario_para_listar, perfil_usuario);
 
 		try {
-			TextView mTextView_nick = view.findViewById(R.id.Cardview_list_persona_TextView_nombre);
-			TextView mTextView_raza = view.findViewById(R.id.Cardview_list_persona_TextView_raza);
-			TextView mTextView_altura = view.findViewById(R.id.Cardview_list_persona_TextView_altura);
-			TextView mTextView_peso = view.findViewById(R.id.Cardview_list_persona_TextView_peso);
-			TextView mTextView_distancia = view.findViewById(R.id.Cardview_list_persona_TextView_distancia);
-			TextView mTextView_edad = view.findViewById(R.id.Cardview_list_persona_TextView_edad);
-			TextView mTextView_estrellas = view.findViewById(R.id.Cardview_list_persona_TextView_estrellas);
-			TextView mTextView_quiero_dejar_claro = view.findViewById(R.id.Cardview_list_persona_TextView_quiero_dejar_claro);
-			//  TextView mTextView_ultima_conexion = view.findViewById(R.id.Cardview_list_persona_Last_seen);
-
-			AppCompatImageView mAppCompatImageView_sexualidad = view.findViewById(R.id.Cardview_list_persona_ImageView_sexualidad);
-			AppCompatImageView mAppCompatImageView_estrella = view.findViewById(R.id.Cardview_list_persona_ImageView_estrella);
-		//	AppCompatImageView mAppCompatImageView_premium = view.findViewById(R.id.Cardview_list_persona_ImageView_premium);
-
 			Drawable icono_estrella;
 			icono_estrella = new IconicsDrawable(getContext()).icon(GoogleMaterial.Icon.gmd_star).color(ContextCompat.getColor(getContext(), R.color.accent));
-			mAppCompatImageView_estrella.setImageDrawable(icono_estrella);
+			binding.DialogInfoImageViewEstrella.setImageDrawable(icono_estrella);
 
 			switch (un_usuario_para_listar.getSexo().intValue()){
 				case 1:
-					mAppCompatImageView_sexualidad.setImageDrawable(DrawableCompat.wrap(ContextCompat.getDrawable(getContext(), R.drawable.gender_man)));
+					binding.DialogInfoImageViewSexualidad.setImageDrawable(DrawableCompat.wrap(ContextCompat.getDrawable(getContext(), R.drawable.gender_man)));
 					break;
 				case 2:
-					mAppCompatImageView_sexualidad.setImageDrawable(DrawableCompat.wrap(ContextCompat.getDrawable(getContext(), R.drawable.gender_woman)));
+					binding.DialogInfoImageViewSexualidad.setImageDrawable(DrawableCompat.wrap(ContextCompat.getDrawable(getContext(), R.drawable.gender_woman)));
 					break;
 			}
-			mTextView_nick.setText(un_usuario_para_listar.getNick());
-			mTextView_raza.setText(un_usuario_para_listar.getString_raza());
-			mTextView_altura.setText(un_usuario_para_listar.getString_altura());
-			mTextView_peso.setText(un_usuario_para_listar.getString_peso());
-			mTextView_distancia.setText(un_usuario_para_listar.getString_distancia());
-			mTextView_edad.setText(un_usuario_para_listar.getString_edad());
-			mTextView_estrellas.setText(un_usuario_para_listar.getEstrellas());
-			mTextView_quiero_dejar_claro.setText(un_usuario_para_listar.getQuiero_dejar_claro());
-
-
-
-			//mAppCompatImageView_sexualidad.setImageDrawable(un_usuario_para_listar.getIcono_Sexo());
-			//mAppCompatImageView_coche.setImageDrawable(un_usuario.getIcono_coche());
-			//mAppCompatImageView_casa.setImageDrawable(un_usuario.getIcono_casa());
-			//mAppCompatImageView_premium.setImageDrawable(un_usuario_para_listar.getIcono_premium());
-			//mAppCompatImageView_moto.setImageDrawable(un_usuario.getIcono_moto());
-			//mAppCompatImageView_estrella.setImageDrawable(un_usuario_para_listar.getIcono_estrella());
+			binding.DialogInfoTextViewNombre.setText(un_usuario_para_listar.getNick());
+			binding.DialogInfoTextViewRaza.setText(un_usuario_para_listar.getString_raza());
+			binding.DialogInfoTextViewAltura.setText(un_usuario_para_listar.getString_altura());
+			binding.DialogInfoTextViewPeso.setText(un_usuario_para_listar.getString_peso());
+			binding.DialogInfoTextViewDistancia.setText(un_usuario_para_listar.getString_distancia());
+			binding.DialogInfoTextViewEdad.setText(un_usuario_para_listar.getString_edad());
+			binding.DialogInfoTextViewEstrellas.setText(un_usuario_para_listar.getEstrellas());
+			binding.DialogInfoTextViewQuieroDejarClaro.setText(un_usuario_para_listar.getQuiero_dejar_claro());
 
 		}catch (Exception e){
 			utils.registra_error(e.toString(), "muestra_info_persona de dialog_info");

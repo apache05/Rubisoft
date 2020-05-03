@@ -26,7 +26,6 @@ import com.appodeal.ads.Appodeal;
 import com.appodeal.ads.BannerCallbacks;
 import com.explorestack.consent.Consent;
 import com.explorestack.consent.ConsentManager;
-import com.google.android.material.tabs.TabLayout;
 import com.mikepenz.google_material_typeface_library.GoogleMaterial;
 import com.mikepenz.google_material_typeface_library.GoogleMaterial.Icon;
 import com.mikepenz.iconics.IconicsDrawable;
@@ -38,6 +37,7 @@ import com.rubisoft.mencuddles.Fragments.fragment_foto_manager;
 import com.rubisoft.mencuddles.Fragments.fragment_logros;
 import com.rubisoft.mencuddles.Interfaces.Interface_ClickListener_Menu;
 import com.rubisoft.mencuddles.R;
+import com.rubisoft.mencuddles.databinding.LayoutMiPerfilBinding;
 import com.rubisoft.mencuddles.tools.utils;
 
 import java.io.File;
@@ -50,7 +50,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatImageView;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.content.ContextCompat;
-import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
@@ -72,11 +71,11 @@ public class Activity_Mi_Perfil extends AppCompatActivity {
     //navigation drawer
     private Toolbar toolbar;
     private ActionBarDrawerToggle drawerToggle;
-    private DrawerLayout mDrawerLayout;
+  //  private DrawerLayout mDrawerLayout;
     private RecyclerView recyclerViewDrawer;
     private ImageView mImageView_PictureMain;
 
-	private LinearLayout Main_LinearLayout;
+	private LayoutMiPerfilBinding binding;
 
 	@Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -85,25 +84,19 @@ public class Activity_Mi_Perfil extends AppCompatActivity {
             super.onCreate(savedInstanceState);
 
             if (utils.isNetworkAvailable((ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE))) {
-
-                setContentView(R.layout.layout_mi_perfil);
+				binding = LayoutMiPerfilBinding.inflate(getLayoutInflater());
+				setContentView(binding.getRoot());
 				perfil_usuario = getSharedPreferences(getResources().getString(R.string.SHAREDPREFERENCES_PERFIL_USUARIO), Context.MODE_PRIVATE);
 
-
                 setup_toolbar();// Setup toolbar and statusBar (really FrameLayout)
-				Main_LinearLayout = findViewById(R.id.Main_LinearLayout);
-				mDrawerLayout = findViewById(R.id.mDrawerLayout);
 
-                ViewPager mViewPager = findViewById(R.id.Layout_mi_perfil_ViewPager);
-                setupViewPager(mViewPager);
+                setupViewPager(binding.LayoutMiPerfilViewPager);
 
-                TabLayout mTabLayout = findViewById(R.id.Layout_mi_perfil_TabLayout);
-                mTabLayout.setupWithViewPager(mViewPager);
+                binding.LayoutMiPerfilTabLayout.setupWithViewPager(binding.LayoutMiPerfilViewPager);
 
-
-				mTabLayout.getTabAt(0).setIcon(new IconicsDrawable(this).icon(Icon.gmd_camera_alt).color(ContextCompat.getColor(getApplicationContext(), R.color.primary)).sizeDp(getResources().getInteger(R.integer.Tam_Normal_icons)));
-				mTabLayout.getTabAt(1).setIcon(new IconicsDrawable(this).icon(Icon.gmd_face).color(ContextCompat.getColor(getApplicationContext(), R.color.primary)).sizeDp(getResources().getInteger(R.integer.Tam_Normal_icons)));
-				mTabLayout.getTabAt(2).setIcon(new IconicsDrawable(this).icon(Icon.gmd_timeline).color(ContextCompat.getColor(getApplicationContext(), R.color.primary)).sizeDp(getResources().getInteger(R.integer.Tam_Normal_icons)));
+				binding.LayoutMiPerfilTabLayout.getTabAt(0).setIcon(new IconicsDrawable(this).icon(Icon.gmd_camera_alt).color(ContextCompat.getColor(getApplicationContext(), R.color.primary)).sizeDp(getResources().getInteger(R.integer.Tam_Normal_icons)));
+				binding.LayoutMiPerfilTabLayout.getTabAt(1).setIcon(new IconicsDrawable(this).icon(Icon.gmd_face).color(ContextCompat.getColor(getApplicationContext(), R.color.primary)).sizeDp(getResources().getInteger(R.integer.Tam_Normal_icons)));
+				binding.LayoutMiPerfilTabLayout.getTabAt(2).setIcon(new IconicsDrawable(this).icon(Icon.gmd_timeline).color(ContextCompat.getColor(getApplicationContext(), R.color.primary)).sizeDp(getResources().getInteger(R.integer.Tam_Normal_icons)));
 				inicializa_anuncios();
             } else {
                 Intent mIntent = new Intent(this, Activity_Sin_Conexion.class);
@@ -161,10 +154,10 @@ public class Activity_Mi_Perfil extends AppCompatActivity {
 			}else {
 				FrameLayout.LayoutParams layoutParams = new FrameLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT);
 				layoutParams.setMargins(0, 0, 0, 0);
-				if (mDrawerLayout!=null){
-					mDrawerLayout.setLayoutParams(layoutParams);
+				if (binding.mDrawerLayout!=null){
+					binding.mDrawerLayout.setLayoutParams(layoutParams);
 				}else{
-					Main_LinearLayout.setLayoutParams(layoutParams);
+					binding.MainLinearLayout.setLayoutParams(layoutParams);
 				}
 			}
 		}catch (Exception e){
@@ -231,15 +224,15 @@ public class Activity_Mi_Perfil extends AppCompatActivity {
     //tiene que ser public porque lo llamamos desde fragment_foto_manager
 	public void setupNavigationDrawer() {
 		try {
-			if (mDrawerLayout!=null) {
+			if (binding.mDrawerLayout!=null) {
 				// Setup Drawer Icon
-				drawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout, toolbar, R.string.drawer_open, R.string.drawer_close);
-				mDrawerLayout.addDrawerListener(drawerToggle);
+				drawerToggle = new ActionBarDrawerToggle(this, binding.mDrawerLayout, toolbar, R.string.drawer_open, R.string.drawer_close);
+				binding.mDrawerLayout.addDrawerListener(drawerToggle);
 				drawerToggle.syncState();
 
 				TypedValue typedValue = new TypedValue();
 				int color = typedValue.data;
-				mDrawerLayout.setStatusBarBackgroundColor(color);
+				binding.mDrawerLayout.setStatusBarBackgroundColor(color);
 			}
 			// Setup RecyclerViews inside drawer
 			setupNavigationDrawerRecyclerViews();
@@ -314,7 +307,7 @@ public class Activity_Mi_Perfil extends AppCompatActivity {
         recyclerViewDrawer.addOnItemTouchListener(new Activity_Mi_Perfil.RecyclerTouchListener_menu(this, recyclerViewDrawer, (view, position) -> {
 			utils.gestiona_onclick_menu_principal(Activity_Mi_Perfil.this, position);
 			if (!utils.isTablet(getApplicationContext())) {
-				 mDrawerLayout.closeDrawers();
+				binding.mDrawerLayout.closeDrawers();
 			}
 		}));
     }

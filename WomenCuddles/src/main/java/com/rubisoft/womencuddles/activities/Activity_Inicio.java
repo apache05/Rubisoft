@@ -12,10 +12,7 @@ import android.util.AndroidRuntimeException;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ProgressBar;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.afollestad.materialdialogs.MaterialDialog;
@@ -32,12 +29,10 @@ import com.facebook.FacebookException;
 import com.facebook.appevents.AppEventsLogger;
 import com.facebook.login.LoginManager;
 import com.facebook.login.LoginResult;
-import com.facebook.login.widget.LoginButton;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
-import com.google.android.gms.common.SignInButton;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.FirebaseApp;
 import com.google.firebase.analytics.FirebaseAnalytics;
@@ -52,6 +47,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.messaging.FirebaseMessaging;
 import com.rubisoft.womencuddles.Classes.Usuario;
 import com.rubisoft.womencuddles.R;
+import com.rubisoft.womencuddles.databinding.LayoutInicioBinding;
 import com.rubisoft.womencuddles.tools.utils;
 
 import java.util.Calendar;
@@ -67,15 +63,7 @@ public class Activity_Inicio extends AppCompatActivity {
     private static final int REQUEST_GOOGLE_SIGN_IN = 3;
 	private static final String CONSENT = "consent";
     private SharedPreferences perfil_usuario;
-    private ProgressBar mProgressBar;
-    private TextView TextView_titulo_principal;
-    private Button Signin_button;
-    private Button Signup_button;
-    private Button Forgot_password_button;
-    private LoginButton facebook_button;
-    private SignInButton google_plus_button;
-    private EditText mEmailField;
-    private EditText mPasswordField;
+
     private String Token_socialauth;
     private AuthCredential credential;
     private CallbackManager mCallbackManager;
@@ -84,6 +72,7 @@ public class Activity_Inicio extends AppCompatActivity {
 
 	private GoogleSignInClient mSignInClient;
 	private ConsentForm consentForm;
+	private LayoutInicioBinding binding;
 
 	private void puente(){
 		perfil_usuario = this.getSharedPreferences(this.getResources().getString(R.string.SHAREDPREFERENCES_PERFIL_USUARIO), Context.MODE_PRIVATE);
@@ -110,11 +99,11 @@ public class Activity_Inicio extends AppCompatActivity {
 				if (getIntent().getExtras() != null && getIntent().getExtras().get("tipo_mensaje")!=null) {
 					procesa_extras();
 				}else {
-
 					resolveUserConsent();
-					setContentView(R.layout.layout_inicio);
+					binding = LayoutInicioBinding.inflate(getLayoutInflater());
+					View view = binding.getRoot();
+					setContentView(view);
 					perfil_usuario = this.getSharedPreferences(this.getResources().getString(R.string.SHAREDPREFERENCES_PERFIL_USUARIO), Context.MODE_PRIVATE);
-					setup_Views();  //Inicializa las Views
 					setTypeFace_TextViews(); //ponemos la tipografía
 					disable_all_buttons(); //para que no pulsen antes de hora
 					empezar();
@@ -156,8 +145,7 @@ public class Activity_Inicio extends AppCompatActivity {
         try {
             super.onActivityResult(requestCode, resultCode, data);
 			if (requestCode == REQUEST_GOOGLE_SIGN_IN) {  //Venimos de loggearnos con Google
-				Task<GoogleSignInAccount> task =
-						GoogleSignIn.getSignedInAccountFromIntent(data);
+				Task<GoogleSignInAccount> task = GoogleSignIn.getSignedInAccountFromIntent(data);
 				if (task.isSuccessful()) {
 					// Sign in succeeded, proceed with account
 					GoogleSignInAccount acct = task.getResult();
@@ -171,7 +159,7 @@ public class Activity_Inicio extends AppCompatActivity {
 				mCallbackManager.onActivityResult(requestCode, resultCode, data);
 			}
         } catch (Exception e) {
-			utils.registra_error(e.toString(), "onCreate de inicio");
+			utils.registra_error(e.toString(), "onActivityResult de inicio");
         }
     }
 
@@ -195,43 +183,20 @@ public class Activity_Inicio extends AppCompatActivity {
         }
     }
 
-    private void setup_Views() {
-        try {
-            mProgressBar = this.findViewById(R.id.mProgressBar);
-            TextView_titulo_principal = this.findViewById(R.id.Layout_inicio_TextView_nombre_app);
-            //TextView_Choose_signin_method = (TextView) this.findViewById(R.id.Layout_inicio_TextView_Choose_signin_method);
-            //TextView_Or = (TextView) this.findViewById(R.id.Layout_inicio_TextView_or);
-
-
-            facebook_button = this.findViewById(R.id.Layout_inicio_AppCompatImageView_facebook);
-            //twitter_button = this.findViewById(R.id.Layout_inicio_AppCompatImageView_twitter);
-            google_plus_button = this.findViewById(R.id.Layout_inicio_AppCompatImageView_google_plus);
-
-            Signin_button = this.findViewById(R.id.Layout_inicio_Button_signin);
-            Signup_button = this.findViewById(R.id.Layout_inicio_Button_signup);
-
-            Forgot_password_button = this.findViewById(R.id.Layout_inicio_Button_forgot_password);
-			this.mEmailField = this.findViewById(R.id.Layout_inicio_EditText_Email);
-			this.mPasswordField = this.findViewById(R.id.Layout_inicio_EditText_Password);
-
-		} catch (Exception e) {
-			utils.registra_error(e.toString(), "setup_Views de inicio");
-        }
-    }
-
     private void setTypeFace_TextViews() {
         try {
             Typeface typeFace_roboto_regular = Typeface.createFromAsset(this.getAssets(), "fonts/Roboto-Regular.ttf");
             Typeface typeFace_roboto_light = Typeface.createFromAsset(this.getAssets(), "fonts/Roboto-Light.ttf");
             Typeface typeFace_roboto_bold = Typeface.createFromAsset(this.getAssets(), "fonts/Roboto-Bold.ttf");
 
-            TextView_titulo_principal.setTypeface(typeFace_roboto_regular);
-            this.mEmailField.setTypeface(typeFace_roboto_light);
-            this.mPasswordField.setTypeface(typeFace_roboto_light);
-            this.Signin_button.setTypeface(typeFace_roboto_bold);
-            this.Signup_button.setTypeface(typeFace_roboto_bold);
+			binding.LayoutInicioTextViewNombreApp.setTypeface(typeFace_roboto_regular);
 
-            this.Forgot_password_button.setTypeface(typeFace_roboto_bold);
+			binding.LayoutInicioEditTextEmail.setTypeface(typeFace_roboto_light);
+			binding.LayoutInicioEditTextPassword.setTypeface(typeFace_roboto_light);
+			binding.LayoutInicioButtonSignin.setTypeface(typeFace_roboto_bold);
+			binding.LayoutInicioButtonSignup.setTypeface(typeFace_roboto_bold);
+
+			binding.LayoutInicioButtonForgotPassword.setTypeface(typeFace_roboto_bold);
         } catch (Exception e) {
 			utils.registra_error(e.toString(), "setTypeFace_TextViews de inicio");
         }
@@ -239,9 +204,9 @@ public class Activity_Inicio extends AppCompatActivity {
 
     private void setup_signin_with_email_y_password() {
         try {
-            this.Signin_button.setOnClickListener(v -> {
-				String email = mEmailField.getText().toString();
-				String password = mPasswordField.getText().toString();
+			binding.LayoutInicioButtonSignin.setOnClickListener(v -> {
+				String email = binding.LayoutInicioEditTextEmail.getText().toString();
+				String password = binding.LayoutInicioEditTextPassword.getText().toString();
 				if (validate_SignIn_Form(email, password)) {
 					signIn_with_email_y_password(email, password);
 				}
@@ -252,7 +217,7 @@ public class Activity_Inicio extends AppCompatActivity {
     }
 
     private void setup_signup_with_email_y_password() {
-        this.Signup_button.setOnClickListener(v -> {
+		binding.LayoutInicioButtonSignup.setOnClickListener(v -> {
 			try {
 				new MaterialDialog.Builder(Activity_Inicio.this)
 						.theme(Theme.LIGHT)
@@ -291,10 +256,12 @@ public class Activity_Inicio extends AppCompatActivity {
 
     private void setup_google_sign_in() {
         try {
-			GoogleSignInOptions options = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN).requestEmail().build();
+			GoogleSignInOptions options = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+					.requestIdToken(getString(R.string.web_client_id))
+					.requestEmail().build();
 			mSignInClient = GoogleSignIn.getClient(this, options);
 
-			google_plus_button.setOnClickListener(v -> {
+			binding.LayoutInicioAppCompatImageViewGooglePlus.setOnClickListener(v -> {
 				Intent intent = mSignInClient.getSignInIntent();
 				startActivityForResult(intent, REQUEST_GOOGLE_SIGN_IN);
 			});
@@ -306,40 +273,42 @@ public class Activity_Inicio extends AppCompatActivity {
     }
 
     private void setup_facebook_sign_in() {
-        AppEventsLogger.activateApp(this.getApplication());//para estadisticas
-        // Initialize Facebook Login button
-        this.facebook_button.setPermissions("email", "public_profile");
-        facebook_button.registerCallback(mCallbackManager, new FacebookCallback<LoginResult>() {
-            @Override
-            public void onSuccess(LoginResult loginResult) {
-                try {
-                    if (!isFinishing() && !isDestroyed()) { //puede que ya no estemos en la activity
-                        Token_socialauth = "facebook_" + loginResult.getAccessToken().getUserId();
-                        credential = FacebookAuthProvider.getCredential(loginResult.getAccessToken().getToken());
-                        LoginManager.getInstance().logOut();
-                        signin_with_firebaseAuth();
-                    }
-                } catch (Exception e) {
-					utils.registra_error(e.toString(), "setup_facebook_sign_in de inicio");
-                }
-            }
+		try {
+			AppEventsLogger.activateApp(this.getApplication());//para estadisticas
+			binding.LayoutInicioAppCompatImageViewFacebook.setPermissions("email", "public_profile");
+			binding.LayoutInicioAppCompatImageViewFacebook.registerCallback(mCallbackManager, new FacebookCallback<LoginResult>() {
+				@Override
+				public void onSuccess(LoginResult loginResult) {
+					try {
+						if (!isFinishing() && !isDestroyed()) { //puede que ya no estemos en la activity
+							Token_socialauth = "facebook_" + loginResult.getAccessToken().getUserId();
+							credential = FacebookAuthProvider.getCredential(loginResult.getAccessToken().getToken());
+							LoginManager.getInstance().logOut();
+							signin_with_firebaseAuth();
+						}
+					} catch (Exception e) {
+						utils.registra_error(e.toString(), "setup_facebook_sign_in de inicio");
+					}
+				}
 
-            @Override
-            public void onCancel() {
+				@Override
+				public void onCancel() {
 
-            }
+				}
 
-            @Override
-            public void onError(FacebookException error) {
-                Toast.makeText(Activity_Inicio.this, "Error  setup_facebook_sign_in" + error, Toast.LENGTH_LONG).show();
-            }
-        });
-
+				@Override
+				public void onError(FacebookException error) {
+					Toast.makeText(Activity_Inicio.this, "Error  setup_facebook_sign_in" + error, Toast.LENGTH_LONG).show();
+				}
+			});
+		}catch (Exception e) {
+			utils.registra_error(e.toString(), "setup_facebook_sign_in de inicio");
+		}
     }
 
     private void setup_forgot_password() {
         try {
-            this.Forgot_password_button.setOnClickListener(v -> {
+            binding.LayoutInicioButtonForgotPassword.setOnClickListener(v -> {
 				EditText edittext = new EditText(Activity_Inicio.this);
 				edittext.setHint(getResources().getString(R.string.ACTIVITY_INICIO_HINT_EMAIL));
 				edittext.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.black));
@@ -384,21 +353,19 @@ public class Activity_Inicio extends AppCompatActivity {
     }
 
     private void disable_all_buttons() {
-        facebook_button.setEnabled(false);
-        //twitter_button.setEnabled(false);
-        google_plus_button.setEnabled(false);
-        Signin_button.setEnabled(false);
-        Forgot_password_button.setEnabled(false);
-        Signup_button.setEnabled(false);
+        binding.LayoutInicioAppCompatImageViewFacebook.setEnabled(false);
+        binding.LayoutInicioAppCompatImageViewGooglePlus.setEnabled(false);
+		binding.LayoutInicioButtonSignin.setEnabled(false);
+		binding.LayoutInicioButtonForgotPassword.setEnabled(false);
+		binding.LayoutInicioButtonSignup.setEnabled(false);
     }
 
     private void enable_all_buttons() {
-        facebook_button.setEnabled(true);
-        //twitter_button.setEnabled(true);
-        google_plus_button.setEnabled(true);
-        Signin_button.setEnabled(true);
-        Forgot_password_button.setEnabled(true);
-        Signup_button.setEnabled(true);
+		binding.LayoutInicioAppCompatImageViewFacebook.setEnabled(true);
+		binding.LayoutInicioAppCompatImageViewGooglePlus.setEnabled(true);
+		binding.LayoutInicioButtonSignin.setEnabled(true);
+		binding.LayoutInicioButtonForgotPassword.setEnabled(true);
+		binding.LayoutInicioButtonSignup.setEnabled(true);
 
     }
 
@@ -432,16 +399,16 @@ public class Activity_Inicio extends AppCompatActivity {
     private void createAccount_with_email_y_password(String email, String password) {
         try {
             if (mAuth!=null) {
-                utils.setProgressBar_visibility(mProgressBar, View.VISIBLE);
+                utils.setProgressBar_visibility(binding.mProgressBar, View.VISIBLE);
 
                 mAuth.createUserWithEmailAndPassword(email, password).addOnFailureListener(this, e -> {
 					Toast.makeText(getApplicationContext(), "Error: " + e, Toast.LENGTH_LONG).show();
-					utils.setProgressBar_visibility(mProgressBar, View.INVISIBLE);
+					utils.setProgressBar_visibility(binding.mProgressBar, View.INVISIBLE);
 				}).addOnCompleteListener(this, task -> {
 					// If sign in fails, display a message to the user. If sign in succeeds
 					// the auth state listener will be notified and logic to handle the
 					// signed in user can be handled in the listener.
-					utils.setProgressBar_visibility(mProgressBar, View.INVISIBLE);
+					utils.setProgressBar_visibility(binding.mProgressBar, View.INVISIBLE);
 
 					if (task.isSuccessful()) {
 						signIn_with_email_y_password(email, password);
@@ -462,14 +429,14 @@ public class Activity_Inicio extends AppCompatActivity {
     private void signIn_with_email_y_password(String email, String password) {
         try {
             if (mAuth!=null) {
-                utils.setProgressBar_visibility(mProgressBar, View.VISIBLE);
+                utils.setProgressBar_visibility(binding.mProgressBar, View.VISIBLE);
 
                 mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(this, task -> {
 					try {
 						// If sign in fails, display a message to the user. If sign in succeeds
 						// the auth state listener will be notified and logic to handle the
 						// signed in user can be handled in the listener.
-						utils.setProgressBar_visibility(mProgressBar, View.INVISIBLE);
+						utils.setProgressBar_visibility(binding.mProgressBar, View.INVISIBLE);
 
 						if (task.isSuccessful()) {
 
@@ -477,7 +444,7 @@ public class Activity_Inicio extends AppCompatActivity {
 							String user_uid = task.getResult().getUser().getUid();
 							credential = EmailAuthProvider.getCredential(email, password);
 							Token_socialauth = email.substring(email.indexOf('@') + 1) + '_' + user_uid;
-							utils.setProgressBar_visibility(mProgressBar, View.VISIBLE);
+							utils.setProgressBar_visibility(binding.mProgressBar, View.VISIBLE);
 							disable_all_buttons();
 							get_mi_perfil(Token_socialauth);
 							// new AsyncTask_login().execute();
@@ -503,7 +470,7 @@ public class Activity_Inicio extends AppCompatActivity {
 
 		if (mAuth!=null) {
 			try {
-				utils.setProgressBar_visibility(mProgressBar, View.VISIBLE);
+				utils.setProgressBar_visibility(binding.mProgressBar, View.VISIBLE);
 
 				mAuth.signInWithCredential(this.credential).addOnCompleteListener(this, task -> {
 					try {
@@ -513,22 +480,22 @@ public class Activity_Inicio extends AppCompatActivity {
 							// signed in user can be handled in the listener.
 							if (task.isSuccessful()) {
 								try {
-									utils.setProgressBar_visibility(mProgressBar, View.VISIBLE);
+									utils.setProgressBar_visibility(binding.mProgressBar, View.VISIBLE);
 									disable_all_buttons();
 									get_mi_perfil(Token_socialauth);
 								}catch (Exception e2){
 									Toast.makeText(getApplicationContext(), "Error2: " + e2.getMessage(), Toast.LENGTH_LONG).show();
-									utils.setProgressBar_visibility(mProgressBar, View.INVISIBLE);
+									utils.setProgressBar_visibility(binding.mProgressBar, View.INVISIBLE);
 
 								}
 								// new AsyncTask_login().execute();
 							} else {
 								Toast.makeText(getApplicationContext(), "Error: " + task.getException().getMessage(), Toast.LENGTH_LONG).show();
-								utils.setProgressBar_visibility(mProgressBar, View.INVISIBLE);
+								utils.setProgressBar_visibility(binding.mProgressBar, View.INVISIBLE);
 							}
 						}
 					} catch (Exception e) {
-						utils.registra_error(e.toString(), "onCreate de inicio");
+						utils.registra_error(e.toString(), "signin_with_firebaseAuth de inicio");
 					}
 				}).addOnFailureListener(this, e -> Toast.makeText(getApplicationContext(), "Error: " + e, Toast.LENGTH_LONG).show());
 			} catch (Exception e) {
@@ -551,13 +518,13 @@ public class Activity_Inicio extends AppCompatActivity {
         boolean valid = true;
         try {
             if (TextUtils.isEmpty(email) || !android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
-                this.mEmailField.setError("Required.");
+                binding.LayoutInicioEditTextEmail.setError("Required.");
                 Toast.makeText(getApplicationContext(), getString(R.string.ACTIVITY_INICIO_BAD_EMAIL), Toast.LENGTH_LONG).show();
                 valid = false;
             }
 
             if (TextUtils.isEmpty(password)) {
-                this.mPasswordField.setError("Required.");
+				binding.LayoutInicioEditTextPassword.setError("Required.");
                 valid = false;
             }
         } catch (Exception e) {
@@ -590,7 +557,7 @@ public class Activity_Inicio extends AppCompatActivity {
     	try {
 			DocumentReference docRef = db.collection(getResources().getString(R.string.USUARIOS)).document(document);
 			docRef.get().addOnCompleteListener(task -> {
-				utils.setProgressBar_visibility(mProgressBar, View.INVISIBLE);
+				utils.setProgressBar_visibility(binding.mProgressBar, View.INVISIBLE);
 
 				if (task.isSuccessful()) {
 					DocumentSnapshot document1 = task.getResult();
@@ -614,19 +581,23 @@ public class Activity_Inicio extends AppCompatActivity {
 	}
 
 	private void login_succesful(String token_socialauth,Map<String,Object> perfil_encontrado){
-		actualiza_token_FCM();
-		Usuario un_perfil= new Usuario(perfil_encontrado);
-		if (!un_perfil.getEs_premium()) {
-			utils.actualizacion_semanal_de_estrellas(this, token_socialauth, un_perfil.getFecha_cobro_estrellas());
-		}
-		inicializa_sharedpreferences_perfil_usuario( token_socialauth,un_perfil);
-		inicializa_sharedpreferences_busqueda(un_perfil);
-		suscribir_a_grupo();
-		Intent mIntent1 = new Intent(this, Activity_Principal.class);
-		mIntent1.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+		try {
+			actualiza_token_FCM();
+			Usuario un_perfil = new Usuario(perfil_encontrado);
+			if (!un_perfil.getEs_premium()) {
+				utils.actualizacion_semanal_de_estrellas(this, token_socialauth, un_perfil.getFecha_cobro_estrellas());
+			}
+			inicializa_sharedpreferences_perfil_usuario(token_socialauth, un_perfil);
+			inicializa_sharedpreferences_busqueda(un_perfil);
+			suscribir_a_grupo();
+			Intent mIntent1 = new Intent(this, Activity_Principal.class);
+			mIntent1.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 
-		startActivity(mIntent1);
-		finish();
+			startActivity(mIntent1);
+			finish();
+		}catch (Exception e){
+			utils.registra_error(e.toString(), "login_succesful de inicio");
+		}
 	}
 
 	private void suscribir_a_grupo(){
@@ -785,81 +756,91 @@ public class Activity_Inicio extends AppCompatActivity {
 
 	// Requesting Consent from European Users using Stack ConsentManager (https://wiki.appodeal.com/en/android/consent-manager).
 	private void resolveUserConsent() {
-		SharedPreferences sharedPreferences = getSharedPreferences(this.getResources().getString(R.string.SHAREDPREFERENCES_GDPR), Context.MODE_PRIVATE);
-		if (!sharedPreferences.contains(getString(R.string.PREFERENCIAS_GDPR_CONSENT))) {
-			ConsentManager consentManager = ConsentManager.getInstance(this);
-			// Requesting Consent info update
-			consentManager.requestConsentInfoUpdate(
-					getResources().getString(R.string.APPODEAL_APP_KEY),
-					new ConsentInfoUpdateListener() {
-						@Override
-						public void onConsentInfoUpdated(Consent consent) {
-							Consent.ShouldShow consentShouldShow = consentManager.shouldShowConsentDialog();
-							// If ConsentManager return Consent.ShouldShow.TRUE, than we should show consent form
-							if (consentShouldShow == Consent.ShouldShow.TRUE) {
-								showConsentForm();
-							} else {
+		try {
+			SharedPreferences sharedPreferences = getSharedPreferences(this.getResources().getString(R.string.SHAREDPREFERENCES_GDPR), Context.MODE_PRIVATE);
+			if (!sharedPreferences.contains(getString(R.string.PREFERENCIAS_GDPR_CONSENT))) {
+				ConsentManager consentManager = ConsentManager.getInstance(this);
+				// Requesting Consent info update
+				consentManager.requestConsentInfoUpdate(
+						getResources().getString(R.string.APPODEAL_APP_KEY),
+						new ConsentInfoUpdateListener() {
+							@Override
+							public void onConsentInfoUpdated(Consent consent) {
+								Consent.ShouldShow consentShouldShow = consentManager.shouldShowConsentDialog();
+								// If ConsentManager return Consent.ShouldShow.TRUE, than we should show consent form
+								if (consentShouldShow == Consent.ShouldShow.TRUE) {
+									showConsentForm();
+								} else {
+									// Start our main activity with default Consent value
+									startMainActivity(false);
+								}
+							}
+
+							@Override
+							public void onFailedToUpdateConsentInfo(ConsentManagerException e) {
 								// Start our main activity with default Consent value
+								SharedPreferences sharedPreferences = getSharedPreferences(getResources().getString(R.string.SHAREDPREFERENCES_GDPR), Context.MODE_PRIVATE);
+								sharedPreferences.edit()
+										.putBoolean(getString(R.string.PREFERENCIAS_GDPR_CONSENT), false)
+										.apply();
 								startMainActivity(false);
 							}
-						}
+						});
+			}
+		}catch(Exception e){
+			utils.registra_error(e.toString(), "resolveUserConsent de inicio");
 
-						@Override
-						public void onFailedToUpdateConsentInfo(ConsentManagerException e) {
-							// Start our main activity with default Consent value
-							SharedPreferences sharedPreferences = getSharedPreferences(getResources().getString(R.string.SHAREDPREFERENCES_GDPR), Context.MODE_PRIVATE);
-							sharedPreferences.edit()
-									.putBoolean(getString(R.string.PREFERENCIAS_GDPR_CONSENT), false)
-									.apply();
-							startMainActivity(false);
-						}
-					});
 		}
 	}
 
 	// Displaying ConsentManger Consent request form
 	private void showConsentForm() {
-		if (consentForm == null) {
-			consentForm = new ConsentForm.Builder(this)
-					.withListener(new ConsentFormListener() {
-						@Override
-						public void onConsentFormLoaded() {
-							// Show ConsentManager Consent request form
-							consentForm.showAsActivity();
-						}
+		try{
+			if (consentForm == null) {
+				consentForm = new ConsentForm.Builder(this)
+						.withListener(new ConsentFormListener() {
+							@Override
+							public void onConsentFormLoaded() {
+								// Show ConsentManager Consent request form
+								consentForm.showAsActivity();
+							}
 
-						@Override
-						public void onConsentFormError(ConsentManagerException error) {
-							// Start our main activity with default Consent value
-							SharedPreferences sharedPreferences = getSharedPreferences(getResources().getString(R.string.SHAREDPREFERENCES_GDPR), Context.MODE_PRIVATE);
-							sharedPreferences.edit()
-									.putBoolean(getString(R.string.PREFERENCIAS_GDPR_CONSENT), false)
-									.apply();
-							startMainActivity(false);
-						}
+							@Override
+							public void onConsentFormError(ConsentManagerException error) {
+								// Start our main activity with default Consent value
+								SharedPreferences sharedPreferences = getSharedPreferences(getResources().getString(R.string.SHAREDPREFERENCES_GDPR), Context.MODE_PRIVATE);
+								sharedPreferences.edit()
+										.putBoolean(getString(R.string.PREFERENCIAS_GDPR_CONSENT), false)
+										.apply();
+								startMainActivity(false);
+							}
 
-						@Override
-						public void onConsentFormOpened() {
-							//ignore
-						}
+							@Override
+							public void onConsentFormOpened() {
+								//ignore
+							}
 
-						@Override
-						public void onConsentFormClosed(Consent consent) {
-							boolean hasConsent = consent.getStatus() == Consent.Status.PERSONALIZED && consent.getStatus() != Consent.Status.NON_PERSONALIZED;
-							SharedPreferences sharedPreferences = getSharedPreferences(getResources().getString(R.string.SHAREDPREFERENCES_GDPR), Context.MODE_PRIVATE);
-							sharedPreferences.edit()
-									.putBoolean(getString(R.string.PREFERENCIAS_GDPR_CONSENT), hasConsent)
-									.apply();
-							// Start our main activity with resolved Consent value
-							startMainActivity(hasConsent);
-						}
-					}).build();
-		}
-		// If Consent request form is already loaded, then we can display it, otherwise, we should load it first
-		if (consentForm.isLoaded()) {
-			consentForm.showAsActivity();
-		} else {
-			consentForm.load();
+							@Override
+							public void onConsentFormClosed(Consent consent) {
+								boolean hasConsent = consent.getStatus() == Consent.Status.PERSONALIZED && consent.getStatus() != Consent.Status.NON_PERSONALIZED;
+								SharedPreferences sharedPreferences = getSharedPreferences(getResources().getString(R.string.SHAREDPREFERENCES_GDPR), Context.MODE_PRIVATE);
+								sharedPreferences.edit()
+										.putBoolean(getString(R.string.PREFERENCIAS_GDPR_CONSENT), hasConsent)
+										.apply();
+								// Start our main activity with resolved Consent value
+								startMainActivity(hasConsent);
+							}
+						}).build();
+			}
+			// If Consent request form is already loaded, then we can display it, otherwise, we should load it first
+			if (consentForm.isLoaded()) {
+				consentForm.showAsActivity();
+			} else {
+				consentForm.load();
+			}
+		}catch(Exception e){
+			utils.registra_error(e.toString(), "showConsentForm de inicio");
+
 		}
 	}
 

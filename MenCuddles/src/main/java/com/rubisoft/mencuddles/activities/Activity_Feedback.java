@@ -17,12 +17,9 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
-import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.RadioButton;
-import android.widget.RadioGroup;
 import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -41,6 +38,7 @@ import com.rubisoft.mencuddles.Classes.Drawer_Item;
 import com.rubisoft.mencuddles.Classes.Feedback;
 import com.rubisoft.mencuddles.Interfaces.Interface_ClickListener_Menu;
 import com.rubisoft.mencuddles.R;
+import com.rubisoft.mencuddles.databinding.LayoutFeedbackBinding;
 import com.rubisoft.mencuddles.tools.utils;
 
 import java.io.File;
@@ -53,9 +51,7 @@ import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatImageView;
 import androidx.appcompat.widget.Toolbar;
-import androidx.cardview.widget.CardView;
 import androidx.core.content.ContextCompat;
-import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -74,32 +70,13 @@ public class Activity_Feedback extends AppCompatActivity {
     //navigation drawer
     private Toolbar toolbar;
     private ActionBarDrawerToggle drawerToggle;
-    private DrawerLayout mDrawerLayout;
     private RecyclerView recyclerViewDrawer;
     private ImageView mImageView_PictureMain;
 
-    private TextView TextView_titulo;
-    private RadioGroup RadioGroup_me_gusta;
-    private RadioButton RadioButton_si_me_gusta;
-    private RadioButton RadioButton_no_me_gusta;
-    private CardView CardView_Rate;
-    private CardView CardView_write_suggestion;
-    private TextView Button_enviar_feedback;
-    private TextView Button_rate_app;
-    private RadioGroup RadioGroup_encuesta;
-
-    private RadioButton RadioButton_va_lenta;
-    private RadioButton RadioButton_pocos_usuarios;
-    private RadioButton RadioButton_no_funciona_bien;
-    private RadioButton RadioButton_no_se_como_funciona;
-    private RadioButton RadioButton_diseno_horrible;
-    private RadioButton RadioButton_mal_traducida;
-
-    private EditText EditText_Feedback;
     private String eleccion="";
     private ScrollView scrollview;
 
-	private LinearLayout Main_LinearLayout;
+	private LayoutFeedbackBinding binding;
 
 	@Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -111,31 +88,30 @@ public class Activity_Feedback extends AppCompatActivity {
             if (perfil_usuario.getString(getString(R.string.PERFIL_USUARIO_TOKEN_SOCIALAUTH), "").isEmpty()) {
                 salir();
             } else {
-				setContentView(R.layout.layout_feedback);
-
-                setup_Views();
+				binding = LayoutFeedbackBinding.inflate(getLayoutInflater());
+				setContentView(binding.getRoot());
                 setTypefaces();
                 setTexts();
 				inicializa_anuncios();
                 setup_toolbar();// Setup toolbar and statusBar (really FrameLayout)
 				db = FirebaseFirestore.getInstance();
 
-                RadioGroup_me_gusta.setOnCheckedChangeListener((radioGroup, i) -> {
+				binding.LayoutFeedbackRadioGroupMeGusta.setOnCheckedChangeListener((radioGroup, i) -> {
 					switch (i) {
 						case R.id.Layout_feedback_RadioButton_si_me_gusta:
-							CardView_write_suggestion.setVisibility(View.INVISIBLE);
-							CardView_Rate.setVisibility(View.VISIBLE);
+							binding.LayoutFeedbackCardViewWriteSuggestion.setVisibility(View.INVISIBLE);
+							binding.LayoutFeedbackCardViewRateApp.setVisibility(View.VISIBLE);
 
 							break;
 						case R.id.Layout_feedback_RadioButton_no_me_gusta:
-							CardView_write_suggestion.setVisibility(View.VISIBLE);
-							CardView_Rate.setVisibility(View.INVISIBLE);
+							binding.LayoutFeedbackCardViewWriteSuggestion.setVisibility(View.VISIBLE);
+							binding.LayoutFeedbackCardViewRateApp.setVisibility(View.INVISIBLE);
 							break;
 					}
 				});
 
                 //Creamos un listener para el botón de rate app
-                Button_rate_app.setOnClickListener(view -> {
+                binding.LayoutFeedbackButtonRateApp.setOnClickListener(view -> {
 					try {
 						Intent intent = new Intent(Intent.ACTION_VIEW);
 						intent.setData(Uri.parse("market://details?id="+getApplication().getPackageName()));
@@ -148,7 +124,7 @@ public class Activity_Feedback extends AppCompatActivity {
 				});
 
                 //Creamos un listener para el botón de feedback
-                RadioGroup_encuesta.setOnCheckedChangeListener((radioGroup, i) -> {
+                binding.LayoutFeedbackRadioGroupEncuesta.setOnCheckedChangeListener((radioGroup, i) -> {
 					switch (i) {
 						case R.id.Layout_feedback_RadioButton_poca_gente:
 							eleccion = "Poca gente";
@@ -174,9 +150,9 @@ public class Activity_Feedback extends AppCompatActivity {
 					}
 					scrollview.postDelayed(new MyRunnable(scrollview), 100);
 				});
-                Button_enviar_feedback.setOnClickListener(v -> {
+                binding.LayoutFeedbackButtonEnviarFeedback.setOnClickListener(v -> {
 					if (!eleccion.isEmpty()) {
-						Registra_Feedback_en_Firestore(EditText_Feedback.getText().toString(), eleccion);
+						Registra_Feedback_en_Firestore(binding.LayoutFeedbackEditTextFeedback.getText().toString(), eleccion);
 						ir_a_principal();
 					}
 				});
@@ -261,16 +237,16 @@ public class Activity_Feedback extends AppCompatActivity {
 
 	private void setupNavigationDrawer() {
 		try {
-			if (mDrawerLayout!=null) {
+			if (binding.mDrawerLayout!=null) {
 
 				// Setup Drawer Icon
-				drawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout, toolbar, R.string.drawer_open, R.string.drawer_close);
-				mDrawerLayout.addDrawerListener(drawerToggle);
+				drawerToggle = new ActionBarDrawerToggle(this, binding.mDrawerLayout, toolbar, R.string.drawer_open, R.string.drawer_close);
+				binding.mDrawerLayout.addDrawerListener(drawerToggle);
 				drawerToggle.syncState();
 
 				TypedValue typedValue = new TypedValue();
 				int color = typedValue.data;
-				mDrawerLayout.setStatusBarBackgroundColor(color);
+				binding.mDrawerLayout.setStatusBarBackgroundColor(color);
 			}
 			// Setup RecyclerViews inside drawer
 			setupNavigationDrawerRecyclerViews();
@@ -345,7 +321,7 @@ public class Activity_Feedback extends AppCompatActivity {
         recyclerViewDrawer.addOnItemTouchListener(new Activity_Feedback.RecyclerTouchListener_menu(this, recyclerViewDrawer, (view, position) -> {
 			utils.gestiona_onclick_menu_principal(Activity_Feedback.this, position);
 			if (!utils.isTablet(getApplicationContext())) {
-				mDrawerLayout.closeDrawers();
+				binding.mDrawerLayout.closeDrawers();
 			}
 		}));
     }
@@ -366,10 +342,10 @@ public class Activity_Feedback extends AppCompatActivity {
 			}else {
 				FrameLayout.LayoutParams layoutParams = new FrameLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT);
 				layoutParams.setMargins(0, 0, 0, 0);
-				if (mDrawerLayout!=null){
-					mDrawerLayout.setLayoutParams(layoutParams);
+				if (binding.mDrawerLayout!=null){
+					binding.mDrawerLayout.setLayoutParams(layoutParams);
 				}else{
-					Main_LinearLayout.setLayoutParams(layoutParams);
+					binding.MainLinearLayout.setLayoutParams(layoutParams);
 				}
 			}
 		}catch (Exception e){
@@ -412,54 +388,30 @@ public class Activity_Feedback extends AppCompatActivity {
 	}
 
 	private void setTexts(){
-        TextView_titulo.setText(getResources().getString(R.string.ACTIVITY_FEEDBACK_TITULO));
+        binding.LayoutFeedbackTextViewTitulo.setText(getResources().getString(R.string.ACTIVITY_FEEDBACK_TITULO));
     }
 
     private void setTypefaces() {
         Typeface typeFace_roboto_light = Typeface.createFromAsset(this.getAssets(), "fonts/Roboto-Light.ttf");
         Typeface typeFace_roboto_bold = Typeface.createFromAsset(this.getAssets(), "fonts/Roboto-Bold.ttf");
 
-        TextView_titulo.setTypeface(typeFace_roboto_bold);
-        // TextView_rate_app.setTypeface(typeFace_roboto_light);
-//        EditText_Email.setTypeface(typeFace_roboto_light);
-        EditText_Feedback.setTypeface(typeFace_roboto_light);
+		binding.LayoutFeedbackTextViewTitulo.setTypeface(typeFace_roboto_bold);
 
-        Button_enviar_feedback.setTypeface(typeFace_roboto_light);
-        Button_rate_app.setTypeface(typeFace_roboto_light);
+		binding.LayoutFeedbackEditTextFeedback.setTypeface(typeFace_roboto_light);
 
-        RadioButton_si_me_gusta.setTypeface(typeFace_roboto_light);
-        RadioButton_no_me_gusta.setTypeface(typeFace_roboto_light);
-        RadioButton_diseno_horrible.setTypeface(typeFace_roboto_light);
-        RadioButton_va_lenta.setTypeface(typeFace_roboto_light);
-        RadioButton_no_funciona_bien.setTypeface(typeFace_roboto_light);
-        RadioButton_no_se_como_funciona.setTypeface(typeFace_roboto_light);
-        RadioButton_mal_traducida.setTypeface(typeFace_roboto_light);
-        RadioButton_pocos_usuarios.setTypeface(typeFace_roboto_light);
+		binding.LayoutFeedbackButtonEnviarFeedback.setTypeface(typeFace_roboto_light);
+        binding.LayoutFeedbackButtonRateApp.setTypeface(typeFace_roboto_light);
+
+		binding.LayoutFeedbackRadioButtonSiMeGusta.setTypeface(typeFace_roboto_light);
+		binding.LayoutFeedbackRadioButtonNoMeGusta.setTypeface(typeFace_roboto_light);
+		binding.LayoutFeedbackRadioButtonMalDisenyo.setTypeface(typeFace_roboto_light);
+		binding.LayoutFeedbackRadioButtonVaLenta.setTypeface(typeFace_roboto_light);
+		binding.LayoutFeedbackRadioButtonNoFuncionaBien.setTypeface(typeFace_roboto_light);
+		binding.LayoutFeedbackRadioButtonNoSeComoVa.setTypeface(typeFace_roboto_light);
+		binding.LayoutFeedbackRadioButtonMalTraducida.setTypeface(typeFace_roboto_light);
+		binding.LayoutFeedbackRadioButtonPocaGente.setTypeface(typeFace_roboto_light);
     }
 
-    private void setup_Views() {
-        CardView_write_suggestion = findViewById(R.id.Layout_feedback_CardView_write_suggestion);
-        CardView_Rate = findViewById(R.id.Layout_feedback_CardView_rate_app);
-        EditText_Feedback = findViewById(R.id.Layout_feedback_EditText_feedback);
-        scrollview = findViewById(R.id.layout_feedback_scrollview);
-
-        TextView_titulo = findViewById(R.id.Layout_feedback_TextView_titulo);
-        RadioGroup_encuesta = findViewById(R.id.Layout_feedback_RadioGroup_encuesta);
-        Button_enviar_feedback = findViewById(R.id.Layout_feedback_Button_enviar_feedback);
-        Button_rate_app = findViewById(R.id.Layout_feedback_Button_rate_app);
-        RadioGroup_me_gusta = findViewById(R.id.Layout_feedback_RadioGroup_me_gusta);
-        RadioButton_si_me_gusta = findViewById(R.id.Layout_feedback_RadioButton_si_me_gusta);
-        RadioButton_no_me_gusta = findViewById(R.id.Layout_feedback_RadioButton_no_me_gusta);
-
-        RadioButton_diseno_horrible = findViewById(R.id.Layout_feedback_RadioButton_mal_disenyo);
-        RadioButton_mal_traducida = findViewById(R.id.Layout_feedback_RadioButton_mal_traducida);
-        RadioButton_pocos_usuarios = findViewById(R.id.Layout_feedback_RadioButton_poca_gente);
-        RadioButton_no_se_como_funciona = findViewById(R.id.Layout_feedback_RadioButton_no_se_como_va);
-        RadioButton_no_funciona_bien = findViewById(R.id.Layout_feedback_RadioButton_no_funciona_bien);
-        RadioButton_va_lenta = findViewById(R.id.Layout_feedback_RadioButton_va_lenta);
-		Main_LinearLayout = findViewById(R.id.Main_LinearLayout);
-		mDrawerLayout = findViewById(R.id.mDrawerLayout);
-	}
 
     private class AsyncTask_Coloca_PictureMain extends AsyncTask<Void, Void, Bitmap> {
         @Override

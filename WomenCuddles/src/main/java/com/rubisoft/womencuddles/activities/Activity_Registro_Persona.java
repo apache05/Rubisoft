@@ -17,18 +17,11 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
-import android.widget.CheckBox;
-import android.widget.EditText;
-import android.widget.ImageView;
-import android.widget.ProgressBar;
-import android.widget.Spinner;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.appodeal.ads.Appodeal;
 import com.appodeal.ads.BannerCallbacks;
 import com.appodeal.ads.utils.PermissionsHelper;
-import com.appyvet.rangebar.RangeBar;
 import com.explorestack.consent.Consent;
 import com.explorestack.consent.ConsentManager;
 import com.google.android.gms.location.FusedLocationProviderClient;
@@ -45,6 +38,7 @@ import com.rubisoft.womencuddles.Classes.Logro;
 import com.rubisoft.womencuddles.Classes.STATS_PAISES;
 import com.rubisoft.womencuddles.Classes.Usuario;
 import com.rubisoft.womencuddles.R;
+import com.rubisoft.womencuddles.databinding.LayoutRegistroPersonasBinding;
 import com.rubisoft.womencuddles.tools.utils;
 
 import org.joda.time.DateTime;
@@ -57,7 +51,6 @@ import java.util.Set;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.cardview.widget.CardView;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.core.util.Pair;
@@ -66,40 +59,12 @@ public class Activity_Registro_Persona extends AppCompatActivity  {
 	private static final int REQUEST_PERMISSIONS_REQUEST_CODE = 2;
 	private static final int MY_PERMISSIONS_REQUEST_LAST_LOCATION = 3;
 	private FusedLocationProviderClient mFusedLocationClient;
-	private EditText mEditText_nick;
-	private Spinner mSpinner_dia_nacimiento;
-	private Spinner mSpinner_mes_nacimiento;
-	private Spinner mSpinner_anyo_nacimiento;
-	private Spinner mSpinner_sexo;
-	private Spinner mSpinner_orientacion;
-	private CardView mCardView_sexualidad;
-
-	private TextView mTextView_nick;
-	private TextView mTextView_registro_birth;
-	private RangeBar mRanger_altura;
-	private RangeBar mRanger_peso;
-	private Spinner mSpinner_raza;
-	private TextView mTextView_mi_altura;
-	private TextView mTextView_mi_peso;
-	private TextView mTextView_sexualidad;
-	private TextView mTextView_datos_fisicos;
-	private TextView mTextView_terms;
-	private EditText mEditText_quiero_dejar_claro;
-	private ImageView mImageView_ok;
-	private TextView mTextView_quiero_dejar_claro;
-	private TextView mTextView_opcional;
-
-	private TextView mTextView_altura;
-	private TextView mTextView_peso;
-	private TextView mTextView_raza;
-	//private TextView mTextView_otros_datos;
-	private CheckBox mCheckbox;
-	private ProgressBar mProgressBar;
 	private FirebaseFirestore db;
 
 	private Location mLastLocation;
 	private String User_country = "";
 	private String User_locale = "";
+	private LayoutRegistroPersonasBinding binding;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -108,11 +73,9 @@ public class Activity_Registro_Persona extends AppCompatActivity  {
 		try {
 
 			if (utils.isNetworkAvailable((ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE))) {
-				setContentView(R.layout.layout_registro_personas);
+				binding = LayoutRegistroPersonasBinding.inflate(getLayoutInflater());
+				setContentView(binding.getRoot());
 
-				mProgressBar = findViewById(R.id.mProgressBar);
-
-				setup_Views();
 				User_locale= utils.get_locale(this);
 				mFusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
 
@@ -123,16 +86,15 @@ public class Activity_Registro_Persona extends AppCompatActivity  {
 				inicializa_anuncios();
 				db = FirebaseFirestore.getInstance();
 
-				mTextView_terms.setOnClickListener(v -> {
+				binding.LayoutRegistroPersonasTextViewTerms.setOnClickListener(v -> {
 					Intent mIntent = new Intent(Activity_Registro_Persona.this, Activity_Condiciones_Uso.class);
 					startActivity(mIntent);
 				});
-				ImageView mImageView_retroceder = findViewById(R.id.Layout_registro_personas_Button_retroceder);
 				Drawable icono_retroceder;
 				Configuration config = getResources().getConfiguration();
 				icono_retroceder = config.getLayoutDirection() == View.LAYOUT_DIRECTION_LTR ? new IconicsDrawable(this).icon(Icon.gmd_arrow_back).color(ContextCompat.getColor(this, R.color.accent)).sizeDp(this.getResources().getInteger(R.integer.Tam_Normal_icons)) : new IconicsDrawable(this).icon(Icon.gmd_arrow_forward).color(ContextCompat.getColor(this, R.color.accent)).sizeDp(this.getResources().getInteger(R.integer.Tam_Normal_icons));
-				mImageView_retroceder.setImageDrawable(icono_retroceder);
-				mImageView_retroceder.setOnClickListener(view -> {
+				binding.LayoutRegistroPersonasButtonRetroceder.setImageDrawable(icono_retroceder);
+				binding.LayoutRegistroPersonasButtonRetroceder.setOnClickListener(view -> {
 					Intent mIntent = new Intent(Activity_Registro_Persona.this, Activity_Inicio.class);
 					mIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 					mIntent.putExtras(getIntent().getExtras());  //le pasamos el bundle que contiene el token_socialauth
@@ -140,18 +102,17 @@ public class Activity_Registro_Persona extends AppCompatActivity  {
 					Activity_Registro_Persona.this.finish();
 				});
 
-				mImageView_ok = findViewById(R.id.Layout_registro_personas_Button_registrarse);
 				Drawable icono_seguir;
 				config = getResources().getConfiguration();
 				icono_seguir = config.getLayoutDirection() == View.LAYOUT_DIRECTION_LTR ? new IconicsDrawable(this).icon(Icon.gmd_arrow_forward).color(ContextCompat.getColor(this, R.color.accent)).sizeDp(this.getResources().getInteger(R.integer.Tam_Normal_icons)) : new IconicsDrawable(this).icon(Icon.gmd_arrow_back).color(ContextCompat.getColor(this, R.color.accent)).sizeDp(this.getResources().getInteger(R.integer.Tam_Normal_icons));
-				mImageView_ok.setImageDrawable(icono_seguir);
-				mImageView_ok.setOnClickListener(v -> {
+				binding.LayoutRegistroPersonasButtonRegistrarse.setImageDrawable(icono_seguir);
+				binding.LayoutRegistroPersonasButtonRegistrarse.setOnClickListener(v -> {
 					if (utils.isNetworkAvailable((ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE))) {
 						if (check_nick()) {
 							if (check_birth()) {
 								if (check_sexuality()) {
 									if (check_terms()) {
-										mImageView_ok.setEnabled(false); //para que no pulsen más de una vez
+										binding.LayoutRegistroPersonasButtonRegistrarse.setEnabled(false); //para que no pulsen más de una vez
 
 										Bundle bundle = getIntent().getExtras();
 
@@ -386,7 +347,9 @@ public class Activity_Registro_Persona extends AppCompatActivity  {
 	private void getLastLocation() {
 		try {
 			if ((ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED)) {
-				mFusedLocationClient.getLastLocation().addOnSuccessListener(this, location -> mLastLocation = location);
+				if (mFusedLocationClient != null) {
+					mFusedLocationClient.getLastLocation().addOnSuccessListener(this, location -> mLastLocation = location);
+				}
 			} else {
 				ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_COARSE_LOCATION, Manifest.permission.ACCESS_FINE_LOCATION}, MY_PERMISSIONS_REQUEST_LAST_LOCATION);
 			}
@@ -409,67 +372,35 @@ public class Activity_Registro_Persona extends AppCompatActivity  {
 				mLocation.setLatitude(0.0D);
 				mLocation.setLongitude(0.0D);
 			}
-		} catch (SecurityException e) {
-			utils.registra_error(e.toString(), "get_location_inicial");
+		} catch (Exception e) {
+			utils.registra_error(e.toString(), "get_location_inicial de Registro_Persona");
 		}
 
 
 		return mLocation;
 	}
 
-	private void setup_Views() {
-		mCheckbox = findViewById(R.id.Layout_registro_personas_CheckBox_I_Agree);
-		mTextView_terms = findViewById(R.id.Layout_registro_personas_TextView_Terms);
-		mTextView_altura = findViewById(R.id.Layout_registro_personas_TextView_Altura_registro);
-		mTextView_peso = findViewById(R.id.Layout_registro_personas_TextView_Peso_registro);
-		mTextView_raza = findViewById(R.id.Layout_registro_personas_TextView_mi_Raza_registro);
-		mRanger_altura = findViewById(R.id.Layout_registro_personas_RangeBar_mi_altura);
-		mRanger_peso = findViewById(R.id.Layout_registro_personas_RangeBar_mi_peso);
-		mTextView_mi_altura = findViewById(R.id.Layout_registro_personas_TextView_mi_Altura_registro);
-		mTextView_mi_peso = findViewById(R.id.Layout_registro_personas_TextView_mi_Peso_registro);
-		mTextView_nick = findViewById(R.id.Layout_registro_personas_TextView_nick);
-		mTextView_registro_birth = findViewById(R.id.Layout_registro_personas_TextView_registro_birth);
-		mSpinner_dia_nacimiento = findViewById(R.id.Layout_registro_personas_Spinner_mi_dia_nacimiento);
-		mSpinner_mes_nacimiento = findViewById(R.id.Layout_registro_personas_Spinner_mi_mes_nacimiento);
-		mSpinner_anyo_nacimiento = findViewById(R.id.Layout_registro_personas_Spinner_mi_anyo_nacimiento);
-		mSpinner_sexo = findViewById(R.id.Layout_registro_personas_Spinner_mi_sexo);
-		mSpinner_orientacion = findViewById(R.id.Layout_registro_personas_Spinner_mi_orientacion);
-		//mTextView_orientacion_cambiable = findViewById(R.id.Layout_registro_personas_TextView_orientacion_cambiable);
-		mSpinner_raza = findViewById(R.id.Layout_registro_personas_Spinner_mi_Raza_registro);
-		mTextView_quiero_dejar_claro = findViewById(R.id.Layout_registro_personas_TextView_quiero_dejar_claro);
-		mTextView_opcional = findViewById(R.id.Layout_registro_personas_TextView_opcional);
-		//mTextView_otros_datos = findViewById(R.id.Fragment_datos_personales_TextView_Quiero_dejar_claro_que);
-		mTextView_sexualidad = findViewById(R.id.Layout_registro_personas_sexualidad);
-		mTextView_datos_fisicos = findViewById(R.id.Layout_registro_personas_datos_fisicos);
-
-		mEditText_nick = findViewById(R.id.Layout_registro_personas_EditText_nick);
-		mEditText_quiero_dejar_claro = findViewById(R.id.Layout_registro_personas_EditText_quiero_dejar_claro);
-
-		this.mCardView_sexualidad = findViewById(R.id.Layout_registro_personas_CardView_Sexualidad);
-
-	}
-
 	private void setup_RangerBars() {
-		mRanger_altura.setOnRangeBarChangeListener((rangeBar, leftPinIndex, rightPinIndex, leftPinValue, rightPinValue) -> {
+		binding.LayoutRegistroPersonasRangeBarMiAltura.setOnRangeBarChangeListener((rangeBar, leftPinIndex, rightPinIndex, leftPinValue, rightPinValue) -> {
 			if (utils.es_anglosajon(User_locale)) {
-				mTextView_mi_altura.setText(utils.cm_a_feet_and_inches(Integer.valueOf(rightPinValue)));
+				binding.LayoutRegistroPersonasTextViewMiAlturaRegistro.setText(utils.cm_a_feet_and_inches(Integer.valueOf(rightPinValue)));
 			} else {
-				mTextView_mi_altura.setText(String.format(getResources().getString(R.string.m),Float.valueOf(rightPinValue)/100));
+				binding.LayoutRegistroPersonasTextViewMiAlturaRegistro.setText(String.format(getResources().getString(R.string.m),Float.valueOf(rightPinValue)/100));
 			}
 		});
-		mRanger_peso.setOnRangeBarChangeListener((rangeBar, leftPinIndex, rightPinIndex, leftPinValue, rightPinValue) -> {
+		binding.LayoutRegistroPersonasRangeBarMiPeso.setOnRangeBarChangeListener((rangeBar, leftPinIndex, rightPinIndex, leftPinValue, rightPinValue) -> {
 			if (utils.es_uk(User_locale)) {
 				Pair un_par = utils.kg_a_st_and_lb(Integer.valueOf(rightPinValue));
-				mTextView_mi_peso.setText(getResources().getString(R.string.st_y_lb, (double)un_par.first, (double)un_par.second));
+				binding.LayoutRegistroPersonasTextViewMiPesoRegistro.setText(getResources().getString(R.string.st_y_lb, (double)un_par.first, (double)un_par.second));
 			} else if (utils.es_usa(User_locale)) {
-				mTextView_mi_peso.setText(utils.kg_a_lb(Integer.valueOf(rightPinValue)));
+				binding.LayoutRegistroPersonasTextViewMiPesoRegistro.setText(utils.kg_a_lb(Integer.valueOf(rightPinValue)));
 			} else {
-				mTextView_mi_peso.setText(String.format(getResources().getString(R.string.kg), Integer.valueOf(rightPinValue)));
+				binding.LayoutRegistroPersonasTextViewMiPesoRegistro.setText(String.format(getResources().getString(R.string.kg), Integer.valueOf(rightPinValue)));
 			}
 		});
 
-		mRanger_altura.setSeekPinByValue(160);
-		mRanger_peso.setSeekPinByValue(70);
+		binding.LayoutRegistroPersonasRangeBarMiAltura.setSeekPinByValue(160);
+		binding.LayoutRegistroPersonasRangeBarMiPeso.setSeekPinByValue(70);
 	}
 
 	private void setup_Spinners() {
@@ -479,82 +410,82 @@ public class Activity_Registro_Persona extends AppCompatActivity  {
 		for (Integer i = anyo_actual - 18; i > anyo_actual - 100; i--) {
 			adapter_anyos.add(i);
 		}
-		mSpinner_anyo_nacimiento.setAdapter(adapter_anyos);
+		binding.LayoutRegistroPersonasSpinnerMiAnyoNacimiento.setAdapter(adapter_anyos);
 		adapter_anyos.notifyDataSetChanged();
 
 		ArrayAdapter<CharSequence> adapter_meses = ArrayAdapter.createFromResource(this, R.array.meses_nacimiento, R.layout.spinner_item);
-		mSpinner_mes_nacimiento.setAdapter(adapter_meses);
+		binding.LayoutRegistroPersonasSpinnerMiMesNacimiento.setAdapter(adapter_meses);
 		adapter_meses.notifyDataSetChanged();
 
 		ArrayAdapter<CharSequence> adapter_dias = ArrayAdapter.createFromResource(this, R.array.dias_nacimiento, R.layout.spinner_item);
-		mSpinner_dia_nacimiento.setAdapter(adapter_dias);
+		binding.LayoutRegistroPersonasSpinnerMiDiaNacimiento.setAdapter(adapter_dias);
 		adapter_dias.notifyDataSetChanged();
 
 		if ("com.rubisoft.lesbiancuddles".equals(getPackageName())){
-			mCardView_sexualidad.setVisibility(View.GONE);
-			mSpinner_sexo.setSelection(2);
-			mSpinner_orientacion.setSelection(2);
+			binding.LayoutRegistroPersonasCardViewSexualidad.setVisibility(View.GONE);
+			binding.LayoutRegistroPersonasSpinnerMiSexo.setSelection(2);
+			binding.LayoutRegistroPersonasSpinnerMiOrientacion.setSelection(2);
 		}else {
 			ArrayAdapter<CharSequence> adapter_sexos = ArrayAdapter.createFromResource(this, R.array.sexos, R.layout.spinner_item);
-			mSpinner_sexo.setAdapter(adapter_sexos);
+			binding.LayoutRegistroPersonasSpinnerMiSexo.setAdapter(adapter_sexos);
 			adapter_sexos.notifyDataSetChanged();
 
 			ArrayAdapter<CharSequence> adapter_orientaciones = ArrayAdapter.createFromResource(this, R.array.orientaciones_registro, R.layout.spinner_item);
-			mSpinner_orientacion.setAdapter(adapter_orientaciones);
+			binding.LayoutRegistroPersonasSpinnerMiOrientacion.setAdapter(adapter_orientaciones);
 			adapter_orientaciones.notifyDataSetChanged();
 		}
 		ArrayAdapter<CharSequence> adapter_razas = ArrayAdapter.createFromResource(this, R.array.razas, R.layout.spinner_item);
-		mSpinner_raza.setAdapter(adapter_razas);
+		binding.LayoutRegistroPersonasSpinnerMiRazaRegistro.setAdapter(adapter_razas);
 		adapter_razas.notifyDataSetChanged();
 	}
 
 	private void setup_Typefaces() {
 		Typeface mTypeFace_roboto_light = Typeface.createFromAsset(getAssets(), "fonts/Roboto-Light.ttf");
-		mTextView_registro_birth.setTypeface(mTypeFace_roboto_light);
-		mTextView_mi_altura.setTypeface(mTypeFace_roboto_light);
-		mTextView_mi_peso.setTypeface(mTypeFace_roboto_light);
-		mTextView_altura.setTypeface(mTypeFace_roboto_light);
-		mTextView_peso.setTypeface(mTypeFace_roboto_light);
-		mTextView_raza.setTypeface(mTypeFace_roboto_light);
+		binding.LayoutRegistroPersonasTextViewRegistroBirth.setTypeface(mTypeFace_roboto_light);
+		binding.LayoutRegistroPersonasTextViewMiAlturaRegistro.setTypeface(mTypeFace_roboto_light);
+		binding.LayoutRegistroPersonasTextViewMiPesoRegistro.setTypeface(mTypeFace_roboto_light);
+		binding.LayoutRegistroPersonasTextViewAlturaRegistro.setTypeface(mTypeFace_roboto_light);
+		binding.LayoutRegistroPersonasTextViewPesoRegistro.setTypeface(mTypeFace_roboto_light);
+		binding.LayoutRegistroPersonasTextViewMiRazaRegistro.setTypeface(mTypeFace_roboto_light);
 		// mTextView_orientacion_cambiable.setTypeface(mTypeFace_roboto_light);
-		mTextView_nick.setTypeface(mTypeFace_roboto_light);
+		binding.LayoutRegistroPersonasTextViewNick.setTypeface(mTypeFace_roboto_light);
 		//mTextView_otros_datos.setTypeface(mTypeFace_roboto_light);
-		mTextView_sexualidad.setTypeface(mTypeFace_roboto_light);
-		mTextView_datos_fisicos.setTypeface(mTypeFace_roboto_light);
-		mCheckbox.setTypeface(mTypeFace_roboto_light);
-		mTextView_terms.setTypeface(mTypeFace_roboto_light);
+		binding.LayoutRegistroPersonasSexualidad.setTypeface(mTypeFace_roboto_light);
+		binding.LayoutRegistroPersonasDatosFisicos.setTypeface(mTypeFace_roboto_light);
+		binding.LayoutRegistroPersonasCheckBoxIAgree.setTypeface(mTypeFace_roboto_light);
+		binding.LayoutRegistroPersonasTextViewTerms.setTypeface(mTypeFace_roboto_light);
 
-		mTextView_quiero_dejar_claro.setTypeface(mTypeFace_roboto_light);
-		mTextView_opcional.setTypeface(mTypeFace_roboto_light);
-		mEditText_quiero_dejar_claro.setTypeface(mTypeFace_roboto_light);
-		mEditText_nick.setTypeface(mTypeFace_roboto_light);
+		binding.LayoutRegistroPersonasTextViewQuieroDejarClaro.setTypeface(mTypeFace_roboto_light);
+		binding.LayoutRegistroPersonasTextViewOpcional.setTypeface(mTypeFace_roboto_light);
+		binding.LayoutRegistroPersonasEditTextQuieroDejarClaro.setTypeface(mTypeFace_roboto_light);
+		binding.LayoutRegistroPersonasEditTextNick.setTypeface(mTypeFace_roboto_light);
 	}
 
 	private void setup_Texts() {
 		// mTextView_nick.setText(getResources().getString(R.string.ACTIVITY_REGISTRO_NICK_));
-		mTextView_registro_birth.setText(getResources().getString(R.string.ACTIVITY_REGISTRO_BIRTH_));
-		mTextView_altura.setText(getResources().getString(R.string.ACTIVITY_REGISTRO_ALTURA_));
-		mTextView_peso.setText(getResources().getString(R.string.ACTIVITY_REGISTRO_PESO_));
-		mTextView_raza.setText(getResources().getString(R.string.ACTIVITY_REGISTRO_RAZA_));
+		binding.LayoutRegistroPersonasTextViewNick.setText(getResources().getString(R.string.ACTIVITY_REGISTRO_BIRTH_));
+		binding.LayoutRegistroPersonasTextViewAlturaRegistro.setText(getResources().getString(R.string.ACTIVITY_REGISTRO_ALTURA_));
+		binding.LayoutRegistroPersonasTextViewPesoRegistro.setText(getResources().getString(R.string.ACTIVITY_REGISTRO_PESO_));
+		binding.LayoutRegistroPersonasTextViewMiRazaRegistro.setText(getResources().getString(R.string.ACTIVITY_REGISTRO_RAZA_));
 		if (utils.es_anglosajon(User_locale)) {
-			mTextView_mi_altura.setText(utils.cm_a_feet_and_inches(160));
+			binding.LayoutRegistroPersonasTextViewMiAlturaRegistro.setText(utils.cm_a_feet_and_inches(160));
 		} else {
-			mTextView_mi_altura.setText(String.format(getResources().getString(R.string.m),1.60));
+			binding.LayoutRegistroPersonasTextViewMiAlturaRegistro.setText(String.format(getResources().getString(R.string.m),1.60));
 		}
 		if (utils.es_uk(User_locale)) {
 			Pair un_par = utils.kg_a_st_and_lb(70);
-			mTextView_mi_peso.setText(getResources().getString(R.string.st_y_lb, (double)un_par.first, (double)un_par.second));
+			binding.LayoutRegistroPersonasTextViewMiPesoRegistro.setText(getResources().getString(R.string.st_y_lb, (double)un_par.first, (double)un_par.second));
 		} else if (utils.es_usa(User_locale)) {
-			mTextView_mi_peso.setText(utils.kg_a_lb(70));
+			binding.LayoutRegistroPersonasTextViewMiPesoRegistro.setText(utils.kg_a_lb(70));
 		} else {
-			mTextView_mi_peso.setText(String.format(getResources().getString(R.string.kg), 70));
+			binding.LayoutRegistroPersonasTextViewMiPesoRegistro.setText(String.format(getResources().getString(R.string.kg), 70));
 		}
 	}
 
 	private boolean check_nick() {
 		boolean es_correcto;
 
-		String nick = mEditText_nick.getText().toString();
+		String nick = binding.LayoutRegistroPersonasEditTextNick.getText().toString();
 		if (nick != null && !nick.isEmpty()) {
 			es_correcto = true;
 		} else {
@@ -566,9 +497,9 @@ public class Activity_Registro_Persona extends AppCompatActivity  {
 
 	private boolean check_birth() {
 		boolean es_correcto;
-		int anyo_nacimiento = decodifica_anyo_nacimiento(mSpinner_anyo_nacimiento.getSelectedItemPosition()).intValue();
-		int mes_nacimiento = mSpinner_mes_nacimiento.getSelectedItemPosition() + 1;
-		int dia_nacimiento = mSpinner_dia_nacimiento.getSelectedItemPosition() + 1;
+		int anyo_nacimiento = decodifica_anyo_nacimiento(binding.LayoutRegistroPersonasSpinnerMiAnyoNacimiento.getSelectedItemPosition()).intValue();
+		int mes_nacimiento = binding.LayoutRegistroPersonasSpinnerMiMesNacimiento.getSelectedItemPosition() + 1;
+		int dia_nacimiento = binding.LayoutRegistroPersonasSpinnerMiDiaNacimiento.getSelectedItemPosition() + 1;
 
 		if (es_mayor_de_18(anyo_nacimiento, mes_nacimiento, dia_nacimiento)) {
 			es_correcto = true;
@@ -582,8 +513,8 @@ public class Activity_Registro_Persona extends AppCompatActivity  {
 	private boolean check_sexuality() {
 		boolean congruente = false;
 		boolean es_correcto = false;
-		int sexo = mSpinner_sexo.getSelectedItemPosition();
-		int orientacion = mSpinner_orientacion.getSelectedItemPosition();
+		int sexo = binding.LayoutRegistroPersonasSpinnerMiSexo.getSelectedItemPosition();
+		int orientacion = binding.LayoutRegistroPersonasSpinnerMiOrientacion.getSelectedItemPosition();
 
 		if (orientacion != 0 && sexo != 0) {
 			es_correcto = true;
@@ -601,7 +532,7 @@ public class Activity_Registro_Persona extends AppCompatActivity  {
 
 	private boolean check_terms() {
 		boolean resultado;
-		if (mCheckbox.isChecked()) {
+		if (binding.LayoutRegistroPersonasCheckBoxIAgree.isChecked()) {
 			resultado = true;
 		} else {
 			resultado = false;
@@ -735,17 +666,17 @@ public class Activity_Registro_Persona extends AppCompatActivity  {
 		Usuario un_usuario =null;
 
 		try {
-			String nick = mEditText_nick.getText().toString();
-			int anyo_nacimiento = decodifica_anyo_nacimiento(mSpinner_anyo_nacimiento.getSelectedItemPosition()).intValue();
-			int mes_nacimiento = mSpinner_mes_nacimiento.getSelectedItemPosition() + 1;
-			int dia_nacimiento = mSpinner_dia_nacimiento.getSelectedItemPosition() + 1;
+			String nick = binding.LayoutRegistroPersonasEditTextNick.getText().toString();
+			int anyo_nacimiento = decodifica_anyo_nacimiento(binding.LayoutRegistroPersonasSpinnerMiAnyoNacimiento.getSelectedItemPosition()).intValue();
+			int mes_nacimiento = binding.LayoutRegistroPersonasSpinnerMiMesNacimiento.getSelectedItemPosition() + 1;
+			int dia_nacimiento = binding.LayoutRegistroPersonasSpinnerMiDiaNacimiento.getSelectedItemPosition() + 1;
 			long app=utils.get_app_code(getApplicationContext().getPackageName());
-			long sexo = mSpinner_sexo.getSelectedItemPosition();
-			long orientacion = mSpinner_orientacion.getSelectedItemPosition();
-			long raza = mSpinner_raza.getSelectedItemPosition();
-			long altura = Long.valueOf(mRanger_altura.getRightPinValue());
-			long peso = Long.valueOf(mRanger_peso.getRightPinValue());
-			String quiero_dejar_claro = mEditText_quiero_dejar_claro.getText().toString();
+			long sexo = binding.LayoutRegistroPersonasSpinnerMiSexo.getSelectedItemPosition();
+			long orientacion = binding.LayoutRegistroPersonasSpinnerMiOrientacion.getSelectedItemPosition();
+			long raza = binding.LayoutRegistroPersonasSpinnerMiRazaRegistro.getSelectedItemPosition();
+			long altura = Long.valueOf(binding.LayoutRegistroPersonasRangeBarMiAltura.getRightPinValue());
+			long peso = Long.valueOf(binding.LayoutRegistroPersonasRangeBarMiPeso.getRightPinValue());
+			String quiero_dejar_claro = binding.LayoutRegistroPersonasEditTextQuieroDejarClaro.getText().toString();
 
 			Calendar fecha_nacimiento = Calendar.getInstance();
 			Calendar hoy = Calendar.getInstance();
@@ -787,6 +718,7 @@ public class Activity_Registro_Persona extends AppCompatActivity  {
 	private void actualiza_Firestore(String Token_socialauth,Usuario un_usuario, Logro un_logro) {
 		try {
 			Calendar hoy = Calendar.getInstance();
+			String semana_del_anyo = Integer.valueOf(hoy.get(Calendar.WEEK_OF_YEAR)).toString();
 
 			db.collection(getResources().getString(R.string.STATS_PAISES)).document(un_usuario.getPais()).get()
 					.addOnCompleteListener(task -> {
@@ -810,7 +742,9 @@ public class Activity_Registro_Persona extends AppCompatActivity  {
 									});
 						}
 					});
+
 			DocumentReference ref;
+
 			ref= db.collection(getResources().getString(R.string.STATS_GLOBAL)).document(getResources().getString(R.string.STATS_GLOBAL_POR_APPS));
 			WriteBatch batch_STATS_GLOBAL_POR_APPS = db.batch();
 			batch_STATS_GLOBAL_POR_APPS.update(ref, "total_usuarios", FieldValue.increment(1));
@@ -822,6 +756,14 @@ public class Activity_Registro_Persona extends AppCompatActivity  {
 			batch_STATS_GLOBAL_POR_PERFILES.update(ref, "total_usuarios", FieldValue.increment(1));
 			batch_STATS_GLOBAL_POR_PERFILES.update(ref, utils.decodifica_sexo(un_usuario.getSexo()) + "_" + utils.decodifica_orientacion(un_usuario.getOrientacion()), FieldValue.increment(1));
 			batch_STATS_GLOBAL_POR_PERFILES.commit();
+
+			DocumentReference ref_usuarios= db.collection(getResources().getString(R.string.STATS_GLOBAL)).document(semana_del_anyo);
+
+			WriteBatch batch2 = db.batch();
+			batch2.update(ref_usuarios, "total_usuarios", FieldValue.increment(-1));
+			batch2.update(ref_usuarios, utils.decodifica_sexo(un_usuario.getSexo())+"_"+utils.decodifica_orientacion(un_usuario.getOrientacion()), FieldValue.increment(1));
+			batch2.update(ref_usuarios, utils.decodifica_app(utils.get_app_code(getApplicationContext().getPackageName())), FieldValue.increment(1));
+			batch2.commit();
 
 			db.collection(getResources().getString(R.string.USUARIOS)).document(Token_socialauth).set(un_usuario);
 			db.collection(getResources().getString(R.string.USUARIOS)).document(Token_socialauth).collection(getResources().getString(R.string.LOGROS)).add(un_logro);
@@ -837,8 +779,6 @@ public class Activity_Registro_Persona extends AppCompatActivity  {
 	}
 
 	private void ir_a_primeras_fotos(){
-	utils.setProgressBar_visibility(mProgressBar, View.INVISIBLE);
-
 	Intent mIntent = new Intent(this, Activity_Primeras_fotos.class);
 	mIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 	startActivity(mIntent);

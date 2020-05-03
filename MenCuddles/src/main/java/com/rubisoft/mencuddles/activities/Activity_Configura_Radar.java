@@ -22,13 +22,11 @@ import android.widget.ArrayAdapter;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.appodeal.ads.Appodeal;
 import com.appodeal.ads.BannerCallbacks;
-import com.appyvet.rangebar.RangeBar;
 import com.explorestack.consent.Consent;
 import com.explorestack.consent.ConsentManager;
 import com.mikepenz.google_material_typeface_library.GoogleMaterial;
@@ -36,9 +34,9 @@ import com.mikepenz.google_material_typeface_library.GoogleMaterial.Icon;
 import com.mikepenz.iconics.IconicsDrawable;
 import com.rubisoft.mencuddles.Adapters.Drawer_Adapter;
 import com.rubisoft.mencuddles.Classes.Drawer_Item;
-import com.rubisoft.mencuddles.Classes.MultiSpinner;
 import com.rubisoft.mencuddles.Interfaces.Interface_ClickListener_Menu;
 import com.rubisoft.mencuddles.R;
+import com.rubisoft.mencuddles.databinding.LayoutConfiguraRadarBinding;
 import com.rubisoft.mencuddles.tools.utils;
 
 import java.io.File;
@@ -53,11 +51,9 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatImageView;
-import androidx.appcompat.widget.SwitchCompat;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.content.ContextCompat;
 import androidx.core.util.Pair;
-import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -67,41 +63,15 @@ public class Activity_Configura_Radar extends AppCompatActivity {
 	private SharedPreferences perfil_usuario;
 	private SharedPreferences preferencias_usuario;  //aquí guardaremos el idioma y las unidades que prefiere el Usuario_para_listar. no lo borraremos nunca
 
-	private Spinner Spinner_personas_que_busco;
-	private MultiSpinner Spinner_raza_persona;
-	private RangeBar RangeBar_radio_persona;
-	private RangeBar RangeBar_edad_persona;
-	private RangeBar RangeBar_altura_persona;
-	private RangeBar RangeBar_peso_persona;
-	private TextView TextView_min_altura_persona;
-	private TextView TextView_max_altura_persona;
-	private TextView TextView_min_peso_persona;
-	private TextView TextView_max_peso_persona;
-	private TextView TextView_min_edad_persona;
-	private TextView TextView_max_edad_persona;
-	private TextView TextView_radio_persona;
-	private TextView TextView_raza_persona;
-	private TextView TextView_Rango_edades_persona;
-	private TextView TextView_peso_entre_persona;
-	private TextView TextView_altura_entre_persona;
-
-	private TextView TextView_que_este_online_para_persona;
-	private TextView TextView_que_sea_nuevo_para_persona;
-	private TextView TextView_solo_premium_persona;
-
-	private ImageView ImageView_Actualizar_radar_personas;
-
-	private SwitchCompat SwitchCompat_que_sea_nuevo_personas;
-	private SwitchCompat SwitchCompat_que_este_online_personas;
-
 	//navigation drawer
 	private Toolbar toolbar;
 	private ActionBarDrawerToggle drawerToggle;
-	private DrawerLayout mDrawerLayout;
+
 	private RecyclerView recyclerViewDrawer;
 	private ImageView mImageView_PictureMain;
 
-	private LinearLayout Main_LinearLayout;
+
+	private LayoutConfiguraRadarBinding binding;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -114,13 +84,14 @@ public class Activity_Configura_Radar extends AppCompatActivity {
 				if (perfil_usuario.getString(getString(R.string.PERFIL_USUARIO_TOKEN_SOCIALAUTH), "").isEmpty()) {
 					salir();
 				} else {
-					setContentView(R.layout.layout_configura_radar);
+					binding = LayoutConfiguraRadarBinding.inflate(getLayoutInflater());
+					setContentView(binding.getRoot());
 					busqueda_usuario = getSharedPreferences(getResources().getString(R.string.SHAREDPREFERENCES_BUSQUEDAS_USUARIO), Context.MODE_PRIVATE);
 					preferencias_usuario = getSharedPreferences(getResources().getString(R.string.SHAREDPREFERENCES_PREFERENCIAS_USUARIO), Context.MODE_PRIVATE);
 
 					//Inicializamos las opciones tal y como se guardaron
 					set_default_radio_busqueda();
-					setup_Views_personas();
+					//setup_Views_personas();
 
 					setup_spinners_personas();
 
@@ -204,50 +175,9 @@ public class Activity_Configura_Radar extends AppCompatActivity {
 		recyclerViewDrawer.addOnItemTouchListener(new Activity_Configura_Radar.RecyclerTouchListener_menu(this, recyclerViewDrawer, (view, position) -> {
 			utils.gestiona_onclick_menu_principal(Activity_Configura_Radar.this, position);
 			if (!utils.isTablet(getApplicationContext())) {
-				mDrawerLayout.closeDrawers();
+				binding.mDrawerLayout.closeDrawers();
 			}
 		}));
-	}
-
-	private void setup_Views_personas() {
-		try {
-			ImageView_Actualizar_radar_personas = findViewById(R.id.Layout_configura_radar_de_persona_Button_actualizar_configuracion_radar);
-			Spinner_personas_que_busco = findViewById(R.id.Layout_configura_radar_de_persona_spinner_que_busca);
-
-			Spinner_raza_persona = findViewById(R.id.Layout_configura_radar_de_persona_Spinner_razas);
-			RangeBar_radio_persona = findViewById(R.id.Layout_configura_radar_de_persona_RangeBar_radio);
-			RangeBar_edad_persona = findViewById(R.id.Layout_configura_radar_de_persona_RangeBar_edad);
-			RangeBar_altura_persona = findViewById(R.id.Layout_configura_radar_de_persona_RangeBar_altura);
-			RangeBar_peso_persona = findViewById(R.id.Layout_configura_radar_de_persona_RangeBar_peso);
-
-
-			SwitchCompat_que_este_online_personas = findViewById(R.id.Layout_configura_radar_de_persona_SwitchCompat_que_este_online);
-			SwitchCompat_que_sea_nuevo_personas = findViewById(R.id.Layout_configura_radar_de_persona_SwitchCompat_que_sea_nuevo);
-
-
-			TextView_min_altura_persona = findViewById(R.id.Layout_configura_radar_de_persona_TextView_min_altura);
-			TextView_max_altura_persona = findViewById(R.id.Layout_configura_radar_de_persona_TextView_max_altura);
-			TextView_min_peso_persona = findViewById(R.id.Layout_configura_radar_de_persona_TextView_min_peso);
-			TextView_max_peso_persona = findViewById(R.id.Layout_configura_radar_de_persona_TextView_max_peso);
-			TextView_min_edad_persona = findViewById(R.id.Layout_configura_radar_de_persona_TextView_min_edad);
-			TextView_max_edad_persona = findViewById(R.id.Layout_configura_radar_de_persona_TextView_max_edad);
-			TextView_radio_persona = findViewById(R.id.Layout_configura_radar_de_persona_TextView_radio);
-			TextView_raza_persona = findViewById(R.id.Layout_configura_radar_de_persona_TextView_raza);
-			TextView_Rango_edades_persona = findViewById(R.id.Layout_configura_radar_de_persona_TextView_Rango_edades);
-			TextView_altura_entre_persona = findViewById(R.id.Layout_configura_radar_de_persona_TextView_altura_entre);
-			TextView_peso_entre_persona = findViewById(R.id.Layout_configura_radar_de_persona_TextView_peso_entre);
-			TextView_peso_entre_persona = findViewById(R.id.Layout_configura_radar_de_persona_TextView_peso_entre);
-			TextView_peso_entre_persona = findViewById(R.id.Layout_configura_radar_de_persona_TextView_peso_entre);
-
-			TextView_que_este_online_para_persona = findViewById(R.id.Layout_configura_radar_de_persona_TextView_que_este_online);
-			TextView_que_sea_nuevo_para_persona = findViewById(R.id.Layout_configura_radar_de_persona_TextView_que_sea_nuevo);
-			TextView_solo_premium_persona = findViewById(R.id.Layout_configura_radar_de_persona_TextView_only_premiums);
-			Main_LinearLayout = findViewById(R.id.Main_LinearLayout);
-			mDrawerLayout = findViewById(R.id.mDrawerLayout);
-
-		} catch (Exception e) {
-			utils.registra_error(e.toString(), "setup_Views_personas de configura_radar");
-		}
 	}
 
 	private void setup_Typeface_personas() {
@@ -255,23 +185,23 @@ public class Activity_Configura_Radar extends AppCompatActivity {
 			Typeface typeFace_roboto_Light = Typeface.createFromAsset(getAssets(), "fonts/Roboto-Light.ttf");
 			Typeface typeFace_roboto_Bold = Typeface.createFromAsset(getAssets(), "fonts/Roboto-Bold.ttf");
 
-			TextView_min_altura_persona.setTypeface(typeFace_roboto_Light);
-			TextView_max_altura_persona.setTypeface(typeFace_roboto_Light);
-			TextView_min_peso_persona.setTypeface(typeFace_roboto_Light);
-			TextView_max_peso_persona.setTypeface(typeFace_roboto_Light);
-			TextView_min_edad_persona.setTypeface(typeFace_roboto_Light);
-			TextView_max_edad_persona.setTypeface(typeFace_roboto_Light);
-			TextView_radio_persona.setTypeface(typeFace_roboto_Bold);
-			TextView_raza_persona.setTypeface(typeFace_roboto_Bold);
-			TextView_Rango_edades_persona.setTypeface(typeFace_roboto_Bold);
-			TextView_altura_entre_persona.setTypeface(typeFace_roboto_Bold);
-			TextView_peso_entre_persona.setTypeface(typeFace_roboto_Bold);
+			binding.LayoutConfiguraRadarDePersonaTextViewMinAltura.setTypeface(typeFace_roboto_Light);
+			binding.LayoutConfiguraRadarDePersonaTextViewMaxAltura.setTypeface(typeFace_roboto_Light);
+			binding.LayoutConfiguraRadarDePersonaTextViewMinPeso.setTypeface(typeFace_roboto_Light);
+			binding.LayoutConfiguraRadarDePersonaTextViewMaxPeso.setTypeface(typeFace_roboto_Light);
+			binding.LayoutConfiguraRadarDePersonaTextViewMinEdad.setTypeface(typeFace_roboto_Light);
+			binding.LayoutConfiguraRadarDePersonaTextViewMaxEdad.setTypeface(typeFace_roboto_Light);
+			binding.LayoutConfiguraRadarDePersonaTextViewRadio.setTypeface(typeFace_roboto_Bold);
+			binding.LayoutConfiguraRadarDePersonaTextViewRaza.setTypeface(typeFace_roboto_Bold);
+			binding.LayoutConfiguraRadarDePersonaTextViewRangoEdades.setTypeface(typeFace_roboto_Bold);
+			binding.LayoutConfiguraRadarDePersonaTextViewAlturaEntre.setTypeface(typeFace_roboto_Bold);
+			binding.LayoutConfiguraRadarDePersonaTextViewPesoEntre.setTypeface(typeFace_roboto_Bold);
 
-			Spinner_raza_persona.setTypeface(typeFace_roboto_Light);
+			binding.LayoutConfiguraRadarDePersonaSpinnerRazas.setTypeface(typeFace_roboto_Light);
 
-			TextView_que_sea_nuevo_para_persona.setTypeface(typeFace_roboto_Bold);
-			TextView_que_este_online_para_persona.setTypeface(typeFace_roboto_Bold);
-			TextView_solo_premium_persona.setTypeface(typeFace_roboto_Bold);
+			binding.LayoutConfiguraRadarDePersonaTextViewQueSeaNuevo.setTypeface(typeFace_roboto_Bold);
+			binding.LayoutConfiguraRadarDePersonaTextViewQueEsteOnline.setTypeface(typeFace_roboto_Bold);
+			binding.LayoutConfiguraRadarDePersonaTextViewOnlyPremiums.setTypeface(typeFace_roboto_Bold);
 
 		} catch (Exception e) {
 			utils.registra_error(e.toString(), "setup_Typeface_personas de configura_radar");
@@ -280,12 +210,12 @@ public class Activity_Configura_Radar extends AppCompatActivity {
 
 	private void setup_spinners_personas() {
 		try {
-			Spinner_raza_persona.setAllText(getResources().getString(R.string.ACTIVITY_CONFIGURA_RADAR_CUALQUIER_RAZA));
+			binding.LayoutConfiguraRadarDePersonaSpinnerRazas.setAllText(getResources().getString(R.string.ACTIVITY_CONFIGURA_RADAR_CUALQUIER_RAZA));
 			ArrayAdapter<String> adapter;
 
 			adapter= new ArrayAdapter<>(this, R.layout.spinner_item);
 			adapter.addAll(getResources().getStringArray(R.array.razas));
-			Spinner_raza_persona.setAdapter(adapter, false, null);
+			binding.LayoutConfiguraRadarDePersonaSpinnerRazas.setAdapter(adapter, false, null);
 
 			Set default_razas = new HashSet();
 			for (int i = 0; i < getResources().getStringArray(R.array.razas).length; i++) {
@@ -298,15 +228,15 @@ public class Activity_Configura_Radar extends AppCompatActivity {
 				// select second item
 				selectedItems[j] = razas_seleccionadas.contains(j);
 			}
-			Spinner_raza_persona.setSelected(selectedItems);
+			binding.LayoutConfiguraRadarDePersonaSpinnerRazas.setSelected(selectedItems);
 
 			ArrayAdapter<CharSequence> adapter_que_busca;
 			adapter_que_busca = ArrayAdapter.createFromResource(this, R.array.busqueda_personas, R.layout.spinner_item);
 			adapter_que_busca.setDropDownViewResource(layout.simple_spinner_dropdown_item);
-			Spinner_personas_que_busco.setAdapter(adapter_que_busca);
+			binding.LayoutConfiguraRadarDePersonaSpinnerQueBusca.setAdapter(adapter_que_busca);
 			adapter_que_busca.notifyDataSetChanged();
 
-			Spinner_personas_que_busco.setSelection((int)busqueda_usuario.getLong(getString(R.string.BUSQUEDA_PERSONAS_QUE_BUSCA), 0));
+			binding.LayoutConfiguraRadarDePersonaSpinnerQueBusca.setSelection((int)busqueda_usuario.getLong(getString(R.string.BUSQUEDA_PERSONAS_QUE_BUSCA), 0));
 		} catch (Exception e) {
 			utils.registra_error(e.toString(), "setup_spinners_personas de configura_radar");
 		}
@@ -357,19 +287,15 @@ public class Activity_Configura_Radar extends AppCompatActivity {
 				edad_maxima = (int) busqueda_usuario.getLong(getResources().getString(R.string.BUSQUEDA_EDAD_MAXIMA), this.getResources().getInteger(R.integer.DEFAULT_EDAD_MAXIMA));
 			}
 
-			if ((int) busqueda_usuario.getLong(getResources().getString(R.string.BUSQUEDA_RADIO), radio_de_busqueda) > radio_de_busqueda) {
-				editor_busqueda_usuario.putLong(getResources().getString(R.string.BUSQUEDA_RADIO), radio_de_busqueda);
-			} else {
-				editor_busqueda_usuario.putLong(getResources().getString(R.string.BUSQUEDA_RADIO), (int) busqueda_usuario.getLong(getResources().getString(R.string.BUSQUEDA_RADIO), radio_de_busqueda));
-			}
+			editor_busqueda_usuario.putLong(getResources().getString(R.string.BUSQUEDA_RADIO), Math.min((int) busqueda_usuario.getLong(getResources().getString(R.string.BUSQUEDA_RADIO), radio_de_busqueda), radio_de_busqueda));
 			editor_busqueda_usuario.apply();
 
-			RangeBar_radio_persona.setTickEnd(radio_de_busqueda);
+			binding.LayoutConfiguraRadarDePersonaRangeBarRadio.setTickEnd(radio_de_busqueda);
 
-			RangeBar_radio_persona.setSeekPinByValue((int) busqueda_usuario.getLong(getResources().getString(R.string.BUSQUEDA_RADIO), radio_de_busqueda));
-			RangeBar_edad_persona.setRangePinsByValue(edad_minima, edad_maxima);
-			RangeBar_altura_persona.setRangePinsByValue(altura_minima, altura_maxima);
-			RangeBar_peso_persona.setRangePinsByValue(peso_minimo, peso_maximo);
+			binding.LayoutConfiguraRadarDePersonaRangeBarRadio.setSeekPinByValue((int) busqueda_usuario.getLong(getResources().getString(R.string.BUSQUEDA_RADIO), radio_de_busqueda));
+			binding.LayoutConfiguraRadarDePersonaRangeBarEdad.setRangePinsByValue(edad_minima, edad_maxima);
+			binding.LayoutConfiguraRadarDePersonaRangeBarAltura.setRangePinsByValue(altura_minima, altura_maxima);
+			binding.LayoutConfiguraRadarDePersonaRangeBarPeso.setRangePinsByValue(peso_minimo, peso_maximo);
 		} catch (IllegalArgumentException ignore){
 
 		}catch (Exception e) {
@@ -379,15 +305,15 @@ public class Activity_Configura_Radar extends AppCompatActivity {
 
 	private void setup_switchcompats_personas(){
 		if (this.perfil_usuario.getBoolean(this.getResources().getString(R.string.PERFIL_USUARIO_ES_PREMIUM), false)) {
-			SwitchCompat_que_sea_nuevo_personas.setEnabled(true);
-			SwitchCompat_que_este_online_personas.setEnabled(true);
-			SwitchCompat_que_sea_nuevo_personas.setChecked(this.busqueda_usuario.getBoolean(this.getResources().getString(R.string.BUSQUEDA_QUE_SEA_NUEVO), false));
-			SwitchCompat_que_este_online_personas.setChecked(this.busqueda_usuario.getBoolean(this.getResources().getString(R.string.BUSQUEDA_QUE_ESTE_ONLINE), false));
+			binding.LayoutConfiguraRadarDePersonaSwitchCompatQueSeaNuevo.setEnabled(true);
+			binding.LayoutConfiguraRadarDePersonaSwitchCompatQueEsteOnline.setEnabled(true);
+			binding.LayoutConfiguraRadarDePersonaSwitchCompatQueSeaNuevo.setChecked(this.busqueda_usuario.getBoolean(this.getResources().getString(R.string.BUSQUEDA_QUE_SEA_NUEVO), false));
+			binding.LayoutConfiguraRadarDePersonaSwitchCompatQueEsteOnline.setChecked(this.busqueda_usuario.getBoolean(this.getResources().getString(R.string.BUSQUEDA_QUE_ESTE_ONLINE), false));
 		}else{
-			SwitchCompat_que_sea_nuevo_personas.setChecked(false);
-			SwitchCompat_que_este_online_personas.setChecked(false);
-			SwitchCompat_que_sea_nuevo_personas.setEnabled(false);
-			SwitchCompat_que_este_online_personas.setEnabled(false);
+			binding.LayoutConfiguraRadarDePersonaSwitchCompatQueSeaNuevo.setChecked(false);
+			binding.LayoutConfiguraRadarDePersonaSwitchCompatQueEsteOnline.setChecked(false);
+			binding.LayoutConfiguraRadarDePersonaSwitchCompatQueSeaNuevo.setEnabled(false);
+			binding.LayoutConfiguraRadarDePersonaSwitchCompatQueEsteOnline.setEnabled(false);
 		}
 	}
 
@@ -403,33 +329,33 @@ public class Activity_Configura_Radar extends AppCompatActivity {
 		try {
 			switch ((int) preferencias_usuario.getLong(getResources().getString(R.string.PREFERENCIAS_UNIDADES), 0)) {
 				case 0:  //METRICA
-					TextView_radio_persona.setText(String.format(getResources().getString(R.string.ACTIVITY_CONFIGURA_RADAR_DISTANCIA_KM),(int) busqueda_usuario.getLong(getResources().getString(R.string.BUSQUEDA_RADIO), radio_de_busqueda)));
-					TextView_min_peso_persona.setText(String.format(getResources().getString(R.string.kg), busqueda_usuario.getLong(getResources().getString(R.string.BUSQUEDA_PERSONAS_PESO_MINIMO), this.getResources().getInteger(R.integer.DEFAULT_PESO_MINIMO))));
-					TextView_max_peso_persona.setText(String.format(getResources().getString(R.string.kg), busqueda_usuario.getLong(getResources().getString(R.string.BUSQUEDA_PERSONAS_PESO_MAXIMO), this.getResources().getInteger(R.integer.DEFAULT_PESO_MAXIMO))));
-					TextView_min_altura_persona.setText(String.format(getResources().getString(R.string.m), (float) busqueda_usuario.getLong(getResources().getString(R.string.BUSQUEDA_PERSONAS_ALTURA_MINIMA), this.getResources().getInteger(R.integer.DEFAULT_ALTURA_MINIMA)) / 100));
-					TextView_max_altura_persona.setText(String.format(getResources().getString(R.string.m), (float) busqueda_usuario.getLong(getResources().getString(R.string.BUSQUEDA_PERSONAS_ALTURA_MAXIMA), this.getResources().getInteger(R.integer.DEFAULT_ALTURA_MAXIMA)) / 100));
+					binding.LayoutConfiguraRadarDePersonaTextViewRadio.setText(String.format(getResources().getString(R.string.ACTIVITY_CONFIGURA_RADAR_DISTANCIA_KM),(int) busqueda_usuario.getLong(getResources().getString(R.string.BUSQUEDA_RADIO), radio_de_busqueda)));
+					binding.LayoutConfiguraRadarDePersonaTextViewMinPeso.setText(String.format(getResources().getString(R.string.kg), busqueda_usuario.getLong(getResources().getString(R.string.BUSQUEDA_PERSONAS_PESO_MINIMO), this.getResources().getInteger(R.integer.DEFAULT_PESO_MINIMO))));
+					binding.LayoutConfiguraRadarDePersonaTextViewMaxPeso.setText(String.format(getResources().getString(R.string.kg), busqueda_usuario.getLong(getResources().getString(R.string.BUSQUEDA_PERSONAS_PESO_MAXIMO), this.getResources().getInteger(R.integer.DEFAULT_PESO_MAXIMO))));
+					binding.LayoutConfiguraRadarDePersonaTextViewMinAltura.setText(String.format(getResources().getString(R.string.m), (float) busqueda_usuario.getLong(getResources().getString(R.string.BUSQUEDA_PERSONAS_ALTURA_MINIMA), this.getResources().getInteger(R.integer.DEFAULT_ALTURA_MINIMA)) / 100));
+					binding.LayoutConfiguraRadarDePersonaTextViewMaxAltura.setText(String.format(getResources().getString(R.string.m), (float) busqueda_usuario.getLong(getResources().getString(R.string.BUSQUEDA_PERSONAS_ALTURA_MAXIMA), this.getResources().getInteger(R.integer.DEFAULT_ALTURA_MAXIMA)) / 100));
 					break;
 				case 1:  //BRITANICA
-					TextView_radio_persona.setText(String.format(getResources().getString(R.string.ACTIVITY_CONFIGURA_RADAR_DISTANCIA_MI), utils.km_a_mi((int) busqueda_usuario.getLong(getResources().getString(R.string.BUSQUEDA_RADIO), radio_de_busqueda))));
+					binding.LayoutConfiguraRadarDePersonaTextViewRadio.setText(String.format(getResources().getString(R.string.ACTIVITY_CONFIGURA_RADAR_DISTANCIA_MI), utils.km_a_mi((int) busqueda_usuario.getLong(getResources().getString(R.string.BUSQUEDA_RADIO), radio_de_busqueda))));
 					Pair un_par_min = utils.kg_a_st_and_lb((int) busqueda_usuario.getLong(getResources().getString(R.string.BUSQUEDA_PERSONAS_PESO_MINIMO), this.getResources().getInteger(R.integer.DEFAULT_PESO_MINIMO)));
-					TextView_min_peso_persona.setText(getResources().getString(R.string.st_y_lb,(int) un_par_min.first, (double)un_par_min.second));
+					binding.LayoutConfiguraRadarDePersonaTextViewMinPeso.setText(getResources().getString(R.string.st_y_lb,(int) un_par_min.first, (double)un_par_min.second));
 					Pair un_par_max = utils.kg_a_st_and_lb((int) busqueda_usuario.getLong(getResources().getString(R.string.BUSQUEDA_PERSONAS_PESO_MAXIMO), this.getResources().getInteger(R.integer.DEFAULT_PESO_MAXIMO)));
-					TextView_max_peso_persona.setText(getResources().getString(R.string.st_y_lb, (int)un_par_max.first,(double) un_par_max.second));
-					TextView_min_altura_persona.setText(utils.cm_a_feet_and_inches((int) busqueda_usuario.getLong(getResources().getString(R.string.BUSQUEDA_PERSONAS_ALTURA_MINIMA), this.getResources().getInteger(R.integer.DEFAULT_ALTURA_MINIMA))));
-					TextView_max_altura_persona.setText(utils.cm_a_feet_and_inches((int) busqueda_usuario.getLong(getResources().getString(R.string.BUSQUEDA_PERSONAS_ALTURA_MAXIMA), this.getResources().getInteger(R.integer.DEFAULT_ALTURA_MAXIMA))));
+					binding.LayoutConfiguraRadarDePersonaTextViewMaxPeso.setText(getResources().getString(R.string.st_y_lb, (int)un_par_max.first,(double) un_par_max.second));
+					binding.LayoutConfiguraRadarDePersonaTextViewMinAltura.setText(utils.cm_a_feet_and_inches((int) busqueda_usuario.getLong(getResources().getString(R.string.BUSQUEDA_PERSONAS_ALTURA_MINIMA), this.getResources().getInteger(R.integer.DEFAULT_ALTURA_MINIMA))));
+					binding.LayoutConfiguraRadarDePersonaTextViewMaxAltura.setText(utils.cm_a_feet_and_inches((int) busqueda_usuario.getLong(getResources().getString(R.string.BUSQUEDA_PERSONAS_ALTURA_MAXIMA), this.getResources().getInteger(R.integer.DEFAULT_ALTURA_MAXIMA))));
 
 					break;
 				case 2:   //AMERICANA
-					TextView_radio_persona.setText(String.format(getResources().getString(R.string.ACTIVITY_CONFIGURA_RADAR_DISTANCIA_MI), utils.km_a_mi((int) busqueda_usuario.getLong(getResources().getString(R.string.BUSQUEDA_RADIO), radio_de_busqueda))));
-					TextView_min_peso_persona.setText(utils.kg_a_lb((int) busqueda_usuario.getLong(getResources().getString(R.string.BUSQUEDA_PERSONAS_PESO_MINIMO), this.getResources().getInteger(R.integer.DEFAULT_PESO_MINIMO))));
-					TextView_max_peso_persona.setText(utils.kg_a_lb((int) busqueda_usuario.getLong(getResources().getString(R.string.BUSQUEDA_PERSONAS_PESO_MAXIMO), this.getResources().getInteger(R.integer.DEFAULT_PESO_MAXIMO))));
-					TextView_min_altura_persona.setText(utils.cm_a_feet_and_inches((int) busqueda_usuario.getLong(getResources().getString(R.string.BUSQUEDA_PERSONAS_ALTURA_MINIMA), this.getResources().getInteger(R.integer.DEFAULT_ALTURA_MINIMA))));
-					TextView_max_altura_persona.setText(utils.cm_a_feet_and_inches((int) busqueda_usuario.getLong(getResources().getString(R.string.BUSQUEDA_PERSONAS_ALTURA_MAXIMA), this.getResources().getInteger(R.integer.DEFAULT_ALTURA_MAXIMA))));
+					binding.LayoutConfiguraRadarDePersonaTextViewRadio.setText(String.format(getResources().getString(R.string.ACTIVITY_CONFIGURA_RADAR_DISTANCIA_MI), utils.km_a_mi((int) busqueda_usuario.getLong(getResources().getString(R.string.BUSQUEDA_RADIO), radio_de_busqueda))));
+					binding.LayoutConfiguraRadarDePersonaTextViewMinPeso.setText(utils.kg_a_lb((int) busqueda_usuario.getLong(getResources().getString(R.string.BUSQUEDA_PERSONAS_PESO_MINIMO), this.getResources().getInteger(R.integer.DEFAULT_PESO_MINIMO))));
+					binding.LayoutConfiguraRadarDePersonaTextViewMaxPeso.setText(utils.kg_a_lb((int) busqueda_usuario.getLong(getResources().getString(R.string.BUSQUEDA_PERSONAS_PESO_MAXIMO), this.getResources().getInteger(R.integer.DEFAULT_PESO_MAXIMO))));
+					binding.LayoutConfiguraRadarDePersonaTextViewMinAltura.setText(utils.cm_a_feet_and_inches((int) busqueda_usuario.getLong(getResources().getString(R.string.BUSQUEDA_PERSONAS_ALTURA_MINIMA), this.getResources().getInteger(R.integer.DEFAULT_ALTURA_MINIMA))));
+					binding.LayoutConfiguraRadarDePersonaTextViewMaxAltura.setText(utils.cm_a_feet_and_inches((int) busqueda_usuario.getLong(getResources().getString(R.string.BUSQUEDA_PERSONAS_ALTURA_MAXIMA), this.getResources().getInteger(R.integer.DEFAULT_ALTURA_MAXIMA))));
 
 					break;
 			}
-			TextView_min_edad_persona.setText(String.format(getResources().getString(R.string.anyos), busqueda_usuario.getLong(getResources().getString(R.string.BUSQUEDA_EDAD_MINIMA), this.getResources().getInteger(R.integer.DEFAULT_EDAD_MINIMA))));
-			TextView_max_edad_persona.setText(String.format(getResources().getString(R.string.anyos), busqueda_usuario.getLong(getResources().getString(R.string.BUSQUEDA_EDAD_MAXIMA), this.getResources().getInteger(R.integer.DEFAULT_EDAD_MAXIMA))));
+			binding.LayoutConfiguraRadarDePersonaTextViewMinEdad.setText(String.format(getResources().getString(R.string.anyos), busqueda_usuario.getLong(getResources().getString(R.string.BUSQUEDA_EDAD_MINIMA), this.getResources().getInteger(R.integer.DEFAULT_EDAD_MINIMA))));
+			binding.LayoutConfiguraRadarDePersonaTextViewMaxEdad.setText(String.format(getResources().getString(R.string.anyos), busqueda_usuario.getLong(getResources().getString(R.string.BUSQUEDA_EDAD_MAXIMA), this.getResources().getInteger(R.integer.DEFAULT_EDAD_MAXIMA))));
 
 		} catch (Exception e) {
 			utils.registra_error(e.toString(), "set_texts_personas de configura_radar");
@@ -437,16 +363,16 @@ public class Activity_Configura_Radar extends AppCompatActivity {
 	}
 
 	private void setup_RangeBar_listeners_Personas() {
-		RangeBar_radio_persona.setOnRangeBarChangeListener((rangeBar, leftPinIndex, rightPinIndex, leftPinValue, rightPinValue) -> {
+		binding.LayoutConfiguraRadarDePersonaRangeBarRadio.setOnRangeBarChangeListener((rangeBar, leftPinIndex, rightPinIndex, leftPinValue, rightPinValue) -> {
 			try {
 				//Debemos mostrar las unidades de distancia acorde a los acorde a los distintos usos de cada región
 				switch ((int) preferencias_usuario.getLong(getResources().getString(R.string.PREFERENCIAS_UNIDADES), 0)) {
 					case 0: //METRICA
-						TextView_radio_persona.setText(String.format(getResources().getString(R.string.ACTIVITY_CONFIGURA_RADAR_DISTANCIA_KM), Integer.valueOf(RangeBar_radio_persona.getRightPinValue())));
+						binding.LayoutConfiguraRadarDePersonaTextViewRadio.setText(String.format(getResources().getString(R.string.ACTIVITY_CONFIGURA_RADAR_DISTANCIA_KM), Integer.valueOf(binding.LayoutConfiguraRadarDePersonaRangeBarRadio.getRightPinValue())));
 						break;
 					case 1:  //BRITANICA
 					case 2:  //AMERICANA
-						TextView_radio_persona.setText(String.format(getResources().getString(R.string.ACTIVITY_CONFIGURA_RADAR_DISTANCIA_MI), utils.km_a_mi(Integer.valueOf(RangeBar_radio_persona.getRightPinValue()))));
+						binding.LayoutConfiguraRadarDePersonaTextViewRadio.setText(String.format(getResources().getString(R.string.ACTIVITY_CONFIGURA_RADAR_DISTANCIA_MI), utils.km_a_mi(Integer.valueOf(binding.LayoutConfiguraRadarDePersonaRangeBarRadio.getRightPinValue()))));
 						break;
 				}
 			} catch (Exception e) {
@@ -454,43 +380,43 @@ public class Activity_Configura_Radar extends AppCompatActivity {
 
 			}
 		});
-		RangeBar_peso_persona.setOnRangeBarChangeListener((rangeBar, leftPinIndex, rightPinIndex, leftPinValue, rightPinValue) -> {
+		binding.LayoutConfiguraRadarDePersonaRangeBarPeso.setOnRangeBarChangeListener((rangeBar, leftPinIndex, rightPinIndex, leftPinValue, rightPinValue) -> {
 			try {
 				//Debemos mostrar las unidades de peso acorde a los acorde a los distintos usos de cada región
 				switch ((int) preferencias_usuario.getLong(getResources().getString(R.string.PREFERENCIAS_UNIDADES), 0)) {
 					case 0: //METRICA
-						TextView_min_peso_persona.setText(String.format(getResources().getString(R.string.kg), Integer.valueOf(RangeBar_peso_persona.getLeftPinValue())));
-						TextView_max_peso_persona.setText(String.format(getResources().getString(R.string.kg), Integer.valueOf(RangeBar_peso_persona.getRightPinValue())));
+						binding.LayoutConfiguraRadarDePersonaTextViewMinPeso.setText(String.format(getResources().getString(R.string.kg), Integer.valueOf(binding.LayoutConfiguraRadarDePersonaRangeBarPeso.getLeftPinValue())));
+						binding.LayoutConfiguraRadarDePersonaTextViewMaxPeso.setText(String.format(getResources().getString(R.string.kg), Integer.valueOf(binding.LayoutConfiguraRadarDePersonaRangeBarPeso.getRightPinValue())));
 						break;
 					case 1:  //BRITANICA
-						Pair un_par_min = utils.kg_a_st_and_lb(Integer.valueOf(RangeBar_peso_persona.getLeftPinValue()));
-						TextView_min_peso_persona.setText(getResources().getString(R.string.st_y_lb, (int)un_par_min.first, (double)un_par_min.second));
-						Pair un_par_max = utils.kg_a_st_and_lb(Integer.valueOf(RangeBar_peso_persona.getRightPinValue()));
-						TextView_max_peso_persona.setText(getResources().getString(R.string.st_y_lb, (int)un_par_max.first, (double)un_par_max.second));
+						Pair un_par_min = utils.kg_a_st_and_lb(Integer.valueOf(binding.LayoutConfiguraRadarDePersonaRangeBarPeso.getLeftPinValue()));
+						binding.LayoutConfiguraRadarDePersonaTextViewMinPeso.setText(getResources().getString(R.string.st_y_lb, (int)un_par_min.first, (double)un_par_min.second));
+						Pair un_par_max = utils.kg_a_st_and_lb(Integer.valueOf(binding.LayoutConfiguraRadarDePersonaRangeBarPeso.getRightPinValue()));
+						binding.LayoutConfiguraRadarDePersonaTextViewMaxPeso.setText(getResources().getString(R.string.st_y_lb, (int)un_par_max.first, (double)un_par_max.second));
 						break;
 					case 2:  //AMERICANA
-						TextView_min_peso_persona.setText(utils.kg_a_lb(Integer.valueOf(RangeBar_peso_persona.getLeftPinValue())));
-						TextView_max_peso_persona.setText(utils.kg_a_lb(Integer.valueOf(RangeBar_peso_persona.getRightPinValue())));
+						binding.LayoutConfiguraRadarDePersonaTextViewMinPeso.setText(utils.kg_a_lb(Integer.valueOf(binding.LayoutConfiguraRadarDePersonaRangeBarPeso.getLeftPinValue())));
+						binding.LayoutConfiguraRadarDePersonaTextViewMaxPeso.setText(utils.kg_a_lb(Integer.valueOf(binding.LayoutConfiguraRadarDePersonaRangeBarPeso.getRightPinValue())));
 						break;
 				}
 			} catch (Exception e) {
 				utils.registra_error(e.toString(), "setup_RangeBar_listeners_Personas");
 			}
 		});
-		RangeBar_altura_persona.setOnRangeBarChangeListener((rangeBar, leftPinIndex, rightPinIndex, leftPinValue, rightPinValue) -> {
+		binding.LayoutConfiguraRadarDePersonaRangeBarAltura.setOnRangeBarChangeListener((rangeBar, leftPinIndex, rightPinIndex, leftPinValue, rightPinValue) -> {
 			try {
 				//Debemos mostrar las unidades de altura acorde a los acorde a los distintos usos de cada región
 				switch ((int) preferencias_usuario.getLong(getResources().getString(R.string.PREFERENCIAS_UNIDADES), 0)) {
 					case 0:  //METRICA
-						Float altura_min = Float.valueOf(RangeBar_altura_persona.getLeftPinValue()) / 100; //lo pasamos a metros
-						Float altura_max = Float.valueOf(RangeBar_altura_persona.getRightPinValue()) / 100;
-						TextView_min_altura_persona.setText(String.format(getResources().getString(R.string.m), altura_min));
-						TextView_max_altura_persona.setText(String.format(getResources().getString(R.string.m), altura_max));
+						Float altura_min = Float.valueOf(binding.LayoutConfiguraRadarDePersonaRangeBarAltura.getLeftPinValue()) / 100; //lo pasamos a metros
+						Float altura_max = Float.valueOf(binding.LayoutConfiguraRadarDePersonaRangeBarAltura.getRightPinValue()) / 100;
+						binding.LayoutConfiguraRadarDePersonaTextViewMinAltura.setText(String.format(getResources().getString(R.string.m), altura_min));
+						binding.LayoutConfiguraRadarDePersonaTextViewMaxAltura.setText(String.format(getResources().getString(R.string.m), altura_max));
 						break;
 					case 1: //BRITANICA
 					case 2: //AMERICANA
-						TextView_min_altura_persona.setText(utils.cm_a_feet_and_inches(Integer.valueOf(RangeBar_altura_persona.getLeftPinValue())));
-						TextView_max_altura_persona.setText(utils.cm_a_feet_and_inches(Integer.valueOf(RangeBar_altura_persona.getRightPinValue())));
+						binding.LayoutConfiguraRadarDePersonaTextViewMinAltura.setText(utils.cm_a_feet_and_inches(Integer.valueOf(binding.LayoutConfiguraRadarDePersonaRangeBarAltura.getLeftPinValue())));
+						binding.LayoutConfiguraRadarDePersonaTextViewMaxAltura.setText(utils.cm_a_feet_and_inches(Integer.valueOf(binding.LayoutConfiguraRadarDePersonaRangeBarAltura.getRightPinValue())));
 						break;
 				}
 			} catch (Exception e) {
@@ -498,19 +424,19 @@ public class Activity_Configura_Radar extends AppCompatActivity {
 
 			}
 		});
-		RangeBar_edad_persona.setOnRangeBarChangeListener((rangeBar, leftPinIndex, rightPinIndex, leftPinValue, rightPinValue) -> {
+		binding.LayoutConfiguraRadarDePersonaRangeBarEdad.setOnRangeBarChangeListener((rangeBar, leftPinIndex, rightPinIndex, leftPinValue, rightPinValue) -> {
 			try {
 
 
-				if (Integer.valueOf(RangeBar_edad_persona.getLeftPinValue()) >= 18) {
-					TextView_min_edad_persona.setText(String.format(getResources().getString(R.string.anyos), Integer.valueOf(RangeBar_edad_persona.getLeftPinValue())));
+				if (Integer.valueOf(binding.LayoutConfiguraRadarDePersonaRangeBarEdad.getLeftPinValue()) >= 18) {
+					binding.LayoutConfiguraRadarDePersonaTextViewMinEdad.setText(String.format(getResources().getString(R.string.anyos), Integer.valueOf(binding.LayoutConfiguraRadarDePersonaRangeBarEdad.getLeftPinValue())));
 				} else {
-					TextView_min_edad_persona.setText(String.format(getResources().getString(R.string.anyos), 18));
+					binding.LayoutConfiguraRadarDePersonaTextViewMinEdad.setText(String.format(getResources().getString(R.string.anyos), 18));
 				}
-				if (Integer.valueOf(RangeBar_edad_persona.getRightPinValue()) <= 99) {
-					TextView_max_edad_persona.setText(String.format(getResources().getString(R.string.anyos), Integer.valueOf(RangeBar_edad_persona.getRightPinValue())));
+				if (Integer.valueOf(binding.LayoutConfiguraRadarDePersonaRangeBarEdad.getRightPinValue()) <= 99) {
+					binding.LayoutConfiguraRadarDePersonaTextViewMaxEdad.setText(String.format(getResources().getString(R.string.anyos), Integer.valueOf(binding.LayoutConfiguraRadarDePersonaRangeBarEdad.getRightPinValue())));
 				} else {
-					TextView_max_edad_persona.setText(String.format(getResources().getString(R.string.anyos), 99));
+					binding.LayoutConfiguraRadarDePersonaTextViewMaxEdad.setText(String.format(getResources().getString(R.string.anyos), 99));
 				}
 			}catch (Exception e){
 				utils.registra_error(e.toString(), "setup_RangeBar_listeners_Personas");
@@ -522,56 +448,56 @@ public class Activity_Configura_Radar extends AppCompatActivity {
 
 	private void actualizar_radar_personas(){
 		try {
-			if (Spinner_raza_persona.hay_alguno_seleccionado()) { //al menos debe elegir una raza
+			if (binding.LayoutConfiguraRadarDePersonaSpinnerRazas.hay_alguno_seleccionado()) { //al menos debe elegir una raza
 
 				SharedPreferences.Editor editor_busqueda_usuario = busqueda_usuario.edit();
 
-				if (Long.valueOf(RangeBar_altura_persona.getRightPinValue()) > this.getResources().getInteger(R.integer.DEFAULT_ALTURA_MAXIMA)) {
+				if (Long.valueOf(binding.LayoutConfiguraRadarDePersonaRangeBarAltura.getRightPinValue()) > this.getResources().getInteger(R.integer.DEFAULT_ALTURA_MAXIMA)) {
 					editor_busqueda_usuario.putLong(getResources().getString(R.string.BUSQUEDA_PERSONAS_ALTURA_MAXIMA), this.getResources().getInteger(R.integer.DEFAULT_ALTURA_MAXIMA));
 				} else {
-					editor_busqueda_usuario.putLong(getResources().getString(R.string.BUSQUEDA_PERSONAS_ALTURA_MAXIMA), Long.valueOf(RangeBar_altura_persona.getRightPinValue()));
+					editor_busqueda_usuario.putLong(getResources().getString(R.string.BUSQUEDA_PERSONAS_ALTURA_MAXIMA), Long.valueOf(binding.LayoutConfiguraRadarDePersonaRangeBarAltura.getRightPinValue()));
 				}
-				if (Long.valueOf(RangeBar_altura_persona.getLeftPinValue()) < this.getResources().getInteger(R.integer.DEFAULT_ALTURA_MINIMA)) {
+				if (Long.valueOf(binding.LayoutConfiguraRadarDePersonaRangeBarAltura.getLeftPinValue()) < this.getResources().getInteger(R.integer.DEFAULT_ALTURA_MINIMA)) {
 					editor_busqueda_usuario.putLong(getResources().getString(R.string.BUSQUEDA_PERSONAS_ALTURA_MINIMA), this.getResources().getInteger(R.integer.DEFAULT_ALTURA_MINIMA));
 				} else {
-					editor_busqueda_usuario.putLong(getResources().getString(R.string.BUSQUEDA_PERSONAS_ALTURA_MINIMA), Long.valueOf(RangeBar_altura_persona.getLeftPinValue()));
+					editor_busqueda_usuario.putLong(getResources().getString(R.string.BUSQUEDA_PERSONAS_ALTURA_MINIMA), Long.valueOf(binding.LayoutConfiguraRadarDePersonaRangeBarAltura.getLeftPinValue()));
 				}
-				if (Long.valueOf(RangeBar_peso_persona.getRightPinValue()) > this.getResources().getInteger(R.integer.DEFAULT_PESO_MAXIMO)) {
+				if (Long.valueOf(binding.LayoutConfiguraRadarDePersonaRangeBarPeso.getRightPinValue()) > this.getResources().getInteger(R.integer.DEFAULT_PESO_MAXIMO)) {
 					editor_busqueda_usuario.putLong(getResources().getString(R.string.BUSQUEDA_PERSONAS_PESO_MAXIMO), this.getResources().getInteger(R.integer.DEFAULT_PESO_MAXIMO));
 				} else {
-					editor_busqueda_usuario.putLong(getResources().getString(R.string.BUSQUEDA_PERSONAS_PESO_MAXIMO), Long.valueOf(RangeBar_peso_persona.getRightPinValue()));
+					editor_busqueda_usuario.putLong(getResources().getString(R.string.BUSQUEDA_PERSONAS_PESO_MAXIMO), Long.valueOf(binding.LayoutConfiguraRadarDePersonaRangeBarPeso.getRightPinValue()));
 				}
 
-				if (Long.valueOf(RangeBar_peso_persona.getLeftPinValue()) < this.getResources().getInteger(R.integer.DEFAULT_PESO_MINIMO)) {
+				if (Long.valueOf(binding.LayoutConfiguraRadarDePersonaRangeBarPeso.getLeftPinValue()) < this.getResources().getInteger(R.integer.DEFAULT_PESO_MINIMO)) {
 					editor_busqueda_usuario.putLong(getResources().getString(R.string.BUSQUEDA_PERSONAS_PESO_MINIMO), this.getResources().getInteger(R.integer.DEFAULT_PESO_MINIMO));
 				} else {
-					editor_busqueda_usuario.putLong(getResources().getString(R.string.BUSQUEDA_PERSONAS_PESO_MINIMO), Long.valueOf(RangeBar_peso_persona.getLeftPinValue()));
+					editor_busqueda_usuario.putLong(getResources().getString(R.string.BUSQUEDA_PERSONAS_PESO_MINIMO), Long.valueOf(binding.LayoutConfiguraRadarDePersonaRangeBarPeso.getLeftPinValue()));
 				}
 
-				if (Long.valueOf(RangeBar_edad_persona.getRightPinValue()) > this.getResources().getInteger(R.integer.DEFAULT_EDAD_MAXIMA)) {
+				if (Long.valueOf(binding.LayoutConfiguraRadarDePersonaRangeBarEdad.getRightPinValue()) > this.getResources().getInteger(R.integer.DEFAULT_EDAD_MAXIMA)) {
 					editor_busqueda_usuario.putLong(getResources().getString(R.string.BUSQUEDA_EDAD_MAXIMA), this.getResources().getInteger(R.integer.DEFAULT_EDAD_MAXIMA));
 				} else {
-					editor_busqueda_usuario.putLong(getResources().getString(R.string.BUSQUEDA_EDAD_MAXIMA), Long.valueOf(RangeBar_edad_persona.getRightPinValue()));
+					editor_busqueda_usuario.putLong(getResources().getString(R.string.BUSQUEDA_EDAD_MAXIMA), Long.valueOf(binding.LayoutConfiguraRadarDePersonaRangeBarEdad.getRightPinValue()));
 				}
 
-				if (Long.valueOf(RangeBar_edad_persona.getLeftPinValue()) < this.getResources().getInteger(R.integer.DEFAULT_EDAD_MINIMA)) {
+				if (Long.valueOf(binding.LayoutConfiguraRadarDePersonaRangeBarEdad.getLeftPinValue()) < this.getResources().getInteger(R.integer.DEFAULT_EDAD_MINIMA)) {
 					editor_busqueda_usuario.putLong(getResources().getString(R.string.BUSQUEDA_EDAD_MINIMA), this.getResources().getInteger(R.integer.DEFAULT_EDAD_MINIMA));
 				} else {
-					editor_busqueda_usuario.putLong(getResources().getString(R.string.BUSQUEDA_EDAD_MINIMA), Long.valueOf(RangeBar_edad_persona.getLeftPinValue()));
+					editor_busqueda_usuario.putLong(getResources().getString(R.string.BUSQUEDA_EDAD_MINIMA), Long.valueOf(binding.LayoutConfiguraRadarDePersonaRangeBarEdad.getLeftPinValue()));
 				}
 				Set razas = new HashSet();
 				for (int i = 0; i < getResources().getStringArray(R.array.razas).length; i++) {
-					if (Spinner_raza_persona.getSelected()[i]) {
+					if (binding.LayoutConfiguraRadarDePersonaSpinnerRazas.getSelected()[i]) {
 						razas.add(i);
 					}
 				}
 				editor_busqueda_usuario.putStringSet(getResources().getString(R.string.BUSQUEDA_PERSONAS_RAZA), razas);
-				editor_busqueda_usuario.putLong(getResources().getString(R.string.BUSQUEDA_RADIO), Long.valueOf(RangeBar_radio_persona.getRightPinValue()));
-				editor_busqueda_usuario.putBoolean(getResources().getString(R.string.BUSQUEDA_QUE_ESTE_ONLINE),SwitchCompat_que_este_online_personas.isChecked());
-				editor_busqueda_usuario.putBoolean(getResources().getString(R.string.BUSQUEDA_QUE_SEA_NUEVO),SwitchCompat_que_sea_nuevo_personas.isChecked());
+				editor_busqueda_usuario.putLong(getResources().getString(R.string.BUSQUEDA_RADIO), Long.valueOf(binding.LayoutConfiguraRadarDePersonaRangeBarRadio.getRightPinValue()));
+				editor_busqueda_usuario.putBoolean(getResources().getString(R.string.BUSQUEDA_QUE_ESTE_ONLINE),binding.LayoutConfiguraRadarDePersonaSwitchCompatQueEsteOnline.isChecked());
+				editor_busqueda_usuario.putBoolean(getResources().getString(R.string.BUSQUEDA_QUE_SEA_NUEVO),binding.LayoutConfiguraRadarDePersonaSwitchCompatQueSeaNuevo.isChecked());
 				editor_busqueda_usuario.putLong(getResources().getString(R.string.BUSQUEDA_ORIENTACION_QUE_BUSCA),getResources().getInteger(R.integer.HETERO));
 
-				switch (Spinner_personas_que_busco.getSelectedItemPosition()) {
+				switch (binding.LayoutConfiguraRadarDePersonaSpinnerQueBusca.getSelectedItemPosition()) {
 					case 0: //busca mujeres hetero
 						editor_busqueda_usuario.putLong(getResources().getString(R.string.BUSQUEDA_SEXO_QUE_BUSCA), getResources().getInteger(R.integer.MUJER));
 						editor_busqueda_usuario.putLong(getResources().getString(R.string.BUSQUEDA_ORIENTACION_QUE_BUSCA),getResources().getInteger(R.integer.HETERO));
@@ -600,7 +526,7 @@ public class Activity_Configura_Radar extends AppCompatActivity {
 						break;
 
 				}
-				editor_busqueda_usuario.putLong(getResources().getString(R.string.BUSQUEDA_PERSONAS_QUE_BUSCA),Spinner_personas_que_busco.getSelectedItemPosition());
+				editor_busqueda_usuario.putLong(getResources().getString(R.string.BUSQUEDA_PERSONAS_QUE_BUSCA),binding.LayoutConfiguraRadarDePersonaSpinnerQueBusca.getSelectedItemPosition());
 				editor_busqueda_usuario.apply();
 
 				borra_cached_search(getCacheDir());
@@ -635,15 +561,15 @@ public class Activity_Configura_Radar extends AppCompatActivity {
 
 	private void setup_Actualizar_radar_personas() {
 		Drawable icono1 = new IconicsDrawable(this).icon(Icon.gmd_done).color(ContextCompat.getColor(this, R.color.accent)).sizeDp(getResources().getInteger(R.integer.Tam_Normal_icons));
-		ImageView_Actualizar_radar_personas.setImageDrawable(icono1);
-		ImageView_Actualizar_radar_personas.setOnClickListener(v -> actualizar_radar_personas());
+		binding.LayoutConfiguraRadarDePersonaButtonActualizarConfiguracionRadar.setImageDrawable(icono1);
+		binding.LayoutConfiguraRadarDePersonaButtonActualizarConfiguracionRadar.setOnClickListener(v -> actualizar_radar_personas());
 	}
 
 	private void set_texts_colors_personas() {
 		try {
 			if (!this.perfil_usuario.getBoolean(this.getResources().getString(R.string.PERFIL_USUARIO_ES_PREMIUM), false)) {
-				TextView_que_este_online_para_persona.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.gris_semi_transparente));
-				TextView_que_sea_nuevo_para_persona.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.gris_semi_transparente));
+				binding.LayoutConfiguraRadarDePersonaTextViewQueEsteOnline.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.gris_semi_transparente));
+				binding.LayoutConfiguraRadarDePersonaTextViewQueSeaNuevo.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.gris_semi_transparente));
 
 			}
 		} catch (Exception e) {
@@ -661,10 +587,10 @@ public class Activity_Configura_Radar extends AppCompatActivity {
 			}else {
 				FrameLayout.LayoutParams layoutParams = new FrameLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT);
 				layoutParams.setMargins(0, 0, 0, 0);
-				if (mDrawerLayout!=null){
-					mDrawerLayout.setLayoutParams(layoutParams);
+				if (binding.mDrawerLayout!=null){
+					binding.mDrawerLayout.setLayoutParams(layoutParams);
 				}else{
-					Main_LinearLayout.setLayoutParams(layoutParams);
+					binding.MainLinearLayout.setLayoutParams(layoutParams);
 				}
 			}
 		}catch (Exception e){
@@ -722,15 +648,15 @@ public class Activity_Configura_Radar extends AppCompatActivity {
 
 	private void setupNavigationDrawer() {
 		try {
-			if (mDrawerLayout!=null) {
+			if (binding.mDrawerLayout!=null) {
 				// Setup Drawer Icon
-				drawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout, toolbar, R.string.drawer_open, R.string.drawer_close);
-				mDrawerLayout.addDrawerListener(drawerToggle);
+				drawerToggle = new ActionBarDrawerToggle(this, binding.mDrawerLayout, toolbar, R.string.drawer_open, R.string.drawer_close);
+				binding.mDrawerLayout.addDrawerListener(drawerToggle);
 				drawerToggle.syncState();
 
 				TypedValue typedValue = new TypedValue();
 				int color = typedValue.data;
-				mDrawerLayout.setStatusBarBackgroundColor(color);
+				binding.mDrawerLayout.setStatusBarBackgroundColor(color);
 			}
 			// Setup RecyclerViews inside drawer
 			setupNavigationDrawerRecyclerViews();

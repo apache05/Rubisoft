@@ -1,4 +1,4 @@
-package com.rubisoft.bisexradar.tools;
+package com.rubisoft.bisexcuddles.tools;
 
 import android.app.Activity;
 import android.content.Context;
@@ -25,24 +25,24 @@ import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FieldValue;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.WriteBatch;
-import com.rubisoft.bisexradar.BuildConfig;
-import com.rubisoft.bisexradar.Classes.Error;
-import com.rubisoft.bisexradar.Classes.Logro;
-import com.rubisoft.bisexradar.Classes.Usuario_para_listar;
-import com.rubisoft.bisexradar.R;
-import com.rubisoft.bisexradar.activities.Activity_Ayuda;
-import com.rubisoft.bisexradar.activities.Activity_Chat_General;
-import com.rubisoft.bisexradar.activities.Activity_Compras;
-import com.rubisoft.bisexradar.activities.Activity_Condiciones_Uso;
-import com.rubisoft.bisexradar.activities.Activity_Configura_Radar;
-import com.rubisoft.bisexradar.activities.Activity_Configuracion;
-import com.rubisoft.bisexradar.activities.Activity_Feedback;
-import com.rubisoft.bisexradar.activities.Activity_Inicio;
-import com.rubisoft.bisexradar.activities.Activity_Mensajes;
-import com.rubisoft.bisexradar.activities.Activity_Mi_Perfil;
-import com.rubisoft.bisexradar.activities.Activity_Politica_Privacidad;
-import com.rubisoft.bisexradar.activities.Activity_Principal;
-import com.rubisoft.bisexradar.activities.Activity_estrellas_gratis;
+import com.rubisoft.bisexcuddles.BuildConfig;
+import com.rubisoft.bisexcuddles.Classes.Error;
+import com.rubisoft.bisexcuddles.Classes.Logro;
+import com.rubisoft.bisexcuddles.Classes.Usuario_para_listar;
+import com.rubisoft.bisexcuddles.R;
+import com.rubisoft.bisexcuddles.activities.Activity_Ayuda;
+import com.rubisoft.bisexcuddles.activities.Activity_Chat_General;
+import com.rubisoft.bisexcuddles.activities.Activity_Compras;
+import com.rubisoft.bisexcuddles.activities.Activity_Condiciones_Uso;
+import com.rubisoft.bisexcuddles.activities.Activity_Configura_Radar;
+import com.rubisoft.bisexcuddles.activities.Activity_Configuracion;
+import com.rubisoft.bisexcuddles.activities.Activity_Feedback;
+import com.rubisoft.bisexcuddles.activities.Activity_Inicio;
+import com.rubisoft.bisexcuddles.activities.Activity_Mensajes;
+import com.rubisoft.bisexcuddles.activities.Activity_Mi_Perfil;
+import com.rubisoft.bisexcuddles.activities.Activity_Politica_Privacidad;
+import com.rubisoft.bisexcuddles.activities.Activity_Principal;
+import com.rubisoft.bisexcuddles.activities.Activity_estrellas_gratis;
 
 import org.joda.time.LocalDate;
 import org.joda.time.Years;
@@ -535,13 +535,14 @@ public class utils {
 			case 2:
 				sexo_decodificado = "mujer";
 				break;
+			default:
+				sexo_decodificado=sexo_decodificado.toString();
 		}
 		return sexo_decodificado;
 	}
 	public static String decodifica_orientacion(Long orientacion_codificada){
 		String orientacion_decodificada="";
 		switch (orientacion_codificada.intValue()) {
-
 			case 1:
 				orientacion_decodificada = "hetero";
 				break;
@@ -551,10 +552,11 @@ public class utils {
 			case 3:
 				orientacion_decodificada = "gay";
 				break;
-
 			case 4:
 				orientacion_decodificada = "bi";
 				break;
+			default:
+				orientacion_decodificada=orientacion_codificada.toString();
 		}
 		return orientacion_decodificada;
 	}

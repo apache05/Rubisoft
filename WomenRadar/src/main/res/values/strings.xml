@@ -13,6 +13,7 @@
     <string name="Admob_APPID" translatable="false">ca-app-pub-7323079119104426~8138320773</string>
     <string name="APPODEAL_APP_KEY" translatable="false">5fddacc59cb251f927b9655c875a3c0d90f9bb96cae211f3</string>
     <string name="NICK_FECHA_HORA" translatable="false">%1$s - %2$s - %3$s</string>
+    <string name="web_client_id" translatable="false">559888187719-klmhif8sb002qaivmcemohoqhjpg84sm.apps.googleusercontent.com</string>
 
     <!-- ****************************  UNIDADES DE MEDIDA ****************************-->
     <string name="Mi">%1$s Mi</string>

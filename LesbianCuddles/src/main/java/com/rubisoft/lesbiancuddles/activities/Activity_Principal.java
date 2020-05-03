@@ -26,7 +26,6 @@ import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -60,7 +59,7 @@ import com.rubisoft.lesbiancuddles.Dialogs.Dialog_Interactuar_Principal;
 import com.rubisoft.lesbiancuddles.Interfaces.Interface_ClickListener_Menu;
 import com.rubisoft.lesbiancuddles.Interfaces.Interface_ClickListener_Perfiles;
 import com.rubisoft.lesbiancuddles.R;
-import com.rubisoft.lesbiancuddles.RecyclersViews.RecyclerView_AutoFit;
+import com.rubisoft.lesbiancuddles.databinding.LayoutPrincipalBinding;
 import com.rubisoft.lesbiancuddles.tools.utils;
 
 import java.io.BufferedReader;
@@ -80,11 +79,9 @@ import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatImageView;
 import androidx.appcompat.widget.Toolbar;
-import androidx.cardview.widget.CardView;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.core.util.Pair;
-import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.RecyclerView.OnItemTouchListener;
@@ -93,61 +90,62 @@ import io.huq.sourcekit.HISourceKit;
 public class Activity_Principal extends AppCompatActivity  {
 	private static final int REQUEST_PERMISSIONS_REQUEST_CODE = 2;
 	private static final int MY_PERMISSIONS_REQUEST_LAST_LOCATION = 3;
-
+	private final int perfiles_por_pagina=12;
 	private FirebaseFirestore db;
-
 	private SharedPreferences perfil_usuario;
 	private SharedPreferences busqueda_usuario;
 	private SharedPreferences preferencias_usuario;
 	private ArrayList<Usuario_para_listar> perfiles_encontrados_global;
-	private RecyclerView_AutoFit mRecyclerView;
-	private ProgressBar mProgressBar;
-	private RecyclerView_Principal_Adapter mRecyclerViewListAdapter;
-	private ImageView mImageView_retroceder;
-	private ImageView mImageView_avanzar;
-	private CardView mCardview;
 
+	private RecyclerView_Principal_Adapter mRecyclerViewListAdapter;
 	private Location mLastLocation;
 	private FusedLocationProviderClient mFusedLocationClient;
 	private Toolbar toolbar;
 	private ActionBarDrawerToggle drawerToggle;
-	private DrawerLayout mDrawerLayout;
+
 	private RecyclerView recyclerViewDrawer;
 	private ImageView mImageView_PictureMain;
 	private FirebaseStorage storage;
 
-	private LinearLayout Main_LinearLayout;
-
+	private LayoutPrincipalBinding binding;
 	private int pagina;
-	private final int perfiles_por_pagina=12;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
+		Drawable icono_retroceder=null;
+		Drawable icono_seguir=null;
 		try {
 			overridePendingTransition(R.anim.activity_in, R.anim.activity_out);
 			super.onCreate(savedInstanceState);
+		}
+		catch (Exception e) {
+			utils.registra_error(e.toString(), "onCreate 1 de Activity_Principal");
+		}
+		if (utils.isNetworkAvailable((ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE))) {
+			binding = LayoutPrincipalBinding.inflate(getLayoutInflater());
+			setContentView(binding.getRoot());
+			setup_sharedprefernces(); //inicializamos los sharedpreferences
 
-			if (utils.isNetworkAvailable((ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE))) {
-				setContentView(R.layout.layout_principal);
-				setup_sharedprefernces(); //inicializamos los sharedpreferences
-
-				if (perfil_usuario.getString(getResources().getString(R.string.PERFIL_USUARIO_TOKEN_SOCIALAUTH), "").isEmpty()) {
-					// es posible que haciendo backpress en alguna activity hayamos vuelto a activity_principal sin estar registrado
-					salir();
-				} else {
+			if (perfil_usuario.getString(getResources().getString(R.string.PERFIL_USUARIO_TOKEN_SOCIALAUTH), "").isEmpty()) {
+				// es posible que haciendo backpress en alguna activity hayamos vuelto a activity_principal sin estar registrado
+				salir();
+			}
+			else {
 					mFusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
+
 					setup_RecyclerView();  //inicializamos el recyclerview que contendrá los perfiles encontrados
-					setup_views();
+
 					inicializa_anuncios();
+
 					inicializa_firebase();
+
 					chequea_num_estrellas_y_premium();
+
 					buscar_gente_si_se_puede();
+
 					setup_toolbar();
 					Bundle mBundle = getIntent().getExtras();
 					pagina= mBundle==null?0:mBundle.getInt(getResources().getString(R.string.PAGINA));
-
-					Drawable icono_retroceder;
-					Drawable icono_seguir;
 
 					Configuration config = getResources().getConfiguration();
 					if (config.getLayoutDirection() == View.LAYOUT_DIRECTION_LTR) {
@@ -160,43 +158,35 @@ public class Activity_Principal extends AppCompatActivity  {
 
 						icono_retroceder = new IconicsDrawable(this).icon(GoogleMaterial.Icon.gmd_arrow_forward).color(ContextCompat.getColor(this, R.color.accent)).sizeDp(this.getResources().getInteger(R.integer.Tam_Normal_icons));
 					}
-					mImageView_retroceder.setImageDrawable(icono_retroceder);
-					mImageView_avanzar.setImageDrawable(icono_seguir);
 
-					mImageView_retroceder.setOnClickListener(view -> {
+					binding.LayoutPrincipalButtonRetroceder.setImageDrawable(icono_retroceder);
+					binding.LayoutPrincipalButtonAvanzar.setImageDrawable(icono_seguir);
+
+					binding.LayoutPrincipalButtonRetroceder.setOnClickListener(view -> {
 						if (perfiles_encontrados_global != null && pagina>0) {
 							pagina--;
 							pinta_perfiles(perfiles_encontrados_global);
 						}
 					});
-					mImageView_avanzar.setOnClickListener(view -> {
+					binding.LayoutPrincipalButtonAvanzar.setOnClickListener(view -> {
 						if (perfiles_encontrados_global != null && pagina <perfiles_encontrados_global.size()/12){
 							pagina++;
 							pinta_perfiles(perfiles_encontrados_global);
 						}
 					});
-				}
-				actualiza_fecha_ultimo_acceso();
 
-				HISourceKit.getInstance().recordWithAPIKey(getString(R.string.huqh_API_KEY), getApplication());
-			} else {
-				Intent mIntent = new Intent(this, Activity_Sin_Conexion.class);
-				startActivity(mIntent);
-				finish();
 			}
-		} catch (Exception e) {
-			utils.registra_error(e.toString(), "onCreate de Activity_Principal");
+			actualiza_fecha_ultimo_acceso();
+
+			if (HISourceKit.getInstance()!=null) {
+				HISourceKit.getInstance().recordWithAPIKey(getString(R.string.huqh_API_KEY), getApplication());
+			}
 		}
-	}
-
-	private void setup_views(){
-		mDrawerLayout = findViewById(R.id.mDrawerLayout);
-		Main_LinearLayout = findViewById(R.id.Main_LinearLayout);
-
-		mProgressBar = findViewById(R.id.mProgressBar);
-		mImageView_retroceder = findViewById(R.id.Layout_principal_Button_retroceder);
-		mImageView_avanzar = findViewById(R.id.Layout_principal_Button_avanzar);
-		mCardview = findViewById(R.id.Layout_principal_Cardview);
+		else {
+			Intent mIntent = new Intent(this, Activity_Sin_Conexion.class);
+			startActivity(mIntent);
+			finish();
+		}
 	}
 
 	@Override
@@ -331,39 +321,38 @@ public class Activity_Principal extends AppCompatActivity  {
 		// **********************************************************************************************************
 		try {
 
-			utils.setProgressBar_visibility(mProgressBar, View.VISIBLE);
+			utils.setProgressBar_visibility(binding.mProgressBar, View.VISIBLE);
 
 			if (perfiles_encontrados != null && pagina>0) {
-				mImageView_retroceder.setVisibility(View.VISIBLE);
-				mCardview.setVisibility(View.VISIBLE);
+				binding.LayoutPrincipalButtonRetroceder.setVisibility(View.VISIBLE);
+				binding.LayoutPrincipalCardview.setVisibility(View.VISIBLE);
 			}else{
-				mImageView_retroceder.setVisibility(View.INVISIBLE);
+				binding.LayoutPrincipalButtonRetroceder.setVisibility(View.INVISIBLE);
 
 			}
 			if (perfiles_encontrados != null && pagina <perfiles_encontrados.size()/12){
-				mImageView_avanzar.setVisibility(View.VISIBLE);
-				mCardview.setVisibility(View.VISIBLE);
+				binding.LayoutPrincipalButtonAvanzar.setVisibility(View.VISIBLE);
+				binding.LayoutPrincipalCardview.setVisibility(View.VISIBLE);
 			}else{
-				mImageView_avanzar.setVisibility(View.INVISIBLE);
+				binding.LayoutPrincipalButtonAvanzar.setVisibility(View.INVISIBLE);
 			}
-			TextView TextView_ningun_perfil_encontrado = findViewById(R.id.Layout_principal_TextView_ningun_perfil);
-			TextView_ningun_perfil_encontrado.setVisibility(View.INVISIBLE);
+			binding.LayoutPrincipalTextViewNingunPerfil.setVisibility(View.INVISIBLE);
 
-			mRecyclerView.setVisibility(View.VISIBLE);
+			binding.LayoutPrincipalReciclerView.setVisibility(View.VISIBLE);
 
 			mRecyclerViewListAdapter = new RecyclerView_Principal_Adapter(getApplicationContext());
-			mRecyclerView.setAdapter(mRecyclerViewListAdapter);
-			mRecyclerView.setLayoutManager(new NpaLinearLayoutManager(getApplicationContext()));
+			binding.LayoutPrincipalReciclerView.setAdapter(mRecyclerViewListAdapter);
+			binding.LayoutPrincipalReciclerView.setLayoutManager(new NpaLinearLayoutManager(getApplicationContext()));
 			int j=0;
 			for (int i=pagina*perfiles_por_pagina; i<((pagina+1)*perfiles_por_pagina)&&perfiles_encontrados.size()>i;i++) {
 				carga_perfil_para_lista(perfiles_encontrados.get(i), j);
 				j++;
 			}
-			mRecyclerView.invalidate();//para que se ejecute su animacion
+			binding.LayoutPrincipalReciclerView.invalidate();//para que se ejecute su animacion
 		} catch (Exception e) {
 			utils.registra_error(e.toString(), "pinta_perfiles de Activity_Principal");
 		} finally {
-			utils.setProgressBar_visibility(mProgressBar, View.INVISIBLE);
+			utils.setProgressBar_visibility(binding.mProgressBar, View.INVISIBLE);
 		}
 	}
 
@@ -411,14 +400,13 @@ public class Activity_Principal extends AppCompatActivity  {
 
 	private void pinta_no_hay_perfiles() {
 		try {
-			mRecyclerView.setVisibility(View.INVISIBLE);
-			mImageView_retroceder.setVisibility(View.INVISIBLE);
-			mImageView_avanzar.setVisibility(View.INVISIBLE);
+			binding.LayoutPrincipalReciclerView.setVisibility(View.INVISIBLE);
+			binding.LayoutPrincipalButtonRetroceder.setVisibility(View.INVISIBLE);
+			binding.LayoutPrincipalButtonAvanzar.setVisibility(View.INVISIBLE);
 			Typeface typeFace_roboto_light = Typeface.createFromAsset(getAssets(), "fonts/Roboto-Light.ttf");
-			TextView TextView_ningun_perfil_encontrado = findViewById(R.id.Layout_principal_TextView_ningun_perfil);
-			TextView_ningun_perfil_encontrado.setVisibility(View.VISIBLE);
-			TextView_ningun_perfil_encontrado.setTypeface(typeFace_roboto_light);
-			TextView_ningun_perfil_encontrado.setText(getResources().getString(R.string.ACTIVITY_PRINCIPAL_NINGUN_PERFIL_ENCONTRADO));
+			binding.LayoutPrincipalTextViewNingunPerfil.setVisibility(View.VISIBLE);
+			binding.LayoutPrincipalTextViewNingunPerfil.setTypeface(typeFace_roboto_light);
+			binding.LayoutPrincipalTextViewNingunPerfil.setText(getResources().getString(R.string.ACTIVITY_PRINCIPAL_NINGUN_PERFIL_ENCONTRADO));
 		} catch (Exception e) {
 			utils.registra_error(e.toString(), "pinta_no_hay_PErfiles de Activity_Principal");
 		}
@@ -426,13 +414,12 @@ public class Activity_Principal extends AppCompatActivity  {
 
 	private void pinta_no_va_el_gps() {
 		try {
-			mImageView_retroceder.setVisibility(View.INVISIBLE);
-			mImageView_avanzar.setVisibility(View.INVISIBLE);
+			binding.LayoutPrincipalButtonRetroceder.setVisibility(View.INVISIBLE);
+			binding.LayoutPrincipalButtonAvanzar.setVisibility(View.INVISIBLE);
 			Typeface typeFace_roboto_light = Typeface.createFromAsset(getAssets(), "fonts/Roboto-Light.ttf");
-			TextView TextView_ningun_perfil_encontrado = findViewById(R.id.Layout_principal_TextView_ningun_perfil);
-			TextView_ningun_perfil_encontrado.setVisibility(View.VISIBLE);
-			TextView_ningun_perfil_encontrado.setTypeface(typeFace_roboto_light);
-			TextView_ningun_perfil_encontrado.setText(getResources().getString(R.string.ACTIVITY_PRINCIPAL_NO_VA_EL_GPS));
+			binding.LayoutPrincipalTextViewNingunPerfil.setVisibility(View.VISIBLE);
+			binding.LayoutPrincipalTextViewNingunPerfil.setTypeface(typeFace_roboto_light);
+			binding.LayoutPrincipalTextViewNingunPerfil.setText(getResources().getString(R.string.ACTIVITY_PRINCIPAL_NO_VA_EL_GPS));
 
 			this.setup_fondo_pantalla(2);
 		} catch (Exception e) {
@@ -470,28 +457,25 @@ public class Activity_Principal extends AppCompatActivity  {
 		try {
 			if (this.getApplicationContext() != null) { //puede que ya no estemos en la activity
 				Drawable fondo;
-				RelativeLayout RelativeLayout_fondo;
+
 				switch (tipo) {
 					case 0:
 						fondo = new IconicsDrawable(this.getApplicationContext())
 								.icon(GoogleMaterial.Icon.gmd_sentiment_very_satisfied)
 								.color(ContextCompat.getColor(this.getApplicationContext(), R.color.gris_transparente));
-						RelativeLayout_fondo = this.findViewById(R.id.Layout_principal_RelativeLayout);
-						RelativeLayout_fondo.setBackground(fondo);
+						binding.LayoutPrincipalRelativeLayout.setBackground(fondo);
 						break;
 					case 1:
 						fondo = new IconicsDrawable(this.getApplicationContext())
 								.icon(GoogleMaterial.Icon.gmd_sentiment_neutral)
 								.color(ContextCompat.getColor(this.getApplicationContext(), R.color.gris_transparente));
-						RelativeLayout_fondo = this.findViewById(R.id.Layout_principal_RelativeLayout);
-						RelativeLayout_fondo.setBackground(fondo);
+						binding.LayoutPrincipalRelativeLayout.setBackground(fondo);
 						break;
 					case 2:
 						fondo = new IconicsDrawable(this.getApplicationContext())
 								.icon(GoogleMaterial.Icon.gmd_gps_off)
 								.color(ContextCompat.getColor(this.getApplicationContext(), R.color.gris_transparente));
-						RelativeLayout_fondo = this.findViewById(R.id.Layout_principal_RelativeLayout);
-						RelativeLayout_fondo.setBackground(fondo);
+						binding.LayoutPrincipalRelativeLayout.setBackground(fondo);
 						break;
 				}
 			}
@@ -506,14 +490,18 @@ public class Activity_Principal extends AppCompatActivity  {
 		recyclerViewDrawer.addOnItemTouchListener(new RecyclerTouchListener_menu(this, recyclerViewDrawer, (view, position) -> {
 			utils.gestiona_onclick_menu_principal(Activity_Principal.this, position);
 			if (!utils.isTablet(getApplicationContext())) {
-				mDrawerLayout.closeDrawers();
+				binding.mDrawerLayout.closeDrawers();
 			}
 		}));
 	}
 
 	private void actualiza_fecha_ultimo_acceso(){
-		String token_socialauth = perfil_usuario.getString(getResources().getString(R.string.PERFIL_USUARIO_TOKEN_SOCIALAUTH), "");
-		db.collection(getResources().getString(R.string.USUARIOS)).document(token_socialauth).update(getResources().getString(R.string.USUARIO_FECHA_ULTIMO_ACCESO),Calendar.getInstance().getTimeInMillis());
+		try {
+			String token_socialauth = perfil_usuario.getString(getResources().getString(R.string.PERFIL_USUARIO_TOKEN_SOCIALAUTH), "");
+			db.collection(getResources().getString(R.string.USUARIOS)).document(token_socialauth).update(getResources().getString(R.string.USUARIO_FECHA_ULTIMO_ACCESO), Calendar.getInstance().getTimeInMillis());
+		}catch (Exception ignored){
+
+		}
 	}
 
 	private void inicializa_anuncios(){
@@ -528,10 +516,10 @@ public class Activity_Principal extends AppCompatActivity  {
 			}else {
 				FrameLayout.LayoutParams layoutParams = new FrameLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT);
 				layoutParams.setMargins(0, 0, 0, 0);
-				if (mDrawerLayout!=null){
-					mDrawerLayout.setLayoutParams(layoutParams);
+				if (binding.mDrawerLayout!=null){
+					binding.mDrawerLayout.setLayoutParams(layoutParams);
 				}else{
-					Main_LinearLayout.setLayoutParams(layoutParams);
+					binding.MainLinearLayout.setLayoutParams(layoutParams);
 				}
 			}
 		}catch (Exception e){
@@ -541,83 +529,83 @@ public class Activity_Principal extends AppCompatActivity  {
 
 	private void setup_banner() {
 		try {
-				Appodeal.setBannerCallbacks(new BannerCallbacks() {
-					@Override
-					public void onBannerLoaded(int height, boolean isPrecache) {
-						Log.d("Appodeal", "onInterstitialFailedToLoad");
+			Appodeal.setBannerCallbacks(new BannerCallbacks() {
+				@Override
+				public void onBannerLoaded(int height, boolean isPrecache) {
+					Log.d("Appodeal", "onInterstitialFailedToLoad");
 
-					}
-					@Override
-					public void onBannerFailedToLoad() {
-						Log.d("Appodeal", "onInterstitialFailedToLoad");
-					}
-					@Override
-					public void onBannerShown() {
-						Log.d("Appodeal", "onInterstitialFailedToLoad");
+				}
+				@Override
+				public void onBannerFailedToLoad() {
+					Log.d("Appodeal", "onInterstitialFailedToLoad");
+				}
+				@Override
+				public void onBannerShown() {
+					Log.d("Appodeal", "onInterstitialFailedToLoad");
 
-					}
-					@Override
-					public void onBannerClicked() {
+				}
+				@Override
+				public void onBannerClicked() {
 
-					}
-					@Override
-					public void onBannerExpired() {
+				}
+				@Override
+				public void onBannerExpired() {
 
-					}
-					@Override
-					public void onBannerShowFailed() {
-						Log.d("Appodeal", "onBannerShowFailed");
+				}
+				@Override
+				public void onBannerShowFailed() {
+					Log.d("Appodeal", "onBannerShowFailed");
 
-					}
-				});
-				Appodeal.show(this, Appodeal.BANNER_TOP);
+				}
+			});
+			Appodeal.show(this, Appodeal.BANNER_TOP);
 		} catch (Exception e) {
 			utils.registra_error(e.toString(), "setup_banner de Activity_Principal");
 		}
 	}
 
 	private void lanza_interstitial() {
-			try {
-				SharedPreferences sharedPreferences_principal = getSharedPreferences(getResources().getString(R.string.SHAREDPREFERENCES_PRINCIPAL), Context.MODE_PRIVATE);
-				int num_veces_visto_anuncio = sharedPreferences_principal.getInt("veces_visto_el_anuncio", 0);
-					if (num_veces_visto_anuncio % 4 == 0) {
-					Appodeal.setInterstitialCallbacks(new InterstitialCallbacks() {
-						@Override
-						public void onInterstitialLoaded(boolean isPrecache) {
-							Log.d("Appodeal", "onInterstitialFailedToLoad");
+		try {
+			SharedPreferences sharedPreferences_principal = getSharedPreferences(getResources().getString(R.string.SHAREDPREFERENCES_PRINCIPAL), Context.MODE_PRIVATE);
+			int num_veces_visto_anuncio = sharedPreferences_principal.getInt("veces_visto_el_anuncio", 0);
+			if (num_veces_visto_anuncio % 4 == 0) {
+				Appodeal.setInterstitialCallbacks(new InterstitialCallbacks() {
+					@Override
+					public void onInterstitialLoaded(boolean isPrecache) {
+						Log.d("Appodeal", "onInterstitialFailedToLoad");
 
-						}
-						@Override
-						public void onInterstitialFailedToLoad() {
-							Log.d("Appodeal", "onInterstitialFailedToLoad");
+					}
+					@Override
+					public void onInterstitialFailedToLoad() {
+						Log.d("Appodeal", "onInterstitialFailedToLoad");
 
-						}
-						@Override
-						public void onInterstitialShown() {
-						}
-						@Override
-						public void onInterstitialClicked() {
-						}
-						@Override
-						public void onInterstitialClosed() {
-						}
-						@Override
-						public void onInterstitialExpired() {
-						}
-						@Override
-						public void onInterstitialShowFailed() {
-						}
-					});
-					Appodeal.show(this, Appodeal.INTERSTITIAL);
-				}
-				num_veces_visto_anuncio++;
-				SharedPreferences.Editor editor_chat_general = sharedPreferences_principal.edit();
-				editor_chat_general.putInt("veces_visto_el_anuncio", num_veces_visto_anuncio);
-				editor_chat_general.apply();
-			} catch (Exception e) {
-				utils.registra_error(e.toString(), "lanza_interstitial de Activity_principal");
+					}
+					@Override
+					public void onInterstitialShown() {
+					}
+					@Override
+					public void onInterstitialClicked() {
+					}
+					@Override
+					public void onInterstitialClosed() {
+					}
+					@Override
+					public void onInterstitialExpired() {
+					}
+					@Override
+					public void onInterstitialShowFailed() {
+					}
+				});
+				Appodeal.show(this, Appodeal.INTERSTITIAL);
 			}
+			num_veces_visto_anuncio++;
+			SharedPreferences.Editor editor_chat_general = sharedPreferences_principal.edit();
+			editor_chat_general.putInt("veces_visto_el_anuncio", num_veces_visto_anuncio);
+			editor_chat_general.apply();
+		} catch (Exception e) {
+			utils.registra_error(e.toString(), "lanza_interstitial de Activity_principal");
 		}
+	}
 
 	private void setup_sharedprefernces() {
 		try {
@@ -631,15 +619,13 @@ public class Activity_Principal extends AppCompatActivity  {
 
 	private void setup_RecyclerView() {
 		try {
-			mRecyclerView = findViewById(R.id.Layout_principal_ReciclerView);
-			//if (!this.ºpreferencias_usuario.getBoolean(this.getResources().getString(R.string.PREFERENCIAS_MODO_PRESENTACION), false)) {
 			RelativeLayout.LayoutParams mLayoutParams = new RelativeLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT);
-			this.mRecyclerView.setLayoutParams(mLayoutParams);
-			//}
+			this.binding.LayoutPrincipalReciclerView.setLayoutParams(mLayoutParams);
+
 			if (perfil_usuario.getBoolean(getString(R.string.PERFIL_USUARIO_ES_PREMIUM), false)) {
-				mRecyclerView.setPadding(0, 0, 0, 0);
+				binding.LayoutPrincipalReciclerView.setPadding(0, 0, 0, 0);
 			}
-			utils.set_RecyclerView_Animator(mRecyclerView);
+			utils.set_RecyclerView_Animator(binding.LayoutPrincipalReciclerView);
 		} catch (Exception e) {
 			utils.registra_error(e.toString(), "setup_recyclerview de Activity_Principal");
 		}
@@ -661,16 +647,16 @@ public class Activity_Principal extends AppCompatActivity  {
 	private void setupNavigationDrawer() {
 		try {
 
-			if (mDrawerLayout!=null) {
+			if (binding.mDrawerLayout!=null) {
 				// Setup Drawer Icon
-				drawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout, toolbar, R.string.drawer_open, R.string.drawer_close);
-				mDrawerLayout.addDrawerListener(drawerToggle);
+				drawerToggle = new ActionBarDrawerToggle(this, binding.mDrawerLayout, toolbar, R.string.drawer_open, R.string.drawer_close);
+				binding.mDrawerLayout.addDrawerListener(drawerToggle);
 
 				drawerToggle.syncState();
 
 				TypedValue typedValue = new TypedValue();
 				int color = typedValue.data;
-				mDrawerLayout.setStatusBarBackgroundColor(color);
+				binding.mDrawerLayout.setStatusBarBackgroundColor(color);
 			}
 			// Setup RecyclerViews inside drawer
 			setupNavigationDrawerRecyclerViews();
@@ -764,7 +750,7 @@ public class Activity_Principal extends AppCompatActivity  {
 	private void crea_ItemTouchListener() {
 		//Aquí hacemos las acciones pertinentes según el gesto que haya hecho el Usuario_para_listar
 		//y que lo ha detectado y codificado primero el  RecyclerTouchListener
-		mRecyclerView.addOnItemTouchListener(new RecyclerTouchListener_perfiles(this.getApplicationContext(), mRecyclerView, (view, position) -> {
+		binding.LayoutPrincipalReciclerView.addOnItemTouchListener(new RecyclerTouchListener_perfiles(this.getApplicationContext(), binding.LayoutPrincipalReciclerView, (view, position) -> {
 			try {
 				lanza_dialogo(position,perfiles_encontrados_global.get(position+pagina*perfiles_por_pagina).getNick());
 				// utils.ir_a_Activity_Un_Perfil(Activity_Principal.this, perfiles_encontrados.get(position+pagina*perfiles_por_pagina), getResources().getInteger(R.integer.VENGO_DE_PRINCIPAL),pagina);
@@ -800,76 +786,6 @@ public class Activity_Principal extends AppCompatActivity  {
 		} catch (Exception e) {
 			utils.registra_error(e.toString(), "lanza_dialogo_tip de Activity_Principal");
 		}
-	}
-
-	private class AsyncTask_descarga_mi_Thumb extends AsyncTask<String, Void, Void> {
-		@Override
-		protected void onPreExecute() {
-		}
-
-		@Override
-		protected Void doInBackground(String... params) {
-			try {
-				String Token_socialAuth = params[0];
-				StorageReference storageRef = storage.getReferenceFromUrl(getResources().getString(R.string.my_bucket));
-
-				StorageReference imagesRef = storageRef.child(utils.get_path_thumb(Token_socialAuth, 0));
-
-				imagesRef.getBytes(getResources().getInteger(R.integer.MAX_PHOTO_LENGTH)).addOnSuccessListener(bytes -> {
-					if (getApplicationContext() != null) { //puede que ya no estemos en la activity
-						new AsyncTask_decode_mi_Thumb().execute(new Pair<>(bytes, Token_socialAuth));
-					}
-				}).addOnFailureListener(e -> {
-				});
-			} catch (Exception ignored) {
-
-			}
-
-			return null;
-		}
-
-		@Override
-		protected void onPostExecute(Void algo) {
-
-		}
-
-	}
-
-	private class AsyncTask_decode_mi_Thumb extends AsyncTask<Pair<byte[], String>, Void, Bitmap> {
-		@Override
-		protected void onPreExecute() {
-		}
-
-		@SafeVarargs
-		@Override
-		protected final Bitmap doInBackground(Pair<byte[], String>... params) {
-			byte[] bytes = params[0].first;
-			String Token_socialAuth = params[0].second;
-
-			Bitmap mBitmap = utils.decodeSampledBitmapFromBytes(bytes, getResources().getDimensionPixelSize(R.dimen.tamanyo_foto_grid_perfiles), getResources().getDimensionPixelSize(R.dimen.tamanyo_foto_grid_perfiles));
-
-			File storageDir = getExternalFilesDir(Environment.DIRECTORY_PICTURES);
-			String nombre_foto = utils.get_nombre_thumb(Token_socialAuth, 0);
-			File file = new File(storageDir, nombre_foto);
-			if (!utils.guarda_foto_en_memoria_interna(bytes, file.getPath())){
-				Toast.makeText(getApplicationContext(), getResources().getString(R.string.FRAGMENT_FOTO_ERROR_FOTO_NO_CARGADA), Toast.LENGTH_LONG).show();
-			}
-			return mBitmap;
-
-		}
-
-		@Override
-		protected void onPostExecute(Bitmap mBitmap) {
-			try {
-				if ((mBitmap != null) && (getApplicationContext() != null)) { //puede que ya no estemos en la activity
-					mImageView_PictureMain.setImageBitmap(mBitmap);
-				}
-
-			} catch (Exception e) {
-				utils.registra_error(e.toString(), "asynctask_decode_mi_thumb de Activity_Principal");
-			}
-		}
-
 	}
 
 	private void JSON_to_File(List<Usuario_para_listar> listado_perfiles_encontrados ,String path){
@@ -1005,43 +921,40 @@ public class Activity_Principal extends AppCompatActivity  {
 				//JSON_to_File(perfiles_encontrados_global,path);
 				pinta_perfiles(perfiles_encontrados_global);
 			}else{*/
-				db.collection(getResources().getString(R.string.USUARIOS))
-						.whereEqualTo(getResources().getString(R.string.USUARIO_PAIS), perfil_usuario.getString(getResources().getString(R.string.PERFIL_USUARIO_PAIS),""))
-						.whereEqualTo(getResources().getString(R.string.USUARIO_ORIENTACION),busqueda_usuario.getLong(this.getResources().getString(R.string.BUSQUEDA_ORIENTACION_QUE_BUSCA), 1L))
-						.whereEqualTo(getResources().getString(R.string.USUARIO_SEXO),busqueda_usuario.getLong(this.getResources().getString(R.string.BUSQUEDA_SEXO_QUE_BUSCA), 1L))
-						.get().addOnCompleteListener(task -> {
-							try {
-								if (task.isSuccessful()) {
-									double max_distance = busqueda_usuario.getLong(getResources().getString(R.string.BUSQUEDA_RADIO), getResources().getInteger(R.integer.DEFAULT_RADIO));
-									List<Usuario_para_listar> listado_perfiles_encontrados = new ArrayList() ;
+			db.collection(getResources().getString(R.string.USUARIOS))
+					.whereEqualTo(getResources().getString(R.string.USUARIO_PAIS), perfil_usuario.getString(getResources().getString(R.string.PERFIL_USUARIO_PAIS),""))
+					.whereEqualTo(getResources().getString(R.string.USUARIO_ORIENTACION),busqueda_usuario.getLong(this.getResources().getString(R.string.BUSQUEDA_ORIENTACION_QUE_BUSCA), 1L))
+					.whereEqualTo(getResources().getString(R.string.USUARIO_SEXO),busqueda_usuario.getLong(this.getResources().getString(R.string.BUSQUEDA_SEXO_QUE_BUSCA), 1L))
+					.get().addOnCompleteListener(task -> {
+				try {
+					if (task.isSuccessful()) {
+						double max_distance = busqueda_usuario.getLong(getResources().getString(R.string.BUSQUEDA_RADIO), getResources().getInteger(R.integer.DEFAULT_RADIO));
+						List<Usuario_para_listar> listado_perfiles_encontrados = new ArrayList() ;
 
-									for (QueryDocumentSnapshot document : task.getResult()) {
-										Double distanceBetweenTwoPoints = utils.getDistancia(getApplicationContext(), document.getDouble(getString(R.string.USUARIO_LATITUD)), document.getDouble(getString(R.string.USUARIO_LONGITUD)));
-										if (distanceBetweenTwoPoints < max_distance) {
+						for (QueryDocumentSnapshot document : task.getResult()) {
+							Double distanceBetweenTwoPoints = utils.getDistancia(getApplicationContext(), document.getDouble(getString(R.string.USUARIO_LATITUD)), document.getDouble(getString(R.string.USUARIO_LONGITUD)));
+							if (distanceBetweenTwoPoints < max_distance) {
 
-											if (comprueba_edad_minima(busqueda_usuario.getLong(getString(R.string.BUSQUEDA_EDAD_MINIMA), 18L), (Long) document.get(getResources().getString(R.string.USUARIO_FECHA_NACIMIENTO)))) {
-												if (comprueba_edad_maxima(busqueda_usuario.getLong(getString(R.string.BUSQUEDA_EDAD_MAXIMA), 99L), (Long) document.get(getResources().getString(R.string.USUARIO_FECHA_NACIMIENTO)))) {
+								if (comprueba_edad_minima(busqueda_usuario.getLong(getString(R.string.BUSQUEDA_EDAD_MINIMA), 18L), (Long) document.get(getResources().getString(R.string.USUARIO_FECHA_NACIMIENTO)))) {
+									if (comprueba_edad_maxima(busqueda_usuario.getLong(getString(R.string.BUSQUEDA_EDAD_MAXIMA), 99L), (Long) document.get(getResources().getString(R.string.USUARIO_FECHA_NACIMIENTO)))) {
 
-													if (busqueda_usuario.getLong(getResources().getString(R.string.BUSQUEDA_PERSONAS_PESO_MAXIMO), getResources().getInteger(R.integer.DEFAULT_PESO_MAXIMO)) > (Long) document.get(getResources().getString(R.string.USUARIO_PESO))) {
-														if (busqueda_usuario.getLong(getResources().getString(R.string.BUSQUEDA_PERSONAS_PESO_MINIMO), getResources().getInteger(R.integer.DEFAULT_PESO_MINIMO)) < (Long) document.get(getResources().getString(R.string.USUARIO_PESO))) {
+										if (busqueda_usuario.getLong(getResources().getString(R.string.BUSQUEDA_PERSONAS_PESO_MAXIMO), getResources().getInteger(R.integer.DEFAULT_PESO_MAXIMO)) > (Long) document.get(getResources().getString(R.string.USUARIO_PESO))) {
+											if (busqueda_usuario.getLong(getResources().getString(R.string.BUSQUEDA_PERSONAS_PESO_MINIMO), getResources().getInteger(R.integer.DEFAULT_PESO_MINIMO)) < (Long) document.get(getResources().getString(R.string.USUARIO_PESO))) {
 
-															if (busqueda_usuario.getLong(getResources().getString(R.string.BUSQUEDA_PERSONAS_ALTURA_MAXIMA), getResources().getInteger(R.integer.DEFAULT_ALTURA_MAXIMA)) > (Long) document.get(getResources().getString(R.string.USUARIO_ALTURA))) {
-																if (busqueda_usuario.getLong(getResources().getString(R.string.BUSQUEDA_PERSONAS_ALTURA_MINIMA), getResources().getInteger(R.integer.DEFAULT_ALTURA_MINIMA)) < (Long) document.get(getResources().getString(R.string.USUARIO_ALTURA))) {
+												if (busqueda_usuario.getLong(getResources().getString(R.string.BUSQUEDA_PERSONAS_ALTURA_MAXIMA), getResources().getInteger(R.integer.DEFAULT_ALTURA_MAXIMA)) > (Long) document.get(getResources().getString(R.string.USUARIO_ALTURA))) {
+													if (busqueda_usuario.getLong(getResources().getString(R.string.BUSQUEDA_PERSONAS_ALTURA_MINIMA), getResources().getInteger(R.integer.DEFAULT_ALTURA_MINIMA)) < (Long) document.get(getResources().getString(R.string.USUARIO_ALTURA))) {
 
-																	if (filtro_online(busqueda_usuario.getBoolean(getResources().getString(R.string.BUSQUEDA_QUE_ESTE_ONLINE), false), (Long) document.get(getResources().getString(R.string.USUARIO_FECHA_ULTIMO_ACCESO)))) {
-																		if (filtro_nuevo(busqueda_usuario.getBoolean(getResources().getString(R.string.BUSQUEDA_QUE_SEA_NUEVO), false), (Long) document.get(getResources().getString(R.string.USUARIO_FECHA_REGISTRO)))) {
+														if (filtro_online(busqueda_usuario.getBoolean(getResources().getString(R.string.BUSQUEDA_QUE_ESTE_ONLINE), false), (Long) document.get(getResources().getString(R.string.USUARIO_FECHA_ULTIMO_ACCESO)))) {
+															if (filtro_nuevo(busqueda_usuario.getBoolean(getResources().getString(R.string.BUSQUEDA_QUE_SEA_NUEVO), false), (Long) document.get(getResources().getString(R.string.USUARIO_FECHA_REGISTRO)))) {
 
-																			if (!perfil_usuario.getString(getResources().getString(R.string.PERFIL_USUARIO_TOKEN_SOCIALAUTH), "").equals(document.getId())) {
-																				Usuario_para_listar un_usuario_para_listar = new Usuario_para_listar(document.getData());
-																				un_usuario_para_listar.setDouble_distancia(distanceBetweenTwoPoints);
-																				un_usuario_para_listar.setLong_edad(Integer.valueOf(utils.getEdad(document.getLong(getString(R.string.USUARIO_FECHA_NACIMIENTO)))).longValue());
-																				un_usuario_para_listar.setToken_socialauth(document.getId());
-																				listado_perfiles_encontrados.add(un_usuario_para_listar);
-																				if (! (Boolean) document.get(getResources().getString(R.string.USUARIO_ES_PREMIUM))) {
-																					utils.actualizacion_semanal_de_estrellas(this, un_usuario_para_listar.getToken_socialauth(), un_usuario_para_listar.getFecha_cobro_estrellas());
-																				}
-																			}
-																		}
+																if (!perfil_usuario.getString(getResources().getString(R.string.PERFIL_USUARIO_TOKEN_SOCIALAUTH), "").equals(document.getId())) {
+																	Usuario_para_listar un_usuario_para_listar = new Usuario_para_listar(document.getData());
+																	un_usuario_para_listar.setDouble_distancia(distanceBetweenTwoPoints);
+																	un_usuario_para_listar.setLong_edad(Integer.valueOf(utils.getEdad(document.getLong(getString(R.string.USUARIO_FECHA_NACIMIENTO)))).longValue());
+																	un_usuario_para_listar.setToken_socialauth(document.getId());
+																	listado_perfiles_encontrados.add(un_usuario_para_listar);
+																	if (! (Boolean) document.get(getResources().getString(R.string.USUARIO_ES_PREMIUM))) {
+																		utils.actualizacion_semanal_de_estrellas(this, un_usuario_para_listar.getToken_socialauth(), un_usuario_para_listar.getFecha_cobro_estrellas());
 																	}
 																}
 															}
@@ -1051,26 +964,29 @@ public class Activity_Principal extends AppCompatActivity  {
 											}
 										}
 									}
-									if (listado_perfiles_encontrados != null && !listado_perfiles_encontrados.isEmpty()) {
-										ArrayList<Usuario_para_listar> listado_perfiles_promocionados = promocionar_premiums(listado_perfiles_encontrados);
-										pinta_perfiles(listado_perfiles_promocionados);
-										perfiles_encontrados_global = listado_perfiles_promocionados;
-										//borra_cached_search(new File(path));
-										//JSON_to_File(listado_perfiles_promocionados, path);
-									}
-									else {
-										pinta_no_hay_perfiles();
-									}
-								} else {
-									pinta_no_hay_perfiles();
-									utils.registra_error(task.getException().toString(), "buscar_personas (onComplete) de Activity_Principal");
-
 								}
-							}catch(Exception e){
-								pinta_no_hay_perfiles();
-								utils.registra_error(e.toString(), "buscar_personas (onComplete) de Activity_Principal");
 							}
-						});
+						}
+						if (listado_perfiles_encontrados != null && !listado_perfiles_encontrados.isEmpty()) {
+							ArrayList<Usuario_para_listar> listado_perfiles_promocionados = promocionar_premiums(listado_perfiles_encontrados);
+							pinta_perfiles(listado_perfiles_promocionados);
+							perfiles_encontrados_global = listado_perfiles_promocionados;
+							//borra_cached_search(new File(path));
+							//JSON_to_File(listado_perfiles_promocionados, path);
+						}
+						else {
+							pinta_no_hay_perfiles();
+						}
+					} else {
+						pinta_no_hay_perfiles();
+						utils.registra_error(task.getException().toString(), "buscar_personas (onComplete) de Activity_Principal");
+
+					}
+				}catch(Exception e){
+					pinta_no_hay_perfiles();
+					utils.registra_error(e.toString(), "buscar_personas (onComplete) de Activity_Principal");
+				}
+			});
 
 		} catch (Exception e) {
 			pinta_no_hay_perfiles();
@@ -1080,12 +996,12 @@ public class Activity_Principal extends AppCompatActivity  {
 
 	private void actualiza_ubicacion_en_Firestore(String Token_SocialAuth,Location mLocation){
 		try{
-		DocumentReference Ref= db.collection(getResources().getString(R.string.USUARIOS)).document(Token_SocialAuth);
-		WriteBatch batch = db.batch();
-		batch.update(Ref,getResources().getString(R.string.USUARIO_LATITUD),mLocation.getLatitude());
-		batch.update(Ref,getResources().getString(R.string.USUARIO_LONGITUD),mLocation.getLongitude());
+			DocumentReference Ref= db.collection(getResources().getString(R.string.USUARIOS)).document(Token_SocialAuth);
+			WriteBatch batch = db.batch();
+			batch.update(Ref,getResources().getString(R.string.USUARIO_LATITUD),mLocation.getLatitude());
+			batch.update(Ref,getResources().getString(R.string.USUARIO_LONGITUD),mLocation.getLongitude());
 
-		batch.commit();
+			batch.commit();
 		} catch (Exception e) {
 			utils.registra_error(e.toString(), "actualiza_ubicacion_en_Firestore de Activity_Principal");
 		}
@@ -1139,7 +1055,7 @@ public class Activity_Principal extends AppCompatActivity  {
 
 										setupNavigationDrawer(); //Para que se actualice
 										crea_ItemTouchListener();
-										utils.setProgressBar_visibility(mProgressBar, View.INVISIBLE);
+										utils.setProgressBar_visibility(binding.mProgressBar, View.INVISIBLE);
 									} catch (Exception e) {
 										utils.registra_error(e.toString(), "chequea_num_estrellas_y_premium (onComplete) de Activity_Principal");
 									}
@@ -1164,6 +1080,76 @@ public class Activity_Principal extends AppCompatActivity  {
 			editor_perfil_usuario.apply();
 		}
 		return respuesta;
+	}
+
+	private class AsyncTask_descarga_mi_Thumb extends AsyncTask<String, Void, Void> {
+		@Override
+		protected void onPreExecute() {
+		}
+
+		@Override
+		protected Void doInBackground(String... params) {
+			try {
+				String Token_socialAuth = params[0];
+				StorageReference storageRef = storage.getReferenceFromUrl(getResources().getString(R.string.my_bucket));
+
+				StorageReference imagesRef = storageRef.child(utils.get_path_thumb(Token_socialAuth, 0));
+
+				imagesRef.getBytes(getResources().getInteger(R.integer.MAX_PHOTO_LENGTH)).addOnSuccessListener(bytes -> {
+					if (getApplicationContext() != null) { //puede que ya no estemos en la activity
+						new AsyncTask_decode_mi_Thumb().execute(new Pair<>(bytes, Token_socialAuth));
+					}
+				}).addOnFailureListener(e -> {
+				});
+			} catch (Exception ignored) {
+
+			}
+
+			return null;
+		}
+
+		@Override
+		protected void onPostExecute(Void algo) {
+
+		}
+
+	}
+
+	private class AsyncTask_decode_mi_Thumb extends AsyncTask<Pair<byte[], String>, Void, Bitmap> {
+		@Override
+		protected void onPreExecute() {
+		}
+
+		@SafeVarargs
+		@Override
+		protected final Bitmap doInBackground(Pair<byte[], String>... params) {
+			byte[] bytes = params[0].first;
+			String Token_socialAuth = params[0].second;
+
+			Bitmap mBitmap = utils.decodeSampledBitmapFromBytes(bytes, getResources().getDimensionPixelSize(R.dimen.tamanyo_foto_grid_perfiles), getResources().getDimensionPixelSize(R.dimen.tamanyo_foto_grid_perfiles));
+
+			File storageDir = getExternalFilesDir(Environment.DIRECTORY_PICTURES);
+			String nombre_foto = utils.get_nombre_thumb(Token_socialAuth, 0);
+			File file = new File(storageDir, nombre_foto);
+			if (!utils.guarda_foto_en_memoria_interna(bytes, file.getPath())){
+				Toast.makeText(getApplicationContext(), getResources().getString(R.string.FRAGMENT_FOTO_ERROR_FOTO_NO_CARGADA), Toast.LENGTH_LONG).show();
+			}
+			return mBitmap;
+
+		}
+
+		@Override
+		protected void onPostExecute(Bitmap mBitmap) {
+			try {
+				if ((mBitmap != null) && (getApplicationContext() != null)) { //puede que ya no estemos en la activity
+					mImageView_PictureMain.setImageBitmap(mBitmap);
+				}
+
+			} catch (Exception e) {
+				utils.registra_error(e.toString(), "asynctask_decode_mi_thumb de Activity_Principal");
+			}
+		}
+
 	}
 
 	private class AsyncTask_Coloca_PictureMain extends AsyncTask<Void, Void, Bitmap> {
@@ -1218,7 +1204,7 @@ public class Activity_Principal extends AppCompatActivity  {
 				public boolean onFling(@NonNull MotionEvent e1, @NonNull MotionEvent e2, float velocityX, float velocityY) {
                   /*  try {
                         if ((e1 != null) && (e2 != null)) {
-                            View child = mRecyclerView.findChildViewUnder(e1.getX(), e1.getY());
+                            View child = binding.LayoutPrincipalReciclerView.findChildViewUnder(e1.getX(), e1.getY());
                             if ((child != null) && (mInterfaceClickListener != null)) {
                                 // right to left swipe
                                 if (((e1.getX() - e2.getX()) > getResources().getInteger(R.integer.SWIPE_MIN_DISTANCE)) && (Math.abs(velocityX) > getResources().getInteger(R.integer.SWIPE_THRESHOLD_VELOCITY))) {
@@ -1238,7 +1224,7 @@ public class Activity_Principal extends AppCompatActivity  {
 
 				@Override
 				public boolean onSingleTapUp(@NonNull MotionEvent e) {
-					View child = mRecyclerView.findChildViewUnder(e.getX(), e.getY());
+					View child = binding.LayoutPrincipalReciclerView.findChildViewUnder(e.getX(), e.getY());
 					if ((child != null) && (mInterfaceClickListener != null)) {
 						mInterfaceClickListener.My_onClick(child, recyclerView.getChildLayoutPosition(child));
 					}
@@ -1247,7 +1233,7 @@ public class Activity_Principal extends AppCompatActivity  {
 
 				@Override
 				public boolean onDoubleTap(MotionEvent e) {
-                    /*View child = mRecyclerView.findChildViewUnder(e.getX(), e.getY());
+                    /*View child = binding.LayoutPrincipalReciclerView.findChildViewUnder(e.getX(), e.getY());
                     if ((child != null) && (mInterfaceClickListener != null)) {
                         mInterfaceClickListener.My_onDoubleClick(child, recyclerView.getChildLayoutPosition(child));
                     }*/
@@ -1256,7 +1242,7 @@ public class Activity_Principal extends AppCompatActivity  {
 
 				@Override
 				public void onLongPress(@NonNull MotionEvent e) {
-                    /*View child = mRecyclerView.findChildViewUnder(e.getX(), e.getY());
+                    /*View child = binding.LayoutPrincipalReciclerView.findChildViewUnder(e.getX(), e.getY());
                     if ((child != null) && (mInterfaceClickListener != null)) {
                         mInterfaceClickListener.My_onLongPress(child, recyclerView.getChildLayoutPosition(child));
                     }*/

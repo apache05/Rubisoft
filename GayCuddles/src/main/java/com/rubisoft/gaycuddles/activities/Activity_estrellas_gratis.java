@@ -38,6 +38,7 @@ import com.rubisoft.gaycuddles.Classes.Drawer_Item;
 import com.rubisoft.gaycuddles.Classes.Logro;
 import com.rubisoft.gaycuddles.Interfaces.Interface_ClickListener_Menu;
 import com.rubisoft.gaycuddles.R;
+import com.rubisoft.gaycuddles.databinding.LayoutEstrellasGratisBinding;
 import com.rubisoft.gaycuddles.tools.utils;
 
 import java.io.File;
@@ -48,16 +49,11 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.AppCompatButton;
 import androidx.appcompat.widget.AppCompatImageView;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.content.ContextCompat;
-import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
-//import com.example.ruben.backend.endpointLogrosApi.EndpointLogrosApi;
-//import com.example.ruben.backend.endpointLogrosApi.model.BeanLogro;
 
 public class Activity_estrellas_gratis extends AppCompatActivity  {
 	private SharedPreferences perfil_usuario;
@@ -66,11 +62,12 @@ public class Activity_estrellas_gratis extends AppCompatActivity  {
 	//navigation drawer
 	private Toolbar toolbar;
 	private ActionBarDrawerToggle drawerToggle;
-	private DrawerLayout mDrawerLayout;
+
 	private RecyclerView recyclerViewDrawer;
 	private ImageView mImageView_PictureMain;
 
-	private LinearLayout Main_LinearLayout;
+
+	private LayoutEstrellasGratisBinding binding;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -83,7 +80,8 @@ public class Activity_estrellas_gratis extends AppCompatActivity  {
 				if (perfil_usuario.getString(getString(R.string.PERFIL_USUARIO_TOKEN_SOCIALAUTH), "").isEmpty()) {
 					salir();
 				} else {
-					setContentView(R.layout.layout_estrellas_gratis);
+					binding = LayoutEstrellasGratisBinding.inflate(getLayoutInflater());
+					setContentView(binding.getRoot());
 					setup_toolbar();
 					setupViews();
 					db = FirebaseFirestore.getInstance();
@@ -157,10 +155,10 @@ public class Activity_estrellas_gratis extends AppCompatActivity  {
 			}else {
 				FrameLayout.LayoutParams layoutParams = new FrameLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT);
 				layoutParams.setMargins(0, 0, 0, 0);
-				if (mDrawerLayout!=null){
-					mDrawerLayout.setLayoutParams(layoutParams);
+				if (binding.mDrawerLayout!=null){
+					binding.mDrawerLayout.setLayoutParams(layoutParams);
 				}else{
-					Main_LinearLayout.setLayoutParams(layoutParams);
+					binding.MainLinearLayout.setLayoutParams(layoutParams);
 				}
 			}
 		}catch (Exception e){
@@ -252,12 +250,9 @@ public class Activity_estrellas_gratis extends AppCompatActivity  {
 	private void setupViews(){
 		try {
 			Typeface typeFace_roboto_light = Typeface.createFromAsset(this.getAssets(), "fonts/Roboto-Light.ttf");
-			AppCompatButton boton_estrellas_por_anuncio = this.findViewById(R.id.Layout_estrellas_por_anuncio);
-			Main_LinearLayout = findViewById(R.id.Main_LinearLayout);
-			mDrawerLayout = findViewById(R.id.mDrawerLayout);
-			boton_estrellas_por_anuncio.setText(String.format(getResources().getString(R.string.ACTIVITY_ESTRELLAS_POR_ANUNCIO), getResources().getInteger(R.integer.LOGRO_ANUNCIO_BONIFICADO)));
-			boton_estrellas_por_anuncio.setTypeface(typeFace_roboto_light);
-			boton_estrellas_por_anuncio.setOnClickListener(v -> lanza_rewarded());
+			binding.LayoutEstrellasPorAnuncio.setText(String.format(getResources().getString(R.string.ACTIVITY_ESTRELLAS_POR_ANUNCIO), getResources().getInteger(R.integer.LOGRO_ANUNCIO_BONIFICADO)));
+			binding.LayoutEstrellasPorAnuncio.setTypeface(typeFace_roboto_light);
+			binding.LayoutEstrellasPorAnuncio.setOnClickListener(v -> lanza_rewarded());
 		}catch (Exception e){
 			utils.registra_error(e.toString(), "setupViews de estrellas_gratis");
 		}
@@ -285,15 +280,15 @@ public class Activity_estrellas_gratis extends AppCompatActivity  {
 
 	private void setupNavigationDrawer() {
 		try {
-			if (mDrawerLayout!=null) {
+			if (binding.mDrawerLayout!=null) {
 				// Setup Drawer Icon
-				drawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout, toolbar, R.string.drawer_open, R.string.drawer_close);
-				mDrawerLayout.addDrawerListener(drawerToggle);
+				drawerToggle = new ActionBarDrawerToggle(this, binding.mDrawerLayout, toolbar, R.string.drawer_open, R.string.drawer_close);
+				binding.mDrawerLayout.addDrawerListener(drawerToggle);
 				drawerToggle.syncState();
 
 				TypedValue typedValue = new TypedValue();
 				int color = typedValue.data;
-				mDrawerLayout.setStatusBarBackgroundColor(color);
+				binding.mDrawerLayout.setStatusBarBackgroundColor(color);
 			}
 			// Setup RecyclerViews inside drawer
 			setupNavigationDrawerRecyclerViews();
@@ -335,7 +330,7 @@ public class Activity_estrellas_gratis extends AppCompatActivity  {
 		recyclerViewDrawer.addOnItemTouchListener(new RecyclerTouchListener_menu(this, recyclerViewDrawer, (view, position) -> {
 			utils.gestiona_onclick_menu_principal(Activity_estrellas_gratis.this, position);
 			if (!utils.isTablet(getApplicationContext())) {
-				mDrawerLayout.closeDrawers();
+				binding.mDrawerLayout.closeDrawers();
 			}
 		}));
 	}

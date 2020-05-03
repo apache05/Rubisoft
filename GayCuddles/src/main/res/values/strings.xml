@@ -7,14 +7,12 @@
     <string name="rubisoft_twitter" translatable="false">\@Rubisoft_apps </string>
     <string name="my_bucket" translatable="false">gs://rubisoft-10e7e.appspot.com</string>
     <string name="facebook_app_id" translatable="false">845247938925779</string>
-    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyBppXYxocEZ-bwTtFid02-brP1FkII__m0</string>
     <string name="huqh_API_KEY" templateMergeStrategy="preserve" translatable="false">1188d9bf-338e-465b-af7b-57ac728eb904</string>
-    <string name="CLOUD_VISION_API_KEY" templateMergeStrategy="preserve" translatable="false">AIzaSyAltVvI2LkK_9rpZb87dnMQUqODIKWiDjw</string>
+    <string name="CLOUD_VISION_API_KEY"  translatable="false">AIzaSyDT_yme-6q9U-xuu78i9wvSixyEgLVHCfM</string>
     <string name="Admob_APPID" translatable="false">ca-app-pub-7323079119104426~8570861414</string>
     <string name="APPODEAL_APP_KEY" translatable="false">a07e34ff02a53dd38d45011f76218bbb4b7a77438f4bbc9b</string>
-
-
     <string name="NICK_FECHA_HORA" translatable="false">%1$s - %2$s - %3$s</string>
+    <string name="web_client_id" translatable="false">559888187719-klmhif8sb002qaivmcemohoqhjpg84sm.apps.googleusercontent.com</string>
 
     <!-- ****************************  UNIDADES DE MEDIDA ****************************-->
     <string name="Mi">%1$s Mi</string>
@@ -30,7 +28,7 @@
     <string name="title_activity_politica_privacidad">Privacy policy</string>
 
     <!-- ****************************  VARIOS ****************************-->
-    <string name="app_name">gay finder</string>
+    <string name="app_name">Gay Finder</string>
     <string name="no">No</string>
     <string name="si">Yes</string>
     <string name="y">and</string>

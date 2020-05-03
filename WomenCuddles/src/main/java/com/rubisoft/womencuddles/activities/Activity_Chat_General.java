@@ -23,7 +23,6 @@ import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.WindowManager;
-import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -53,7 +52,7 @@ import com.rubisoft.womencuddles.Dialogs.Dialog_Interactuar_Chat_General;
 import com.rubisoft.womencuddles.Interfaces.Interface_ClickListener_Menu;
 import com.rubisoft.womencuddles.Interfaces.Interface_ClickListener_Perfiles;
 import com.rubisoft.womencuddles.R;
-import com.rubisoft.womencuddles.RecyclersViews.RecyclerView_AutoFit;
+import com.rubisoft.womencuddles.databinding.LayoutChatGeneralBinding;
 import com.rubisoft.womencuddles.tools.utils;
 import com.squareup.picasso.Picasso;
 
@@ -76,35 +75,29 @@ import androidx.appcompat.widget.AppCompatImageView;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.content.ContextCompat;
 import androidx.core.util.Pair;
-import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import de.hdodenhof.circleimageview.CircleImageView;
 
 public class Activity_Chat_General extends AppCompatActivity {
 	private final BroadcastReceiver mBroadcastReceiver_new_message_chat_general = new MyReceiver_new_message_chat_general();
-
-	private SharedPreferences perfil_usuario;
-	private SharedPreferences chat_general;
-	private EditText texto_a_enviar;
+	private FirebaseStorage storage;
 	private String token_socialauth_usuario;
 	private String nick_usuario;
-	private LinearLayout linearlayout_conversacion;
-	private TextView textView_consejo;
-	private RecyclerView_AutoFit mRecyclerView;
 	private RecyclerView_Chat_Adapter mRecyclerViewListAdapter;
-	private FirebaseStorage storage;
-	private AppCompatImageView boton_enviar;
 	private FirebaseFirestore db;
+	private SharedPreferences perfil_usuario;
+	private SharedPreferences chat_general;
+
+	private LayoutChatGeneralBinding binding;
 
 	//navigation drawer
 	private Toolbar toolbar;
 	private ActionBarDrawerToggle drawerToggle;
-	private DrawerLayout mDrawerLayout;
+
 	private RecyclerView recyclerViewDrawer;
 	private ImageView mImageView_PictureMain;
 
-	private LinearLayout Main_LinearLayout;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -117,24 +110,25 @@ public class Activity_Chat_General extends AppCompatActivity {
 				if (perfil_usuario.getString(getString(R.string.PERFIL_USUARIO_TOKEN_SOCIALAUTH), "").isEmpty()) {
 					salir();
 				} else {
-					setContentView(R.layout.layout_chat_general);
+					binding = LayoutChatGeneralBinding.inflate(getLayoutInflater());
+					setContentView(binding.getRoot());
 					db = FirebaseFirestore.getInstance();
 					setup_toolbar();
-					setup_views();
+					//setup_views();
 					inicializa_anuncios();
 					setup_typefaces();
 
 					token_socialauth_usuario = perfil_usuario.getString(getResources().getString(R.string.PERFIL_USUARIO_TOKEN_SOCIALAUTH), "");
 					nick_usuario = perfil_usuario.getString(getString(R.string.PERFIL_USUARIO_NICK), "");
-					textView_consejo.setText(getString(R.string.DIALOGO_CONSEJO_MENSAJE_CHAT_GENERAL));
+					binding.LayoutChatGeneralTextViewAyuda.setText(getString(R.string.DIALOGO_CONSEJO_MENSAJE_CHAT_GENERAL));
 					storage = FirebaseStorage.getInstance();
 
 					Cargar_chat();//cargamos toda la conversación previa hasta el momento
 					get_usuarios_online(perfil_usuario.getLong(getString(R.string.PERFIL_USUARIO_ORIENTACION), 0L),perfil_usuario.getString(getString(R.string.PERFIL_USUARIO_PAIS), ""));
 
 					Drawable icono_enviar = new IconicsDrawable(getApplicationContext()).icon(GoogleMaterial.Icon.gmd_send).color(ContextCompat.getColor(getApplicationContext(), R.color.accent)).sizeDp(getResources().getInteger(R.integer.Tam_Normal_icons));
-					boton_enviar.setImageDrawable(icono_enviar);
-					boton_enviar.setOnClickListener(v -> procesa_enviar_mensaje());
+					binding.LayoutChatGeneralImageViewEnviarMensaje.setImageDrawable(icono_enviar);
+					binding.LayoutChatGeneralImageViewEnviarMensaje.setOnClickListener(v -> procesa_enviar_mensaje());
 					//Oculta el softkeyboard
 					getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
 				}
@@ -302,11 +296,11 @@ public class Activity_Chat_General extends AppCompatActivity {
 			LinearLayout_horizontal.addView(mAppCompatImageView);
 			LinearLayout_horizontal.addView(LinearLayout_vertical);
 
-			linearlayout_conversacion.addView(LinearLayout_horizontal);
-			linearlayout_conversacion.invalidate();
+			binding.LayoutChatGeneralLinearLayoutConversacion.addView(LinearLayout_horizontal);
+			binding.LayoutChatGeneralLinearLayoutConversacion.invalidate();
 			//esto es para que se vea la parte final del scrollview
-			ScrollView scrollview = findViewById(R.id.Layout_chat_general_ScrollView);
-			scrollview.postDelayed(new Activity_Chat_General.MyRunnable(scrollview), 100);
+			//ScrollView scrollview = findViewById(R.id.Layout_chat_general_ScrollView);
+			binding.LayoutChatGeneralScrollView.postDelayed(new Activity_Chat_General.MyRunnable(binding.LayoutChatGeneralScrollView), 100);
 		} catch (Exception e) {
 			utils.registra_error(e.toString(), "pinta_conversacion de chat_general");
 		}
@@ -320,16 +314,16 @@ public class Activity_Chat_General extends AppCompatActivity {
 
 	private void procesa_enviar_mensaje(){
 		try {
-			String texto = texto_a_enviar.getText().toString();
+			String texto = binding.LayoutChatGeneralEditTextTextoAEnviar.getText().toString();
 			if (!texto.isEmpty() && token_socialauth_usuario!=null) {
 				Long hora = Calendar.getInstance().getTimeInMillis();
 
-				pinta_conversacion(token_socialauth_usuario, texto_a_enviar.getText().toString(), nick_usuario, hora);
-				utils.acomodar_conversacion_en_sharedpreferences(getApplicationContext(), token_socialauth_usuario, texto_a_enviar.getText().toString(), hora, nick_usuario);
+				pinta_conversacion(token_socialauth_usuario, binding.LayoutChatGeneralEditTextTextoAEnviar.getText().toString(), nick_usuario, hora);
+				utils.acomodar_conversacion_en_sharedpreferences(getApplicationContext(), token_socialauth_usuario, binding.LayoutChatGeneralEditTextTextoAEnviar.getText().toString(), hora, nick_usuario);
 				String grupo_al_que_pertenece= utils.grupo_al_que_pertenece(perfil_usuario.getLong(getResources().getString(R.string.PERFIL_USUARIO_ORIENTACION),0L),perfil_usuario.getString(getResources().getString(R.string.PERFIL_USUARIO_PAIS),""));
-				difunde_mensaje(texto_a_enviar.getText().toString(),grupo_al_que_pertenece);
+				difunde_mensaje(binding.LayoutChatGeneralEditTextTextoAEnviar.getText().toString(),grupo_al_que_pertenece);
 
-				texto_a_enviar.getText().clear();
+				binding.LayoutChatGeneralEditTextTextoAEnviar.getText().clear();
 			}
 		} catch (Exception e) {
 			utils.registra_error(e.toString(), "procesa_enviar_mensaje de chat_general");
@@ -340,18 +334,8 @@ public class Activity_Chat_General extends AppCompatActivity {
 		Typeface typeFace_roboto_Light = Typeface.createFromAsset(getAssets(), "fonts/Roboto-Light.ttf");
 		Typeface typeFace_roboto_Bold = Typeface.createFromAsset(getAssets(), "fonts/Roboto-Bold.ttf");
 
-		texto_a_enviar.setTypeface(typeFace_roboto_Light);
-		textView_consejo.setTypeface(typeFace_roboto_Bold);
-	}
-
-	private void setup_views(){
-		linearlayout_conversacion = findViewById(R.id.Layout_chat_general_LinearLayout_conversacion);
-		texto_a_enviar = findViewById(R.id.Layout_chat_general_EditText_texto_a_enviar);
-		 textView_consejo = findViewById(R.id.Layout_chat_general_TextView_ayuda);
-		 boton_enviar = findViewById(R.id.Layout_chat_general_ImageView_enviar_mensaje);
-		Main_LinearLayout = findViewById(R.id.Main_LinearLayout);
-		mDrawerLayout = findViewById(R.id.mDrawerLayout);
-
+		binding.LayoutChatGeneralEditTextTextoAEnviar.setTypeface(typeFace_roboto_Light);
+		binding.LayoutChatGeneralTextViewAyuda.setTypeface(typeFace_roboto_Bold);
 	}
 
 	private void salir() {
@@ -373,10 +357,10 @@ public class Activity_Chat_General extends AppCompatActivity {
 			}else {
 				FrameLayout.LayoutParams layoutParams = new FrameLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT);
 				layoutParams.setMargins(0, 0, 0, 0);
-				if (mDrawerLayout!=null){
-					mDrawerLayout.setLayoutParams(layoutParams);
+				if (binding.mDrawerLayout!=null){
+					binding.mDrawerLayout.setLayoutParams(layoutParams);
 				}else{
-					Main_LinearLayout.setLayoutParams(layoutParams);
+					binding.MainLinearLayout.setLayoutParams(layoutParams);
 				}
 			}
 		}catch (Exception e){
@@ -482,16 +466,16 @@ public class Activity_Chat_General extends AppCompatActivity {
 
 	private void setupNavigationDrawer() {
 		try {
-			if (mDrawerLayout!=null) {
+			if (binding.mDrawerLayout!=null) {
 
 				// Setup Drawer Icon
-				drawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout, toolbar, R.string.drawer_open, R.string.drawer_close);
-				mDrawerLayout.addDrawerListener(drawerToggle);
+				drawerToggle = new ActionBarDrawerToggle(this, binding.mDrawerLayout, toolbar, R.string.drawer_open, R.string.drawer_close);
+				binding.mDrawerLayout.addDrawerListener(drawerToggle);
 				drawerToggle.syncState();
 
 				TypedValue typedValue = new TypedValue();
 				int color = typedValue.data;
-				mDrawerLayout.setStatusBarBackgroundColor(color);
+				binding.mDrawerLayout.setStatusBarBackgroundColor(color);
 			}
 			// Setup RecyclerViews inside drawer
 			setupNavigationDrawerRecyclerViews();
@@ -566,7 +550,7 @@ public class Activity_Chat_General extends AppCompatActivity {
 		recyclerViewDrawer.addOnItemTouchListener(new Activity_Chat_General.RecyclerTouchListener_menu(this, recyclerViewDrawer, (view, position) -> {
 			utils.gestiona_onclick_menu_principal(Activity_Chat_General.this, position);
 			if (!utils.isTablet(getApplicationContext())) {
-				mDrawerLayout.closeDrawers();
+				binding.mDrawerLayout.closeDrawers();
 			}
 		}));
 	}
@@ -653,9 +637,7 @@ public class Activity_Chat_General extends AppCompatActivity {
 			storageRef.getDownloadUrl().addOnSuccessListener(uri -> {
 				try {
 					un_usuario.setFoto(uri.toString());
-
 					mRecyclerViewListAdapter.replaceItem(i, un_usuario);
-
 				} catch (Exception e) {
 					utils.registra_error(e.toString(), "descarga_URL (onSuccess) de chat_general");
 				}
@@ -665,6 +647,8 @@ public class Activity_Chat_General extends AppCompatActivity {
 			try {
 				Thread.sleep(500);
 			}catch (Exception ignored){}
+		} catch (IllegalStateException ignored) {
+			// There's no way to avoid getting this if saveInstanceState has already been called.
 		}  catch (Exception e) {
 			utils.registra_error(e.toString(), "descarga_URL de chat_general");
 		}
@@ -681,14 +665,14 @@ public class Activity_Chat_General extends AppCompatActivity {
 			mDialog_Interactuar.setArguments(args);
 			mDialog_Interactuar.show(getSupportFragmentManager(),"d");
 		} catch (Exception e) {
-			utils.registra_error(e.toString(), "lanza_dialogo");
+			utils.registra_error(e.toString(), "lanza_dialogo de Activity_Chat_General");
 		}
 	}
 
 	private void crea_ItemTouchListener(final List<String> usuarios_online) {
 		//Aquí hacemos las acciones pertinentes según el gesto que haya hecho el Usuario_para_listar
 		//y que lo ha detectado y codificado primero el  RecyclerTouchListener
-		mRecyclerView.addOnItemTouchListener(new Activity_Chat_General.RecyclerTouchListener_perfiles(this.getApplicationContext(), mRecyclerView, (view, position) -> {
+		binding.LayoutChatGeneralReciclerView.addOnItemTouchListener(new Activity_Chat_General.RecyclerTouchListener_perfiles(this.getApplicationContext(), binding.LayoutChatGeneralReciclerView, (view, position) -> {
 			try {
 				get_perfil(usuarios_online.get(position));
 				//new Activity_Chat_General.AsyncTask_get_perfil().execute(Tokens_SocialAuth_OnLine.get(position));
@@ -715,9 +699,9 @@ public class Activity_Chat_General extends AppCompatActivity {
 
 				@Override
 				public boolean onSingleTapUp(@NonNull MotionEvent e) {
-					View child = mRecyclerView.findChildViewUnder(e.getX(), e.getY());
+					View child = binding.LayoutChatGeneralReciclerView.findChildViewUnder(e.getX(), e.getY());
 					if ((child != null) && (mInterfaceClickListener != null)) {
-						mInterfaceClickListener.My_onClick(child, recyclerView.getChildLayoutPosition(child));
+						mInterfaceClickListener.My_onClick(child, binding.LayoutChatGeneralReciclerView.getChildLayoutPosition(child));
 					}
 					return true;
 				}
@@ -786,10 +770,9 @@ public class Activity_Chat_General extends AppCompatActivity {
 
 	private void procesa_usuarios_online(List<String> usuarios_online,List<String> nicks_online){
 		mRecyclerViewListAdapter = new RecyclerView_Chat_Adapter(getApplicationContext());
-		mRecyclerView = findViewById(R.id.Layout_chat_general_ReciclerView);
 
-		mRecyclerView.setAdapter(mRecyclerViewListAdapter);
-		mRecyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
+		binding.LayoutChatGeneralReciclerView.setAdapter(mRecyclerViewListAdapter);
+		binding.LayoutChatGeneralReciclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
 
 		int posicion_de_mi_nick=usuarios_online.indexOf(token_socialauth_usuario);
 		if (usuarios_online.remove(token_socialauth_usuario)) {
@@ -809,7 +792,7 @@ public class Activity_Chat_General extends AppCompatActivity {
 
 		}
 		mRecyclerViewListAdapter.notifyDataSetChanged();
-		mRecyclerView.invalidate();
+		binding.LayoutChatGeneralReciclerView.invalidate();
 
 		crea_ItemTouchListener(usuarios_online);
 	}

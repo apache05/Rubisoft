@@ -1,12 +1,12 @@
-package com.rubisoft.bisexradar.Adapters;
+package com.rubisoft.bisexcuddles.Adapters;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
-import com.rubisoft.bisexradar.Classes.Mi_foto;
-import com.rubisoft.bisexradar.R;
+import com.rubisoft.bisexcuddles.Classes.Mi_foto;
+import com.rubisoft.bisexcuddles.R;
 
 import java.util.ArrayList;
 

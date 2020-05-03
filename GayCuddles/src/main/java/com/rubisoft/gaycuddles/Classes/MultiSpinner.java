@@ -96,9 +96,10 @@ public class MultiSpinner extends androidx.appcompat.widget.AppCompatTextView im
     public boolean hay_alguno_seleccionado() {
         boolean resultado = false;
         for (boolean aMSelected : mSelected) {
-            if (aMSelected) {
-                resultado = true;
-            }
+			if (aMSelected) {
+				resultado = true;
+				break;
+			}
         }
         return resultado;
     }

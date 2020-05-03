@@ -1,9 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: com.appodeal.ads.sdk:core:2.7.0@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/2e94894affd5b93dfc760ebd08e435af/jetified-core-2.7.0/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/2e94894affd5b93dfc760ebd08e435af/jetified-core-2.7.0/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/2e94894affd5b93dfc760ebd08e435af/jetified-core-2.7.0/jars/libs/r-classes.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/6145b2fb4b881e3e0279c2e4f2de32ab/jetified-core-2.7.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/6145b2fb4b881e3e0279c2e4f2de32ab/jetified-core-2.7.0/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/6145b2fb4b881e3e0279c2e4f2de32ab/jetified-core-2.7.0/jars/libs/r-classes.jar!/" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.appodeal.ads.sdk/core/2.7.0/4c6fae390cea14088d817544a7b5477ff6b0ffa6/core-2.7.0-javadoc.jar!/" />

@@ -10,10 +10,10 @@
     <string name="facebook_app_id" translatable="false">845247938925779</string>
     <string name="huqh_API_KEY"  translatable="false">1188d9bf-338e-465b-af7b-57ac728eb904</string>
     <string name="CLOUD_VISION_API_KEY"  translatable="false">AIzaSyDT_yme-6q9U-xuu78i9wvSixyEgLVHCfM</string>
-
     <string name="Admob_APPID" translatable="false">ca-app-pub-7323079119104426~3847721970</string>
     <string name="APPODEAL_APP_KEY" translatable="false">842319a738e47345404ebd61b50b5a0d5da0a884b08a4d3b</string>
     <string name="NICK_FECHA_HORA" translatable="false">%1$s - %2$s - %3$s</string>
+    <string name="web_client_id" translatable="false">559888187719-klmhif8sb002qaivmcemohoqhjpg84sm.apps.googleusercontent.com</string>
 
     <!-- ****************************  UNIDADES DE MEDIDA ****************************-->
     <string name="Mi">%1$s Mi</string>

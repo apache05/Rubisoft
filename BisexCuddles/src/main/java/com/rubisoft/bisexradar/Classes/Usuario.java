@@ -1,4 +1,4 @@
-package com.rubisoft.bisexradar.Classes;
+package com.rubisoft.bisexcuddles.Classes;
 
 import java.util.Calendar;
 import java.util.Map;

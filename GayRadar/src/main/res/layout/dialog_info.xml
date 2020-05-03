@@ -10,7 +10,7 @@
     android:orientation="vertical">
 
     <androidx.cardview.widget.CardView
-        android:id="@id/Layout_un_perfil_LinearLayout_info"
+        android:id="@id/Dialog_info_CardView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="4dp"
@@ -23,7 +23,7 @@
             android:layout_height="wrap_content">
 
             <TextView
-                android:id="@id/Cardview_list_persona_TextView_nombre"
+                android:id="@id/Dialog_Info_TextView_nombre"
                 android:layout_width="wrap_content"
                 android:layout_height="18dp"
                 android:layout_marginStart="20dp"
@@ -33,13 +33,13 @@
                 android:textIsSelectable="true"
                 android:textSize="@dimen/tamanyo_letra_m"
                 android:textStyle="bold"
-                app:layout_constraintEnd_toStartOf="@+id/Cardview_list_persona_TextView_edad"
+                app:layout_constraintEnd_toStartOf="@id/Dialog_Info_TextView_edad"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@id/Cardview_list_persona_TextView_edad"
+                android:id="@id/Dialog_Info_TextView_edad"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="20dp"
@@ -49,82 +49,82 @@
                 android:textSize="@dimen/tamanyo_letra_s_plus"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toEndOf="@+id/Cardview_list_persona_TextView_nombre"
-                app:layout_constraintTop_toTopOf="@+id/Cardview_list_persona_TextView_nombre" />
+                app:layout_constraintStart_toEndOf="@id/Dialog_Info_TextView_nombre"
+                app:layout_constraintTop_toTopOf="@id/Dialog_Info_TextView_nombre" />
 
             <TextView
-                android:id="@id/Cardview_list_persona_TextView_altura"
+                android:id="@id/Dialog_Info_TextView_altura"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:textColor="@color/gris"
                 android:textIsSelectable="true"
                 android:textSize="@dimen/tamanyo_letra_s_plus"
-                app:layout_constraintStart_toStartOf="@+id/Cardview_list_persona_TextView_nombre"
-                app:layout_constraintTop_toBottomOf="@+id/Cardview_list_persona_TextView_nombre" />
+                app:layout_constraintStart_toStartOf="@id/Dialog_Info_TextView_nombre"
+                app:layout_constraintTop_toBottomOf="@id/Dialog_Info_TextView_nombre" />
 
             <TextView
-                android:id="@id/Cardview_list_persona_TextView_peso"
+                android:id="@id/Dialog_Info_TextView_peso"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/gris"
                 android:textIsSelectable="true"
                 android:textSize="@dimen/tamanyo_letra_s_plus"
-                app:layout_constraintEnd_toEndOf="@+id/Cardview_list_persona_TextView_edad"
-                app:layout_constraintTop_toTopOf="@+id/Cardview_list_persona_TextView_altura" />
+                app:layout_constraintEnd_toEndOf="@id/Dialog_Info_TextView_edad"
+                app:layout_constraintTop_toTopOf="@id/Dialog_Info_TextView_altura" />
 
             <TextView
-                android:id="@id/Cardview_list_persona_TextView_raza"
+                android:id="@id/Dialog_Info_TextView_raza"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:textColor="@color/gris"
                 android:textIsSelectable="true"
                 android:textSize="@dimen/tamanyo_letra_s_plus"
-                app:layout_constraintStart_toStartOf="@+id/Cardview_list_persona_TextView_altura"
-                app:layout_constraintTop_toBottomOf="@+id/Cardview_list_persona_TextView_altura" />
+                app:layout_constraintStart_toStartOf="@id/Dialog_Info_TextView_altura"
+                app:layout_constraintTop_toBottomOf="@id/Dialog_Info_TextView_altura" />
 
             <TextView
-                android:id="@id/Cardview_list_persona_TextView_distancia"
+                android:id="@id/Dialog_Info_TextView_distancia"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/gris"
                 android:textIsSelectable="true"
                 android:textSize="@dimen/tamanyo_letra_s_plus"
-                app:layout_constraintEnd_toEndOf="@+id/Cardview_list_persona_TextView_peso"
-                app:layout_constraintTop_toTopOf="@+id/Cardview_list_persona_TextView_raza" />
+                app:layout_constraintEnd_toEndOf="@id/Dialog_Info_TextView_peso"
+                app:layout_constraintTop_toTopOf="@id/Dialog_Info_TextView_raza" />
 
             <androidx.appcompat.widget.AppCompatImageView
-                android:id="@id/Cardview_list_persona_ImageView_sexualidad"
+                android:id="@id/Dialog_Info_ImageView_sexualidad"
                 android:layout_width="19dp"
                 android:layout_height="19dp"
 
                 android:layout_marginTop="20dp"
                 android:contentDescription="@string/Content_description_boton"
                 android:tint="@color/accent"
-                app:layout_constraintStart_toStartOf="@+id/Cardview_list_persona_TextView_raza"
-                app:layout_constraintTop_toBottomOf="@+id/Cardview_list_persona_TextView_raza" />
+                app:layout_constraintStart_toStartOf="@id/Dialog_Info_TextView_raza"
+                app:layout_constraintTop_toBottomOf="@id/Dialog_Info_TextView_raza" />
 
             <androidx.appcompat.widget.AppCompatTextView
-                android:id="@id/Cardview_list_persona_TextView_estrellas"
+                android:id="@id/Dialog_Info_TextView_estrellas"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/gris"
                 android:textSize="@dimen/tamanyo_letra_m"
-                app:layout_constraintEnd_toStartOf="@id/Cardview_list_persona_ImageView_estrella"
-                app:layout_constraintTop_toTopOf="@+id/Cardview_list_persona_ImageView_estrella" />
+                app:layout_constraintEnd_toStartOf="@id/Dialog_Info_ImageView_estrella"
+                app:layout_constraintTop_toTopOf="@id/Dialog_Info_ImageView_estrella" />
 
             <androidx.appcompat.widget.AppCompatImageView
-                android:id="@id/Cardview_list_persona_ImageView_estrella"
+                android:id="@id/Dialog_Info_ImageView_estrella"
                 android:layout_width="19dp"
                 android:layout_height="19dp"
 
                 android:contentDescription="@string/Content_description_boton"
-                app:layout_constraintEnd_toEndOf="@+id/Cardview_list_persona_TextView_distancia"
-                app:layout_constraintTop_toTopOf="@+id/Cardview_list_persona_ImageView_sexualidad" />
+                app:layout_constraintEnd_toEndOf="@id/Dialog_Info_TextView_distancia"
+                app:layout_constraintTop_toTopOf="@id/Dialog_Info_ImageView_sexualidad" />
 
             <TextView
-                android:id="@id/Cardview_list_persona_TextView_quiero_dejar_claro"
+                android:id="@id/Dialog_Info_TextView_quiero_dejar_claro"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
 
@@ -140,7 +140,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/Cardview_list_persona_ImageView_sexualidad" />
+                app:layout_constraintTop_toBottomOf="@id/Dialog_Info_ImageView_sexualidad" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
