@@ -760,7 +760,7 @@ public class Activity_Registro_Persona extends AppCompatActivity  {
 			DocumentReference ref_usuarios= db.collection(getResources().getString(R.string.STATS_GLOBAL)).document(semana_del_anyo);
 
 			WriteBatch batch2 = db.batch();
-			batch2.update(ref_usuarios, "total_usuarios", FieldValue.increment(-1));
+			batch2.update(ref_usuarios, "total_usuarios", FieldValue.increment(1));
 			batch2.update(ref_usuarios, utils.decodifica_sexo(un_usuario.getSexo())+"_"+utils.decodifica_orientacion(un_usuario.getOrientacion()), FieldValue.increment(1));
 			batch2.update(ref_usuarios, utils.decodifica_app(utils.get_app_code(getApplicationContext().getPackageName())), FieldValue.increment(1));
 			batch2.commit();
