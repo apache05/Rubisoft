@@ -125,7 +125,7 @@
                              android:padding="5dp">
                          </LinearLayout>
                      </ScrollView>-->
-                    <com.rubisoft.bisexradar.RecyclersViews.RecyclerView_AutoFit
+                    <com.rubisoft.bisexcuddles.RecyclersViews.RecyclerView_AutoFit
                         android:id="@id/Layout_chat_general_ReciclerView"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"

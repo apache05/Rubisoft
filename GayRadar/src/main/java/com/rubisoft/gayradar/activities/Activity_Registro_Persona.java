@@ -27,6 +27,7 @@ import com.explorestack.consent.ConsentManager;
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationServices;
 import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FieldValue;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.WriteBatch;
@@ -35,6 +36,7 @@ import com.google.firebase.messaging.FirebaseMessaging;
 import com.mikepenz.google_material_typeface_library.GoogleMaterial.Icon;
 import com.mikepenz.iconics.IconicsDrawable;
 import com.rubisoft.gayradar.Classes.Logro;
+import com.rubisoft.gayradar.Classes.STATS_GLOBAL;
 import com.rubisoft.gayradar.Classes.STATS_PAISES;
 import com.rubisoft.gayradar.Classes.Usuario;
 import com.rubisoft.gayradar.R;
@@ -757,13 +759,32 @@ public class Activity_Registro_Persona extends AppCompatActivity  {
 			batch_STATS_GLOBAL_POR_PERFILES.update(ref, utils.decodifica_sexo(un_usuario.getSexo()) + "_" + utils.decodifica_orientacion(un_usuario.getOrientacion()), FieldValue.increment(1));
 			batch_STATS_GLOBAL_POR_PERFILES.commit();
 
-			DocumentReference ref_usuarios= db.collection(getResources().getString(R.string.STATS_GLOBAL)).document(semana_del_anyo);
 
-			WriteBatch batch2 = db.batch();
-			batch2.update(ref_usuarios, "total_usuarios", FieldValue.increment(1));
-			batch2.update(ref_usuarios, utils.decodifica_sexo(un_usuario.getSexo())+"_"+utils.decodifica_orientacion(un_usuario.getOrientacion()), FieldValue.increment(1));
-			batch2.update(ref_usuarios, utils.decodifica_app(utils.get_app_code(getApplicationContext().getPackageName())), FieldValue.increment(1));
-			batch2.commit();
+			db.collection(getResources().getString(R.string.STATS_GLOBAL)).document(semana_del_anyo).get()
+					.addOnCompleteListener(task -> {
+						if (task.isSuccessful()) {
+							DocumentSnapshot document = task.getResult();
+							if (document.exists()) {
+								DocumentReference ref_usuarios= db.collection(getResources().getString(R.string.STATS_GLOBAL)).document(semana_del_anyo);
+
+								WriteBatch batch2 = db.batch();
+								batch2.update(ref_usuarios, "total_usuarios", FieldValue.increment(1));
+								batch2.update(ref_usuarios, utils.decodifica_sexo(un_usuario.getSexo())+"_"+utils.decodifica_orientacion(un_usuario.getOrientacion()), FieldValue.increment(1));
+								batch2.update(ref_usuarios, utils.decodifica_app(utils.get_app_code(getApplicationContext().getPackageName())), FieldValue.increment(1));
+								batch2.commit();
+							} else {
+								STATS_GLOBAL nueva_semana_de_stats= new STATS_GLOBAL(0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,1L);
+								db.collection(getResources().getString(R.string.STATS_GLOBAL)).document(semana_del_anyo).set(nueva_semana_de_stats).addOnSuccessListener(taskSnapshot -> {
+									DocumentReference ref_usuarios= db.collection(getResources().getString(R.string.STATS_GLOBAL)).document(semana_del_anyo);
+
+									WriteBatch batch2 = db.batch();
+									batch2.update(ref_usuarios, utils.decodifica_sexo(un_usuario.getSexo())+"_"+utils.decodifica_orientacion(un_usuario.getOrientacion()), FieldValue.increment(1));
+									batch2.update(ref_usuarios, utils.decodifica_app(utils.get_app_code(getApplicationContext().getPackageName())), FieldValue.increment(1));
+									batch2.commit();
+								});
+							}
+						}
+					});
 
 			db.collection(getResources().getString(R.string.USUARIOS)).document(Token_socialauth).set(un_usuario);
 			db.collection(getResources().getString(R.string.USUARIOS)).document(Token_socialauth).collection(getResources().getString(R.string.LOGROS)).add(un_logro);

@@ -113,7 +113,7 @@
                     android:padding="20dp"
                     app:cardCornerRadius="@dimen/corner_radius"
                     app:cardElevation="@dimen/elevation_perfiles">
-                    <com.rubisoft.bisexradar.RecyclersViews.RecyclerView_AutoFit
+                    <com.rubisoft.bisexcuddles.RecyclersViews.RecyclerView_AutoFit
                         android:id="@id/Layout_chat_general_ReciclerView"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"

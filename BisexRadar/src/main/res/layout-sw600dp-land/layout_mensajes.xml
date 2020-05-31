@@ -42,7 +42,7 @@
                     android:layout_margin="10dp"
                     >
 
-                    <com.rubisoft.bisexradar.RecyclersViews.RecyclerView_AutoFit
+                    <com.rubisoft.bisexcuddles.RecyclersViews.RecyclerView_AutoFit
                         android:id="@id/Layout_centro_mensajes_ReciclerView"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"

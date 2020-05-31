@@ -1227,7 +1227,7 @@ public class Activity_Chat_Individual extends AppCompatActivity {
 						if (task.isSuccessful()) {
 							DocumentSnapshot document = task.getResult();
 							if (document.exists()) {
-								DocumentReference Ref= task.getResult().getDocumentReference(semana_del_anyo);
+								DocumentReference Ref= db.collection(getResources().getString(R.string.STATS_RELACIONES)).document(semana_del_anyo);
 								WriteBatch batch = db.batch();
 								batch.update(Ref,utils.decodifica_app(utils.get_app_code(getApplicationContext().getPackageName())), FieldValue.increment(1));
 								batch.update(Ref,"total", FieldValue.increment(1));
