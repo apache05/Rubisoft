@@ -1,4 +1,4 @@
-package com.rubisoft.bisexcuddles.activities;
+package com.rubisoft.bisexradar.activities;
 
 import android.content.Context;
 import android.content.Intent;
@@ -33,17 +33,17 @@ import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.mikepenz.google_material_typeface_library.GoogleMaterial;
 import com.mikepenz.iconics.IconicsDrawable;
-import com.rubisoft.bisexcuddles.Adapters.Drawer_Adapter;
-import com.rubisoft.bisexcuddles.Adapters.RecyclerView_Messages_Adapter;
-import com.rubisoft.bisexcuddles.Classes.Drawer_Item;
-import com.rubisoft.bisexcuddles.Classes.NpaGridLayoutManager;
-import com.rubisoft.bisexcuddles.Classes.Relacion_para_listar;
-import com.rubisoft.bisexcuddles.Dialogs.Dialog_Interactuar_Mensajes;
-import com.rubisoft.bisexcuddles.Interfaces.Interface_ClickListener_Menu;
-import com.rubisoft.bisexcuddles.Interfaces.Interface_ClickListener_Perfiles;
-import com.rubisoft.bisexcuddles.R;
-import com.rubisoft.bisexcuddles.databinding.LayoutMensajesBinding;
-import com.rubisoft.bisexcuddles.tools.utils;
+import com.rubisoft.bisexradar.Adapters.Drawer_Adapter;
+import com.rubisoft.bisexradar.Adapters.RecyclerView_Messages_Adapter;
+import com.rubisoft.bisexradar.Classes.Drawer_Item;
+import com.rubisoft.bisexradar.Classes.NpaGridLayoutManager;
+import com.rubisoft.bisexradar.Classes.Relacion_para_listar;
+import com.rubisoft.bisexradar.Dialogs.Dialog_Interactuar_Mensajes;
+import com.rubisoft.bisexradar.Interfaces.Interface_ClickListener_Menu;
+import com.rubisoft.bisexradar.Interfaces.Interface_ClickListener_Perfiles;
+import com.rubisoft.bisexradar.R;
+import com.rubisoft.bisexradar.databinding.LayoutMensajesBinding;
+import com.rubisoft.bisexradar.tools.utils;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -169,25 +169,27 @@ public class Activity_Mensajes extends AppCompatActivity {
 		finish();
 	}
 
-
 	private void inicializa_anuncios(){
 		try{
+			FrameLayout.LayoutParams layoutParams = new FrameLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT);
+
 			if (!perfil_usuario.getBoolean(getString(R.string.PERFIL_USUARIO_ES_PREMIUM), false)) {
 				Consent consent = ConsentManager.getInstance(this).getConsent();
 				Appodeal.setTesting(false);
 				Appodeal.initialize(this, getResources().getString(R.string.APPODEAL_APP_KEY), Appodeal.BANNER, consent);
 				setup_banner();
+				int px = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 50, getResources().getDisplayMetrics());
+				layoutParams.setMargins(0, px, 0, 0);
 			}else {
-				FrameLayout.LayoutParams layoutParams = new FrameLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT);
 				layoutParams.setMargins(0, 0, 0, 0);
-				if (binding.mDrawerLayout!=null){
-					binding.mDrawerLayout.setLayoutParams(layoutParams);
-				}else{
-					binding.MainLinearLayout.setLayoutParams(layoutParams);
-				}
+			}
+			if (binding.mDrawerLayout!=null){
+				binding.mDrawerLayout.setLayoutParams(layoutParams);
+			}else{
+				binding.MainLinearLayout.setLayoutParams(layoutParams);
 			}
 		}catch (Exception e){
-			utils.registra_error(e.toString(), "inicializa_anuncios de Activity_Principal");
+			utils.registra_error(e.toString(), "inicializa_anuncios de Activity_Mensajes");
 		}
 	}
 

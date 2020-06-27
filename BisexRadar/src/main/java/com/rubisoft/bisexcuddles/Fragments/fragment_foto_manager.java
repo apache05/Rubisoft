@@ -1,4 +1,4 @@
-package com.rubisoft.bisexcuddles.Fragments;
+package com.rubisoft.bisexradar.Fragments;
 
 import android.Manifest;
 import android.annotation.TargetApi;
@@ -48,15 +48,15 @@ import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.mikepenz.google_material_typeface_library.GoogleMaterial;
 import com.mikepenz.iconics.IconicsDrawable;
-import com.rubisoft.bisexcuddles.Adapters.Image_Adapter;
-import com.rubisoft.bisexcuddles.BuildConfig;
-import com.rubisoft.bisexcuddles.Classes.Mi_foto;
-import com.rubisoft.bisexcuddles.Classes.NpaGridLayoutManager;
-import com.rubisoft.bisexcuddles.Interfaces.Interface_ClickListener_Menu;
-import com.rubisoft.bisexcuddles.R;
-import com.rubisoft.bisexcuddles.activities.Activity_Mi_Perfil;
-import com.rubisoft.bisexcuddles.databinding.FragmentFotoManagerBinding;
-import com.rubisoft.bisexcuddles.tools.utils;
+import com.rubisoft.bisexradar.Adapters.Image_Adapter;
+import com.rubisoft.bisexradar.BuildConfig;
+import com.rubisoft.bisexradar.Classes.Mi_foto;
+import com.rubisoft.bisexradar.Classes.NpaGridLayoutManager;
+import com.rubisoft.bisexradar.Interfaces.Interface_ClickListener_Menu;
+import com.rubisoft.bisexradar.R;
+import com.rubisoft.bisexradar.activities.Activity_Mi_Perfil;
+import com.rubisoft.bisexradar.databinding.FragmentFotoManagerBinding;
+import com.rubisoft.bisexradar.tools.utils;
 import com.squareup.picasso.NetworkPolicy;
 import com.squareup.picasso.Picasso;
 import com.squareup.picasso.Target;
@@ -697,10 +697,11 @@ public class fragment_foto_manager extends Fragment{
 						resultado=false;
 						break;
 				}
-			}catch (SocketTimeoutException | UnknownHostException | SSLException | ConnectException e ) {
+			}catch (SocketTimeoutException | UnknownHostException | SSLException | ConnectException  e ) {
 				Toast.makeText(getContext(), getResources().getString(R.string.FRAGMENT_FOTO_ERROR_FOTO_NO_CARGADA), Toast.LENGTH_LONG).show();
+			}catch (IllegalStateException ignored){
 			}catch (Exception e) {
-				utils.registra_error(e.toString(), "SafeDetectionTask (onPostExecute) en fragment_foto_manager");
+				utils.registra_error(e.toString(), "SafeDetectionTask (doInBackground) en fragment_foto_manager");
 			}
 			return resultado;
 		}

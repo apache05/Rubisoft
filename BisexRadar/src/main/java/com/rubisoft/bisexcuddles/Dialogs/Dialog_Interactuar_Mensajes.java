@@ -1,4 +1,4 @@
-package com.rubisoft.bisexcuddles.Dialogs;
+package com.rubisoft.bisexradar.Dialogs;
 
 import android.content.Context;
 import android.content.Intent;
@@ -18,13 +18,13 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.mikepenz.google_material_typeface_library.GoogleMaterial.Icon;
 import com.mikepenz.iconics.IconicsDrawable;
-import com.rubisoft.bisexcuddles.Classes.Denuncia;
-import com.rubisoft.bisexcuddles.R;
-import com.rubisoft.bisexcuddles.activities.Activity_Chat_Individual;
-import com.rubisoft.bisexcuddles.activities.Activity_Mensajes;
-import com.rubisoft.bisexcuddles.activities.Activity_Un_Perfil;
-import com.rubisoft.bisexcuddles.databinding.DialogoInteractuarMensajesBinding;
-import com.rubisoft.bisexcuddles.tools.utils;
+import com.rubisoft.bisexradar.Classes.Denuncia;
+import com.rubisoft.bisexradar.R;
+import com.rubisoft.bisexradar.activities.Activity_Chat_Individual;
+import com.rubisoft.bisexradar.activities.Activity_Mensajes;
+import com.rubisoft.bisexradar.activities.Activity_Un_Perfil;
+import com.rubisoft.bisexradar.databinding.DialogoInteractuarMensajesBinding;
+import com.rubisoft.bisexradar.tools.utils;
 
 import androidx.annotation.NonNull;
 import androidx.core.content.ContextCompat;

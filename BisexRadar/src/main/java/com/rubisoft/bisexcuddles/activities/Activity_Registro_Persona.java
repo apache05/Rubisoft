@@ -1,4 +1,4 @@
-package com.rubisoft.bisexcuddles.activities;
+package com.rubisoft.bisexradar.activities;
 
 import android.Manifest;
 import android.content.Context;
@@ -35,13 +35,13 @@ import com.google.firebase.iid.FirebaseInstanceId;
 import com.google.firebase.messaging.FirebaseMessaging;
 import com.mikepenz.google_material_typeface_library.GoogleMaterial.Icon;
 import com.mikepenz.iconics.IconicsDrawable;
-import com.rubisoft.bisexcuddles.Classes.Logro;
-import com.rubisoft.bisexcuddles.Classes.STATS_GLOBAL;
-import com.rubisoft.bisexcuddles.Classes.STATS_PAISES;
-import com.rubisoft.bisexcuddles.Classes.Usuario;
-import com.rubisoft.bisexcuddles.R;
-import com.rubisoft.bisexcuddles.databinding.LayoutRegistroPersonasBinding;
-import com.rubisoft.bisexcuddles.tools.utils;
+import com.rubisoft.bisexradar.Classes.Logro;
+import com.rubisoft.bisexradar.Classes.STATS_GLOBAL;
+import com.rubisoft.bisexradar.Classes.STATS_PAISES;
+import com.rubisoft.bisexradar.Classes.Usuario;
+import com.rubisoft.bisexradar.R;
+import com.rubisoft.bisexradar.databinding.LayoutRegistroPersonasBinding;
+import com.rubisoft.bisexradar.tools.utils;
 
 import org.joda.time.DateTime;
 
@@ -773,7 +773,7 @@ public class Activity_Registro_Persona extends AppCompatActivity  {
 								batch2.update(ref_usuarios, utils.decodifica_app(utils.get_app_code(getApplicationContext().getPackageName())), FieldValue.increment(1));
 								batch2.commit();
 							} else {
-								STATS_GLOBAL nueva_semana_de_stats= new STATS_GLOBAL(0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,1L);
+								STATS_GLOBAL nueva_semana_de_stats= new STATS_GLOBAL(0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,1L);
 								db.collection(getResources().getString(R.string.STATS_GLOBAL)).document(semana_del_anyo).set(nueva_semana_de_stats).addOnSuccessListener(taskSnapshot -> {
 									DocumentReference ref_usuarios= db.collection(getResources().getString(R.string.STATS_GLOBAL)).document(semana_del_anyo);
 

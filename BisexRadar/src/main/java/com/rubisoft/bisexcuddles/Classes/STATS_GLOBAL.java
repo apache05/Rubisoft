@@ -1,4 +1,4 @@
-package com.rubisoft.bisexcuddles.Classes;
+package com.rubisoft.bisexradar.Classes;
 
 import java.io.Serializable;
 
@@ -8,21 +8,30 @@ import androidx.annotation.Keep;
 
 public class STATS_GLOBAL implements Serializable {
 	private Long menfinder;
+	private Long menradar;
+
 	private Long womenfinder;
-	private Long bisexfinder;
-	private Long gayfinder;
-	private Long lesbianfinder;
 	private Long womenradar;
+
+	private Long bisexfinder;
+	private Long bisexradar;
+
+	private Long lesbianfinder;
+	private Long lesbianradar;
+
+	private Long gayfinder;
 	private Long gayradar;
+
 	private Long hombre_bi;
 	private Long hombre_gay;
 	private Long hombre_hetero;
 	private Long mujer_bi;
 	private Long mujer_hetero;
 	private Long mujer_lesbiana;
+
 	private Long total_usuarios;
 
-	public STATS_GLOBAL(Long menfinder, Long womenfinder, Long bisexfinder, Long gayfinder, Long lesbianfinder, Long womenradar, Long gayradar, Long hombre_bi, Long hombre_gay, Long hombre_hetero, Long mujer_bi, Long mujer_hetero, Long mujer_lesbiana, Long total_usuarios) {
+	public STATS_GLOBAL(Long menfinder, Long womenfinder, Long bisexfinder, Long gayfinder, Long lesbianfinder, Long womenradar, Long gayradar, Long bisexradar, Long menradar, Long lesbianradar, Long hombre_bi, Long hombre_gay, Long hombre_hetero, Long mujer_bi, Long mujer_hetero, Long mujer_lesbiana, Long total_usuarios) {
 		this.menfinder = menfinder;
 		this.womenfinder = womenfinder;
 		this.bisexfinder = bisexfinder;
@@ -30,6 +39,11 @@ public class STATS_GLOBAL implements Serializable {
 		this.lesbianfinder = lesbianfinder;
 		this.womenradar = womenradar;
 		this.gayradar = gayradar;
+		this.menradar = menradar;
+		this.lesbianradar = lesbianradar;
+		this.bisexradar = bisexradar;
+
+
 		this.hombre_bi = hombre_bi;
 		this.hombre_gay = hombre_gay;
 		this.hombre_hetero = hombre_hetero;
@@ -147,12 +161,35 @@ public class STATS_GLOBAL implements Serializable {
 		this.mujer_lesbiana = mujer_lesbiana;
 	}
 
-
 	public Long getTotal_usuarios() {
 		return total_usuarios;
 	}
 
 	public void setTotal_usuarios(Long total_usuarios) {
 		this.total_usuarios = total_usuarios;
+	}
+
+	public Long getMenradar() {
+		return menradar;
+	}
+
+	public void setMenradar(Long menradar) {
+		this.menradar = menradar;
+	}
+
+	public Long getBisexradar() {
+		return bisexradar;
+	}
+
+	public void setBisexradar(Long bisexradar) {
+		this.bisexradar = bisexradar;
+	}
+
+	public Long getLesbianradar() {
+		return lesbianradar;
+	}
+
+	public void setLesbianradar(Long lesbianradar) {
+		this.lesbianradar = lesbianradar;
 	}
 }

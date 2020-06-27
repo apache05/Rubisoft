@@ -1,11 +1,11 @@
 <component name="libraryTable">
   <library name="Gradle: com.yandex.android:mobmetricalib:3.8.0@aar">
     <ANNOTATIONS>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/70824f1f46866f4223ac333fc4f60540/jetified-mobmetricalib-3.8.0/annotations.zip!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/3edbb5f5595e459e3c7feedbc2d47573/jetified-mobmetricalib-3.8.0/annotations.zip!/" />
     </ANNOTATIONS>
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/70824f1f46866f4223ac333fc4f60540/jetified-mobmetricalib-3.8.0/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/70824f1f46866f4223ac333fc4f60540/jetified-mobmetricalib-3.8.0/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/3edbb5f5595e459e3c7feedbc2d47573/jetified-mobmetricalib-3.8.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/3edbb5f5595e459e3c7feedbc2d47573/jetified-mobmetricalib-3.8.0/res" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.yandex.android/mobmetricalib/3.8.0/ce66c4d0ef0f7bc27762a639fc31c4a206875b7c/mobmetricalib-3.8.0-javadoc.jar!/" />

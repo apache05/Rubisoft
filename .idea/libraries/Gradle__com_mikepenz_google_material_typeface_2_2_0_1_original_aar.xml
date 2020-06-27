@@ -1,8 +1,8 @@
 <component name="libraryTable">
   <library name="Gradle: com.mikepenz:google-material-typeface:2.2.0.1.original@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/8a1060e8d41e4f99238a3506c434a53a/jetified-google-material-typeface-2.2.0.1.original/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/8a1060e8d41e4f99238a3506c434a53a/jetified-google-material-typeface-2.2.0.1.original/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/632a5a3b0501bfff5e0d2f12685caaaf/jetified-google-material-typeface-2.2.0.1.original/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/632a5a3b0501bfff5e0d2f12685caaaf/jetified-google-material-typeface-2.2.0.1.original/res" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.mikepenz/google-material-typeface/2.2.0.1.original/42a3caf4f4fa4743e1626280e13caa22a7c54759/google-material-typeface-2.2.0.1.original-javadoc.jar!/" />

@@ -1,4 +1,4 @@
-package com.rubisoft.bisexcuddles.activities;
+package com.rubisoft.bisexradar.activities;
 
 import android.content.Context;
 import android.content.Intent;
@@ -8,6 +8,7 @@ import android.graphics.Canvas;
 import android.graphics.drawable.Drawable;
 import android.net.ConnectivityManager;
 import android.os.Bundle;
+import android.util.TypedValue;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.LinearLayout;
@@ -18,9 +19,9 @@ import com.explorestack.consent.Consent;
 import com.explorestack.consent.ConsentManager;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
-import com.rubisoft.bisexcuddles.R;
-import com.rubisoft.bisexcuddles.databinding.LayoutUnPerfilBinding;
-import com.rubisoft.bisexcuddles.tools.utils;
+import com.rubisoft.bisexradar.R;
+import com.rubisoft.bisexradar.databinding.LayoutUnPerfilBinding;
+import com.rubisoft.bisexradar.tools.utils;
 import com.squareup.picasso.Picasso;
 import com.squareup.picasso.Target;
 
@@ -159,16 +160,19 @@ public class Activity_Un_Perfil extends AppCompatActivity {
 
 	private void inicializa_anuncios(){
 		try{
+			LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT);
+
 			if (!perfil_usuario.getBoolean(getString(R.string.PERFIL_USUARIO_ES_PREMIUM), false)) {
 				Consent consent = ConsentManager.getInstance(this).getConsent();
 				Appodeal.setTesting(false);
 				Appodeal.initialize(this, getResources().getString(R.string.APPODEAL_APP_KEY), Appodeal.BANNER, consent);
 				setup_banner();
+				int px = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 50, getResources().getDisplayMetrics());
+				layoutParams.setMargins(0, px, 0, 0);
 			}else {
-				LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT);
 				layoutParams.setMargins(0, 0, 0, 0);
-				binding.MainLinearLayout.setLayoutParams(layoutParams);
 			}
+			binding.MainLinearLayout.setLayoutParams(layoutParams);
 		}catch (Exception e){
 			utils.registra_error(e.toString(), "inicializa_anuncios de Activity_Principal");
 		}

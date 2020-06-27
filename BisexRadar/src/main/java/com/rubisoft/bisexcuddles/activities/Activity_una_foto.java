@@ -1,12 +1,12 @@
-package com.rubisoft.bisexcuddles.activities;
+package com.rubisoft.bisexradar.activities;
 
 import android.graphics.Bitmap;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 
-import com.rubisoft.bisexcuddles.R;
-import com.rubisoft.bisexcuddles.databinding.LayoutUnaFotoBinding;
-import com.rubisoft.bisexcuddles.tools.utils;
+import com.rubisoft.bisexradar.R;
+import com.rubisoft.bisexradar.databinding.LayoutUnaFotoBinding;
+import com.rubisoft.bisexradar.tools.utils;
 import com.squareup.picasso.Picasso;
 import com.squareup.picasso.Target;
 

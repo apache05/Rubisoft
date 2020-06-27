@@ -54,24 +54,24 @@ public class fragment_datos_personales extends Fragment {
 			Drawable icono = new IconicsDrawable(this.getContext()).icon(Icon.gmd_done).color(ContextCompat.getColor(this.getContext(), R.color.accent)).sizeDp(this.getResources().getInteger(R.integer.Tam_Normal_icons));
 			binding.FragmentDatosPersonalesButtonActualizarDatosPersonales.setImageDrawable(icono);
 			binding.FragmentDatosPersonalesButtonActualizarDatosPersonales.setOnClickListener(view -> {
-				if (no_hay_incongruencias_sexuales((int) perfil_usuario.getLong(getResources().getString(R.string.PERFIL_USUARIO_SEXO), 0), binding.FragmentDatosPersonalesSpinnerCambiarMiOrientacion.getSelectedItemPosition() + 1)) {
+				if (no_hay_incongruencias_sexuales((int) perfil_usuario.getLong(getResources().getString(R.string.PERFIL_USUARIO_SEXO), 0L), binding.FragmentDatosPersonalesSpinnerCambiarMiOrientacion.getSelectedItemPosition() + 1)) {
 					if(binding.FragmentDatosPersonalesEdittextQuieroDejarClaro.getText().length()==0){
 						desuscribir_de_grupo();
 					}
 					//guardamos la busqueda que ha hecho para recordarla y que no tenga que tocar otra vez los controles
 					Editor editor_perfil_usuario = perfil_usuario.edit();
 					long peso;
-					if (Long.valueOf(binding.FragmentDatosPersonalesRangeBarMiPeso.getRightPinValue()) > getResources().getInteger(R.integer.DEFAULT_PESO_MAXIMO)) {
+					if (Long.parseLong(binding.FragmentDatosPersonalesRangeBarMiPeso.getRightPinValue()) > getResources().getInteger(R.integer.DEFAULT_PESO_MAXIMO)) {
 						peso = (long) getResources().getInteger(R.integer.DEFAULT_PESO_MAXIMO);
-					} else if (Long.valueOf(binding.FragmentDatosPersonalesRangeBarMiPeso.getRightPinValue()) < getResources().getInteger(R.integer.DEFAULT_PESO_MINIMO)) {
+					} else if (Long.parseLong(binding.FragmentDatosPersonalesRangeBarMiPeso.getRightPinValue()) < getResources().getInteger(R.integer.DEFAULT_PESO_MINIMO)) {
 						peso = (long) getResources().getInteger(R.integer.DEFAULT_PESO_MINIMO);
 					} else {
 						peso = Long.parseLong(binding.FragmentDatosPersonalesRangeBarMiPeso.getRightPinValue());
 					}
 					long altura;
-					if (Long.valueOf(binding.FragmentDatosPersonalesRangeBarMiAltura.getRightPinValue()) > getResources().getInteger(R.integer.DEFAULT_ALTURA_MAXIMA)) {
+					if (Long.parseLong(binding.FragmentDatosPersonalesRangeBarMiAltura.getRightPinValue()) > getResources().getInteger(R.integer.DEFAULT_ALTURA_MAXIMA)) {
 						altura = (long) getResources().getInteger(R.integer.DEFAULT_ALTURA_MAXIMA);
-					} else if (Long.valueOf(binding.FragmentDatosPersonalesRangeBarMiAltura.getRightPinValue()) < getResources().getInteger(R.integer.DEFAULT_ALTURA_MINIMA)) {
+					} else if (Long.parseLong(binding.FragmentDatosPersonalesRangeBarMiAltura.getRightPinValue()) < getResources().getInteger(R.integer.DEFAULT_ALTURA_MINIMA)) {
 						altura = (long) getResources().getInteger(R.integer.DEFAULT_ALTURA_MINIMA);
 					} else {
 						altura = Long.parseLong(binding.FragmentDatosPersonalesRangeBarMiAltura.getRightPinValue());
@@ -110,7 +110,6 @@ public class fragment_datos_personales extends Fragment {
 		}
 		return mView;
 	}
-
 
 	private boolean no_hay_incongruencias_sexuales(Integer ACTIVITY_REGISTRO_SEXO_elegido, Integer ACTIVITY_REGISTRO_ORIENTACION_elegida) {
 		boolean congruente = true;
@@ -187,7 +186,7 @@ public class fragment_datos_personales extends Fragment {
 
 			this.setup_spinners_perfil(binding.FragmentDatosPersonalesSpinnerCambiarMiOrientacion);
 
-			binding.FragmentDatosPersonalesTextViewSexo.setText(this.getResources().getTextArray(R.array.sexos)[(int) this.perfil_usuario.getLong(this.getResources().getString(R.string.PERFIL_USUARIO_SEXO), 1L)]);
+			binding.FragmentDatosPersonalesTextViewSexo.setText(this.getResources().getTextArray(R.array.sexos)[(int) this.perfil_usuario.getLong(this.getResources().getString(R.string.PERFIL_USUARIO_SEXO), 0L)]);
 			binding.FragmentDatosPersonalesEdittextQuieroDejarClaro.setText(perfil_usuario.getString(getResources().getString(R.string.PERFIL_USUARIO_QUIERO_DEJAR_CLARO), ""));
 
 		} catch (Exception e) {
@@ -221,25 +220,25 @@ public class fragment_datos_personales extends Fragment {
 						binding.FragmentDatosPersonalesTextViewMiAltura.setText(String.format(getResources().getString(R.string.m),Float.valueOf(rightPinValue)/100));
 					}
 				} catch (Exception e) {
-					utils.registra_error(e.toString(), "");
+					utils.registra_error(e.toString(), "en FragmentDatosPersonalesRangeBarMiAltura de fragment_datos_personales");
 				}
 			});
 			binding.FragmentDatosPersonalesRangeBarMiPeso.setOnRangeBarChangeListener((rangeBar, leftPinIndex, rightPinIndex, leftPinValue, rightPinValue) -> {
 				try{
 					if (preferencias_usuario.getLong(getResources().getString(R.string.PREFERENCIAS_UNIDADES), 0L) == getResources().getInteger(R.integer.BRITANICO)) {
 						Pair un_par = utils.kg_a_st_and_lb(Integer.valueOf(rightPinValue));
-						binding.FragmentDatosPersonalesTextViewMiPeso.setText(getResources().getString(R.string.st_y_lb, (double)un_par.first,(double) un_par.second));
+						binding.FragmentDatosPersonalesTextViewMiPeso.setText(getResources().getString(R.string.st_y_lb, (int)un_par.first, Double.valueOf((double)un_par.second).floatValue()));
 					} else if (preferencias_usuario.getLong(getResources().getString(R.string.PREFERENCIAS_UNIDADES), 0L) == getResources().getInteger(R.integer.AMERICANO)) {
 						binding.FragmentDatosPersonalesTextViewMiPeso.setText(utils.kg_a_lb(Integer.valueOf(rightPinValue)));
 					} else {
 						binding.FragmentDatosPersonalesTextViewMiPeso.setText(String.format(getResources().getString(R.string.kg), Integer.valueOf(rightPinValue)));
 					}
 				} catch (Exception e) {
-					utils.registra_error(e.toString(), "");
+					utils.registra_error(e.toString(), "en FragmentDatosPersonalesRangeBarMiPeso de fragment_datos_personales");
 				}
 			});
 		} catch (Exception e) {
-			utils.registra_error(e.toString(), "");
+			utils.registra_error(e.toString(), "en setup_RangerBars de fragment_datos_personales");
 		}
 	}
 
@@ -282,6 +281,7 @@ public class fragment_datos_personales extends Fragment {
 			Ref.update(getResources().getString(R.string.USUARIO_NICK),un_usuario.getNick());
 		}
 	}
+
 	private void desuscribir_de_grupo(){
 		try{
 			String grupo_al_que_pertenece= utils.grupo_al_que_pertenece(perfil_usuario.getLong(getResources().getString(R.string.PERFIL_USUARIO_ORIENTACION),0L),perfil_usuario.getString(getResources().getString(R.string.PERFIL_USUARIO_PAIS),""));

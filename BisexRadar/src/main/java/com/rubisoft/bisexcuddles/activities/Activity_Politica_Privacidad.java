@@ -1,12 +1,12 @@
-package com.rubisoft.bisexcuddles.activities;
+package com.rubisoft.bisexradar.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import com.rubisoft.bisexcuddles.R;
-import com.rubisoft.bisexcuddles.tools.utils;
+import com.rubisoft.bisexradar.R;
+import com.rubisoft.bisexradar.tools.utils;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;

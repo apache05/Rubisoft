@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.rubisoft.bisexcuddles"
+    package="com.rubisoft.bisexradar"
     android:installLocation="auto">
     <!-- no quitar -->
     <!-- *********** PARA UTILIZAR huq ************* -->
@@ -56,7 +56,7 @@
             android:name="org.apache.http.legacy"
             android:required="false" />
         <activity
-            android:name="com.rubisoft.bisexcuddles.activities.Activity_Inicio"
+            android:name="com.rubisoft.bisexradar.activities.Activity_Inicio"
             android:configChanges="keyboardHidden|orientation"
             android:label="@string/app_name">
             <intent-filter>
@@ -80,62 +80,62 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.rubisoft.bisexcuddles.activities.Activity_Principal"
+            android:name="com.rubisoft.bisexradar.activities.Activity_Principal"
             android:label="@string/app_name" />
         <activity
-            android:name="com.rubisoft.bisexcuddles.activities.Activity_Mi_Perfil"
+            android:name="com.rubisoft.bisexradar.activities.Activity_Mi_Perfil"
             android:label="@string/app_name"
-            android:parentActivityName="com.rubisoft.bisexcuddles.activities.Activity_Principal"
+            android:parentActivityName="com.rubisoft.bisexradar.activities.Activity_Principal"
             android:windowSoftInputMode="adjustPan" />
         <activity
-            android:name="com.rubisoft.bisexcuddles.activities.Activity_Configuracion"
+            android:name="com.rubisoft.bisexradar.activities.Activity_Configuracion"
             android:label="@string/app_name" />
         <activity
-            android:name="com.rubisoft.bisexcuddles.activities.Activity_Registro_Persona"
+            android:name="com.rubisoft.bisexradar.activities.Activity_Registro_Persona"
             android:label="@string/app_name" />
         <activity
-            android:name="com.rubisoft.bisexcuddles.activities.Activity_Configura_Radar"
+            android:name="com.rubisoft.bisexradar.activities.Activity_Configura_Radar"
             android:label="@string/app_name" />
         <activity
-            android:name="com.rubisoft.bisexcuddles.activities.Activity_Mensajes"
+            android:name="com.rubisoft.bisexradar.activities.Activity_Mensajes"
             android:label="@string/app_name" />
 
         <activity
-            android:name="com.rubisoft.bisexcuddles.activities.Activity_Chat_General"
+            android:name="com.rubisoft.bisexradar.activities.Activity_Chat_General"
             android:label="@string/app_name" />
         <activity
-            android:name="com.rubisoft.bisexcuddles.activities.Activity_Compras"
+            android:name="com.rubisoft.bisexradar.activities.Activity_Compras"
             android:label="@string/app_name" />
         <activity
-            android:name="com.rubisoft.bisexcuddles.activities.Activity_Feedback"
+            android:name="com.rubisoft.bisexradar.activities.Activity_Feedback"
             android:label="@string/app_name" />
         <activity
-            android:name="com.rubisoft.bisexcuddles.activities.Activity_Chat_Individual"
+            android:name="com.rubisoft.bisexradar.activities.Activity_Chat_Individual"
             android:label="@string/app_name"
             android:windowSoftInputMode="stateHidden|adjustPan" />
         <activity
-            android:name="com.rubisoft.bisexcuddles.activities.Activity_Sin_Conexion"
+            android:name="com.rubisoft.bisexradar.activities.Activity_Sin_Conexion"
             android:label="@string/app_name" />
         <activity
-            android:name="com.rubisoft.bisexcuddles.activities.Activity_Condiciones_Uso"
+            android:name="com.rubisoft.bisexradar.activities.Activity_Condiciones_Uso"
             android:label="@string/app_name" />
-        <activity android:name="com.rubisoft.bisexcuddles.activities.Activity_Politica_Privacidad" />
+        <activity android:name="com.rubisoft.bisexradar.activities.Activity_Politica_Privacidad" />
         <activity
-            android:name="com.rubisoft.bisexcuddles.activities.Activity_Primeras_fotos"
-            android:label="@string/app_name" />
-        <activity
-            android:name="com.rubisoft.bisexcuddles.activities.Activity_Ayuda"
+            android:name="com.rubisoft.bisexradar.activities.Activity_Primeras_fotos"
             android:label="@string/app_name" />
         <activity
-            android:name="com.rubisoft.bisexcuddles.activities.Activity_Un_Perfil"
+            android:name="com.rubisoft.bisexradar.activities.Activity_Ayuda"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.rubisoft.bisexradar.activities.Activity_Un_Perfil"
             android:label="@string/app_name" />
         <activity
             android:name="com.facebook.FacebookActivity"
             android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
             android:label="@string/app_name" />
-        <activity android:name="com.rubisoft.bisexcuddles.activities.Activity_estrellas_gratis" />
+        <activity android:name="com.rubisoft.bisexradar.activities.Activity_estrellas_gratis" />
         <activity
-            android:name="com.rubisoft.bisexcuddles.activities.Activity_una_foto"
+            android:name="com.rubisoft.bisexradar.activities.Activity_una_foto"
             android:label="@string/app_name" />
 
         <meta-data
@@ -146,7 +146,7 @@
             android:value="@string/facebook_app_id"
             tools:replace="android:value" /> <!-- para generar token_fcm y poder recibir notificaciones -->
         <service
-            android:name="com.rubisoft.bisexcuddles.services.MyFirebaseMessagingService"
+            android:name="com.rubisoft.bisexradar.services.MyFirebaseMessagingService"
             android:exported="false">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />

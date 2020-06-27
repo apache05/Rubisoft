@@ -1,11 +1,11 @@
 <component name="libraryTable">
   <library name="Gradle: com.smaato.android.sdk:module-core:21.3.1@aar">
     <ANNOTATIONS>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/263d86c91295842ee80343aa2ce1edc2/jetified-module-core-21.3.1/annotations.zip!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/377bd80c52cb13185176adf78b0297e4/jetified-module-core-21.3.1/annotations.zip!/" />
     </ANNOTATIONS>
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/263d86c91295842ee80343aa2ce1edc2/jetified-module-core-21.3.1/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/263d86c91295842ee80343aa2ce1edc2/jetified-module-core-21.3.1/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/377bd80c52cb13185176adf78b0297e4/jetified-module-core-21.3.1/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/377bd80c52cb13185176adf78b0297e4/jetified-module-core-21.3.1/res" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.smaato.android.sdk/module-core/21.3.1/41e6dc5caa39b78aeae417befda6cf2f15fa9f69/module-core-21.3.1-javadoc.jar!/" />

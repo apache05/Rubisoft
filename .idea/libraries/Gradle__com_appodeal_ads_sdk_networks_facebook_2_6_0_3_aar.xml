@@ -1,9 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: com.appodeal.ads.sdk.networks:facebook:2.6.0.3@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/b7197b55a92c55575037d4e50b349c91/jetified-facebook-2.6.0.3/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/b7197b55a92c55575037d4e50b349c91/jetified-facebook-2.6.0.3/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/b7197b55a92c55575037d4e50b349c91/jetified-facebook-2.6.0.3/jars/libs/r-classes.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/2832895194fb704f051071fb907b2606/jetified-facebook-2.6.0.3/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/2832895194fb704f051071fb907b2606/jetified-facebook-2.6.0.3/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/2832895194fb704f051071fb907b2606/jetified-facebook-2.6.0.3/jars/libs/r-classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

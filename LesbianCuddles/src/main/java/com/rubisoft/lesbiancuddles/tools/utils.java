@@ -30,20 +30,19 @@ import com.rubisoft.lesbiancuddles.Classes.Error;
 import com.rubisoft.lesbiancuddles.Classes.Logro;
 import com.rubisoft.lesbiancuddles.Classes.Usuario_para_listar;
 import com.rubisoft.lesbiancuddles.R;
+import com.rubisoft.lesbiancuddles.activities.Activity_Principal;
+import com.rubisoft.lesbiancuddles.activities.Activity_Configura_Radar;
+import com.rubisoft.lesbiancuddles.activities.Activity_Mensajes;
+import com.rubisoft.lesbiancuddles.activities.Activity_Mi_Perfil;
 import com.rubisoft.lesbiancuddles.activities.Activity_Ayuda;
 import com.rubisoft.lesbiancuddles.activities.Activity_Chat_General;
 import com.rubisoft.lesbiancuddles.activities.Activity_Compras;
-import com.rubisoft.lesbiancuddles.activities.Activity_Condiciones_Uso;
-import com.rubisoft.lesbiancuddles.activities.Activity_Configura_Radar;
 import com.rubisoft.lesbiancuddles.activities.Activity_Configuracion;
+import com.rubisoft.lesbiancuddles.activities.Activity_estrellas_gratis;
 import com.rubisoft.lesbiancuddles.activities.Activity_Feedback;
 import com.rubisoft.lesbiancuddles.activities.Activity_Inicio;
-import com.rubisoft.lesbiancuddles.activities.Activity_Mensajes;
-import com.rubisoft.lesbiancuddles.activities.Activity_Mi_Perfil;
+import com.rubisoft.lesbiancuddles.activities.Activity_Condiciones_Uso;
 import com.rubisoft.lesbiancuddles.activities.Activity_Politica_Privacidad;
-import com.rubisoft.lesbiancuddles.activities.Activity_Principal;
-import com.rubisoft.lesbiancuddles.activities.Activity_estrellas_gratis;
-
 import org.joda.time.LocalDate;
 import org.joda.time.Years;
 
@@ -576,7 +575,7 @@ public class utils {
 				app_decodificada = "lesbianfinder";
 				break;
 			case 5:
-				app_decodificada = "bifinder";
+				app_decodificada = "bisexfinder";
 				break;
 			case 6:
 				app_decodificada = "womenradar";

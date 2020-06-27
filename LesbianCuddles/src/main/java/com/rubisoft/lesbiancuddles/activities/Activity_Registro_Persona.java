@@ -773,7 +773,7 @@ public class Activity_Registro_Persona extends AppCompatActivity  {
 								batch2.update(ref_usuarios, utils.decodifica_app(utils.get_app_code(getApplicationContext().getPackageName())), FieldValue.increment(1));
 								batch2.commit();
 							} else {
-								STATS_GLOBAL nueva_semana_de_stats= new STATS_GLOBAL(0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,1L);
+								STATS_GLOBAL nueva_semana_de_stats= new STATS_GLOBAL(0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,1L);
 								db.collection(getResources().getString(R.string.STATS_GLOBAL)).document(semana_del_anyo).set(nueva_semana_de_stats).addOnSuccessListener(taskSnapshot -> {
 									DocumentReference ref_usuarios= db.collection(getResources().getString(R.string.STATS_GLOBAL)).document(semana_del_anyo);
 

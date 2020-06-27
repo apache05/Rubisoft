@@ -1,4 +1,4 @@
-package com.rubisoft.bisexcuddles.activities;
+package com.rubisoft.bisexradar.activities;
 
 import android.content.Context;
 import android.content.Intent;
@@ -45,10 +45,10 @@ import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.messaging.FirebaseMessaging;
-import com.rubisoft.bisexcuddles.Classes.Usuario;
-import com.rubisoft.bisexcuddles.R;
-import com.rubisoft.bisexcuddles.databinding.LayoutInicioBinding;
-import com.rubisoft.bisexcuddles.tools.utils;
+import com.rubisoft.bisexradar.Classes.Usuario;
+import com.rubisoft.bisexradar.R;
+import com.rubisoft.bisexradar.databinding.LayoutInicioBinding;
+import com.rubisoft.bisexradar.tools.utils;
 
 import java.util.Calendar;
 import java.util.HashSet;

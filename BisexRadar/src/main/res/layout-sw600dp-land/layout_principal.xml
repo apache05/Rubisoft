@@ -22,7 +22,7 @@
             android:layout_height="match_parent"
             app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-            <com.rubisoft.bisexcuddles.RecyclersViews.RecyclerView_AutoFit
+            <com.rubisoft.bisexradar.RecyclersViews.RecyclerView_AutoFit
                 android:id="@id/Layout_principal_ReciclerView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

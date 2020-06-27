@@ -1,8 +1,8 @@
 <component name="libraryTable">
   <library name="Gradle: com.appodeal.ads.sdk.networks:smaato:2.6.0.2@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/33f3e3740314946f17f4a6dbd2050fb2/jetified-smaato-2.6.0.2/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/33f3e3740314946f17f4a6dbd2050fb2/jetified-smaato-2.6.0.2/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/07199d330a63dc903dc07184468d9d87/jetified-smaato-2.6.0.2/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/07199d330a63dc903dc07184468d9d87/jetified-smaato-2.6.0.2/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

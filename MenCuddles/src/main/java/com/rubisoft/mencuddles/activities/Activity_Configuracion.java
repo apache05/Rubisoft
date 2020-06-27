@@ -152,7 +152,7 @@ public class Activity_Configuracion extends AppCompatActivity {
     }
 
     @Override
-    public void onConfigurationChanged(Configuration newConfig) {
+    public void onConfigurationChanged(@NonNull Configuration newConfig) {
         super.onConfigurationChanged(newConfig);
         if (drawerToggle != null) {
             drawerToggle.onConfigurationChanged(newConfig);
@@ -485,22 +485,27 @@ public class Activity_Configuracion extends AppCompatActivity {
 
 	private void inicializa_anuncios(){
 		try{
+			FrameLayout.LayoutParams layoutParams = new FrameLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT);
+
 			if (!perfil_usuario.getBoolean(getString(R.string.PERFIL_USUARIO_ES_PREMIUM), false)) {
 				Consent consent = ConsentManager.getInstance(this).getConsent();
 				Appodeal.setTesting(false);
 				Appodeal.initialize(this, getResources().getString(R.string.APPODEAL_APP_KEY), Appodeal.BANNER, consent);
 				setup_banner();
+				int px = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 50, getResources().getDisplayMetrics());
+				layoutParams.setMargins(0, px, 0, 0);
+
 			}else {
-				FrameLayout.LayoutParams layoutParams = new FrameLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT);
 				layoutParams.setMargins(0, 0, 0, 0);
-				if (binding.mDrawerLayout!=null){
-					binding.mDrawerLayout.setLayoutParams(layoutParams);
-				}else{
-					binding.MainLinearLayout.setLayoutParams(layoutParams);
-				}
+
+			}
+			if (binding.mDrawerLayout!=null){
+				binding.mDrawerLayout.setLayoutParams(layoutParams);
+			}else{
+				binding.MainLinearLayout.setLayoutParams(layoutParams);
 			}
 		}catch (Exception e){
-			utils.registra_error(e.toString(), "inicializa_anuncios de Activity_Principal");
+			utils.registra_error(e.toString(), "inicializa_anuncios de Activity_Configuracion");
 		}
 	}
 

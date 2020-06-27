@@ -1,4 +1,4 @@
-package com.rubisoft.bisexcuddles.Adapters;
+package com.rubisoft.bisexradar.Adapters;
 
 import android.content.Context;
 import android.graphics.Typeface;
@@ -13,9 +13,9 @@ import android.widget.TextView;
 
 import com.mikepenz.google_material_typeface_library.GoogleMaterial;
 import com.mikepenz.iconics.IconicsDrawable;
-import com.rubisoft.bisexcuddles.Classes.Usuario_para_listar;
-import com.rubisoft.bisexcuddles.R;
-import com.rubisoft.bisexcuddles.tools.utils;
+import com.rubisoft.bisexradar.Classes.Usuario_para_listar;
+import com.rubisoft.bisexradar.R;
+import com.rubisoft.bisexradar.tools.utils;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;

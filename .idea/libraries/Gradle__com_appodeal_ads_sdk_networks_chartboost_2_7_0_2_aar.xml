@@ -1,8 +1,8 @@
 <component name="libraryTable">
   <library name="Gradle: com.appodeal.ads.sdk.networks:chartboost:2.7.0.2@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/4faf8e7d8e4a89cd0ed47c46aa6d93f6/jetified-chartboost-2.7.0.2/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/4faf8e7d8e4a89cd0ed47c46aa6d93f6/jetified-chartboost-2.7.0.2/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/0f6177dd96ab0162656a93ebd84c11f5/jetified-chartboost-2.7.0.2/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/0f6177dd96ab0162656a93ebd84c11f5/jetified-chartboost-2.7.0.2/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

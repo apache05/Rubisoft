@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="@color/primary_light"
     android:tag="mDrawerLayout"
-    android:layout_marginTop="50dp">
+    >
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
@@ -242,7 +242,7 @@
                                 android:textSize="@dimen/tamanyo_letra_m"
                                 app:layout_constraintStart_toStartOf="parent"
                                 app:layout_constraintTop_toTopOf="@id/Layout_configura_radar_de_persona_Spinner_razas" />
-                            <com.rubisoft.bisexcuddles.Classes.MultiSpinner
+                            <com.rubisoft.bisexradar.Classes.MultiSpinner
                                 android:id="@id/Layout_configura_radar_de_persona_Spinner_razas"
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"

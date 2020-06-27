@@ -576,7 +576,7 @@ public class utils {
 				app_decodificada = "lesbianfinder";
 				break;
 			case 5:
-				app_decodificada = "bifinder";
+				app_decodificada = "bisexfinder";
 				break;
 			case 6:
 				app_decodificada = "womenradar";

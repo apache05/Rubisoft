@@ -1,4 +1,4 @@
-package com.rubisoft.bisexcuddles.Fragments;
+package com.rubisoft.bisexradar.Fragments;
 
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -19,10 +19,10 @@ import com.google.firebase.firestore.Query;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.mikepenz.google_material_typeface_library.GoogleMaterial.Icon;
 import com.mikepenz.iconics.IconicsDrawable;
-import com.rubisoft.bisexcuddles.Classes.Logro;
-import com.rubisoft.bisexcuddles.R;
-import com.rubisoft.bisexcuddles.databinding.FragmentLogrosBinding;
-import com.rubisoft.bisexcuddles.tools.utils;
+import com.rubisoft.bisexradar.Classes.Logro;
+import com.rubisoft.bisexradar.R;
+import com.rubisoft.bisexradar.databinding.FragmentLogrosBinding;
+import com.rubisoft.bisexradar.tools.utils;
 
 import java.text.DecimalFormat;
 import java.util.ArrayList;

@@ -1,4 +1,4 @@
-package com.rubisoft.bisexcuddles.activities;
+package com.rubisoft.bisexradar.activities;
 
 import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
@@ -7,8 +7,8 @@ import android.view.Menu;
 
 import com.mikepenz.google_material_typeface_library.GoogleMaterial.Icon;
 import com.mikepenz.iconics.IconicsDrawable;
-import com.rubisoft.bisexcuddles.R;
-import com.rubisoft.bisexcuddles.databinding.LayoutSinConexionBinding;
+import com.rubisoft.bisexradar.R;
+import com.rubisoft.bisexradar.databinding.LayoutSinConexionBinding;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
@@ -23,7 +23,7 @@ public class Activity_Sin_Conexion extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         overridePendingTransition(R.anim.activity_in, R.anim.activity_out);
         super.onCreate(savedInstanceState);
-		com.rubisoft.bisexcuddles.databinding.LayoutSinConexionBinding binding = LayoutSinConexionBinding.inflate(getLayoutInflater());
+		com.rubisoft.bisexradar.databinding.LayoutSinConexionBinding binding = LayoutSinConexionBinding.inflate(getLayoutInflater());
 		setContentView(binding.getRoot());
 		Typeface typeFace_roboto = Typeface.createFromAsset(getAssets(), "fonts/Roboto-Light.ttf");
 

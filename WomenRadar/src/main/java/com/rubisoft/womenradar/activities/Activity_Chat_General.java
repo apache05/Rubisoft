@@ -346,6 +346,8 @@ public class Activity_Chat_General extends AppCompatActivity {
 
 	private void inicializa_anuncios(){
 		try{
+			FrameLayout.LayoutParams layoutParams = new FrameLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT);
+
 			if (!perfil_usuario.getBoolean(getString(R.string.PERFIL_USUARIO_ES_PREMIUM), false)) {
 				Consent consent = ConsentManager.getInstance(this).getConsent();
 				Appodeal.setTesting(false);
@@ -354,17 +356,18 @@ public class Activity_Chat_General extends AppCompatActivity {
 				Appodeal.initialize(this, getResources().getString(R.string.APPODEAL_APP_KEY), Appodeal.BANNER|Appodeal.INTERSTITIAL, consent);
 				setup_banner();
 				lanza_interstitial();
+				int px = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 50, getResources().getDisplayMetrics());
+				layoutParams.setMargins(0, px, 0, 0);
 			}else {
-				FrameLayout.LayoutParams layoutParams = new FrameLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT);
 				layoutParams.setMargins(0, 0, 0, 0);
-				if (binding.mDrawerLayout!=null){
-					binding.mDrawerLayout.setLayoutParams(layoutParams);
-				}else{
-					binding.MainLinearLayout.setLayoutParams(layoutParams);
-				}
+			}
+			if (binding.mDrawerLayout!=null){
+				binding.mDrawerLayout.setLayoutParams(layoutParams);
+			}else{
+				binding.MainLinearLayout.setLayoutParams(layoutParams);
 			}
 		}catch (Exception e){
-			utils.registra_error(e.toString(), "inicializa_anuncios de Activity_Principal");
+			utils.registra_error(e.toString(), "inicializa_anuncios de Activity_Chat_General");
 		}
 	}
 
@@ -659,12 +662,14 @@ public class Activity_Chat_General extends AppCompatActivity {
 			Dialog_Interactuar_Chat_General mDialog_Interactuar = new Dialog_Interactuar_Chat_General();
 			Bundle args = new Bundle();
 			args.putString(getResources().getString(R.string.RELACIONES_TOKEN_SOCIALAUTH_DE_LA_OTRA_PERSONA), token_socialauth_de_la_otra_persona);
-			args.putString(getResources().getString(R.string.RELACIONES_NICK_DE_LA_OTRA_PERSONA),nick_de_la_otra_persona);
-			args.putInt(getResources().getString(R.string.PERFIL_USUARIO_DE_DONDE_VENGO),getResources().getInteger(R.integer.VENGO_DE_CHAT_GENERAL));
-			args.putString(getResources().getString(R.string.PERFIL_USUARIO_TOKEN_SOCIALAUTH),token_socialauth_usuario);
+			args.putString(getResources().getString(R.string.RELACIONES_NICK_DE_LA_OTRA_PERSONA), nick_de_la_otra_persona);
+			args.putInt(getResources().getString(R.string.PERFIL_USUARIO_DE_DONDE_VENGO), getResources().getInteger(R.integer.VENGO_DE_CHAT_GENERAL));
+			args.putString(getResources().getString(R.string.PERFIL_USUARIO_TOKEN_SOCIALAUTH), token_socialauth_usuario);
 			mDialog_Interactuar.setArguments(args);
-			mDialog_Interactuar.show(getSupportFragmentManager(),"d");
-		} catch (Exception e) {
+			mDialog_Interactuar.show(getSupportFragmentManager(), "d");
+		}
+		catch (IllegalStateException ignored) { }
+		catch (Exception e) {
 			utils.registra_error(e.toString(), "lanza_dialogo de Activity_Chat_General");
 		}
 	}

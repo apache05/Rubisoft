@@ -1,4 +1,4 @@
-package com.rubisoft.bisexcuddles.services;
+package com.rubisoft.bisexradar.services;
 
 import android.app.Activity;
 import android.content.BroadcastReceiver;
@@ -10,8 +10,8 @@ import android.media.MediaPlayer;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
-import com.rubisoft.bisexcuddles.R;
-import com.rubisoft.bisexcuddles.tools.utils;
+import com.rubisoft.bisexradar.R;
+import com.rubisoft.bisexradar.tools.utils;
 
 import java.util.Map;
 

@@ -697,10 +697,11 @@ public class fragment_foto_manager extends Fragment{
 						resultado=false;
 						break;
 				}
-			}catch (SocketTimeoutException | UnknownHostException | SSLException | ConnectException e ) {
+			}catch (SocketTimeoutException | UnknownHostException | SSLException | ConnectException  e ) {
 				Toast.makeText(getContext(), getResources().getString(R.string.FRAGMENT_FOTO_ERROR_FOTO_NO_CARGADA), Toast.LENGTH_LONG).show();
+			}catch (IllegalStateException ignored){
 			}catch (Exception e) {
-				utils.registra_error(e.toString(), "SafeDetectionTask (onPostExecute) en fragment_foto_manager");
+				utils.registra_error(e.toString(), "SafeDetectionTask (doInBackground) en fragment_foto_manager");
 			}
 			return resultado;
 		}

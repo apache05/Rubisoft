@@ -1,4 +1,4 @@
-package com.rubisoft.bisexcuddles.Dialogs;
+package com.rubisoft.bisexradar.Dialogs;
 
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -14,10 +14,10 @@ import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.mikepenz.google_material_typeface_library.GoogleMaterial;
 import com.mikepenz.iconics.IconicsDrawable;
-import com.rubisoft.bisexcuddles.Classes.Usuario_para_listar;
-import com.rubisoft.bisexcuddles.R;
-import com.rubisoft.bisexcuddles.databinding.DialogInfoBinding;
-import com.rubisoft.bisexcuddles.tools.utils;
+import com.rubisoft.bisexradar.Classes.Usuario_para_listar;
+import com.rubisoft.bisexradar.R;
+import com.rubisoft.bisexradar.databinding.DialogInfoBinding;
+import com.rubisoft.bisexradar.tools.utils;
 
 import java.util.Map;
 

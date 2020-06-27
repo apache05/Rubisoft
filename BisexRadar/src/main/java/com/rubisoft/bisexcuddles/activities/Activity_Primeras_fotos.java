@@ -1,4 +1,4 @@
-package com.rubisoft.bisexcuddles.activities;
+package com.rubisoft.bisexradar.activities;
 
 import android.Manifest;
 import android.annotation.TargetApi;
@@ -46,16 +46,17 @@ import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 import com.mikepenz.google_material_typeface_library.GoogleMaterial;
 import com.mikepenz.iconics.IconicsDrawable;
-import com.rubisoft.bisexcuddles.BuildConfig;
-import com.rubisoft.bisexcuddles.R;
-import com.rubisoft.bisexcuddles.databinding.LayoutPrimerasFotosBinding;
-import com.rubisoft.bisexcuddles.tools.utils;
+import com.rubisoft.bisexradar.BuildConfig;
+import com.rubisoft.bisexradar.R;
+import com.rubisoft.bisexradar.databinding.LayoutPrimerasFotosBinding;
+import com.rubisoft.bisexradar.tools.utils;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
+import java.net.ConnectException;
 import java.net.SocketTimeoutException;
 import java.net.UnknownHostException;
 import java.security.MessageDigest;
@@ -63,7 +64,6 @@ import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
 import java.util.Locale;
 import java.util.concurrent.RejectedExecutionException;
-import java.net.ConnectException;
 
 import javax.net.ssl.SSLException;
 
@@ -182,6 +182,7 @@ public class Activity_Primeras_fotos extends AppCompatActivity {
 			}
 		}
 	}
+
 	@Override
 	public void onBackPressed() {
 		try {
@@ -570,6 +571,7 @@ public class Activity_Primeras_fotos extends AppCompatActivity {
 		}
 	}
 
+	@TargetApi(Build.VERSION_CODES.M)
 	private class SafeDetectionTask extends AsyncTask<Pair<Uri, Vision.Images.Annotate>, Void, Boolean> {
 		@SafeVarargs
 		@Override
@@ -615,8 +617,11 @@ public class Activity_Primeras_fotos extends AppCompatActivity {
 			}catch (SocketTimeoutException | UnknownHostException | SSLException | ConnectException e ) {
 				Toast.makeText(getApplicationContext(), getResources().getString(R.string.FRAGMENT_FOTO_ERROR_FOTO_NO_CARGADA), Toast.LENGTH_LONG).show();
 			}
+			catch (SecurityException e){
+				requestPermissions(new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.READ_EXTERNAL_STORAGE}, PERMISSION_CAPTURAR_FOTO);
+			}
 			catch (Exception e) {
-				utils.registra_error(e.toString(), "SafeDetectionTask (onPostExecute) en Primeras_fotos");
+				utils.registra_error(e.toString(), "SafeDetectionTask (doInBackground) en Primeras_fotos");
 			}
 			binding.mProgressBar.setVisibility(View.INVISIBLE);
 			return resultado;

@@ -182,6 +182,7 @@ public class Activity_Primeras_fotos extends AppCompatActivity {
 			}
 		}
 	}
+
 	@Override
 	public void onBackPressed() {
 		try {
@@ -570,6 +571,7 @@ public class Activity_Primeras_fotos extends AppCompatActivity {
 		}
 	}
 
+	@TargetApi(Build.VERSION_CODES.M)
 	private class SafeDetectionTask extends AsyncTask<Pair<Uri, Vision.Images.Annotate>, Void, Boolean> {
 		@SafeVarargs
 		@Override
@@ -615,8 +617,11 @@ public class Activity_Primeras_fotos extends AppCompatActivity {
 			}catch (SocketTimeoutException | UnknownHostException | SSLException | ConnectException e ) {
 				Toast.makeText(getApplicationContext(), getResources().getString(R.string.FRAGMENT_FOTO_ERROR_FOTO_NO_CARGADA), Toast.LENGTH_LONG).show();
 			}
+			catch (SecurityException e){
+				requestPermissions(new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.READ_EXTERNAL_STORAGE}, PERMISSION_CAPTURAR_FOTO);
+			}
 			catch (Exception e) {
-				utils.registra_error(e.toString(), "SafeDetectionTask (onPostExecute) en Primeras_fotos");
+				utils.registra_error(e.toString(), "SafeDetectionTask (doInBackground) en Primeras_fotos");
 			}
 			binding.mProgressBar.setVisibility(View.INVISIBLE);
 			return resultado;

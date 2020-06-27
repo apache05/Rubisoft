@@ -1,4 +1,4 @@
-package com.rubisoft.bisexcuddles.Adapters;
+package com.rubisoft.bisexradar.Adapters;
 
 import android.content.Context;
 import android.graphics.Typeface;
@@ -9,9 +9,9 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.TextView;
 
-import com.rubisoft.bisexcuddles.Classes.Relacion_para_listar;
-import com.rubisoft.bisexcuddles.R;
-import com.rubisoft.bisexcuddles.tools.utils;
+import com.rubisoft.bisexradar.Classes.Relacion_para_listar;
+import com.rubisoft.bisexradar.R;
+import com.rubisoft.bisexradar.tools.utils;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;

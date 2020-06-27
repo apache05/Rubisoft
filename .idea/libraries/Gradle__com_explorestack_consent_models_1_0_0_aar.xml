@@ -1,8 +1,8 @@
 <component name="libraryTable">
   <library name="Gradle: com.explorestack:consent-models:1.0.0@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/deafe532dc259788b8fc51e0022deb77/jetified-consent-models-1.0.0/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/deafe532dc259788b8fc51e0022deb77/jetified-consent-models-1.0.0/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/d92458d4466aa48abe5a947fd64d2ee0/jetified-consent-models-1.0.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/d92458d4466aa48abe5a947fd64d2ee0/jetified-consent-models-1.0.0/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
